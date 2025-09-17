@@ -17,9 +17,14 @@ class GameAPI {
                 fetch('/categories.json')
             ]);
 
-            this.allGamesData = await allGamesResponse.json();
-            this.newGamesData = await newGamesResponse.json();
-            this.categoriesData = await categoriesResponse.json();
+            const allGames = await allGamesResponse.json();
+            const newGames = await newGamesResponse.json();
+            const categories = await categoriesResponse.json();
+
+            // Wrap arrays in objects with expected property names
+            this.allGamesData = { games: Array.isArray(allGames) ? allGames : allGames.games || [] };
+            this.newGamesData = { games: Array.isArray(newGames) ? newGames : newGames.games || [] };
+            this.categoriesData = Array.isArray(categories) ? categories : categories;
         } catch (error) {
             console.error('Failed to load static data:', error);
             // Fallback to empty data
@@ -98,14 +103,14 @@ class GameAPI {
     // Categories API methods
     async getCategories() {
         await this.ensureDataLoaded();
-        return this.categoriesData;
+        return { categories: this.categoriesData };
     }
 
     async getGamesByCategory(categoryId, params = {}) {
         await this.ensureDataLoaded();
 
         // Find category name by ID
-        const category = this.categoriesData.categories.find(c => c.id == categoryId);
+        const category = this.categoriesData.find(c => c.id == categoryId);
         if (!category) return { games: [] };
 
         return this.getGames({ ...params, category: category.name });
