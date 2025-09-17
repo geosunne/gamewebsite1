@@ -849,7 +849,7 @@
 
                 // 加载各个区域的游戏
                 const [newGames, allGames] = await Promise.all([
-                    GAMES_DATA.getNewGames(10),
+                    GAMES_DATA.getNewGames(50),
                     GAMES_DATA.getPopularGames(100)
                 ]);
 

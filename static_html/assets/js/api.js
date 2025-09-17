@@ -53,7 +53,7 @@ class GameAPI {
         }
 
         if (params.new) {
-            games = games.filter(game => game.is_new);
+            games = games.filter(game => game.isNew);
         }
 
         if (params.featured) {
