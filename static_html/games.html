@@ -425,9 +425,9 @@
             </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="/games?filter=new">New Games</a></li>
-                <li><a href="/games?filter=featured">Featured</a></li>
-                <li><a href="/games">All Games</a></li>
+                <li><a href="games.html?filter=new">New Games</a></li>
+                <li><a href="games.html?filter=featured">Featured</a></li>
+                <li><a href="games.html">All Games</a></li>
             </ul>
         </nav>
     </header>
@@ -509,7 +509,7 @@
         function createGameCard(game) {
             const card = document.createElement('div');
             card.className = 'game-card';
-            card.onclick = () => window.open(`/games/${game.id}`, '_blank');
+            card.onclick = () => window.location.href = `games/${game.id}.html`;
 
             const badge = game.isNew ? '<div class="game-badge">NEW</div>' :
                          game.isFeatured ? '<div class="game-badge featured">FEATURED</div>' : '';

@@ -63,7 +63,7 @@ def generate_game_page(game_data, related_games):
         for related_game in related_games:
             related_thumbnail = related_game.get('thumbnail_url', '')
             related_games_html += f'''
-                <div class="game-card" onclick="window.location.href='/games/{related_game["slug"]}.html'">
+                <div class="game-card" onclick="window.location.href='{related_game["slug"]}.html'">
                     <div class="game-thumbnail">
                         {f'<img src="{related_thumbnail}" alt="{related_game["title"]}" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'flex\';">' if related_thumbnail else ''}
                         <div class="thumbnail-fallback" style="{'display:none;' if related_thumbnail else 'display: flex; align-items: center; justify-content: center;'} font-size: 42px; height: 100%; color: var(--apple-gray);">🎮</div>

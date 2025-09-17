@@ -586,7 +586,7 @@
 <body>
     <header>
         <nav class="container">
-            <a href="/" class="logo">BTW Games</a>
+            <a href="index.html" class="logo">BTW Games</a>
             <button class="mobile-menu" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -617,7 +617,7 @@
         <section id="new-games" class="games-section container">
             <div class="section-header">
                 <h2 class="section-title">🆕 New Games</h2>
-                <a href="/games?filter=new" class="view-all-btn">View All</a>
+                <a href="games.html?filter=new" class="view-all-btn">View All</a>
             </div>
             <div class="games-grid" id="newGamesGrid">
                 <!-- 新游戏将通过JavaScript动态加载 -->
@@ -629,7 +629,7 @@
         <section id="games" class="games-section container">
             <div class="section-header">
                 <h2 class="section-title">🎮 All Games</h2>
-                <a href="/games" class="view-all-btn">View All</a>
+                <a href="games.html" class="view-all-btn">View All</a>
             </div>
             <div class="games-grid" id="popularGamesGrid">
                 <!-- 热门游戏将通过JavaScript动态加载 -->
@@ -695,8 +695,8 @@
             const card = document.createElement('div');
             card.className = 'game-card';
 
-            // 使用新的动态游戏页面链接
-            card.onclick = () => window.location.href = `/games/${game.id}`;
+            // 使用静态游戏页面链接
+            card.onclick = () => window.location.href = `games/${game.id}.html`;
 
             const badge = game.isNew ? '<div class="game-badge">NEW</div>' :
                          '';
