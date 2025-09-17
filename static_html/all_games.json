@@ -17,101 +17,16 @@
     ]
   },
   {
-    "id": 2,
-    "title": "Puzzle Master",
-    "slug": "puzzle-master",
-    "description": "Challenge your mind with hundreds of brain-teasing puzzles",
-    "thumbnail": "https://btwgame.com/images/puzzle-master-thumb.jpg",
-    "iframe_url": "https://example.com/puzzle-master",
-    "category_id": 2,
-    "rating": 4.3,
-    "plays": 8750,
-    "isNew": false,
-    "tags": [
-      "Puzzle",
-      "Brain",
-      "Logic"
-    ]
-  },
-  {
-    "id": 3,
-    "title": "Racing Fever",
-    "slug": "racing-fever",
-    "description": "High-speed racing action with stunning graphics and realistic physics",
-    "thumbnail": "https://btwgame.com/images/racing-fever-thumb.jpg",
-    "iframe_url": "https://example.com/racing-fever",
-    "category_id": 3,
-    "rating": 4.7,
-    "plays": 22100,
-    "isNew": true,
-    "tags": [
-      "Racing",
-      "Cars",
-      "Speed"
-    ]
-  },
-  {
-    "id": 4,
-    "title": "Space Explorer",
-    "slug": "space-explorer",
-    "description": "Explore the vast universe and discover new planets and civilizations",
-    "thumbnail": "https://btwgame.com/images/space-explorer-thumb.jpg",
-    "iframe_url": "https://example.com/space-explorer",
-    "category_id": 5,
-    "rating": 4.4,
-    "plays": 12300,
-    "isNew": true,
-    "tags": [
-      "Space",
-      "Exploration",
-      "Sci-Fi"
-    ]
-  },
-  {
-    "id": 5,
-    "title": "Tower Defense Pro",
-    "slug": "tower-defense-pro",
-    "description": "Defend your base against waves of enemies with strategic tower placement",
-    "thumbnail": "https://btwgame.com/images/tower-defense-thumb.jpg",
-    "iframe_url": "https://example.com/tower-defense-pro",
-    "category_id": 4,
-    "rating": 4.6,
-    "plays": 18900,
-    "isNew": false,
-    "tags": [
-      "Strategy",
-      "Defense",
-      "Tower"
-    ]
-  },
-  {
-    "id": 6,
-    "title": "Ninja Warrior",
-    "slug": "ninja-warrior",
-    "description": "Master the art of stealth and combat in this action-packed ninja adventure",
-    "thumbnail": "https://btwgame.com/images/ninja-warrior-thumb.jpg",
-    "iframe_url": "https://example.com/ninja-warrior",
-    "category_id": 1,
-    "rating": 4.2,
-    "plays": 9800,
-    "isNew": true,
-    "tags": [
-      "Ninja",
-      "Action",
-      "Stealth"
-    ]
-  },
-  {
     "id": 7,
     "title": "Papa's Donuteria",
     "slug": "papas-donuteria",
-    "description": "Cook and serve donuts in Papa\u00e2\u0080\u0099s Donuteria! Unlock ingredients, please picky eaters, and build the sweetest shop in the amusement park.",
+    "description": "Cook and serve donuts in Papaâs Donuteria! Unlock ingredients, please picky eaters, and build the sweetest shop in the amusement park.",
     "thumbnail": "https://www.onlinegames.io/media/posts/1067/papas-donuteria.webp",
     "iframe_url": "https://cloud.onlinegames.io/games/2024/flash/papas-donuteria/index-og.html",
     "category_id": 7,
     "rating": 3.9,
     "plays": 6485,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Flash",
       "Cooking",
@@ -148,7 +63,7 @@
     "category_id": 7,
     "rating": 4.1,
     "plays": 29707,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5",
       "Clicker",
@@ -167,7 +82,7 @@
     "category_id": 7,
     "rating": 4.6,
     "plays": 14975,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5",
       "Fun",
@@ -185,7 +100,7 @@
     "category_id": 7,
     "rating": 4.5,
     "plays": 7411,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5"
     ]
@@ -237,7 +152,7 @@
     "category_id": 7,
     "rating": 4.1,
     "plays": 1877,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Unity",
       "Multiplayer",
@@ -250,13 +165,13 @@
     "id": 15,
     "title": "Obby Survive Parkour",
     "slug": "obby-survive-parkour",
-    "description": "Obby Survive Parkour: run, jump, and survive thrilling obstacle courses solo or with a friend. One wrong move and it\u00e2\u0080\u0099s game over!",
+    "description": "Obby Survive Parkour: run, jump, and survive thrilling obstacle courses solo or with a friend. One wrong move and itâs game over!",
     "thumbnail": "https://www.onlinegames.io/media/posts/1059/obby-survive-parkour.webp",
     "iframe_url": "https://html5.gamedistribution.com/9423ba1c5c0847998ae6bbae78ba4c91/?gd_sdk_referrer_url=https://www.onlinegames.io/obby-survive-parkour/",
     "category_id": 7,
     "rating": 4.1,
     "plays": 29000,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5",
       "Action",
@@ -267,8 +182,8 @@
   },
   {
     "id": 16,
-    "title": "JailBreak Prison Escape\u00c2",
-    "slug": "jailbreak-prison-escape\u00e2",
+    "title": "JailBreak Prison EscapeÂ",
+    "slug": "jailbreak-prison-escapeâ",
     "description": "Test your wits in JailBreak Prison Escape! Outsmart guards, solve puzzles, and sneak your way to freedom in the ultimate escape challenge.",
     "thumbnail": "https://www.onlinegames.io/media/posts/1058/jailbreak-prison-escape.webp",
     "iframe_url": "https://html5.gamedistribution.com/e5c41772e13f49d891a9bff3ea726943/?gd_sdk_referrer_url=https://www.onlinegames.io/jailbreak-prison-escape/",
@@ -285,13 +200,13 @@
     "id": 17,
     "title": "Merge Brainrot",
     "slug": "merge-brainrot",
-    "description": "Merge Brainrot: Drop, merge & unlock absurd Italian meme critters in a wacky physics game. Don\u00e2\u0080\u0099t overflow the tank \u00e2\u008e\u00bc get brain-rotted!",
+    "description": "Merge Brainrot: Drop, merge & unlock absurd Italian meme critters in a wacky physics game. Donât overflow the tank â¼ get brain-rotted!",
     "thumbnail": "https://www.onlinegames.io/media/posts/1057/merge-brainrot.webp",
     "iframe_url": "https://html5.gamedistribution.com/ea08335b6c9043e7a2403f6d5e8d1664/?gd_sdk_referrer_url=https://www.onlinegames.io/merge-brainrot/",
     "category_id": 7,
     "rating": 4.6,
     "plays": 29870,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5",
       "Fun",
@@ -328,7 +243,7 @@
     "category_id": 7,
     "rating": 3.6,
     "plays": 33570,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5",
       "Rhythm",
@@ -346,7 +261,7 @@
     "category_id": 7,
     "rating": 4.0,
     "plays": 32589,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Multiplayer",
       "Online",
@@ -363,7 +278,7 @@
     "category_id": 7,
     "rating": 3.9,
     "plays": 49363,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5",
       "Clicker",
@@ -382,7 +297,7 @@
     "category_id": 7,
     "rating": 3.9,
     "plays": 7439,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Unity",
       "Racing",
@@ -401,7 +316,7 @@
     "category_id": 7,
     "rating": 3.9,
     "plays": 16084,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Running",
       "Endless",
@@ -412,13 +327,13 @@
     "id": 24,
     "title": "Highway Traffic",
     "slug": "highway-traffic",
-    "description": "Highway Traffic\u00c2\u00a0game is centered around driving down the highway, dodging other cars, and avoiding accidents. It gets tricky because other\u2026",
+    "description": "Highway TrafficÂ game is centered around driving down the highway, dodging other cars, and avoiding accidents. It gets tricky because other…",
     "thumbnail": "https://www.onlinegames.io/media/posts/32/Highway-Traffic-2.jpg",
     "iframe_url": "https://www.onlinegames.io/games/2022/unity/highway-traffic/index.html",
     "category_id": 7,
     "rating": 4.7,
     "plays": 16768,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Unity",
       "Cars",
@@ -436,7 +351,7 @@
     "category_id": 7,
     "rating": 3.6,
     "plays": 24465,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5",
       "Cars",
@@ -449,7 +364,7 @@
     "id": 26,
     "title": "Love Tester",
     "slug": "love-tester",
-    "description": "Do you want to know how much your crush falls for you? Here is a way to test the love\u2026",
+    "description": "Do you want to know how much your crush falls for you? Here is a way to test the love…",
     "thumbnail": "https://www.onlinegames.io/media/posts/152/love-tester.jpg",
     "iframe_url": "https://www.onlinegames.io/games/2021/3/love-tester/index.html",
     "category_id": 7,
@@ -466,13 +381,13 @@
     "id": 27,
     "title": "Obby But You're on a Bike",
     "slug": "obby-but-youre-on-a-bike",
-    "description": "Ride through wild 3D platforming levels in Obby but You\u00e2\u0080\u0099re on a Bike! Capture flags, upgrade your bike, and test your skills. Play now on OnlineGames.io!",
+    "description": "Ride through wild 3D platforming levels in Obby but Youâre on a Bike! Capture flags, upgrade your bike, and test your skills. Play now on OnlineGames.io!",
     "thumbnail": "https://www.onlinegames.io/media/posts/885/obby-but-your-on-a-bike.jpg",
     "iframe_url": "https://playhop.com/app/257923?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
     "category_id": 7,
     "rating": 3.9,
     "plays": 20322,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Platform",
       "Adventure",
@@ -490,7 +405,7 @@
     "category_id": 7,
     "rating": 3.6,
     "plays": 45784,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Multiplayer",
       "Online",
@@ -507,7 +422,7 @@
     "category_id": 7,
     "rating": 3.9,
     "plays": 17063,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5",
       "Retro",
@@ -519,13 +434,13 @@
     "id": 30,
     "title": "Geometry Dash",
     "slug": "geometry-dash",
-    "description": "Prepare yourself for the hardest! Geometry Dash is a very challenging arcade game, and it is famous all over the\u2026",
+    "description": "Prepare yourself for the hardest! Geometry Dash is a very challenging arcade game, and it is famous all over the…",
     "thumbnail": "https://www.onlinegames.io/media/posts/411/Geometry-Dash.jpg",
     "iframe_url": "https://turbowarp.org/105500895/embed?autoplay&addons=remove-curved-stage-border",
     "category_id": 7,
     "rating": 3.9,
     "plays": 42822,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Rhythm",
       "Platform",
@@ -542,7 +457,7 @@
     "category_id": 7,
     "rating": 4.6,
     "plays": 37834,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5",
       "Rhythm",
@@ -560,7 +475,7 @@
     "category_id": 7,
     "rating": 3.8,
     "plays": 40417,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5",
       "Running",
@@ -572,13 +487,13 @@
     "id": 33,
     "title": "Papa's Taco Mia",
     "slug": "papas-taco-mia",
-    "description": "Run Papa\u00e2\u0080\u0099s Taco Mia after winning a taco-eating contest! Serve tasty tacos, earn tips, and upgrade your shop into the spiciest spot in town.",
+    "description": "Run Papaâs Taco Mia after winning a taco-eating contest! Serve tasty tacos, earn tips, and upgrade your shop into the spiciest spot in town.",
     "thumbnail": "https://www.onlinegames.io/media/posts/1068/papas-taco-mia.webp",
     "iframe_url": "https://cloud.onlinegames.io/games/2024/flash/papas-taco-mia/index-og.html",
     "category_id": 7,
     "rating": 3.7,
     "plays": 28753,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Flash",
       "Cooking",
@@ -590,13 +505,13 @@
     "id": 34,
     "title": "Stack Fire Ball",
     "slug": "stack-fire-ball",
-    "description": "Reach the end by guiding the ball through each stage, avoiding the dark tiles. This game is a combination between\u2026",
+    "description": "Reach the end by guiding the ball through each stage, avoiding the dark tiles. This game is a combination between…",
     "thumbnail": "https://www.onlinegames.io/media/posts/184/Stack-Fire-Ball-Game.jpg",
     "iframe_url": "https://www.onlinegames.io/games/2021/unity/stack-fire-ball/index.html",
     "category_id": 7,
     "rating": 3.6,
     "plays": 7692,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Unity"
     ]
@@ -611,7 +526,7 @@
     "category_id": 7,
     "rating": 4.5,
     "plays": 16959,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Unity",
       "Multiplayer"
@@ -621,7 +536,7 @@
     "id": 36,
     "title": "GTA Simulator",
     "slug": "gta-simulator",
-    "description": "You know that famous GTA video game series, right? Well, meet its online and free version on OnlineGames.io. GTA Simulator\u2026",
+    "description": "You know that famous GTA video game series, right? Well, meet its online and free version on OnlineGames.io. GTA Simulator…",
     "thumbnail": "https://www.onlinegames.io/media/posts/416/GTA-Simulator.jpg",
     "iframe_url": "https://www.onlinegames.io/games/2023/unity2/gta-simulator/index.html",
     "category_id": 7,
@@ -645,7 +560,7 @@
     "category_id": 7,
     "rating": 4.9,
     "plays": 19296,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5",
       "Action",
@@ -662,7 +577,7 @@
     "category_id": 7,
     "rating": 3.7,
     "plays": 35614,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5"
     ]
@@ -677,7 +592,7 @@
     "category_id": 7,
     "rating": 3.5,
     "plays": 35475,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Action"
     ]
@@ -692,7 +607,7 @@
     "category_id": 7,
     "rating": 4.6,
     "plays": 24393,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5",
       "Running",
@@ -705,7 +620,7 @@
     "id": 41,
     "title": "Real Flight Simulator",
     "slug": "real-flight-simulator",
-    "description": "Real Flight Simulator is a realistic game that gives you the ultimate flight experience. There is the possibility to choose\u2026",
+    "description": "Real Flight Simulator is a realistic game that gives you the ultimate flight experience. There is the possibility to choose…",
     "thumbnail": "https://www.onlinegames.io/media/posts/342/Real-Flight-Simulator-2.jpg",
     "iframe_url": "https://cloud.onlinegames.io/games/2023/unity2/real-flight-simulator/index.html",
     "category_id": 7,
@@ -738,13 +653,13 @@
     "id": 43,
     "title": "Skribblio",
     "slug": "skribblio",
-    "description": "Scribble, scribble, scribble!\u00e2\u009c\u008d\u00e2\u009c\u008d\u00e2\u009c\u008dSkribblio is a great online game for word game lovers with extensive drawing skills. Draw the given word,\u2026",
+    "description": "Scribble, scribble, scribble!âââSkribblio is a great online game for word game lovers with extensive drawing skills. Draw the given word,…",
     "thumbnail": "https://www.onlinegames.io/media/posts/385/Skribblio.jpg",
     "iframe_url": "https://skribbl.io/",
     "category_id": 7,
     "rating": 4.4,
     "plays": 33935,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Multiplayer",
       "Online",
@@ -761,7 +676,7 @@
     "category_id": 7,
     "rating": 4.3,
     "plays": 32992,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Arcade"
     ]
@@ -776,7 +691,7 @@
     "category_id": 7,
     "rating": 4.5,
     "plays": 17142,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Unity"
     ]
@@ -791,7 +706,7 @@
     "category_id": 7,
     "rating": 4.4,
     "plays": 47808,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Multiplayer",
       "Online",
@@ -809,7 +724,7 @@
     "category_id": 7,
     "rating": 4.6,
     "plays": 44058,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5",
       "Platform",
@@ -821,13 +736,13 @@
     "id": 48,
     "title": "Drift Boss",
     "slug": "drift-boss",
-    "description": "Say hi to an easily controlled and captivating game! Drift Boss is a 3D driving game where you steer your\u2026",
+    "description": "Say hi to an easily controlled and captivating game! Drift Boss is a 3D driving game where you steer your…",
     "thumbnail": "https://www.onlinegames.io/media/posts/378/Drift-Boss-Game.jpg",
     "iframe_url": "https://www.onlinegames.io/games/2023/mjs/drift-boss/index.html",
     "category_id": 7,
     "rating": 4.3,
     "plays": 2683,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "Racing",
       "Cars",
@@ -839,7 +754,7 @@
     "id": 49,
     "title": "Drift Hunters Pro",
     "slug": "drift-hunters-pro",
-    "description": "Can you hear the engine moaning? Drift Hunters Pro is a thrilling 3D game with high-quality graphics for those who\u2026",
+    "description": "Can you hear the engine moaning? Drift Hunters Pro is a thrilling 3D game with high-quality graphics for those who…",
     "thumbnail": "https://www.onlinegames.io/media/posts/397/Drift-Hunters-Pro.jpg",
     "iframe_url": "https://www.onlinegames.io/games/2023/unity/drift-hunters-pro/index.html",
     "category_id": 7,
@@ -873,13 +788,13 @@
     "id": 51,
     "title": "Unpacking",
     "slug": "unpacking",
-    "description": "Hey there, neat freaks! We are offering you a great mess to tidy up!\u00c2\u00a0Unpacking is a free online home decoration\u2026",
+    "description": "Hey there, neat freaks! We are offering you a great mess to tidy up!Â Unpacking is a free online home decoration…",
     "thumbnail": "https://www.onlinegames.io/media/posts/481/Unpacking.jpg",
     "iframe_url": "https://html5.gamedistribution.com/d445590892294eebb41d983e1c598ab1/?gd_sdk_referrer_url=https://www.onlinegames.io/unpacking",
     "category_id": 7,
     "rating": 4.1,
     "plays": 44350,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5"
     ]
@@ -894,7 +809,7 @@
     "category_id": 7,
     "rating": 4.8,
     "plays": 34112,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5"
     ]
@@ -909,7 +824,7 @@
     "category_id": 7,
     "rating": 4.9,
     "plays": 8641,
-    "isNew": true,
+    "isNew": false,
     "tags": []
   },
   {
@@ -922,7 +837,7 @@
     "category_id": 7,
     "rating": 4.1,
     "plays": 40742,
-    "isNew": true,
+    "isNew": false,
     "tags": [
       "HTML5",
       "Action"
@@ -932,13 +847,13 @@
     "id": 55,
     "title": "Basketball Stars",
     "slug": "basketball-stars",
-    "description": "Basketball Stars is a free online basketball game that you can enjoy on your browser. Start strong, and show your\u2026",
+    "description": "Basketball Stars is a free online basketball game that you can enjoy on your browser. Start strong, and show your…",
     "thumbnail": "https://www.onlinegames.io/media/posts/380/Basketball-Stars-Game.jpg",
     "iframe_url": "https://www.onlinegames.io/games/2024/gm/basketball-stars/index.html",
     "category_id": 7,
     "rating": 4.9,
     "plays": 46997,
-    "isNew": true,
+    "isNew": false,
     "tags": []
   }
 ]
