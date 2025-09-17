@@ -235,16 +235,15 @@
 
         .games-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
             margin-bottom: 40px;
         }
 
         .game-card {
-            background: var(--apple-white);
+            position: relative;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: var(--shadow-light);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
         }
@@ -255,8 +254,8 @@
         }
 
         .game-thumbnail {
-            width: 100%;
-            height: 160px;
+            width: 220px;
+            height: 165px;
             background: linear-gradient(135deg, var(--apple-light-gray), #E5E5EA);
             display: flex;
             align-items: center;
@@ -264,6 +263,14 @@
             font-size: 48px;
             position: relative;
             overflow: hidden;
+            margin: 0 auto;
+            border-radius: 16px;
+        }
+
+        .game-thumbnail img {
+            width: 220px;
+            height: 165px;
+            object-fit: cover;
         }
 
         .game-badge {
@@ -283,14 +290,22 @@
         }
 
         .game-info {
-            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 30px 16px 16px 16px;
+            border-radius: 0 0 16px 16px;
         }
 
         .game-title {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
-            color: var(--apple-dark);
-            margin-bottom: 8px;
+            color: var(--apple-white);
+            margin-bottom: 0;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
         }
 
         .game-description {
@@ -373,8 +388,26 @@
 
         @media (max-width: 768px) {
             .games-grid {
-                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-                gap: 16px;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+
+            .game-thumbnail {
+                width: 200px;
+                height: 150px;
+            }
+
+            .game-thumbnail img {
+                width: 200px;
+                height: 150px;
+            }
+
+            .game-info {
+                padding: 25px 12px 12px 12px;
+            }
+
+            .game-title {
+                font-size: 14px;
             }
 
             .filter-row {
@@ -412,6 +445,31 @@
             }
         }
 
+        @media (max-width: 480px) {
+            .games-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .game-thumbnail {
+                width: 180px;
+                height: 135px;
+            }
+
+            .game-thumbnail img {
+                width: 180px;
+                height: 135px;
+            }
+
+            .game-info {
+                padding: 20px 10px 10px 10px;
+            }
+
+            .game-title {
+                font-size: 12px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -425,9 +483,9 @@
             </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="games.html?filter=new">New Games</a></li>
-                <li><a href="games.html?filter=featured">Featured</a></li>
-                <li><a href="games.html">All Games</a></li>
+                <li><a href="/games?filter=new">New Games</a></li>
+                <li><a href="/games?filter=featured">Featured</a></li>
+                <li><a href="/games">All Games</a></li>
             </ul>
         </nav>
     </header>
@@ -509,7 +567,7 @@
         function createGameCard(game) {
             const card = document.createElement('div');
             card.className = 'game-card';
-            card.onclick = () => window.location.href = `games/${game.id}.html`;
+            card.onclick = () => window.open(`/games/${game.id}`, '_blank');
 
             const badge = game.isNew ? '<div class="game-badge">NEW</div>' :
                          game.isFeatured ? '<div class="game-badge featured">FEATURED</div>' : '';
@@ -519,19 +577,9 @@
                     ${badge}
                     ${game.thumbnail ? `<img src="${game.thumbnail}" alt="${game.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : ''}
                     <div class="thumbnail-fallback" style="${game.thumbnail ? 'display:none;' : 'display: flex; align-items: center; justify-content: center;'} font-size: 42px; height: 100%; color: var(--apple-gray);">🎮</div>
-                </div>
-                <div class="game-info">
-                    <h3 class="game-title">${game.title}</h3>
-                    <p class="game-description">${game.description}</p>
-                    <div class="game-meta">
-                        <div class="game-rating">
-                            ⭐ ${game.rating}
-                        </div>
-                        <div class="game-plays">
-                            👥 ${game.plays.toLocaleString()}
-                        </div>
+                    <div class="game-info">
+                        <h3 class="game-title">${game.title}</h3>
                     </div>
-                    <div class="game-category">${game.category}</div>
                 </div>
             `;
 

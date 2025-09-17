@@ -427,19 +427,59 @@ class GameIframeExtractor:
         self.game_data['total_games'] = len(self.game_data['games'])
         print(f"\n✅ Analysis complete! Processed {self.game_data['total_games']} games from 'Recently Played' section")
     
+    def load_existing_games(self, filename='games_data.json'):
+        """Load existing games from JSON file"""
+        try:
+            with open(filename, 'r', encoding='utf-8') as f:
+                existing_data = json.load(f)
+                return existing_data.get('games', [])
+        except FileNotFoundError:
+            print(f"No existing {filename} found, starting fresh")
+            return []
+        except Exception as e:
+            print(f"Error loading existing games: {e}")
+            return []
+
+    def get_existing_game_urls(self, existing_games):
+        """Get set of existing game URLs for deduplication"""
+        return set(game.get('url', '') for game in existing_games)
+
     def save_game_data(self, filename='games_data.json'):
-        """Save the extracted game data to a JSON file"""
+        """Save the extracted game data to a JSON file, merging with existing data"""
+        # Load existing games
+        existing_games = self.load_existing_games(filename)
+        existing_urls = self.get_existing_game_urls(existing_games)
+
+        # Filter out games that already exist
+        new_games = []
+        skipped_count = 0
+
+        for game in self.game_data['games']:
+            if game['url'] not in existing_urls:
+                new_games.append(game)
+            else:
+                skipped_count += 1
+                print(f"  ⏭️  Skipping existing game: {game['title']}")
+
+        # Merge with existing games
+        all_games = existing_games + new_games
+
         data = {
             'website': self.base_url,
             'extraction_timestamp': time.strftime('%Y-%m-%d %H:%M:%S'),
-            'total_games': self.game_data['total_games'],
-            'games': self.game_data['games']
+            'total_games': len(all_games),
+            'games': all_games
         }
-        
+
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
-        
-        print(f"Game data saved to {filename}")
+
+        print(f"\n📊 Summary:")
+        print(f"  📁 File: {filename}")
+        print(f"  🆕 New games added: {len(new_games)}")
+        print(f"  ⏭️  Existing games skipped: {skipped_count}")
+        print(f"  📈 Total games in file: {len(all_games)}")
+
         return data
     
 
@@ -450,8 +490,8 @@ def main():
     extractor = GameIframeExtractor()
     
     try:
-        # Analyze 50 games from the 'Recently Played' section
-        extractor.analyze_recently_games(max_games=50)
+        # Analyze 100 games from the 'Recently Played' section
+        extractor.analyze_recently_games(max_games=100)
         
         # Save the extracted data
         extractor.save_game_data()
