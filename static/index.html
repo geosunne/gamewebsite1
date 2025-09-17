@@ -613,6 +613,24 @@
             }
         }
 
+        /* Advertisement Section */
+        .ad-section {
+            margin: 30px auto;
+            max-width: 728px;
+        }
+
+        .ad-section .adsbygoogle {
+            background: var(--apple-light-gray);
+            border-radius: 8px;
+            min-height: 90px;
+        }
+
+        @media (max-width: 768px) {
+            .ad-section {
+                margin: 20px auto;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -644,6 +662,8 @@
                 <button class="category-btn active" onclick="filterByCategory('all')">All Games</button>
             </div>
         </section>
+
+       
 
         <!-- 最新游戏区域 -->
         <section id="new-games" class="games-section container">

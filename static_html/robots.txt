@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://btwgame.com/sitemap.txt
+
+# Allow indexing of all game pages
+Allow: /games/
+Allow: /games.html
+
+# Block assets that don't need indexing
+Disallow: /assets/
+
+# Allow common search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
