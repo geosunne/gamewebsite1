@@ -1,0 +1,4 @@
+# Redirects for Netlify/Cloudflare Pages
+/games/:slug /games/:slug.html 200
+/api/* https://your-api-domain.com/api/:splat 200
+/* /index.html 404

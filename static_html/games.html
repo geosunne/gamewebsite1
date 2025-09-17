@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all free online games at BTW Games. Action, puzzle, racing, strategy games and more. Play instantly in your browser.">
+    <meta name="keywords" content="free online games, browser games, action games, puzzle games, racing games, strategy games, BTW Games">
+    <meta name="author" content="btwgame Games">
+    <meta property="og:title" content="All Games | BTW Games">
+    <meta property="og:description" content="Browse our complete collection of free online games. Play instantly in your browser.">
+    <meta property="og:image" content="https://btwgame.com/images/games-og.jpg">
+    <meta property="og:url" content="https://btwgame.com/games">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="All Games | BTW Games">
+    <meta name="twitter:description" content="Browse our complete collection of free online games.">
+    <link rel="canonical" href="https://btwgame.com/games">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM7PBYVK97"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-SM7PBYVK97');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8930741225505243"
+         crossorigin="anonymous"></script>
+
+    <title>All Games | BTW Games</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --apple-blue: #007AFF;
+            --apple-gray: #8E8E93;
+            --apple-light-gray: #F2F2F7;
+            --apple-dark: #1C1C1E;
+            --apple-white: #FFFFFF;
+            --apple-green: #34C759;
+            --apple-red: #FF3B30;
+            --shadow-light: 0 2px 15px rgba(0, 0, 0, 0.1);
+            --shadow-heavy: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--apple-dark);
+            background: linear-gradient(180deg, var(--apple-white) 0%, var(--apple-light-gray) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-light);
+        }
+
+        nav {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--apple-blue);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--apple-dark);
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--apple-blue);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: var(--apple-dark);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        .page-header {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--apple-dark);
+        }
+
+        .page-subtitle {
+            font-size: 20px;
+            color: var(--apple-gray);
+            margin-bottom: 30px;
+        }
+
+        .filters-section {
+            background: var(--apple-white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-light);
+            margin-bottom: 40px;
+        }
+
+        .filters-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .filters-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--apple-dark);
+        }
+
+        .results-count {
+            color: var(--apple-gray);
+            font-size: 14px;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--apple-light-gray);
+            border-radius: 12px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .search-bar:focus {
+            border-color: var(--apple-blue);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .filter-label {
+            font-weight: 500;
+            color: var(--apple-dark);
+            font-size: 14px;
+        }
+
+        .filter-select {
+            padding: 8px 12px;
+            border: 2px solid var(--apple-light-gray);
+            border-radius: 8px;
+            background: var(--apple-white);
+            color: var(--apple-dark);
+            cursor: pointer;
+            outline: none;
+        }
+
+        .categories-filter {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .category-btn {
+            padding: 8px 16px;
+            border: 2px solid var(--apple-light-gray);
+            background: var(--apple-white);
+            color: var(--apple-dark);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--apple-blue);
+            color: var(--apple-white);
+            border-color: var(--apple-blue);
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .game-card {
+            background: var(--apple-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .game-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .game-thumbnail {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, var(--apple-light-gray), #E5E5EA);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: var(--apple-green);
+            color: var(--apple-white);
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .game-badge.featured {
+            background: var(--apple-blue);
+        }
+
+        .game-info {
+            padding: 20px;
+        }
+
+        .game-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--apple-dark);
+            margin-bottom: 8px;
+        }
+
+        .game-description {
+            color: var(--apple-gray);
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .game-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--apple-gray);
+            margin-bottom: 12px;
+        }
+
+        .game-rating {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .game-plays {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .game-category {
+            background: var(--apple-light-gray);
+            color: var(--apple-dark);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--apple-gray);
+        }
+
+        .no-results-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .load-more-btn {
+            display: block;
+            margin: 40px auto;
+            padding: 16px 32px;
+            background: var(--apple-blue);
+            color: var(--apple-white);
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .load-more-btn:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            background: var(--apple-dark);
+            color: var(--apple-white);
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .games-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 16px;
+            }
+
+            .filter-row {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 16px;
+            }
+
+            .filter-group {
+                justify-content: space-between;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--apple-white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-light);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .page-title {
+                font-size: 32px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">BTW Games</a>
+            <button class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/games?filter=new">New Games</a></li>
+                <li><a href="/games?filter=featured">Featured</a></li>
+                <li><a href="/games">All Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h1 class="page-title" id="pageTitle">All Games</h1>
+            <p class="page-subtitle" id="pageSubtitle">Discover and play amazing free online games</p>
+        </section>
+
+
+        <section class="filters-section">
+            <div class="filters-header">
+                <h2 class="filters-title">Find Games</h2>
+                <span class="results-count" id="resultsCount">Loading...</span>
+            </div>
+
+            <input type="text" class="search-bar" placeholder="Search games..." id="searchInput">
+
+            <div class="filter-row">
+                <div class="filter-group">
+                    <span class="filter-label">Sort by:</span>
+                    <select class="filter-select" id="sortSelect">
+                        <option value="popular">Most Popular</option>
+                        <option value="newest">Newest First</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="name">Name A-Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="categories-filter" id="categoriesFilter">
+                <button class="category-btn active" onclick="filterByCategory('all')">All Games</button>
+            </div>
+        </section>
+
+        <section class="games-section">
+            <div class="games-grid" id="gamesGrid">
+                <!-- Games will be loaded here -->
+            </div>
+
+            <div class="no-results" id="noResults" style="display: none;">
+                <div class="no-results-icon">🎮</div>
+                <h3>No games found</h3>
+                <p>Try adjusting your search or filters to find what you're looking for.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BTW Games. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/api.js"></script>
+    <script>
+        let currentGames = [];
+        let filteredGames = [];
+        let currentFilter = 'all';
+        let currentSort = 'popular';
+
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // 获取URL参数
+        function getUrlParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return {
+                filter: urlParams.get('filter') || 'all',
+                category: urlParams.get('category') || 'all',
+                search: urlParams.get('search') || ''
+            };
+        }
+
+        // 创建游戏卡片
+        function createGameCard(game) {
+            const card = document.createElement('div');
+            card.className = 'game-card';
+            card.onclick = () => window.open(`/games/${game.id}`, '_blank');
+
+            const badge = game.isNew ? '<div class="game-badge">NEW</div>' :
+                         game.isFeatured ? '<div class="game-badge featured">FEATURED</div>' : '';
+
+            card.innerHTML = `
+                <div class="game-thumbnail">
+                    ${badge}
+                    ${game.thumbnail ? `<img src="${game.thumbnail}" alt="${game.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : ''}
+                    <div class="thumbnail-fallback" style="${game.thumbnail ? 'display:none;' : 'display: flex; align-items: center; justify-content: center;'} font-size: 42px; height: 100%; color: var(--apple-gray);">🎮</div>
+                </div>
+                <div class="game-info">
+                    <h3 class="game-title">${game.title}</h3>
+                    <p class="game-description">${game.description}</p>
+                    <div class="game-meta">
+                        <div class="game-rating">
+                            ⭐ ${game.rating}
+                        </div>
+                        <div class="game-plays">
+                            👥 ${game.plays.toLocaleString()}
+                        </div>
+                    </div>
+                    <div class="game-category">${game.category}</div>
+                </div>
+            `;
+
+            return card;
+        }
+
+        // 排序游戏
+        function sortGames(games, sortBy) {
+            const sortedGames = [...games];
+
+            switch (sortBy) {
+                case 'popular':
+                    return sortedGames.sort((a, b) => b.plays - a.plays);
+                case 'newest':
+                    return sortedGames.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
+                case 'rating':
+                    return sortedGames.sort((a, b) => b.rating - a.rating);
+                case 'name':
+                    return sortedGames.sort((a, b) => a.title.localeCompare(b.title));
+                default:
+                    return sortedGames;
+            }
+        }
+
+        // 过滤游戏
+        function filterGames() {
+            let games = [...currentGames];
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            // 搜索过滤
+            if (searchTerm) {
+                games = games.filter(game =>
+                    game.title.toLowerCase().includes(searchTerm) ||
+                    game.description.toLowerCase().includes(searchTerm) ||
+                    game.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+                );
+            }
+
+            // 分类过滤
+            if (currentFilter !== 'all') {
+                games = games.filter(game => game.category === currentFilter);
+            }
+
+            // 排序
+            games = sortGames(games, currentSort);
+
+            filteredGames = games;
+            displayGames(games);
+            updateResultsCount(games.length);
+        }
+
+        // 显示游戏
+        function displayGames(games) {
+            const gamesGrid = document.getElementById('gamesGrid');
+            const noResults = document.getElementById('noResults');
+
+            if (games.length === 0) {
+                gamesGrid.style.display = 'none';
+                noResults.style.display = 'block';
+                return;
+            }
+
+            gamesGrid.style.display = 'grid';
+            noResults.style.display = 'none';
+            gamesGrid.innerHTML = '';
+
+            games.forEach(game => {
+                gamesGrid.appendChild(createGameCard(game));
+            });
+        }
+
+        // 更新结果计数
+        function updateResultsCount(count) {
+            const resultsCount = document.getElementById('resultsCount');
+            resultsCount.textContent = `${count} games found`;
+        }
+
+        // 按分类过滤
+        function filterByCategory(category) {
+            currentFilter = category;
+
+            // 更新按钮状态
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            filterGames();
+        }
+
+        // 初始化分类按钮
+        async function initializeCategories() {
+            try {
+                const categories = await GAMES_DATA.getAllCategories();
+                const categoriesFilter = document.getElementById('categoriesFilter');
+
+                categories.forEach(category => {
+                    const btn = document.createElement('button');
+                    btn.className = 'category-btn';
+                    btn.textContent = category;
+                    btn.onclick = () => filterByCategory(category);
+                    categoriesFilter.appendChild(btn);
+                });
+            } catch (error) {
+                console.error('Error loading categories:', error);
+            }
+        }
+
+        // 根据URL参数设置初始状态
+        async function setInitialState() {
+            const params = getUrlParams();
+
+            // 设置初始游戏集合
+            try {
+                switch (params.filter) {
+                    case 'new':
+                        currentGames = await GAMES_DATA.getNewGames();
+                        document.getElementById('pageTitle').textContent = '🆕 New Games';
+                        document.getElementById('pageSubtitle').textContent = 'Check out our latest additions';
+                        break;
+                    case 'featured':
+                        currentGames = await GAMES_DATA.getFeaturedGames();
+                        document.getElementById('pageTitle').textContent = '🔥 Featured Games';
+                        document.getElementById('pageSubtitle').textContent = 'Our most popular and recommended games';
+                        break;
+                    default:
+                        await GAMES_DATA._ensureLoaded();
+                        currentGames = GAMES_DATA.games;
+                        break;
+                }
+            } catch (error) {
+                console.error('Error loading initial games:', error);
+                currentGames = [];
+            }
+
+            // 设置搜索框
+            if (params.search) {
+                document.getElementById('searchInput').value = params.search;
+            }
+
+            // 设置分类过滤
+            if (params.category && params.category !== 'all') {
+                currentFilter = params.category;
+                // 激活对应的分类按钮
+                setTimeout(() => {
+                    const categoryBtns = document.querySelectorAll('.category-btn');
+                    categoryBtns.forEach(btn => {
+                        if (btn.textContent === params.category) {
+                            btn.click();
+                        }
+                    });
+                }, 100);
+            }
+        }
+
+        // 事件监听器
+        function setupEventListeners() {
+            // 搜索框
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', filterGames);
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    filterGames();
+                }
+            });
+
+            // 排序选择
+            const sortSelect = document.getElementById('sortSelect');
+            sortSelect.addEventListener('change', function() {
+                currentSort = this.value;
+                filterGames();
+            });
+        }
+
+        // 页面加载完成后初始化
+        window.addEventListener('load', async function() {
+            await initializeCategories();
+            await setInitialState();
+            setupEventListeners();
+            filterGames();
+        });
+    </script>
+</body>
+</html>

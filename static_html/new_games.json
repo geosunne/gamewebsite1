@@ -1,0 +1,403 @@
+{
+  "games": [
+    {
+      "category_name": "Home",
+      "category_obj": 7,
+      "controls": {
+        "Arrow Keys": "Move left/right",
+        "Mouse": "Navigate menus",
+        "Spacebar": "Jump"
+      },
+      "created_at": "2025-09-16T10:49:31.192015",
+      "description": "Prepare yourself for the hardest! Geometry Dash is a very challenging arcade game, and it is famous all over the\u2026",
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser"
+      ],
+      "game_plays": [],
+      "game_stats": [],
+      "game_url": "https://turbowarp.org/105500895/embed?autoplay&addons=remove-curved-stage-border",
+      "id": 30,
+      "iframe_url": "https://turbowarp.org/105500895/embed?autoplay&addons=remove-curved-stage-border",
+      "is_active": true,
+      "is_featured": false,
+      "is_new": true,
+      "long_description": "Prepare yourself for the hardest! Geometry Dash is a very challenging arcade game, and it is famous all over the\u2026",
+      "rating": 3.9,
+      "release_date": "2025-09-16T10:49:31.192013",
+      "slug": "geometry-dash",
+      "tags": [
+        "Rhythm",
+        "Platform",
+        "Arcade"
+      ],
+      "thumbnail_url": "https://www.onlinegames.io/media/posts/411/Geometry-Dash.jpg",
+      "title": "Geometry Dash",
+      "total_plays": 42822,
+      "updated_at": "2025-09-17T02:31:22.334972"
+    },
+    {
+      "category_name": "Home",
+      "category_obj": 7,
+      "controls": {
+        "Arrow Keys": "Navigate",
+        "Mouse": "Click and interact",
+        "Spacebar": "Action"
+      },
+      "created_at": "2025-09-16T10:49:31.190938",
+      "description": "Guide your pixel hero through 50 tricky levels filled with traps, surprises, and evolving mechanics in this fast-paced retro platformer.",
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "HTML5 compatible",
+        "Mobile friendly"
+      ],
+      "game_plays": [],
+      "game_stats": [],
+      "game_url": "https://html5.gamedistribution.com/3ffc5c0944f54f06afb212ca7d80bb00/?gd_sdk_referrer_url=https://www.onlinegames.io/pixel-path/",
+      "id": 29,
+      "iframe_url": "https://html5.gamedistribution.com/3ffc5c0944f54f06afb212ca7d80bb00/?gd_sdk_referrer_url=https://www.onlinegames.io/pixel-path/",
+      "is_active": true,
+      "is_featured": false,
+      "is_new": true,
+      "long_description": "Guide your pixel hero through 50 tricky levels filled with traps, surprises, and evolving mechanics in this fast-paced retro platformer.",
+      "rating": 3.9,
+      "release_date": "2025-09-16T10:49:31.190936",
+      "slug": "pixel-path",
+      "tags": [
+        "HTML5",
+        "Retro",
+        "Arcade",
+        "Pixel Art"
+      ],
+      "thumbnail_url": "https://www.onlinegames.io/media/posts/1050/pixel_path_game.webp",
+      "title": "Pixel Path",
+      "total_plays": 17063,
+      "updated_at": "2025-09-16T11:06:51.230252"
+    },
+    {
+      "category_name": "Home",
+      "category_obj": 7,
+      "controls": {
+        "Left Click": "Primary action",
+        "Mouse": "Move and aim",
+        "Right Click": "Secondary action",
+        "WASD": "Alternative movement"
+      },
+      "created_at": "2025-09-16T10:49:31.189928",
+      "description": "Miniblox io, a fantastic sandbox game, allows you to define your own gaming experience. Play with online players across the world and enjoy the game!",
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser"
+      ],
+      "game_plays": [],
+      "game_stats": [],
+      "game_url": "https://miniblox.io/",
+      "id": 28,
+      "iframe_url": "https://miniblox.io/",
+      "is_active": true,
+      "is_featured": false,
+      "is_new": true,
+      "long_description": "Miniblox io, a fantastic sandbox game, allows you to define your own gaming experience. Play with online players across the world and enjoy the game!",
+      "rating": 3.6,
+      "release_date": "2025-09-16T10:49:31.189927",
+      "slug": "miniblox-io",
+      "tags": [
+        "Multiplayer",
+        "Online",
+        "Competitive"
+      ],
+      "thumbnail_url": "https://www.onlinegames.io/media/posts/595/MiniBlox.io.jpg",
+      "title": "Miniblox io",
+      "total_plays": 45784,
+      "updated_at": "2025-09-17T02:31:22.321842"
+    },
+    {
+      "category_name": "Home",
+      "category_obj": 7,
+      "controls": {
+        "Arrow Keys": "Navigate",
+        "Mouse": "Click and interact",
+        "Spacebar": "Action"
+      },
+      "created_at": "2025-09-16T10:49:31.188744",
+      "description": "Ride through wild 3D platforming levels in Obby but You\u00e2\u0080\u0099re on a Bike! Capture flags, upgrade your bike, and test your skills. Play now on OnlineGames.io!",
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser"
+      ],
+      "game_plays": [],
+      "game_stats": [],
+      "game_url": "https://playhop.com/app/257923?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
+      "id": 27,
+      "iframe_url": "https://playhop.com/app/257923?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
+      "is_active": true,
+      "is_featured": false,
+      "is_new": true,
+      "long_description": "Ride through wild 3D platforming levels in Obby but You\u00e2\u0080\u0099re on a Bike! Capture flags, upgrade your bike, and test your skills. Play now on OnlineGames.io!",
+      "rating": 3.9,
+      "release_date": "2025-09-16T10:49:31.188741",
+      "slug": "obby-but-youre-on-a-bike",
+      "tags": [
+        "Platform",
+        "Adventure",
+        "Roblox",
+        "3D"
+      ],
+      "thumbnail_url": "https://www.onlinegames.io/media/posts/885/obby-but-your-on-a-bike.jpg",
+      "title": "Obby But You're on a Bike",
+      "total_plays": 20322,
+      "updated_at": "2025-09-17T02:31:22.377693"
+    },
+    {
+      "category_name": "Home",
+      "category_obj": 7,
+      "controls": {
+        "Arrow Keys": "Navigate",
+        "Mouse": "Click and interact",
+        "Spacebar": "Action"
+      },
+      "created_at": "2025-09-16T10:49:31.187646",
+      "description": "Do you want to know how much your crush falls for you? Here is a way to test the love\u2026",
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser"
+      ],
+      "game_plays": [],
+      "game_stats": [],
+      "game_url": "https://www.onlinegames.io/games/2021/3/love-tester/index.html",
+      "id": 26,
+      "iframe_url": "https://www.onlinegames.io/games/2021/3/love-tester/index.html",
+      "is_active": true,
+      "is_featured": false,
+      "is_new": true,
+      "long_description": "Do you want to know how much your crush falls for you? Here is a way to test the love\u2026",
+      "rating": 4.2,
+      "release_date": "2025-09-16T10:49:31.187642",
+      "slug": "love-tester",
+      "tags": [
+        "Casual",
+        "Fun",
+        "Social"
+      ],
+      "thumbnail_url": "https://www.onlinegames.io/media/posts/152/love-tester.jpg",
+      "title": "Love Tester",
+      "total_plays": 41371,
+      "updated_at": "2025-09-16T11:06:51.227028"
+    },
+    {
+      "category_name": "Home",
+      "category_obj": 7,
+      "controls": {
+        "Arrow Keys": "Steer and accelerate",
+        "Spacebar": "Handbrake",
+        "WASD": "Alternative controls"
+      },
+      "created_at": "2025-09-16T10:49:31.186777",
+      "description": "Steer your car on the highway at full speed without crashing any other vehicle in Traffic Jam 3D, a driving in traffic game. Set your racing scenario as you wish!",
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "HTML5 compatible",
+        "Mobile friendly"
+      ],
+      "game_plays": [],
+      "game_stats": [],
+      "game_url": "https://html5.gamedistribution.com/337302b23b5943d8bcfc501d81d50cdb/?gd_sdk_referrer_url=https://www.onlinegames.io/traffic-jam-3d/",
+      "id": 25,
+      "iframe_url": "https://html5.gamedistribution.com/337302b23b5943d8bcfc501d81d50cdb/?gd_sdk_referrer_url=https://www.onlinegames.io/traffic-jam-3d/",
+      "is_active": true,
+      "is_featured": false,
+      "is_new": true,
+      "long_description": "Steer your car on the highway at full speed without crashing any other vehicle in Traffic Jam 3D, a driving in traffic game. Set your racing scenario as you wish!",
+      "rating": 3.6,
+      "release_date": "2025-09-16T10:49:31.186776",
+      "slug": "traffic-jam-3d",
+      "tags": [
+        "HTML5",
+        "Cars",
+        "Management",
+        "Strategy",
+        "Racing"
+      ],
+      "thumbnail_url": "https://www.onlinegames.io/media/posts/784/Traffic-Jam.jpg",
+      "title": "Traffic Jam 3D",
+      "total_plays": 24465,
+      "updated_at": "2025-09-16T11:06:51.226009"
+    },
+    {
+      "category_name": "Home",
+      "category_obj": 7,
+      "controls": {
+        "Arrow Keys": "Steer and accelerate",
+        "Spacebar": "Handbrake",
+        "WASD": "Alternative controls"
+      },
+      "created_at": "2025-09-16T10:49:31.185897",
+      "description": "Highway Traffic\u00c2\u00a0game is centered around driving down the highway, dodging other cars, and avoiding accidents. It gets tricky because other\u2026",
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "Unity powered",
+        "3D graphics"
+      ],
+      "game_plays": [],
+      "game_stats": [],
+      "game_url": "https://www.onlinegames.io/games/2022/unity/highway-traffic/index.html",
+      "id": 24,
+      "iframe_url": "https://www.onlinegames.io/games/2022/unity/highway-traffic/index.html",
+      "is_active": true,
+      "is_featured": false,
+      "is_new": true,
+      "long_description": "Highway Traffic\u00c2\u00a0game is centered around driving down the highway, dodging other cars, and avoiding accidents. It gets tricky because other\u2026",
+      "rating": 4.7,
+      "release_date": "2025-09-16T10:49:31.185896",
+      "slug": "highway-traffic",
+      "tags": [
+        "Unity",
+        "Cars",
+        "Management",
+        "Strategy"
+      ],
+      "thumbnail_url": "https://www.onlinegames.io/media/posts/32/Highway-Traffic-2.jpg",
+      "title": "Highway Traffic",
+      "total_plays": 16768,
+      "updated_at": "2025-09-16T11:06:51.225192"
+    },
+    {
+      "category_name": "Home",
+      "category_obj": 7,
+      "controls": {
+        "Arrow Keys": "Move left/right",
+        "Mouse": "Navigate menus",
+        "Spacebar": "Jump"
+      },
+      "created_at": "2025-09-16T10:49:31.184990",
+      "description": "Guide an alien through gravity-defying tunnels in space, dodging gaps and obstacles in the thrilling endless platformer Run 3.",
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "Fast-paced action"
+      ],
+      "game_plays": [],
+      "game_stats": [],
+      "game_url": "https://cloud.onlinegames.io/games/2025/more/run-3/index-og.html",
+      "id": 23,
+      "iframe_url": "https://cloud.onlinegames.io/games/2025/more/run-3/index-og.html",
+      "is_active": true,
+      "is_featured": false,
+      "is_new": true,
+      "long_description": "Guide an alien through gravity-defying tunnels in space, dodging gaps and obstacles in the thrilling endless platformer Run 3.",
+      "rating": 3.9,
+      "release_date": "2025-09-16T10:49:31.184988",
+      "slug": "run-3",
+      "tags": [
+        "Running",
+        "Endless",
+        "Platform"
+      ],
+      "thumbnail_url": "https://www.onlinegames.io/media/posts/1056/run-3-online.webp",
+      "title": "Run 3",
+      "total_plays": 16084,
+      "updated_at": "2025-09-16T11:06:51.224482"
+    },
+    {
+      "category_name": "Home",
+      "category_obj": 7,
+      "controls": {
+        "Arrow Keys": "Steer and accelerate",
+        "Spacebar": "Handbrake",
+        "WASD": "Alternative controls"
+      },
+      "created_at": "2025-09-16T10:49:31.184153",
+      "description": "Drift Hunters 2 is a web-based driving game with premium 3D graphics and realistic physics. Play now on OnlineGames.io!",
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "Unity powered",
+        "3D graphics"
+      ],
+      "game_plays": [],
+      "game_stats": [],
+      "game_url": "https://www.onlinegames.io/games/2024/unity/drift-hunters-2/index.html",
+      "id": 22,
+      "iframe_url": "https://www.onlinegames.io/games/2024/unity/drift-hunters-2/index.html",
+      "is_active": true,
+      "is_featured": false,
+      "is_new": true,
+      "long_description": "Drift Hunters 2 is a web-based driving game with premium 3D graphics and realistic physics. Play now on OnlineGames.io!",
+      "rating": 3.9,
+      "release_date": "2025-09-16T10:49:31.184152",
+      "slug": "drift-hunters-2",
+      "tags": [
+        "Unity",
+        "Racing",
+        "Cars",
+        "Driving",
+        "3D"
+      ],
+      "thumbnail_url": "https://www.onlinegames.io/media/posts/669/Drift-Hunters-2-Online.jpg",
+      "title": "Drift Hunters 2",
+      "total_plays": 7439,
+      "updated_at": "2025-09-16T11:06:51.223611"
+    },
+    {
+      "category_name": "Home",
+      "category_obj": 7,
+      "controls": {
+        "Left Click": "Main action",
+        "Mouse": "Click to play"
+      },
+      "created_at": "2025-09-16T10:49:31.183167",
+      "description": "Unleash chaos in this hilarious Italian Brainrot clicker game! Unlock wild skins, power-ups, and leaderboards in this stress-melting tap frenzy.",
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "HTML5 compatible",
+        "Mobile friendly",
+        "Idle gameplay"
+      ],
+      "game_plays": [],
+      "game_stats": [],
+      "game_url": "https://html5.gamedistribution.com/fd1a94ebbb2141d1adf2d9e3629abcf3/?gd_sdk_referrer_url=https://www.onlinegames.io/italian-brainrot-clicker/",
+      "id": 21,
+      "iframe_url": "https://html5.gamedistribution.com/fd1a94ebbb2141d1adf2d9e3629abcf3/?gd_sdk_referrer_url=https://www.onlinegames.io/italian-brainrot-clicker/",
+      "is_active": true,
+      "is_featured": false,
+      "is_new": true,
+      "long_description": "Unleash chaos in this hilarious Italian Brainrot clicker game! Unlock wild skins, power-ups, and leaderboards in this stress-melting tap frenzy.",
+      "rating": 3.9,
+      "release_date": "2025-09-16T10:49:31.183163",
+      "slug": "italian-brainrot-clicker",
+      "tags": [
+        "HTML5",
+        "Clicker",
+        "Idle",
+        "Casual",
+        "Fun"
+      ],
+      "thumbnail_url": "https://www.onlinegames.io/media/posts/1046/italian_brainrot_clicker_game.webp",
+      "title": "Italian Brainrot Clicker",
+      "total_plays": 49363,
+      "updated_at": "2025-09-16T11:06:51.222918"
+    }
+  ],
+  "pagination": {
+    "has_next": true,
+    "has_prev": false,
+    "page": 1,
+    "pages": 3,
+    "per_page": 10,
+    "total": 24
+  }
+}
