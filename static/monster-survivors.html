@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Monster Survivors online - An intense survival game where you battle endless waves of monsters. Free to play, no download required.">
+    <meta name="keywords" content="Monster Survivors, online game, survival game, browser game, free game, monster game, action game">
+    <meta name="author" content="BTW Games">
+    <meta property="og:title" content="Monster Survivors - Play Online Free">
+    <meta property="og:description" content="Survive endless waves of monsters in this thrilling browser-based survival game. Play Monster Survivors free online.">
+    <meta property="og:image" content="https://btwgame.com/images/monster-survivors-og.jpg">
+    <meta property="og:url" content="https://btwgame.com/monster-survivors.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Monster Survivors - Play Online Free">
+    <meta name="twitter:description" content="Survive endless waves of monsters in this thrilling browser-based survival game.">
+    <link rel="canonical" href="https://btwgame.com/monster-survivors.html">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM7PBYVK97"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-SM7PBYVK97');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8930741225505243"
+         crossorigin="anonymous"></script>
+
+    <title>Monster Survivors - Play Free Online | BTW Games</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #007AFF;
+            --success-color: #34C759;
+            --danger-color: #FF3B30;
+            --warning-color: #FF9500;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-500: #6B7280;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
+            --shadow-light: 0 2px 15px rgba(0, 0, 0, 0.1);
+            --shadow-heavy: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-900);
+            background: linear-gradient(180deg, #ffffff 0%, var(--gray-50) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-light);
+        }
+
+        nav {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .back-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-btn:hover {
+            opacity: 0.8;
+        }
+
+        .game-hero {
+            padding: 40px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .game-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .game-tagline {
+            font-size: 22px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .game-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .game-container {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-heavy);
+            margin: 40px auto;
+            max-width: 1000px;
+            position: relative;
+        }
+
+        .game-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .game-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .loading-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            color: var(--gray-500);
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .play-button {
+            background: var(--success-color);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 20px rgba(52, 199, 89, 0.3);
+        }
+
+        .play-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(52, 199, 89, 0.4);
+        }
+
+        .game-info {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .game-description {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .info-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--gray-900);
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--gray-100);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+
+        .controls-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .control-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            background: var(--gray-50);
+            border-radius: 8px;
+        }
+
+        .control-key {
+            background: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 12px;
+            min-width: 60px;
+            text-align: center;
+            border: 1px solid var(--gray-200);
+        }
+
+        .game-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .tag {
+            background: var(--gray-100);
+            color: var(--gray-800);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        footer {
+            background: var(--gray-900);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .fullscreen-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 10;
+        }
+
+        .fullscreen-btn:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        @media (max-width: 768px) {
+            .game-info {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .game-stats {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .game-title {
+                font-size: 32px;
+            }
+
+            .game-tagline {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">BTW Games</a>
+            <a href="index.html" class="back-btn">← Back to Games</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="game-hero">
+            <div class="container">
+                <h1 class="game-title">Monster Survivors</h1>
+                <p class="game-tagline">Battle endless waves of monsters in this intense survival adventure</p>
+
+                <div class="game-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">⭐ 4.5</div>
+                        <div class="stat-label">Rating</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">👥 15.4K</div>
+                        <div class="stat-label">Players</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">🎯 Action</div>
+                        <div class="stat-label">Category</div>
+                    </div>
+                </div>
+
+                <a href="#game" class="play-button">🎮 Play Now - Free!</a>
+            </div>
+        </section>
+
+        <!-- Game Container -->
+        <section class="container">
+            <div class="game-container" id="game">
+                <div class="game-wrapper">
+                    <div class="loading-indicator" id="loadingIndicator">
+                        🎮 Loading Monster Survivors...
+                    </div>
+                    <button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">
+                        ⛶
+                    </button>
+                    <iframe
+                        id="gameIframe"
+                        class="game-iframe"
+                        src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
+                        title="Monster Survivors Game"
+                        allowfullscreen
+                        loading="lazy"
+                        onload="hideLoading()"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Information -->
+        <section class="container">
+            <div class="game-info">
+                <div class="game-description">
+                    <h2 class="card-title">About Monster Survivors</h2>
+                    <p>Monster Survivors is an exhilarating browser-based survival game that puts you in the heart of relentless monster waves. As the last defender standing, you must use your wits, reflexes, and an arsenal of weapons to survive as long as possible against increasingly difficult enemies.</p>
+                    <br>
+                    <p>The game features smooth Unity-powered graphics, responsive controls, and addictive gameplay that will keep you coming back for more. Each playthrough offers a unique challenge as monster spawn patterns vary, ensuring no two games are exactly alike.</p>
+                    <br>
+                    <p>Whether you're a casual player looking for quick entertainment or a hardcore gamer seeking to top the leaderboards, Monster Survivors delivers an engaging experience that scales with your skill level.</p>
+
+                    <div class="game-tags">
+                        <span class="tag">Survival</span>
+                        <span class="tag">Action</span>
+                        <span class="tag">Shooter</span>
+                        <span class="tag">Unity</span>
+                        <span class="tag">Browser Game</span>
+                    </div>
+                </div>
+
+                <div class="info-sidebar">
+                    <div class="info-card">
+                        <h3 class="card-title">Game Features</h3>
+                        <ul class="features-list">
+                            <li>
+                                <div class="feature-icon">⚔️</div>
+                                <span>Intense Combat System</span>
+                            </li>
+                            <li>
+                                <div class="feature-icon">🎮</div>
+                                <span>Easy Controls</span>
+                            </li>
+                            <li>
+                                <div class="feature-icon">📈</div>
+                                <span>Progressive Difficulty</span>
+                            </li>
+                            <li>
+                                <div class="feature-icon">🏆</div>
+                                <span>Achievement System</span>
+                            </li>
+                            <li>
+                                <div class="feature-icon">🌟</div>
+                                <span>Power-ups & Upgrades</span>
+                            </li>
+                            <li>
+                                <div class="feature-icon">🎯</div>
+                                <span>Strategic Gameplay</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 class="card-title">Game Controls</h3>
+                        <div class="controls-grid">
+                            <div class="control-item">
+                                <span class="control-key">WASD</span>
+                                <span>Move your character</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="control-key">Mouse</span>
+                                <span>Aim your weapon</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="control-key">Left Click</span>
+                                <span>Fire weapon</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="control-key">Space</span>
+                                <span>Special ability</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="control-key">E</span>
+                                <span>Interact / Pick up</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="control-key">ESC</span>
+                                <span>Pause menu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BTW Games. All rights reserved. | <a href="index.html" style="color: #60A5FA;">More Games</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Hide loading indicator when game loads
+        function hideLoading() {
+            document.getElementById('loadingIndicator').style.display = 'none';
+        }
+
+        // Fullscreen functionality
+        function toggleFullscreen() {
+            const gameContainer = document.querySelector('.game-container');
+
+            if (!document.fullscreenElement) {
+                gameContainer.requestFullscreen().catch(err => {
+                    console.log(`Error attempting to enable fullscreen: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // Smooth scrolling for play button
+        document.querySelector('.play-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('game').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+
+        // Record game play when iframe loads
+        window.addEventListener('load', function() {
+            // Track game play for analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'game_start', {
+                    'game_name': 'Monster Survivors',
+                    'game_category': 'Action'
+                });
+            }
+
+            // Optional: Record play in backend
+            fetch('/api/games/1/play', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ duration: 0 })
+            }).catch(err => console.log('Play tracking failed:', err));
+        });
+
+        // Handle iframe load errors
+        document.getElementById('gameIframe').addEventListener('error', function() {
+            document.getElementById('loadingIndicator').innerHTML =
+                '❌ Failed to load game. Please try refreshing the page.';
+        });
+    </script>
+</body>
+</html>

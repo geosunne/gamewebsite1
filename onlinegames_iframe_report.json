@@ -1,0 +1,107 @@
+{
+  "website": "https://www.onlinegames.io",
+  "analysis_timestamp": "2025-09-16 17:51:41",
+  "summary": {
+    "total_games_analyzed": 5,
+    "total_iframe_sources": 5,
+    "total_game_titles": 5
+  },
+  "all_iframe_sources": [
+    "https://cloud.onlinegames.io/games/2024/flash/papas-donuteria/index-og.html ",
+    "https://html5.gamedistribution.com/485ace88aed344f8b2ff6821a46e4431/?gd_sdk_referrer_url=https://www.onlinegames.io/guess-the-italian-brainrot-animals/ ",
+    "https://html5.gamedistribution.com/5c5b89d12e404bf6a4979ae0c0c9a09c/?gd_sdk_referrer_url=https://www.onlinegames.io/italian-brainrot-survive-parkour/ ",
+    "https://html5.gamedistribution.com/eb45cb884a3140bea17b3070ff6b4d70/?gd_sdk_referrer_url=https://www.onlinegames.io/brainrot-clicker/",
+    "https://html5.gamedistribution.com/f30771a05eb84a67a794e85bc39621e7/?gd_sdk_referrer_url=https://www.onlinegames.io/cosmo-void/ "
+  ],
+  "games_with_iframes": [
+    {
+      "game_title": "Papa's Donuteria",
+      "page_url": "https://www.onlinegames.io/papas-donuteria/",
+      "iframes": [
+        {
+          "src": "https://cloud.onlinegames.io/games/2024/flash/papas-donuteria/index-og.html ",
+          "width": "1060",
+          "height": "650",
+          "frameborder": "0",
+          "allowfullscreen": "allowfullscreen",
+          "sandbox": ""
+        }
+      ]
+    },
+    {
+      "game_title": "Italian Brainrot Survive Parkour",
+      "page_url": "https://www.onlinegames.io/italian-brainrot-survive-parkour/",
+      "iframes": [
+        {
+          "src": "https://html5.gamedistribution.com/5c5b89d12e404bf6a4979ae0c0c9a09c/?gd_sdk_referrer_url=https://www.onlinegames.io/italian-brainrot-survive-parkour/ ",
+          "width": "1060",
+          "height": "650",
+          "frameborder": "0",
+          "allowfullscreen": "allowfullscreen",
+          "sandbox": ""
+        }
+      ]
+    },
+    {
+      "game_title": "Brainrot Clicker",
+      "page_url": "https://www.onlinegames.io/brainrot-clicker/",
+      "iframes": [
+        {
+          "src": "https://html5.gamedistribution.com/eb45cb884a3140bea17b3070ff6b4d70/?gd_sdk_referrer_url=https://www.onlinegames.io/brainrot-clicker/",
+          "width": "1060",
+          "height": "650",
+          "frameborder": "0",
+          "allowfullscreen": "allowfullscreen",
+          "sandbox": ""
+        }
+      ]
+    },
+    {
+      "game_title": "Guess the Italian Brainrot Animals",
+      "page_url": "https://www.onlinegames.io/guess-the-italian-brainrot-animals/",
+      "iframes": [
+        {
+          "src": "https://html5.gamedistribution.com/485ace88aed344f8b2ff6821a46e4431/?gd_sdk_referrer_url=https://www.onlinegames.io/guess-the-italian-brainrot-animals/ ",
+          "width": "1060",
+          "height": "650",
+          "frameborder": "0",
+          "allowfullscreen": "allowfullscreen",
+          "sandbox": ""
+        }
+      ]
+    },
+    {
+      "game_title": "Cosmo Void",
+      "page_url": "https://www.onlinegames.io/cosmo-void/",
+      "iframes": [
+        {
+          "src": "https://html5.gamedistribution.com/f30771a05eb84a67a794e85bc39621e7/?gd_sdk_referrer_url=https://www.onlinegames.io/cosmo-void/ ",
+          "width": "1060",
+          "height": "650",
+          "frameborder": "0",
+          "allowfullscreen": "allowfullscreen",
+          "sandbox": ""
+        }
+      ]
+    }
+  ],
+  "iframe_domains": {
+    "html5.gamedistribution.com": 4,
+    "cloud.onlinegames.io": 1
+  },
+  "iframe_patterns": {
+    "protocols": {
+      "https": 5
+    },
+    "common_paths": {
+      "eb45cb884a3140bea17b3070ff6b4d70": 1,
+      "f30771a05eb84a67a794e85bc39621e7": 1,
+      "5c5b89d12e404bf6a4979ae0c0c9a09c": 1,
+      "games": 1,
+      "485ace88aed344f8b2ff6821a46e4431": 1
+    },
+    "file_extensions": {
+      "html ": 1
+    }
+  }
+}
