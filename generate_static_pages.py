@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
-Generate static HTML pages for all games
+Generate static HTML pages for all games and update all_games.json
 """
 import requests
 import json
 import os
+import time
 from urllib.parse import urljoin
+from datetime import datetime
 
 BASE_URL = "http://localhost:8000"
 
@@ -40,6 +42,74 @@ def fetch_related_games(category_name, exclude_slug, limit=6):
         print(f"Error fetching related games: {e}")
         return []
 
+def standardize_game_tags(game_data):
+    """Generate standardized tags based on game data"""
+    title = game_data.get('title', '').lower()
+    description = game_data.get('description', '').lower()
+    category_name = game_data.get('category_name', '').lower()
+    iframe_url = game_data.get('iframe_url', '') or game_data.get('game_url', '')
+
+    tags = []
+
+    # Platform tags based on iframe URL
+    if 'gamedistribution.com' in iframe_url or 'html5' in iframe_url.lower():
+        tags.append('HTML5')
+    elif 'unity' in iframe_url.lower():
+        tags.append('Unity')
+    elif iframe_url and 'html5' not in iframe_url.lower() and 'unity' not in iframe_url.lower():
+        tags.append('HTML5')  # Default for browser games
+
+    # Genre tags based on title, description, and category
+    genre_keywords = {
+        'Action': ['action', 'fight', 'combat', 'battle', 'war', 'shoot', 'gun', 'zombie', 'adventure'],
+        'Strategy': ['strategy', 'tower defense', 'defense', 'build', 'manage', 'city', 'empire'],
+        'Puzzle': ['puzzle', 'brain', 'logic', 'solve', 'match', 'tetris', 'block'],
+        'Racing': ['race', 'racing', 'car', 'drive', 'speed', 'drift', 'bike', 'motorcycle'],
+        'Sports': ['sport', 'football', 'soccer', 'basketball', 'tennis', 'golf', 'baseball'],
+        'Arcade': ['arcade', 'classic', 'retro', 'pixel', 'old school'],
+        'Platform': ['platform', 'jump', 'run', 'climb', 'parkour'],
+        'Simulation': ['simulation', 'sim', 'life', 'city', 'farm', 'cooking', 'restaurant'],
+        'RPG': ['rpg', 'role', 'character', 'level up', 'quest', 'adventure'],
+        'Casual': ['casual', 'relaxing', 'simple', 'easy', 'family'],
+        'Multiplayer': ['multiplayer', 'online', 'vs', 'versus', 'pvp', 'co-op'],
+        'Clicker': ['clicker', 'click', 'idle', 'incremental', 'tap'],
+        'Educational': ['educational', 'learn', 'math', 'quiz', 'knowledge'],
+        'Horror': ['horror', 'scary', 'fear', 'nightmare', 'ghost', 'monster'],
+        'Rhythm': ['rhythm', 'music', 'beat', 'dance', 'sound'],
+        'Card': ['card', 'poker', 'blackjack', 'solitaire', 'deck']
+    }
+
+    content_text = f"{title} {description} {category_name}"
+
+    for genre, keywords in genre_keywords.items():
+        if any(keyword in content_text for keyword in keywords):
+            tags.append(genre)
+
+    # Special game type tags
+    if any(word in content_text for word in ['io', '.io']):
+        tags.append('IO Game')
+
+    if any(word in content_text for word in ['3d', 'three dimensional']):
+        tags.append('3D')
+
+    if any(word in content_text for word in ['2d', 'two dimensional', 'pixel']):
+        tags.append('2D')
+
+    # Remove duplicates and ensure we have at least some basic tags
+    tags = list(dict.fromkeys(tags))  # Remove duplicates while preserving order
+
+    # Ensure every game has at least HTML5 and one genre tag
+    if not any(tag in ['HTML5', 'Unity'] for tag in tags):
+        tags.insert(0, 'HTML5')
+
+    if not any(tag in genre_keywords.keys() for tag in tags):
+        if 'game' in content_text:
+            tags.append('Casual')
+        else:
+            tags.append('Action')
+
+    return tags[:6]  # Limit to 6 tags maximum
+
 def generate_game_page(game_data, related_games):
     """Generate static HTML for a game page"""
 
@@ -52,7 +122,7 @@ def generate_game_page(game_data, related_games):
     category_name = game_data.get('category_name', 'General')
     rating = game_data.get('rating', 0)
     total_plays = game_data.get('total_plays', 0)
-    tags = game_data.get('tags', [])
+    tags = standardize_game_tags(game_data)  # Use standardized tags instead of API tags
     features = game_data.get('features', [])
     controls = game_data.get('controls', {})
     release_date = game_data.get('release_date', '')
@@ -573,10 +643,32 @@ def generate_game_page(game_data, related_games):
 
     return html_content
 
-def main():
-    """Generate all static game pages"""
+def save_all_games_json(all_games_data):
+    """Save all games data to static_html/all_games.json"""
+    try:
+        games_json_data = {
+            "metadata": {
+                "total_games": len(all_games_data),
+                "generated_at": datetime.now().isoformat(),
+                "website": "BTW Games",
+                "api_base_url": BASE_URL
+            },
+            "games": all_games_data
+        }
 
-    print("🚀 Generating static game pages...")
+        with open('static_html/all_games.json', 'w', encoding='utf-8') as f:
+            json.dump(games_json_data, f, indent=2, ensure_ascii=False)
+
+        print(f"📊 Updated static_html/all_games.json with {len(all_games_data)} games")
+        return True
+    except Exception as e:
+        print(f"❌ Error saving all_games.json: {e}")
+        return False
+
+def main():
+    """Generate all static game pages and update all_games.json"""
+
+    print("🚀 Generating static game pages and updating all_games.json...")
 
     # Read game slugs
     try:
@@ -593,6 +685,7 @@ def main():
 
     success_count = 0
     error_count = 0
+    all_games_data = []
 
     for slug in game_slugs:
         print(f"📄 Processing {slug}...")
@@ -602,6 +695,11 @@ def main():
         if not game_data:
             error_count += 1
             continue
+
+        # Add to all games collection with standardized tags
+        game_data_with_tags = game_data.copy()
+        game_data_with_tags['standardized_tags'] = standardize_game_tags(game_data)
+        all_games_data.append(game_data_with_tags)
 
         # Fetch related games
         related_games = fetch_related_games(
@@ -626,10 +724,15 @@ def main():
             print(f"❌ Error generating page for {slug}: {e}")
             error_count += 1
 
+    # Save all games data to JSON
+    if all_games_data:
+        save_all_games_json(all_games_data)
+
     print(f"\n🎯 Generation complete!")
     print(f"✅ Success: {success_count} pages")
     print(f"❌ Errors: {error_count} pages")
     print(f"📁 Pages saved in: static_html/games/")
+    print(f"📊 Games data saved in: static_html/all_games.json")
 
 if __name__ == "__main__":
     main()

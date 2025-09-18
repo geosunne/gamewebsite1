@@ -387,7 +387,7 @@ class GameIframeExtractor:
         
         return url
     
-    def analyze_recently_games(self, max_games=50):
+    def analyze_recently_games(self, max_games):
         """Analyze games from the 'section recently' to extract iframe sources and game info"""
         print("Starting analysis of 'Recently Played' games...")
         
@@ -404,6 +404,11 @@ class GameIframeExtractor:
         
         for i, game_link in enumerate(games_to_analyze, 1):
             print(f"\n[{i}/{len(games_to_analyze)}] Processing: {game_link['title']}")
+            
+            # Skip games with URLs containing "/t/"
+            if '/t/' in game_link['url']:
+                print(f"  ⏭️  Skipping game with /t/ in URL: {game_link['url']}")
+                continue
             
             # Extract game info including iframes and description
             game_info = self.extract_game_info_from_page(
@@ -491,7 +496,7 @@ def main():
     
     try:
         # Analyze 100 games from the 'Recently Played' section
-        extractor.analyze_recently_games(max_games=100)
+        extractor.analyze_recently_games(max_games=200)
         
         # Save the extracted data
         extractor.save_game_data()
