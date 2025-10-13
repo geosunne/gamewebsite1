@@ -26,7 +26,7 @@
         gtag('config', 'G-SM7PBYVK97');
     </script>
 <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8930741225505243"></script>
-<title>BTW Games - Free Online Games | Play 100+ Browser Games Instantly</title>
+<title>BTW Games - Free Online Games | Play 50+ Browser Games Instantly</title>
 <style>
         * {
             margin: 0;
@@ -612,8 +612,7 @@
             }
         }
 
-        /* Advertisement Section - Temporarily Hidden */
-        /*
+        /* Advertisement Section */
         .ad-section {
             margin: 30px auto;
             max-width: 728px;
@@ -630,7 +629,6 @@
                 margin: 20px auto;
             }
         }
-        */
 
     </style>
 <script type="application/ld+json">{
@@ -648,7 +646,7 @@
 <body>
 <header>
 <nav class="container">
-<a class="logo" href="/"><img src="assets/images/btwlogo.png" alt="BTW Games" style="max-width: 150px; height: auto;" /></a>
+<a class="logo" href="/"><img alt="BTW Games" src="assets/images/btwlogo.png" style="max-width: 150px; height: auto;"/></a>
 <button class="mobile-menu" onclick="toggleMenu()">
 <span></span>
 <span></span>
@@ -677,7 +675,7 @@
 <section class="games-section container" id="new-games">
 <div class="section-header">
 <h2 class="section-title">🆕 New Games</h2>
-<a class="view-all-btn" href="/games.html">View All</a>
+<a class="view-all-btn" href="games.html">View All</a>
 </div>
 <div class="games-grid" id="newGamesGrid">
 <!-- 新游戏将通过JavaScript动态加载 -->
@@ -687,7 +685,7 @@
 <section class="games-section container" id="games">
 <div class="section-header">
 <h2 class="section-title">🎮 All Games</h2>
-<a class="view-all-btn" href="/games.html">View All</a>
+<a class="view-all-btn" href="games.html">View All</a>
 </div>
 <div class="games-grid" id="popularGamesGrid">
 <!-- 热门游戏将通过JavaScript动态加载 -->
@@ -710,7 +708,7 @@
 <footer>
 <div class="container">
 <div class="footer-content">
-<p>© 2025 BTW Games. All rights reserved.</p>
+<p>© 2025 AIQun Games. All rights reserved.</p>
 <ul class="footer-links">
 <li><a href="/privacy">Privacy Policy</a></li>
 <li><a href="/terms">Terms of Service</a></li>
@@ -719,6 +717,7 @@
 </div>
 </div>
 </footer>
+<script src="assets/js/games-data.js"></script>
 <script src="assets/js/api.js"></script>
 <script>
         let currentFilter = 'all';
@@ -750,16 +749,16 @@
             card.className = 'game-card';
 
             // 使用新的动态游戏页面链接
-            card.onclick = () => window.location.href = `/games/${game.id}`;
+            card.onclick = () => window.location.href = `/games/${game.slug}`;
 
-            const badge = (showBadge && game.isNew) ? '<div class="game-badge">NEW</div>' :
+            const badge = (showBadge && game.is_new) ? '<div class="game-badge">NEW</div>' :
                          '';
 
             card.innerHTML = `
                 <div class="game-thumbnail">
                     ${badge}
-                    ${game.thumbnail ? `<img src="${game.thumbnail}" alt="${game.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">` : ''}
-                    <div class="thumbnail-fallback" style="${game.thumbnail ? 'display:none;' : 'display: flex; align-items: center; justify-content: center;'} font-size: 36px; height: 100%; color: var(--apple-gray);">🎮</div>
+                    ${game.thumbnail_url ? `<img src="${game.thumbnail_url}" alt="${game.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">` : ''}
+                    <div class="thumbnail-fallback" style="${game.thumbnail_url ? 'display:none;' : 'display: flex; align-items: center; justify-content: center;'} font-size: 36px; height: 100%; color: var(--apple-gray);">🎮</div>
                     <div class="game-info">
                         <h3 class="game-title">${game.title}</h3>
                     </div>

@@ -1,137 +1,94 @@
-// Static API client for BTW Games - uses pre-loaded data instead of server calls
+// API client for BTW Games Flask backend
 class GameAPI {
     constructor(baseURL = '/api') {
         this.baseURL = baseURL;
-        this.allGamesData = null;
-        this.newGamesData = null;
-        this.categoriesData = null;
-        this.loadStaticData();
     }
 
-    async loadStaticData() {
-        try {
-            // Load pre-generated static data
-            const [allGamesResponse, newGamesResponse, categoriesResponse] = await Promise.all([
-                fetch('/all_games.json'),
-                fetch('/new_games.json'),
-                fetch('/categories.json')
-            ]);
-
-            const allGames = await allGamesResponse.json();
-            const newGames = await newGamesResponse.json();
-            const categories = await categoriesResponse.json();
-
-            // Wrap arrays in objects with expected property names
-            this.allGamesData = { games: Array.isArray(allGames) ? allGames : allGames.games || [] };
-            this.newGamesData = { games: Array.isArray(newGames) ? newGames : newGames.games || [] };
-            this.categoriesData = Array.isArray(categories) ? categories : categories;
-        } catch (error) {
-            console.error('Failed to load static data:', error);
-            // Fallback to empty data
-            this.allGamesData = { games: [] };
-            this.newGamesData = { games: [] };
-            this.categoriesData = { categories: [] };
-        }
-    }
-
-    // Wait for data to be loaded
-    async ensureDataLoaded() {
-        while (!this.allGamesData || !this.newGamesData || !this.categoriesData) {
-            await new Promise(resolve => setTimeout(resolve, 10));
-        }
-    }
-
-    // Games API methods - now use static data
-    async getGames(params = {}) {
-        await this.ensureDataLoaded();
-
-        let games = [...this.allGamesData.games];
-
-        // Apply filters
-        if (params.category) {
-            games = games.filter(game => game.category_name === params.category);
-        }
-
-        if (params.new) {
-            games = games.filter(game => game.is_new);
-        }
-
-        if (params.featured) {
-            games = games.filter(game => game.is_featured);
-        }
-
-        // Apply sorting
-        if (params.sort === 'newest') {
-            games.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-        } else if (params.sort === 'popular') {
-            games.sort((a, b) => (b.total_plays || 0) - (a.total_plays || 0));
-        }
-
-        // Apply pagination
-        const perPage = parseInt(params.per_page || 20);
-        const page = parseInt(params.page || 1);
-        const start = (page - 1) * perPage;
-        const paginatedGames = games.slice(start, start + perPage);
-
-        return {
-            games: paginatedGames,
-            total: games.length,
-            page,
-            per_page: perPage,
-            total_pages: Math.ceil(games.length / perPage)
+    // Generic API request method
+    async request(endpoint, options = {}) {
+        const url = `${this.baseURL}${endpoint}`;
+        const config = {
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            },
+            ...options
         };
+
+        try {
+            const response = await fetch(url, config);
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || `HTTP error! status: ${response.status}`);
+            }
+
+            return data;
+        } catch (error) {
+            console.error('API request failed:', error);
+            throw error;
+        }
+    }
+
+    // Games API methods
+    async getGames(params = {}) {
+        // Filter out undefined/null values
+        const cleanParams = Object.fromEntries(
+            Object.entries(params).filter(([_, v]) => v != null)
+        );
+        const queryString = new URLSearchParams(cleanParams).toString();
+        const endpoint = queryString ? `/games?${queryString}` : '/games';
+        return this.request(endpoint);
     }
 
     async getGame(gameId) {
-        await this.ensureDataLoaded();
-        const game = this.allGamesData.games.find(g => g.id == gameId);
-        return game ? { game } : null;
+        return this.request(`/games/${gameId}`);
     }
 
     async getGameBySlug(slug) {
-        await this.ensureDataLoaded();
-        const game = this.allGamesData.games.find(g => g.slug === slug);
-        return game ? { game } : null;
+        return this.request(`/games/slug/${slug}`);
     }
 
     async recordGamePlay(gameId, duration = 0) {
-        // Static version - just log the play (no server call)
-        console.log(`Game play recorded: ${gameId}, duration: ${duration}s`);
-        return { success: true };
+        return this.request(`/games/${gameId}/play`, {
+            method: 'POST',
+            body: JSON.stringify({ duration })
+        });
     }
 
     // Categories API methods
     async getCategories() {
-        await this.ensureDataLoaded();
-        return { categories: this.categoriesData };
+        return this.request('/categories');
     }
 
     async getGamesByCategory(categoryId, params = {}) {
-        await this.ensureDataLoaded();
-
-        // Find category name by ID
-        const category = this.categoriesData.find(c => c.id == categoryId);
-        if (!category) return { games: [] };
-
-        return this.getGames({ ...params, category: category.name });
+        // Filter out undefined/null values
+        const cleanParams = Object.fromEntries(
+            Object.entries(params).filter(([_, v]) => v != null)
+        );
+        const queryString = new URLSearchParams(cleanParams).toString();
+        const endpoint = queryString ? `/categories/${categoryId}/games?${queryString}` : `/categories/${categoryId}/games`;
+        return this.request(endpoint);
     }
 
     // Search API methods
     async searchGames(query, params = {}) {
-        await this.ensureDataLoaded();
-
-        const searchQuery = query.toLowerCase();
-        const games = this.allGamesData.games.filter(game =>
-            game.title.toLowerCase().includes(searchQuery) ||
-            game.description.toLowerCase().includes(searchQuery) ||
-            (game.tags && game.tags.some(tag => tag.toLowerCase().includes(searchQuery)))
+        // Filter out undefined/null values
+        const allParams = { q: query, ...params };
+        const cleanParams = Object.fromEntries(
+            Object.entries(allParams).filter(([_, v]) => v != null)
         );
+        const searchParams = new URLSearchParams(cleanParams).toString();
+        return this.request(`/search?${searchParams}`);
+    }
 
-        return {
-            games,
-            total: games.length,
-            query
-        };
+    // Statistics API methods
+    async getGamesStats() {
+        return this.request('/stats/games');
+    }
+
+    async getGameStats(gameId) {
+        return this.request(`/stats/games/${gameId}`);
     }
 
     // Utility methods for filtering and sorting
@@ -160,6 +117,14 @@ class GameAPI {
         });
         return response.games;
     }
+
+    async getGamesByCategory(category, params = {}) {
+        const response = await this.getGames({
+            category,
+            ...params
+        });
+        return response.games;
+    }
 }
 
 // Game data adapter to match the old static data format
@@ -172,16 +137,16 @@ class GameDataAdapter {
     // Convert API game format to legacy format
     convertGameFormat(apiGame) {
         return {
-            id: apiGame.slug || apiGame.id,
+            id: apiGame.slug || apiGame.id, // Use slug as ID for backward compatibility
             title: apiGame.title,
             description: apiGame.description,
-            thumbnail: apiGame.thumbnail || apiGame.thumbnail_url || '',
-            category: apiGame.category_name || apiGame.category,
+            thumbnail: apiGame.thumbnail_url || '',
+            category: apiGame.category_name,
             tags: apiGame.tags || [],
             rating: apiGame.rating,
-            plays: apiGame.plays || apiGame.total_plays,
-            isFeatured: apiGame.isFeatured || apiGame.is_featured || false,
-            isNew: apiGame.isNew || apiGame.is_new || false,
+            plays: apiGame.total_plays,
+            isFeatured: apiGame.is_featured,
+            isNew: apiGame.is_new,
             gameUrl: apiGame.game_url,
             controls: apiGame.controls || {},
             features: apiGame.features || [],
@@ -192,22 +157,23 @@ class GameDataAdapter {
     // Legacy API compatibility methods
     async getGame(gameId) {
         try {
+            // Try to get by slug first, then by ID
             let response;
             if (isNaN(gameId)) {
                 response = await this.api.getGameBySlug(gameId);
             } else {
                 response = await this.api.getGame(gameId);
             }
-            return response ? this.convertGameFormat(response.game) : null;
+            return this.convertGameFormat(response.game);
         } catch (error) {
             console.error('Error fetching game:', error);
             return null;
         }
     }
 
-    async getFeaturedGames(limit = 6) {
+    async getFeaturedGames() {
         try {
-            const games = await this.api.getFeaturedGames(limit);
+            const games = await this.api.getFeaturedGames();
             return games.map(game => this.convertGameFormat(game));
         } catch (error) {
             console.error('Error fetching featured games:', error);
@@ -237,8 +203,8 @@ class GameDataAdapter {
 
     async getGamesByCategory(category) {
         try {
-            const response = await this.api.getGames({ category });
-            return response.games.map(game => this.convertGameFormat(game));
+            const games = await this.api.getGamesByCategory(category);
+            return games.map(game => this.convertGameFormat(game));
         } catch (error) {
             console.error('Error fetching games by category:', error);
             return [];
@@ -268,18 +234,19 @@ class GameDataAdapter {
         }
     }
 
-    // Record game play for analytics (static version)
+    // Record game play for analytics
     async recordPlay(gameId, duration = 0) {
         try {
-            await this.api.recordGamePlay(gameId, duration);
+            // Convert slug to numeric ID if needed
+            let numericGameId = gameId;
+            if (isNaN(gameId)) {
+                const game = await this.api.getGameBySlug(gameId);
+                numericGameId = game.game.id;
+            }
+            await this.api.recordGamePlay(numericGameId, duration);
         } catch (error) {
             console.error('Error recording game play:', error);
         }
-    }
-
-    // Ensure data is loaded
-    async _ensureLoaded() {
-        await this.api.ensureDataLoaded();
     }
 }
 
@@ -287,51 +254,53 @@ class GameDataAdapter {
 const GAMES_API = new GameDataAdapter();
 
 // Maintain backward compatibility with old GAMES_DATA object
-const GAMES_DATA = {
-    games: [],
-    _loaded: false,
+// Only define if not already defined by games-data.js
+if (typeof GAMES_DATA === 'undefined') {
+    var GAMES_DATA = {
+        games: [],
+        _loaded: false,
 
-    async _ensureLoaded() {
-        if (!this._loaded) {
-            try {
-                await GAMES_API._ensureLoaded();
-                const response = await GAMES_API.api.getGames({ per_page: 100 });
-                this.games = response.games.map(game => GAMES_API.convertGameFormat(game));
-                this._loaded = true;
-            } catch (error) {
-                console.error('Error loading games data:', error);
+        async _ensureLoaded() {
+            if (!this._loaded) {
+                try {
+                    const response = await GAMES_API.api.getGames({ per_page: 100 });
+                    this.games = response.games.map(game => GAMES_API.convertGameFormat(game));
+                    this._loaded = true;
+                } catch (error) {
+                    console.error('Error loading games data:', error);
+                }
             }
+        },
+
+        async getGame(gameId) {
+            return await GAMES_API.getGame(gameId);
+        },
+
+        async getFeaturedGames() {
+            return await GAMES_API.getFeaturedGames();
+        },
+
+        async getNewGames(limit = 6) {
+            return await GAMES_API.getNewGames(limit);
+        },
+
+        async getGamesByCategory(category) {
+            return await GAMES_API.getGamesByCategory(category);
+        },
+
+        async getAllCategories() {
+            return await GAMES_API.getAllCategories();
+        },
+
+        async searchGames(query) {
+            return await GAMES_API.searchGames(query);
+        },
+
+        async getPopularGames(limit = 6) {
+            return await GAMES_API.getPopularGames(limit);
         }
-    },
-
-    async getGame(gameId) {
-        return await GAMES_API.getGame(gameId);
-    },
-
-    async getFeaturedGames(limit = 6) {
-        return await GAMES_API.getFeaturedGames(limit);
-    },
-
-    async getNewGames(limit = 6) {
-        return await GAMES_API.getNewGames(limit);
-    },
-
-    async getGamesByCategory(category) {
-        return await GAMES_API.getGamesByCategory(category);
-    },
-
-    async getAllCategories() {
-        return await GAMES_API.getAllCategories();
-    },
-
-    async searchGames(query) {
-        return await GAMES_API.searchGames(query);
-    },
-
-    async getPopularGames(limit = 6) {
-        return await GAMES_API.getPopularGames(limit);
-    }
-};
+    };
+}
 
 // Export for Node.js compatibility
 if (typeof module !== 'undefined' && module.exports) {
