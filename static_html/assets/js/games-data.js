@@ -2,50 +2,13 @@
 const GAMES_DATA = {
     metadata: {
     "total_games": 497,
-    "generated_at": "2025-10-13T10:52:23.612003",
+    "generated_at": "2025-10-13T15:11:32.584415",
     "website": "BTW Games",
     "api_base_url": "http://localhost:8000"
 },
     
     games: [
     {
-        "category_name": "Action",
-        "game_plays": [
-            1,
-            2
-        ],
-        "game_stats": [
-            175,
-            169,
-            163,
-            157,
-            151,
-            145,
-            139,
-            133,
-            127,
-            121,
-            115,
-            109,
-            103,
-            97,
-            91,
-            85,
-            79,
-            73,
-            67,
-            61,
-            55,
-            49,
-            43,
-            37,
-            31,
-            25,
-            19,
-            13,
-            7,
-            1
-        ],
         "id": 1,
         "title": "Monster Survivors",
         "slug": "monster-survivors",
@@ -80,21 +43,16 @@ const GAMES_DATA = {
             "E": "Interact / Pick up",
             "ESC": "Pause menu"
         },
-        "release_date": "2024-12-01T00:00:00",
-        "created_at": "2025-09-16T06:53:07.158825",
-        "updated_at": "2025-09-16T08:26:41.963784",
+        "release_date": "2024-12-01 00:00:00.000000",
+        "created_at": "2025-09-16 06:53:07.158825",
+        "updated_at": "2025-09-16 08:26:41.963784",
+        "category_name": "Action",
         "category_obj": 1,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Horror",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 7,
         "title": "Papa's Donuteria",
         "slug": "papas-donuteria",
@@ -125,19 +83,16 @@ const GAMES_DATA = {
             "Left Click": "Select items",
             "Drag & Drop": "Prepare orders"
         },
-        "release_date": "2025-09-16T10:49:31.160934",
-        "created_at": "2025-09-16T10:49:31.160939",
-        "updated_at": "2025-09-16T11:06:51.208791",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.160934",
+        "created_at": "2025-09-16 10:49:31.160939",
+        "updated_at": "2025-09-16 11:06:51.208791",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 8,
         "title": "Italian Brainrot Survive Parkour",
         "slug": "italian-brainrot-survive-parkour",
@@ -171,21 +126,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-09-16T10:49:31.163311",
-        "created_at": "2025-09-16T10:49:31.163314",
-        "updated_at": "2025-09-16T11:06:51.210607",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Racing",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.163311",
+        "created_at": "2025-09-16 10:49:31.163314",
+        "updated_at": "2025-09-16 11:06:51.210607",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 9,
         "title": "Brainrot Clicker",
         "slug": "brainrot-clicker",
@@ -218,20 +168,16 @@ const GAMES_DATA = {
             "Mouse": "Click to play",
             "Left Click": "Main action"
         },
-        "release_date": "2025-09-16T10:49:31.164719",
-        "created_at": "2025-09-16T10:49:31.164725",
-        "updated_at": "2025-09-16T11:06:51.211922",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.164719",
+        "created_at": "2025-09-16 10:49:31.164725",
+        "updated_at": "2025-09-16 11:06:51.211922",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 10,
         "title": "Guess the Italian Brainrot Animals",
         "slug": "guess-the-italian-brainrot-animals",
@@ -263,20 +209,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-16T10:49:31.166275",
-        "created_at": "2025-09-16T10:49:31.166277",
-        "updated_at": "2025-09-16T11:06:51.213180",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Educational"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.166275",
+        "created_at": "2025-09-16 10:49:31.166277",
+        "updated_at": "2025-09-16 11:06:51.213180",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 11,
         "title": "Cosmo Void",
         "slug": "cosmo-void",
@@ -305,19 +247,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-16T10:49:31.167711",
-        "created_at": "2025-09-16T10:49:31.167712",
-        "updated_at": "2025-09-16T11:06:51.214119",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.167711",
+        "created_at": "2025-09-16 10:49:31.167712",
+        "updated_at": "2025-09-16 11:06:51.214119",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 12,
         "title": "Labubu Merge",
         "slug": "labubu-merge",
@@ -349,19 +288,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-16T10:49:31.168753",
-        "created_at": "2025-09-16T10:49:31.168755",
-        "updated_at": "2025-09-16T11:06:51.214961",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.168753",
+        "created_at": "2025-09-16 10:49:31.168755",
+        "updated_at": "2025-09-16 11:06:51.214961",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 13,
         "title": "Obby Gym Simulator",
         "slug": "obby-gym-simulator",
@@ -394,22 +330,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-16T10:49:31.169779",
-        "created_at": "2025-09-16T10:49:31.169780",
-        "updated_at": "2025-09-16T11:06:51.215676",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Simulation",
-            "RPG",
-            "Horror"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.169779",
+        "created_at": "2025-09-16 10:49:31.169780",
+        "updated_at": "2025-09-16 11:06:51.215676",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 14,
         "title": "Waterpark Slide io",
         "slug": "waterpark-slide-io",
@@ -443,22 +373,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-09-16T10:49:31.173121",
-        "created_at": "2025-09-16T10:49:31.173123",
-        "updated_at": "2025-09-16T11:06:51.216397",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Racing",
-            "RPG",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.173121",
+        "created_at": "2025-09-16 10:49:31.173123",
+        "updated_at": "2025-09-16 11:06:51.216397",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 15,
         "title": "Obby Survive Parkour",
         "slug": "obby-survive-parkour",
@@ -492,19 +416,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-09-16T10:49:31.174515",
-        "created_at": "2025-09-16T10:49:31.174519",
-        "updated_at": "2025-09-16T11:06:51.217048",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.174515",
+        "created_at": "2025-09-16 10:49:31.174519",
+        "updated_at": "2025-09-16 11:06:51.217048",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 16,
         "title": "JailBreak Prison EscapeÂ",
         "slug": "jailbreak-prison-escapeâ",
@@ -534,19 +455,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-16T10:49:31.176125",
-        "created_at": "2025-09-16T10:49:31.176128",
-        "updated_at": "2025-09-16T11:06:51.217812",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.176125",
+        "created_at": "2025-09-16 10:49:31.176128",
+        "updated_at": "2025-09-16 11:06:51.217812",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 17,
         "title": "Merge Brainrot",
         "slug": "merge-brainrot",
@@ -579,19 +497,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-16T10:49:31.178040",
-        "created_at": "2025-09-16T10:49:31.178043",
-        "updated_at": "2025-09-16T11:06:51.218470",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.178040",
+        "created_at": "2025-09-16 10:49:31.178043",
+        "updated_at": "2025-09-16 11:06:51.218470",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 18,
         "title": "Drift King",
         "slug": "drift-king",
@@ -623,21 +538,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-09-16T10:49:31.179429",
-        "created_at": "2025-09-16T10:49:31.179431",
-        "updated_at": "2025-09-16T11:06:51.219183",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.179429",
+        "created_at": "2025-09-16 10:49:31.179431",
+        "updated_at": "2025-09-16 11:06:51.219183",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 19,
         "title": "Geometry Arrow",
         "slug": "geometry-arrow",
@@ -669,21 +579,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-09-16T10:49:31.180696",
-        "created_at": "2025-09-16T10:49:31.180698",
-        "updated_at": "2025-09-16T11:06:51.221406",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "Multiplayer",
-            "Rhythm"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.180696",
+        "created_at": "2025-09-16 10:49:31.180698",
+        "updated_at": "2025-09-16 11:06:51.221406",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 20,
         "title": "Bloxd io",
         "slug": "bloxd-io",
@@ -713,22 +618,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-09-16T10:49:31.181969",
-        "created_at": "2025-09-16T10:49:31.181970",
-        "updated_at": "2025-09-17T02:31:22.345685",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.181969",
+        "created_at": "2025-09-16 10:49:31.181970",
+        "updated_at": "2025-09-17 02:31:22.345685",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 21,
         "title": "Italian Brainrot Clicker",
         "slug": "italian-brainrot-clicker",
@@ -761,21 +660,16 @@ const GAMES_DATA = {
             "Mouse": "Click to play",
             "Left Click": "Main action"
         },
-        "release_date": "2025-09-16T10:49:31.183163",
-        "created_at": "2025-09-16T10:49:31.183167",
-        "updated_at": "2025-09-16T11:06:51.222918",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Clicker",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.183163",
+        "created_at": "2025-09-16 10:49:31.183167",
+        "updated_at": "2025-09-16 11:06:51.222918",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 22,
         "title": "Drift Hunters 2",
         "slug": "drift-hunters-2",
@@ -808,22 +702,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-09-16T10:49:31.184152",
-        "created_at": "2025-09-16T10:49:31.184153",
-        "updated_at": "2025-09-16T11:06:51.223611",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Multiplayer",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.184152",
+        "created_at": "2025-09-16 10:49:31.184153",
+        "updated_at": "2025-09-16 11:06:51.223611",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 23,
         "title": "Run 3",
         "slug": "run-3",
@@ -853,19 +741,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-09-16T10:49:31.184988",
-        "created_at": "2025-09-16T10:49:31.184990",
-        "updated_at": "2025-09-16T11:06:51.224482",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.184988",
+        "created_at": "2025-09-16 10:49:31.184990",
+        "updated_at": "2025-09-16 11:06:51.224482",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 24,
         "title": "Highway Traffic",
         "slug": "highway-traffic",
@@ -897,19 +782,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-09-16T10:49:31.185896",
-        "created_at": "2025-09-16T10:49:31.185897",
-        "updated_at": "2025-09-16T11:06:51.225192",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.185896",
+        "created_at": "2025-09-16 10:49:31.185897",
+        "updated_at": "2025-09-16 11:06:51.225192",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 25,
         "title": "Traffic Jam 3D",
         "slug": "traffic-jam-3d",
@@ -942,21 +824,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-09-16T10:49:31.186776",
-        "created_at": "2025-09-16T10:49:31.186777",
-        "updated_at": "2025-09-16T11:06:51.226009",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.186776",
+        "created_at": "2025-09-16 10:49:31.186777",
+        "updated_at": "2025-09-16 11:06:51.226009",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 26,
         "title": "Love Tester",
         "slug": "love-tester",
@@ -985,19 +862,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-16T10:49:31.187642",
-        "created_at": "2025-09-16T10:49:31.187646",
-        "updated_at": "2025-09-16T11:06:51.227028",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.187642",
+        "created_at": "2025-09-16 10:49:31.187646",
+        "updated_at": "2025-09-16 11:06:51.227028",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 27,
         "title": "Obby But You're on a Bike",
         "slug": "obby-but-youre-on-a-bike",
@@ -1027,23 +901,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-16T10:49:31.188741",
-        "created_at": "2025-09-16T10:49:31.188744",
-        "updated_at": "2025-09-17T02:31:22.377693",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Platform",
-            "Multiplayer",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.188741",
+        "created_at": "2025-09-16 10:49:31.188744",
+        "updated_at": "2025-09-17 02:31:22.377693",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 28,
         "title": "Miniblox io",
         "slug": "miniblox-io",
@@ -1073,20 +940,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-09-16T10:49:31.189927",
-        "created_at": "2025-09-16T10:49:31.189928",
-        "updated_at": "2025-09-17T02:31:22.321842",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.189927",
+        "created_at": "2025-09-16 10:49:31.189928",
+        "updated_at": "2025-09-17 02:31:22.321842",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 29,
         "title": "Pixel Path",
         "slug": "pixel-path",
@@ -1118,21 +981,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-16T10:49:31.190936",
-        "created_at": "2025-09-16T10:49:31.190938",
-        "updated_at": "2025-09-16T11:06:51.230252",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Arcade",
-            "Platform",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.190936",
+        "created_at": "2025-09-16 10:49:31.190938",
+        "updated_at": "2025-09-16 11:06:51.230252",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 30,
         "title": "Geometry Dash",
         "slug": "geometry-dash",
@@ -1161,19 +1019,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-09-16T10:49:31.192013",
-        "created_at": "2025-09-16T10:49:31.192015",
-        "updated_at": "2025-09-17T02:31:22.334972",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Arcade"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-16 10:49:31.192013",
+        "created_at": "2025-09-16 10:49:31.192015",
+        "updated_at": "2025-09-17 02:31:22.334972",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 31,
         "title": "Geometry Arrow 2",
         "slug": "geometry-arrow-2",
@@ -1205,19 +1060,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-09-17T14:49:20.567697",
-        "created_at": "2025-09-17T14:49:20.567701",
-        "updated_at": "2025-09-17T14:55:18.162561",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.567697",
+        "created_at": "2025-09-17 14:49:20.567701",
+        "updated_at": "2025-09-17 14:55:18.162561",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 32,
         "title": "Slope Run",
         "slug": "slope-run",
@@ -1250,19 +1102,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-09-17T14:49:20.569697",
-        "created_at": "2025-09-17T14:49:20.569701",
-        "updated_at": "2025-09-17T14:55:18.164235",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.569697",
+        "created_at": "2025-09-17 14:49:20.569701",
+        "updated_at": "2025-09-17 14:55:18.164235",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 33,
         "title": "Papa's Taco Mia",
         "slug": "papas-taco-mia",
@@ -1293,19 +1142,16 @@ const GAMES_DATA = {
             "Left Click": "Select items",
             "Drag & Drop": "Prepare orders"
         },
-        "release_date": "2025-09-17T14:49:20.570917",
-        "created_at": "2025-09-17T14:49:20.570920",
-        "updated_at": "2025-09-17T14:55:18.165279",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.570917",
+        "created_at": "2025-09-17 14:49:20.570920",
+        "updated_at": "2025-09-17 14:55:18.165279",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 34,
         "title": "Stack Fire Ball",
         "slug": "stack-fire-ball",
@@ -1334,20 +1180,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.571941",
-        "created_at": "2025-09-17T14:49:20.571942",
-        "updated_at": "2025-09-17T14:55:18.166269",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "IO Game",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.571941",
+        "created_at": "2025-09-17 14:49:20.571942",
+        "updated_at": "2025-09-17 14:55:18.166269",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 35,
         "title": "Masked Special Forces",
         "slug": "masked-special-forces",
@@ -1378,21 +1220,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.572860",
-        "created_at": "2025-09-17T14:49:20.572862",
-        "updated_at": "2025-09-17T14:55:18.167346",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.572860",
+        "created_at": "2025-09-17 14:49:20.572862",
+        "updated_at": "2025-09-17 14:55:18.167346",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 36,
         "title": "GTA Simulator",
         "slug": "gta-simulator",
@@ -1424,21 +1261,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.574186",
-        "created_at": "2025-09-17T14:49:20.574188",
-        "updated_at": "2025-09-17T14:55:18.168093",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Simulation",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.574186",
+        "created_at": "2025-09-17 14:49:20.574188",
+        "updated_at": "2025-09-17 14:55:18.168093",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 37,
         "title": "Fragen",
         "slug": "fragen",
@@ -1469,22 +1301,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.575541",
-        "created_at": "2025-09-17T14:49:20.575544",
-        "updated_at": "2025-09-17T14:55:18.168752",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "Platform",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.575541",
+        "created_at": "2025-09-17 14:49:20.575544",
+        "updated_at": "2025-09-17 14:55:18.168752",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 38,
         "title": "Flip Bottle",
         "slug": "flip-bottle",
@@ -1513,19 +1339,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.576865",
-        "created_at": "2025-09-17T14:49:20.576869",
-        "updated_at": "2025-09-17T14:55:18.169534",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.576865",
+        "created_at": "2025-09-17 14:49:20.576869",
+        "updated_at": "2025-09-17 14:55:18.169534",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 39,
         "title": "Five Nights At Freddys",
         "slug": "five-nights-at-freddys",
@@ -1552,21 +1375,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.578037",
-        "created_at": "2025-09-17T14:49:20.578039",
-        "updated_at": "2025-09-17T14:55:18.170265",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "IO Game",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.578037",
+        "created_at": "2025-09-17 14:49:20.578039",
+        "updated_at": "2025-09-17 14:55:18.170265",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 40,
         "title": "Extreme Run 3D",
         "slug": "extreme-run-3d",
@@ -1600,22 +1418,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-09-17T14:49:20.579327",
-        "created_at": "2025-09-17T14:49:20.579330",
-        "updated_at": "2025-09-17T14:55:18.170922",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Platform",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.579327",
+        "created_at": "2025-09-17 14:49:20.579330",
+        "updated_at": "2025-09-17 14:55:18.170922",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 41,
         "title": "Real Flight Simulator",
         "slug": "real-flight-simulator",
@@ -1647,19 +1459,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.580286",
-        "created_at": "2025-09-17T14:49:20.580288",
-        "updated_at": "2025-09-17T14:55:18.171553",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.580286",
+        "created_at": "2025-09-17 14:49:20.580288",
+        "updated_at": "2025-09-17 14:55:18.171553",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 42,
         "title": "Golf Orbit",
         "slug": "golf-orbit",
@@ -1688,20 +1497,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.581355",
-        "created_at": "2025-09-17T14:49:20.581357",
-        "updated_at": "2025-09-17T14:55:18.172334",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Sports",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.581355",
+        "created_at": "2025-09-17 14:49:20.581357",
+        "updated_at": "2025-09-17 14:55:18.172334",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 43,
         "title": "Skribblio",
         "slug": "skribblio",
@@ -1731,20 +1536,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-09-17T14:49:20.582547",
-        "created_at": "2025-09-17T14:49:20.582549",
-        "updated_at": "2025-09-17T14:55:18.173048",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.582547",
+        "created_at": "2025-09-17 14:49:20.582549",
+        "updated_at": "2025-09-17 14:55:18.173048",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 44,
         "title": "Idle Breakout",
         "slug": "idle-breakout",
@@ -1772,21 +1573,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.583843",
-        "created_at": "2025-09-17T14:49:20.583844",
-        "updated_at": "2025-09-17T14:55:18.173827",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Arcade",
-            "Multiplayer",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.583843",
+        "created_at": "2025-09-17 14:49:20.583844",
+        "updated_at": "2025-09-17 14:55:18.173827",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 45,
         "title": "Checkout Frenzy",
         "slug": "checkout-frenzy",
@@ -1815,21 +1611,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.585205",
-        "created_at": "2025-09-17T14:49:20.585208",
-        "updated_at": "2025-09-17T14:55:18.174451",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Strategy",
-            "Platform",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.585205",
+        "created_at": "2025-09-17 14:49:20.585208",
+        "updated_at": "2025-09-17 14:55:18.174451",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 46,
         "title": "Tribals io",
         "slug": "tribals-io",
@@ -1861,21 +1652,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-09-17T14:49:20.587128",
-        "created_at": "2025-09-17T14:49:20.587131",
-        "updated_at": "2025-09-17T14:55:18.175304",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.587128",
+        "created_at": "2025-09-17 14:49:20.587131",
+        "updated_at": "2025-09-17 14:55:18.175304",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 47,
         "title": "Obby Bike Trials",
         "slug": "obby-bike-trials",
@@ -1907,20 +1693,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.588254",
-        "created_at": "2025-09-17T14:49:20.588256",
-        "updated_at": "2025-09-17T14:55:18.176108",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.588254",
+        "created_at": "2025-09-17 14:49:20.588256",
+        "updated_at": "2025-09-17 14:55:18.176108",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 48,
         "title": "Drift Boss",
         "slug": "drift-boss",
@@ -1950,20 +1732,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-09-17T14:49:20.589351",
-        "created_at": "2025-09-17T14:49:20.589353",
-        "updated_at": "2025-09-17T14:55:18.176945",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.589351",
+        "created_at": "2025-09-17 14:49:20.589353",
+        "updated_at": "2025-09-17 14:55:18.176945",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 49,
         "title": "Drift Hunters Pro",
         "slug": "drift-hunters-pro",
@@ -1996,20 +1774,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-09-17T14:49:20.590846",
-        "created_at": "2025-09-17T14:49:20.590849",
-        "updated_at": "2025-09-17T14:55:18.178152",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.590846",
+        "created_at": "2025-09-17 14:49:20.590849",
+        "updated_at": "2025-09-17 14:55:18.178152",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 50,
         "title": "Hole Digger",
         "slug": "hole-digger",
@@ -2038,21 +1812,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.592232",
-        "created_at": "2025-09-17T14:49:20.592234",
-        "updated_at": "2025-09-17T14:55:18.178820",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Simulation",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.592232",
+        "created_at": "2025-09-17 14:49:20.592234",
+        "updated_at": "2025-09-17 14:55:18.178820",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 51,
         "title": "Unpacking",
         "slug": "unpacking",
@@ -2081,20 +1850,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.593490",
-        "created_at": "2025-09-17T14:49:20.593492",
-        "updated_at": "2025-09-17T14:55:18.179598",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.593490",
+        "created_at": "2025-09-17 14:49:20.593492",
+        "updated_at": "2025-09-17 14:55:18.179598",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 52,
         "title": "Mega Lamba Ramp",
         "slug": "mega-lamba-ramp",
@@ -2123,20 +1888,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.594827",
-        "created_at": "2025-09-17T14:49:20.594829",
-        "updated_at": "2025-09-17T14:55:18.180187",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "RPG"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.594827",
+        "created_at": "2025-09-17 14:49:20.594829",
+        "updated_at": "2025-09-17 14:55:18.180187",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 53,
         "title": "TB World",
         "slug": "tb-world",
@@ -2161,21 +1922,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.596259",
-        "created_at": "2025-09-17T14:49:20.596260",
-        "updated_at": "2025-09-17T14:55:18.181176",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "RPG",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.596259",
+        "created_at": "2025-09-17 14:49:20.596260",
+        "updated_at": "2025-09-17 14:55:18.181176",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 54,
         "title": "Aventador Vice Crime City",
         "slug": "aventador-vice-crime-city",
@@ -2205,23 +1961,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.597967",
-        "created_at": "2025-09-17T14:49:20.597970",
-        "updated_at": "2025-09-17T14:55:18.181910",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "Racing",
-            "Simulation",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.597967",
+        "created_at": "2025-09-17 14:49:20.597970",
+        "updated_at": "2025-09-17 14:55:18.181910",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 55,
         "title": "Basketball Stars",
         "slug": "basketball-stars",
@@ -2246,20 +1995,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-17T14:49:20.599471",
-        "created_at": "2025-09-17T14:49:20.599473",
-        "updated_at": "2025-09-17T14:55:18.182550",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Sports",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-17 14:49:20.599471",
+        "created_at": "2025-09-17 14:49:20.599473",
+        "updated_at": "2025-09-17 14:55:18.182550",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 56,
         "title": "Dynamons 12",
         "slug": "dynamons-12",
@@ -2289,22 +2034,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:48:43.024965",
-        "created_at": "2025-09-18T08:48:43.024969",
-        "updated_at": "2025-10-13T01:35:03.930960",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "Racing",
-            "Card"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:48:43.024965",
+        "created_at": "2025-09-18 08:48:43.024969",
+        "updated_at": "2025-10-13 01:35:03.930960",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 57,
         "title": "Street Traffic Racer",
         "slug": "street-traffic-racer",
@@ -2336,19 +2075,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-09-18T08:48:43.026817",
-        "created_at": "2025-09-18T08:48:43.026819",
-        "updated_at": "2025-10-13T01:35:03.932456",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:48:43.026817",
+        "created_at": "2025-09-18 08:48:43.026819",
+        "updated_at": "2025-10-13 01:35:03.932456",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 58,
         "title": "Paper io 2",
         "slug": "paper-io-2",
@@ -2381,20 +2117,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-09-18T08:53:50.822585",
-        "created_at": "2025-09-18T08:53:50.822592",
-        "updated_at": "2025-10-13T01:35:03.946821",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.822585",
+        "created_at": "2025-09-18 08:53:50.822592",
+        "updated_at": "2025-10-13 01:35:03.946821",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 59,
         "title": "Crazy Plane Landing",
         "slug": "crazy-plane-landing",
@@ -2424,21 +2156,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.825764",
-        "created_at": "2025-09-18T08:53:50.825766",
-        "updated_at": "2025-10-13T01:35:03.947999",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.825764",
+        "created_at": "2025-09-18 08:53:50.825766",
+        "updated_at": "2025-10-13 01:35:03.947999",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 60,
         "title": "Granny",
         "slug": "granny",
@@ -2465,22 +2192,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.827265",
-        "created_at": "2025-09-18T08:53:50.827267",
-        "updated_at": "2025-10-13T01:35:03.948705",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Racing",
-            "Multiplayer",
-            "Horror"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.827265",
+        "created_at": "2025-09-18 08:53:50.827267",
+        "updated_at": "2025-10-13 01:35:03.948705",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 61,
         "title": "Minecraft Classic",
         "slug": "minecraft-classic",
@@ -2505,22 +2226,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.829147",
-        "created_at": "2025-09-18T08:53:50.829150",
-        "updated_at": "2025-10-13T01:35:03.949770",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Puzzle",
-            "Arcade",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.829147",
+        "created_at": "2025-09-18 08:53:50.829150",
+        "updated_at": "2025-10-13 01:35:03.949770",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 62,
         "title": "Motorbike Stunt Simulator",
         "slug": "motorbike-stunt-simulator",
@@ -2553,22 +2268,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.830399",
-        "created_at": "2025-09-18T08:53:50.830401",
-        "updated_at": "2025-10-13T01:35:03.950625",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Platform",
-            "Simulation",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.830399",
+        "created_at": "2025-09-18 08:53:50.830401",
+        "updated_at": "2025-10-13 01:35:03.950625",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 63,
         "title": "Drift Hunters",
         "slug": "drift-hunters",
@@ -2600,20 +2309,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-09-18T08:53:50.831795",
-        "created_at": "2025-09-18T08:53:50.831799",
-        "updated_at": "2025-10-13T01:35:03.951805",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Sports"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.831795",
+        "created_at": "2025-09-18 08:53:50.831799",
+        "updated_at": "2025-10-13 01:35:03.951805",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 64,
         "title": "Five Nights At Freddy's 2",
         "slug": "five-nights-at-freddys-2",
@@ -2638,21 +2343,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.837636",
-        "created_at": "2025-09-18T08:53:50.837639",
-        "updated_at": "2025-10-13T01:35:03.952705",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "Horror",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.837636",
+        "created_at": "2025-09-18 08:53:50.837639",
+        "updated_at": "2025-10-13 01:35:03.952705",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 65,
         "title": "Sprunki",
         "slug": "sprunki",
@@ -2682,22 +2382,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-09-18T08:53:50.838859",
-        "created_at": "2025-09-18T08:53:50.838861",
-        "updated_at": "2025-10-13T01:35:03.953655",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "RPG",
-            "Multiplayer",
-            "Rhythm"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.838859",
+        "created_at": "2025-09-18 08:53:50.838861",
+        "updated_at": "2025-10-13 01:35:03.953655",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 66,
         "title": "Smash Karts",
         "slug": "smash-karts",
@@ -2726,22 +2420,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.839833",
-        "created_at": "2025-09-18T08:53:50.839835",
-        "updated_at": "2025-10-13T01:35:03.954517",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Racing",
-            "Multiplayer",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.839833",
+        "created_at": "2025-09-18 08:53:50.839835",
+        "updated_at": "2025-10-13 01:35:03.954517",
+        "category_name": "Strategy",
+        "category_obj": 4,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 67,
         "title": "Fast Food Rush",
         "slug": "fast-food-rush",
@@ -2770,21 +2458,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.840709",
-        "created_at": "2025-09-18T08:53:50.840711",
-        "updated_at": "2025-10-13T01:35:03.955205",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Platform",
-            "Simulation",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.840709",
+        "created_at": "2025-09-18 08:53:50.840711",
+        "updated_at": "2025-10-13 01:35:03.955205",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 68,
         "title": "DTA 6",
         "slug": "dta-6",
@@ -2809,22 +2492,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.841714",
-        "created_at": "2025-09-18T08:53:50.841716",
-        "updated_at": "2025-10-13T01:35:03.955851",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Platform",
-            "Simulation",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.841714",
+        "created_at": "2025-09-18 08:53:50.841716",
+        "updated_at": "2025-10-13 01:35:03.955851",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 69,
         "title": "Spacebar Clicker",
         "slug": "spacebar-clicker",
@@ -2853,20 +2530,16 @@ const GAMES_DATA = {
             "Mouse": "Click to play",
             "Left Click": "Main action"
         },
-        "release_date": "2025-09-18T08:53:50.842809",
-        "created_at": "2025-09-18T08:53:50.842811",
-        "updated_at": "2025-10-13T01:35:03.956471",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Clicker",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.842809",
+        "created_at": "2025-09-18 08:53:50.842811",
+        "updated_at": "2025-10-13 01:35:03.956471",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 70,
         "title": "Stick Fighter 3D",
         "slug": "stick-fighter-3d",
@@ -2893,21 +2566,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.843940",
-        "created_at": "2025-09-18T08:53:50.843943",
-        "updated_at": "2025-10-13T01:35:03.957093",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Multiplayer",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.843940",
+        "created_at": "2025-09-18 08:53:50.843943",
+        "updated_at": "2025-10-13 01:35:03.957093",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 71,
         "title": "Hexanaut io",
         "slug": "hexanaut-io",
@@ -2937,20 +2605,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-09-18T08:53:50.845313",
-        "created_at": "2025-09-18T08:53:50.845314",
-        "updated_at": "2025-10-13T01:35:03.957712",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.845313",
+        "created_at": "2025-09-18 08:53:50.845314",
+        "updated_at": "2025-10-13 01:35:03.957712",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 72,
         "title": "Survival Race",
         "slug": "survival-race",
@@ -2979,20 +2643,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.846574",
-        "created_at": "2025-09-18T08:53:50.846578",
-        "updated_at": "2025-10-13T01:35:03.958339",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.846574",
+        "created_at": "2025-09-18 08:53:50.846578",
+        "updated_at": "2025-10-13 01:35:03.958339",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 73,
         "title": "Capybara Clicker Pro",
         "slug": "capybara-clicker-pro",
@@ -3021,19 +2681,16 @@ const GAMES_DATA = {
             "Mouse": "Click to play",
             "Left Click": "Main action"
         },
-        "release_date": "2025-09-18T08:53:50.847782",
-        "created_at": "2025-09-18T08:53:50.847783",
-        "updated_at": "2025-10-13T01:35:03.959076",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.847782",
+        "created_at": "2025-09-18 08:53:50.847783",
+        "updated_at": "2025-10-13 01:35:03.959076",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 74,
         "title": "Flappy Bird",
         "slug": "flappy-bird",
@@ -3060,21 +2717,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.848820",
-        "created_at": "2025-09-18T08:53:50.848822",
-        "updated_at": "2025-10-13T01:35:03.959854",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Arcade",
-            "Multiplayer",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.848820",
+        "created_at": "2025-09-18 08:53:50.848822",
+        "updated_at": "2025-10-13 01:35:03.959854",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 75,
         "title": "Escape Car",
         "slug": "escape-car",
@@ -3104,22 +2756,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-09-18T08:53:50.849825",
-        "created_at": "2025-09-18T08:53:50.849826",
-        "updated_at": "2025-10-13T01:35:03.960658",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Casual",
-            "Multiplayer",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.849825",
+        "created_at": "2025-09-18 08:53:50.849826",
+        "updated_at": "2025-10-13 01:35:03.960658",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 76,
         "title": "Madalin Stunt Cars Pro",
         "slug": "madalin-stunt-cars-pro",
@@ -3149,21 +2795,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-09-18T08:53:50.850779",
-        "created_at": "2025-09-18T08:53:50.850780",
-        "updated_at": "2025-10-13T01:35:03.961357",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Simulation",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.850779",
+        "created_at": "2025-09-18 08:53:50.850780",
+        "updated_at": "2025-10-13 01:35:03.961357",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 77,
         "title": "Stickman Parkour",
         "slug": "stickman-parkour",
@@ -3193,22 +2834,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-09-18T08:53:50.851687",
-        "created_at": "2025-09-18T08:53:50.851688",
-        "updated_at": "2025-10-13T01:35:03.962016",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Platform",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.851687",
+        "created_at": "2025-09-18 08:53:50.851688",
+        "updated_at": "2025-10-13 01:35:03.962016",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 78,
         "title": "Stickman GTA City",
         "slug": "stickman-gta-city",
@@ -3237,21 +2872,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.852852",
-        "created_at": "2025-09-18T08:53:50.852853",
-        "updated_at": "2025-10-13T01:35:03.962671",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Strategy",
-            "Simulation",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.852852",
+        "created_at": "2025-09-18 08:53:50.852853",
+        "updated_at": "2025-10-13 01:35:03.962671",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 79,
         "title": "Red Light Green Light",
         "slug": "red-light-green-light",
@@ -3280,21 +2910,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.854212",
-        "created_at": "2025-09-18T08:53:50.854214",
-        "updated_at": "2025-10-13T01:35:03.963260",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Simulation",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.854212",
+        "created_at": "2025-09-18 08:53:50.854214",
+        "updated_at": "2025-10-13 01:35:03.963260",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 80,
         "title": "Get On Top",
         "slug": "get-on-top",
@@ -3319,19 +2944,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.855434",
-        "created_at": "2025-09-18T08:53:50.855437",
-        "updated_at": "2025-10-13T01:35:03.963868",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.855434",
+        "created_at": "2025-09-18 08:53:50.855437",
+        "updated_at": "2025-10-13 01:35:03.963868",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 81,
         "title": "Pacman 30th Anniversary",
         "slug": "pacman-30th-anniversary",
@@ -3356,20 +2978,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.856444",
-        "created_at": "2025-09-18T08:53:50.856446",
-        "updated_at": "2025-10-13T01:35:03.964453",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.856444",
+        "created_at": "2025-09-18 08:53:50.856446",
+        "updated_at": "2025-10-13 01:35:03.964453",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 82,
         "title": "FPS Simulator",
         "slug": "fps-simulator",
@@ -3402,22 +3020,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.857368",
-        "created_at": "2025-09-18T08:53:50.857370",
-        "updated_at": "2025-10-13T01:35:03.965124",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Platform",
-            "Simulation",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.857368",
+        "created_at": "2025-09-18 08:53:50.857370",
+        "updated_at": "2025-10-13 01:35:03.965124",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 83,
         "title": "Gulper io",
         "slug": "gulper-io",
@@ -3448,21 +3060,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-09-18T08:53:50.858235",
-        "created_at": "2025-09-18T08:53:50.858236",
-        "updated_at": "2025-10-13T01:35:03.966013",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.858235",
+        "created_at": "2025-09-18 08:53:50.858236",
+        "updated_at": "2025-10-13 01:35:03.966013",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 84,
         "title": "City Police Cars",
         "slug": "city-police-cars",
@@ -3489,23 +3096,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-09-18T08:53:50.859107",
-        "created_at": "2025-09-18T08:53:50.859108",
-        "updated_at": "2025-10-13T01:35:03.966663",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "Racing",
-            "Simulation",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.859107",
+        "created_at": "2025-09-18 08:53:50.859108",
+        "updated_at": "2025-10-13 01:35:03.966663",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 85,
         "title": "Futuristic Racer",
         "slug": "futuristic-racer",
@@ -3532,19 +3132,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.860097",
-        "created_at": "2025-09-18T08:53:50.860098",
-        "updated_at": "2025-10-13T01:35:03.967904",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.860097",
+        "created_at": "2025-09-18 08:53:50.860098",
+        "updated_at": "2025-10-13 01:35:03.967904",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 86,
         "title": "Wood Block Jam",
         "slug": "wood-block-jam",
@@ -3574,21 +3171,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.860990",
-        "created_at": "2025-09-18T08:53:50.860991",
-        "updated_at": "2025-10-13T01:35:03.969057",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Casual",
-            "Rhythm"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.860990",
+        "created_at": "2025-09-18 08:53:50.860991",
+        "updated_at": "2025-10-13 01:35:03.969057",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 87,
         "title": "Crazy Strike Force",
         "slug": "crazy-strike-force",
@@ -3617,21 +3209,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.861808",
-        "created_at": "2025-09-18T08:53:50.861809",
-        "updated_at": "2025-10-13T01:35:03.969839",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "RPG",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.861808",
+        "created_at": "2025-09-18 08:53:50.861809",
+        "updated_at": "2025-10-13 01:35:03.969839",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 88,
         "title": "Police Chase Drifter",
         "slug": "police-chase-drifter",
@@ -3660,19 +3247,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-09-18T08:53:50.862617",
-        "created_at": "2025-09-18T08:53:50.862618",
-        "updated_at": "2025-10-13T01:35:03.970560",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.862617",
+        "created_at": "2025-09-18 08:53:50.862618",
+        "updated_at": "2025-10-13 01:35:03.970560",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 89,
         "title": "Obby Tower Parkour Climb",
         "slug": "obby-tower-parkour-climb",
@@ -3706,22 +3290,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-09-18T08:53:50.863440",
-        "created_at": "2025-09-18T08:53:50.863441",
-        "updated_at": "2025-10-13T01:35:03.971205",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Platform",
-            "RPG",
-            "Rhythm"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.863440",
+        "created_at": "2025-09-18 08:53:50.863441",
+        "updated_at": "2025-10-13 01:35:03.971205",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 90,
         "title": "Basket Random",
         "slug": "basket-random",
@@ -3750,21 +3328,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.864470",
-        "created_at": "2025-09-18T08:53:50.864472",
-        "updated_at": "2025-10-13T01:35:03.971943",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Sports",
-            "Rhythm"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.864470",
+        "created_at": "2025-09-18 08:53:50.864472",
+        "updated_at": "2025-10-13 01:35:03.971943",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 91,
         "title": "Cube Worlds",
         "slug": "cube-worlds",
@@ -3789,19 +3362,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.865622",
-        "created_at": "2025-09-18T08:53:50.865625",
-        "updated_at": "2025-10-13T01:35:03.972563",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.865622",
+        "created_at": "2025-09-18 08:53:50.865625",
+        "updated_at": "2025-10-13 01:35:03.972563",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 92,
         "title": "Drift Rider",
         "slug": "drift-rider",
@@ -3833,19 +3403,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-09-18T08:53:50.866905",
-        "created_at": "2025-09-18T08:53:50.866906",
-        "updated_at": "2025-10-13T01:35:03.973157",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.866905",
+        "created_at": "2025-09-18 08:53:50.866906",
+        "updated_at": "2025-10-13 01:35:03.973157",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 93,
         "title": "Fireboy and Watergirl",
         "slug": "fireboy-and-watergirl",
@@ -3874,19 +3441,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.867869",
-        "created_at": "2025-09-18T08:53:50.867870",
-        "updated_at": "2025-10-13T01:35:03.973736",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.867869",
+        "created_at": "2025-09-18 08:53:50.867870",
+        "updated_at": "2025-10-13 01:35:03.973736",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 94,
         "title": "Jacksmith",
         "slug": "jacksmith",
@@ -3915,21 +3479,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-09-18T08:53:50.868795",
-        "created_at": "2025-09-18T08:53:50.868797",
-        "updated_at": "2025-10-13T01:35:03.974335",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.868795",
+        "created_at": "2025-09-18 08:53:50.868797",
+        "updated_at": "2025-10-13 01:35:03.974335",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 95,
         "title": "LOLbeans io",
         "slug": "lolbeans-io",
@@ -3959,21 +3518,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-09-18T08:53:50.869959",
-        "created_at": "2025-09-18T08:53:50.869961",
-        "updated_at": "2025-10-13T01:35:03.975061",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-09-18 08:53:50.869959",
+        "created_at": "2025-09-18 08:53:50.869961",
+        "updated_at": "2025-10-13 01:35:03.975061",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 96,
         "title": "Monster Dash",
         "slug": "monster-dash",
@@ -4004,23 +3558,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-12T02:17:36.228889",
-        "created_at": "2025-10-12T02:17:36.228893",
-        "updated_at": "2025-10-13T01:35:03.975806",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Platform",
-            "RPG",
-            "Horror",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.228889",
+        "created_at": "2025-10-12 02:17:36.228893",
+        "updated_at": "2025-10-13 01:35:03.975806",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 97,
         "title": "Police Simulator",
         "slug": "police-simulator",
@@ -4052,22 +3599,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-12T02:17:36.231525",
-        "created_at": "2025-10-12T02:17:36.231528",
-        "updated_at": "2025-10-13T01:35:03.976577",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Racing",
-            "Simulation",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.231525",
+        "created_at": "2025-10-12 02:17:36.231528",
+        "updated_at": "2025-10-13 01:35:03.976577",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 98,
         "title": "Italian Brainrot Bike Rush",
         "slug": "italian-brainrot-bike-rush",
@@ -4099,21 +3640,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-12T02:17:36.233068",
-        "created_at": "2025-10-12T02:17:36.233070",
-        "updated_at": "2025-10-13T01:35:03.977269",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Racing",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.233068",
+        "created_at": "2025-10-12 02:17:36.233070",
+        "updated_at": "2025-10-13 01:35:03.977269",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 99,
         "title": "Sprunky Incredibox Mods",
         "slug": "sprunky-incredibox-mods",
@@ -4146,20 +3682,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-12T02:17:36.233927",
-        "created_at": "2025-10-12T02:17:36.233928",
-        "updated_at": "2025-10-13T01:35:03.978025",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "Rhythm"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.233927",
+        "created_at": "2025-10-12 02:17:36.233928",
+        "updated_at": "2025-10-13 01:35:03.978025",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 100,
         "title": "Battle Simulator: Sandbox",
         "slug": "battle-simulator-sandbox",
@@ -4191,22 +3723,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-12T02:17:36.235001",
-        "created_at": "2025-10-12T02:17:36.235002",
-        "updated_at": "2025-10-13T01:35:03.978816",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "Racing",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.235001",
+        "created_at": "2025-10-12 02:17:36.235002",
+        "updated_at": "2025-10-13 01:35:03.978816",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 101,
         "title": "AI Chat",
         "slug": "ai-chat",
@@ -4231,21 +3757,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-12T02:17:36.236127",
-        "created_at": "2025-10-12T02:17:36.236128",
-        "updated_at": "2025-10-13T01:35:03.979416",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "RPG",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.236127",
+        "created_at": "2025-10-12 02:17:36.236128",
+        "updated_at": "2025-10-13 01:35:03.979416",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 102,
         "title": "OvO Online",
         "slug": "ovo-online",
@@ -4270,20 +3791,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-12T02:17:36.237202",
-        "created_at": "2025-10-12T02:17:36.237203",
-        "updated_at": "2025-10-13T01:35:03.980002",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.237202",
+        "created_at": "2025-10-12 02:17:36.237203",
+        "updated_at": "2025-10-13 01:35:03.980002",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 103,
         "title": "Geometry Vibes 3D",
         "slug": "geometry-vibes-3d",
@@ -4316,20 +3833,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-12T02:17:36.238171",
-        "created_at": "2025-10-12T02:17:36.238172",
-        "updated_at": "2025-10-13T01:35:03.980579",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.238171",
+        "created_at": "2025-10-12 02:17:36.238172",
+        "updated_at": "2025-10-13 01:35:03.980579",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 104,
         "title": "Tow N Go",
         "slug": "tow-n-go",
@@ -4358,19 +3871,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-12T02:17:36.239009",
-        "created_at": "2025-10-12T02:17:36.239010",
-        "updated_at": "2025-10-13T01:35:03.981161",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.239009",
+        "created_at": "2025-10-12 02:17:36.239010",
+        "updated_at": "2025-10-13 01:35:03.981161",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 105,
         "title": "Beach Club",
         "slug": "beach-club",
@@ -4399,20 +3909,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-12T02:17:36.239846",
-        "created_at": "2025-10-12T02:17:36.239847",
-        "updated_at": "2025-10-13T01:35:03.981833",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.239846",
+        "created_at": "2025-10-12 02:17:36.239847",
+        "updated_at": "2025-10-13 01:35:03.981833",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 106,
         "title": "Backflip Dive 3D",
         "slug": "backflip-dive-3d",
@@ -4442,21 +3948,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-12T02:17:36.240660",
-        "created_at": "2025-10-12T02:17:36.240661",
-        "updated_at": "2025-10-13T01:35:03.982456",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.240660",
+        "created_at": "2025-10-12 02:17:36.240661",
+        "updated_at": "2025-10-13 01:35:03.982456",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 107,
         "title": "Geometry Vibes Monster",
         "slug": "geometry-vibes-monster",
@@ -4490,22 +3991,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-12T02:17:36.241447",
-        "created_at": "2025-10-12T02:17:36.241448",
-        "updated_at": "2025-10-13T01:35:03.983222",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Platform",
-            "Multiplayer",
-            "Horror"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.241447",
+        "created_at": "2025-10-12 02:17:36.241448",
+        "updated_at": "2025-10-13 01:35:03.983222",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 108,
         "title": "Geometry Vibes",
         "slug": "geometry-vibes",
@@ -4537,20 +4032,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-12T02:17:36.242570",
-        "created_at": "2025-10-12T02:17:36.242572",
-        "updated_at": "2025-10-13T01:35:03.984224",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.242570",
+        "created_at": "2025-10-12 02:17:36.242572",
+        "updated_at": "2025-10-13 01:35:03.984224",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 109,
         "title": "Moto Road Rash 3D",
         "slug": "moto-road-rash-3d",
@@ -4580,20 +4071,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-12T02:17:36.244046",
-        "created_at": "2025-10-12T02:17:36.244049",
-        "updated_at": "2025-10-13T01:35:03.985001",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.244046",
+        "created_at": "2025-10-12 02:17:36.244049",
+        "updated_at": "2025-10-13 01:35:03.985001",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 110,
         "title": "Dan the Man",
         "slug": "dan-the-man",
@@ -4624,21 +4111,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-12T02:17:36.245150",
-        "created_at": "2025-10-12T02:17:36.245151",
-        "updated_at": "2025-10-13T01:35:03.985632",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "RPG",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.245150",
+        "created_at": "2025-10-12 02:17:36.245151",
+        "updated_at": "2025-10-13 01:35:03.985632",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 111,
         "title": "Cat Escape",
         "slug": "cat-escape",
@@ -4667,19 +4149,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-12T02:17:36.246033",
-        "created_at": "2025-10-12T02:17:36.246034",
-        "updated_at": "2025-10-13T01:35:03.986216",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.246033",
+        "created_at": "2025-10-12 02:17:36.246034",
+        "updated_at": "2025-10-13 01:35:03.986216",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 112,
         "title": "Paw Clicker",
         "slug": "paw-clicker",
@@ -4708,19 +4187,16 @@ const GAMES_DATA = {
             "Mouse": "Click to play",
             "Left Click": "Main action"
         },
-        "release_date": "2025-10-12T02:17:36.247153",
-        "created_at": "2025-10-12T02:17:36.247154",
-        "updated_at": "2025-10-13T01:35:03.986794",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.247153",
+        "created_at": "2025-10-12 02:17:36.247154",
+        "updated_at": "2025-10-13 01:35:03.986794",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 113,
         "title": "3D Dash",
         "slug": "3d-dash",
@@ -4750,20 +4226,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-12T02:17:36.248018",
-        "created_at": "2025-10-12T02:17:36.248019",
-        "updated_at": "2025-10-13T01:35:03.987376",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.248018",
+        "created_at": "2025-10-12 02:17:36.248019",
+        "updated_at": "2025-10-13 01:35:03.987376",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 114,
         "title": "Cat Runner",
         "slug": "cat-runner",
@@ -4796,20 +4268,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-12T02:17:36.248848",
-        "created_at": "2025-10-12T02:17:36.248849",
-        "updated_at": "2025-10-13T01:35:03.987968",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.248848",
+        "created_at": "2025-10-12 02:17:36.248849",
+        "updated_at": "2025-10-13 01:35:03.987968",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 115,
         "title": "Ninja Obby Parkour",
         "slug": "ninja-obby-parkour",
@@ -4843,20 +4311,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-12T02:17:36.249716",
-        "created_at": "2025-10-12T02:17:36.249717",
-        "updated_at": "2025-10-13T01:35:03.988536",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.249716",
+        "created_at": "2025-10-12 02:17:36.249717",
+        "updated_at": "2025-10-13 01:35:03.988536",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 116,
         "title": "Monster Escape",
         "slug": "monster-escape",
@@ -4885,19 +4349,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-12T02:17:36.250781",
-        "created_at": "2025-10-12T02:17:36.250783",
-        "updated_at": "2025-10-13T01:35:03.989097",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Horror"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-12 02:17:36.250781",
+        "created_at": "2025-10-12 02:17:36.250783",
+        "updated_at": "2025-10-13 01:35:03.989097",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 117,
         "title": "Papa's Scooperia",
         "slug": "papas-scooperia",
@@ -4928,19 +4389,16 @@ const GAMES_DATA = {
             "Left Click": "Select items",
             "Drag & Drop": "Prepare orders"
         },
-        "release_date": "2025-10-13T01:31:59.198576",
-        "created_at": "2025-10-13T01:31:59.198580",
-        "updated_at": "2025-10-13T01:35:03.989915",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.198576",
+        "created_at": "2025-10-13 01:31:59.198580",
+        "updated_at": "2025-10-13 01:35:03.989915",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 118,
         "title": "Vehicles Simulator",
         "slug": "vehicles-simulator",
@@ -4970,22 +4428,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.203122",
-        "created_at": "2025-10-13T01:31:59.203126",
-        "updated_at": "2025-10-13T01:35:03.990558",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Simulation",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.203122",
+        "created_at": "2025-10-13 01:31:59.203126",
+        "updated_at": "2025-10-13 01:35:03.990558",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 119,
         "title": "Thief Puzzle",
         "slug": "thief-puzzle",
@@ -5012,19 +4464,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.204625",
-        "created_at": "2025-10-13T01:31:59.204628",
-        "updated_at": "2025-10-13T01:35:03.991173",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.204625",
+        "created_at": "2025-10-13 01:31:59.204628",
+        "updated_at": "2025-10-13 01:35:03.991173",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 120,
         "title": "Highway Racer Pro",
         "slug": "highway-racer-pro",
@@ -5053,19 +4502,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.205935",
-        "created_at": "2025-10-13T01:31:59.205937",
-        "updated_at": "2025-10-13T01:35:03.991876",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.205935",
+        "created_at": "2025-10-13 01:31:59.205937",
+        "updated_at": "2025-10-13 01:35:03.991876",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 121,
         "title": "A Small World Cup",
         "slug": "a-small-world-cup",
@@ -5090,22 +4536,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.207236",
-        "created_at": "2025-10-13T01:31:59.207237",
-        "updated_at": "2025-10-13T01:35:03.992627",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Sports",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.207236",
+        "created_at": "2025-10-13 01:31:59.207237",
+        "updated_at": "2025-10-13 01:35:03.992627",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 122,
         "title": "OvO",
         "slug": "ovo",
@@ -5132,19 +4572,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.208472",
-        "created_at": "2025-10-13T01:31:59.208473",
-        "updated_at": "2025-10-13T01:35:03.993491",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Arcade"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.208472",
+        "created_at": "2025-10-13 01:31:59.208473",
+        "updated_at": "2025-10-13 01:35:03.993491",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 123,
         "title": "Deadshot io",
         "slug": "deadshot-io",
@@ -5176,23 +4613,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.209743",
-        "created_at": "2025-10-13T01:31:59.209746",
-        "updated_at": "2025-10-13T01:35:03.994215",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "Platform",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.209743",
+        "created_at": "2025-10-13 01:31:59.209746",
+        "updated_at": "2025-10-13 01:35:03.994215",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 124,
         "title": "Asian Cup Soccer",
         "slug": "asian-cup-soccer",
@@ -5217,21 +4647,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.211208",
-        "created_at": "2025-10-13T01:31:59.211209",
-        "updated_at": "2025-10-13T01:35:03.994958",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Sports",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.211208",
+        "created_at": "2025-10-13 01:31:59.211209",
+        "updated_at": "2025-10-13 01:35:03.994958",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 125,
         "title": "Edys Car Simulator",
         "slug": "edys-car-simulator",
@@ -5263,20 +4688,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.212506",
-        "created_at": "2025-10-13T01:31:59.212509",
-        "updated_at": "2025-10-13T01:35:03.995589",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.212506",
+        "created_at": "2025-10-13 01:31:59.212509",
+        "updated_at": "2025-10-13 01:35:03.995589",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 126,
         "title": "Burnout City",
         "slug": "burnout-city",
@@ -5305,22 +4726,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.213486",
-        "created_at": "2025-10-13T01:31:59.213487",
-        "updated_at": "2025-10-13T01:35:03.996173",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Strategy",
-            "Racing",
-            "Simulation",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.213486",
+        "created_at": "2025-10-13 01:31:59.213487",
+        "updated_at": "2025-10-13 01:35:03.996173",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 127,
         "title": "Friday Night Funkin",
         "slug": "friday-night-funkin",
@@ -5345,19 +4760,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.215796",
-        "created_at": "2025-10-13T01:31:59.215798",
-        "updated_at": "2025-10-13T01:35:03.996763",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Rhythm"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.215796",
+        "created_at": "2025-10-13 01:31:59.215798",
+        "updated_at": "2025-10-13 01:35:03.996763",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 128,
         "title": "Drunken Duel",
         "slug": "drunken-duel",
@@ -5387,20 +4799,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.216681",
-        "created_at": "2025-10-13T01:31:59.216682",
-        "updated_at": "2025-10-13T01:35:03.997344",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.216681",
+        "created_at": "2025-10-13 01:31:59.216682",
+        "updated_at": "2025-10-13 01:35:03.997344",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 129,
         "title": "Shell Shockers.io",
         "slug": "shell-shockersio",
@@ -5430,21 +4838,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.217702",
-        "created_at": "2025-10-13T01:31:59.217703",
-        "updated_at": "2025-10-13T01:35:03.997909",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "RPG",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.217702",
+        "created_at": "2025-10-13 01:31:59.217703",
+        "updated_at": "2025-10-13 01:35:03.997909",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 130,
         "title": "Five Nights At Freddy's 4",
         "slug": "five-nights-at-freddys-4",
@@ -5469,19 +4872,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.219011",
-        "created_at": "2025-10-13T01:31:59.219014",
-        "updated_at": "2025-10-13T01:35:03.998479",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Horror"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.219011",
+        "created_at": "2025-10-13 01:31:59.219014",
+        "updated_at": "2025-10-13 01:35:03.998479",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 131,
         "title": "Car Parking City Duel",
         "slug": "car-parking-city-duel",
@@ -5511,22 +4911,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.220432",
-        "created_at": "2025-10-13T01:31:59.220434",
-        "updated_at": "2025-10-13T01:35:03.999095",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Racing",
-            "Simulation",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.220432",
+        "created_at": "2025-10-13 01:31:59.220434",
+        "updated_at": "2025-10-13 01:35:03.999095",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 132,
         "title": "Craftnite",
         "slug": "craftnite",
@@ -5555,21 +4949,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.221470",
-        "created_at": "2025-10-13T01:31:59.221472",
-        "updated_at": "2025-10-13T01:35:03.999891",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.221470",
+        "created_at": "2025-10-13 01:31:59.221472",
+        "updated_at": "2025-10-13 01:35:03.999891",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 133,
         "title": "Stunt Rider",
         "slug": "stunt-rider",
@@ -5599,21 +4988,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.222296",
-        "created_at": "2025-10-13T01:31:59.222297",
-        "updated_at": "2025-10-13T01:35:04.000826",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Sports",
-            "Platform",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.222296",
+        "created_at": "2025-10-13 01:31:59.222297",
+        "updated_at": "2025-10-13 01:35:04.000826",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 134,
         "title": "Elastic Man",
         "slug": "elastic-man",
@@ -5638,20 +5022,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.223110",
-        "created_at": "2025-10-13T01:31:59.223111",
-        "updated_at": "2025-10-13T01:35:04.001506",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "RPG",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.223110",
+        "created_at": "2025-10-13 01:31:59.223111",
+        "updated_at": "2025-10-13 01:35:04.001506",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 135,
         "title": "Suroi",
         "slug": "suroi",
@@ -5678,20 +5058,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.223893",
-        "created_at": "2025-10-13T01:31:59.223894",
-        "updated_at": "2025-10-13T01:35:04.002095",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.223893",
+        "created_at": "2025-10-13 01:31:59.223894",
+        "updated_at": "2025-10-13 01:35:04.002095",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 136,
         "title": "Basket Hoop",
         "slug": "basket-hoop",
@@ -5716,22 +5092,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.224733",
-        "created_at": "2025-10-13T01:31:59.224734",
-        "updated_at": "2025-10-13T01:35:04.002667",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Sports",
-            "Platform",
-            "Multiplayer",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.224733",
+        "created_at": "2025-10-13 01:31:59.224734",
+        "updated_at": "2025-10-13 01:35:04.002667",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 137,
         "title": "Guerrillas io",
         "slug": "guerrillas-io",
@@ -5764,20 +5134,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.226070",
-        "created_at": "2025-10-13T01:31:59.226073",
-        "updated_at": "2025-10-13T01:35:04.003238",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.226070",
+        "created_at": "2025-10-13 01:31:59.226073",
+        "updated_at": "2025-10-13 01:35:04.003238",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 138,
         "title": "Stickman Destruction",
         "slug": "stickman-destruction",
@@ -5811,21 +5177,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.227344",
-        "created_at": "2025-10-13T01:31:59.227348",
-        "updated_at": "2025-10-13T01:35:04.003941",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "RPG",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.227344",
+        "created_at": "2025-10-13 01:31:59.227348",
+        "updated_at": "2025-10-13 01:35:04.003941",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 139,
         "title": "Super Car Driving",
         "slug": "super-car-driving",
@@ -5854,20 +5215,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.228347",
-        "created_at": "2025-10-13T01:31:59.228348",
-        "updated_at": "2025-10-13T01:35:04.004557",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.228347",
+        "created_at": "2025-10-13 01:31:59.228348",
+        "updated_at": "2025-10-13 01:35:04.004557",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 140,
         "title": "Papa's Wingeria",
         "slug": "papas-wingeria",
@@ -5898,22 +5255,16 @@ const GAMES_DATA = {
             "Left Click": "Select items",
             "Drag & Drop": "Prepare orders"
         },
-        "release_date": "2025-10-13T01:31:59.229179",
-        "created_at": "2025-10-13T01:31:59.229179",
-        "updated_at": "2025-10-13T01:35:04.005196",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "Simulation",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.229179",
+        "created_at": "2025-10-13 01:31:59.229179",
+        "updated_at": "2025-10-13 01:35:04.005196",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 141,
         "title": "Slow Roads",
         "slug": "slow-roads",
@@ -5938,21 +5289,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.231286",
-        "created_at": "2025-10-13T01:31:59.231287",
-        "updated_at": "2025-10-13T01:35:04.005769",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Simulation",
-            "Multiplayer",
-            "Rhythm"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.231286",
+        "created_at": "2025-10-13 01:31:59.231287",
+        "updated_at": "2025-10-13 01:35:04.005769",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 142,
         "title": "CS Online",
         "slug": "cs-online",
@@ -5981,20 +5327,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.232069",
-        "created_at": "2025-10-13T01:31:59.232070",
-        "updated_at": "2025-10-13T01:35:04.006464",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.232069",
+        "created_at": "2025-10-13 01:31:59.232070",
+        "updated_at": "2025-10-13 01:35:04.006464",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 143,
         "title": "Drift City",
         "slug": "drift-city",
@@ -6023,23 +5365,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.232931",
-        "created_at": "2025-10-13T01:31:59.232933",
-        "updated_at": "2025-10-13T01:35:04.007313",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Racing",
-            "Simulation",
-            "Multiplayer",
-            "Educational"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.232931",
+        "created_at": "2025-10-13 01:31:59.232933",
+        "updated_at": "2025-10-13 01:35:04.007313",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 144,
         "title": "Only Up Obby",
         "slug": "only-up-obby",
@@ -6068,20 +5403,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.233881",
-        "created_at": "2025-10-13T01:31:59.233882",
-        "updated_at": "2025-10-13T01:35:04.008244",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.233881",
+        "created_at": "2025-10-13 01:31:59.233882",
+        "updated_at": "2025-10-13 01:35:04.008244",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 145,
         "title": "Slope Rolling",
         "slug": "slope-rolling",
@@ -6110,20 +5441,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.235084",
-        "created_at": "2025-10-13T01:31:59.235085",
-        "updated_at": "2025-10-13T01:35:04.009197",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.235084",
+        "created_at": "2025-10-13 01:31:59.235085",
+        "updated_at": "2025-10-13 01:35:04.009197",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 146,
         "title": "Ultimate Flying Car",
         "slug": "ultimate-flying-car",
@@ -6152,19 +5479,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.236383",
-        "created_at": "2025-10-13T01:31:59.236387",
-        "updated_at": "2025-10-13T01:35:04.009967",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.236383",
+        "created_at": "2025-10-13 01:31:59.236387",
+        "updated_at": "2025-10-13 01:35:04.009967",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 147,
         "title": "Granny 2",
         "slug": "granny-2",
@@ -6191,19 +5515,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.237481",
-        "created_at": "2025-10-13T01:31:59.237482",
-        "updated_at": "2025-10-13T01:35:04.010628",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.237481",
+        "created_at": "2025-10-13 01:31:59.237482",
+        "updated_at": "2025-10-13 01:35:04.010628",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 148,
         "title": "Snow Rider 3D",
         "slug": "snow-rider-3d",
@@ -6232,20 +5553,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.238300",
-        "created_at": "2025-10-13T01:31:59.238301",
-        "updated_at": "2025-10-13T01:35:04.011289",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "3D",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.238300",
+        "created_at": "2025-10-13 01:31:59.238301",
+        "updated_at": "2025-10-13 01:35:04.011289",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 149,
         "title": "Block Blast",
         "slug": "block-blast",
@@ -6275,22 +5592,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.239114",
-        "created_at": "2025-10-13T01:31:59.239115",
-        "updated_at": "2025-10-13T01:35:04.012010",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Puzzle",
-            "Multiplayer",
-            "IO Game",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.239114",
+        "created_at": "2025-10-13 01:31:59.239115",
+        "updated_at": "2025-10-13 01:35:04.012010",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 150,
         "title": "Archer Hero",
         "slug": "archer-hero",
@@ -6319,19 +5630,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.239919",
-        "created_at": "2025-10-13T01:31:59.239920",
-        "updated_at": "2025-10-13T01:35:04.012680",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.239919",
+        "created_at": "2025-10-13 01:31:59.239920",
+        "updated_at": "2025-10-13 01:35:04.012680",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 151,
         "title": "Hoop World 3D",
         "slug": "hoop-world-3d",
@@ -6361,22 +5669,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.240736",
-        "created_at": "2025-10-13T01:31:59.240737",
-        "updated_at": "2025-10-13T01:35:04.013306",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Sports",
-            "Platform",
-            "Multiplayer",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.240736",
+        "created_at": "2025-10-13 01:31:59.240737",
+        "updated_at": "2025-10-13 01:35:04.013306",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 152,
         "title": "Crazy Shooters",
         "slug": "crazy-shooters",
@@ -6401,19 +5703,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.241550",
-        "created_at": "2025-10-13T01:31:59.241551",
-        "updated_at": "2025-10-13T01:35:04.013967",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.241550",
+        "created_at": "2025-10-13 01:31:59.241551",
+        "updated_at": "2025-10-13 01:35:04.013967",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 153,
         "title": "Five Nights At Freddy's 3",
         "slug": "five-nights-at-freddys-3",
@@ -6438,21 +5737,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.242596",
-        "created_at": "2025-10-13T01:31:59.242598",
-        "updated_at": "2025-10-13T01:35:04.014576",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "Horror",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.242596",
+        "created_at": "2025-10-13 01:31:59.242598",
+        "updated_at": "2025-10-13 01:35:04.014576",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 154,
         "title": "Tic Tac Toe",
         "slug": "tic-tac-toe",
@@ -6481,20 +5775,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.243716",
-        "created_at": "2025-10-13T01:31:59.243718",
-        "updated_at": "2025-10-13T01:35:04.015195",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "IO Game",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.243716",
+        "created_at": "2025-10-13 01:31:59.243718",
+        "updated_at": "2025-10-13 01:35:04.015195",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 155,
         "title": "Mob City",
         "slug": "mob-city",
@@ -6524,23 +5814,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.244598",
-        "created_at": "2025-10-13T01:31:59.244599",
-        "updated_at": "2025-10-13T01:35:04.015782",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Strategy",
-            "Simulation",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.244598",
+        "created_at": "2025-10-13 01:31:59.244599",
+        "updated_at": "2025-10-13 01:35:04.015782",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 156,
         "title": "Crazy Drifter",
         "slug": "crazy-drifter",
@@ -6572,20 +5855,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.245418",
-        "created_at": "2025-10-13T01:31:59.245419",
-        "updated_at": "2025-10-13T01:35:04.016649",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.245418",
+        "created_at": "2025-10-13 01:31:59.245419",
+        "updated_at": "2025-10-13 01:35:04.016649",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 157,
         "title": "Paper Minecraft",
         "slug": "paper-minecraft",
@@ -6610,20 +5889,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.246238",
-        "created_at": "2025-10-13T01:31:59.246239",
-        "updated_at": "2025-10-13T01:35:04.017651",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.246238",
+        "created_at": "2025-10-13 01:31:59.246239",
+        "updated_at": "2025-10-13 01:35:04.017651",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 158,
         "title": "Time Shooter 2",
         "slug": "time-shooter-2",
@@ -6652,20 +5927,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.247028",
-        "created_at": "2025-10-13T01:31:59.247029",
-        "updated_at": "2025-10-13T01:35:04.018469",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.247028",
+        "created_at": "2025-10-13 01:31:59.247029",
+        "updated_at": "2025-10-13 01:35:04.018469",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 159,
         "title": "Soccer Random",
         "slug": "soccer-random",
@@ -6690,19 +5961,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.247798",
-        "created_at": "2025-10-13T01:31:59.247799",
-        "updated_at": "2025-10-13T01:35:04.019144",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Sports"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.247798",
+        "created_at": "2025-10-13 01:31:59.247799",
+        "updated_at": "2025-10-13 01:35:04.019144",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 160,
         "title": "Moto X3M",
         "slug": "moto-x3m",
@@ -6727,19 +5995,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.248554",
-        "created_at": "2025-10-13T01:31:59.248555",
-        "updated_at": "2025-10-13T01:35:04.019800",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.248554",
+        "created_at": "2025-10-13 01:31:59.248555",
+        "updated_at": "2025-10-13 01:35:04.019800",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 161,
         "title": "Motor Tour",
         "slug": "motor-tour",
@@ -6769,21 +6034,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.249410",
-        "created_at": "2025-10-13T01:31:59.249412",
-        "updated_at": "2025-10-13T01:35:04.020428",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.249410",
+        "created_at": "2025-10-13 01:31:59.249412",
+        "updated_at": "2025-10-13 01:35:04.020428",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 162,
         "title": "Crazy Motorcycle",
         "slug": "crazy-motorcycle",
@@ -6812,21 +6072,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.250394",
-        "created_at": "2025-10-13T01:31:59.250395",
-        "updated_at": "2025-10-13T01:35:04.021063",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.250394",
+        "created_at": "2025-10-13 01:31:59.250395",
+        "updated_at": "2025-10-13 01:35:04.021063",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 163,
         "title": "Legendary Sniper",
         "slug": "legendary-sniper",
@@ -6855,20 +6110,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.251738",
-        "created_at": "2025-10-13T01:31:59.251741",
-        "updated_at": "2025-10-13T01:35:04.021812",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.251738",
+        "created_at": "2025-10-13 01:31:59.251741",
+        "updated_at": "2025-10-13 01:35:04.021812",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 164,
         "title": "Ultimate Flying Car 2",
         "slug": "ultimate-flying-car-2",
@@ -6897,19 +6148,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.253131",
-        "created_at": "2025-10-13T01:31:59.253133",
-        "updated_at": "2025-10-13T01:35:04.022668",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.253131",
+        "created_at": "2025-10-13 01:31:59.253133",
+        "updated_at": "2025-10-13 01:35:04.022668",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 165,
         "title": "1v1.LOL",
         "slug": "1v1lol",
@@ -6934,21 +6182,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.254048",
-        "created_at": "2025-10-13T01:31:59.254049",
-        "updated_at": "2025-10-13T01:35:04.023425",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.254048",
+        "created_at": "2025-10-13 01:31:59.254049",
+        "updated_at": "2025-10-13 01:35:04.023425",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 166,
         "title": "Watermelon Game",
         "slug": "watermelon-game",
@@ -6975,19 +6218,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.254908",
-        "created_at": "2025-10-13T01:31:59.254909",
-        "updated_at": "2025-10-13T01:35:04.024124",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.254908",
+        "created_at": "2025-10-13 01:31:59.254909",
+        "updated_at": "2025-10-13 01:35:04.024124",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 167,
         "title": "Funny Shooter 2",
         "slug": "funny-shooter-2",
@@ -7016,20 +6256,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.255675",
-        "created_at": "2025-10-13T01:31:59.255676",
-        "updated_at": "2025-10-13T01:35:04.024789",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.255675",
+        "created_at": "2025-10-13 01:31:59.255676",
+        "updated_at": "2025-10-13 01:35:04.024789",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 168,
         "title": "Hurakan City Driver HD",
         "slug": "hurakan-city-driver-hd",
@@ -7058,22 +6294,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.256435",
-        "created_at": "2025-10-13T01:31:59.256436",
-        "updated_at": "2025-10-13T01:35:04.025482",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Racing",
-            "Simulation",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.256435",
+        "created_at": "2025-10-13 01:31:59.256436",
+        "updated_at": "2025-10-13 01:35:04.025482",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 169,
         "title": "Gummy Blocks",
         "slug": "gummy-blocks",
@@ -7100,20 +6330,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.257324",
-        "created_at": "2025-10-13T01:31:59.257325",
-        "updated_at": "2025-10-13T01:35:04.026280",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Puzzle"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.257324",
+        "created_at": "2025-10-13 01:31:59.257325",
+        "updated_at": "2025-10-13 01:35:04.026280",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 170,
         "title": "ShooterZ.io",
         "slug": "shooterzio",
@@ -7143,20 +6369,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.258177",
-        "created_at": "2025-10-13T01:31:59.258178",
-        "updated_at": "2025-10-13T01:35:04.026946",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.258177",
+        "created_at": "2025-10-13 01:31:59.258178",
+        "updated_at": "2025-10-13 01:35:04.026946",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 171,
         "title": "Highway Road Racing",
         "slug": "highway-road-racing",
@@ -7186,20 +6408,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.259513",
-        "created_at": "2025-10-13T01:31:59.259516",
-        "updated_at": "2025-10-13T01:35:04.027561",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.259513",
+        "created_at": "2025-10-13 01:31:59.259516",
+        "updated_at": "2025-10-13 01:35:04.027561",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 172,
         "title": "Supermarket Simulator",
         "slug": "supermarket-simulator",
@@ -7231,21 +6449,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.261005",
-        "created_at": "2025-10-13T01:31:59.261007",
-        "updated_at": "2025-10-13T01:35:04.028258",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Platform",
-            "Simulation",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.261005",
+        "created_at": "2025-10-13 01:31:59.261007",
+        "updated_at": "2025-10-13 01:35:04.028258",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 173,
         "title": "Ragdoll Football 2 Players",
         "slug": "ragdoll-football-2-players",
@@ -7274,20 +6487,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.262009",
-        "created_at": "2025-10-13T01:31:59.262010",
-        "updated_at": "2025-10-13T01:35:04.028942",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Sports",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.262009",
+        "created_at": "2025-10-13 01:31:59.262010",
+        "updated_at": "2025-10-13 01:35:04.028942",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 174,
         "title": "Obby Prison Escape",
         "slug": "obby-prison-escape",
@@ -7316,20 +6525,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.263074",
-        "created_at": "2025-10-13T01:31:59.263075",
-        "updated_at": "2025-10-13T01:35:04.029556",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.263074",
+        "created_at": "2025-10-13 01:31:59.263075",
+        "updated_at": "2025-10-13 01:35:04.029556",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 175,
         "title": "Time Shooter 3: SWAT",
         "slug": "time-shooter-3-swat",
@@ -7358,20 +6563,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.263976",
-        "created_at": "2025-10-13T01:31:59.263977",
-        "updated_at": "2025-10-13T01:35:04.030211",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.263976",
+        "created_at": "2025-10-13 01:31:59.263977",
+        "updated_at": "2025-10-13 01:35:04.030211",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 176,
         "title": "American Truck Car Driving",
         "slug": "american-truck-car-driving",
@@ -7400,20 +6601,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.264818",
-        "created_at": "2025-10-13T01:31:59.264819",
-        "updated_at": "2025-10-13T01:35:04.030841",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.264818",
+        "created_at": "2025-10-13 01:31:59.264819",
+        "updated_at": "2025-10-13 01:35:04.030841",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 177,
         "title": "Pill Soccer",
         "slug": "pill-soccer",
@@ -7438,20 +6635,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.265604",
-        "created_at": "2025-10-13T01:31:59.265605",
-        "updated_at": "2025-10-13T01:35:04.031434",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Sports",
-            "RPG"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.265604",
+        "created_at": "2025-10-13 01:31:59.265605",
+        "updated_at": "2025-10-13 01:35:04.031434",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 178,
         "title": "Papa's Freezeria",
         "slug": "papas-freezeria",
@@ -7482,20 +6675,16 @@ const GAMES_DATA = {
             "Left Click": "Select items",
             "Drag & Drop": "Prepare orders"
         },
-        "release_date": "2025-10-13T01:31:59.266593",
-        "created_at": "2025-10-13T01:31:59.266595",
-        "updated_at": "2025-10-13T01:35:04.032027",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.266593",
+        "created_at": "2025-10-13 01:31:59.266595",
+        "updated_at": "2025-10-13 01:35:04.032027",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 179,
         "title": "The Last io",
         "slug": "the-last-io",
@@ -7525,20 +6714,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.267554",
-        "created_at": "2025-10-13T01:31:59.267555",
-        "updated_at": "2025-10-13T01:35:04.032641",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.267554",
+        "created_at": "2025-10-13 01:31:59.267555",
+        "updated_at": "2025-10-13 01:35:04.032641",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 180,
         "title": "Police Real Chase Car Simulator",
         "slug": "police-real-chase-car-simulator",
@@ -7570,21 +6755,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.269057",
-        "created_at": "2025-10-13T01:31:59.269060",
-        "updated_at": "2025-10-13T01:35:04.033581",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Simulation",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.269057",
+        "created_at": "2025-10-13 01:31:59.269060",
+        "updated_at": "2025-10-13 01:35:04.033581",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 181,
         "title": "Highway Cars",
         "slug": "highway-cars",
@@ -7609,19 +6789,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.270255",
-        "created_at": "2025-10-13T01:31:59.270258",
-        "updated_at": "2025-10-13T01:35:04.034729",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.270255",
+        "created_at": "2025-10-13 01:31:59.270258",
+        "updated_at": "2025-10-13 01:35:04.034729",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 182,
         "title": "Kirka io",
         "slug": "kirka-io",
@@ -7652,23 +6829,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.271139",
-        "created_at": "2025-10-13T01:31:59.271140",
-        "updated_at": "2025-10-13T01:35:04.035616",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Puzzle",
-            "Multiplayer",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.271139",
+        "created_at": "2025-10-13 01:31:59.271140",
+        "updated_at": "2025-10-13 01:35:04.035616",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 183,
         "title": "Voxiom",
         "slug": "voxiom",
@@ -7699,21 +6869,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.271935",
-        "created_at": "2025-10-13T01:31:59.271936",
-        "updated_at": "2025-10-13T01:35:04.036392",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.271935",
+        "created_at": "2025-10-13 01:31:59.271936",
+        "updated_at": "2025-10-13 01:35:04.036392",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 184,
         "title": "Drift Fury",
         "slug": "drift-fury",
@@ -7746,20 +6911,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.272720",
-        "created_at": "2025-10-13T01:31:59.272721",
-        "updated_at": "2025-10-13T01:35:04.037090",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.272720",
+        "created_at": "2025-10-13 01:31:59.272721",
+        "updated_at": "2025-10-13 01:35:04.037090",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 185,
         "title": "Taming io",
         "slug": "taming-io",
@@ -7791,22 +6952,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.273495",
-        "created_at": "2025-10-13T01:31:59.273496",
-        "updated_at": "2025-10-13T01:35:04.037778",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "RPG",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.273495",
+        "created_at": "2025-10-13 01:31:59.273496",
+        "updated_at": "2025-10-13 01:35:04.037778",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 186,
         "title": "Vex 3",
         "slug": "vex-3",
@@ -7835,21 +6990,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.275047",
-        "created_at": "2025-10-13T01:31:59.275049",
-        "updated_at": "2025-10-13T01:35:04.038592",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.275047",
+        "created_at": "2025-10-13 01:31:59.275049",
+        "updated_at": "2025-10-13 01:35:04.038592",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 187,
         "title": "Fleeing the Complex",
         "slug": "fleeing-the-complex",
@@ -7877,20 +7027,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.276131",
-        "created_at": "2025-10-13T01:31:59.276132",
-        "updated_at": "2025-10-13T01:35:04.039234",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.276131",
+        "created_at": "2025-10-13 01:31:59.276132",
+        "updated_at": "2025-10-13 01:35:04.039234",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 188,
         "title": "FNF Garcello",
         "slug": "fnf-garcello",
@@ -7915,22 +7061,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.277182",
-        "created_at": "2025-10-13T01:31:59.277185",
-        "updated_at": "2025-10-13T01:35:04.039884",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Multiplayer",
-            "Horror",
-            "Rhythm"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.277182",
+        "created_at": "2025-10-13 01:31:59.277185",
+        "updated_at": "2025-10-13 01:35:04.039884",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 189,
         "title": "Crazy Shooters 2",
         "slug": "crazy-shooters-2",
@@ -7955,19 +7095,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.278067",
-        "created_at": "2025-10-13T01:31:59.278069",
-        "updated_at": "2025-10-13T01:35:04.042360",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.278067",
+        "created_at": "2025-10-13 01:31:59.278069",
+        "updated_at": "2025-10-13 01:35:04.042360",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 190,
         "title": "Racing Horizon",
         "slug": "racing-horizon",
@@ -7996,19 +7133,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.278867",
-        "created_at": "2025-10-13T01:31:59.278868",
-        "updated_at": "2025-10-13T01:35:04.043220",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.278867",
+        "created_at": "2025-10-13 01:31:59.278868",
+        "updated_at": "2025-10-13 01:35:04.043220",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 191,
         "title": "Car Football",
         "slug": "car-football",
@@ -8033,21 +7167,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.279653",
-        "created_at": "2025-10-13T01:31:59.279653",
-        "updated_at": "2025-10-13T01:35:04.044113",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Sports",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.279653",
+        "created_at": "2025-10-13 01:31:59.279653",
+        "updated_at": "2025-10-13 01:35:04.044113",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 192,
         "title": "Cat Simulator",
         "slug": "cat-simulator",
@@ -8079,19 +7208,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.280447",
-        "created_at": "2025-10-13T01:31:59.280447",
-        "updated_at": "2025-10-13T01:35:04.045090",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.280447",
+        "created_at": "2025-10-13 01:31:59.280447",
+        "updated_at": "2025-10-13 01:35:04.045090",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 193,
         "title": "Idle Mining Empire",
         "slug": "idle-mining-empire",
@@ -8121,20 +7247,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.281410",
-        "created_at": "2025-10-13T01:31:59.281412",
-        "updated_at": "2025-10-13T01:35:04.045820",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.281410",
+        "created_at": "2025-10-13 01:31:59.281412",
+        "updated_at": "2025-10-13 01:35:04.045820",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 194,
         "title": "Geometry Vibes X-Ball",
         "slug": "geometry-vibes-x-ball",
@@ -8166,19 +7288,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.282288",
-        "created_at": "2025-10-13T01:31:59.282289",
-        "updated_at": "2025-10-13T01:35:04.046452",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.282288",
+        "created_at": "2025-10-13 01:31:59.282289",
+        "updated_at": "2025-10-13 01:35:04.046452",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 195,
         "title": "Jeep Driver",
         "slug": "jeep-driver",
@@ -8203,19 +7322,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.283079",
-        "created_at": "2025-10-13T01:31:59.283080",
-        "updated_at": "2025-10-13T01:35:04.047079",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.283079",
+        "created_at": "2025-10-13 01:31:59.283080",
+        "updated_at": "2025-10-13 01:35:04.047079",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 196,
         "title": "Simple Loot Idle",
         "slug": "simple-loot-idle",
@@ -8241,23 +7357,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.284051",
-        "created_at": "2025-10-13T01:31:59.284053",
-        "updated_at": "2025-10-13T01:35:04.047701",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Simulation",
-            "Casual",
-            "Multiplayer",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.284051",
+        "created_at": "2025-10-13 01:31:59.284053",
+        "updated_at": "2025-10-13 01:35:04.047701",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 197,
         "title": "Football Legends",
         "slug": "football-legends",
@@ -8286,19 +7395,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.285175",
-        "created_at": "2025-10-13T01:31:59.285177",
-        "updated_at": "2025-10-13T01:35:04.048289",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Sports"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.285175",
+        "created_at": "2025-10-13 01:31:59.285177",
+        "updated_at": "2025-10-13 01:35:04.048289",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 198,
         "title": "Uno Online",
         "slug": "uno-online",
@@ -8329,22 +7435,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.286160",
-        "created_at": "2025-10-13T01:31:59.286161",
-        "updated_at": "2025-10-13T01:35:04.048874",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Multiplayer",
-            "Card",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.286160",
+        "created_at": "2025-10-13 01:31:59.286161",
+        "updated_at": "2025-10-13 01:35:04.048874",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 199,
         "title": "Car Stunt King",
         "slug": "car-stunt-king",
@@ -8374,21 +7474,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.287110",
-        "created_at": "2025-10-13T01:31:59.287112",
-        "updated_at": "2025-10-13T01:35:04.049465",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Multiplayer",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.287110",
+        "created_at": "2025-10-13 01:31:59.287112",
+        "updated_at": "2025-10-13 01:35:04.049465",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 200,
         "title": "Idle Vlogger",
         "slug": "idle-vlogger",
@@ -8414,20 +7509,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.288122",
-        "created_at": "2025-10-13T01:31:59.288123",
-        "updated_at": "2025-10-13T01:35:04.050179",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Clicker",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.288122",
+        "created_at": "2025-10-13 01:31:59.288123",
+        "updated_at": "2025-10-13 01:35:04.050179",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 201,
         "title": "F1 Drift Racer",
         "slug": "f1-drift-racer",
@@ -8456,21 +7547,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.288903",
-        "created_at": "2025-10-13T01:31:59.288904",
-        "updated_at": "2025-10-13T01:35:04.051412",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Multiplayer",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.288903",
+        "created_at": "2025-10-13 01:31:59.288904",
+        "updated_at": "2025-10-13 01:35:04.051412",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 202,
         "title": "Papa's Bakeria",
         "slug": "papas-bakeria",
@@ -8501,19 +7587,16 @@ const GAMES_DATA = {
             "Left Click": "Select items",
             "Drag & Drop": "Prepare orders"
         },
-        "release_date": "2025-10-13T01:31:59.289664",
-        "created_at": "2025-10-13T01:31:59.289665",
-        "updated_at": "2025-10-13T01:35:04.052162",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.289664",
+        "created_at": "2025-10-13 01:31:59.289665",
+        "updated_at": "2025-10-13 01:35:04.052162",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 203,
         "title": "Monopoly",
         "slug": "monopoly",
@@ -8538,20 +7621,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.290435",
-        "created_at": "2025-10-13T01:31:59.290436",
-        "updated_at": "2025-10-13T01:35:04.052770",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.290435",
+        "created_at": "2025-10-13 01:31:59.290436",
+        "updated_at": "2025-10-13 01:35:04.052770",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 204,
         "title": "Fireboy and Watergirl 2: Light Temple",
         "slug": "fireboy-and-watergirl-2-light-temple",
@@ -8580,20 +7659,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.291231",
-        "created_at": "2025-10-13T01:31:59.291233",
-        "updated_at": "2025-10-13T01:35:04.053483",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.291231",
+        "created_at": "2025-10-13 01:31:59.291233",
+        "updated_at": "2025-10-13 01:35:04.053483",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 205,
         "title": "Kick The Dummy",
         "slug": "kick-the-dummy",
@@ -8618,19 +7693,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.292157",
-        "created_at": "2025-10-13T01:31:59.292158",
-        "updated_at": "2025-10-13T01:35:04.054116",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.292157",
+        "created_at": "2025-10-13 01:31:59.292158",
+        "updated_at": "2025-10-13 01:35:04.054116",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 206,
         "title": "Gangsters",
         "slug": "gangsters",
@@ -8655,21 +7727,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.293193",
-        "created_at": "2025-10-13T01:31:59.293196",
-        "updated_at": "2025-10-13T01:35:04.054700",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Arcade",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.293193",
+        "created_at": "2025-10-13 01:31:59.293196",
+        "updated_at": "2025-10-13 01:35:04.054700",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 207,
         "title": "Love Tester Story",
         "slug": "love-tester-story",
@@ -8698,22 +7765,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.294111",
-        "created_at": "2025-10-13T01:31:59.294112",
-        "updated_at": "2025-10-13T01:35:04.056940",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Simulation",
-            "Educational",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.294111",
+        "created_at": "2025-10-13 01:31:59.294112",
+        "updated_at": "2025-10-13 01:35:04.056940",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 208,
         "title": "Cookie Clicker Pro",
         "slug": "cookie-clicker-pro",
@@ -8745,22 +7806,16 @@ const GAMES_DATA = {
             "Mouse": "Click to play",
             "Left Click": "Main action"
         },
-        "release_date": "2025-10-13T01:31:59.294921",
-        "created_at": "2025-10-13T01:31:59.294922",
-        "updated_at": "2025-10-13T01:35:04.057685",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Strategy",
-            "Multiplayer",
-            "Clicker",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.294921",
+        "created_at": "2025-10-13 01:31:59.294922",
+        "updated_at": "2025-10-13 01:35:04.057685",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 209,
         "title": "Mini Cars Racing",
         "slug": "mini-cars-racing",
@@ -8790,19 +7845,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.295684",
-        "created_at": "2025-10-13T01:31:59.295685",
-        "updated_at": "2025-10-13T01:35:04.058694",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.295684",
+        "created_at": "2025-10-13 01:31:59.295685",
+        "updated_at": "2025-10-13 01:35:04.058694",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 210,
         "title": "Solitaire Classic",
         "slug": "solitaire-classic",
@@ -8831,23 +7883,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.296457",
-        "created_at": "2025-10-13T01:31:59.296458",
-        "updated_at": "2025-10-13T01:35:04.059646",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Racing",
-            "Arcade",
-            "Card",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.296457",
+        "created_at": "2025-10-13 01:31:59.296458",
+        "updated_at": "2025-10-13 01:35:04.059646",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 211,
         "title": "Moto X3M Pool Party",
         "slug": "moto-x3m-pool-party",
@@ -8872,20 +7917,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.297243",
-        "created_at": "2025-10-13T01:31:59.297244",
-        "updated_at": "2025-10-13T01:35:04.060571",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.297243",
+        "created_at": "2025-10-13 01:31:59.297244",
+        "updated_at": "2025-10-13 01:35:04.060571",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 212,
         "title": "Papa's Sushiria",
         "slug": "papas-sushiria",
@@ -8916,19 +7957,16 @@ const GAMES_DATA = {
             "Left Click": "Select items",
             "Drag & Drop": "Prepare orders"
         },
-        "release_date": "2025-10-13T01:31:59.297994",
-        "created_at": "2025-10-13T01:31:59.297995",
-        "updated_at": "2025-10-13T01:35:04.061344",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.297994",
+        "created_at": "2025-10-13 01:31:59.297995",
+        "updated_at": "2025-10-13 01:35:04.061344",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 213,
         "title": "Free City Drive",
         "slug": "free-city-drive",
@@ -8957,21 +7995,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.298759",
-        "created_at": "2025-10-13T01:31:59.298759",
-        "updated_at": "2025-10-13T01:35:04.062121",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Racing",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.298759",
+        "created_at": "2025-10-13 01:31:59.298759",
+        "updated_at": "2025-10-13 01:35:04.062121",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 214,
         "title": "Home Design",
         "slug": "home-design",
@@ -9000,19 +8033,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.299738",
-        "created_at": "2025-10-13T01:31:59.299739",
-        "updated_at": "2025-10-13T01:35:04.062845",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.299738",
+        "created_at": "2025-10-13 01:31:59.299739",
+        "updated_at": "2025-10-13 01:35:04.062845",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 215,
         "title": "Immortal: Dark Slayer",
         "slug": "immortal-dark-slayer",
@@ -9039,23 +8069,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.300679",
-        "created_at": "2025-10-13T01:31:59.300681",
-        "updated_at": "2025-10-13T01:35:04.063525",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "RPG",
-            "Multiplayer",
-            "Horror",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.300679",
+        "created_at": "2025-10-13 01:31:59.300681",
+        "updated_at": "2025-10-13 01:35:04.063525",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 216,
         "title": "Idle Farming Business",
         "slug": "idle-farming-business",
@@ -9085,20 +8108,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.301998",
-        "created_at": "2025-10-13T01:31:59.302000",
-        "updated_at": "2025-10-13T01:35:04.064219",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Simulation",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.301998",
+        "created_at": "2025-10-13 01:31:59.302000",
+        "updated_at": "2025-10-13 01:35:04.064219",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 217,
         "title": "GunSpin",
         "slug": "gunspin",
@@ -9127,19 +8146,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.302924",
-        "created_at": "2025-10-13T01:31:59.302925",
-        "updated_at": "2025-10-13T01:35:04.064978",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.302924",
+        "created_at": "2025-10-13 01:31:59.302925",
+        "updated_at": "2025-10-13 01:35:04.064978",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 218,
         "title": "WarStrike",
         "slug": "warstrike",
@@ -9168,20 +8184,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.303728",
-        "created_at": "2025-10-13T01:31:59.303729",
-        "updated_at": "2025-10-13T01:35:04.065746",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.303728",
+        "created_at": "2025-10-13 01:31:59.303729",
+        "updated_at": "2025-10-13 01:35:04.065746",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 219,
         "title": "Pixel Survival",
         "slug": "pixel-survival",
@@ -9211,22 +8223,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.304502",
-        "created_at": "2025-10-13T01:31:59.304503",
-        "updated_at": "2025-10-13T01:35:04.066409",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Arcade",
-            "Simulation",
-            "Multiplayer",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.304502",
+        "created_at": "2025-10-13 01:31:59.304503",
+        "updated_at": "2025-10-13 01:35:04.066409",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 220,
         "title": "FNaF Shooter",
         "slug": "fnaf-shooter",
@@ -9255,20 +8261,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.305258",
-        "created_at": "2025-10-13T01:31:59.305259",
-        "updated_at": "2025-10-13T01:35:04.067260",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.305258",
+        "created_at": "2025-10-13 01:31:59.305259",
+        "updated_at": "2025-10-13 01:35:04.067260",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 221,
         "title": "Vehicles Simulator 2",
         "slug": "vehicles-simulator-2",
@@ -9297,19 +8299,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.306036",
-        "created_at": "2025-10-13T01:31:59.306037",
-        "updated_at": "2025-10-13T01:35:04.068164",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.306036",
+        "created_at": "2025-10-13 01:31:59.306037",
+        "updated_at": "2025-10-13 01:35:04.068164",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 222,
         "title": "ArmedForces.io",
         "slug": "armedforcesio",
@@ -9343,21 +8342,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.306848",
-        "created_at": "2025-10-13T01:31:59.306849",
-        "updated_at": "2025-10-13T01:35:04.069136",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.306848",
+        "created_at": "2025-10-13 01:31:59.306849",
+        "updated_at": "2025-10-13 01:35:04.069136",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 223,
         "title": "Truck Driver: Snowy Roads",
         "slug": "truck-driver-snowy-roads",
@@ -9386,20 +8380,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.307824",
-        "created_at": "2025-10-13T01:31:59.307826",
-        "updated_at": "2025-10-13T01:35:04.070102",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.307824",
+        "created_at": "2025-10-13 01:31:59.307826",
+        "updated_at": "2025-10-13 01:35:04.070102",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 224,
         "title": "Pool Challenge",
         "slug": "pool-challenge",
@@ -9428,20 +8418,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.308903",
-        "created_at": "2025-10-13T01:31:59.308905",
-        "updated_at": "2025-10-13T01:35:04.071253",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "2D",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.308903",
+        "created_at": "2025-10-13 01:31:59.308905",
+        "updated_at": "2025-10-13 01:35:04.071253",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 225,
         "title": "Basketball io",
         "slug": "basketball-io",
@@ -9474,21 +8460,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.310090",
-        "created_at": "2025-10-13T01:31:59.310092",
-        "updated_at": "2025-10-13T01:35:04.072269",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Sports",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.310090",
+        "created_at": "2025-10-13 01:31:59.310092",
+        "updated_at": "2025-10-13 01:35:04.072269",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 226,
         "title": "Head Soccer 2022",
         "slug": "head-soccer-2022",
@@ -9513,20 +8494,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.311862",
-        "created_at": "2025-10-13T01:31:59.311865",
-        "updated_at": "2025-10-13T01:35:04.073125",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Sports"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.311862",
+        "created_at": "2025-10-13 01:31:59.311865",
+        "updated_at": "2025-10-13 01:35:04.073125",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 227,
         "title": "WormsZone.io",
         "slug": "wormszoneio",
@@ -9556,20 +8533,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.312802",
-        "created_at": "2025-10-13T01:31:59.312803",
-        "updated_at": "2025-10-13T01:35:04.074137",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.312802",
+        "created_at": "2025-10-13 01:31:59.312803",
+        "updated_at": "2025-10-13 01:35:04.074137",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 228,
         "title": "Soccer Random Pro",
         "slug": "soccer-random-pro",
@@ -9594,21 +8567,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.313673",
-        "created_at": "2025-10-13T01:31:59.313674",
-        "updated_at": "2025-10-13T01:35:04.075036",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Sports",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.313673",
+        "created_at": "2025-10-13 01:31:59.313674",
+        "updated_at": "2025-10-13 01:35:04.075036",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 229,
         "title": "Rooftop Duel",
         "slug": "rooftop-duel",
@@ -9633,21 +8601,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.314628",
-        "created_at": "2025-10-13T01:31:59.314629",
-        "updated_at": "2025-10-13T01:35:04.075911",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.314628",
+        "created_at": "2025-10-13 01:31:59.314629",
+        "updated_at": "2025-10-13 01:35:04.075911",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 230,
         "title": "Master Chess",
         "slug": "master-chess",
@@ -9672,19 +8635,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.315869",
-        "created_at": "2025-10-13T01:31:59.315870",
-        "updated_at": "2025-10-13T01:35:04.076892",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.315869",
+        "created_at": "2025-10-13 01:31:59.315870",
+        "updated_at": "2025-10-13 01:35:04.076892",
+        "category_name": "Strategy",
+        "category_obj": 4,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 231,
         "title": "Bloxorz",
         "slug": "bloxorz",
@@ -9712,21 +8672,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.316859",
-        "created_at": "2025-10-13T01:31:59.316861",
-        "updated_at": "2025-10-13T01:35:04.077726",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Multiplayer",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.316859",
+        "created_at": "2025-10-13 01:31:59.316861",
+        "updated_at": "2025-10-13 01:35:04.077726",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 232,
         "title": "Rooftop Snipers",
         "slug": "rooftop-snipers",
@@ -9755,21 +8710,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.318188",
-        "created_at": "2025-10-13T01:31:59.318190",
-        "updated_at": "2025-10-13T01:35:04.078452",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Arcade",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.318188",
+        "created_at": "2025-10-13 01:31:59.318190",
+        "updated_at": "2025-10-13 01:35:04.078452",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 233,
         "title": "FPS Strike",
         "slug": "fps-strike",
@@ -9800,20 +8750,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.320894",
-        "created_at": "2025-10-13T01:31:59.320896",
-        "updated_at": "2025-10-13T01:35:04.079210",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.320894",
+        "created_at": "2025-10-13 01:31:59.320896",
+        "updated_at": "2025-10-13 01:35:04.079210",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 234,
         "title": "Awesome Pirates",
         "slug": "awesome-pirates",
@@ -9841,19 +8787,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.321739",
-        "created_at": "2025-10-13T01:31:59.321740",
-        "updated_at": "2025-10-13T01:35:04.079873",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.321739",
+        "created_at": "2025-10-13 01:31:59.321740",
+        "updated_at": "2025-10-13 01:35:04.079873",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 235,
         "title": "Vex X3M 2",
         "slug": "vex-x3m-2",
@@ -9882,22 +8825,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.322543",
-        "created_at": "2025-10-13T01:31:59.322544",
-        "updated_at": "2025-10-13T01:35:04.080536",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Platform",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.322543",
+        "created_at": "2025-10-13 01:31:59.322544",
+        "updated_at": "2025-10-13 01:35:04.080536",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 236,
         "title": "Logistics Inc",
         "slug": "logistics-inc",
@@ -9924,20 +8861,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.323850",
-        "created_at": "2025-10-13T01:31:59.323852",
-        "updated_at": "2025-10-13T01:35:04.081180",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.323850",
+        "created_at": "2025-10-13 01:31:59.323852",
+        "updated_at": "2025-10-13 01:35:04.081180",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 237,
         "title": "Police Traffic",
         "slug": "police-traffic",
@@ -9970,21 +8903,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.325077",
-        "created_at": "2025-10-13T01:31:59.325079",
-        "updated_at": "2025-10-13T01:35:04.081814",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Multiplayer",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.325077",
+        "created_at": "2025-10-13 01:31:59.325079",
+        "updated_at": "2025-10-13 01:35:04.081814",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 238,
         "title": "Poop Clicker",
         "slug": "poop-clicker",
@@ -10013,20 +8941,16 @@ const GAMES_DATA = {
             "Mouse": "Click to play",
             "Left Click": "Main action"
         },
-        "release_date": "2025-10-13T01:31:59.326148",
-        "created_at": "2025-10-13T01:31:59.326150",
-        "updated_at": "2025-10-13T01:35:04.082545",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.326148",
+        "created_at": "2025-10-13 01:31:59.326150",
+        "updated_at": "2025-10-13 01:35:04.082545",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 239,
         "title": "Geometry Dash FreezeNova",
         "slug": "geometry-dash-freezenova",
@@ -10055,19 +8979,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.327704",
-        "created_at": "2025-10-13T01:31:59.327707",
-        "updated_at": "2025-10-13T01:35:04.083185",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Arcade"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.327704",
+        "created_at": "2025-10-13 01:31:59.327707",
+        "updated_at": "2025-10-13 01:35:04.083185",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 240,
         "title": "Boxing Random",
         "slug": "boxing-random",
@@ -10097,20 +9018,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.329107",
-        "created_at": "2025-10-13T01:31:59.329109",
-        "updated_at": "2025-10-13T01:35:04.084134",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Arcade",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.329107",
+        "created_at": "2025-10-13 01:31:59.329109",
+        "updated_at": "2025-10-13 01:35:04.084134",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 241,
         "title": "Papa's Pastaria",
         "slug": "papas-pastaria",
@@ -10141,19 +9058,16 @@ const GAMES_DATA = {
             "Left Click": "Select items",
             "Drag & Drop": "Prepare orders"
         },
-        "release_date": "2025-10-13T01:31:59.330151",
-        "created_at": "2025-10-13T01:31:59.330152",
-        "updated_at": "2025-10-13T01:35:04.085072",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.330151",
+        "created_at": "2025-10-13 01:31:59.330152",
+        "updated_at": "2025-10-13 01:35:04.085072",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 242,
         "title": "Burnout Crazy Drift",
         "slug": "burnout-crazy-drift",
@@ -10185,19 +9099,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.333138",
-        "created_at": "2025-10-13T01:31:59.333140",
-        "updated_at": "2025-10-13T01:35:04.085912",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.333138",
+        "created_at": "2025-10-13 01:31:59.333140",
+        "updated_at": "2025-10-13 01:35:04.085912",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 243,
         "title": "Zombie Apocalypse Shooter",
         "slug": "zombie-apocalypse-shooter",
@@ -10226,19 +9137,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.334554",
-        "created_at": "2025-10-13T01:31:59.334557",
-        "updated_at": "2025-10-13T01:35:04.086616",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.334554",
+        "created_at": "2025-10-13 01:31:59.334557",
+        "updated_at": "2025-10-13 01:35:04.086616",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 244,
         "title": "Only Up or Lava",
         "slug": "only-up-or-lava",
@@ -10268,20 +9176,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.335817",
-        "created_at": "2025-10-13T01:31:59.335819",
-        "updated_at": "2025-10-13T01:35:04.087357",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Arcade",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.335817",
+        "created_at": "2025-10-13 01:31:59.335819",
+        "updated_at": "2025-10-13 01:35:04.087357",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 245,
         "title": "Rummikub",
         "slug": "rummikub",
@@ -10310,20 +9214,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.336722",
-        "created_at": "2025-10-13T01:31:59.336723",
-        "updated_at": "2025-10-13T01:35:04.087987",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.336722",
+        "created_at": "2025-10-13 01:31:59.336723",
+        "updated_at": "2025-10-13 01:35:04.087987",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 246,
         "title": "Moto X3M Winter",
         "slug": "moto-x3m-winter",
@@ -10348,19 +9248,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.337542",
-        "created_at": "2025-10-13T01:31:59.337543",
-        "updated_at": "2025-10-13T01:35:04.088750",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.337542",
+        "created_at": "2025-10-13 01:31:59.337543",
+        "updated_at": "2025-10-13 01:35:04.088750",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 247,
         "title": "Void City io",
         "slug": "void-city-io",
@@ -10390,21 +9287,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.338708",
-        "created_at": "2025-10-13T01:31:59.338710",
-        "updated_at": "2025-10-13T01:35:04.089497",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Simulation",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.338708",
+        "created_at": "2025-10-13 01:31:59.338710",
+        "updated_at": "2025-10-13 01:35:04.089497",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 248,
         "title": "Burnout Drift Hunter",
         "slug": "burnout-drift-hunter",
@@ -10436,21 +9328,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.339585",
-        "created_at": "2025-10-13T01:31:59.339586",
-        "updated_at": "2025-10-13T01:35:04.090197",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.339585",
+        "created_at": "2025-10-13 01:31:59.339586",
+        "updated_at": "2025-10-13 01:35:04.090197",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 249,
         "title": "Masked Forces Crazy Mode",
         "slug": "masked-forces-crazy-mode",
@@ -10475,21 +9362,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.340394",
-        "created_at": "2025-10-13T01:31:59.340395",
-        "updated_at": "2025-10-13T01:35:04.090867",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Simulation",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.340394",
+        "created_at": "2025-10-13 01:31:59.340395",
+        "updated_at": "2025-10-13 01:35:04.090867",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 250,
         "title": "Crazy Parking Fury",
         "slug": "crazy-parking-fury",
@@ -10519,21 +9401,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.341188",
-        "created_at": "2025-10-13T01:31:59.341188",
-        "updated_at": "2025-10-13T01:35:04.091562",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Platform",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.341188",
+        "created_at": "2025-10-13 01:31:59.341188",
+        "updated_at": "2025-10-13 01:35:04.091562",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 251,
         "title": "Hole io",
         "slug": "hole-io",
@@ -10563,21 +9440,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.342085",
-        "created_at": "2025-10-13T01:31:59.342087",
-        "updated_at": "2025-10-13T01:35:04.092373",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Simulation",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.342085",
+        "created_at": "2025-10-13 01:31:59.342087",
+        "updated_at": "2025-10-13 01:35:04.092373",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 252,
         "title": "Parkour Block 3D",
         "slug": "parkour-block-3d",
@@ -10611,23 +9483,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.343070",
-        "created_at": "2025-10-13T01:31:59.343071",
-        "updated_at": "2025-10-13T01:35:04.093389",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Arcade",
-            "Platform",
-            "RPG",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.343070",
+        "created_at": "2025-10-13 01:31:59.343071",
+        "updated_at": "2025-10-13 01:35:04.093389",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 253,
         "title": "Penalty Challenge",
         "slug": "penalty-challenge",
@@ -10652,21 +9517,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.344393",
-        "created_at": "2025-10-13T01:31:59.344394",
-        "updated_at": "2025-10-13T01:35:04.094329",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Sports",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.344393",
+        "created_at": "2025-10-13 01:31:59.344394",
+        "updated_at": "2025-10-13 01:35:04.094329",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 254,
         "title": "Barbiemania",
         "slug": "barbiemania",
@@ -10695,20 +9555,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.345452",
-        "created_at": "2025-10-13T01:31:59.345454",
-        "updated_at": "2025-10-13T01:35:04.095125",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.345452",
+        "created_at": "2025-10-13 01:31:59.345454",
+        "updated_at": "2025-10-13 01:35:04.095125",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 255,
         "title": "Tunnel Road",
         "slug": "tunnel-road",
@@ -10737,20 +9593,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.346383",
-        "created_at": "2025-10-13T01:31:59.346384",
-        "updated_at": "2025-10-13T01:35:04.095798",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.346383",
+        "created_at": "2025-10-13 01:31:59.346384",
+        "updated_at": "2025-10-13 01:35:04.095798",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 256,
         "title": "Chess",
         "slug": "chess",
@@ -10775,19 +9627,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.348989",
-        "created_at": "2025-10-13T01:31:59.348990",
-        "updated_at": "2025-10-13T01:35:04.096449",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.348989",
+        "created_at": "2025-10-13 01:31:59.348990",
+        "updated_at": "2025-10-13 01:35:04.096449",
+        "category_name": "Strategy",
+        "category_obj": 4,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 257,
         "title": "Obby: Find 100 Cats",
         "slug": "obby-find-100-cats",
@@ -10817,22 +9666,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.350187",
-        "created_at": "2025-10-13T01:31:59.350189",
-        "updated_at": "2025-10-13T01:35:04.097078",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "RPG",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.350187",
+        "created_at": "2025-10-13 01:31:59.350189",
+        "updated_at": "2025-10-13 01:35:04.097078",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 258,
         "title": "Neon Slither Sim",
         "slug": "neon-slither-sim",
@@ -10860,22 +9703,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.351862",
-        "created_at": "2025-10-13T01:31:59.351864",
-        "updated_at": "2025-10-13T01:35:04.097973",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Arcade",
-            "Simulation",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.351862",
+        "created_at": "2025-10-13 01:31:59.351864",
+        "updated_at": "2025-10-13 01:35:04.097973",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 259,
         "title": "Merge Cakes",
         "slug": "merge-cakes",
@@ -10904,21 +9741,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.353228",
-        "created_at": "2025-10-13T01:31:59.353230",
-        "updated_at": "2025-10-13T01:35:04.098713",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Multiplayer",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.353228",
+        "created_at": "2025-10-13 01:31:59.353230",
+        "updated_at": "2025-10-13 01:35:04.098713",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 260,
         "title": "Bob the Robber",
         "slug": "bob-the-robber",
@@ -10948,19 +9780,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.354164",
-        "created_at": "2025-10-13T01:31:59.354165",
-        "updated_at": "2025-10-13T01:35:04.099360",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Arcade"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.354164",
+        "created_at": "2025-10-13 01:31:59.354165",
+        "updated_at": "2025-10-13 01:35:04.099360",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 261,
         "title": "Kikis Pink Christmas",
         "slug": "kikis-pink-christmas",
@@ -10989,19 +9818,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.355358",
-        "created_at": "2025-10-13T01:31:59.355359",
-        "updated_at": "2025-10-13T01:35:04.100327",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.355358",
+        "created_at": "2025-10-13 01:31:59.355359",
+        "updated_at": "2025-10-13 01:35:04.100327",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 262,
         "title": "Sprunked",
         "slug": "sprunked",
@@ -11031,21 +9857,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.358166",
-        "created_at": "2025-10-13T01:31:59.358167",
-        "updated_at": "2025-10-13T01:35:04.101401",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.358166",
+        "created_at": "2025-10-13 01:31:59.358167",
+        "updated_at": "2025-10-13 01:35:04.101401",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 263,
         "title": "Fort Drifter",
         "slug": "fort-drifter",
@@ -11077,20 +9898,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.359256",
-        "created_at": "2025-10-13T01:31:59.359258",
-        "updated_at": "2025-10-13T01:35:04.102148",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.359256",
+        "created_at": "2025-10-13 01:31:59.359258",
+        "updated_at": "2025-10-13 01:35:04.102148",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 264,
         "title": "Carnage Battle Arena",
         "slug": "carnage-battle-arena",
@@ -11119,22 +9936,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.360392",
-        "created_at": "2025-10-13T01:31:59.360394",
-        "updated_at": "2025-10-13T01:35:04.104173",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Puzzle",
-            "Racing",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.360392",
+        "created_at": "2025-10-13 01:31:59.360394",
+        "updated_at": "2025-10-13 01:35:04.104173",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 265,
         "title": "Race Clicker: Drift Max",
         "slug": "race-clicker-drift-max",
@@ -11167,21 +9978,16 @@ const GAMES_DATA = {
             "Mouse": "Click to play",
             "Left Click": "Main action"
         },
-        "release_date": "2025-10-13T01:31:59.361349",
-        "created_at": "2025-10-13T01:31:59.361351",
-        "updated_at": "2025-10-13T01:35:04.104924",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Multiplayer",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.361349",
+        "created_at": "2025-10-13 01:31:59.361351",
+        "updated_at": "2025-10-13 01:35:04.104924",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 266,
         "title": "Papa's Cupcakeria",
         "slug": "papas-cupcakeria",
@@ -11212,20 +10018,16 @@ const GAMES_DATA = {
             "Left Click": "Select items",
             "Drag & Drop": "Prepare orders"
         },
-        "release_date": "2025-10-13T01:31:59.362502",
-        "created_at": "2025-10-13T01:31:59.362503",
-        "updated_at": "2025-10-13T01:35:04.105641",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.362502",
+        "created_at": "2025-10-13 01:31:59.362503",
+        "updated_at": "2025-10-13 01:35:04.105641",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 267,
         "title": "Car Parking",
         "slug": "car-parking",
@@ -11250,21 +10052,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.363686",
-        "created_at": "2025-10-13T01:31:59.363687",
-        "updated_at": "2025-10-13T01:35:04.106281",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Multiplayer",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.363686",
+        "created_at": "2025-10-13 01:31:59.363687",
+        "updated_at": "2025-10-13 01:35:04.106281",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 268,
         "title": "Five Nights At Candy's",
         "slug": "five-nights-at-candys",
@@ -11289,19 +10086,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.364898",
-        "created_at": "2025-10-13T01:31:59.364899",
-        "updated_at": "2025-10-13T01:35:04.106897",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.364898",
+        "created_at": "2025-10-13 01:31:59.364899",
+        "updated_at": "2025-10-13 01:35:04.106897",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 269,
         "title": "Wasteland Shooters",
         "slug": "wasteland-shooters",
@@ -11330,20 +10124,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.367666",
-        "created_at": "2025-10-13T01:31:59.367669",
-        "updated_at": "2025-10-13T01:35:04.107513",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.367666",
+        "created_at": "2025-10-13 01:31:59.367669",
+        "updated_at": "2025-10-13 01:35:04.107513",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 270,
         "title": "Soccer Masters",
         "slug": "soccer-masters",
@@ -11368,22 +10158,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.368930",
-        "created_at": "2025-10-13T01:31:59.368932",
-        "updated_at": "2025-10-13T01:35:04.108303",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Sports",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.368930",
+        "created_at": "2025-10-13 01:31:59.368932",
+        "updated_at": "2025-10-13 01:35:04.108303",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 271,
         "title": "Solitaire",
         "slug": "solitaire",
@@ -11408,22 +10192,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.370135",
-        "created_at": "2025-10-13T01:31:59.370138",
-        "updated_at": "2025-10-13T01:35:04.109101",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Arcade",
-            "Multiplayer",
-            "Card",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.370135",
+        "created_at": "2025-10-13 01:31:59.370138",
+        "updated_at": "2025-10-13 01:35:04.109101",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 272,
         "title": "Papa's Burgeria",
         "slug": "papas-burgeria",
@@ -11454,19 +10232,16 @@ const GAMES_DATA = {
             "Left Click": "Select items",
             "Drag & Drop": "Prepare orders"
         },
-        "release_date": "2025-10-13T01:31:59.371013",
-        "created_at": "2025-10-13T01:31:59.371014",
-        "updated_at": "2025-10-13T01:35:04.110095",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.371013",
+        "created_at": "2025-10-13 01:31:59.371014",
+        "updated_at": "2025-10-13 01:35:04.110095",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 273,
         "title": "Ultimate Robo Duel 3D",
         "slug": "ultimate-robo-duel-3d",
@@ -11497,21 +10272,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.372510",
-        "created_at": "2025-10-13T01:31:59.372512",
-        "updated_at": "2025-10-13T01:35:04.110915",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.372510",
+        "created_at": "2025-10-13 01:31:59.372512",
+        "updated_at": "2025-10-13 01:35:04.110915",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 274,
         "title": "Time Shooter",
         "slug": "time-shooter",
@@ -11541,21 +10311,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.373359",
-        "created_at": "2025-10-13T01:31:59.373360",
-        "updated_at": "2025-10-13T01:35:04.111603",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Educational",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.373359",
+        "created_at": "2025-10-13 01:31:59.373360",
+        "updated_at": "2025-10-13 01:35:04.111603",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 275,
         "title": "Motorbike Traffic",
         "slug": "motorbike-traffic",
@@ -11587,19 +10352,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.374823",
-        "created_at": "2025-10-13T01:31:59.374825",
-        "updated_at": "2025-10-13T01:35:04.112250",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.374823",
+        "created_at": "2025-10-13 01:31:59.374825",
+        "updated_at": "2025-10-13 01:35:04.112250",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 276,
         "title": "Mahjong",
         "slug": "mahjong",
@@ -11629,22 +10391,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.376410",
-        "created_at": "2025-10-13T01:31:59.376412",
-        "updated_at": "2025-10-13T01:35:04.112933",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Puzzle",
-            "Casual",
-            "Multiplayer",
-            "Rhythm"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.376410",
+        "created_at": "2025-10-13 01:31:59.376412",
+        "updated_at": "2025-10-13 01:35:04.112933",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 277,
         "title": "12 MiniBattles",
         "slug": "12-minibattles",
@@ -11669,21 +10425,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.379196",
-        "created_at": "2025-10-13T01:31:59.379198",
-        "updated_at": "2025-10-13T01:35:04.113681",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Racing",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.379196",
+        "created_at": "2025-10-13 01:31:59.379198",
+        "updated_at": "2025-10-13 01:35:04.113681",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 278,
         "title": "Tennis Masters",
         "slug": "tennis-masters",
@@ -11708,20 +10459,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.381172",
-        "created_at": "2025-10-13T01:31:59.381174",
-        "updated_at": "2025-10-13T01:35:04.114361",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Sports"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.381172",
+        "created_at": "2025-10-13 01:31:59.381174",
+        "updated_at": "2025-10-13 01:35:04.114361",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 279,
         "title": "Squid Shooter",
         "slug": "squid-shooter",
@@ -11750,20 +10497,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.382274",
-        "created_at": "2025-10-13T01:31:59.382276",
-        "updated_at": "2025-10-13T01:35:04.115059",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.382274",
+        "created_at": "2025-10-13 01:31:59.382276",
+        "updated_at": "2025-10-13 01:35:04.115059",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 280,
         "title": "Five Nights At Cat Freddy",
         "slug": "five-nights-at-cat-freddy",
@@ -11791,21 +10534,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.383330",
-        "created_at": "2025-10-13T01:31:59.383331",
-        "updated_at": "2025-10-13T01:35:04.116133",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Puzzle",
-            "RPG"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.383330",
+        "created_at": "2025-10-13 01:31:59.383331",
+        "updated_at": "2025-10-13 01:35:04.116133",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 281,
         "title": "Papa's Cheeseria",
         "slug": "papas-cheeseria",
@@ -11836,19 +10574,16 @@ const GAMES_DATA = {
             "Left Click": "Select items",
             "Drag & Drop": "Prepare orders"
         },
-        "release_date": "2025-10-13T01:31:59.384502",
-        "created_at": "2025-10-13T01:31:59.384504",
-        "updated_at": "2025-10-13T01:35:04.117278",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.384502",
+        "created_at": "2025-10-13 01:31:59.384504",
+        "updated_at": "2025-10-13 01:35:04.117278",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 282,
         "title": "Four Colors",
         "slug": "four-colors",
@@ -11873,22 +10608,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.385824",
-        "created_at": "2025-10-13T01:31:59.385825",
-        "updated_at": "2025-10-13T01:35:04.118341",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Simulation",
-            "Multiplayer",
-            "Card"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.385824",
+        "created_at": "2025-10-13 01:31:59.385825",
+        "updated_at": "2025-10-13 01:35:04.118341",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 283,
         "title": "Mope io",
         "slug": "mope-io",
@@ -11918,20 +10647,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.386996",
-        "created_at": "2025-10-13T01:31:59.386997",
-        "updated_at": "2025-10-13T01:35:04.119147",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.386996",
+        "created_at": "2025-10-13 01:31:59.386997",
+        "updated_at": "2025-10-13 01:35:04.119147",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 284,
         "title": "Cat Girl Fashion Challenge",
         "slug": "cat-girl-fashion-challenge",
@@ -11961,20 +10686,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.389824",
-        "created_at": "2025-10-13T01:31:59.389826",
-        "updated_at": "2025-10-13T01:35:04.119860",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.389824",
+        "created_at": "2025-10-13 01:31:59.389826",
+        "updated_at": "2025-10-13 01:35:04.119860",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 285,
         "title": "State.io",
         "slug": "stateio",
@@ -12007,20 +10728,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.390736",
-        "created_at": "2025-10-13T01:31:59.390737",
-        "updated_at": "2025-10-13T01:35:04.120541",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.390736",
+        "created_at": "2025-10-13 01:31:59.390737",
+        "updated_at": "2025-10-13 01:35:04.120541",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 286,
         "title": "Eggy Car",
         "slug": "eggy-car",
@@ -12049,20 +10766,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.392043",
-        "created_at": "2025-10-13T01:31:59.392045",
-        "updated_at": "2025-10-13T01:35:04.121186",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.392043",
+        "created_at": "2025-10-13 01:31:59.392045",
+        "updated_at": "2025-10-13 01:35:04.121186",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 287,
         "title": "Tiny Fishing",
         "slug": "tiny-fishing",
@@ -12091,19 +10804,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.393017",
-        "created_at": "2025-10-13T01:31:59.393019",
-        "updated_at": "2025-10-13T01:35:04.122036",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.393017",
+        "created_at": "2025-10-13 01:31:59.393019",
+        "updated_at": "2025-10-13 01:35:04.122036",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 288,
         "title": "Stickman Ragdoll",
         "slug": "stickman-ragdoll",
@@ -12128,20 +10838,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.394548",
-        "created_at": "2025-10-13T01:31:59.394551",
-        "updated_at": "2025-10-13T01:35:04.122752",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.394548",
+        "created_at": "2025-10-13 01:31:59.394551",
+        "updated_at": "2025-10-13 01:35:04.122752",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 289,
         "title": "Nuts and Bolts Puzzle",
         "slug": "nuts-and-bolts-puzzle",
@@ -12171,19 +10877,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.395988",
-        "created_at": "2025-10-13T01:31:59.395990",
-        "updated_at": "2025-10-13T01:35:04.123466",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Puzzle"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.395988",
+        "created_at": "2025-10-13 01:31:59.395990",
+        "updated_at": "2025-10-13 01:35:04.123466",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 290,
         "title": "City Stunts",
         "slug": "city-stunts",
@@ -12212,21 +10915,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.397078",
-        "created_at": "2025-10-13T01:31:59.397079",
-        "updated_at": "2025-10-13T01:35:04.124179",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Strategy",
-            "Racing",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.397078",
+        "created_at": "2025-10-13 01:31:59.397079",
+        "updated_at": "2025-10-13 01:35:04.124179",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 291,
         "title": "Papa's Pancakeria",
         "slug": "papas-pancakeria",
@@ -12257,22 +10955,16 @@ const GAMES_DATA = {
             "Left Click": "Select items",
             "Drag & Drop": "Prepare orders"
         },
-        "release_date": "2025-10-13T01:31:59.399960",
-        "created_at": "2025-10-13T01:31:59.399962",
-        "updated_at": "2025-10-13T01:35:04.125005",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Arcade",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.399960",
+        "created_at": "2025-10-13 01:31:59.399962",
+        "updated_at": "2025-10-13 01:35:04.125005",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 292,
         "title": "Obby: Parkour Lava",
         "slug": "obby-parkour-lava",
@@ -12303,19 +10995,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.401469",
-        "created_at": "2025-10-13T01:31:59.401471",
-        "updated_at": "2025-10-13T01:35:04.125732",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.401469",
+        "created_at": "2025-10-13 01:31:59.401471",
+        "updated_at": "2025-10-13 01:35:04.125732",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 293,
         "title": "Police Stunt Cars",
         "slug": "police-stunt-cars",
@@ -12340,19 +11029,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.402774",
-        "created_at": "2025-10-13T01:31:59.402777",
-        "updated_at": "2025-10-13T01:35:04.126788",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.402774",
+        "created_at": "2025-10-13 01:31:59.402777",
+        "updated_at": "2025-10-13 01:35:04.126788",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 294,
         "title": "Hill Climb Racing Scratch",
         "slug": "hill-climb-racing-scratch",
@@ -12379,21 +11065,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.404209",
-        "created_at": "2025-10-13T01:31:59.404210",
-        "updated_at": "2025-10-13T01:35:04.127706",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Platform",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.404209",
+        "created_at": "2025-10-13 01:31:59.404210",
+        "updated_at": "2025-10-13 01:35:04.127706",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 295,
         "title": "Craftmine",
         "slug": "craftmine",
@@ -12423,21 +11104,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.405274",
-        "created_at": "2025-10-13T01:31:59.405276",
-        "updated_at": "2025-10-13T01:35:04.128470",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "RPG",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.405274",
+        "created_at": "2025-10-13 01:31:59.405276",
+        "updated_at": "2025-10-13 01:35:04.128470",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 296,
         "title": "Deer Hunter",
         "slug": "deer-hunter",
@@ -12462,19 +11138,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.406529",
-        "created_at": "2025-10-13T01:31:59.406530",
-        "updated_at": "2025-10-13T01:35:04.129401",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.406529",
+        "created_at": "2025-10-13 01:31:59.406530",
+        "updated_at": "2025-10-13 01:35:04.129401",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 297,
         "title": "Taxi Simulator",
         "slug": "taxi-simulator",
@@ -12506,22 +11179,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.407558",
-        "created_at": "2025-10-13T01:31:59.407559",
-        "updated_at": "2025-10-13T01:35:04.130097",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Strategy",
-            "Racing",
-            "Simulation",
-            "Rhythm"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.407558",
+        "created_at": "2025-10-13 01:31:59.407559",
+        "updated_at": "2025-10-13 01:35:04.130097",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 298,
         "title": "World Guesser",
         "slug": "world-guesser",
@@ -12546,19 +11213,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.408490",
-        "created_at": "2025-10-13T01:31:59.408492",
-        "updated_at": "2025-10-13T01:35:04.130726",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Educational"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.408490",
+        "created_at": "2025-10-13 01:31:59.408492",
+        "updated_at": "2025-10-13 01:35:04.130726",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 299,
         "title": "LOL Surprise Style Studio",
         "slug": "lol-surprise-style-studio",
@@ -12591,21 +11255,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.409460",
-        "created_at": "2025-10-13T01:31:59.409462",
-        "updated_at": "2025-10-13T01:35:04.131345",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "2D",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.409460",
+        "created_at": "2025-10-13 01:31:59.409462",
+        "updated_at": "2025-10-13 01:35:04.131345",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 300,
         "title": "Cars Simulator",
         "slug": "cars-simulator",
@@ -12634,20 +11293,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.412241",
-        "created_at": "2025-10-13T01:31:59.412243",
-        "updated_at": "2025-10-13T01:35:04.131963",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.412241",
+        "created_at": "2025-10-13 01:31:59.412243",
+        "updated_at": "2025-10-13 01:35:04.131963",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 301,
         "title": "Blocky Combat Swat",
         "slug": "blocky-combat-swat",
@@ -12676,22 +11331,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.413673",
-        "created_at": "2025-10-13T01:31:59.413674",
-        "updated_at": "2025-10-13T01:35:04.132661",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Puzzle",
-            "Arcade",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.413673",
+        "created_at": "2025-10-13 01:31:59.413674",
+        "updated_at": "2025-10-13 01:35:04.132661",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 302,
         "title": "GT Cars City Racing",
         "slug": "gt-cars-city-racing",
@@ -12721,23 +11370,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.414638",
-        "created_at": "2025-10-13T01:31:59.414639",
-        "updated_at": "2025-10-13T01:35:04.134841",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Racing",
-            "Simulation",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.414638",
+        "created_at": "2025-10-13 01:31:59.414639",
+        "updated_at": "2025-10-13 01:35:04.134841",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 303,
         "title": "Princess Wedding",
         "slug": "princess-wedding",
@@ -12766,19 +11408,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.415479",
-        "created_at": "2025-10-13T01:31:59.415480",
-        "updated_at": "2025-10-13T01:35:04.135775",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.415479",
+        "created_at": "2025-10-13 01:31:59.415480",
+        "updated_at": "2025-10-13 01:35:04.135775",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 304,
         "title": "Organize It",
         "slug": "organize-it",
@@ -12808,20 +11447,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.416297",
-        "created_at": "2025-10-13T01:31:59.416298",
-        "updated_at": "2025-10-13T01:35:04.136482",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Puzzle"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.416297",
+        "created_at": "2025-10-13 01:31:59.416298",
+        "updated_at": "2025-10-13 01:35:04.136482",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 305,
         "title": "Basketball King",
         "slug": "basketball-king",
@@ -12846,22 +11481,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.417339",
-        "created_at": "2025-10-13T01:31:59.417340",
-        "updated_at": "2025-10-13T01:35:04.137166",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Puzzle",
-            "Sports",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.417339",
+        "created_at": "2025-10-13 01:31:59.417340",
+        "updated_at": "2025-10-13 01:35:04.137166",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 306,
         "title": "Julie Beauty Salon",
         "slug": "julie-beauty-salon",
@@ -12886,20 +11515,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.418887",
-        "created_at": "2025-10-13T01:31:59.418890",
-        "updated_at": "2025-10-13T01:35:04.137966",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.418887",
+        "created_at": "2025-10-13 01:31:59.418890",
+        "updated_at": "2025-10-13 01:35:04.137966",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 307,
         "title": "Tank War Simulator",
         "slug": "tank-war-simulator",
@@ -12929,21 +11554,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.421846",
-        "created_at": "2025-10-13T01:31:59.421847",
-        "updated_at": "2025-10-13T01:35:04.138770",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Simulation",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.421846",
+        "created_at": "2025-10-13 01:31:59.421847",
+        "updated_at": "2025-10-13 01:35:04.138770",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 308,
         "title": "City Car Simulator",
         "slug": "city-car-simulator",
@@ -12973,23 +11593,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.422720",
-        "created_at": "2025-10-13T01:31:59.422721",
-        "updated_at": "2025-10-13T01:35:04.139524",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "Racing",
-            "Simulation",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.422720",
+        "created_at": "2025-10-13 01:31:59.422721",
+        "updated_at": "2025-10-13 01:35:04.139524",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 309,
         "title": "Obby: Draw and Jump",
         "slug": "obby-draw-and-jump",
@@ -13019,20 +11632,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.424092",
-        "created_at": "2025-10-13T01:31:59.424093",
-        "updated_at": "2025-10-13T01:35:04.140266",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.424092",
+        "created_at": "2025-10-13 01:31:59.424093",
+        "updated_at": "2025-10-13 01:35:04.140266",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 310,
         "title": "Only Up Parkour",
         "slug": "only-up-parkour",
@@ -13066,21 +11675,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.425308",
-        "created_at": "2025-10-13T01:31:59.425310",
-        "updated_at": "2025-10-13T01:35:04.141044",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "RPG",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.425308",
+        "created_at": "2025-10-13 01:31:59.425310",
+        "updated_at": "2025-10-13 01:35:04.141044",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 311,
         "title": "Army Combat",
         "slug": "army-combat",
@@ -13109,19 +11713,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.426321",
-        "created_at": "2025-10-13T01:31:59.426323",
-        "updated_at": "2025-10-13T01:35:04.141861",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.426321",
+        "created_at": "2025-10-13 01:31:59.426323",
+        "updated_at": "2025-10-13 01:35:04.141861",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 312,
         "title": "Tap Tap Shots",
         "slug": "tap-tap-shots",
@@ -13146,20 +11747,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.427266",
-        "created_at": "2025-10-13T01:31:59.427268",
-        "updated_at": "2025-10-13T01:35:04.142699",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Sports",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.427266",
+        "created_at": "2025-10-13 01:31:59.427268",
+        "updated_at": "2025-10-13 01:35:04.142699",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 313,
         "title": "Fireboy and Watergirl 5: Elements",
         "slug": "fireboy-and-watergirl-5-elements",
@@ -13189,20 +11786,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.428240",
-        "created_at": "2025-10-13T01:31:59.428241",
-        "updated_at": "2025-10-13T01:35:04.143444",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.428240",
+        "created_at": "2025-10-13 01:31:59.428241",
+        "updated_at": "2025-10-13 01:35:04.143444",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 314,
         "title": "Rome Simulator",
         "slug": "rome-simulator",
@@ -13235,21 +11828,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.429018",
-        "created_at": "2025-10-13T01:31:59.429019",
-        "updated_at": "2025-10-13T01:35:04.144354",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Simulation",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.429018",
+        "created_at": "2025-10-13 01:31:59.429019",
+        "updated_at": "2025-10-13 01:35:04.144354",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 315,
         "title": "BFFs Black Friday Collection",
         "slug": "bffs-black-friday-collection",
@@ -13279,20 +11867,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.429809",
-        "created_at": "2025-10-13T01:31:59.429810",
-        "updated_at": "2025-10-13T01:35:04.145130",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.429809",
+        "created_at": "2025-10-13 01:31:59.429810",
+        "updated_at": "2025-10-13 01:35:04.145130",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 316,
         "title": "Elite Racing",
         "slug": "elite-racing",
@@ -13320,20 +11904,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.430599",
-        "created_at": "2025-10-13T01:31:59.430599",
-        "updated_at": "2025-10-13T01:35:04.145816",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.430599",
+        "created_at": "2025-10-13 01:31:59.430599",
+        "updated_at": "2025-10-13 01:35:04.145816",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 317,
         "title": "Skibidi Toilet Shooting",
         "slug": "skibidi-toilet-shooting",
@@ -13361,23 +11941,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.431390",
-        "created_at": "2025-10-13T01:31:59.431391",
-        "updated_at": "2025-10-13T01:35:04.146515",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "Simulation",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.431390",
+        "created_at": "2025-10-13 01:31:59.431391",
+        "updated_at": "2025-10-13 01:35:04.146515",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 318,
         "title": "Idle Town Billionaire",
         "slug": "idle-town-billionaire",
@@ -13411,21 +11984,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.432161",
-        "created_at": "2025-10-13T01:31:59.432162",
-        "updated_at": "2025-10-13T01:35:04.147155",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Clicker",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.432161",
+        "created_at": "2025-10-13 01:31:59.432162",
+        "updated_at": "2025-10-13 01:35:04.147155",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 319,
         "title": "Fortnite Z",
         "slug": "fortnite-z",
@@ -13450,19 +12018,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.433046",
-        "created_at": "2025-10-13T01:31:59.433047",
-        "updated_at": "2025-10-13T01:35:04.147755",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.433046",
+        "created_at": "2025-10-13 01:31:59.433047",
+        "updated_at": "2025-10-13 01:35:04.147755",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 320,
         "title": "Super Hero Driving School",
         "slug": "super-hero-driving-school",
@@ -13492,21 +12057,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.434171",
-        "created_at": "2025-10-13T01:31:59.434174",
-        "updated_at": "2025-10-13T01:35:04.148349",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Multiplayer",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.434171",
+        "created_at": "2025-10-13 01:31:59.434174",
+        "updated_at": "2025-10-13 01:35:04.148349",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 321,
         "title": "ATV Highway Traffic",
         "slug": "atv-highway-traffic",
@@ -13538,19 +12098,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.435422",
-        "created_at": "2025-10-13T01:31:59.435425",
-        "updated_at": "2025-10-13T01:35:04.149047",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.435422",
+        "created_at": "2025-10-13 01:31:59.435425",
+        "updated_at": "2025-10-13 01:35:04.149047",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 322,
         "title": "StabFish io 2",
         "slug": "stabfish-io-2",
@@ -13581,20 +12138,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.436569",
-        "created_at": "2025-10-13T01:31:59.436571",
-        "updated_at": "2025-10-13T01:35:04.149685",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.436569",
+        "created_at": "2025-10-13 01:31:59.436571",
+        "updated_at": "2025-10-13 01:35:04.149685",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 323,
         "title": "Supercars Drift",
         "slug": "supercars-drift",
@@ -13626,20 +12179,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.437540",
-        "created_at": "2025-10-13T01:31:59.437541",
-        "updated_at": "2025-10-13T01:35:04.150397",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Sports"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.437540",
+        "created_at": "2025-10-13 01:31:59.437541",
+        "updated_at": "2025-10-13 01:35:04.150397",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 324,
         "title": "Mech Shooter",
         "slug": "mech-shooter",
@@ -13668,19 +12217,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.440430",
-        "created_at": "2025-10-13T01:31:59.440431",
-        "updated_at": "2025-10-13T01:35:04.151430",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.440430",
+        "created_at": "2025-10-13 01:31:59.440431",
+        "updated_at": "2025-10-13 01:35:04.151430",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 325,
         "title": "Highway Racer 2",
         "slug": "highway-racer-2",
@@ -13710,20 +12256,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.441657",
-        "created_at": "2025-10-13T01:31:59.441658",
-        "updated_at": "2025-10-13T01:35:04.152360",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.441657",
+        "created_at": "2025-10-13 01:31:59.441658",
+        "updated_at": "2025-10-13 01:35:04.152360",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 326,
         "title": "Crazy Cattle 3D",
         "slug": "crazy-cattle-3d",
@@ -13753,21 +12295,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.443612",
-        "created_at": "2025-10-13T01:31:59.443616",
-        "updated_at": "2025-10-13T01:35:04.153099",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Multiplayer",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.443612",
+        "created_at": "2025-10-13 01:31:59.443616",
+        "updated_at": "2025-10-13 01:35:04.153099",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 327,
         "title": "Space Waves",
         "slug": "space-waves",
@@ -13792,20 +12329,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.444748",
-        "created_at": "2025-10-13T01:31:59.444751",
-        "updated_at": "2025-10-13T01:35:04.153738",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.444748",
+        "created_at": "2025-10-13 01:31:59.444751",
+        "updated_at": "2025-10-13 01:35:04.153738",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 328,
         "title": "Burnout Racers",
         "slug": "burnout-racers",
@@ -13834,20 +12367,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.445762",
-        "created_at": "2025-10-13T01:31:59.445763",
-        "updated_at": "2025-10-13T01:35:04.154322",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.445762",
+        "created_at": "2025-10-13 01:31:59.445763",
+        "updated_at": "2025-10-13 01:35:04.154322",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 329,
         "title": "Stunt Simulator 2",
         "slug": "stunt-simulator-2",
@@ -13880,21 +12409,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.446973",
-        "created_at": "2025-10-13T01:31:59.446974",
-        "updated_at": "2025-10-13T01:35:04.154941",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Simulation",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.446973",
+        "created_at": "2025-10-13 01:31:59.446974",
+        "updated_at": "2025-10-13 01:35:04.154941",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 330,
         "title": "Football Soccer World Cup",
         "slug": "football-soccer-world-cup",
@@ -13923,19 +12447,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.448427",
-        "created_at": "2025-10-13T01:31:59.448428",
-        "updated_at": "2025-10-13T01:35:04.155530",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Sports"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.448427",
+        "created_at": "2025-10-13 01:31:59.448428",
+        "updated_at": "2025-10-13 01:35:04.155530",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 331,
         "title": "Super Mini Racing",
         "slug": "super-mini-racing",
@@ -13966,20 +12487,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.450993",
-        "created_at": "2025-10-13T01:31:59.450994",
-        "updated_at": "2025-10-13T01:35:04.156123",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.450993",
+        "created_at": "2025-10-13 01:31:59.450994",
+        "updated_at": "2025-10-13 01:35:04.156123",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 332,
         "title": "Julio Police Cars",
         "slug": "julio-police-cars",
@@ -14008,20 +12525,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.452127",
-        "created_at": "2025-10-13T01:31:59.452128",
-        "updated_at": "2025-10-13T01:35:04.156700",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.452127",
+        "created_at": "2025-10-13 01:31:59.452128",
+        "updated_at": "2025-10-13 01:35:04.156700",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 333,
         "title": "Run",
         "slug": "run",
@@ -14053,21 +12566,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.453382",
-        "created_at": "2025-10-13T01:31:59.453385",
-        "updated_at": "2025-10-13T01:35:04.157329",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.453382",
+        "created_at": "2025-10-13 01:31:59.453385",
+        "updated_at": "2025-10-13 01:35:04.157329",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 334,
         "title": "Geometry Jump",
         "slug": "geometry-jump",
@@ -14100,19 +12608,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.454261",
-        "created_at": "2025-10-13T01:31:59.454263",
-        "updated_at": "2025-10-13T01:35:04.157922",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.454261",
+        "created_at": "2025-10-13 01:31:59.454263",
+        "updated_at": "2025-10-13 01:35:04.157922",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 335,
         "title": "Airplane Racer",
         "slug": "airplane-racer",
@@ -14142,20 +12647,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.455092",
-        "created_at": "2025-10-13T01:31:59.455093",
-        "updated_at": "2025-10-13T01:35:04.158632",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Arcade"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.455092",
+        "created_at": "2025-10-13 01:31:59.455093",
+        "updated_at": "2025-10-13 01:35:04.158632",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 336,
         "title": "Subway Clash 2",
         "slug": "subway-clash-2",
@@ -14186,20 +12687,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.456051",
-        "created_at": "2025-10-13T01:31:59.456052",
-        "updated_at": "2025-10-13T01:35:04.159441",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.456051",
+        "created_at": "2025-10-13 01:31:59.456052",
+        "updated_at": "2025-10-13 01:35:04.159441",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 337,
         "title": "State io Wars",
         "slug": "state-io-wars",
@@ -14230,22 +12727,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.457114",
-        "created_at": "2025-10-13T01:31:59.457115",
-        "updated_at": "2025-10-13T01:35:04.160246",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "IO Game",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.457114",
+        "created_at": "2025-10-13 01:31:59.457115",
+        "updated_at": "2025-10-13 01:35:04.160246",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 338,
         "title": "Stunt Simulator Multiplayer",
         "slug": "stunt-simulator-multiplayer",
@@ -14279,21 +12770,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.457909",
-        "created_at": "2025-10-13T01:31:59.457910",
-        "updated_at": "2025-10-13T01:35:04.160919",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Simulation",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.457909",
+        "created_at": "2025-10-13 01:31:59.457910",
+        "updated_at": "2025-10-13 01:35:04.160919",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 339,
         "title": "Fireboy and Watergirl 6: Fairy Tales",
         "slug": "fireboy-and-watergirl-6-fairy-tales",
@@ -14323,23 +12809,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.458810",
-        "created_at": "2025-10-13T01:31:59.458811",
-        "updated_at": "2025-10-13T01:35:04.161522",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Arcade",
-            "Platform",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.458810",
+        "created_at": "2025-10-13 01:31:59.458811",
+        "updated_at": "2025-10-13 01:35:04.161522",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 340,
         "title": "Boxing Stars",
         "slug": "boxing-stars",
@@ -14364,19 +12843,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.461133",
-        "created_at": "2025-10-13T01:31:59.461136",
-        "updated_at": "2025-10-13T01:35:04.162103",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.461133",
+        "created_at": "2025-10-13 01:31:59.461136",
+        "updated_at": "2025-10-13 01:35:04.162103",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 341,
         "title": "Crazy Car Arena",
         "slug": "crazy-car-arena",
@@ -14405,20 +12881,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.462441",
-        "created_at": "2025-10-13T01:31:59.462442",
-        "updated_at": "2025-10-13T01:35:04.163014",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.462441",
+        "created_at": "2025-10-13 01:31:59.462442",
+        "updated_at": "2025-10-13 01:35:04.163014",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 342,
         "title": "8 Ball Pool Billiard",
         "slug": "8-ball-pool-billiard",
@@ -14447,19 +12919,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.463341",
-        "created_at": "2025-10-13T01:31:59.463342",
-        "updated_at": "2025-10-13T01:35:04.163614",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.463341",
+        "created_at": "2025-10-13 01:31:59.463342",
+        "updated_at": "2025-10-13 01:35:04.163614",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 343,
         "title": "Survival Island",
         "slug": "survival-island",
@@ -14489,19 +12958,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.464409",
-        "created_at": "2025-10-13T01:31:59.464411",
-        "updated_at": "2025-10-13T01:35:04.164189",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.464409",
+        "created_at": "2025-10-13 01:31:59.464411",
+        "updated_at": "2025-10-13 01:35:04.164189",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 344,
         "title": "Cake Match Puzzle",
         "slug": "cake-match-puzzle",
@@ -14531,20 +12997,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.465746",
-        "created_at": "2025-10-13T01:31:59.465747",
-        "updated_at": "2025-10-13T01:35:04.164839",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Puzzle",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.465746",
+        "created_at": "2025-10-13 01:31:59.465747",
+        "updated_at": "2025-10-13 01:35:04.164839",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 345,
         "title": "Bus Subway Runner",
         "slug": "bus-subway-runner",
@@ -14577,19 +13039,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.466537",
-        "created_at": "2025-10-13T01:31:59.466538",
-        "updated_at": "2025-10-13T01:35:04.165451",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.466537",
+        "created_at": "2025-10-13 01:31:59.466538",
+        "updated_at": "2025-10-13 01:35:04.165451",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 346,
         "title": "Frozen Sisters Dream Wedding",
         "slug": "frozen-sisters-dream-wedding",
@@ -14614,20 +13073,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.469390",
-        "created_at": "2025-10-13T01:31:59.469392",
-        "updated_at": "2025-10-13T01:35:04.166025",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.469390",
+        "created_at": "2025-10-13 01:31:59.469392",
+        "updated_at": "2025-10-13 01:35:04.166025",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 347,
         "title": "Secret Sniper Agent",
         "slug": "secret-sniper-agent",
@@ -14652,20 +13107,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.470358",
-        "created_at": "2025-10-13T01:31:59.470360",
-        "updated_at": "2025-10-13T01:35:04.166696",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.470358",
+        "created_at": "2025-10-13 01:31:59.470360",
+        "updated_at": "2025-10-13 01:35:04.166696",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 348,
         "title": "Moto X3M Spooky Land",
         "slug": "moto-x3m-spooky-land",
@@ -14690,21 +13141,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.471350",
-        "created_at": "2025-10-13T01:31:59.471351",
-        "updated_at": "2025-10-13T01:35:04.167473",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Horror",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.471350",
+        "created_at": "2025-10-13 01:31:59.471351",
+        "updated_at": "2025-10-13 01:35:04.167473",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 349,
         "title": "Summer Aesthetics",
         "slug": "summer-aesthetics",
@@ -14733,20 +13179,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.472248",
-        "created_at": "2025-10-13T01:31:59.472248",
-        "updated_at": "2025-10-13T01:35:04.168493",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.472248",
+        "created_at": "2025-10-13 01:31:59.472248",
+        "updated_at": "2025-10-13 01:35:04.168493",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 350,
         "title": "Fireboy and Watergirl 4: Crystal Temple",
         "slug": "fireboy-and-watergirl-4-crystal-temple",
@@ -14776,20 +13218,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.473044",
-        "created_at": "2025-10-13T01:31:59.473045",
-        "updated_at": "2025-10-13T01:35:04.169291",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.473044",
+        "created_at": "2025-10-13 01:31:59.473045",
+        "updated_at": "2025-10-13 01:35:04.169291",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 351,
         "title": "Shopping Mania",
         "slug": "shopping-mania",
@@ -14818,19 +13256,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.474252",
-        "created_at": "2025-10-13T01:31:59.474253",
-        "updated_at": "2025-10-13T01:35:04.169944",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.474252",
+        "created_at": "2025-10-13 01:31:59.474253",
+        "updated_at": "2025-10-13 01:35:04.169944",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 352,
         "title": "Alien Sky Invasion",
         "slug": "alien-sky-invasion",
@@ -14863,20 +13298,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.475652",
-        "created_at": "2025-10-13T01:31:59.475654",
-        "updated_at": "2025-10-13T01:35:04.170535",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "IO Game",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.475652",
+        "created_at": "2025-10-13 01:31:59.475654",
+        "updated_at": "2025-10-13 01:35:04.170535",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 353,
         "title": "Sprunki Warm Like Fire",
         "slug": "sprunki-warm-like-fire",
@@ -14906,23 +13337,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.476908",
-        "created_at": "2025-10-13T01:31:59.476910",
-        "updated_at": "2025-10-13T01:35:04.171130",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Platform",
-            "RPG",
-            "Rhythm",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.476908",
+        "created_at": "2025-10-13 01:31:59.476910",
+        "updated_at": "2025-10-13 01:35:04.171130",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 354,
         "title": "2 Player Crazy Racer",
         "slug": "2-player-crazy-racer",
@@ -14953,20 +13377,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.478082",
-        "created_at": "2025-10-13T01:31:59.478084",
-        "updated_at": "2025-10-13T01:35:04.171708",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.478082",
+        "created_at": "2025-10-13 01:31:59.478084",
+        "updated_at": "2025-10-13 01:35:04.171708",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 355,
         "title": "Coach Bus Drive Simulator",
         "slug": "coach-bus-drive-simulator",
@@ -14998,20 +13418,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.479449",
-        "created_at": "2025-10-13T01:31:59.479451",
-        "updated_at": "2025-10-13T01:35:04.172370",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.479449",
+        "created_at": "2025-10-13 01:31:59.479451",
+        "updated_at": "2025-10-13 01:35:04.172370",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 356,
         "title": "Rainbow Obby Parkour",
         "slug": "rainbow-obby-parkour",
@@ -15042,23 +13458,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.480513",
-        "created_at": "2025-10-13T01:31:59.480515",
-        "updated_at": "2025-10-13T01:35:04.172956",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Arcade",
-            "Platform",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.480513",
+        "created_at": "2025-10-13 01:31:59.480515",
+        "updated_at": "2025-10-13 01:35:04.172956",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 357,
         "title": "Mergest Kingdom",
         "slug": "mergest-kingdom",
@@ -15090,19 +13499,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.481786",
-        "created_at": "2025-10-13T01:31:59.481787",
-        "updated_at": "2025-10-13T01:35:04.173535",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.481786",
+        "created_at": "2025-10-13 01:31:59.481787",
+        "updated_at": "2025-10-13 01:35:04.173535",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 358,
         "title": "Penalty Kick",
         "slug": "penalty-kick",
@@ -15127,19 +13533,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.482693",
-        "created_at": "2025-10-13T01:31:59.482694",
-        "updated_at": "2025-10-13T01:35:04.174150",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.482693",
+        "created_at": "2025-10-13 01:31:59.482694",
+        "updated_at": "2025-10-13 01:35:04.174150",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 359,
         "title": "Stunt Simulator",
         "slug": "stunt-simulator",
@@ -15169,20 +13572,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.483813",
-        "created_at": "2025-10-13T01:31:59.483815",
-        "updated_at": "2025-10-13T01:35:04.174887",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.483813",
+        "created_at": "2025-10-13 01:31:59.483815",
+        "updated_at": "2025-10-13 01:35:04.174887",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 360,
         "title": "Five Nights at Poppy",
         "slug": "five-nights-at-poppy",
@@ -15211,20 +13610,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.485196",
-        "created_at": "2025-10-13T01:31:59.485197",
-        "updated_at": "2025-10-13T01:35:04.175645",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.485196",
+        "created_at": "2025-10-13 01:31:59.485197",
+        "updated_at": "2025-10-13 01:35:04.175645",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 361,
         "title": "Nova Clicker",
         "slug": "nova-clicker",
@@ -15253,23 +13648,16 @@ const GAMES_DATA = {
             "Mouse": "Click to play",
             "Left Click": "Main action"
         },
-        "release_date": "2025-10-13T01:31:59.486335",
-        "created_at": "2025-10-13T01:31:59.486338",
-        "updated_at": "2025-10-13T01:35:04.176376",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "RPG",
-            "Multiplayer",
-            "Clicker",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.486335",
+        "created_at": "2025-10-13 01:31:59.486338",
+        "updated_at": "2025-10-13 01:35:04.176376",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 362,
         "title": "Dragon Simulator Multiplayer",
         "slug": "dragon-simulator-multiplayer",
@@ -15300,20 +13688,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.487202",
-        "created_at": "2025-10-13T01:31:59.487203",
-        "updated_at": "2025-10-13T01:35:04.176979",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Simulation",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.487202",
+        "created_at": "2025-10-13 01:31:59.487203",
+        "updated_at": "2025-10-13 01:35:04.176979",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 363,
         "title": "Ultimate Moto",
         "slug": "ultimate-moto",
@@ -15338,21 +13722,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.487988",
-        "created_at": "2025-10-13T01:31:59.487989",
-        "updated_at": "2025-10-13T01:35:04.177572",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.487988",
+        "created_at": "2025-10-13 01:31:59.487989",
+        "updated_at": "2025-10-13 01:35:04.177572",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 364,
         "title": "Jelly Car Simulator",
         "slug": "jelly-car-simulator",
@@ -15381,20 +13760,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.488774",
-        "created_at": "2025-10-13T01:31:59.488775",
-        "updated_at": "2025-10-13T01:35:04.178141",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.488774",
+        "created_at": "2025-10-13 01:31:59.488775",
+        "updated_at": "2025-10-13 01:35:04.178141",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 365,
         "title": "Jul Moto Racing",
         "slug": "jul-moto-racing",
@@ -15423,22 +13798,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.494921",
-        "created_at": "2025-10-13T01:31:59.494925",
-        "updated_at": "2025-10-13T01:35:04.178712",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Racing",
-            "Simulation",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.494921",
+        "created_at": "2025-10-13 01:31:59.494925",
+        "updated_at": "2025-10-13 01:35:04.178712",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 366,
         "title": "Wordle",
         "slug": "wordle",
@@ -15463,19 +13832,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.496857",
-        "created_at": "2025-10-13T01:31:59.496859",
-        "updated_at": "2025-10-13T01:35:04.179280",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.496857",
+        "created_at": "2025-10-13 01:31:59.496859",
+        "updated_at": "2025-10-13 01:35:04.179280",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 367,
         "title": "Papa's Pizzeria",
         "slug": "papas-pizzeria",
@@ -15506,19 +13872,16 @@ const GAMES_DATA = {
             "Left Click": "Select items",
             "Drag & Drop": "Prepare orders"
         },
-        "release_date": "2025-10-13T01:31:59.497889",
-        "created_at": "2025-10-13T01:31:59.497890",
-        "updated_at": "2025-10-13T01:35:04.179851",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.497889",
+        "created_at": "2025-10-13 01:31:59.497890",
+        "updated_at": "2025-10-13 01:35:04.179851",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 368,
         "title": "Basketball Slam Dunk",
         "slug": "basketball-slam-dunk",
@@ -15548,21 +13911,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.499000",
-        "created_at": "2025-10-13T01:31:59.499002",
-        "updated_at": "2025-10-13T01:35:04.180545",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Sports",
-            "Arcade"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.499000",
+        "created_at": "2025-10-13 01:31:59.499002",
+        "updated_at": "2025-10-13 01:35:04.180545",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 369,
         "title": "Police Evolution Idle",
         "slug": "police-evolution-idle",
@@ -15597,23 +13955,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.500308",
-        "created_at": "2025-10-13T01:31:59.500310",
-        "updated_at": "2025-10-13T01:35:04.181147",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Simulation",
-            "Clicker",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.500308",
+        "created_at": "2025-10-13 01:31:59.500310",
+        "updated_at": "2025-10-13 01:35:04.181147",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 370,
         "title": "School Bus",
         "slug": "school-bus",
@@ -15638,19 +13989,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.501684",
-        "created_at": "2025-10-13T01:31:59.501686",
-        "updated_at": "2025-10-13T01:35:04.181719",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.501684",
+        "created_at": "2025-10-13 01:31:59.501686",
+        "updated_at": "2025-10-13 01:35:04.181719",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 371,
         "title": "Fire and Water",
         "slug": "fire-and-water",
@@ -15675,19 +14023,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.503075",
-        "created_at": "2025-10-13T01:31:59.503077",
-        "updated_at": "2025-10-13T01:35:04.182291",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.503075",
+        "created_at": "2025-10-13 01:31:59.503077",
+        "updated_at": "2025-10-13 01:35:04.182291",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 372,
         "title": "Urban Sniper",
         "slug": "urban-sniper",
@@ -15717,21 +14062,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.504132",
-        "created_at": "2025-10-13T01:31:59.504134",
-        "updated_at": "2025-10-13T01:35:04.182860",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Multiplayer",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.504132",
+        "created_at": "2025-10-13 01:31:59.504134",
+        "updated_at": "2025-10-13 01:35:04.182860",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 373,
         "title": "Subway Idle 3D",
         "slug": "subway-idle-3d",
@@ -15762,20 +14102,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.505187",
-        "created_at": "2025-10-13T01:31:59.505189",
-        "updated_at": "2025-10-13T01:35:04.183541",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Clicker",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.505187",
+        "created_at": "2025-10-13 01:31:59.505189",
+        "updated_at": "2025-10-13 01:35:04.183541",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 374,
         "title": "Snake Football",
         "slug": "snake-football",
@@ -15800,20 +14136,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.506096",
-        "created_at": "2025-10-13T01:31:59.506097",
-        "updated_at": "2025-10-13T01:35:04.184400",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Sports",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.506096",
+        "created_at": "2025-10-13 01:31:59.506097",
+        "updated_at": "2025-10-13 01:35:04.184400",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 375,
         "title": "Tile Match",
         "slug": "tile-match",
@@ -15843,21 +14175,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.507066",
-        "created_at": "2025-10-13T01:31:59.507067",
-        "updated_at": "2025-10-13T01:35:04.185296",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Puzzle",
-            "Casual",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.507066",
+        "created_at": "2025-10-13 01:31:59.507067",
+        "updated_at": "2025-10-13 01:35:04.185296",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 376,
         "title": "Geometry Rash",
         "slug": "geometry-rash",
@@ -15887,23 +14214,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.507934",
-        "created_at": "2025-10-13T01:31:59.507935",
-        "updated_at": "2025-10-13T01:35:04.186029",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Platform",
-            "Rhythm",
-            "IO Game",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.507934",
+        "created_at": "2025-10-13 01:31:59.507935",
+        "updated_at": "2025-10-13 01:35:04.186029",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 377,
         "title": "Turbo Race 3D",
         "slug": "turbo-race-3d",
@@ -15933,23 +14253,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.508762",
-        "created_at": "2025-10-13T01:31:59.508763",
-        "updated_at": "2025-10-13T01:35:04.186645",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Racing",
-            "Simulation",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.508762",
+        "created_at": "2025-10-13 01:31:59.508763",
+        "updated_at": "2025-10-13 01:35:04.186645",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 378,
         "title": "Troll Level",
         "slug": "troll-level",
@@ -15978,20 +14291,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.509801",
-        "created_at": "2025-10-13T01:31:59.509803",
-        "updated_at": "2025-10-13T01:35:04.187312",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.509801",
+        "created_at": "2025-10-13 01:31:59.509803",
+        "updated_at": "2025-10-13 01:35:04.187312",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 379,
         "title": "Mr Racer",
         "slug": "mr-racer",
@@ -16022,22 +14331,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.510886",
-        "created_at": "2025-10-13T01:31:59.510888",
-        "updated_at": "2025-10-13T01:35:04.187932",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Simulation",
-            "Rhythm",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.510886",
+        "created_at": "2025-10-13 01:31:59.510888",
+        "updated_at": "2025-10-13 01:35:04.187932",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 380,
         "title": "Bloons Tower Defense 3",
         "slug": "bloons-tower-defense-3",
@@ -16066,19 +14369,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.511996",
-        "created_at": "2025-10-13T01:31:59.511998",
-        "updated_at": "2025-10-13T01:35:04.188510",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.511996",
+        "created_at": "2025-10-13 01:31:59.511998",
+        "updated_at": "2025-10-13 01:35:04.188510",
+        "category_name": "Strategy",
+        "category_obj": 4,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 381,
         "title": "Geometry Escape",
         "slug": "geometry-escape",
@@ -16107,19 +14407,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.512912",
-        "created_at": "2025-10-13T01:31:59.512913",
-        "updated_at": "2025-10-13T01:35:04.189089",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.512912",
+        "created_at": "2025-10-13 01:31:59.512913",
+        "updated_at": "2025-10-13 01:35:04.189089",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 382,
         "title": "Run Away 3",
         "slug": "run-away-3",
@@ -16153,20 +14450,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.513841",
-        "created_at": "2025-10-13T01:31:59.513842",
-        "updated_at": "2025-10-13T01:35:04.189665",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.513841",
+        "created_at": "2025-10-13 01:31:59.513842",
+        "updated_at": "2025-10-13 01:35:04.189665",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 383,
         "title": "Taxi Driver",
         "slug": "taxi-driver",
@@ -16195,19 +14488,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.514673",
-        "created_at": "2025-10-13T01:31:59.514674",
-        "updated_at": "2025-10-13T01:35:04.190231",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.514673",
+        "created_at": "2025-10-13 01:31:59.514674",
+        "updated_at": "2025-10-13 01:35:04.190231",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 384,
         "title": "City Bus Driver",
         "slug": "city-bus-driver",
@@ -16236,21 +14526,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.515494",
-        "created_at": "2025-10-13T01:31:59.515495",
-        "updated_at": "2025-10-13T01:35:04.190916",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Racing",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.515494",
+        "created_at": "2025-10-13 01:31:59.515495",
+        "updated_at": "2025-10-13 01:35:04.190916",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 385,
         "title": "SeaDragons.io",
         "slug": "seadragonsio",
@@ -16281,21 +14566,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.516287",
-        "created_at": "2025-10-13T01:31:59.516288",
-        "updated_at": "2025-10-13T01:35:04.191666",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "RPG",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.516287",
+        "created_at": "2025-10-13 01:31:59.516288",
+        "updated_at": "2025-10-13 01:35:04.191666",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 386,
         "title": "Tanks of the Galaxy",
         "slug": "tanks-of-the-galaxy",
@@ -16320,20 +14600,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.517092",
-        "created_at": "2025-10-13T01:31:59.517093",
-        "updated_at": "2025-10-13T01:35:04.192325",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.517092",
+        "created_at": "2025-10-13 01:31:59.517093",
+        "updated_at": "2025-10-13 01:35:04.192325",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 387,
         "title": "ForceZ.io",
         "slug": "forcezio",
@@ -16365,21 +14641,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.518167",
-        "created_at": "2025-10-13T01:31:59.518169",
-        "updated_at": "2025-10-13T01:35:04.193094",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.518167",
+        "created_at": "2025-10-13 01:31:59.518169",
+        "updated_at": "2025-10-13 01:35:04.193094",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 388,
         "title": "Wedding Planner",
         "slug": "wedding-planner",
@@ -16408,20 +14679,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.519556",
-        "created_at": "2025-10-13T01:31:59.519559",
-        "updated_at": "2025-10-13T01:35:04.193775",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.519556",
+        "created_at": "2025-10-13 01:31:59.519559",
+        "updated_at": "2025-10-13 01:35:04.193775",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 389,
         "title": "Papa's Hot Doggeria",
         "slug": "papas-hot-doggeria",
@@ -16452,19 +14719,16 @@ const GAMES_DATA = {
             "Left Click": "Select items",
             "Drag & Drop": "Prepare orders"
         },
-        "release_date": "2025-10-13T01:31:59.520515",
-        "created_at": "2025-10-13T01:31:59.520516",
-        "updated_at": "2025-10-13T01:35:04.194396",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.520515",
+        "created_at": "2025-10-13 01:31:59.520516",
+        "updated_at": "2025-10-13 01:35:04.194396",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 390,
         "title": "We Become What We Behold",
         "slug": "we-become-what-we-behold",
@@ -16489,19 +14753,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.521337",
-        "created_at": "2025-10-13T01:31:59.521338",
-        "updated_at": "2025-10-13T01:35:04.195030",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.521337",
+        "created_at": "2025-10-13 01:31:59.521338",
+        "updated_at": "2025-10-13 01:35:04.195030",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 391,
         "title": "Horror Granny",
         "slug": "horror-granny",
@@ -16526,19 +14787,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.522118",
-        "created_at": "2025-10-13T01:31:59.522119",
-        "updated_at": "2025-10-13T01:35:04.195643",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Horror"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.522118",
+        "created_at": "2025-10-13 01:31:59.522119",
+        "updated_at": "2025-10-13 01:35:04.195643",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 392,
         "title": "Charge It",
         "slug": "charge-it",
@@ -16565,19 +14823,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.524436",
-        "created_at": "2025-10-13T01:31:59.524437",
-        "updated_at": "2025-10-13T01:35:04.196212",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.524436",
+        "created_at": "2025-10-13 01:31:59.524437",
+        "updated_at": "2025-10-13 01:35:04.196212",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 393,
         "title": "Train Simulator",
         "slug": "train-simulator",
@@ -16606,20 +14861,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.525444",
-        "created_at": "2025-10-13T01:31:59.525446",
-        "updated_at": "2025-10-13T01:35:04.196796",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Simulation",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.525444",
+        "created_at": "2025-10-13 01:31:59.525446",
+        "updated_at": "2025-10-13 01:35:04.196796",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 394,
         "title": "Offroad Rally",
         "slug": "offroad-rally",
@@ -16650,20 +14901,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.526424",
-        "created_at": "2025-10-13T01:31:59.526426",
-        "updated_at": "2025-10-13T01:35:04.197453",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.526424",
+        "created_at": "2025-10-13 01:31:59.526426",
+        "updated_at": "2025-10-13 01:35:04.197453",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 395,
         "title": "Xtreme Paintball Wars",
         "slug": "xtreme-paintball-wars",
@@ -16692,20 +14939,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.527427",
-        "created_at": "2025-10-13T01:31:59.527428",
-        "updated_at": "2025-10-13T01:35:04.198041",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.527427",
+        "created_at": "2025-10-13 01:31:59.527428",
+        "updated_at": "2025-10-13 01:35:04.198041",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 396,
         "title": "Rebel Forces",
         "slug": "rebel-forces",
@@ -16732,20 +14975,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.528273",
-        "created_at": "2025-10-13T01:31:59.528274",
-        "updated_at": "2025-10-13T01:35:04.198609",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.528273",
+        "created_at": "2025-10-13 01:31:59.528274",
+        "updated_at": "2025-10-13 01:35:04.198609",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 397,
         "title": "Fancy Pants 3",
         "slug": "fancy-pants-3",
@@ -16774,21 +15013,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.529064",
-        "created_at": "2025-10-13T01:31:59.529065",
-        "updated_at": "2025-10-13T01:35:04.199238",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "RPG",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.529064",
+        "created_at": "2025-10-13 01:31:59.529065",
+        "updated_at": "2025-10-13 01:35:04.199238",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 398,
         "title": "Rally Champion",
         "slug": "rally-champion",
@@ -16822,20 +15056,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.529867",
-        "created_at": "2025-10-13T01:31:59.529868",
-        "updated_at": "2025-10-13T01:35:04.199852",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.529867",
+        "created_at": "2025-10-13 01:31:59.529868",
+        "updated_at": "2025-10-13 01:35:04.199852",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 399,
         "title": "Survival Karts",
         "slug": "survival-karts",
@@ -16867,21 +15097,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.530643",
-        "created_at": "2025-10-13T01:31:59.530644",
-        "updated_at": "2025-10-13T01:35:04.200673",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Racing",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.530643",
+        "created_at": "2025-10-13 01:31:59.530644",
+        "updated_at": "2025-10-13 01:35:04.200673",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 400,
         "title": "Tank Arena",
         "slug": "tank-arena",
@@ -16906,22 +15131,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.531440",
-        "created_at": "2025-10-13T01:31:59.531441",
-        "updated_at": "2025-10-13T01:35:04.201716",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Simulation",
-            "Multiplayer",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.531440",
+        "created_at": "2025-10-13 01:31:59.531441",
+        "updated_at": "2025-10-13 01:35:04.201716",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 401,
         "title": "Jet Ski Boat Race",
         "slug": "jet-ski-boat-race",
@@ -16946,19 +15165,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.532227",
-        "created_at": "2025-10-13T01:31:59.532228",
-        "updated_at": "2025-10-13T01:35:04.202465",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.532227",
+        "created_at": "2025-10-13 01:31:59.532228",
+        "updated_at": "2025-10-13 01:35:04.202465",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 402,
         "title": "Obby: Find Sprunki",
         "slug": "obby-find-sprunki",
@@ -16990,21 +15206,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.533003",
-        "created_at": "2025-10-13T01:31:59.533004",
-        "updated_at": "2025-10-13T01:35:04.203072",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Platform",
-            "RPG"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.533003",
+        "created_at": "2025-10-13 01:31:59.533004",
+        "updated_at": "2025-10-13 01:35:04.203072",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 403,
         "title": "Sword Play Ninja Slice Runner",
         "slug": "sword-play-ninja-slice-runner",
@@ -17037,20 +15248,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.533858",
-        "created_at": "2025-10-13T01:31:59.533860",
-        "updated_at": "2025-10-13T01:35:04.203678",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.533858",
+        "created_at": "2025-10-13 01:31:59.533860",
+        "updated_at": "2025-10-13 01:35:04.203678",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 404,
         "title": "Dragon City",
         "slug": "dragon-city",
@@ -17075,20 +15282,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.535099",
-        "created_at": "2025-10-13T01:31:59.535102",
-        "updated_at": "2025-10-13T01:35:04.204263",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.535099",
+        "created_at": "2025-10-13 01:31:59.535102",
+        "updated_at": "2025-10-13 01:35:04.204263",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 405,
         "title": "BFFs Retro Time Travel Fashion",
         "slug": "bffs-retro-time-travel-fashion",
@@ -17119,20 +15322,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.536739",
-        "created_at": "2025-10-13T01:31:59.536740",
-        "updated_at": "2025-10-13T01:35:04.204837",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Arcade",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.536739",
+        "created_at": "2025-10-13 01:31:59.536740",
+        "updated_at": "2025-10-13 01:35:04.204837",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 406,
         "title": "Dragon World",
         "slug": "dragon-world",
@@ -17157,19 +15356,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.537759",
-        "created_at": "2025-10-13T01:31:59.537760",
-        "updated_at": "2025-10-13T01:35:04.205410",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.537759",
+        "created_at": "2025-10-13 01:31:59.537760",
+        "updated_at": "2025-10-13 01:35:04.205410",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 407,
         "title": "Cute Snake io",
         "slug": "cute-snake-io",
@@ -17202,20 +15398,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.538644",
-        "created_at": "2025-10-13T01:31:59.538645",
-        "updated_at": "2025-10-13T01:35:04.206062",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.538644",
+        "created_at": "2025-10-13 01:31:59.538645",
+        "updated_at": "2025-10-13 01:35:04.206062",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 408,
         "title": "Doggo Clicker",
         "slug": "doggo-clicker",
@@ -17244,20 +15436,16 @@ const GAMES_DATA = {
             "Mouse": "Click to play",
             "Left Click": "Main action"
         },
-        "release_date": "2025-10-13T01:31:59.539466",
-        "created_at": "2025-10-13T01:31:59.539466",
-        "updated_at": "2025-10-13T01:35:04.206671",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.539466",
+        "created_at": "2025-10-13 01:31:59.539466",
+        "updated_at": "2025-10-13 01:35:04.206671",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 409,
         "title": "Battle Royale Simulator",
         "slug": "battle-royale-simulator",
@@ -17289,21 +15477,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.540294",
-        "created_at": "2025-10-13T01:31:59.540295",
-        "updated_at": "2025-10-13T01:35:04.207268",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Platform",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.540294",
+        "created_at": "2025-10-13 01:31:59.540295",
+        "updated_at": "2025-10-13 01:35:04.207268",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 410,
         "title": "Duck Life 4",
         "slug": "duck-life-4",
@@ -17330,22 +15513,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.541094",
-        "created_at": "2025-10-13T01:31:59.541095",
-        "updated_at": "2025-10-13T01:35:04.207966",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Arcade",
-            "Platform",
-            "Simulation",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.541094",
+        "created_at": "2025-10-13 01:31:59.541095",
+        "updated_at": "2025-10-13 01:35:04.207966",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 411,
         "title": "Crazy Karts",
         "slug": "crazy-karts",
@@ -17374,19 +15551,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.541866",
-        "created_at": "2025-10-13T01:31:59.541867",
-        "updated_at": "2025-10-13T01:35:04.208659",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.541866",
+        "created_at": "2025-10-13 01:31:59.541867",
+        "updated_at": "2025-10-13 01:35:04.208659",
+        "category_name": "Strategy",
+        "category_obj": 4,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 412,
         "title": "Tetris",
         "slug": "tetris",
@@ -17411,21 +15585,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.542826",
-        "created_at": "2025-10-13T01:31:59.542828",
-        "updated_at": "2025-10-13T01:35:04.209426",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.542826",
+        "created_at": "2025-10-13 01:31:59.542828",
+        "updated_at": "2025-10-13 01:35:04.209426",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 413,
         "title": "Realistic Zombie Survival Warfare",
         "slug": "realistic-zombie-survival-warfare",
@@ -17455,20 +15624,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.543944",
-        "created_at": "2025-10-13T01:31:59.543945",
-        "updated_at": "2025-10-13T01:35:04.210214",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.543944",
+        "created_at": "2025-10-13 01:31:59.543945",
+        "updated_at": "2025-10-13 01:35:04.210214",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 414,
         "title": "Winterella",
         "slug": "winterella",
@@ -17497,20 +15662,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.545002",
-        "created_at": "2025-10-13T01:31:59.545003",
-        "updated_at": "2025-10-13T01:35:04.210902",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "2D",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.545002",
+        "created_at": "2025-10-13 01:31:59.545003",
+        "updated_at": "2025-10-13 01:35:04.210902",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 415,
         "title": "Su Battle Royale",
         "slug": "su-battle-royale",
@@ -17535,20 +15696,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.547573",
-        "created_at": "2025-10-13T01:31:59.547574",
-        "updated_at": "2025-10-13T01:35:04.211680",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.547573",
+        "created_at": "2025-10-13 01:31:59.547574",
+        "updated_at": "2025-10-13 01:35:04.211680",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 416,
         "title": "Infiltrating the Airship",
         "slug": "infiltrating-the-airship",
@@ -17576,20 +15733,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.548443",
-        "created_at": "2025-10-13T01:31:59.548444",
-        "updated_at": "2025-10-13T01:35:04.212420",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.548443",
+        "created_at": "2025-10-13 01:31:59.548444",
+        "updated_at": "2025-10-13 01:35:04.212420",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 417,
         "title": "Sniper Elite",
         "slug": "sniper-elite",
@@ -17614,21 +15767,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.549279",
-        "created_at": "2025-10-13T01:31:59.549280",
-        "updated_at": "2025-10-13T01:35:04.213111",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "RPG",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.549279",
+        "created_at": "2025-10-13 01:31:59.549280",
+        "updated_at": "2025-10-13 01:35:04.213111",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 418,
         "title": "Fireboy and Watergirl 3: Ice Temple",
         "slug": "fireboy-and-watergirl-3-ice-temple",
@@ -17658,20 +15806,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.550384",
-        "created_at": "2025-10-13T01:31:59.550386",
-        "updated_at": "2025-10-13T01:35:04.213853",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.550384",
+        "created_at": "2025-10-13 01:31:59.550386",
+        "updated_at": "2025-10-13 01:35:04.213853",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 419,
         "title": "Kick the Alien",
         "slug": "kick-the-alien",
@@ -17696,20 +15840,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.551459",
-        "created_at": "2025-10-13T01:31:59.551462",
-        "updated_at": "2025-10-13T01:35:04.214474",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.551459",
+        "created_at": "2025-10-13 01:31:59.551462",
+        "updated_at": "2025-10-13 01:35:04.214474",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 420,
         "title": "Endless Siege",
         "slug": "endless-siege",
@@ -17734,20 +15874,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.552551",
-        "created_at": "2025-10-13T01:31:59.552552",
-        "updated_at": "2025-10-13T01:35:04.215073",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.552551",
+        "created_at": "2025-10-13 01:31:59.552552",
+        "updated_at": "2025-10-13 01:35:04.215073",
+        "category_name": "Strategy",
+        "category_obj": 4,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 421,
         "title": "Monster Girls Back to School",
         "slug": "monster-girls-back-to-school",
@@ -17772,19 +15908,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.553396",
-        "created_at": "2025-10-13T01:31:59.553397",
-        "updated_at": "2025-10-13T01:35:04.215674",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Horror"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.553396",
+        "created_at": "2025-10-13 01:31:59.553397",
+        "updated_at": "2025-10-13 01:35:04.215674",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 422,
         "title": "BFFs Summer Aesthetic",
         "slug": "bffs-summer-aesthetic",
@@ -17809,21 +15942,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.554211",
-        "created_at": "2025-10-13T01:31:59.554212",
-        "updated_at": "2025-10-13T01:35:04.216271",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "2D",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.554211",
+        "created_at": "2025-10-13 01:31:59.554212",
+        "updated_at": "2025-10-13 01:35:04.216271",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 423,
         "title": "Halloween Survival",
         "slug": "halloween-survival",
@@ -17855,19 +15983,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.555036",
-        "created_at": "2025-10-13T01:31:59.555037",
-        "updated_at": "2025-10-13T01:35:04.216876",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.555036",
+        "created_at": "2025-10-13 01:31:59.555037",
+        "updated_at": "2025-10-13 01:35:04.216876",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 424,
         "title": "Cat Doctor",
         "slug": "cat-doctor",
@@ -17896,20 +16021,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.555892",
-        "created_at": "2025-10-13T01:31:59.555894",
-        "updated_at": "2025-10-13T01:35:04.217931",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.555892",
+        "created_at": "2025-10-13 01:31:59.555894",
+        "updated_at": "2025-10-13 01:35:04.217931",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 425,
         "title": "Wedding Beauty Salon",
         "slug": "wedding-beauty-salon",
@@ -17934,20 +16055,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.556731",
-        "created_at": "2025-10-13T01:31:59.556732",
-        "updated_at": "2025-10-13T01:35:04.218805",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.556731",
+        "created_at": "2025-10-13 01:31:59.556732",
+        "updated_at": "2025-10-13 01:35:04.218805",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 426,
         "title": "Masked Shooters Assault",
         "slug": "masked-shooters-assault",
@@ -17977,20 +16094,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.557511",
-        "created_at": "2025-10-13T01:31:59.557512",
-        "updated_at": "2025-10-13T01:35:04.219485",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.557511",
+        "created_at": "2025-10-13 01:31:59.557512",
+        "updated_at": "2025-10-13 01:35:04.219485",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 427,
         "title": "Mine Clone",
         "slug": "mine-clone",
@@ -18021,23 +16134,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.558298",
-        "created_at": "2025-10-13T01:31:59.558299",
-        "updated_at": "2025-10-13T01:35:04.220225",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Strategy",
-            "Simulation",
-            "RPG",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.558298",
+        "created_at": "2025-10-13 01:31:59.558299",
+        "updated_at": "2025-10-13 01:35:04.220225",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 428,
         "title": "Home Makeover 2: Hidden Object",
         "slug": "home-makeover-2-hidden-object",
@@ -18067,19 +16173,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.559278",
-        "created_at": "2025-10-13T01:31:59.559280",
-        "updated_at": "2025-10-13T01:35:04.220983",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.559278",
+        "created_at": "2025-10-13 01:31:59.559280",
+        "updated_at": "2025-10-13 01:35:04.220983",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 429,
         "title": "Stick Guys Defense",
         "slug": "stick-guys-defense",
@@ -18109,20 +16212,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.560432",
-        "created_at": "2025-10-13T01:31:59.560434",
-        "updated_at": "2025-10-13T01:35:04.221596",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Strategy",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.560432",
+        "created_at": "2025-10-13 01:31:59.560434",
+        "updated_at": "2025-10-13 01:35:04.221596",
+        "category_name": "Strategy",
+        "category_obj": 4,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 430,
         "title": "War of Tanks Paper Note",
         "slug": "war-of-tanks-paper-note",
@@ -18147,20 +16246,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.561673",
-        "created_at": "2025-10-13T01:31:59.561675",
-        "updated_at": "2025-10-13T01:35:04.222196",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.561673",
+        "created_at": "2025-10-13 01:31:59.561675",
+        "updated_at": "2025-10-13 01:35:04.222196",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 431,
         "title": "Monster Truck Mountain Climb",
         "slug": "monster-truck-mountain-climb",
@@ -18185,20 +16280,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.562865",
-        "created_at": "2025-10-13T01:31:59.562867",
-        "updated_at": "2025-10-13T01:35:04.222787",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "Horror"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.562865",
+        "created_at": "2025-10-13 01:31:59.562867",
+        "updated_at": "2025-10-13 01:35:04.222787",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 432,
         "title": "Basket Champs",
         "slug": "basket-champs",
@@ -18223,21 +16314,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.563911",
-        "created_at": "2025-10-13T01:31:59.563912",
-        "updated_at": "2025-10-13T01:35:04.223529",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Sports",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.563911",
+        "created_at": "2025-10-13 01:31:59.563912",
+        "updated_at": "2025-10-13 01:35:04.223529",
+        "category_name": "Sports",
+        "category_obj": 6,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 433,
         "title": "Masked Forces Zombie Survival",
         "slug": "masked-forces-zombie-survival",
@@ -18267,21 +16353,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.564950",
-        "created_at": "2025-10-13T01:31:59.564952",
-        "updated_at": "2025-10-13T01:35:04.224219",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Platform",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.564950",
+        "created_at": "2025-10-13 01:31:59.564952",
+        "updated_at": "2025-10-13 01:35:04.224219",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 434,
         "title": "Epic Mine",
         "slug": "epic-mine",
@@ -18306,20 +16387,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.565946",
-        "created_at": "2025-10-13T01:31:59.565947",
-        "updated_at": "2025-10-13T01:35:04.224867",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.565946",
+        "created_at": "2025-10-13 01:31:59.565947",
+        "updated_at": "2025-10-13 01:35:04.224867",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 435,
         "title": "Escaping the Prison",
         "slug": "escaping-the-prison",
@@ -18347,19 +16424,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.566907",
-        "created_at": "2025-10-13T01:31:59.566909",
-        "updated_at": "2025-10-13T01:35:04.225542",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.566907",
+        "created_at": "2025-10-13 01:31:59.566909",
+        "updated_at": "2025-10-13 01:35:04.225542",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 436,
         "title": "Angela All Season Fashion",
         "slug": "angela-all-season-fashion",
@@ -18389,20 +16463,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.568147",
-        "created_at": "2025-10-13T01:31:59.568150",
-        "updated_at": "2025-10-13T01:35:04.226319",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.568147",
+        "created_at": "2025-10-13 01:31:59.568150",
+        "updated_at": "2025-10-13 01:35:04.226319",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 437,
         "title": "Hover Racer Pro",
         "slug": "hover-racer-pro",
@@ -18432,21 +16502,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.569517",
-        "created_at": "2025-10-13T01:31:59.569520",
-        "updated_at": "2025-10-13T01:35:04.227001",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Arcade",
-            "Platform"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.569517",
+        "created_at": "2025-10-13 01:31:59.569520",
+        "updated_at": "2025-10-13 01:35:04.227001",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 438,
         "title": "Slide io",
         "slug": "slide-io",
@@ -18476,20 +16541,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.570515",
-        "created_at": "2025-10-13T01:31:59.570516",
-        "updated_at": "2025-10-13T01:35:04.227626",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.570515",
+        "created_at": "2025-10-13 01:31:59.570516",
+        "updated_at": "2025-10-13 01:35:04.227626",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 439,
         "title": "Pixel Driver",
         "slug": "pixel-driver",
@@ -18522,23 +16583,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.571652",
-        "created_at": "2025-10-13T01:31:59.571653",
-        "updated_at": "2025-10-13T01:35:04.228334",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Strategy",
-            "Racing",
-            "Arcade",
-            "Simulation",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.571652",
+        "created_at": "2025-10-13 01:31:59.571653",
+        "updated_at": "2025-10-13 01:35:04.228334",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 440,
         "title": "FNF Funk 3D",
         "slug": "fnf-funk-3d",
@@ -18569,22 +16623,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.572699",
-        "created_at": "2025-10-13T01:31:59.572700",
-        "updated_at": "2025-10-13T01:35:04.229116",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Arcade",
-            "Rhythm",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.572699",
+        "created_at": "2025-10-13 01:31:59.572700",
+        "updated_at": "2025-10-13 01:35:04.229116",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 441,
         "title": "Vex X3M",
         "slug": "vex-x3m",
@@ -18613,19 +16661,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.573588",
-        "created_at": "2025-10-13T01:31:59.573589",
-        "updated_at": "2025-10-13T01:35:04.229803",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.573588",
+        "created_at": "2025-10-13 01:31:59.573589",
+        "updated_at": "2025-10-13 01:35:04.229803",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 442,
         "title": "Car Wash",
         "slug": "car-wash",
@@ -18654,20 +16699,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.574736",
-        "created_at": "2025-10-13T01:31:59.574738",
-        "updated_at": "2025-10-13T01:35:04.230484",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.574736",
+        "created_at": "2025-10-13 01:31:59.574738",
+        "updated_at": "2025-10-13 01:35:04.230484",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 443,
         "title": "God Simulator",
         "slug": "god-simulator",
@@ -18699,21 +16740,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.575658",
-        "created_at": "2025-10-13T01:31:59.575659",
-        "updated_at": "2025-10-13T01:35:04.231153",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Simulation",
-            "RPG",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.575658",
+        "created_at": "2025-10-13 01:31:59.575659",
+        "updated_at": "2025-10-13 01:35:04.231153",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 444,
         "title": "Gold Miner",
         "slug": "gold-miner",
@@ -18741,21 +16777,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.576721",
-        "created_at": "2025-10-13T01:31:59.576722",
-        "updated_at": "2025-10-13T01:35:04.231854",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Arcade",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.576721",
+        "created_at": "2025-10-13 01:31:59.576722",
+        "updated_at": "2025-10-13 01:35:04.231854",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 445,
         "title": "Survival Craft",
         "slug": "survival-craft",
@@ -18785,19 +16816,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.577638",
-        "created_at": "2025-10-13T01:31:59.577640",
-        "updated_at": "2025-10-13T01:35:04.232554",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.577638",
+        "created_at": "2025-10-13 01:31:59.577640",
+        "updated_at": "2025-10-13 01:35:04.232554",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 446,
         "title": "Global Guesser",
         "slug": "global-guesser",
@@ -18822,20 +16850,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.578553",
-        "created_at": "2025-10-13T01:31:59.578554",
-        "updated_at": "2025-10-13T01:35:04.233268",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.578553",
+        "created_at": "2025-10-13 01:31:59.578554",
+        "updated_at": "2025-10-13 01:35:04.233268",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 447,
         "title": "Monster Truck City Parking",
         "slug": "monster-truck-city-parking",
@@ -18864,21 +16888,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.579506",
-        "created_at": "2025-10-13T01:31:59.579507",
-        "updated_at": "2025-10-13T01:35:04.234143",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Strategy",
-            "Simulation",
-            "Horror"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.579506",
+        "created_at": "2025-10-13 01:31:59.579507",
+        "updated_at": "2025-10-13 01:35:04.234143",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 448,
         "title": "Egg Car Racing",
         "slug": "egg-car-racing",
@@ -18907,20 +16926,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.580665",
-        "created_at": "2025-10-13T01:31:59.580668",
-        "updated_at": "2025-10-13T01:35:04.235042",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.580665",
+        "created_at": "2025-10-13 01:31:59.580668",
+        "updated_at": "2025-10-13 01:35:04.235042",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 449,
         "title": "Princess Influencer Salon",
         "slug": "princess-influencer-salon",
@@ -18945,21 +16960,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.581781",
-        "created_at": "2025-10-13T01:31:59.581783",
-        "updated_at": "2025-10-13T01:35:04.235742",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "IO Game",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.581781",
+        "created_at": "2025-10-13 01:31:59.581783",
+        "updated_at": "2025-10-13 01:35:04.235742",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 450,
         "title": "Vex 7",
         "slug": "vex-7",
@@ -18988,21 +16998,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.582663",
-        "created_at": "2025-10-13T01:31:59.582665",
-        "updated_at": "2025-10-13T01:35:04.236336",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Platform",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.582663",
+        "created_at": "2025-10-13 01:31:59.582665",
+        "updated_at": "2025-10-13 01:35:04.236336",
+        "category_name": "Parkour",
+        "category_obj": 11,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 451,
         "title": "Soul Essence Adventure",
         "slug": "soul-essence-adventure",
@@ -19032,22 +17037,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.583520",
-        "created_at": "2025-10-13T01:31:59.583521",
-        "updated_at": "2025-10-13T01:35:04.236974",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Arcade",
-            "RPG",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.583520",
+        "created_at": "2025-10-13 01:31:59.583521",
+        "updated_at": "2025-10-13 01:35:04.236974",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 452,
         "title": "Fun Party Makeup",
         "slug": "fun-party-makeup",
@@ -19072,20 +17071,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.584650",
-        "created_at": "2025-10-13T01:31:59.584652",
-        "updated_at": "2025-10-13T01:35:04.237566",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.584650",
+        "created_at": "2025-10-13 01:31:59.584652",
+        "updated_at": "2025-10-13 01:35:04.237566",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 453,
         "title": "Where's My Pizza",
         "slug": "wheres-my-pizza",
@@ -19110,19 +17105,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.586073",
-        "created_at": "2025-10-13T01:31:59.586077",
-        "updated_at": "2025-10-13T01:35:04.238137",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.586073",
+        "created_at": "2025-10-13 01:31:59.586077",
+        "updated_at": "2025-10-13 01:35:04.238137",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 454,
         "title": "BTS Signature Fashion Style",
         "slug": "bts-signature-fashion-style",
@@ -19152,20 +17144,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.587174",
-        "created_at": "2025-10-13T01:31:59.587176",
-        "updated_at": "2025-10-13T01:35:04.238722",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.587174",
+        "created_at": "2025-10-13 01:31:59.587176",
+        "updated_at": "2025-10-13 01:35:04.238722",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 455,
         "title": "Vegas Crime City",
         "slug": "vegas-crime-city",
@@ -19190,23 +17178,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.588101",
-        "created_at": "2025-10-13T01:31:59.588102",
-        "updated_at": "2025-10-13T01:35:04.239375",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "Racing",
-            "Simulation",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.588101",
+        "created_at": "2025-10-13 01:31:59.588102",
+        "updated_at": "2025-10-13 01:35:04.239375",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 456,
         "title": "Dreamlike Room",
         "slug": "dreamlike-room",
@@ -19231,20 +17212,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.588980",
-        "created_at": "2025-10-13T01:31:59.588981",
-        "updated_at": "2025-10-13T01:35:04.240024",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.588980",
+        "created_at": "2025-10-13 01:31:59.588981",
+        "updated_at": "2025-10-13 01:35:04.240024",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 457,
         "title": "Restaurant Secret Kiss",
         "slug": "restaurant-secret-kiss",
@@ -19269,19 +17246,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.589851",
-        "created_at": "2025-10-13T01:31:59.589852",
-        "updated_at": "2025-10-13T01:35:04.240652",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.589851",
+        "created_at": "2025-10-13 01:31:59.589852",
+        "updated_at": "2025-10-13 01:35:04.240652",
+        "category_name": "Cooking",
+        "category_obj": 10,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 458,
         "title": "Kick the Zombie",
         "slug": "kick-the-zombie",
@@ -19306,20 +17280,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.590718",
-        "created_at": "2025-10-13T01:31:59.590719",
-        "updated_at": "2025-10-13T01:35:04.241266",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.590718",
+        "created_at": "2025-10-13 01:31:59.590719",
+        "updated_at": "2025-10-13 01:35:04.241266",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 459,
         "title": "Evil Santa",
         "slug": "evil-santa",
@@ -19344,19 +17314,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.591528",
-        "created_at": "2025-10-13T01:31:59.591529",
-        "updated_at": "2025-10-13T01:35:04.241907",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Rhythm"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.591528",
+        "created_at": "2025-10-13 01:31:59.591529",
+        "updated_at": "2025-10-13 01:35:04.241907",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 460,
         "title": "Rainbow Survival",
         "slug": "rainbow-survival",
@@ -19383,21 +17350,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.592652",
-        "created_at": "2025-10-13T01:31:59.592655",
-        "updated_at": "2025-10-13T01:35:04.242771",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Multiplayer",
-            "Horror"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.592652",
+        "created_at": "2025-10-13 01:31:59.592655",
+        "updated_at": "2025-10-13 01:35:04.242771",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 461,
         "title": "Dark Ninja Hanjo",
         "slug": "dark-ninja-hanjo",
@@ -19427,22 +17389,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.593815",
-        "created_at": "2025-10-13T01:31:59.593818",
-        "updated_at": "2025-10-13T01:35:04.243580",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Strategy",
-            "Simulation",
-            "RPG"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.593815",
+        "created_at": "2025-10-13 01:31:59.593818",
+        "updated_at": "2025-10-13 01:35:04.243580",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 462,
         "title": "Watermelon Suika",
         "slug": "watermelon-suika",
@@ -19471,20 +17427,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.594884",
-        "created_at": "2025-10-13T01:31:59.594886",
-        "updated_at": "2025-10-13T01:35:04.244225",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.594884",
+        "created_at": "2025-10-13 01:31:59.594886",
+        "updated_at": "2025-10-13 01:35:04.244225",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 463,
         "title": "Xmas Cookie Clicker",
         "slug": "xmas-cookie-clicker",
@@ -19513,20 +17465,16 @@ const GAMES_DATA = {
             "Mouse": "Click to play",
             "Left Click": "Main action"
         },
-        "release_date": "2025-10-13T01:31:59.595778",
-        "created_at": "2025-10-13T01:31:59.595779",
-        "updated_at": "2025-10-13T01:35:04.244886",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Clicker",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.595778",
+        "created_at": "2025-10-13 01:31:59.595779",
+        "updated_at": "2025-10-13 01:35:04.244886",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 464,
         "title": "Agent Walker vs Skibidi Toilets",
         "slug": "agent-walker-vs-skibidi-toilets",
@@ -19557,22 +17505,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.596606",
-        "created_at": "2025-10-13T01:31:59.596607",
-        "updated_at": "2025-10-13T01:35:04.245558",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Multiplayer",
-            "IO Game",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.596606",
+        "created_at": "2025-10-13 01:31:59.596607",
+        "updated_at": "2025-10-13 01:35:04.245558",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 465,
         "title": "Horse Family Animal Simulator",
         "slug": "horse-family-animal-simulator",
@@ -19604,22 +17546,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.597436",
-        "created_at": "2025-10-13T01:31:59.597437",
-        "updated_at": "2025-10-13T01:35:04.246171",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Simulation",
-            "RPG",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.597436",
+        "created_at": "2025-10-13 01:31:59.597437",
+        "updated_at": "2025-10-13 01:35:04.246171",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 466,
         "title": "Mathematical Crossword",
         "slug": "mathematical-crossword",
@@ -19648,20 +17584,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.598371",
-        "created_at": "2025-10-13T01:31:59.598373",
-        "updated_at": "2025-10-13T01:35:04.246805",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "Educational"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.598371",
+        "created_at": "2025-10-13 01:31:59.598373",
+        "updated_at": "2025-10-13 01:35:04.246805",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 467,
         "title": "Horse Riding Simulator",
         "slug": "horse-riding-simulator",
@@ -19694,20 +17626,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.599248",
-        "created_at": "2025-10-13T01:31:59.599249",
-        "updated_at": "2025-10-13T01:35:04.247407",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Simulation",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.599248",
+        "created_at": "2025-10-13 01:31:59.599249",
+        "updated_at": "2025-10-13 01:35:04.247407",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 468,
         "title": "Idle Coffee Business",
         "slug": "idle-coffee-business",
@@ -19737,20 +17665,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.600122",
-        "created_at": "2025-10-13T01:31:59.600123",
-        "updated_at": "2025-10-13T01:35:04.247991",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Strategy",
-            "Clicker"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.600122",
+        "created_at": "2025-10-13 01:31:59.600123",
+        "updated_at": "2025-10-13 01:35:04.247991",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 469,
         "title": "Idle Pet Business",
         "slug": "idle-pet-business",
@@ -19780,20 +17704,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.601193",
-        "created_at": "2025-10-13T01:31:59.601195",
-        "updated_at": "2025-10-13T01:35:04.248571",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Clicker",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.601193",
+        "created_at": "2025-10-13 01:31:59.601195",
+        "updated_at": "2025-10-13 01:35:04.248571",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 470,
         "title": "Baby Doll House Cleaning",
         "slug": "baby-doll-house-cleaning",
@@ -19822,19 +17742,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.602677",
-        "created_at": "2025-10-13T01:31:59.602679",
-        "updated_at": "2025-10-13T01:35:04.249133",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.602677",
+        "created_at": "2025-10-13 01:31:59.602679",
+        "updated_at": "2025-10-13 01:35:04.249133",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 471,
         "title": "Cookie Tap",
         "slug": "cookie-tap",
@@ -19863,20 +17780,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.604607",
-        "created_at": "2025-10-13T01:31:59.604608",
-        "updated_at": "2025-10-13T01:35:04.249769",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Clicker",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.604607",
+        "created_at": "2025-10-13 01:31:59.604608",
+        "updated_at": "2025-10-13 01:35:04.249769",
+        "category_name": "Clicker",
+        "category_obj": 9,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 472,
         "title": "Electric Man 2",
         "slug": "electric-man-2",
@@ -19904,20 +17817,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.605416",
-        "created_at": "2025-10-13T01:31:59.605417",
-        "updated_at": "2025-10-13T01:35:04.250669",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.605416",
+        "created_at": "2025-10-13 01:31:59.605417",
+        "updated_at": "2025-10-13 01:35:04.250669",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 473,
         "title": "Sniper Reloaded",
         "slug": "sniper-reloaded",
@@ -19944,20 +17853,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.607044",
-        "created_at": "2025-10-13T01:31:59.607045",
-        "updated_at": "2025-10-13T01:35:04.251576",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.607044",
+        "created_at": "2025-10-13 01:31:59.607045",
+        "updated_at": "2025-10-13 01:35:04.251576",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 474,
         "title": "Dinosaur Game",
         "slug": "dinosaur-game",
@@ -19982,20 +17887,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.607907",
-        "created_at": "2025-10-13T01:31:59.607908",
-        "updated_at": "2025-10-13T01:35:04.252317",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.607907",
+        "created_at": "2025-10-13 01:31:59.607908",
+        "updated_at": "2025-10-13 01:35:04.252317",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 475,
         "title": "Backrooms Shooter",
         "slug": "backrooms-shooter",
@@ -20022,20 +17923,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.608944",
-        "created_at": "2025-10-13T01:31:59.608946",
-        "updated_at": "2025-10-13T01:35:04.252962",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "3D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.608944",
+        "created_at": "2025-10-13 01:31:59.608946",
+        "updated_at": "2025-10-13 01:35:04.252962",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 476,
         "title": "Draw the Car Path",
         "slug": "draw-the-car-path",
@@ -20060,19 +17957,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.610175",
-        "created_at": "2025-10-13T01:31:59.610178",
-        "updated_at": "2025-10-13T01:35:04.253580",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.610175",
+        "created_at": "2025-10-13 01:31:59.610178",
+        "updated_at": "2025-10-13 01:35:04.253580",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 477,
         "title": "Words from Words",
         "slug": "words-from-words",
@@ -20102,20 +17996,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.611403",
-        "created_at": "2025-10-13T01:31:59.611405",
-        "updated_at": "2025-10-13T01:35:04.254203",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.611403",
+        "created_at": "2025-10-13 01:31:59.611405",
+        "updated_at": "2025-10-13 01:35:04.254203",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 478,
         "title": "Trendy Plaid Outfits",
         "slug": "trendy-plaid-outfits",
@@ -20140,22 +18030,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.612351",
-        "created_at": "2025-10-13T01:31:59.612352",
-        "updated_at": "2025-10-13T01:35:04.254830",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Multiplayer",
-            "IO Game",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.612351",
+        "created_at": "2025-10-13 01:31:59.612352",
+        "updated_at": "2025-10-13 01:35:04.254830",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 479,
         "title": "Nova Craft",
         "slug": "nova-craft",
@@ -20180,20 +18064,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.613261",
-        "created_at": "2025-10-13T01:31:59.613261",
-        "updated_at": "2025-10-13T01:35:04.255478",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "IO Game",
-            "Action"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.613261",
+        "created_at": "2025-10-13 01:31:59.613261",
+        "updated_at": "2025-10-13 01:35:04.255478",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 480,
         "title": "Squad Shooter",
         "slug": "squad-shooter",
@@ -20222,22 +18102,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.614577",
-        "created_at": "2025-10-13T01:31:59.614578",
-        "updated_at": "2025-10-13T01:35:04.256103",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Action",
-            "Casual",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.614577",
+        "created_at": "2025-10-13 01:31:59.614578",
+        "updated_at": "2025-10-13 01:35:04.256103",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 481,
         "title": "Drag Racing Club",
         "slug": "drag-racing-club",
@@ -20267,19 +18141,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.615923",
-        "created_at": "2025-10-13T01:31:59.615924",
-        "updated_at": "2025-10-13T01:35:04.256706",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.615923",
+        "created_at": "2025-10-13 01:31:59.615924",
+        "updated_at": "2025-10-13 01:35:04.256706",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 482,
         "title": "Weird Dance on Wednesday",
         "slug": "weird-dance-on-wednesday",
@@ -20304,19 +18175,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.630604",
-        "created_at": "2025-10-13T01:31:59.630608",
-        "updated_at": "2025-10-13T01:35:04.257297",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Rhythm"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.630604",
+        "created_at": "2025-10-13 01:31:59.630608",
+        "updated_at": "2025-10-13 01:35:04.257297",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 483,
         "title": "Skibidi Toilet io",
         "slug": "skibidi-toilet-io",
@@ -20346,20 +18214,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.631697",
-        "created_at": "2025-10-13T01:31:59.631699",
-        "updated_at": "2025-10-13T01:35:04.258031",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.631697",
+        "created_at": "2025-10-13 01:31:59.631699",
+        "updated_at": "2025-10-13 01:35:04.258031",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 484,
         "title": "Poly Racing Cars",
         "slug": "poly-racing-cars",
@@ -20391,20 +18255,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.632635",
-        "created_at": "2025-10-13T01:31:59.632637",
-        "updated_at": "2025-10-13T01:35:04.258797",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.632635",
+        "created_at": "2025-10-13 01:31:59.632637",
+        "updated_at": "2025-10-13 01:35:04.258797",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 485,
         "title": "Words of Wonders",
         "slug": "words-of-wonders",
@@ -20431,21 +18291,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.633501",
-        "created_at": "2025-10-13T01:31:59.633502",
-        "updated_at": "2025-10-13T01:35:04.259539",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.633501",
+        "created_at": "2025-10-13 01:31:59.633502",
+        "updated_at": "2025-10-13 01:35:04.259539",
+        "category_name": "Puzzle",
+        "category_obj": 2,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 486,
         "title": "Blob Opera",
         "slug": "blob-opera",
@@ -20470,21 +18325,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.634457",
-        "created_at": "2025-10-13T01:31:59.634459",
-        "updated_at": "2025-10-13T01:35:04.260213",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "Rhythm",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.634457",
+        "created_at": "2025-10-13 01:31:59.634459",
+        "updated_at": "2025-10-13 01:35:04.260213",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 487,
         "title": "Speed Drift Racing",
         "slug": "speed-drift-racing",
@@ -20514,22 +18364,16 @@ const GAMES_DATA = {
             "WASD": "Alternative controls",
             "Spacebar": "Handbrake"
         },
-        "release_date": "2025-10-13T01:31:59.635770",
-        "created_at": "2025-10-13T01:31:59.635772",
-        "updated_at": "2025-10-13T01:35:04.260877",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Racing",
-            "Arcade",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.635770",
+        "created_at": "2025-10-13 01:31:59.635772",
+        "updated_at": "2025-10-13 01:35:04.260877",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 488,
         "title": "Mad Doctor",
         "slug": "mad-doctor",
@@ -20554,19 +18398,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.636860",
-        "created_at": "2025-10-13T01:31:59.636863",
-        "updated_at": "2025-10-13T01:35:04.261544",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Rhythm"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.636860",
+        "created_at": "2025-10-13 01:31:59.636863",
+        "updated_at": "2025-10-13 01:35:04.261544",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 489,
         "title": "Snake",
         "slug": "snake",
@@ -20591,19 +18432,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.637716",
-        "created_at": "2025-10-13T01:31:59.637717",
-        "updated_at": "2025-10-13T01:35:04.262149",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.637716",
+        "created_at": "2025-10-13 01:31:59.637717",
+        "updated_at": "2025-10-13 01:35:04.262149",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 490,
         "title": "Tank Driver Simulator",
         "slug": "tank-driver-simulator",
@@ -20632,22 +18470,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.638537",
-        "created_at": "2025-10-13T01:31:59.638538",
-        "updated_at": "2025-10-13T01:35:04.262745",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Strategy",
-            "Racing",
-            "Simulation"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.638537",
+        "created_at": "2025-10-13 01:31:59.638538",
+        "updated_at": "2025-10-13 01:35:04.262745",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 491,
         "title": "Foot Doctor",
         "slug": "foot-doctor",
@@ -20676,19 +18508,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.639309",
-        "created_at": "2025-10-13T01:31:59.639310",
-        "updated_at": "2025-10-13T01:35:04.263333",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.639309",
+        "created_at": "2025-10-13 01:31:59.639310",
+        "updated_at": "2025-10-13 01:35:04.263333",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 492,
         "title": "American Touchdown",
         "slug": "american-touchdown",
@@ -20717,22 +18546,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.640076",
-        "created_at": "2025-10-13T01:31:59.640077",
-        "updated_at": "2025-10-13T01:35:04.263922",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Racing",
-            "Sports",
-            "Arcade",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.640076",
+        "created_at": "2025-10-13 01:31:59.640077",
+        "updated_at": "2025-10-13 01:35:04.263922",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 493,
         "title": "Hero Rush Tower Defense",
         "slug": "hero-rush-tower-defense",
@@ -20762,20 +18585,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.640833",
-        "created_at": "2025-10-13T01:31:59.640834",
-        "updated_at": "2025-10-13T01:35:04.264520",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Strategy",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.640833",
+        "created_at": "2025-10-13 01:31:59.640834",
+        "updated_at": "2025-10-13 01:35:04.264520",
+        "category_name": "Strategy",
+        "category_obj": 4,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 494,
         "title": "Duck Life Adventure",
         "slug": "duck-life-adventure",
@@ -20802,21 +18621,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.641791",
-        "created_at": "2025-10-13T01:31:59.641792",
-        "updated_at": "2025-10-13T01:35:04.265138",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Simulation",
-            "RPG"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.641791",
+        "created_at": "2025-10-13 01:31:59.641792",
+        "updated_at": "2025-10-13 01:35:04.265138",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 495,
         "title": "City Ambulance Driver",
         "slug": "city-ambulance-driver",
@@ -20845,23 +18659,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.643025",
-        "created_at": "2025-10-13T01:31:59.643028",
-        "updated_at": "2025-10-13T01:35:04.265753",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Strategy",
-            "Racing",
-            "Simulation",
-            "RPG",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.643025",
+        "created_at": "2025-10-13 01:31:59.643028",
+        "updated_at": "2025-10-13 01:35:04.265753",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 496,
         "title": "Stealing the Diamond",
         "slug": "stealing-the-diamond",
@@ -20889,20 +18696,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.644047",
-        "created_at": "2025-10-13T01:31:59.644048",
-        "updated_at": "2025-10-13T01:35:04.266527",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Multiplayer",
-            "IO Game"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.644047",
+        "created_at": "2025-10-13 01:31:59.644048",
+        "updated_at": "2025-10-13 01:35:04.266527",
+        "category_name": "io Games",
+        "category_obj": 14,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 497,
         "title": "WarBrokers.io",
         "slug": "warbrokersio",
@@ -20932,23 +18735,16 @@ const GAMES_DATA = {
             "Right Click": "Secondary action",
             "WASD": "Alternative movement"
         },
-        "release_date": "2025-10-13T01:31:59.644904",
-        "created_at": "2025-10-13T01:31:59.644905",
-        "updated_at": "2025-10-13T01:35:04.267484",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Arcade",
-            "Multiplayer",
-            "IO Game",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.644904",
+        "created_at": "2025-10-13 01:31:59.644905",
+        "updated_at": "2025-10-13 01:35:04.267484",
+        "category_name": "Shooter",
+        "category_obj": 12,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 498,
         "title": "Farming Island",
         "slug": "farming-island",
@@ -20978,22 +18774,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.645681",
-        "created_at": "2025-10-13T01:31:59.645682",
-        "updated_at": "2025-10-13T01:35:04.268946",
-        "category_obj": 7,
-        "standardized_tags": [
-            "Unity",
-            "Strategy",
-            "Simulation",
-            "Casual",
-            "Multiplayer"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.645681",
+        "created_at": "2025-10-13 01:31:59.645682",
+        "updated_at": "2025-10-13 01:35:04.268946",
+        "category_name": "Simulation",
+        "category_obj": 13,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 499,
         "title": "World's Hardest Game",
         "slug": "worlds-hardest-game",
@@ -21021,19 +18811,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.646460",
-        "created_at": "2025-10-13T01:31:59.646461",
-        "updated_at": "2025-10-13T01:35:04.269588",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Casual"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.646460",
+        "created_at": "2025-10-13 01:31:59.646461",
+        "updated_at": "2025-10-13 01:35:04.269588",
+        "category_name": "Casual",
+        "category_obj": 8,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 500,
         "title": "Blocky Parkour Ninja",
         "slug": "blocky-parkour-ninja",
@@ -21063,23 +18850,16 @@ const GAMES_DATA = {
             "Spacebar": "Jump",
             "Mouse": "Navigate menus"
         },
-        "release_date": "2025-10-13T01:31:59.647268",
-        "created_at": "2025-10-13T01:31:59.647270",
-        "updated_at": "2025-10-13T01:35:04.270184",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Arcade",
-            "Platform",
-            "Simulation",
-            "2D"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.647268",
+        "created_at": "2025-10-13 01:31:59.647270",
+        "updated_at": "2025-10-13 01:35:04.270184",
+        "category_name": "Action",
+        "category_obj": 1,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 501,
         "title": "The House",
         "slug": "the-house",
@@ -21106,22 +18886,16 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.648092",
-        "created_at": "2025-10-13T01:31:59.648093",
-        "updated_at": "2025-10-13T01:35:04.270768",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Puzzle",
-            "Racing",
-            "Multiplayer",
-            "Horror"
-        ]
-    },
-    {
-        "category_name": "Home",
+        "release_date": "2025-10-13 01:31:59.648092",
+        "created_at": "2025-10-13 01:31:59.648093",
+        "updated_at": "2025-10-13 01:35:04.270768",
+        "category_name": "Racing",
+        "category_obj": 3,
         "game_plays": [],
         "game_stats": [],
+        "standardized_tags": []
+    },
+    {
         "id": 502,
         "title": "Pixel Battle Royale",
         "slug": "pixel-battle-royale",
@@ -21151,17 +18925,14 @@ const GAMES_DATA = {
             "Arrow Keys": "Navigate",
             "Spacebar": "Action"
         },
-        "release_date": "2025-10-13T01:31:59.648850",
-        "created_at": "2025-10-13T01:31:59.648850",
-        "updated_at": "2025-10-13T01:35:04.271467",
-        "category_obj": 7,
-        "standardized_tags": [
-            "HTML5",
-            "Action",
-            "Arcade",
-            "3D",
-            "2D"
-        ]
+        "release_date": "2025-10-13 01:31:59.648850",
+        "created_at": "2025-10-13 01:31:59.648850",
+        "updated_at": "2025-10-13 01:35:04.271467",
+        "category_name": "Shooter",
+        "category_obj": 12,
+        "game_plays": [],
+        "game_stats": [],
+        "standardized_tags": []
     }
 ],
     

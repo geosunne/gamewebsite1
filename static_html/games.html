@@ -510,7 +510,7 @@
 </div>
 </div>
 <div class="categories-filter" id="categoriesFilter">
-<button class="category-btn active" onclick="filterByCategory('all')">All Games</button>
+<button class="category-btn active" onclick="filterByCategory('all')">🎮 All Games</button>
 </div>
 </section>
 <section class="games-section">
@@ -695,6 +695,22 @@
             filterGames();
         }
 
+        // 分类图标映射
+        const categoryIcons = {
+            'Action': '⚔️',
+            'Racing': '🏎️',
+            'Sports': '⚽',
+            'Shooter': '🔫',
+            'Puzzle': '🧩',
+            'Simulation': '🎮',
+            'io Games': '🌐',
+            'Parkour': '🏃',
+            'Clicker': '👆',
+            'Cooking': '🍳',
+            'Strategy': '♟️',
+            'Casual': '🎪'
+        };
+
         // 初始化分类按钮
         async function initializeCategories() {
             try {
@@ -704,7 +720,8 @@
                 categories.forEach(category => {
                     const btn = document.createElement('button');
                     btn.className = 'category-btn';
-                    btn.textContent = category;
+                    const icon = categoryIcons[category] || '🎮';
+                    btn.textContent = `${icon} ${category}`;
                     btn.onclick = () => filterByCategory(category);
                     categoriesFilter.appendChild(btn);
                 });
