@@ -12,8 +12,20 @@ from urllib.parse import urljoin, urlparse
 import re
 from collections import defaultdict, Counter
 
+try:
+    from selenium import webdriver
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.common.exceptions import TimeoutException, NoSuchElementException
+    from selenium.webdriver.chrome.options import Options
+    SELENIUM_AVAILABLE = True
+except ImportError:
+    SELENIUM_AVAILABLE = False
+    print("⚠️  Selenium not available. Install with: pip install selenium")
+
 class GameIframeExtractor:
-    def __init__(self, base_url="https://www.onlinegames.io"):
+    def __init__(self, base_url="https://www.onlinegames.io", use_selenium=True):
         self.base_url = base_url
         self.session = requests.Session()
         self.session.headers.update({
@@ -25,7 +37,144 @@ class GameIframeExtractor:
             'iframe_sources': set(),
             'total_games': 0
         }
-    
+        self.use_selenium = use_selenium and SELENIUM_AVAILABLE
+        self.driver = None
+
+    def init_selenium_driver(self):
+        """Initialize Selenium WebDriver with Chrome"""
+        if not SELENIUM_AVAILABLE:
+            print("❌ Selenium is not available")
+            return False
+
+        if self.driver:
+            return True
+
+        try:
+            print("🔧 Initializing Selenium WebDriver...")
+            chrome_options = Options()
+            chrome_options.add_argument('--headless')  # Run in background
+            chrome_options.add_argument('--no-sandbox')
+            chrome_options.add_argument('--disable-dev-shm-usage')
+            chrome_options.add_argument('--disable-gpu')
+            chrome_options.add_argument(f'user-agent={self.session.headers["User-Agent"]}')
+
+            self.driver = webdriver.Chrome(options=chrome_options)
+            print("✅ Selenium WebDriver initialized")
+            return True
+        except Exception as e:
+            print(f"❌ Failed to initialize Selenium: {e}")
+            self.use_selenium = False
+            return False
+
+    def close_selenium_driver(self):
+        """Close Selenium WebDriver"""
+        if self.driver:
+            self.driver.quit()
+            self.driver = None
+            print("✅ Selenium WebDriver closed")
+
+    def click_view_more_until_done(self, url, max_clicks=50):
+        """Click 'view-more' button until no more games are loaded"""
+        if not self.use_selenium:
+            print("⚠️  Selenium not available, falling back to requests")
+            return self.get_page_content(url)
+
+        if not self.init_selenium_driver():
+            return self.get_page_content(url)
+
+        try:
+            print(f"🌐 Loading page with Selenium: {url}")
+            self.driver.get(url)
+            time.sleep(2)  # Wait for initial page load
+
+            # Count initial games
+            soup = BeautifulSoup(self.driver.page_source, 'html.parser')
+            initial_game_count = len(soup.find_all('a', href=True))
+            print(f"  Initial game links: {initial_game_count}")
+
+            clicks = 0
+            consecutive_no_change = 0
+            last_game_count = initial_game_count
+
+            while clicks < max_clicks:
+                try:
+                    # Look for "view-more" button
+                    view_more_selectors = [
+                        (By.CLASS_NAME, 'view-more'),
+                        (By.XPATH, "//button[contains(@class, 'view-more')]"),
+                        (By.XPATH, "//a[contains(@class, 'view-more')]"),
+                        (By.XPATH, "//button[contains(text(), 'Load More')]"),
+                        (By.XPATH, "//button[contains(text(), 'View More')]"),
+                    ]
+
+                    button_found = False
+                    for by, selector in view_more_selectors:
+                        try:
+                            button = WebDriverWait(self.driver, 2).until(
+                                EC.presence_of_element_located((by, selector))
+                            )
+
+                            if button and button.is_displayed() and button.is_enabled():
+                                # Scroll to button
+                                self.driver.execute_script("arguments[0].scrollIntoView(true);", button)
+                                time.sleep(0.5)
+
+                                # Click button using JavaScript to avoid interception
+                                try:
+                                    self.driver.execute_script("arguments[0].click();", button)
+                                except:
+                                    # Fallback to regular click
+                                    button.click()
+
+                                clicks += 1
+                                button_found = True
+                                print(f"  🖱️  Clicked 'view-more' button (click #{clicks})")
+
+                                # Wait for content to load
+                                time.sleep(1.5)
+
+                                # Check if new games were loaded
+                                soup = BeautifulSoup(self.driver.page_source, 'html.parser')
+                                current_game_count = len(soup.find_all('a', href=True))
+
+                                if current_game_count > last_game_count:
+                                    print(f"    ✅ Loaded more games: {current_game_count} total (+{current_game_count - last_game_count})")
+                                    last_game_count = current_game_count
+                                    consecutive_no_change = 0
+                                else:
+                                    consecutive_no_change += 1
+                                    print(f"    ⚠️  No new games loaded ({consecutive_no_change}/3)")
+
+                                    if consecutive_no_change >= 3:
+                                        print(f"  ✅ No more new games after {consecutive_no_change} attempts")
+                                        break
+
+                                break  # Exit selector loop
+                        except (TimeoutException, NoSuchElementException):
+                            continue
+
+                    if not button_found:
+                        print(f"  ℹ️  No 'view-more' button found (after {clicks} clicks)")
+                        break
+
+                except Exception as e:
+                    print(f"  ⚠️  Error clicking button: {e}")
+                    break
+
+            # Get final page content
+            final_content = self.driver.page_source
+            soup = BeautifulSoup(final_content, 'html.parser')
+            final_game_count = len(soup.find_all('a', href=True))
+
+            print(f"  📊 Final game links: {final_game_count} (loaded {final_game_count - initial_game_count} more)")
+            print(f"  🖱️  Total clicks: {clicks}")
+
+            return final_content
+
+        except Exception as e:
+            print(f"❌ Error during Selenium page load: {e}")
+            return self.get_page_content(url)
+
     def get_page_content(self, url):
         """Fetch page content with error handling"""
         try:
@@ -76,10 +225,16 @@ class GameIframeExtractor:
     def extract_game_links_from_recently_section(self):
         """Extract game page links specifically from the 'section recently' div"""
         print("Extracting game page links from 'section recently'...")
-        content = self.get_page_content(self.base_url)
+
+        # Use Selenium to click "view-more" button and load all games
+        if self.use_selenium:
+            content = self.click_view_more_until_done(self.base_url)
+        else:
+            content = self.get_page_content(self.base_url)
+
         if not content:
             return []
-        
+
         soup = BeautifulSoup(content, 'html.parser')
         game_links = []
         
@@ -490,25 +645,40 @@ class GameIframeExtractor:
 
 def main():
     """Main function to extract game data from 'Recently Played' section"""
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Extract game data from OnlineGames.io')
+    parser.add_argument('--max-games', type=int, default=200,
+                        help='Maximum number of games to extract')
+    parser.add_argument('--use-selenium', action='store_true', default=True,
+                        help='Use Selenium to load dynamic content (default: True)')
+    parser.add_argument('--no-selenium', dest='use_selenium', action='store_false',
+                        help='Disable Selenium and use simple requests')
+
+    args = parser.parse_args()
+
     print("Starting OnlineGames.io game data extraction from 'Recently Played' section...")
-    
-    extractor = GameIframeExtractor()
-    
+
+    extractor = GameIframeExtractor(use_selenium=args.use_selenium)
+
     try:
-        # Analyze 100 games from the 'Recently Played' section
-        extractor.analyze_recently_games(max_games=200)
-        
+        # Analyze games from the 'Recently Played' section
+        extractor.analyze_recently_games(max_games=args.max_games)
+
         # Save the extracted data
         extractor.save_game_data()
-        
+
         print("\n✅ Game data extraction completed successfully!")
         print(f"📁 Generated file: games_data.json")
         print(f"📊 Total games processed: {extractor.game_data['total_games']}")
-        
+
     except Exception as e:
         print(f"❌ Error during game data extraction: {e}")
         import traceback
         traceback.print_exc()
+    finally:
+        # Close Selenium driver if it was used
+        extractor.close_selenium_driver()
 
 if __name__ == "__main__":
     main()

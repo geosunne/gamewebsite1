@@ -11,8 +11,30 @@ from datetime import datetime
 
 BASE_URL = "http://localhost:8000"
 
+def fetch_game_data_from_db(slug):
+    """Fetch game data directly from database"""
+    try:
+        from app import create_app, db
+        from models import Game, game_schema
+
+        app = create_app()
+        with app.app_context():
+            game = Game.query.filter_by(slug=slug, is_active=True).first()
+            if game:
+                return game_schema.dump(game)
+            return None
+    except Exception as e:
+        print(f"❌ Database error for {slug}: {e}")
+        return None
+
 def fetch_game_data(slug):
-    """Fetch game data from API"""
+    """Fetch game data from database first, fallback to API"""
+    # Try database first
+    game_data = fetch_game_data_from_db(slug)
+    if game_data:
+        return game_data
+
+    # Fallback to API if database fails
     try:
         response = requests.get(f"{BASE_URL}/api/games/slug/{slug}")
         if response.status_code == 200:
@@ -24,8 +46,39 @@ def fetch_game_data(slug):
         print(f"Error fetching {slug}: {e}")
         return None
 
+def fetch_related_games_from_db(category_name, exclude_slug, limit=6):
+    """Fetch related games from database"""
+    try:
+        from app import create_app, db
+        from models import Game, Category, games_schema
+
+        app = create_app()
+        with app.app_context():
+            # Find category
+            category = Category.query.filter_by(name=category_name).first()
+            if not category:
+                return []
+
+            # Get related games
+            games = Game.query.filter(
+                Game.category_id == category.id,
+                Game.slug != exclude_slug,
+                Game.is_active == True
+            ).order_by(Game.total_plays.desc()).limit(limit).all()
+
+            return games_schema.dump(games)
+    except Exception as e:
+        print(f"❌ Database error fetching related games: {e}")
+        return []
+
 def fetch_related_games(category_name, exclude_slug, limit=6):
-    """Fetch related games from the same category"""
+    """Fetch related games from database first, fallback to API"""
+    # Try database first
+    related = fetch_related_games_from_db(category_name, exclude_slug, limit)
+    if related:
+        return related
+
+    # Fallback to API
     try:
         response = requests.get(f"{BASE_URL}/api/games", params={
             'category': category_name,
@@ -665,18 +718,40 @@ def save_all_games_json(all_games_data):
         print(f"❌ Error saving all_games.json: {e}")
         return False
 
+def fetch_all_games_from_db():
+    """Fetch all game slugs directly from database"""
+    try:
+        from app import create_app, db
+        from models import Game
+
+        app = create_app()
+        with app.app_context():
+            games = Game.query.filter_by(is_active=True).all()
+            slugs = [game.slug for game in games]
+            print(f"📊 Fetched {len(slugs)} games from database")
+            return slugs
+    except Exception as e:
+        print(f"❌ Error fetching from database: {e}")
+        return None
+
 def main():
     """Generate all static game pages and update all_games.json"""
 
     print("🚀 Generating static game pages and updating all_games.json...")
 
-    # Read game slugs
-    try:
-        with open('static_html/game_slugs.txt', 'r') as f:
-            game_slugs = [line.strip() for line in f if line.strip()]
-    except FileNotFoundError:
-        print("❌ game_slugs.txt not found. Run the curl command first.")
-        return
+    # Try to get game slugs from database first
+    game_slugs = fetch_all_games_from_db()
+
+    # Fallback to game_slugs.txt if database fetch fails
+    if not game_slugs:
+        print("⚠️  Database fetch failed, trying game_slugs.txt...")
+        try:
+            with open('static_html/game_slugs.txt', 'r') as f:
+                game_slugs = [line.strip() for line in f if line.strip()]
+        except FileNotFoundError:
+            print("❌ game_slugs.txt not found and database fetch failed!")
+            print("💡 Make sure the database is set up or game_slugs.txt exists")
+            return
 
     print(f"📋 Found {len(game_slugs)} games to process")
 

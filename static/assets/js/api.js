@@ -32,7 +32,11 @@ class GameAPI {
 
     // Games API methods
     async getGames(params = {}) {
-        const queryString = new URLSearchParams(params).toString();
+        // Filter out undefined/null values
+        const cleanParams = Object.fromEntries(
+            Object.entries(params).filter(([_, v]) => v != null)
+        );
+        const queryString = new URLSearchParams(cleanParams).toString();
         const endpoint = queryString ? `/games?${queryString}` : '/games';
         return this.request(endpoint);
     }
@@ -58,14 +62,23 @@ class GameAPI {
     }
 
     async getGamesByCategory(categoryId, params = {}) {
-        const queryString = new URLSearchParams(params).toString();
+        // Filter out undefined/null values
+        const cleanParams = Object.fromEntries(
+            Object.entries(params).filter(([_, v]) => v != null)
+        );
+        const queryString = new URLSearchParams(cleanParams).toString();
         const endpoint = queryString ? `/categories/${categoryId}/games?${queryString}` : `/categories/${categoryId}/games`;
         return this.request(endpoint);
     }
 
     // Search API methods
     async searchGames(query, params = {}) {
-        const searchParams = new URLSearchParams({ q: query, ...params }).toString();
+        // Filter out undefined/null values
+        const allParams = { q: query, ...params };
+        const cleanParams = Object.fromEntries(
+            Object.entries(allParams).filter(([_, v]) => v != null)
+        );
+        const searchParams = new URLSearchParams(cleanParams).toString();
         return this.request(`/search?${searchParams}`);
     }
 
@@ -241,50 +254,53 @@ class GameDataAdapter {
 const GAMES_API = new GameDataAdapter();
 
 // Maintain backward compatibility with old GAMES_DATA object
-const GAMES_DATA = {
-    games: [],
-    _loaded: false,
+// Only define if not already defined by games-data.js
+if (typeof GAMES_DATA === 'undefined') {
+    var GAMES_DATA = {
+        games: [],
+        _loaded: false,
 
-    async _ensureLoaded() {
-        if (!this._loaded) {
-            try {
-                const response = await GAMES_API.api.getGames({ per_page: 100 });
-                this.games = response.games.map(game => GAMES_API.convertGameFormat(game));
-                this._loaded = true;
-            } catch (error) {
-                console.error('Error loading games data:', error);
+        async _ensureLoaded() {
+            if (!this._loaded) {
+                try {
+                    const response = await GAMES_API.api.getGames({ per_page: 100 });
+                    this.games = response.games.map(game => GAMES_API.convertGameFormat(game));
+                    this._loaded = true;
+                } catch (error) {
+                    console.error('Error loading games data:', error);
+                }
             }
+        },
+
+        async getGame(gameId) {
+            return await GAMES_API.getGame(gameId);
+        },
+
+        async getFeaturedGames() {
+            return await GAMES_API.getFeaturedGames();
+        },
+
+        async getNewGames(limit = 6) {
+            return await GAMES_API.getNewGames(limit);
+        },
+
+        async getGamesByCategory(category) {
+            return await GAMES_API.getGamesByCategory(category);
+        },
+
+        async getAllCategories() {
+            return await GAMES_API.getAllCategories();
+        },
+
+        async searchGames(query) {
+            return await GAMES_API.searchGames(query);
+        },
+
+        async getPopularGames(limit = 6) {
+            return await GAMES_API.getPopularGames(limit);
         }
-    },
-
-    async getGame(gameId) {
-        return await GAMES_API.getGame(gameId);
-    },
-
-    async getFeaturedGames() {
-        return await GAMES_API.getFeaturedGames();
-    },
-
-    async getNewGames(limit = 6) {
-        return await GAMES_API.getNewGames(limit);
-    },
-
-    async getGamesByCategory(category) {
-        return await GAMES_API.getGamesByCategory(category);
-    },
-
-    async getAllCategories() {
-        return await GAMES_API.getAllCategories();
-    },
-
-    async searchGames(query) {
-        return await GAMES_API.searchGames(query);
-    },
-
-    async getPopularGames(limit = 6) {
-        return await GAMES_API.getPopularGames(limit);
-    }
-};
+    };
+}
 
 // Export for Node.js compatibility
 if (typeof module !== 'undefined' && module.exports) {

@@ -125,7 +125,10 @@ def optimize_game_pages():
 
     # Load games data
     with open('static_html/all_games.json', 'r', encoding='utf-8') as f:
-        games = json.load(f)
+        data = json.load(f)
+
+    # Extract games array from the data structure
+    games = data.get('games', []) if isinstance(data, dict) else data
 
     for game in games:
         game_file = f"static_html/games/{game['slug']}.html"
@@ -227,7 +230,10 @@ def generate_xml_sitemap():
 
     # Load games data
     with open('static_html/all_games.json', 'r', encoding='utf-8') as f:
-        games = json.load(f)
+        data = json.load(f)
+
+    # Extract games array from the data structure
+    games = data.get('games', []) if isinstance(data, dict) else data
 
     # Create XML sitemap
     xml_content = '''<?xml version="1.0" encoding="UTF-8"?>

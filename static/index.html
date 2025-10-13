@@ -659,7 +659,7 @@
                 <button class="search-btn" onclick="searchGames()">🔍</button>
             </div>
             <div class="categories-filter" id="categoriesFilter">
-                <button class="category-btn active" onclick="filterByCategory('all')">All Games</button>
+                <button class="category-btn active" onclick="filterByCategory('all')">🎮 All Games</button>
             </div>
         </section>
 
@@ -669,7 +669,7 @@
         <section id="new-games" class="games-section container">
             <div class="section-header">
                 <h2 class="section-title">🆕 New Games</h2>
-                <a href="/games?filter=new" class="view-all-btn">View All</a>
+                <a href="games.html" class="view-all-btn">View All</a>
             </div>
             <div class="games-grid" id="newGamesGrid">
                 <!-- 新游戏将通过JavaScript动态加载 -->
@@ -681,7 +681,7 @@
         <section id="games" class="games-section container">
             <div class="section-header">
                 <h2 class="section-title">🎮 All Games</h2>
-                <a href="/games" class="view-all-btn">View All</a>
+                <a href="games.html" class="view-all-btn">View All</a>
             </div>
             <div class="games-grid" id="popularGamesGrid">
                 <!-- 热门游戏将通过JavaScript动态加载 -->
@@ -748,16 +748,16 @@
             card.className = 'game-card';
 
             // 使用新的动态游戏页面链接
-            card.onclick = () => window.location.href = `/games/${game.id}`;
+            card.onclick = () => window.location.href = `/games/${game.slug}`;
 
-            const badge = (showBadge && game.isNew) ? '<div class="game-badge">NEW</div>' :
+            const badge = (showBadge && game.is_new) ? '<div class="game-badge">NEW</div>' :
                          '';
 
             card.innerHTML = `
                 <div class="game-thumbnail">
                     ${badge}
-                    ${game.thumbnail ? `<img src="${game.thumbnail}" alt="${game.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">` : ''}
-                    <div class="thumbnail-fallback" style="${game.thumbnail ? 'display:none;' : 'display: flex; align-items: center; justify-content: center;'} font-size: 36px; height: 100%; color: var(--apple-gray);">🎮</div>
+                    ${game.thumbnail_url ? `<img src="${game.thumbnail_url}" alt="${game.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">` : ''}
+                    <div class="thumbnail-fallback" style="${game.thumbnail_url ? 'display:none;' : 'display: flex; align-items: center; justify-content: center;'} font-size: 36px; height: 100%; color: var(--apple-gray);">🎮</div>
                     <div class="game-info">
                         <h3 class="game-title">${game.title}</h3>
                     </div>
@@ -865,6 +865,22 @@
             }
         }
 
+        // 分类图标映射
+        const categoryIcons = {
+            'Action': '⚔️',
+            'Racing': '🏎️',
+            'Sports': '⚽',
+            'Shooter': '🔫',
+            'Puzzle': '🧩',
+            'Simulation': '🎮',
+            'io Games': '🌐',
+            'Parkour': '🏃',
+            'Clicker': '👆',
+            'Cooking': '🍳',
+            'Strategy': '♟️',
+            'Casual': '🎪'
+        };
+
         // 初始化分类按钮
         async function initializeCategories() {
             try {
@@ -874,7 +890,8 @@
                 categories.forEach(category => {
                     const btn = document.createElement('button');
                     btn.className = 'category-btn';
-                    btn.textContent = category;
+                    const icon = categoryIcons[category] || '🎮';
+                    btn.textContent = `${icon} ${category}`;
                     btn.onclick = () => filterByCategory(category);
                     categoriesFilter.appendChild(btn);
                 });

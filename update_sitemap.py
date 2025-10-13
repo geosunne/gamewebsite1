@@ -4,7 +4,10 @@ import json
 def update_sitemap():
     # Read updated games data
     with open('static_html/all_games.json', 'r', encoding='utf-8') as f:
-        games = json.load(f)
+        data = json.load(f)
+
+    # Extract games array from the data structure
+    games = data.get('games', []) if isinstance(data, dict) else data
 
     # Generate sitemap URLs
     base_url = "https://btwgame.com"
