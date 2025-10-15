@@ -18,7 +18,7 @@ def update_sitemap():
 
     # Add game URLs
     for game in games:
-        urls.append(f"{base_url}/games/{game['slug']}.html")
+        urls.append(f"{base_url}/games/{game['slug']}")
 
     # Write sitemap
     with open('static_html/sitemap.txt', 'w', encoding='utf-8') as f:

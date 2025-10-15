@@ -245,7 +245,7 @@ def generate_xml_sitemap():
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://btwgame.com/games.html</loc>
+        <loc>https://btwgame.com/games</loc>
         <lastmod>2025-01-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
@@ -254,7 +254,7 @@ def generate_xml_sitemap():
 
     for game in games:
         xml_content += f'''    <url>
-        <loc>https://btwgame.com/games/{game['slug']}.html</loc>
+        <loc>https://btwgame.com/games/{game['slug']}</loc>
         <lastmod>2025-01-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
