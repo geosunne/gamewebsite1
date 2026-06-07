@@ -6,7 +6,7 @@ import requests
 import json
 import os
 import time
-import shutil
+from html import escape as html_escape
 from urllib.parse import urljoin
 from datetime import datetime
 
@@ -186,15 +186,22 @@ def generate_game_page(game_data, related_games):
     if related_games:
         for related_game in related_games:
             related_thumbnail = related_game.get('thumbnail_url', '')
+            related_slug = html_escape(related_game.get('slug', ''))
+            related_title = html_escape(related_game.get('title', ''))
+            related_description = html_escape(related_game.get('description', ''))
+            related_img = ''
+            if related_thumbnail:
+                escaped_thumbnail = html_escape(related_thumbnail, quote=True)
+                related_img = f'<img src="{escaped_thumbnail}" alt="{related_title}" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'flex\';">'
             related_games_html += f'''
-                <div class="game-card" onclick="window.location.href='{related_game["slug"]}.html'">
+                <div class="game-card" onclick="window.location.href='/games/{related_slug}'">
                     <div class="game-thumbnail">
-                        {f'<img src="{related_thumbnail}" alt="{related_game["title"]}" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'flex\';">' if related_thumbnail else ''}
+                        {related_img}
                         <div class="thumbnail-fallback" style="{'display:none;' if related_thumbnail else 'display: flex; align-items: center; justify-content: center;'} font-size: 42px; height: 100%; color: var(--apple-gray);">🎮</div>
                     </div>
                     <div class="game-info">
-                        <h3 class="game-card-title">{related_game["title"]}</h3>
-                        <p class="game-card-description">{related_game["description"]}</p>
+                        <h3 class="game-card-title">{related_title}</h3>
+                        <p class="game-card-description">{related_description}</p>
                     </div>
                 </div>
             '''
@@ -237,6 +244,21 @@ def generate_game_page(game_data, related_games):
         except:
             release_date_formatted = release_date
 
+    game_embed_html = ""
+    if iframe_url:
+        game_embed_html = f'''
+        <section class="game-container" id="gameContainer">
+            <div class="game-wrapper">
+                <div class="loading-indicator">Loading game...</div>
+                <iframe id="gameIframe" class="game-iframe" src="{iframe_url}" title="{title}" allowfullscreen loading="lazy" onload="this.previousElementSibling.style.display='none'"></iframe>
+            </div>
+        </section>'''
+
+    tags_section_html = f'<div class="game-tags">{tags_html}</div>' if tags_html else ''
+    features_card_html = f'<div class="info-card"><h3 class="card-title">Game Features</h3><ul class="features-list">{features_html}</ul></div>' if features_html else ''
+    controls_card_html = f'<div class="info-card"><h3 class="card-title">Controls</h3><div class="controls-grid">{controls_html}</div></div>' if controls_html else ''
+    related_section_html = f'<section class="related-games"><h2 class="section-title">More Games You Might Like</h2><div class="games-grid">{related_games_html}</div></section>' if related_games_html else ''
+
     html_content = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -248,12 +270,12 @@ def generate_game_page(game_data, related_games):
     <meta property="og:title" content="{title} | BTW Games">
     <meta property="og:description" content="{description}">
     <meta property="og:image" content="{thumbnail_url or 'https://btwgame.com/images/game-og.jpg'}">
-    <meta property="og:url" content="https://btwgame.com/games/{game_data['slug']}.html">
+    <meta property="og:url" content="https://btwgame.com/games/{game_data['slug']}">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{title} | BTW Games">
     <meta name="twitter:description" content="{description}">
-    <link rel="canonical" href="https://btwgame.com/games/{game_data['slug']}.html">
+    <link rel="canonical" href="https://btwgame.com/games/{game_data['slug']}">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM7PBYVK97"></script>
@@ -620,8 +642,8 @@ def generate_game_page(game_data, related_games):
 <body>
     <header>
         <nav class="container">
-            <a href="../index.html" class="logo">BTW Games</a>
-            <a href="../index.html" class="back-btn">← Back to Games</a>
+            <a href="/" class="logo">BTW Games</a>
+            <a href="/" class="back-btn">← Back to Games</a>
         </nav>
     </header>
 
@@ -646,12 +668,7 @@ def generate_game_page(game_data, related_games):
             </div>
         </section>
 
-        {'<section class="game-container" id="gameContainer">' if iframe_url else ''}
-            {'<div class="game-wrapper">' if iframe_url else ''}
-                {'<div class="loading-indicator">Loading game...</div>' if iframe_url else ''}
-                {f'<iframe id="gameIframe" class="game-iframe" src="{iframe_url}" title="{title}" allowfullscreen loading="lazy" onload="this.previousElementSibling.style.display=\'none\'"></iframe>' if iframe_url else ''}
-            {'</div>' if iframe_url else ''}
-        {'</section>' if iframe_url else ''}
+        {game_embed_html}
 
         <section class="game-content">
             <div class="game-description">
@@ -662,16 +679,16 @@ def generate_game_page(game_data, related_games):
                         Release Date: {release_date_formatted}
                     </p>
                 </div>
-                {f'<div class="game-tags">{tags_html}</div>' if tags_html else ''}
+                {tags_section_html}
             </div>
 
             <div class="game-sidebar">
-                {f'<div class="info-card"><h3 class="card-title">Game Features</h3><ul class="features-list">{features_html}</ul></div>' if features_html else ''}
-                {f'<div class="info-card"><h3 class="card-title">Controls</h3><div class="controls-grid">{controls_html}</div></div>' if controls_html else ''}
+                {features_card_html}
+                {controls_card_html}
             </div>
         </section>
 
-        {f'<section class="related-games"><h2 class="section-title">More Games You Might Like</h2><div class="games-grid">{related_games_html}</div></section>' if related_games_html else ''}
+        {related_section_html}
     </main>
 
     <footer>
@@ -788,8 +805,10 @@ def main():
         try:
             html_content = generate_game_page(game_data, related_games)
 
-            # Save to file
-            filename = f"static_html/games/{slug}.html"
+            # Save to directory-style clean URL path: /games/{slug}
+            output_dir = f"static_html/games/{slug}"
+            os.makedirs(output_dir, exist_ok=True)
+            filename = os.path.join(output_dir, "index.html")
             with open(filename, 'w', encoding='utf-8') as f:
                 f.write(html_content)
 
@@ -803,18 +822,6 @@ def main():
     # Save all games data to JSON
     if all_games_data:
         save_all_games_json(all_games_data)
-
-    games_listing = 'static_html/games.html'
-    games_index = 'static_html/games/index.html'
-    if os.path.exists(games_listing):
-        shutil.copy2(games_listing, games_index)
-        with open(games_index, 'r', encoding='utf-8') as f:
-            games_index_content = f.read()
-        if '<base href="../"' not in games_index_content:
-            games_index_content = games_index_content.replace('<head>', '<head>\n<base href="../">', 1)
-            with open(games_index, 'w', encoding='utf-8') as f:
-                f.write(games_index_content)
-        print(f"✅ Generated {games_index} for /games compatibility")
 
     print(f"\n🎯 Generation complete!")
     print(f"✅ Success: {success_count} pages")

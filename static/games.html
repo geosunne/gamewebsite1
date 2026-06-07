@@ -9,12 +9,12 @@
     <meta property="og:title" content="All Games | BTW Games">
     <meta property="og:description" content="Browse our complete collection of free online games. Play instantly in your browser.">
     <meta property="og:image" content="https://btwgame.com/images/games-og.jpg">
-    <meta property="og:url" content="https://btwgame.com/games.html">
+    <meta property="og:url" content="https://btwgame.com/games">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="All Games | BTW Games">
     <meta name="twitter:description" content="Browse our complete collection of free online games.">
-    <link rel="canonical" href="https://btwgame.com/games.html">
+    <link rel="canonical" href="https://btwgame.com/games">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM7PBYVK97"></script>
@@ -475,17 +475,17 @@
 <body>
     <header>
         <nav class="container">
-            <a href="index.html" class="logo">BTW Games</a>
+            <a href="/" class="logo">BTW Games</a>
             <button class="mobile-menu" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="games.html?filter=new">New Games</a></li>
-                <li><a href="games.html?filter=featured">Featured</a></li>
-                <li><a href="games.html">All Games</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/games?filter=new">New Games</a></li>
+                <li><a href="/games?filter=featured">Featured</a></li>
+                <li><a href="/games">All Games</a></li>
             </ul>
         </nav>
     </header>
@@ -567,7 +567,7 @@
         function createGameCard(game) {
             const card = document.createElement('div');
             card.className = 'game-card';
-            card.onclick = () => window.location.href = `games/${game.id}.html`;
+            card.onclick = () => window.location.href = `/games/${game.id}`;
 
             const badge = game.isNew ? '<div class="game-badge">NEW</div>' :
                          game.isFeatured ? '<div class="game-badge featured">FEATURED</div>' : '';

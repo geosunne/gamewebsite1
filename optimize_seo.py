@@ -73,7 +73,7 @@ def optimize_index_html():
         "description": "Free online games platform with 500+ browser games",
         "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://btwgame.com/games.html?search={search_term_string}",
+            "target": "https://btwgame.com/games?search={search_term_string}",
             "query-input": "required name=search_term_string"
         }
     }
@@ -100,7 +100,7 @@ def optimize_games_html():
     """Optimize games.html file"""
     print("🔧 Optimizing games.html...")
 
-    with open('static_html/games.html', 'r', encoding='utf-8') as f:
+    with open('static_html/games/index.html', 'r', encoding='utf-8') as f:
         content = f.read()
 
     soup = BeautifulSoup(content, 'html.parser')
@@ -127,12 +127,12 @@ def optimize_games_html():
     # Add canonical URL
     canonical = soup.find('link', attrs={'rel': 'canonical'})
     if not canonical:
-        canonical = soup.new_tag('link', rel='canonical', href='https://btwgame.com/games.html')
+        canonical = soup.new_tag('link', rel='canonical', href='https://btwgame.com/games')
         soup.head.append(canonical)
     else:
-        canonical['href'] = 'https://btwgame.com/games.html'
+        canonical['href'] = 'https://btwgame.com/games'
 
-    with open('static_html/games.html', 'w', encoding='utf-8') as f:
+    with open('static_html/games/index.html', 'w', encoding='utf-8') as f:
         f.write(str(soup))
 
     print("✅ games.html optimized")
@@ -149,7 +149,7 @@ def optimize_game_pages():
     games = data.get('games', []) if isinstance(data, dict) else data
 
     for game in games:
-        game_file = f"static_html/games/{game['slug']}.html"
+        game_file = f"static_html/games/{game['slug']}/index.html"
         if not os.path.exists(game_file):
             continue
 
@@ -195,7 +195,7 @@ def optimize_game_pages():
 
         og_url = soup.find('meta', attrs={'property': 'og:url'})
         if og_url:
-            og_url['content'] = f"https://btwgame.com/games/{game['slug']}.html"
+            og_url['content'] = f"https://btwgame.com/games/{game['slug']}"
 
         # Add structured data for game
         structured_data = {
@@ -203,7 +203,7 @@ def optimize_game_pages():
             "@type": "Game",
             "name": game['title'],
             "description": game.get('description', f"Play {game['title']} online for free."),
-            "url": f"https://btwgame.com/games/{game['slug']}.html",
+            "url": f"https://btwgame.com/games/{game['slug']}",
             "genre": get_category_name(game.get('category_id', 7)),
             "gamePlatform": "Web Browser",
             "operatingSystem": "Any",
@@ -235,7 +235,7 @@ def optimize_game_pages():
         # Update canonical URL
         canonical = soup.find('link', attrs={'rel': 'canonical'})
         if canonical:
-            canonical['href'] = f"https://btwgame.com/games/{game['slug']}.html"
+            canonical['href'] = f"https://btwgame.com/games/{game['slug']}"
 
         with open(game_file, 'w', encoding='utf-8') as f:
             f.write(str(soup))
@@ -254,8 +254,8 @@ def generate_xml_sitemap():
     games = data.get('games', []) if isinstance(data, dict) else data
 
     today = date.today().isoformat()
-    urls = ['https://btwgame.com/', 'https://btwgame.com/games.html']
-    urls.extend(f"https://btwgame.com/games/{game['slug']}.html" for game in games)
+    urls = ['https://btwgame.com/', 'https://btwgame.com/games']
+    urls.extend(f"https://btwgame.com/games/{game['slug']}" for game in games)
 
     with open('static_html/sitemap.xml', 'w', encoding='utf-8') as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
@@ -286,7 +286,7 @@ Sitemap: https://btwgame.com/sitemap.txt
 
 # Allow indexing of all game pages
 Allow: /games/
-Allow: /games.html
+Allow: /games
 
 # Block assets that don't need indexing
 Disallow: /assets/js/

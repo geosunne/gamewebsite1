@@ -2,7 +2,6 @@
 
 <html lang="en">
 <head>
-<base href="../">
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Browse all 50+ free online games at BTW Games. Find action, puzzle, racing, and strategy games. Play instantly in your browser with no downloads." name="description"/>
@@ -11,13 +10,12 @@
 <meta content="All Games | BTW Games" property="og:title"/>
 <meta content="Browse our complete collection of free online games. Play instantly in your browser." property="og:description"/>
 <meta content="https://btwgame.com/images/games-og.jpg" property="og:image"/>
-<meta content="https://btwgame.com/games.html" property="og:url"/>
+<meta content="https://btwgame.com/games" property="og:url"/>
 <meta content="website" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="All Games | BTW Games" name="twitter:title"/>
 <meta content="Browse our complete collection of free online games." name="twitter:description"/>
-<link href="https://btwgame.com/games.html" rel="canonical"/>
-<script src="https://fpyf8.com/88/tag.min.js" data-zone="177804" async data-cfasync="false"></script>
+<link href="https://btwgame.com/games" rel="canonical"/>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SM7PBYVK97"></script>
 <script>
@@ -475,17 +473,17 @@
 <body>
 <header>
 <nav class="container">
-<a class="logo" href="index.html"><img alt="BTW Games" src="assets/images/btwlogo.png" style="max-width: 150px; height: auto;"/></a>
+<a class="logo" href="/">BTW Games</a>
 <button class="mobile-menu" onclick="toggleMenu()">
 <span></span>
 <span></span>
 <span></span>
 </button>
 <ul class="nav-links" id="navLinks">
-<li><a href="index.html">Home</a></li>
-<li><a href="games.html?filter=new">New Games</a></li>
-<li><a href="games.html?filter=featured">Featured</a></li>
-<li><a href="games.html">All Games</a></li>
+<li><a href="/">Home</a></li>
+<li><a href="/games?filter=new">New Games</a></li>
+<li><a href="/games?filter=featured">Featured</a></li>
+<li><a href="/games">All Games</a></li>
 </ul>
 </nav>
 </header>
@@ -512,7 +510,7 @@
 </div>
 </div>
 <div class="categories-filter" id="categoriesFilter">
-<button class="category-btn active" onclick="filterByCategory('all')">🎮 All Games</button>
+<button class="category-btn active" onclick="filterByCategory('all')">All Games</button>
 </div>
 </section>
 <section class="games-section">
@@ -524,7 +522,6 @@
 <h3>No games found</h3>
 <p>Try adjusting your search or filters to find what you're looking for.</p>
 </div>
-<div id="loadMoreContainer"></div>
 </section>
 </main>
 <footer>
@@ -532,15 +529,12 @@
 <p>© 2025 BTW Games. All rights reserved.</p>
 </div>
 </footer>
-<script src="assets/js/games-data.js"></script>
 <script src="assets/js/api.js"></script>
 <script>
         let currentGames = [];
         let filteredGames = [];
         let currentFilter = 'all';
         let currentSort = 'popular';
-        let displayedCount = 0;
-        const GAMES_PER_LOAD = 100;
 
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
@@ -561,16 +555,16 @@
         function createGameCard(game) {
             const card = document.createElement('div');
             card.className = 'game-card';
-            card.onclick = () => window.location.href = `games/${game.slug}.html`;
+            card.onclick = () => window.location.href = `/games/${game.id}`;
 
-            const badge = game.is_new ? '<div class="game-badge">NEW</div>' :
-                         game.is_featured ? '<div class="game-badge featured">FEATURED</div>' : '';
+            const badge = game.isNew ? '<div class="game-badge">NEW</div>' :
+                         game.isFeatured ? '<div class="game-badge featured">FEATURED</div>' : '';
 
             card.innerHTML = `
                 <div class="game-thumbnail">
                     ${badge}
-                    ${game.thumbnail_url ? `<img src="${game.thumbnail_url}" alt="${game.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : ''}
-                    <div class="thumbnail-fallback" style="${game.thumbnail_url ? 'display:none;' : 'display: flex; align-items: center; justify-content: center;'} font-size: 42px; height: 100%; color: var(--apple-gray);">🎮</div>
+                    ${game.thumbnail ? `<img src="${game.thumbnail}" alt="${game.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : ''}
+                    <div class="thumbnail-fallback" style="${game.thumbnail ? 'display:none;' : 'display: flex; align-items: center; justify-content: center;'} font-size: 42px; height: 100%; color: var(--apple-gray);">🎮</div>
                     <div class="game-info">
                         <h3 class="game-title">${game.title}</h3>
                     </div>
@@ -586,11 +580,11 @@
 
             switch (sortBy) {
                 case 'popular':
-                    return sortedGames.sort((a, b) => (b.total_plays || 0) - (a.total_plays || 0));
+                    return sortedGames.sort((a, b) => b.plays - a.plays);
                 case 'newest':
-                    return sortedGames.sort((a, b) => new Date(b.release_date || 0) - new Date(a.release_date || 0));
+                    return sortedGames.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
                 case 'rating':
-                    return sortedGames.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+                    return sortedGames.sort((a, b) => b.rating - a.rating);
                 case 'name':
                     return sortedGames.sort((a, b) => a.title.localeCompare(b.title));
                 default:
@@ -607,34 +601,30 @@
             if (searchTerm) {
                 games = games.filter(game =>
                     game.title.toLowerCase().includes(searchTerm) ||
-                    (game.description && game.description.toLowerCase().includes(searchTerm)) ||
-                    (game.tags && game.tags.some(tag => tag.toLowerCase().includes(searchTerm)))
+                    game.description.toLowerCase().includes(searchTerm) ||
+                    game.tags.some(tag => tag.toLowerCase().includes(searchTerm))
                 );
             }
 
             // 分类过滤
             if (currentFilter !== 'all') {
-                games = games.filter(game => game.category_name === currentFilter);
+                games = games.filter(game => game.category === currentFilter);
             }
 
             // 排序
             games = sortGames(games, currentSort);
 
             filteredGames = games;
-            displayedCount = 0;
-            displayGames(false);
+            displayGames(games);
+            updateResultsCount(games.length);
         }
 
-        // 显示游戏（懒加载模式）
-        function displayGames(append = false) {
+        // 显示游戏
+        function displayGames(games) {
             const gamesGrid = document.getElementById('gamesGrid');
             const noResults = document.getElementById('noResults');
-            const loadMoreContainer = document.getElementById('loadMoreContainer');
 
-            // 清空加载按钮容器
-            loadMoreContainer.innerHTML = '';
-
-            if (filteredGames.length === 0) {
+            if (games.length === 0) {
                 gamesGrid.style.display = 'none';
                 noResults.style.display = 'block';
                 return;
@@ -642,46 +632,17 @@
 
             gamesGrid.style.display = 'grid';
             noResults.style.display = 'none';
+            gamesGrid.innerHTML = '';
 
-            if (!append) {
-                gamesGrid.innerHTML = '';
-                displayedCount = 0;
-            }
-
-            // 获取要显示的游戏（当前批次）
-            const startIndex = displayedCount;
-            const endIndex = Math.min(startIndex + GAMES_PER_LOAD, filteredGames.length);
-            const gamesToShow = filteredGames.slice(startIndex, endIndex);
-
-            // 渲染游戏卡片
-            gamesToShow.forEach(game => {
+            games.forEach(game => {
                 gamesGrid.appendChild(createGameCard(game));
             });
-
-            displayedCount = endIndex;
-
-            // 如果还有更多游戏，显示 Load More 按钮
-            if (displayedCount < filteredGames.length) {
-                const loadMoreBtn = document.createElement('button');
-                loadMoreBtn.id = 'loadMoreBtn';
-                loadMoreBtn.className = 'load-more-btn';
-                loadMoreBtn.textContent = `Load More (${filteredGames.length - displayedCount} remaining)`;
-                loadMoreBtn.onclick = () => displayGames(true);
-                loadMoreContainer.appendChild(loadMoreBtn);
-            }
-
-            // 更新结果计数
-            updateResultsCount(filteredGames.length);
         }
 
         // 更新结果计数
         function updateResultsCount(count) {
             const resultsCount = document.getElementById('resultsCount');
-            if (displayedCount < count) {
-                resultsCount.textContent = `Showing ${displayedCount} of ${count} games`;
-            } else {
-                resultsCount.textContent = `${count} games found`;
-            }
+            resultsCount.textContent = `${count} games found`;
         }
 
         // 按分类过滤
@@ -697,22 +658,6 @@
             filterGames();
         }
 
-        // 分类图标映射
-        const categoryIcons = {
-            'Action': '⚔️',
-            'Racing': '🏎️',
-            'Sports': '⚽',
-            'Shooter': '🔫',
-            'Puzzle': '🧩',
-            'Simulation': '🎮',
-            'io Games': '🌐',
-            'Parkour': '🏃',
-            'Clicker': '👆',
-            'Cooking': '🍳',
-            'Strategy': '♟️',
-            'Casual': '🎪'
-        };
-
         // 初始化分类按钮
         async function initializeCategories() {
             try {
@@ -722,8 +667,7 @@
                 categories.forEach(category => {
                     const btn = document.createElement('button');
                     btn.className = 'category-btn';
-                    const icon = categoryIcons[category] || '🎮';
-                    btn.textContent = `${icon} ${category}`;
+                    btn.textContent = category;
                     btn.onclick = () => filterByCategory(category);
                     categoriesFilter.appendChild(btn);
                 });
@@ -740,17 +684,18 @@
             try {
                 switch (params.filter) {
                     case 'new':
-                        currentGames = GAMES_DATA.getNewGames(1000); // 获取所有新游戏
+                        currentGames = await GAMES_DATA.getNewGames();
                         document.getElementById('pageTitle').textContent = '🆕 New Games';
                         document.getElementById('pageSubtitle').textContent = 'Check out our latest additions';
                         break;
                     case 'featured':
-                        currentGames = GAMES_DATA.getFeaturedGames(1000); // 获取所有精选游戏
+                        currentGames = await GAMES_DATA.getFeaturedGames();
                         document.getElementById('pageTitle').textContent = '🔥 Featured Games';
                         document.getElementById('pageSubtitle').textContent = 'Our most popular and recommended games';
                         break;
                     default:
-                        currentGames = GAMES_DATA.games; // 获取所有游戏
+                        await GAMES_DATA._ensureLoaded();
+                        currentGames = GAMES_DATA.games;
                         break;
                 }
             } catch (error) {
