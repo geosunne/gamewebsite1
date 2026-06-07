@@ -4,18 +4,18 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Play 50+ free online games at BTW Games! Enjoy action, puzzle, racing, and strategy games instantly in your browser. No downloads required." name="description"/>
+<meta content="Play 500+ free online games at BTW Games. Enjoy action, puzzle, racing, strategy, and casual browser games instantly with no downloads." name="description"/>
 <meta content="free online games, browser games, action games, puzzle games, racing games, strategy games, no download games, instant play games, BTW Games" name="keywords"/>
 <meta content="btwgame Games" name="author"/>
-<meta content="BTW Games - Free Online Games Collection" property="og:title"/>
-<meta content="Play 500+ free online games instantly! Action, puzzle, racing, strategy games and more. No downloads needed." property="og:description"/>
+<meta content="BTW Games - Free Online Games | Play 500+ Browser Games Instantly" property="og:title"/>
+<meta content="Play 500+ free online games instantly at BTW Games. Action, puzzle, racing, strategy, and casual games with no downloads." property="og:description"/>
 <meta content="https://btwgame.com/images/monster-survivors-og.jpg" property="og:image"/>
-<meta content="https://btwgame.com" property="og:url"/>
+<meta content="https://btwgame.com/" property="og:url"/>
 <meta content="website" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="BTW Games - Free Online Games Collection" name="twitter:title"/>
-<meta content="Discover amazing free online games. Play instantly in your browser - no downloads needed!" name="twitter:description"/>
-<link href="https://btwgame.com" rel="canonical"/>
+<meta content="BTW Games - Free Online Games | Play 500+ Browser Games Instantly" name="twitter:title"/>
+<meta content="Play 500+ free online games instantly at BTW Games. Action, puzzle, racing, strategy, and casual games with no downloads." name="twitter:description"/>
+<link href="https://btwgame.com/" rel="canonical"/>
 <script>(function (s) { s.dataset.zone = '10034304', s.src = 'https://groleegni.net/vignette.min.js' })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SM7PBYVK97"></script>
@@ -132,6 +132,27 @@
 
         .content-section {
             padding: 60px 0;
+        }
+
+        .page-intro {
+            padding: 44px 20px 16px;
+            text-align: center;
+        }
+
+        .page-title {
+            color: var(--apple-dark);
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin: 0 auto 14px;
+            max-width: 820px;
+        }
+
+        .page-summary {
+            color: var(--apple-gray);
+            font-size: 18px;
+            margin: 0 auto;
+            max-width: 760px;
         }
 
         h2 {
@@ -662,6 +683,11 @@
 </nav>
 </header>
 <main>
+<section aria-labelledby="home-title" class="page-intro container">
+<h1 class="page-title" id="home-title">Play Free Online Games at BTW Games</h1>
+<p class="page-summary">Explore 500+ action, puzzle, racing, strategy, and casual browser games with instant play.</p>
+</section>
+
 <!-- 搜索和分类区域 -->
 <section class="search-section container">
 <div class="search-box">
@@ -749,8 +775,7 @@
             const card = document.createElement('div');
             card.className = 'game-card';
 
-            // 使用新的动态游戏页面链接
-            card.onclick = () => window.location.href = `/games/${game.slug}`;
+            card.onclick = () => window.location.href = `games/${game.slug}.html`;
 
             const badge = (showBadge && game.is_new) ? '<div class="game-badge">NEW</div>' :
                          '';

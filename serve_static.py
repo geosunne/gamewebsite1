@@ -61,11 +61,16 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             path = 'index.html'
 
         # Handle game routes like /games/game-slug to games/game-slug.html
-        if path.startswith('games/') and not path.endswith('.html') and '.' not in os.path.basename(path):
+        basename = os.path.basename(path.rstrip('/'))
+        if path.startswith('games/') and not path.endswith('/') and basename and not path.endswith('.html') and '.' not in basename:
             path = path + '.html'
 
         # Construct full file path
         full_path = os.path.join("static_html", path)
+
+        if os.path.isdir(full_path):
+            full_path = os.path.join(full_path, 'index.html')
+            path = os.path.join(path, 'index.html')
 
         # Check if file exists
         if os.path.isfile(full_path):

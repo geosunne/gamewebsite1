@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import json
+from datetime import date
+from xml.sax.saxutils import escape
 
 def update_sitemap():
     # Read updated games data
@@ -18,7 +20,7 @@ def update_sitemap():
 
     # Add game URLs
     for game in games:
-        urls.append(f"{base_url}/games/{game['slug']}")
+        urls.append(f"{base_url}/games/{game['slug']}.html")
 
     # Write sitemap
     with open('static_html/sitemap.txt', 'w', encoding='utf-8') as f:
@@ -28,6 +30,23 @@ def update_sitemap():
     print(f"Updated sitemap.txt with {len(urls)} URLs")
     print(f"  - 2 main pages")
     print(f"  - {len(games)} game pages")
+
+    today = date.today().isoformat()
+    with open('static_html/sitemap.xml', 'w', encoding='utf-8') as f:
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+        f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
+        for index, url in enumerate(urls):
+            priority = '1.0' if index == 0 else '0.9' if index == 1 else '0.8'
+            changefreq = 'daily' if index < 2 else 'weekly'
+            f.write('    <url>\n')
+            f.write(f'        <loc>{escape(url)}</loc>\n')
+            f.write(f'        <lastmod>{today}</lastmod>\n')
+            f.write(f'        <changefreq>{changefreq}</changefreq>\n')
+            f.write(f'        <priority>{priority}</priority>\n')
+            f.write('    </url>\n')
+        f.write('</urlset>\n')
+
+    print(f"Updated sitemap.xml with {len(urls)} URLs")
 
 if __name__ == "__main__":
     update_sitemap()

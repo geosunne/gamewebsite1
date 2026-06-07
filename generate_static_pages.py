@@ -6,6 +6,7 @@ import requests
 import json
 import os
 import time
+import shutil
 from urllib.parse import urljoin
 from datetime import datetime
 
@@ -802,6 +803,18 @@ def main():
     # Save all games data to JSON
     if all_games_data:
         save_all_games_json(all_games_data)
+
+    games_listing = 'static_html/games.html'
+    games_index = 'static_html/games/index.html'
+    if os.path.exists(games_listing):
+        shutil.copy2(games_listing, games_index)
+        with open(games_index, 'r', encoding='utf-8') as f:
+            games_index_content = f.read()
+        if '<base href="../"' not in games_index_content:
+            games_index_content = games_index_content.replace('<head>', '<head>\n<base href="../">', 1)
+            with open(games_index, 'w', encoding='utf-8') as f:
+                f.write(games_index_content)
+        print(f"✅ Generated {games_index} for /games compatibility")
 
     print(f"\n🎯 Generation complete!")
     print(f"✅ Success: {success_count} pages")

@@ -2,7 +2,9 @@
 import json
 import os
 import re
+from datetime import date
 from bs4 import BeautifulSoup
+from xml.sax.saxutils import escape
 
 def get_category_name(category_id):
     """Get category name by ID"""
@@ -29,12 +31,12 @@ def optimize_index_html():
     # Update title
     title_tag = soup.find('title')
     if title_tag:
-        title_tag.string = "BTW Games - Free Online Games | Play 50+ Browser Games Instantly"
+        title_tag.string = "BTW Games - Free Online Games | Play 500+ Browser Games Instantly"
 
     # Update meta description
     meta_desc = soup.find('meta', attrs={'name': 'description'})
     if meta_desc:
-        meta_desc['content'] = "Play 50+ free online games at BTW Games! Enjoy action, puzzle, racing, and strategy games instantly in your browser. No downloads required."
+        meta_desc['content'] = "Play 500+ free online games at BTW Games. Enjoy action, puzzle, racing, strategy, and casual browser games instantly with no downloads."
 
     # Update meta keywords
     meta_keywords = soup.find('meta', attrs={'name': 'keywords'})
@@ -44,19 +46,31 @@ def optimize_index_html():
     # Update Open Graph tags
     og_title = soup.find('meta', attrs={'property': 'og:title'})
     if og_title:
-        og_title['content'] = "BTW Games - Free Online Games Collection"
+        og_title['content'] = "BTW Games - Free Online Games | Play 500+ Browser Games Instantly"
 
     og_desc = soup.find('meta', attrs={'property': 'og:description'})
     if og_desc:
-        og_desc['content'] = "Play 50+ free online games instantly! Action, puzzle, racing, strategy games and more. No downloads needed."
+        og_desc['content'] = "Play 500+ free online games instantly at BTW Games. Action, puzzle, racing, strategy, and casual games with no downloads."
+
+    og_url = soup.find('meta', attrs={'property': 'og:url'})
+    if og_url:
+        og_url['content'] = "https://btwgame.com/"
+
+    twitter_title = soup.find('meta', attrs={'name': 'twitter:title'})
+    if twitter_title:
+        twitter_title['content'] = "BTW Games - Free Online Games | Play 500+ Browser Games Instantly"
+
+    twitter_desc = soup.find('meta', attrs={'name': 'twitter:description'})
+    if twitter_desc:
+        twitter_desc['content'] = "Play 500+ free online games instantly at BTW Games. Action, puzzle, racing, strategy, and casual games with no downloads."
 
     # Add structured data for website
     structured_data = {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "BTW Games",
-        "url": "https://btwgame.com",
-        "description": "Free online games platform with 50+ browser games",
+        "url": "https://btwgame.com/",
+        "description": "Free online games platform with 500+ browser games",
         "potentialAction": {
             "@type": "SearchAction",
             "target": "https://btwgame.com/games.html?search={search_term_string}",
@@ -74,6 +88,8 @@ def optimize_index_html():
     if not canonical:
         canonical = soup.new_tag('link', rel='canonical', href='https://btwgame.com/')
         soup.head.append(canonical)
+    else:
+        canonical['href'] = 'https://btwgame.com/'
 
     with open('static_html/index.html', 'w', encoding='utf-8') as f:
         f.write(str(soup))
@@ -113,6 +129,8 @@ def optimize_games_html():
     if not canonical:
         canonical = soup.new_tag('link', rel='canonical', href='https://btwgame.com/games.html')
         soup.head.append(canonical)
+    else:
+        canonical['href'] = 'https://btwgame.com/games.html'
 
     with open('static_html/games.html', 'w', encoding='utf-8') as f:
         f.write(str(soup))
@@ -235,36 +253,23 @@ def generate_xml_sitemap():
     # Extract games array from the data structure
     games = data.get('games', []) if isinstance(data, dict) else data
 
-    # Create XML sitemap
-    xml_content = '''<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://btwgame.com/</loc>
-        <lastmod>2025-01-20</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://btwgame.com/games</loc>
-        <lastmod>2025-01-20</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.9</priority>
-    </url>
-'''
-
-    for game in games:
-        xml_content += f'''    <url>
-        <loc>https://btwgame.com/games/{game['slug']}</loc>
-        <lastmod>2025-01-20</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-'''
-
-    xml_content += '</urlset>'
+    today = date.today().isoformat()
+    urls = ['https://btwgame.com/', 'https://btwgame.com/games.html']
+    urls.extend(f"https://btwgame.com/games/{game['slug']}.html" for game in games)
 
     with open('static_html/sitemap.xml', 'w', encoding='utf-8') as f:
-        f.write(xml_content)
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+        f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
+        for index, url in enumerate(urls):
+            priority = '1.0' if index == 0 else '0.9' if index == 1 else '0.8'
+            changefreq = 'daily' if index < 2 else 'weekly'
+            f.write('    <url>\n')
+            f.write(f'        <loc>{escape(url)}</loc>\n')
+            f.write(f'        <lastmod>{today}</lastmod>\n')
+            f.write(f'        <changefreq>{changefreq}</changefreq>\n')
+            f.write(f'        <priority>{priority}</priority>\n')
+            f.write('    </url>\n')
+        f.write('</urlset>\n')
 
     print("✅ XML sitemap generated")
 
@@ -306,9 +311,6 @@ Allow: /
 
 def main():
     print("🚀 Starting SEO optimization...")
-
-    # Change to project directory
-    os.chdir('/Users/jiaoyang/Work/code/gamewebsite1')
 
     # Run all optimizations
     optimize_index_html()
