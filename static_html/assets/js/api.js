@@ -17,6 +17,10 @@ class GameAPI {
 
         try {
             const response = await fetch(url, config);
+            const contentType = response.headers.get('content-type') || '';
+            if (!contentType.includes('application/json')) {
+                throw new Error(`Expected JSON response from ${url}`);
+            }
             const data = await response.json();
 
             if (!response.ok) {
@@ -25,7 +29,6 @@ class GameAPI {
 
             return data;
         } catch (error) {
-            console.error('API request failed:', error);
             throw error;
         }
     }
@@ -132,6 +135,63 @@ class GameDataAdapter {
     constructor() {
         this.api = new GameAPI();
         this.cachedCategories = null;
+        this.cachedStaticGames = null;
+    }
+
+    async getStaticGames() {
+        if (!this.cachedStaticGames) {
+            const response = await fetch('/all_games.json');
+            const data = await response.json();
+            this.cachedStaticGames = Array.isArray(data) ? data : (data.games || []);
+        }
+        return this.cachedStaticGames;
+    }
+
+    async getStaticCategories() {
+        if (!this.cachedCategories) {
+            const response = await fetch('/categories.json');
+            const data = await response.json();
+            this.cachedCategories = data.map(cat => cat.name || cat);
+        }
+        return this.cachedCategories;
+    }
+
+    sortGames(games, sort = 'popular') {
+        const sorted = [...games];
+        if (sort === 'newest') {
+            sorted.sort((a, b) => new Date(b.created_at || b.release_date || 0) - new Date(a.created_at || a.release_date || 0));
+        } else if (sort === 'rating') {
+            sorted.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        } else if (sort === 'title') {
+            sorted.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+        } else {
+            sorted.sort((a, b) => (b.total_plays || b.plays || 0) - (a.total_plays || a.plays || 0));
+        }
+        return sorted;
+    }
+
+    async getStaticGamesList(params = {}) {
+        let games = (await this.getStaticGames()).filter(game => game.is_active !== false);
+        if (params.featured) {
+            games = games.filter(game => game.is_featured || game.isFeatured);
+        }
+        if (params.new) {
+            games = games.filter(game => game.is_new || game.isNew);
+        }
+        if (params.category && params.category !== 'all') {
+            games = games.filter(game => (game.category_name || game.category) === params.category);
+        }
+        if (params.q) {
+            const query = String(params.q).toLowerCase();
+            games = games.filter(game => [game.title, game.description, game.category_name, ...(game.tags || [])]
+                .filter(Boolean)
+                .join(' ')
+                .toLowerCase()
+                .includes(query));
+        }
+        games = this.sortGames(games, params.sort);
+        const limit = Number(params.per_page || params.limit || games.length);
+        return games.slice(0, limit).map(game => this.convertGameFormat(game));
     }
 
     // Convert API game format to legacy format
@@ -170,8 +230,9 @@ class GameDataAdapter {
             }
             return this.convertGameFormat(response.game);
         } catch (error) {
-            console.error('Error fetching game:', error);
-            return null;
+            const games = await this.getStaticGames();
+            const game = games.find(item => String(item.slug || item.id) === String(gameId));
+            return game ? this.convertGameFormat(game) : null;
         }
     }
 
@@ -180,8 +241,7 @@ class GameDataAdapter {
             const games = await this.api.getFeaturedGames();
             return games.map(game => this.convertGameFormat(game));
         } catch (error) {
-            console.error('Error fetching featured games:', error);
-            return [];
+            return await this.getStaticGamesList({ featured: true, sort: 'popular', per_page: 6 });
         }
     }
 
@@ -190,8 +250,7 @@ class GameDataAdapter {
             const games = await this.api.getNewGames(limit);
             return games.map(game => this.convertGameFormat(game));
         } catch (error) {
-            console.error('Error fetching new games:', error);
-            return [];
+            return await this.getStaticGamesList({ new: true, sort: 'newest', per_page: limit });
         }
     }
 
@@ -200,8 +259,7 @@ class GameDataAdapter {
             const games = await this.api.getPopularGames(limit);
             return games.map(game => this.convertGameFormat(game));
         } catch (error) {
-            console.error('Error fetching popular games:', error);
-            return [];
+            return await this.getStaticGamesList({ sort: 'popular', per_page: limit });
         }
     }
 
@@ -210,8 +268,7 @@ class GameDataAdapter {
             const games = await this.api.getGamesByCategory(category);
             return games.map(game => this.convertGameFormat(game));
         } catch (error) {
-            console.error('Error fetching games by category:', error);
-            return [];
+            return await this.getStaticGamesList({ category, sort: 'popular' });
         }
     }
 
@@ -223,8 +280,7 @@ class GameDataAdapter {
             }
             return this.cachedCategories;
         } catch (error) {
-            console.error('Error fetching categories:', error);
-            return [];
+            return await this.getStaticCategories();
         }
     }
 
@@ -233,8 +289,7 @@ class GameDataAdapter {
             const response = await this.api.searchGames(query);
             return response.games.map(game => this.convertGameFormat(game));
         } catch (error) {
-            console.error('Error searching games:', error);
-            return [];
+            return await this.getStaticGamesList({ q: query, sort: 'popular' });
         }
     }
 
@@ -249,7 +304,7 @@ class GameDataAdapter {
             }
             await this.api.recordGamePlay(numericGameId, duration);
         } catch (error) {
-            console.error('Error recording game play:', error);
+            // Static deployments do not expose analytics write endpoints.
         }
     }
 }
@@ -267,8 +322,7 @@ if (typeof GAMES_DATA === 'undefined') {
         async _ensureLoaded() {
             if (!this._loaded) {
                 try {
-                    const response = await GAMES_API.api.getGames({ per_page: 100 });
-                    this.games = response.games.map(game => GAMES_API.convertGameFormat(game));
+                    this.games = await GAMES_API.getStaticGamesList({ per_page: 1000, sort: 'popular' });
                     this._loaded = true;
                 } catch (error) {
                     console.error('Error loading games data:', error);
