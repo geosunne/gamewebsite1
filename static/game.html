@@ -392,8 +392,8 @@
 <body>
     <header>
         <nav class="container">
-            <a href="index.html" class="logo">BTW Games</a>
-            <a href="index.html" class="back-btn">← Back to Games</a>
+            <a href="/" class="logo">BTW Games</a>
+            <a href="/" class="back-btn">← Back to Games</a>
         </nav>
     </header>
 
@@ -505,14 +505,14 @@
         function loadGame(gameId) {
             if (!gameId) {
                 // 如果没有游戏ID，返回首页
-                window.location.href = 'index.html';
+                window.location.href = '/';
                 return;
             }
 
             const game = GAMES_DATA.getGame(gameId);
             if (!game) {
                 // 如果找不到游戏，返回首页
-                window.location.href = 'index.html';
+                window.location.href = '/';
                 return;
             }
 

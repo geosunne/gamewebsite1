@@ -11,7 +11,7 @@ This script orchestrates the complete workflow for building the BTW Games websit
 5. 📊 Generate sitemaps
 
 Usage:
-    python build_website.py [options]
+    python3 build_website.py [options]
 
 Options:
     --max-games N        Maximum number of games to scrape (default: 100)
@@ -24,10 +24,10 @@ Options:
     --serve-port PORT    Port for development server (default: 8001)
 
 Examples:
-    python build_website.py                    # Full build with defaults
-    python build_website.py --max-games 50     # Scrape max 50 games
-    python build_website.py --skip-scraping    # Use existing JSON data
-    python build_website.py --serve            # Build and start server
+    python3 build_website.py                    # Full build with defaults
+    python3 build_website.py --max-games 50     # Scrape max 50 games
+    python3 build_website.py --skip-scraping    # Use existing JSON data
+    python3 build_website.py --serve            # Build and start server
 """
 
 import argparse
@@ -142,7 +142,7 @@ def scrape_games(max_games=100):
         print_info(f"Backed up existing data to {backup_name}")
 
     # Run scraping script
-    command = f"timeout 600 python analyze_onlinegames_structure.py --max-games {max_games}"
+    command = f"timeout 600 python3 analyze_onlinegames_structure.py --max-games {max_games}"
     success = run_command(command, f"Scraping {max_games} games")
 
     if success and os.path.exists("games_data.json"):
@@ -172,7 +172,7 @@ def import_to_database():
         return False
 
     # Run import script
-    success = run_command("python import_games_data.py", "Importing games to database")
+    success = run_command("python3 import_games_data.py", "Importing games to database")
 
     if success:
         print_success("Database import completed")
@@ -192,10 +192,20 @@ def generate_static_files():
     # Create static_html directory if it doesn't exist
     os.makedirs("static_html", exist_ok=True)
 
+    # Recreate games output so stale /games/*.html files do not remain after
+    # switching to directory-style clean URLs.
+    games_output_dir = "static_html/games"
+    if os.path.exists(games_output_dir):
+        shutil.rmtree(games_output_dir)
+    os.makedirs(games_output_dir, exist_ok=True)
+    stale_games_file = "static_html/games.html"
+    if os.path.exists(stale_games_file):
+        os.remove(stale_games_file)
+
     # Copy main templates
     templates_to_copy = [
         ("static/index.html", "static_html/index.html"),
-        ("static/games.html", "static_html/games.html"),
+        ("static/games.html", "static_html/games/index.html"),
         ("static/assets", "static_html/assets"),
     ]
 
@@ -206,11 +216,12 @@ def generate_static_files():
                     shutil.rmtree(dst)
                 shutil.copytree(src, dst)
             else:
+                os.makedirs(os.path.dirname(dst), exist_ok=True)
                 shutil.copy2(src, dst)
             print_info(f"Copied {src} → {dst}")
 
     # Generate individual game pages
-    success = run_command("python generate_static_pages.py", "Generating individual game pages")
+    success = run_command("python3 generate_static_pages.py", "Generating individual game pages")
 
     if success:
         print_success("Static file generation completed")
@@ -227,7 +238,7 @@ def optimize_seo():
         print_error("optimize_seo.py not found!")
         return False
 
-    success = run_command("python optimize_seo.py", "Optimizing SEO")
+    success = run_command("python3 optimize_seo.py", "Optimizing SEO")
 
     if success:
         print_success("SEO optimization completed")
@@ -247,7 +258,7 @@ def update_data_files():
 
     for script, description in scripts:
         if os.path.exists(script):
-            success = run_command(f"python {script}", description)
+            success = run_command(f"python3 {script}", description)
             if not success:
                 print_warning(f"Failed to run {script}, continuing...")
         else:
@@ -275,7 +286,7 @@ def cleanup_and_finalize():
         print_info(f"Generated {total_files} files in {total_dirs} directories")
 
         # Check key files
-        key_files = ["index.html", "games.html", "sitemap.xml", "robots.txt"]
+        key_files = ["index.html", "games/index.html", "sitemap.xml", "robots.txt"]
         for file in key_files:
             if os.path.exists(f"static_html/{file}"):
                 print_success(f"✓ {file}")
@@ -295,7 +306,7 @@ def serve_website(port=8001):
 
     try:
         if os.path.exists("serve_static.py"):
-            command = f"python serve_static.py --port {port}"
+            command = f"python3 serve_static.py --port {port}"
             print_info(f"Starting server: {command}")
             print_info(f"Visit: http://localhost:{port}")
             print_info("Press Ctrl+C to stop")
@@ -303,7 +314,7 @@ def serve_website(port=8001):
         else:
             # Fallback to Python's built-in server
             os.chdir("static_html")
-            command = f"python -m http.server {port}"
+            command = f"python3 -m http.server {port}"
             print_info(f"Starting basic server: {command}")
             print_info(f"Visit: http://localhost:{port}")
             subprocess.run(command, shell=True)

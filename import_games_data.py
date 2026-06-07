@@ -99,7 +99,10 @@ def import_games_from_json(json_file_path):
                         skipped_count += 1
                         continue
 
-                    # Get iframe URL and clean it
+                    # Get source page URL and iframe URL. Keep game_url as the
+                    # original source page, and iframe_url as the playable embed.
+                    source_url = clean_url(game_data.get('url'))
+
                     iframe_url = clean_url(iframes[0]['src'])
                     if not iframe_url:
                         print(f"Skipping '{title}': Invalid iframe URL")
@@ -134,7 +137,7 @@ def import_games_from_json(json_file_path):
                         description=description[:1000],  # Limit to 1000 chars
                         long_description=description,
                         thumbnail_url=thumbnail_url,
-                        game_url=iframe_url,
+                        game_url=source_url or iframe_url,
                         iframe_url=iframe_url,
                         category_id=category.id,
                         rating=0.0,

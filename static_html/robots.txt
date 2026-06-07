@@ -7,7 +7,7 @@ Sitemap: https://btwgame.com/sitemap.txt
 
 # Allow indexing of all game pages
 Allow: /games/
-Allow: /games.html
+Allow: /games
 
 # Block assets that don't need indexing
 Disallow: /assets/js/

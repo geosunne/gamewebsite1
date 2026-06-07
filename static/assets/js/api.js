@@ -138,16 +138,20 @@ class GameDataAdapter {
     convertGameFormat(apiGame) {
         return {
             id: apiGame.slug || apiGame.id, // Use slug as ID for backward compatibility
+            slug: apiGame.slug || apiGame.id,
             title: apiGame.title,
             description: apiGame.description,
             thumbnail: apiGame.thumbnail_url || '',
+            thumbnail_url: apiGame.thumbnail_url || '',
             category: apiGame.category_name,
             tags: apiGame.tags || [],
             rating: apiGame.rating,
             plays: apiGame.total_plays,
             isFeatured: apiGame.is_featured,
             isNew: apiGame.is_new,
-            gameUrl: apiGame.game_url,
+            sourceUrl: apiGame.game_url,
+            gameUrl: apiGame.iframe_url || apiGame.game_url,
+            iframeUrl: apiGame.iframe_url || apiGame.game_url,
             controls: apiGame.controls || {},
             features: apiGame.features || [],
             releaseDate: apiGame.release_date

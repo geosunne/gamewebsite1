@@ -87,7 +87,7 @@ START_TIME=$(date +%s)
 # Step 1: Scraping (optional)
 if [ "$SKIP_SCRAPING" = false ]; then
     print_step "Step 1: Scraping $MAX_GAMES games"
-    if timeout 300 python analyze_onlinegames_structure.py --max-games $MAX_GAMES; then
+    if timeout 300 python3 analyze_onlinegames_structure.py --max-games $MAX_GAMES; then
         print_success "Scraping completed"
     else
         print_error "Scraping failed!"
@@ -104,7 +104,7 @@ fi
 
 # Step 2: Import to database
 print_step "Step 2: Importing to database"
-if python import_games_data.py; then
+if python3 import_games_data.py; then
     print_success "Database import completed"
 else
     print_error "Database import failed!"
@@ -114,17 +114,20 @@ fi
 # Step 3: Copy templates
 print_step "Step 3: Preparing static files"
 mkdir -p static_html
+rm -rf static_html/games
+rm -f static_html/games.html
+mkdir -p static_html/games
 
 # Copy main files
 cp static/index.html static_html/
-cp static/games.html static_html/
+cp static/games.html static_html/games/index.html
 cp -r static/assets static_html/ 2>/dev/null || true
 
 print_success "Templates copied"
 
 # Step 4: Generate game pages
 print_step "Step 4: Generating game pages"
-if python generate_static_pages.py; then
+if python3 generate_static_pages.py; then
     print_success "Game pages generated"
 else
     print_error "Game page generation failed!"
@@ -133,7 +136,7 @@ fi
 
 # Step 5: SEO optimization
 print_step "Step 5: SEO optimization"
-if python optimize_seo.py; then
+if python3 optimize_seo.py; then
     print_success "SEO optimization completed"
 else
     print_info "SEO optimization failed, continuing..."
@@ -141,8 +144,8 @@ fi
 
 # Step 6: Update supporting files
 print_step "Step 6: Updating data files"
-python update_game_slugs.py 2>/dev/null || print_info "update_game_slugs.py not found, skipping"
-python update_sitemap.py 2>/dev/null || print_info "update_sitemap.py not found, skipping"
+python3 update_game_slugs.py 2>/dev/null || print_info "update_game_slugs.py not found, skipping"
+python3 update_sitemap.py 2>/dev/null || print_info "update_sitemap.py not found, skipping"
 print_success "Data files updated"
 
 # Calculate build time
@@ -165,10 +168,10 @@ fi
 if [ "$SERVE" = true ]; then
     echo -e "\n${PURPLE}🚀 Starting development server...${NC}"
     if [ -f "serve_static.py" ]; then
-        python serve_static.py --port $PORT
+        python3 serve_static.py --port $PORT
     else
         echo -e "${YELLOW}serve_static.py not found, using basic server${NC}"
         cd static_html
-        python -m http.server $PORT
+        python3 -m http.server $PORT
     fi
 fi

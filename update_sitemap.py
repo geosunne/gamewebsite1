@@ -15,12 +15,12 @@ def update_sitemap():
     base_url = "https://btwgame.com"
     urls = [
         f"{base_url}/",
-        f"{base_url}/games.html"
+        f"{base_url}/games"
     ]
 
     # Add game URLs
     for game in games:
-        urls.append(f"{base_url}/games/{game['slug']}.html")
+        urls.append(f"{base_url}/games/{game['slug']}")
 
     # Write sitemap
     with open('static_html/sitemap.txt', 'w', encoding='utf-8') as f:
@@ -47,6 +47,13 @@ def update_sitemap():
         f.write('</urlset>\n')
 
     print(f"Updated sitemap.xml with {len(urls)} URLs")
+
+    with open('static_html/_redirects', 'w', encoding='utf-8') as f:
+        f.write('/index.html / 308\n')
+        f.write('/games.html /games 308\n')
+        f.write('/games/:slug.html /games/:slug 308\n')
+
+    print("Updated _redirects for legacy .html URLs")
 
 if __name__ == "__main__":
     update_sitemap()

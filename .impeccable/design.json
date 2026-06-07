@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-07T14:36:00+08:00",
+  "title": "Design System: BTW Games",
+  "extensions": {
+    "colorMeta": {
+      "play-blue": {
+        "role": "primary",
+        "displayName": "Play Blue",
+        "canonical": "#007AFF",
+        "tonalRamp": ["#E8F2FF", "#B8D9FF", "#5AA7FF", "#007AFF", "#0057B8"]
+      },
+      "trust-ink": {
+        "role": "neutral",
+        "displayName": "Trust Ink",
+        "canonical": "#1C1C1E",
+        "tonalRamp": ["#F2F2F7", "#8E8E93", "#48484A", "#1C1C1E", "#0B0B0C"]
+      },
+      "success-green": {
+        "role": "secondary",
+        "displayName": "Success Green",
+        "canonical": "#34C759",
+        "tonalRamp": ["#E9F9ED", "#AEEBBC", "#66D882", "#34C759", "#1D7F38"]
+      },
+      "alert-red": {
+        "role": "state",
+        "displayName": "Alert Red",
+        "canonical": "#FF3B30",
+        "tonalRamp": ["#FFECEB", "#FFB7B2", "#FF756D", "#FF3B30", "#B51D16"]
+      },
+      "future-arcade-yellow": {
+        "role": "future-accent",
+        "displayName": "Arcade Yellow",
+        "canonical": "#FFCC00",
+        "tonalRamp": ["#FFF8D8", "#FFE98A", "#FFD93D", "#FFCC00", "#8A6A00"]
+      },
+      "future-berry-violet": {
+        "role": "future-accent",
+        "displayName": "Berry Violet",
+        "canonical": "#7C3AED",
+        "tonalRamp": ["#F1E9FF", "#D7C2FF", "#A977FF", "#7C3AED", "#4A1DA8"]
+      },
+      "future-coral-pop": {
+        "role": "future-accent",
+        "displayName": "Coral Pop",
+        "canonical": "#FF6B4A",
+        "tonalRamp": ["#FFF0EC", "#FFC4B6", "#FF9278", "#FF6B4A", "#A93820"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page titles and primary landing statements. Keep fast and readable."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Short descriptions, game summaries, and support copy with 65 to 75ch line length."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Filters, badges, counts, and compact state text."
+      }
+    },
+    "shadows": [
+      {
+        "name": "ambient-low",
+        "value": "0 2px 15px rgba(0, 0, 0, 0.1)",
+        "purpose": "Current low elevation for header, panels, and content cards."
+      },
+      {
+        "name": "ambient-high",
+        "value": "0 10px 40px rgba(0, 0, 0, 0.15)",
+        "purpose": "Major game containers and active hover states only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-fast-play",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Quick hover and filter feedback."
+      },
+      {
+        "name": "duration-fast",
+        "value": "160ms",
+        "purpose": "Buttons, chips, and link state changes."
+      },
+      {
+        "name": "duration-card",
+        "value": "260ms",
+        "purpose": "Game card lift and thumbnail treatments."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "640px"
+      },
+      {
+        "name": "tablet",
+        "value": "768px"
+      },
+      {
+        "name": "desktop",
+        "value": "1200px"
+      }
+    ],
+    "northStar": "Play Arcade",
+    "rules": [
+      "Game thumbnails carry visual variety.",
+      "Every new accent color needs a category, state, or action role.",
+      "Avoid casino, preschool, and dark esports cues.",
+      "Playfulness must preserve readability and trust."
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main action button for browsing and opening games.",
+      "html": "<button class=\"ds-btn-primary\">Play game</button>",
+      "css": ".ds-btn-primary { background: #007AFF; color: #FFFFFF; border: 0; border-radius: 12px; padding: 12px 20px; font: 600 16px/1.2 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; transition: transform 160ms cubic-bezier(0.22, 1, 0.36, 1), background 160ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-primary:hover { background: #0057B8; transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 3px solid #B8D9FF; outline-offset: 2px; }"
+    },
+    {
+      "name": "Game Card",
+      "kind": "card",
+      "refersTo": "card-game",
+      "description": "Thumbnail-led card for game discovery grids.",
+      "html": "<article class=\"ds-game-card\"><div class=\"ds-thumb\"></div><h3>Game title</h3></article>",
+      "css": ".ds-game-card { background: #FFFFFF; color: #1C1C1E; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-game-card:hover { transform: translateY(-3px); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); } .ds-game-card h3 { margin: 12px 14px 16px; font: 600 20px/1.25 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; } .ds-thumb { aspect-ratio: 16 / 10; background: #F2F2F7; }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "button-primary",
+      "description": "Compact filter control for category browsing.",
+      "html": "<button class=\"ds-chip is-active\">Action</button>",
+      "css": ".ds-chip { border: 2px solid #F2F2F7; background: #FFFFFF; color: #1C1C1E; border-radius: 999px; padding: 8px 16px; font: 600 14px/1.2 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; } .ds-chip.is-active { border-color: #007AFF; background: #E8F2FF; color: #0057B8; } .ds-chip:focus-visible { outline: 3px solid #B8D9FF; outline-offset: 2px; }"
+    }
+  ]
+}

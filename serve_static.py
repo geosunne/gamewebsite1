@@ -25,11 +25,34 @@ import socketserver
 import os
 import sys
 import argparse
+import http.client
 import webbrowser
 import threading
 import time
+import subprocess
 from urllib.parse import urlparse, unquote
 import mimetypes
+
+API_PROXY_HOST = os.environ.get('API_PROXY_HOST', 'localhost')
+API_PROXY_PORT = int(os.environ.get('API_PROXY_PORT', '5001'))
+PROXY_SKIP_HEADERS = {
+    'connection',
+    'keep-alive',
+    'proxy-authenticate',
+    'proxy-authorization',
+    'te',
+    'trailers',
+    'transfer-encoding',
+    'upgrade',
+    'server',
+    'date',
+    'access-control-allow-origin',
+    'access-control-allow-methods',
+    'access-control-allow-headers',
+    'cache-control',
+    'pragma',
+    'expires',
+}
 
 class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     """Custom HTTP request handler for static files"""
@@ -50,6 +73,18 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         """Handle GET requests with custom routing"""
         parsed_path = urlparse(self.path)
+
+        if parsed_path.path.startswith('/api/'):
+            self.proxy_api_request()
+            return
+
+        clean_url = self.get_clean_url_redirect(parsed_path)
+        if clean_url:
+            self.send_response(308)
+            self.send_header('Location', clean_url)
+            self.end_headers()
+            return
+
         path = unquote(parsed_path.path)
 
         # Remove leading slash for file system
@@ -59,11 +94,6 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         # Default to index.html for root
         if path == '' or path == '/':
             path = 'index.html'
-
-        # Handle game routes like /games/game-slug to games/game-slug.html
-        basename = os.path.basename(path.rstrip('/'))
-        if path.startswith('games/') and not path.endswith('/') and basename and not path.endswith('.html') and '.' not in basename:
-            path = path + '.html'
 
         # Construct full file path
         full_path = os.path.join("static_html", path)
@@ -99,6 +129,77 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         else:
             # Send 404 with custom page
             self.send_404()
+
+    def get_clean_url_redirect(self, parsed_path):
+        """Return clean URL target for legacy .html paths."""
+        path = parsed_path.path
+        target = None
+
+        if path == '/index.html':
+            target = '/'
+        elif path == '/games.html':
+            target = '/games'
+        elif path.startswith('/games/') and path.endswith('.html'):
+            target = path[:-5]
+
+        if target and parsed_path.query:
+            target = f"{target}?{parsed_path.query}"
+
+        return target
+
+    def do_POST(self):
+        """Proxy API POST requests to the Flask backend"""
+        parsed_path = urlparse(self.path)
+
+        if parsed_path.path.startswith('/api/'):
+            self.proxy_api_request()
+            return
+
+        self.send_404()
+
+    def do_OPTIONS(self):
+        """Handle CORS preflight requests"""
+        parsed_path = urlparse(self.path)
+
+        if parsed_path.path.startswith('/api/'):
+            self.proxy_api_request()
+            return
+
+        self.send_response(204)
+        self.end_headers()
+
+    def proxy_api_request(self):
+        """Proxy /api requests to the local Flask development server"""
+        body = None
+        content_length = int(self.headers.get('Content-Length', 0))
+        if content_length:
+            body = self.rfile.read(content_length)
+
+        try:
+            connection = http.client.HTTPConnection(API_PROXY_HOST, API_PROXY_PORT, timeout=10)
+            headers = {key: value for key, value in self.headers.items() if key.lower() != 'host'}
+            connection.request(self.command, self.path, body=body, headers=headers)
+            response = connection.getresponse()
+            response_body = response.read()
+
+            self.send_response(response.status)
+            for header, value in response.getheaders():
+                if header.lower() in PROXY_SKIP_HEADERS:
+                    continue
+                self.send_header(header, value)
+            self.end_headers()
+            self.wfile.write(response_body)
+        except Exception as error:
+            self.send_response(502)
+            self.send_header('Content-type', 'application/json')
+            self.end_headers()
+            message = f'{{"error":"API proxy failed","detail":"{str(error)}"}}'
+            self.wfile.write(message.encode('utf-8'))
+        finally:
+            try:
+                connection.close()
+            except Exception:
+                pass
 
     def send_404(self):
         """Send custom 404 page"""
@@ -176,7 +277,7 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             Maybe it's time to discover a new adventure?
         </p>
         <a href="/" class="btn">🏠 Back to Home</a>
-        <a href="/games.html" class="btn">🎯 Browse All Games</a>
+        <a href="/games" class="btn">🎯 Browse All Games</a>
     </div>
 </body>
 </html>
@@ -215,6 +316,58 @@ def open_browser(host, port, delay=2):
     thread.daemon = True
     thread.start()
 
+def wait_for_api_backend(timeout=15):
+    """Wait until the local Flask API answers requests"""
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        try:
+            connection = http.client.HTTPConnection(API_PROXY_HOST, API_PROXY_PORT, timeout=2)
+            connection.request('GET', '/api/categories')
+            response = connection.getresponse()
+            response.read()
+            if response.status < 500:
+                return True
+        except Exception:
+            time.sleep(0.5)
+        finally:
+            try:
+                connection.close()
+            except Exception:
+                pass
+    return False
+
+def start_api_backend():
+    """Start Flask API on the proxy port for local static development"""
+    env = os.environ.copy()
+    env['PORT'] = str(API_PROXY_PORT)
+    env.setdefault('FLASK_ENV', 'development')
+
+    process = subprocess.Popen(
+        [sys.executable, 'run.py'],
+        env=env,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        bufsize=1
+    )
+
+    def _log_backend():
+        if not process.stdout:
+            return
+        for line in process.stdout:
+            print(f"[api] {line.rstrip()}")
+
+    thread = threading.Thread(target=_log_backend)
+    thread.daemon = True
+    thread.start()
+
+    if wait_for_api_backend():
+        print(f"✅ API backend started on http://{API_PROXY_HOST}:{API_PROXY_PORT}")
+    else:
+        print(f"⚠️  API backend did not respond on http://{API_PROXY_HOST}:{API_PROXY_PORT}")
+
+    return process
+
 def main():
     parser = argparse.ArgumentParser(
         description="Serve BTW Games static website locally for debugging",
@@ -247,6 +400,12 @@ Examples:
         help="Don't automatically open browser"
     )
 
+    parser.add_argument(
+        '--no-api-proxy',
+        action='store_true',
+        help="Don't start or proxy the local Flask API"
+    )
+
     args = parser.parse_args()
 
     # Change to script directory
@@ -269,6 +428,10 @@ Examples:
     print("  - Refresh browser to see changes")
     print("  - Check terminal for request logs")
     print("=" * 50)
+
+    api_process = None
+    if not args.no_api_proxy:
+        api_process = start_api_backend()
 
     try:
         # Create server
@@ -297,6 +460,13 @@ Examples:
     except Exception as e:
         print(f"❌ Unexpected error: {e}")
         sys.exit(1)
+    finally:
+        if api_process and api_process.poll() is None:
+            api_process.terminate()
+            try:
+                api_process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                api_process.kill()
 
 if __name__ == "__main__":
     main()
