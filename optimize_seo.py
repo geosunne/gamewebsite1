@@ -100,7 +100,7 @@ def optimize_games_html():
     """Optimize games.html file"""
     print("🔧 Optimizing games.html...")
 
-    with open('static_html/games/index.html', 'r', encoding='utf-8') as f:
+    with open('static_html/games.html', 'r', encoding='utf-8') as f:
         content = f.read()
 
     soup = BeautifulSoup(content, 'html.parser')
@@ -132,7 +132,7 @@ def optimize_games_html():
     else:
         canonical['href'] = 'https://btwgame.com/games'
 
-    with open('static_html/games/index.html', 'w', encoding='utf-8') as f:
+    with open('static_html/games.html', 'w', encoding='utf-8') as f:
         f.write(str(soup))
 
     print("✅ games.html optimized")
@@ -149,7 +149,7 @@ def optimize_game_pages():
     games = data.get('games', []) if isinstance(data, dict) else data
 
     for game in games:
-        game_file = f"static_html/games/{game['slug']}/index.html"
+        game_file = f"static_html/games/{game['slug']}.html"
         if not os.path.exists(game_file):
             continue
 

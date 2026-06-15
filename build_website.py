@@ -192,20 +192,17 @@ def generate_static_files():
     # Create static_html directory if it doesn't exist
     os.makedirs("static_html", exist_ok=True)
 
-    # Recreate games output so stale /games/*.html files do not remain after
-    # switching to directory-style clean URLs.
+    # Recreate games output so stale directory-style /games/{slug}/index.html
+    # files do not remain when using Cloudflare Clean URLs.
     games_output_dir = "static_html/games"
     if os.path.exists(games_output_dir):
         shutil.rmtree(games_output_dir)
     os.makedirs(games_output_dir, exist_ok=True)
-    stale_games_file = "static_html/games.html"
-    if os.path.exists(stale_games_file):
-        os.remove(stale_games_file)
 
     # Copy main templates
     templates_to_copy = [
         ("static/index.html", "static_html/index.html"),
-        ("static/games.html", "static_html/games/index.html"),
+        ("static/games.html", "static_html/games.html"),
         ("static/assets", "static_html/assets"),
     ]
 
@@ -286,7 +283,7 @@ def cleanup_and_finalize():
         print_info(f"Generated {total_files} files in {total_dirs} directories")
 
         # Check key files
-        key_files = ["index.html", "games/index.html", "sitemap.xml", "robots.txt"]
+        key_files = ["index.html", "games.html", "sitemap.xml", "robots.txt"]
         for file in key_files:
             if os.path.exists(f"static_html/{file}"):
                 print_success(f"✓ {file}")

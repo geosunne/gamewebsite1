@@ -115,12 +115,11 @@ fi
 print_step "Step 3: Preparing static files"
 mkdir -p static_html
 rm -rf static_html/games
-rm -f static_html/games.html
 mkdir -p static_html/games
 
 # Copy main files
 cp static/index.html static_html/
-cp static/games.html static_html/games/index.html
+cp static/games.html static_html/games.html
 cp -r static/assets static_html/ 2>/dev/null || true
 
 print_success "Templates copied"

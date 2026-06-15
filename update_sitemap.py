@@ -52,6 +52,7 @@ def update_sitemap():
         f.write('/index.html / 308\n')
         f.write('/games.html /games 308\n')
         f.write('/games/:slug.html /games/:slug 308\n')
+        f.write('/games/:slug/ /games/:slug 308\n')
 
     print("Updated _redirects for legacy .html URLs")
 

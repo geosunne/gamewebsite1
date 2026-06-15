@@ -72,6 +72,14 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 
     def do_GET(self):
         """Handle GET requests with custom routing"""
+        self.serve_static_request(include_body=True)
+
+    def do_HEAD(self):
+        """Handle HEAD requests with the same routing as GET."""
+        self.serve_static_request(include_body=False)
+
+    def serve_static_request(self, include_body=True):
+        """Serve static files with clean URL routing."""
         parsed_path = urlparse(self.path)
 
         if parsed_path.path.startswith('/api/'):
@@ -97,6 +105,12 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 
         # Construct full file path
         full_path = os.path.join("static_html", path)
+
+        if not os.path.exists(full_path) and not os.path.splitext(path)[1]:
+            html_path = os.path.join("static_html", f"{path}.html")
+            if os.path.isfile(html_path):
+                full_path = html_path
+                path = f"{path}.html"
 
         if os.path.isdir(full_path):
             full_path = os.path.join(full_path, 'index.html')
@@ -124,8 +138,9 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             self.end_headers()
 
             # Read and send file content
-            with open(full_path, 'rb') as f:
-                self.wfile.write(f.read())
+            if include_body:
+                with open(full_path, 'rb') as f:
+                    self.wfile.write(f.read())
         else:
             # Send 404 with custom page
             self.send_404()
@@ -141,6 +156,8 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             target = '/games'
         elif path.startswith('/games/') and path.endswith('.html'):
             target = path[:-5]
+        elif path.startswith('/games/') and path.endswith('/'):
+            target = path.rstrip('/')
 
         if target and parsed_path.query:
             target = f"{target}?{parsed_path.query}"

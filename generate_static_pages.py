@@ -805,10 +805,9 @@ def main():
         try:
             html_content = generate_game_page(game_data, related_games)
 
-            # Save to directory-style clean URL path: /games/{slug}
-            output_dir = f"static_html/games/{slug}"
-            os.makedirs(output_dir, exist_ok=True)
-            filename = os.path.join(output_dir, "index.html")
+            # Keep files flat so Cloudflare Clean URLs serve /games/{slug}
+            # without canonicalizing to /games/{slug}/.
+            filename = f"static_html/games/{slug}.html"
             with open(filename, 'w', encoding='utf-8') as f:
                 f.write(html_content)
 

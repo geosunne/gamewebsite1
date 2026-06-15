@@ -1,3 +1,4 @@
 /index.html / 308
 /games.html /games 308
 /games/:slug.html /games/:slug 308
+/games/:slug/ /games/:slug 308
