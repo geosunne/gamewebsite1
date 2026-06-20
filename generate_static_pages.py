@@ -232,6 +232,111 @@ THIN_CATEGORY_FALLBACKS = {
     "Multiplayer": "io Games",
 }
 HOME_CATEGORY_LIMIT = 10
+GEO_STATIC_PAGES = [
+    "/about",
+    "/contact",
+    "/privacy",
+    "/terms",
+    "/editorial-policy",
+    "/best/free-online-games",
+    "/best/browser-games-for-school",
+    "/best/quick-games",
+    "/best/mobile-browser-games",
+    "/best/no-download-games",
+]
+
+BEST_PAGE_DEFINITIONS = [
+    {
+        "slug": "free-online-games",
+        "title": "Best free online games",
+        "description": "Find free online games on BTW game that open in the browser without installs, accounts, or extra setup.",
+        "h1": "Best free online games",
+        "intro": "This list highlights free browser games that are easy to open, quick to understand, and useful when you want a short play session.",
+        "selectors": {
+            "categories": ["Action", "Puzzle", "Racing", "Casual", "Sports"],
+        },
+        "sections": [
+            ("What makes these games good picks?", "They are chosen for fast loading, clear controls, replay value, and broad appeal across casual players."),
+            ("How to choose", "Start with action for energy, puzzle for slower thinking, racing for speed, and casual games for lighter breaks."),
+        ],
+        "faq": [
+            ("Are these online games free?", "Yes. BTW game focuses on free browser games that can be opened without a download."),
+            ("Do I need an account?", "No. The listed games are intended for instant browser play without account setup on BTW game."),
+        ],
+    },
+    {
+        "slug": "browser-games-for-school",
+        "title": "Best browser games for school breaks",
+        "description": "Quick browser games for students and school breaks, with simple controls and short sessions.",
+        "h1": "Best browser games for school breaks",
+        "intro": "These games are selected for quick sessions, simple rules, and browser-friendly play. Always follow your school or family rules about when games are allowed.",
+        "selectors": {
+            "categories": ["Puzzle", "Casual", "Word & Trivia", "Sports", "Cooking"],
+        },
+        "sections": [
+            ("Short-session games", "Pick games with clear rounds, quick restarts, and simple goals when time is limited."),
+            ("Lower-pressure choices", "Puzzle, word, cooking, and casual games are often calmer than shooter or horror games."),
+        ],
+        "faq": [
+            ("Are these games school appropriate?", "They are lighter browser-game picks, but players should follow school rules and choose age-appropriate games."),
+            ("Can I play without downloading?", "Yes. These picks are browser games and do not require installing an app from BTW game."),
+        ],
+    },
+    {
+        "slug": "quick-games",
+        "title": "Best quick games",
+        "description": "Quick games for short breaks, fast retries, and instant browser play on BTW game.",
+        "h1": "Best quick games",
+        "intro": "Quick games are useful when you want a fast start, a compact round, and a clean stop after a short break.",
+        "selectors": {
+            "categories": ["Runner", "Parkour", "Action", "Arcade", "Puzzle"],
+        },
+        "sections": [
+            ("Fast starts", "Look for games with one-screen rules, obvious goals, and immediate feedback."),
+            ("Easy stopping points", "Runner, parkour, arcade, and puzzle games often work well because each attempt or level is compact."),
+        ],
+        "faq": [
+            ("What counts as a quick game?", "A quick game starts fast, teaches quickly, and works in short browser sessions."),
+            ("Which quick game category should I try first?", "Try Runner or Parkour for movement, Puzzle for calmer play, and Action for faster reactions."),
+        ],
+    },
+    {
+        "slug": "mobile-browser-games",
+        "title": "Best mobile browser games",
+        "description": "Mobile-friendly browser games that are easy to sample on phones, tablets, and desktop browsers.",
+        "h1": "Best mobile browser games",
+        "intro": "These picks favor simple interactions, clear screens, and game styles that can work well across phones, tablets, and desktop browsers.",
+        "selectors": {
+            "categories": ["Casual", "Puzzle", "Match & Merge", "Cooking", "Idle & Clicker"],
+        },
+        "sections": [
+            ("Touch-friendly play", "Casual, puzzle, match, cooking, and clicker games often use simple taps, drags, or single-action controls."),
+            ("Cross-device browsing", "Open a game page directly in the browser and check the in-game prompts for device-specific controls."),
+        ],
+        "faq": [
+            ("Do all games work on mobile?", "Not every game is ideal on every device. Check the game page and in-game prompts for controls."),
+            ("Do I need to install an app?", "No. BTW game links to browser games that open from the page."),
+        ],
+    },
+    {
+        "slug": "no-download-games",
+        "title": "Best no-download games",
+        "description": "No-download games that open directly in the browser for fast free play on BTW game.",
+        "h1": "Best no-download games",
+        "intro": "No-download games are browser games you can open from the page without installing a separate app or launcher from BTW game.",
+        "selectors": {
+            "categories": ["Action", "Puzzle", "Racing", "Sports", "Simulation"],
+        },
+        "sections": [
+            ("Why no-download games are useful", "They reduce setup time and make it easier to try several games before choosing one to keep playing."),
+            ("Good first picks", "Start with familiar categories like puzzle, racing, sports, or action if you want predictable controls."),
+        ],
+        "faq": [
+            ("What is a no-download game?", "A no-download game opens in the browser without installing a separate app from BTW game."),
+            ("Are no-download games free?", "The games listed on BTW game are presented as free browser games."),
+        ],
+    },
+]
 
 CATEGORY_GUIDES.update({
     "Arcade": {
@@ -1149,12 +1254,18 @@ def build_game_jsonld(game, tags, faq_items):
             "description": description,
             "url": game_full_url(slug),
             "image": image,
+            "about": f"{title} is a free browser game in the {category_name} category on BTW game.",
             "genre": category_name,
             "keywords": tags,
             "gamePlatform": "Web Browser",
             "operatingSystem": "Any",
             "applicationCategory": "Game",
             "isAccessibleForFree": True,
+            "inLanguage": "en",
+            "audience": {
+                "@type": "Audience",
+                "audienceType": "Casual players"
+            },
             "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -1162,9 +1273,7 @@ def build_game_jsonld(game, tags, faq_items):
                 "availability": "https://schema.org/InStock"
             },
             "publisher": {
-                "@type": "Organization",
-                "name": SITE_NAME,
-                "url": SITE_URL
+                "@id": f"{SITE_URL}/#organization"
             }
         },
         {
@@ -1240,6 +1349,9 @@ def render_footer():
             <ul class="footer-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/games">All games</a></li>
+                <li><a href="/best/free-online-games">Best games</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/editorial-policy">Editorial policy</a></li>
                 <li><a href="/games?filter=new">New games</a></li>
                 <li><a href="/games?filter=featured">Featured</a></li>
             </ul>
@@ -1292,6 +1404,37 @@ def render_head(title, description, canonical_path, og_image=SITE_IMAGE, extra_j
     {jsonld}
     <title>{html_escape(title)}</title>
 </head>'''
+
+def jsonld_script(data):
+    return f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>'
+
+def site_entity_jsonld():
+    website_jsonld = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": SITE_NAME,
+        "alternateName": ["BTW game", "btw game", "By the way, play!"],
+        "url": f"{SITE_URL}/",
+        "description": "BTW game is a free browser game catalog for quick, casual play.",
+        "publisher": {"@id": f"{SITE_URL}/#organization"},
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": f"{SITE_URL}/games?search={{search_term_string}}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    organization_jsonld = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": f"{SITE_URL}/#organization",
+        "name": SITE_NAME,
+        "alternateName": ["BTW game", "btw game"],
+        "slogan": "By the way, play!",
+        "url": SITE_URL,
+        "logo": SITE_IMAGE,
+        "description": "BTW game helps casual players find fast, free browser games for short breaks."
+    }
+    return jsonld_script(website_jsonld) + "\n" + jsonld_script(organization_jsonld)
 
 def render_home_grid_balance_script():
     return '''
@@ -1470,6 +1613,39 @@ def render_home_category_shelf(category, category_games, index):
                 </section>
     '''
 
+def render_home_geo_section():
+    faq_items = [
+        ("What is BTW game?", "BTW game is a free browser game catalog for quick breaks. The name means By the way, play!"),
+        ("Are games on BTW game free?", "Yes. BTW game focuses on free online games that open in the browser without a download from the site."),
+        ("Do I need to install anything?", "No. Open a game page and play directly in the browser when the game is available for your device."),
+        ("What games are good for quick breaks?", "Puzzle, casual, racing, runner, and parkour games are good first picks because they start quickly and have short sessions."),
+        ("Is BTW game suitable for kids and students?", "BTW game is designed for casual players, kids, and students, but players should follow family or school rules and choose age-appropriate games."),
+    ]
+    best_links = [
+        ("/best/free-online-games", "Best free online games"),
+        ("/best/browser-games-for-school", "Browser games for school breaks"),
+        ("/best/quick-games", "Quick games"),
+        ("/best/mobile-browser-games", "Mobile browser games"),
+        ("/best/no-download-games", "No-download games"),
+    ]
+    return f'''
+                <section class="geo-answer-section content-band" aria-labelledby="homeGeoTitle">
+                    <div class="category-guide-header">
+                        <div>
+                            <h2 id="homeGeoTitle">Free browser games for quick breaks</h2>
+                            <p>BTW game means By the way, play! It is built for casual players who want fast, playful, and trustworthy browser games without extra setup.</p>
+                        </div>
+                    </div>
+                    <div class="guide-related" aria-label="Best game guides">
+                        {"".join(f'<a href="{href}">{html_escape(label)}</a>' for href, label in best_links)}
+                    </div>
+                    <div class="guide-faq">
+                        <h2>FAQ</h2>
+                        <div class="faq-list">{render_faq_html(faq_items)}</div>
+                    </div>
+                </section>
+    '''
+
 def generate_index_page(games):
     categories = get_all_categories(games)
     popular = sorted(games, key=lambda game: game.get('total_plays') or 0, reverse=True)
@@ -1499,19 +1675,22 @@ def generate_index_page(games):
         render_home_category_shelf(category, category_map.get(category, []), index)
         for index, category in enumerate(home_categories)
     )
-    website_jsonld = {
+    home_faq = [
+        ("What is BTW game?", "BTW game is a free browser game catalog for quick breaks. The name means By the way, play!"),
+        ("Are games on BTW game free?", "Yes. BTW game focuses on free online games that open in the browser without a download from the site."),
+        ("Do I need to install anything?", "No. Open a game page and play directly in the browser when the game is available for your device."),
+        ("What games are good for quick breaks?", "Puzzle, casual, racing, runner, and parkour games are good first picks because they start quickly and have short sessions."),
+        ("Is BTW game suitable for kids and students?", "BTW game is designed for casual players, kids, and students, but players should follow family or school rules and choose age-appropriate games."),
+    ]
+    faq_jsonld = {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": SITE_NAME,
-        "url": f"{SITE_URL}/",
-        "description": "Free online games for quick browser play.",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": f"{SITE_URL}/games?search={{search_term_string}}",
-            "query-input": "required name=search_term_string"
-        }
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": question, "acceptedAnswer": {"@type": "Answer", "text": answer}}
+            for question, answer in home_faq
+        ]
     }
-    extra_jsonld = f'<script type="application/ld+json">{json.dumps(website_jsonld, ensure_ascii=False)}</script>'
+    extra_jsonld = site_entity_jsonld() + "\n" + jsonld_script(faq_jsonld)
     return f'''<!DOCTYPE html>
 <html lang="en">
 {render_head("BTW game - Free Online Games for Quick Breaks", "Play 1300+ free online games at BTW game. Fast browser games for quick breaks, with action, puzzle, racing, sports, and casual games.", "/", SITE_IMAGE, extra_jsonld)}
@@ -1542,6 +1721,7 @@ def generate_index_page(games):
                     <div class="games-grid compact home-games-grid" id="newGamesGrid">{new_cards}</div>
                 </section>
                 {category_shelves}
+                {render_home_geo_section()}
             </div>
         </div>
     </main>
@@ -1778,6 +1958,247 @@ def generate_category_page(category, games):
 </body>
 </html>'''
 
+def select_best_games(games, definition):
+    selector_categories = definition.get("selectors", {}).get("categories", [])
+    selected = [
+        game for game in games
+        if any(matches_category(game, category) for category in selector_categories)
+    ]
+    selected = sorted(selected, key=lambda game: game.get('total_plays') or 0, reverse=True)
+    if len(selected) < 24:
+        seen = {normalize_slug(game.get('slug')) for game in selected}
+        for game in sorted(games, key=lambda item: item.get('total_plays') or 0, reverse=True):
+            slug = normalize_slug(game.get('slug'))
+            if slug not in seen:
+                selected.append(game)
+                seen.add(slug)
+            if len(selected) >= 36:
+                break
+    return selected[:36]
+
+def generate_best_page(definition, games):
+    selected_games = select_best_games(games, definition)
+    cards = "\n".join(render_game_card(game, priority=index < 12) for index, game in enumerate(selected_games))
+    sections = "\n".join(
+        f'<article class="guide-section"><h2>{html_escape(title)}</h2><p>{html_escape(body)}</p></article>'
+        for title, body in definition["sections"]
+    )
+    faq_html = render_faq_html(definition["faq"])
+    related_links = "\n".join(
+        f'<a href="/best/{html_escape(item["slug"])}">{html_escape(item["title"])}</a>'
+        for item in BEST_PAGE_DEFINITIONS
+        if item["slug"] != definition["slug"]
+    )
+    canonical_path = f'/best/{definition["slug"]}'
+    extra_jsonld = collection_jsonld(
+        f'{definition["title"]} | BTW game',
+        definition["description"],
+        f'{SITE_URL}{canonical_path}',
+        selected_games,
+        definition["faq"]
+    )
+    return f'''<!DOCTYPE html>
+<html lang="en">
+{render_head(f'{definition["title"]} | BTW game', definition["description"], canonical_path, SITE_IMAGE, extra_jsonld)}
+<body>
+    {render_header("games")}
+    <main class="container">
+        <div class="app-layout">
+            {render_side_rail(categories=get_all_categories(games))}
+            <div>
+                <section class="list-page-header geo-page-header">
+                    <div>
+                        <p class="eyebrow">Best games guide</p>
+                        <h1 class="filters-title">{html_escape(definition["h1"])}</h1>
+                        <p class="section-note">{html_escape(definition["intro"])}</p>
+                    </div>
+                    <span class="results-count">{len(selected_games)} picks</span>
+                </section>
+                <section class="games-section">
+                    <div class="games-grid">{cards}</div>
+                </section>
+                <section class="category-guide geo-guide" aria-labelledby="bestGuideTitle">
+                    <div class="category-guide-header">
+                        <div>
+                            <h2 id="bestGuideTitle">How this guide helps</h2>
+                            <p>{html_escape(definition["description"])}</p>
+                        </div>
+                    </div>
+                    <div class="guide-sections">{sections}</div>
+                    <div class="guide-related" aria-label="Related best game guides">{related_links}</div>
+                    <div class="guide-faq"><h2>FAQ</h2><div class="faq-list">{faq_html}</div></div>
+                </section>
+            </div>
+        </div>
+    </main>
+    {render_footer()}
+    {render_nav_script()}
+</body>
+</html>'''
+
+def render_plain_content_page(slug, title, description, sections, faq_items=None):
+    canonical_path = f"/{slug}"
+    article_jsonld = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": f"{title} | BTW game",
+        "description": description,
+        "url": f"{SITE_URL}{canonical_path}",
+        "isPartOf": {"@type": "WebSite", "name": SITE_NAME, "url": SITE_URL},
+        "publisher": {"@id": f"{SITE_URL}/#organization"}
+    }
+    jsonld = jsonld_script(article_jsonld)
+    if faq_items:
+        jsonld += "\n" + jsonld_script({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {"@type": "Question", "name": question, "acceptedAnswer": {"@type": "Answer", "text": answer}}
+                for question, answer in faq_items
+            ]
+        })
+    section_html = "\n".join(
+        f'<section class="content-page-section"><h2>{html_escape(heading)}</h2><p>{html_escape(body)}</p></section>'
+        for heading, body in sections
+    )
+    faq_html = f'<section class="content-page-section"><h2>FAQ</h2><div class="faq-list">{render_faq_html(faq_items)}</div></section>' if faq_items else ''
+    return f'''<!DOCTYPE html>
+<html lang="en">
+{render_head(f'{title} | BTW game', description, canonical_path, SITE_IMAGE, jsonld)}
+<body>
+    {render_header("")}
+    <main class="container">
+        <article class="content-page">
+            <p class="eyebrow">BTW game</p>
+            <h1>{html_escape(title)}</h1>
+            <p class="content-page-lede">{html_escape(description)}</p>
+            {section_html}
+            {faq_html}
+        </article>
+    </main>
+    {render_footer()}
+    {render_nav_script()}
+</body>
+</html>'''
+
+def generate_trust_pages():
+    pages = {
+        "about": render_plain_content_page(
+            "about",
+            "About BTW game",
+            "BTW game means By the way, play! We help casual players find fast, free browser games for quick breaks.",
+            [
+                ("What BTW game is", "BTW game is a curated browser-game catalog for casual players, kids, and students who want quick sessions without extra setup."),
+                ("What we value", "The site is designed to feel fast, playful, and trustworthy, without casino styling, dark patterns, or unnecessary barriers."),
+                ("How to use it", "Open a category, choose a game card, and play in the browser. Use the best-games guides when you want a faster recommendation."),
+            ],
+            [
+                ("What does BTW game mean?", "BTW game means By the way, play! It describes short, casual play that fits between other moments."),
+                ("Are games free?", "BTW game focuses on free browser games that can be opened from the site."),
+            ]
+        ),
+        "contact": render_plain_content_page(
+            "contact",
+            "Contact BTW game",
+            "Contact BTW game for site feedback, game listing questions, or content concerns.",
+            [
+                ("Site feedback", "Use this page as the contact reference for reporting broken games, incorrect thumbnails, category issues, or page quality problems."),
+                ("Content concerns", "If a game listing appears inaccurate or inappropriate, include the game URL and a short description of the issue."),
+                ("Publisher questions", "For game ownership or embed concerns, include the original game title, source URL, and the BTW game page URL."),
+            ],
+            [
+                ("What should I include in a report?", "Include the page URL, game title, device, browser, and a short description of the problem."),
+            ]
+        ),
+        "privacy": render_plain_content_page(
+            "privacy",
+            "Privacy Policy",
+            "BTW game is a browser-game catalog. This policy summarizes the basic privacy posture of the site.",
+            [
+                ("Analytics and ads", "The site may use analytics and advertising scripts to understand traffic, improve pages, and support free access."),
+                ("Game embeds", "Some games may load from third-party providers. Those providers can have their own privacy practices."),
+                ("Data minimization", "BTW game is designed for browsing and playing games, not for collecting unnecessary account information."),
+            ],
+            [
+                ("Do I need an account?", "No. BTW game does not require an account to browse the catalog."),
+            ]
+        ),
+        "terms": render_plain_content_page(
+            "terms",
+            "Terms of Use",
+            "These terms describe basic use of BTW game as a free browser-game catalog.",
+            [
+                ("Use of the site", "Use BTW game for lawful, personal browsing and gameplay. Follow school, family, and local rules about when games are appropriate."),
+                ("Third-party games", "Game content can be provided by third-party sources. Availability, controls, and compatibility can vary by game."),
+                ("Changes", "The catalog, categories, thumbnails, and links may change as the site is improved."),
+            ],
+            [
+                ("Are all games guaranteed to work?", "No. Browser, device, network, or third-party source changes can affect individual games."),
+            ]
+        ),
+        "editorial-policy": render_plain_content_page(
+            "editorial-policy",
+            "Editorial Policy",
+            "BTW game organizes browser games with an emphasis on fast access, clear categories, and useful recommendations.",
+            [
+                ("How games are organized", "Games are grouped by category, tags, title, description, controls, and observed catalog patterns."),
+                ("How recommendations are made", "Best-game guides prioritize quick starts, clear controls, browser access, category fit, and casual-player usefulness."),
+                ("Accuracy standards", "Game pages avoid invented ratings and avoid claiming specific mechanics unless they are present in the source data or game description."),
+            ],
+            [
+                ("Why can a category change?", "Categories can change when game data is cleaned or when a better fit is found for browsing and discovery."),
+                ("Do you invent ratings?", "No. If reliable rating data is not available, the site avoids adding fake aggregate ratings."),
+            ]
+        ),
+    }
+    for slug, html in pages.items():
+        with open(f"static_html/{slug}.html", "w", encoding="utf-8") as f:
+            f.write(html)
+    return list(pages.keys())
+
+def generate_best_pages(games):
+    os.makedirs("static_html/best", exist_ok=True)
+    generated = []
+    for definition in BEST_PAGE_DEFINITIONS:
+        html = generate_best_page(definition, games)
+        with open(f"static_html/best/{definition['slug']}.html", "w", encoding="utf-8") as f:
+            f.write(html)
+        generated.append(definition["slug"])
+    return generated
+
+def generate_llms_txt(games):
+    categories = get_all_categories(games)
+    lines = [
+        "# BTW game",
+        "",
+        "BTW game means By the way, play! It is a free browser-game catalog for quick breaks, casual players, kids, and students.",
+        "",
+        "Canonical site: https://btwgame.com",
+        "Sitemap: https://btwgame.com/sitemap.xml",
+        "All games: https://btwgame.com/games",
+        "",
+        "Important pages:",
+        "- https://btwgame.com/about",
+        "- https://btwgame.com/editorial-policy",
+        "- https://btwgame.com/best/free-online-games",
+        "- https://btwgame.com/best/browser-games-for-school",
+        "- https://btwgame.com/best/quick-games",
+        "- https://btwgame.com/best/mobile-browser-games",
+        "- https://btwgame.com/best/no-download-games",
+        "",
+        "Main categories:",
+    ]
+    lines.extend(f"- https://btwgame.com{category_url(category)}" for category in categories[:30])
+    lines.extend([
+        "",
+        "Content notes:",
+        "- Games are intended for free browser play.",
+        "- Game pages include category, controls when available, FAQ, and related games.",
+        "- Best-game pages are recommendation guides based on category fit, quick access, and casual play usefulness.",
+    ])
+    with open("static_html/llms.txt", "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+
 def generate_listing_pages(games, sync_static_sources=True):
     games = [normalize_game_data(game) for game in games]
     games = sorted(games, key=lambda game: game.get('total_plays') or 0, reverse=True)
@@ -1809,7 +2230,10 @@ def generate_listing_pages(games, sync_static_sources=True):
         generated.append(category)
     with open('static_html/categories.json', 'w', encoding='utf-8') as f:
         json.dump([{"name": category, "slug": category_slug(category), "url": category_url(category)} for category in generated], f, ensure_ascii=False, indent=2)
-    print(f"📚 Generated index, games, and {len(generated)} category pages")
+    best_pages = generate_best_pages(games)
+    trust_pages = generate_trust_pages()
+    generate_llms_txt(games)
+    print(f"📚 Generated index, games, {len(generated)} category pages, {len(best_pages)} best pages, and {len(trust_pages)} trust pages")
 
 def generate_game_page(game_data, related_games):
     """Generate static HTML for a game page"""
@@ -1939,6 +2363,20 @@ def generate_game_page(game_data, related_games):
     tags_section_html = f'<div class="game-tags">{tags_html}</div>' if tags_html else ''
     features_card_html = f'<div class="info-card"><h3 class="card-title">Game Features</h3><ul class="features-list">{features_html}</ul></div>' if features_html else ''
     controls_card_html = f'<div class="info-card"><h3 class="card-title">Controls</h3><div class="controls-grid">{controls_html}</div></div>' if controls_html else ''
+    fact_summary_html = f'''
+                        <section class="fact-summary-card" aria-labelledby="factSummaryTitle">
+                            <h2 class="card-title" id="factSummaryTitle">{title_html} facts</h2>
+                            <dl class="fact-summary-grid">
+                                <div><dt>Game name</dt><dd>{title_html}</dd></div>
+                                <div><dt>Category</dt><dd>{category_html}</dd></div>
+                                <div><dt>Play style</dt><dd>Free browser game</dd></div>
+                                <div><dt>Best for</dt><dd>Quick breaks and casual play</dd></div>
+                                <div><dt>Device</dt><dd>Modern browser</dd></div>
+                                <div><dt>Download required</dt><dd>No</dd></div>
+                                <div><dt>Price</dt><dd>Free</dd></div>
+                            </dl>
+                        </section>
+    '''
     related_section_html = f'''
                 <section class="related-games">
                     <div class="section-header">
@@ -2073,6 +2511,7 @@ def generate_game_page(game_data, related_games):
                         <h2 class="card-title">About {title_html}</h2>
                         <p>{expanded_description_html}</p>
                         {tags_section_html}
+                        {fact_summary_html}
                         <h2 class="card-title">How to play {title_html}</h2>
                         <p>{how_to_play_html}</p>
                         <h2 class="card-title">Controls</h2>

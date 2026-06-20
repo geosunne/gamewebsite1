@@ -1,0 +1,52 @@
+# BTW game
+
+BTW game means By the way, play! It is a free browser-game catalog for quick breaks, casual players, kids, and students.
+
+Canonical site: https://btwgame.com
+Sitemap: https://btwgame.com/sitemap.xml
+All games: https://btwgame.com/games
+
+Important pages:
+- https://btwgame.com/about
+- https://btwgame.com/editorial-policy
+- https://btwgame.com/best/free-online-games
+- https://btwgame.com/best/browser-games-for-school
+- https://btwgame.com/best/quick-games
+- https://btwgame.com/best/mobile-browser-games
+- https://btwgame.com/best/no-download-games
+
+Main categories:
+- https://btwgame.com/categories/action
+- https://btwgame.com/categories/puzzle
+- https://btwgame.com/categories/match-and-merge
+- https://btwgame.com/categories/mahjong-and-card
+- https://btwgame.com/categories/word-and-trivia
+- https://btwgame.com/categories/racing
+- https://btwgame.com/categories/driving
+- https://btwgame.com/categories/sports
+- https://btwgame.com/categories/soccer
+- https://btwgame.com/categories/basketball
+- https://btwgame.com/categories/shooter
+- https://btwgame.com/categories/sniper
+- https://btwgame.com/categories/horror
+- https://btwgame.com/categories/survival
+- https://btwgame.com/categories/parkour
+- https://btwgame.com/categories/obby
+- https://btwgame.com/categories/platformer
+- https://btwgame.com/categories/runner
+- https://btwgame.com/categories/simulation
+- https://btwgame.com/categories/management
+- https://btwgame.com/categories/idle-and-clicker
+- https://btwgame.com/categories/cooking
+- https://btwgame.com/categories/dress-up
+- https://btwgame.com/categories/beauty
+- https://btwgame.com/categories/two-player
+- https://btwgame.com/categories/io-games
+- https://btwgame.com/categories/strategy
+- https://btwgame.com/categories/tower-defense
+- https://btwgame.com/categories/casual
+
+Content notes:
+- Games are intended for free browser play.
+- Game pages include category, controls when available, FAQ, and related games.
+- Best-game pages are recommendation guides based on category fit, quick access, and casual play usefulness.

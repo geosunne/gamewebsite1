@@ -4,6 +4,20 @@ import os
 from datetime import date
 from xml.sax.saxutils import escape
 
+STATIC_PAGES = [
+    "/about",
+    "/contact",
+    "/privacy",
+    "/terms",
+    "/editorial-policy",
+    "/best/free-online-games",
+    "/best/browser-games-for-school",
+    "/best/quick-games",
+    "/best/mobile-browser-games",
+    "/best/no-download-games",
+    "/llms.txt",
+]
+
 def update_sitemap():
     # Read updated games data
     with open('static_html/all_games.json', 'r', encoding='utf-8') as f:
@@ -24,6 +38,9 @@ def update_sitemap():
         f"{base_url}/games"
     ]
 
+    for path in STATIC_PAGES:
+        urls.append(f"{base_url}{path}")
+
     # Add category URLs
     for category in categories:
         urls.append(f"{base_url}/categories/{category['slug']}")
@@ -39,6 +56,7 @@ def update_sitemap():
 
     print(f"Updated sitemap.txt with {len(urls)} URLs")
     print(f"  - 2 main pages")
+    print(f"  - {len(STATIC_PAGES)} static GEO pages")
     print(f"  - {len(categories)} category pages")
     print(f"  - {len(games)} game pages")
 
@@ -62,6 +80,13 @@ def update_sitemap():
     with open('static_html/_redirects', 'w', encoding='utf-8') as f:
         f.write('/index.html / 308\n')
         f.write('/games.html /games 308\n')
+        f.write('/about.html /about 308\n')
+        f.write('/contact.html /contact 308\n')
+        f.write('/privacy.html /privacy 308\n')
+        f.write('/terms.html /terms 308\n')
+        f.write('/editorial-policy.html /editorial-policy 308\n')
+        f.write('/best/:slug.html /best/:slug 308\n')
+        f.write('/best/:slug/ /best/:slug 308\n')
         f.write('/categories/:slug.html /categories/:slug 308\n')
         f.write('/categories/:slug/ /categories/:slug 308\n')
         f.write('/games/:slug.html /games/:slug 308\n')

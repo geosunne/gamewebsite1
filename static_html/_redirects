@@ -1,5 +1,12 @@
 /index.html / 308
 /games.html /games 308
+/about.html /about 308
+/contact.html /contact 308
+/privacy.html /privacy 308
+/terms.html /terms 308
+/editorial-policy.html /editorial-policy 308
+/best/:slug.html /best/:slug 308
+/best/:slug/ /best/:slug 308
 /categories/:slug.html /categories/:slug 308
 /categories/:slug/ /categories/:slug 308
 /games/:slug.html /games/:slug 308
