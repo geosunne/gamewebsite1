@@ -54,6 +54,11 @@ PROXY_SKIP_HEADERS = {
     'expires',
 }
 
+class ThreadingReusableTCPServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
+    """Threaded local server so one slow browser connection cannot block all requests."""
+    allow_reuse_address = True
+    daemon_threads = True
+
 class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     """Custom HTTP request handler for static files"""
 
@@ -454,7 +459,7 @@ Examples:
 
     try:
         # Create server
-        with socketserver.TCPServer((args.host, args.port), StaticHTTPRequestHandler) as httpd:
+        with ThreadingReusableTCPServer((args.host, args.port), StaticHTTPRequestHandler) as httpd:
             print(f"✅ Server started successfully!")
 
             # Open browser if requested
