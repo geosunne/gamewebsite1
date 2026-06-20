@@ -13,6 +13,72 @@
         <priority>0.9</priority>
     </url>
     <url>
+        <loc>https://btwgame.com/about</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://btwgame.com/contact</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://btwgame.com/privacy</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://btwgame.com/terms</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://btwgame.com/editorial-policy</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://btwgame.com/best/free-online-games</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://btwgame.com/best/browser-games-for-school</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://btwgame.com/best/quick-games</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://btwgame.com/best/mobile-browser-games</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://btwgame.com/best/no-download-games</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://btwgame.com/llms.txt</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://btwgame.com/categories/action</loc>
         <lastmod>2026-06-20</lastmod>
         <changefreq>weekly</changefreq>

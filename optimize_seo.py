@@ -8,6 +8,19 @@ from xml.sax.saxutils import escape
 
 SITE_URL = "https://btwgame.com"
 SITE_IMAGE = f"{SITE_URL}/assets/images/btwlogo.png"
+STATIC_PAGES = [
+    "/about",
+    "/contact",
+    "/privacy",
+    "/terms",
+    "/editorial-policy",
+    "/best/free-online-games",
+    "/best/browser-games-for-school",
+    "/best/quick-games",
+    "/best/mobile-browser-games",
+    "/best/no-download-games",
+    "/llms.txt",
+]
 
 def ensure_meta(soup, attr_name, attr_value, content):
     tag = soup.find('meta', attrs={attr_name: attr_value})
@@ -322,6 +335,7 @@ def generate_xml_sitemap():
     today = date.today().isoformat()
     categories = load_categories()
     urls = ['https://btwgame.com/', 'https://btwgame.com/games']
+    urls.extend(f"{SITE_URL}{path}" for path in STATIC_PAGES)
     urls.extend(f"https://btwgame.com/categories/{category['slug']}" for category in categories)
     urls.extend(f"https://btwgame.com/games/{game['slug']}" for game in games)
 
