@@ -6,11 +6,11 @@ brand
 
 ## Users
 
-BTW Games serves casual players, children, and students who want quick browser games without downloads, accounts, or setup. They arrive with short attention spans, often from search or shared links, and need to identify something fun fast.
+BTW game serves casual players, children, and students who want quick browser games without downloads, accounts, or setup. They arrive with short attention spans, often from search or shared links, and need to identify something fun fast.
 
 ## Product Purpose
 
-BTW Games is a public game portal for discovering and playing free online games instantly. Success means visitors trust the site, find a game quickly, open game pages without friction, and return for more casual play.
+BTW game is a public game portal for discovering and playing free online games instantly. Success means visitors trust the site, find a game quickly, open game pages without friction, and return for more casual play.
 
 ## Brand Personality
 

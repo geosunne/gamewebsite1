@@ -9,9 +9,9 @@ Sitemap: https://btwgame.com/sitemap.txt
 Allow: /games/
 Allow: /games
 
-# Block assets that don't need indexing
-Disallow: /assets/js/
-Disallow: /assets/css/
+# Allow render assets for search engines
+Allow: /assets/js/
+Allow: /assets/css/
 Disallow: /*.json$
 
 # Allow common search engine bots

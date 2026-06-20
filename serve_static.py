@@ -103,10 +103,12 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         if path == '' or path == '/':
             path = 'index.html'
 
-        # Construct full file path
+        # Construct full file path. Prefer same-name .html files for clean
+        # URLs so /games maps to games.html even though /games/ is also the
+        # directory that stores individual game pages.
         full_path = os.path.join("static_html", path)
 
-        if not os.path.exists(full_path) and not os.path.splitext(path)[1]:
+        if not os.path.splitext(path)[1]:
             html_path = os.path.join("static_html", f"{path}.html")
             if os.path.isfile(html_path):
                 full_path = html_path
@@ -230,7 +232,7 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found | BTW Games</title>
+    <title>404 - Page Not Found | BTW game</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -387,7 +389,7 @@ def start_api_backend():
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Serve BTW Games static website locally for debugging",
+        description="Serve BTW game static website locally for debugging",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -434,7 +436,7 @@ Examples:
         sys.exit(1)
 
     # Print startup information
-    print("🚀 BTW Games Static Development Server")
+    print("🚀 BTW game Static Development Server")
     print("=" * 50)
     print(f"📁 Serving: {os.path.abspath('static_html')}")
     print(f"🌐 URL: http://{args.host}:{args.port}")

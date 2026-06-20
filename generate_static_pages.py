@@ -257,25 +257,26 @@ def generate_game_page(game_data, related_games):
     tags_section_html = f'<div class="game-tags">{tags_html}</div>' if tags_html else ''
     features_card_html = f'<div class="info-card"><h3 class="card-title">Game Features</h3><ul class="features-list">{features_html}</ul></div>' if features_html else ''
     controls_card_html = f'<div class="info-card"><h3 class="card-title">Controls</h3><div class="controls-grid">{controls_html}</div></div>' if controls_html else ''
-    related_section_html = f'<section class="related-games"><h2 class="section-title">More Games You Might Like</h2><div class="games-grid">{related_games_html}</div></section>' if related_games_html else ''
+    related_section_html = f'<section class="related-games"><h2 class="section-title">More games to try</h2><div class="games-grid">{related_games_html}</div></section>' if related_games_html else ''
 
     html_content = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Play {title} free online at BTW Games. {description}">
-    <meta name="keywords" content="free online game, browser game, BTW Games, {category_name}, {', '.join(tags)}">
-    <meta name="author" content="BTW Games">
-    <meta property="og:title" content="{title} | BTW Games">
+    <meta name="description" content="Play {title} free online at BTW game. {description}">
+    <meta name="keywords" content="free online game, browser game, BTW game, {category_name}, {', '.join(tags)}">
+    <meta name="author" content="BTW game">
+    <meta property="og:title" content="{title} | BTW game">
     <meta property="og:description" content="{description}">
     <meta property="og:image" content="{thumbnail_url or 'https://btwgame.com/images/game-og.jpg'}">
     <meta property="og:url" content="https://btwgame.com/games/{game_data['slug']}">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{title} | BTW Games">
+    <meta name="twitter:title" content="{title} | BTW game">
     <meta name="twitter:description" content="{description}">
     <link rel="canonical" href="https://btwgame.com/games/{game_data['slug']}">
+    <link rel="stylesheet" href="/assets/css/site.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM7PBYVK97"></script>
@@ -288,7 +289,7 @@ def generate_game_page(game_data, related_games):
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8930741225505243"
          crossorigin="anonymous"></script>
 
-    <title>{title} | BTW Games</title>
+    <title>{title} | BTW game</title>
     <style>
         * {{
             margin: 0;
@@ -297,22 +298,25 @@ def generate_game_page(game_data, related_games):
         }}
 
         :root {{
-            --apple-blue: #007AFF;
-            --apple-gray: #8E8E93;
-            --apple-light-gray: #F2F2F7;
-            --apple-dark: #1C1C1E;
+            --apple-blue: #F05A3F;
+            --apple-gray: #53627A;
+            --apple-light-gray: #F5F9FF;
+            --apple-dark: #172033;
             --apple-white: #FFFFFF;
-            --apple-green: #34C759;
-            --apple-red: #FF3B30;
-            --shadow-light: 0 2px 15px rgba(0, 0, 0, 0.1);
-            --shadow-heavy: 0 10px 40px rgba(0, 0, 0, 0.15);
+            --apple-green: #1F9D62;
+            --apple-red: #B92E1E;
+            --shadow-light: 0 2px 8px rgba(23, 32, 51, 0.08);
+            --shadow-heavy: 0 10px 20px rgba(23, 32, 51, 0.12);
         }}
 
         body {{
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: var(--apple-dark);
-            background: linear-gradient(180deg, var(--apple-white) 0%, var(--apple-light-gray) 100%);
+            background:
+                radial-gradient(circle at 12% 4%, rgba(255, 216, 77, 0.34), transparent 28rem),
+                radial-gradient(circle at 92% 8%, rgba(240, 90, 63, 0.16), transparent 24rem),
+                linear-gradient(180deg, var(--apple-white) 0%, var(--apple-light-gray) 100%);
             min-height: 100vh;
         }}
 
@@ -348,10 +352,10 @@ def generate_game_page(game_data, related_games):
         }}
 
         .back-btn {{
-            background: var(--apple-blue);
+            background: linear-gradient(135deg, #F05A3F, #E9442B);
             color: var(--apple-white);
             padding: 8px 16px;
-            border-radius: 20px;
+            border-radius: 999px;
             text-decoration: none;
             font-size: 14px;
             transition: opacity 0.3s ease;
@@ -510,7 +514,7 @@ def generate_game_page(game_data, related_games):
             justify-content: space-between;
             align-items: center;
             padding: 12px;
-            background: var(--apple-light-gray);
+            background: #FFF8D9;
             border-radius: 8px;
         }}
 
@@ -532,7 +536,7 @@ def generate_game_page(game_data, related_games):
         }}
 
         .tag {{
-            background: var(--apple-light-gray);
+            background: #FFF0EB;
             color: var(--apple-dark);
             padding: 4px 12px;
             border-radius: 12px;
@@ -575,7 +579,7 @@ def generate_game_page(game_data, related_games):
         .game-thumbnail {{
             width: 100%;
             height: 140px;
-            background: linear-gradient(135deg, var(--apple-light-gray), #E5E5EA);
+            background: linear-gradient(135deg, #FFF8D9, #FFF0EB 52%, #EAF6FF);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -642,8 +646,8 @@ def generate_game_page(game_data, related_games):
 <body>
     <header>
         <nav class="container">
-            <a href="/" class="logo">BTW Games</a>
-            <a href="/" class="back-btn">← Back to Games</a>
+            <a href="/" class="logo">BTW game</a>
+            <a href="/games" class="back-btn">Back to games</a>
         </nav>
     </header>
 
@@ -672,7 +676,7 @@ def generate_game_page(game_data, related_games):
 
         <section class="game-content">
             <div class="game-description">
-                <h2 class="card-title">About This Game</h2>
+                <h2 class="card-title">About this game</h2>
                 <div>
                     <p>{long_description}</p>
                     <p style="margin-top: 16px; color: var(--apple-gray); font-size: 14px;">
@@ -693,7 +697,7 @@ def generate_game_page(game_data, related_games):
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 BTW Games. All rights reserved.</p>
+            <p>&copy; 2026 BTW game. All rights reserved.</p>
         </div>
     </footer>
 
@@ -721,7 +725,7 @@ def save_all_games_json(all_games_data):
             "metadata": {
                 "total_games": len(all_games_data),
                 "generated_at": datetime.now().isoformat(),
-                "website": "BTW Games",
+                "website": "BTW game",
                 "api_base_url": BASE_URL
             },
             "games": all_games_data
