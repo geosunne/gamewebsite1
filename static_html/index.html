@@ -45,6 +45,12 @@
 <span class="brand-icon">▶</span>
 <span class="brand-word">BTW game <span class="brand-tagline">By the way, play</span></span>
 </a>
+<div class="nav-search" role="search">
+<form onsubmit="event.preventDefault(); navSearchGames();">
+<input autocomplete="off" class="search-bar" id="navSearchInput" placeholder="Search games..." type="search"/>
+<button class="search-btn compact" type="submit">Search</button>
+</form>
+</div>
 <button aria-controls="navLinks" aria-label="Open navigation" class="mobile-menu" onclick="toggleMenu()" type="button">
 <span></span>
 <span></span>
@@ -59,11 +65,38 @@
 </nav>
 </header>
 <main>
-<section aria-labelledby="home-title" class="hero container">
+<div class="home-layout container">
+<aside aria-label="Explore BTW game" class="side-rail">
+<section class="rail-panel">
+<h2 class="rail-title">Explore</h2>
+<ul class="rail-links">
+<li><a aria-current="page" href="/"><span class="rail-icon">⌂</span>Home</a></li>
+<li><a href="/games"><span class="rail-icon">▦</span>All games</a></li>
+<li><a href="/games?filter=new"><span class="rail-icon">✦</span>New games</a></li>
+<li><a href="/games?filter=featured"><span class="rail-icon">★</span>Featured</a></li>
+</ul>
+</section>
+<section class="rail-panel">
+<h2 class="rail-title">Categories</h2>
+<ul class="rail-links">
+<li><a href="/games?category=Action"><span class="rail-icon">✹</span>Action</a></li>
+<li><a href="/games?category=Adventure"><span class="rail-icon">♣</span>Adventure</a></li>
+<li><a href="/games?category=Racing"><span class="rail-icon">⚑</span>Racing</a></li>
+<li><a href="/games?category=Puzzle"><span class="rail-icon">✚</span>Puzzle</a></li>
+<li><a href="/games?category=Sports"><span class="rail-icon">●</span>Sports</a></li>
+</ul>
+</section>
+<section class="trust-card">
+<strong>Safe &amp; quick</strong>
+<span>No installs, no account flow, just browser games for short breaks.</span>
+</section>
+</aside>
+<div>
+<section aria-labelledby="home-title" class="hero">
 <div class="hero-copy">
 <span class="kicker">By the way, play a quick game</span>
-<h1 id="home-title">Fast free games for the next small break.</h1>
-<p>BTW game keeps browser games easy to find and quick to open. Pick a category, search a title, or jump into the latest games without downloads or accounts.</p>
+<h1 id="home-title">Play instantly. Have fun.</h1>
+<p>Fast browser games for quick breaks, shared devices, and easy classroom-safe browsing. Search, pick a category, or jump straight into a popular game.</p>
 <div class="hero-actions">
 <a class="button-primary" href="/games">Browse all games</a>
 <a class="button-secondary" href="/games?filter=new">See new games</a>
@@ -82,46 +115,55 @@
 </div>
 </div>
 </section>
-<section aria-labelledby="new-games-title" class="content-band container">
+<section aria-labelledby="popular-games-title" class="content-band">
 <div class="section-header">
 <div>
-<h2 class="section-title" id="new-games-title">New games</h2>
+<h2 class="section-title" id="popular-games-title">Top games</h2>
+<p class="section-note">A compact shelf of games players open most often.</p>
+</div>
+<a class="view-all-btn" href="/games">View all</a>
+</div>
+<div class="games-grid" id="popularGamesGrid">
+<div class="loading-state">Loading games...</div>
+</div>
+<div class="play-proof">
+<div class="proof-item"><span class="proof-icon">⚡</span><span><strong>Instant play</strong><span>Open in your browser</span></span></div>
+<div class="proof-item"><span class="proof-icon">✓</span><span><strong>No downloads</strong><span>Nothing to install</span></span></div>
+<div class="proof-item"><span class="proof-icon">★</span><span><strong>Always free</strong><span>No hidden costs</span></span></div>
+<div class="proof-item"><span class="proof-icon">☻</span><span><strong>Made for breaks</strong><span>Kids, teens, casual players</span></span></div>
+</div>
+</section>
+<section aria-labelledby="new-games-title" class="content-band">
+<div class="section-header">
+<div>
+<h2 class="section-title" id="new-games-title">New games every day</h2>
 <p class="section-note">Fresh picks loaded from the current game library.</p>
 </div>
 <a class="view-all-btn" href="/games?filter=new">View new games</a>
 </div>
-<div class="games-grid" id="newGamesGrid">
+<div class="games-grid compact" id="newGamesGrid">
 <div class="loading-state">Loading games...</div>
 </div>
 </section>
-<section aria-labelledby="popular-games-title" class="content-band container">
-<div class="section-header">
-<div>
-<h2 class="section-title" id="popular-games-title">Popular right now</h2>
-<p class="section-note">Quick-access cards for games players open most often.</p>
-</div>
-<a class="view-all-btn" href="/games">View all games</a>
-</div>
-<div class="games-grid compact" id="popularGamesGrid">
-<div class="loading-state">Loading games...</div>
-</div>
-</section>
-<section aria-labelledby="about-title" class="content-band container">
+<section aria-labelledby="about-title" class="content-band">
 <div class="story-grid">
-<article class="story-item tone-coral">
-<h2 class="section-title" id="about-title">Quick to play</h2>
-<p>Open a game page and start in the browser. The site keeps clicks predictable, URLs clean, and pages easy to share.</p>
-</article>
-<article class="story-item tone-yellow">
-<h3>Friendly browsing</h3>
-<p>Large thumbnails, plain labels, and category filters make the collection easy for casual players and students to scan.</p>
-</article>
 <article class="story-item tone-green">
-<h3>No setup</h3>
-<p>No installs, no account flow, and no confusing launch steps. BTW game is built for short, safe-feeling play sessions.</p>
+<h2 class="section-title" id="about-title">About BTW game</h2>
+<p>BTW game collects free browser games so players can quickly choose something fun. Pages use clean links, clear categories, and predictable play buttons.</p>
+</article>
+<article class="faq-panel">
+<h2 class="card-title">FAQ</h2>
+<div class="faq-list">
+<div class="faq-row"><span>Do I need to download anything?</span><span>+</span></div>
+<div class="faq-row"><span>Is BTW game really free?</span><span>+</span></div>
+<div class="faq-row"><span>Can I play on mobile devices?</span><span>+</span></div>
+<div class="faq-row"><span>Is it safe for kids?</span><span>+</span></div>
+</div>
 </article>
 </div>
 </section>
+</div>
+</div>
 </main>
 <footer class="site-footer">
 <div class="footer-content container">
@@ -144,7 +186,11 @@
             return `/games/${slug}`;
         }
 
-        function createGameCard(game, showBadge = true) {
+        function getFallbackLabel(title) {
+            return String(title || 'Game').split(/\s+/).filter(Boolean).slice(0, 2).map(word => word[0]).join('').toUpperCase() || '▶';
+        }
+
+        function createGameCard(game, showBadge = true, priority = false) {
             const card = document.createElement('a');
             card.className = 'game-card';
             card.href = getGameUrl(game);
@@ -156,8 +202,8 @@
             card.innerHTML = `
                 <div class="game-thumbnail">
                     ${badge}
-                    ${thumbnailUrl ? `<img src="${thumbnailUrl}" alt="${title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">` : ''}
-                    <div class="thumbnail-fallback" style="${thumbnailUrl ? 'display:none;' : ''}">🎮</div>
+                    ${thumbnailUrl ? `<img src="${thumbnailUrl}" alt="${title}" loading="${priority ? 'eager' : 'lazy'}" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">` : ''}
+                    <div class="thumbnail-fallback" style="${thumbnailUrl ? 'display:none;' : ''}">${getFallbackLabel(title)}</div>
                     <div class="game-info">
                         <h3 class="game-title">${title}</h3>
                     </div>
@@ -173,7 +219,7 @@
                 container.innerHTML = '<div class="no-results">No games found. Try another category or search.</div>';
                 return;
             }
-            games.forEach(game => container.appendChild(createGameCard(game, showBadge)));
+            games.forEach((game, index) => container.appendChild(createGameCard(game, showBadge, index < 12)));
         }
 
         function searchGames() {
@@ -185,14 +231,19 @@
             }
         }
 
+        function navSearchGames() {
+            const query = document.getElementById('navSearchInput').value.trim();
+            window.location.href = query ? `/games?search=${encodeURIComponent(query)}` : '/games';
+        }
+
         async function loadAllGames() {
             try {
                 const [newGames, popularGames] = await Promise.all([
-                    GAMES_DATA.getNewGames(10),
-                    GAMES_DATA.getPopularGames(15)
+                    GAMES_DATA.getNewGames(12),
+                    GAMES_DATA.getPopularGames(18)
                 ]);
-                await loadGamesToContainer(newGames, 'newGamesGrid');
-                await loadGamesToContainer(popularGames, 'popularGamesGrid', false);
+                await loadGamesToContainer(popularGames, 'popularGamesGrid');
+                await loadGamesToContainer(newGames, 'newGamesGrid', false);
             } catch (error) {
                 console.error('Failed to load games:', error);
                 ['newGamesGrid', 'popularGamesGrid'].forEach(id => {
