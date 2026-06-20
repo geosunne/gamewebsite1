@@ -48,6 +48,9 @@ python optimize_seo.py
 # 5. 更新支持文件
 python update_game_slugs.py
 python update_sitemap.py
+
+# 6. 发布后提交 Bing IndexNow
+python submit_indexnow.py --submit
 ```
 
 ## 📋 完整流程步骤
@@ -78,6 +81,14 @@ python update_sitemap.py
 ### 📊 Step 5: 支持文件更新
 - **脚本**: `update_game_slugs.py`, `update_sitemap.py`
 - **功能**: 更新游戏slug列表、生成sitemap
+
+### 🔎 Bing IndexNow 提交
+- **脚本**: `submit_indexnow.py`
+- **验证文件**: `update_sitemap.py` 会读取 `indexnow_key.txt`，生成 `static_html/<key>.txt`
+- **默认行为**: 不带 `--submit` 时只 dry-run，不会请求 Bing
+- **全站提交**: `python submit_indexnow.py --submit`
+- **单页提交**: `python submit_indexnow.py --url /games/papas-donuteria --submit`
+- **注意**: 真实提交应在 `static_html/<key>.txt` 已经部署到线上后执行，确保 `https://btwgame.com/<key>.txt` 可访问。
 - **输出**: `game_slugs.txt`, `sitemap.xml`, `sitemap.txt`
 
 ## ⚙️ 配置选项

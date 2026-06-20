@@ -17,6 +17,20 @@ STATIC_PAGES = [
     "/best/no-download-games",
     "/llms.txt",
 ]
+INDEXNOW_KEY_FILE = "indexnow_key.txt"
+
+def update_indexnow_key_file():
+    if not os.path.exists(INDEXNOW_KEY_FILE):
+        print(f"IndexNow key file {INDEXNOW_KEY_FILE} not found, skipping")
+        return
+    with open(INDEXNOW_KEY_FILE, 'r', encoding='utf-8') as f:
+        key = f.read().strip()
+    if not key:
+        print(f"IndexNow key file {INDEXNOW_KEY_FILE} is empty, skipping")
+        return
+    with open(f"static_html/{key}.txt", 'w', encoding='utf-8') as f:
+        f.write(key + "\n")
+    print(f"Updated IndexNow key location: static_html/{key}.txt")
 
 def update_sitemap():
     # Read updated games data
@@ -97,6 +111,7 @@ def update_sitemap():
         f.write('/games/jailbreak-prison-escape%C3%A2.html /games/jailbreak-prison-escape 308\n')
 
     print("Updated _redirects for legacy .html URLs")
+    update_indexnow_key_file()
 
 if __name__ == "__main__":
     update_sitemap()
