@@ -31,26 +31,26 @@ def optimize_index_html():
     # Update title
     title_tag = soup.find('title')
     if title_tag:
-        title_tag.string = "BTW Games - Free Online Games | Play 500+ Browser Games Instantly"
+        title_tag.string = "BTW game - Free Online Games for Quick Breaks"
 
     # Update meta description
     meta_desc = soup.find('meta', attrs={'name': 'description'})
     if meta_desc:
-        meta_desc['content'] = "Play 500+ free online games at BTW Games. Enjoy action, puzzle, racing, strategy, and casual browser games instantly with no downloads."
+        meta_desc['content'] = "Play 500+ free online games at BTW game. Fast browser games for quick breaks, with action, puzzle, racing, sports, and casual games."
 
     # Update meta keywords
     meta_keywords = soup.find('meta', attrs={'name': 'keywords'})
     if meta_keywords:
-        meta_keywords['content'] = "free online games, browser games, action games, puzzle games, racing games, strategy games, no download games, instant play games, BTW Games"
+        meta_keywords['content'] = "free online games, browser games, action games, puzzle games, racing games, strategy games, no download games, instant play games, BTW game"
 
     # Update Open Graph tags
     og_title = soup.find('meta', attrs={'property': 'og:title'})
     if og_title:
-        og_title['content'] = "BTW Games - Free Online Games | Play 500+ Browser Games Instantly"
+        og_title['content'] = "BTW game - Free Online Games for Quick Breaks"
 
     og_desc = soup.find('meta', attrs={'property': 'og:description'})
     if og_desc:
-        og_desc['content'] = "Play 500+ free online games instantly at BTW Games. Action, puzzle, racing, strategy, and casual games with no downloads."
+        og_desc['content'] = "Play 500+ free online games instantly at BTW game. No downloads, no accounts, just quick browser play."
 
     og_url = soup.find('meta', attrs={'property': 'og:url'})
     if og_url:
@@ -58,25 +58,34 @@ def optimize_index_html():
 
     twitter_title = soup.find('meta', attrs={'name': 'twitter:title'})
     if twitter_title:
-        twitter_title['content'] = "BTW Games - Free Online Games | Play 500+ Browser Games Instantly"
+        twitter_title['content'] = "BTW game - Free Online Games for Quick Breaks"
 
     twitter_desc = soup.find('meta', attrs={'name': 'twitter:description'})
     if twitter_desc:
-        twitter_desc['content'] = "Play 500+ free online games instantly at BTW Games. Action, puzzle, racing, strategy, and casual games with no downloads."
+        twitter_desc['content'] = "Play 500+ free online games instantly at BTW game. No downloads, no accounts, just quick browser play."
 
     # Add structured data for website
     structured_data = {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "BTW Games",
+        "name": "BTW game",
         "url": "https://btwgame.com/",
-        "description": "Free online games platform with 500+ browser games",
+        "description": "Free online games platform with 500+ quick browser games",
         "potentialAction": {
             "@type": "SearchAction",
             "target": "https://btwgame.com/games?search={search_term_string}",
             "query-input": "required name=search_term_string"
         }
     }
+
+    # Replace existing WebSite JSON-LD so repeated optimization runs stay idempotent.
+    for existing_script in soup.find_all('script', type='application/ld+json'):
+        try:
+            data = json.loads(existing_script.string or '{}')
+        except json.JSONDecodeError:
+            continue
+        if data.get('@type') == 'WebSite':
+            existing_script.extract()
 
     # Add JSON-LD script
     script_tag = soup.new_tag('script', type='application/ld+json')
@@ -108,21 +117,21 @@ def optimize_games_html():
     # Update title
     title_tag = soup.find('title')
     if title_tag:
-        title_tag.string = "All Games - BTW Games | 50+ Free Online Browser Games"
+        title_tag.string = "All Games | BTW game"
 
     # Add meta description if not exists
     meta_desc = soup.find('meta', attrs={'name': 'description'})
     if not meta_desc:
         meta_desc = soup.new_tag('meta', name='description')
         soup.head.append(meta_desc)
-    meta_desc['content'] = "Browse all 50+ free online games at BTW Games. Find action, puzzle, racing, and strategy games. Play instantly in your browser with no downloads."
+    meta_desc['content'] = "Browse all 500+ free online games at BTW game. Find action, puzzle, racing, sports, and casual games that play instantly in your browser."
 
     # Add meta keywords if not exists
     meta_keywords = soup.find('meta', attrs={'name': 'keywords'})
     if not meta_keywords:
         meta_keywords = soup.new_tag('meta', name='keywords')
         soup.head.append(meta_keywords)
-    meta_keywords['content'] = "all games, free online games, browser games, game collection, BTW Games"
+    meta_keywords['content'] = "all games, free online games, browser games, game collection, BTW game"
 
     # Add canonical URL
     canonical = soup.find('link', attrs={'rel': 'canonical'})
@@ -161,12 +170,12 @@ def optimize_game_pages():
         # Update title
         title_tag = soup.find('title')
         if title_tag:
-            title_tag.string = f"Play {game['title']} Online Free - BTW Games"
+            title_tag.string = f"Play {game['title']} Online Free - BTW game"
 
         # Update meta description
         meta_desc = soup.find('meta', attrs={'name': 'description'})
         if meta_desc:
-            description = game.get('description', f"Play {game['title']} online for free at BTW Games.")
+            description = game.get('description', f"Play {game['title']} online for free at BTW game.")
             # Limit description to 160 characters for SEO
             if len(description) > 160:
                 description = description[:157] + "..."
@@ -188,7 +197,7 @@ def optimize_game_pages():
 
         og_desc = soup.find('meta', attrs={'property': 'og:description'})
         if og_desc:
-            description = game.get('description', f"Play {game['title']} online for free at BTW Games.")
+            description = game.get('description', f"Play {game['title']} online for free at BTW game.")
             if len(description) > 160:
                 description = description[:157] + "..."
             og_desc['content'] = description
@@ -211,7 +220,7 @@ def optimize_game_pages():
             "isAccessibleForFree": True,
             "publisher": {
                 "@type": "Organization",
-                "name": "BTW Games"
+                "name": "BTW game"
             }
         }
 
@@ -288,9 +297,9 @@ Sitemap: https://btwgame.com/sitemap.txt
 Allow: /games/
 Allow: /games
 
-# Block assets that don't need indexing
-Disallow: /assets/js/
-Disallow: /assets/css/
+# Allow render assets for search engines
+Allow: /assets/js/
+Allow: /assets/css/
 Disallow: /*.json$
 
 # Allow common search engine bots

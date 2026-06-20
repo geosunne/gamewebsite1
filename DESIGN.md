@@ -1,199 +1,93 @@
 ---
-name: BTW Games
-description: Fast, playful, trustworthy browser game portal for casual players and students.
+name: BTW game
+description: Fast, playful, trustworthy browser game portal for quick casual play.
 colors:
-  play-blue: "#007AFF"
-  trust-ink: "#1C1C1E"
-  soft-gray: "#8E8E93"
-  cloud-bg: "#F2F2F7"
+  brand-coral: "#F05A3F"
+  brand-coral-dark: "#B92E1E"
+  brand-orange: "#FF9F1C"
+  brand-yellow: "#FFD84D"
+  brand-violet: "#7B4EF6"
+  brand-sky: "#1388D8"
+  brand-green: "#1F9D62"
+  ink: "#172033"
+  ink-soft: "#4E5C73"
+  page: "#F5F9FF"
   surface: "#FFFFFF"
-  success-green: "#34C759"
-  alert-red: "#FF3B30"
 typography:
   display:
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
-    fontSize: "42px"
-    fontWeight: 700
-    lineHeight: 1.15
-    letterSpacing: "normal"
+    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+    fontSize: "clamp(2.45rem, 5vw, 4.9rem)"
+    fontWeight: 850
+    lineHeight: 1.02
+    letterSpacing: "-0.03em"
   headline:
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
-    fontSize: "36px"
-    fontWeight: 600
-    lineHeight: 1.2
-  title:
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
-    fontSize: "20px"
-    fontWeight: 600
-    lineHeight: 1.25
+    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+    fontSize: "clamp(1.6rem, 3vw, 2.25rem)"
+    fontWeight: 850
+    lineHeight: 1.15
   body:
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
-    fontSize: "16px"
+    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+    fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.6
-  label:
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
-    fontSize: "14px"
-    fontWeight: 500
-    lineHeight: 1.4
 rounded:
-  xs: "8px"
-  sm: "12px"
-  md: "16px"
-  lg: "20px"
+  sm: "8px"
+  md: "12px"
+  lg: "16px"
 spacing:
   xs: "8px"
   sm: "12px"
   md: "16px"
-  lg: "20px"
-  xl: "30px"
-  section: "60px"
+  lg: "24px"
+  xl: "32px"
+  section: "64px"
 components:
   button-primary:
-    backgroundColor: "{colors.play-blue}"
+    backgroundColor: "{colors.brand-coral}"
     textColor: "{colors.surface}"
-    rounded: "{rounded.sm}"
-    padding: "12px 20px"
+    rounded: "999px"
+    padding: "11px 18px"
   card-game:
     backgroundColor: "{colors.surface}"
-    textColor: "{colors.trust-ink}"
-    rounded: "{rounded.md}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.lg}"
     padding: "0"
   panel-filter:
     backgroundColor: "{colors.surface}"
-    textColor: "{colors.trust-ink}"
+    textColor: "{colors.ink}"
     rounded: "{rounded.lg}"
-    padding: "30px"
-  input-search:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.trust-ink}"
-    rounded: "{rounded.sm}"
-    padding: "16px 20px"
+    padding: "24px"
 ---
 
-# Design System: BTW Games
+# Design System: BTW game
 
-## 1. Overview
+## Creative North Star
 
-**Creative North Star: "Play Arcade"**
+BTW game means "By the way, play a quick game." The interface should feel like a light, colorful game shelf: fast to scan, friendly for casual players and students, and trustworthy enough for repeated use.
 
-BTW Games currently uses a clean Apple-inspired surface system: white panels, light gray page backgrounds, system typography, soft cards, and one bright blue action color. This gives the site a trustworthy base, but future work should make it feel more like a lively browser game portal: faster, more playful, and richer in color without moving toward casino, preschool, or dark esports cues.
+The current direction is a C + A hybrid: a clean App Store style catalog structure with richer arcade category color. The background stays light, the game thumbnails carry most of the visual variety, and Coral is the primary brand color for logo, buttons, focus, and selected states.
 
-The next design direction should keep the current clarity and low-friction browsing, then add controlled arcade energy through category color roles, thumbnail-led layouts, sharper section rhythm, and small motion on cards and filters. The site should feel fun enough for children and students, but credible enough for parents, teachers, and casual adult players.
+## Color Roles
 
-**Key Characteristics:**
-- Clean white surfaces with vivid blue as the current trust anchor.
-- Game thumbnails carry most visual variety.
-- Cards and filters are simple, rounded, and quick to scan.
-- Future color work should use a full palette in measured roles, not random decoration.
-- Motion should signal play and response, never block access to content.
+- **Play Coral (#F05A3F):** Primary brand color, logo mark, CTA, selected category, focus system.
+- **Coral Dark (#B92E1E):** High-contrast text on light coral surfaces.
+- **Sunny Yellow (#FFD84D):** Casual and quick-break category energy.
+- **Puzzle Violet (#7B4EF6):** Puzzle, strategy, and featured badges.
+- **Sky Blue (#1388D8):** Racing, sports, information, and trust cues only. It is not the primary brand color.
+- **Safe Green (#1F9D62):** Positive and safe states.
+- **Ink (#172033):** Main text. Avoid pale gray text on tinted surfaces.
 
-## 2. Colors
+## Component Rules
 
-The current palette is restrained Apple blue on white and soft gray. The preferred evolution is a richer "Play Arcade" palette: blue remains the trust anchor, with green, coral, yellow, and violet used as category or state accents.
+- Repeated game cards use 16px radius, full borders, compact shadows only on hover.
+- Primary buttons are coral pills. Secondary buttons use light coral surfaces with dark coral text.
+- Category chips use color by category, but selected state is always visibly active through fill and contrast, not color alone.
+- Search and filters stay practical and dense. The player should reach games quickly.
+- The site does not use black backgrounds, casino red/gold urgency, neon glow, mascot-heavy styling, gradient text, glass cards, or colored side-stripe cards.
 
-### Primary
-- **Play Blue** (#007AFF): Current primary action color. Use for main links, selected filters, primary CTAs, and trustworthy system cues.
+## Layout Rules
 
-### Secondary
-- **Success Green** (#34C759): Current positive state color. Use for safe badges, availability, and light success feedback. It can become a puzzle or casual category accent in future UI.
-- **Alert Red** (#FF3B30): Current warning color. Use sparingly for destructive or error states only. Do not use it for urgency or casino-like attention.
-
-### Tertiary
-- **Future Arcade Accents:** Add richer category accents in implementation, such as sunny yellow, berry violet, and coral, but keep each role named and purposeful. Do not introduce neon gradients or jackpot-style red-and-gold pairings.
-
-### Neutral
-- **Trust Ink** (#1C1C1E): Main text and high-priority UI labels.
-- **Soft Gray** (#8E8E93): Supporting text. Use with care because it can fail contrast on tinted backgrounds.
-- **Cloud Background** (#F2F2F7): Page background and quiet dividers.
-- **Surface White** (#FFFFFF): Cards, nav, filters, and game containers.
-
-### Named Rules
-**The Thumbnail First Rule.** Game thumbnails provide the richest visual diversity. UI colors organize and guide, they do not compete with game artwork.
-
-**The No Casino Rule.** Never combine red, gold, black, and glow effects in ways that suggest betting, jackpots, rewards, or false urgency.
-
-**The Color Role Rule.** Every new accent needs a role: category, state, or action. No decorative color added only to fill space.
-
-## 3. Typography
-
-**Display Font:** System UI stack, with Apple, Segoe UI, Roboto, Helvetica, Arial fallbacks.
-**Body Font:** System UI stack.
-**Label/Mono Font:** No distinct label or mono family is currently used.
-
-**Character:** The typography is practical, familiar, and fast. It should stay readable for students and children, with stronger hierarchy added through weight, size, and spacing rather than decorative fonts.
-
-### Hierarchy
-- **Display** (700, 42px, 1.15): Page titles and major landing headings. Future hero work may use `clamp()`, maxing at 6rem.
-- **Headline** (600, 36px, 1.2): Section titles such as game groups and content sections.
-- **Title** (600, 20px, 1.25): Card titles, feature headings, and filter panel headings.
-- **Body** (400, 16px, 1.6): Descriptions and supporting copy. Keep long prose within 65 to 75ch.
-- **Label** (500, 14px, 1.4): Result counts, filter labels, badges, and compact UI text.
-
-### Named Rules
-**The Fast Scan Rule.** A player should understand a game card from its thumbnail and title without reading body copy.
-
-**The No Shouting Rule.** Avoid all-caps body copy and oversized display type. Playful does not mean loud.
-
-## 4. Elevation
-
-The current system uses soft ambient shadows to separate cards, filters, the sticky header, and game containers from the page background. This is acceptable for trust and clarity, but future passes should reduce broad shadow blur on repeated cards and use color, spacing, and thumbnail depth for playfulness.
-
-### Shadow Vocabulary
-- **Ambient Low** (`0 2px 15px rgba(0, 0, 0, 0.1)`): Current default for header, cards, filters, and content panels.
-- **Ambient High** (`0 10px 40px rgba(0, 0, 0, 0.15)`): Current hover or major container shadow. Use only for game frame, overlays, or active hover states.
-
-### Named Rules
-**The State Shadow Rule.** Repeated game cards should be mostly flat at rest. Stronger shadow belongs to hover, focus, or active play surfaces.
-
-## 5. Components
-
-### Buttons
-- **Shape:** Rounded rectangle, usually 12px. Pills are acceptable for filters and compact chips.
-- **Primary:** Play Blue background, Surface White text, medium padding.
-- **Hover / Focus:** Use a clear color or outline shift, plus small transform only when reduced motion is not requested.
-- **Secondary / Ghost:** Use white or transparent backgrounds with Play Blue text and clear focus rings.
-
-### Chips
-- **Style:** Filter chips use rounded outlines or filled selected states.
-- **State:** Selected chips should use Play Blue or a named category accent with enough contrast. Do not rely on color alone; include weight, border, or icon state.
-
-### Cards / Containers
-- **Corner Style:** Game and content cards currently use 16px to 20px. Future cards should stay at 16px or below unless they are large play surfaces.
-- **Background:** Surface White on Cloud Background.
-- **Shadow Strategy:** Ambient Low at rest, Ambient High only on major hover or game container states.
-- **Border:** Prefer subtle full borders or no border. Do not use colored side stripes.
-- **Internal Padding:** 30px for panels, compact card interiors for game grids.
-
-### Inputs / Fields
-- **Style:** White surface, 2px Cloud Background border, 12px radius, 16px vertical padding.
-- **Focus:** Play Blue border. Add a visible outline or subtle focus ring in future passes.
-- **Error / Disabled:** Error should use Alert Red with text, icon, or helper copy. Disabled fields need opacity plus cursor and label state.
-
-### Navigation
-- **Style:** Sticky white header with system typography, Play Blue logo, dark text links, and hover color shift.
-- **Mobile:** Hamburger menu should stay simple, with generous tap targets and clear open state.
-
-### Game Cards
-- **Character:** Fast, visual, thumbnail-led.
-- **Behavior:** Entire card may be clickable, but focus states must be visible and keyboard reachable.
-- **Future Color:** Add category accents as small tags or bottom bars only when they improve scanning. Avoid casino-like badges.
-
-## 6. Do's and Don'ts
-
-### Do:
-- **Do** keep Play Blue (#007AFF) as the trust anchor until a richer palette is implemented.
-- **Do** add color through named category roles, for example action, puzzle, racing, cooking, and casual.
-- **Do** keep text contrast at WCAG AA or better, especially Soft Gray (#8E8E93) on light or tinted backgrounds.
-- **Do** use thumbnails as the main source of visual variety.
-- **Do** use small, responsive hover and focus motion that respects `prefers-reduced-motion`.
-- **Do** keep card radii at 16px or below for repeated grids, and reserve 20px for large panels.
-
-### Don't:
-- **Don't** use casino or betting visual language, including dark neon, jackpot cues, slot-machine energy, aggressive red-and-gold urgency, and misleading reward patterns.
-- **Don't** make the site low-childhood, toy-like, mascot-heavy, or preschool in tone.
-- **Don't** use dark esports styling, heavy black backgrounds, smoky gradients, or hostile shooter-lobby tone.
-- **Don't** use gradient text.
-- **Don't** use colored side-stripe borders on cards, alerts, or list items.
-- **Don't** pair a 1px decorative border with a broad 16px+ blur shadow on the same repeated card.
-- **Don't** add random color accents without category, state, or action meaning.
+- Homepage first viewport: brand, search, category lanes, and direct links to the catalog. No heavy marketing-only hero.
+- Games catalog: desktop uses a sticky category rail and a compact card grid. Mobile collapses to stacked filters and two-column game cards.
+- Game detail: large playable frame first, metadata nearby, concise game information, then related games.
+- Public URLs are clean: `/games/{slug}`, no `.html`, no trailing slash in canonical URLs.
