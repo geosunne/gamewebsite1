@@ -8,14 +8,26 @@ import os
 import shutil
 import time
 import re
+import hashlib
+from io import BytesIO
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from html import escape as html_escape
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 from datetime import datetime
 
 BASE_URL = "http://localhost:8000"
 SITE_URL = "https://btwgame.com"
 SITE_NAME = "BTW game"
 SITE_IMAGE = f"{SITE_URL}/assets/images/btwlogo.png"
+INITIAL_CATALOG_CARD_COUNT = 120
+CATALOG_PAGE_SIZE = 120
+THUMBNAIL_CACHE_DIR = "static/assets/thumbnails"
+THUMBNAIL_WIDTH = 320
+THUMBNAIL_HEIGHT = 200
+THUMBNAIL_VERSION = "cover-16x10-v2"
+THUMBNAIL_QUALITY = 82
+THUMBNAIL_TIMEOUT = 5
+THUMBNAIL_WORKERS = 16
 
 MOJIBAKE_REPLACEMENTS = {
     "Â\xa0": " ",
@@ -647,6 +659,16 @@ def truncate(text, length=160):
         return text
     return text[:length - 3].rstrip() + "..."
 
+def site_absolute_url(url):
+    url = clean_text(url or "")
+    if not url:
+        return SITE_IMAGE
+    if url.startswith("http://") or url.startswith("https://"):
+        return url
+    if url.startswith("/"):
+        return f"{SITE_URL}{url}"
+    return f"{SITE_URL}/{url.lstrip('/')}"
+
 def category_slug(category):
     return slugify(category)
 
@@ -657,10 +679,101 @@ def category_full_url(category):
     return f"{SITE_URL}{category_url(category)}"
 
 def game_url(slug):
-    return f"/games/{slug}"
+    return f"/games/{normalize_slug(slug)}"
 
 def game_full_url(slug):
-    return f"{SITE_URL}/games/{slug}"
+    return f"{SITE_URL}{game_url(slug)}"
+
+def thumbnail_cache_filename(url, slug):
+    parsed = urlparse(url)
+    source_key = f"{THUMBNAIL_VERSION}:{parsed.netloc}{parsed.path}?{parsed.query}"
+    digest = hashlib.sha1(source_key.encode("utf-8")).hexdigest()[:12]
+    safe_slug = normalize_slug(slug or digest)[:80] or "game"
+    return f"{safe_slug}-{digest}.webp"
+
+def cover_resize(image, image_module, width, height):
+    source_width, source_height = image.size
+    target_ratio = width / height
+    source_ratio = source_width / source_height
+
+    if source_ratio > target_ratio:
+        crop_width = int(source_height * target_ratio)
+        left = (source_width - crop_width) // 2
+        box = (left, 0, left + crop_width, source_height)
+    else:
+        crop_height = int(source_width / target_ratio)
+        top = (source_height - crop_height) // 2
+        box = (0, top, source_width, top + crop_height)
+
+    return image.crop(box).resize((width, height), image_module.Resampling.LANCZOS)
+
+def cache_remote_thumbnail(url, slug, session, image_module):
+    url = clean_text(url)
+    if not url or url.startswith("/"):
+        return url
+    if not (url.startswith("http://") or url.startswith("https://")):
+        return url
+
+    os.makedirs(THUMBNAIL_CACHE_DIR, exist_ok=True)
+    filename = thumbnail_cache_filename(url, slug)
+    output_path = os.path.join(THUMBNAIL_CACHE_DIR, filename)
+    public_path = f"/assets/thumbnails/{filename}"
+    if os.path.exists(output_path) and os.path.getsize(output_path) > 0:
+        return public_path
+
+    try:
+        response = session.get(url, timeout=THUMBNAIL_TIMEOUT, headers={"User-Agent": "Mozilla/5.0"})
+        response.raise_for_status()
+        image = image_module.open(BytesIO(response.content)).convert("RGB")
+        cover_resize(image, image_module, THUMBNAIL_WIDTH, THUMBNAIL_HEIGHT).save(
+            output_path,
+            "WEBP",
+            quality=THUMBNAIL_QUALITY,
+            method=6
+        )
+        return public_path
+    except Exception:
+        return url
+
+def cache_game_thumbnails(games):
+    try:
+        from PIL import Image
+    except ImportError:
+        print("⚠️  Pillow is not installed; skipping local thumbnail cache. Run `python3 -m pip install -r requirements.txt`.")
+        return games
+
+    candidates = []
+    for index, game in enumerate(games):
+        source_url = clean_text(game.get("thumbnail_url") or game.get("thumbnail") or "")
+        if source_url:
+            candidates.append((index, game, source_url))
+
+    cached = 0
+    remote = len(games) - len(candidates)
+
+    def cache_one(item):
+        index, game, source_url = item
+        session = requests.Session()
+        game.setdefault("original_thumbnail_url", source_url)
+        local_url = cache_remote_thumbnail(source_url, game.get("slug"), session, Image)
+        return index, source_url, local_url
+
+    total = len(candidates)
+    print(f"🖼️  Preparing thumbnail cache for {total} images...")
+    with ThreadPoolExecutor(max_workers=THUMBNAIL_WORKERS) as executor:
+        futures = [executor.submit(cache_one, item) for item in candidates]
+        for processed, future in enumerate(as_completed(futures), 1):
+            index, source_url, local_url = future.result()
+            if local_url != source_url:
+                cached += 1
+                games[index]["thumbnail_url"] = local_url
+                games[index]["thumbnail"] = local_url
+            else:
+                remote += 1
+            if processed % 100 == 0 or processed == total:
+                print(f"🖼️  Thumbnail cache progress: {processed}/{total}")
+    print(f"🖼️  Thumbnail cache ready: {cached} local, {remote} remote/empty")
+    return games
 
 def get_fallback_label(title):
     words = [word for word in re.split(r"\s+", clean_text(title or "")) if word]
@@ -899,7 +1012,7 @@ def render_game_card(game, priority=False, extra_class="", show_badge=True):
         badge = '<div class="game-badge featured">FEATURED</div>'
     image_html = ''
     if thumbnail:
-        image_html = f'<img src="{html_escape(thumbnail, quote=True)}" alt="{html_escape(title, quote=True)}" loading="{"eager" if priority else "lazy"}" decoding="async" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'grid\';">'
+        image_html = f'<img src="{html_escape(thumbnail, quote=True)}" alt="{html_escape(title, quote=True)}" width="{THUMBNAIL_WIDTH}" height="{THUMBNAIL_HEIGHT}" loading="{"eager" if priority else "lazy"}" decoding="async" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'grid\';">'
     return f'''
         <a class="game-card {html_escape(extra_class)}" href="{game_url(slug)}">
             <div class="game-thumbnail">
@@ -912,6 +1025,15 @@ def render_game_card(game, priority=False, extra_class="", show_badge=True):
             </div>
         </a>
     '''
+
+def render_catalog_links(games):
+    links = []
+    for game in games:
+        title = clean_text(game.get('title') or 'Untitled game')
+        slug = normalize_slug(game.get('slug') or game.get('id') or title)
+        category = clean_text(game.get('category_name') or game.get('category') or 'Games')
+        links.append(f'<li><a href="{game_url(slug)}">{html_escape(title)}</a><span>{html_escape(category)}</span></li>')
+    return "\n".join(links)
 
 def category_icon(category):
     return {
@@ -1017,7 +1139,7 @@ def build_game_jsonld(game, tags, faq_items):
     title = clean_text(game.get('title'))
     slug = normalize_slug(game.get('slug'))
     description = truncate(game.get('description') or f"Play {title} online for free at BTW game.", 220)
-    image = clean_text(game.get('thumbnail_url') or '') or SITE_IMAGE
+    image = site_absolute_url(game.get('thumbnail_url') or '')
     category_name = clean_text(game.get('category_name') or 'Games')
     scripts = [
         {
@@ -1171,6 +1293,59 @@ def render_head(title, description, canonical_path, og_image=SITE_IMAGE, extra_j
     <title>{html_escape(title)}</title>
 </head>'''
 
+def render_home_grid_balance_script():
+    return '''
+    <script>
+        function balanceHomeGameRows() {
+            document.querySelectorAll('.home-main .home-games-grid').forEach(grid => {
+                const cards = Array.from(grid.querySelectorAll('.game-card'));
+                cards.forEach(card => card.classList.remove('is-row-trimmed'));
+
+                const columns = getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length;
+                if (!columns || columns < 2 || cards.length <= columns) return;
+                const minimumRows = grid.classList.contains('category-home-grid') ? 2 : 1;
+                const minimumCells = columns * minimumRows;
+
+                let usedCells = 0;
+                cards.forEach(card => {
+                    const style = getComputedStyle(card);
+                    const columnSpan = style.gridColumnEnd && style.gridColumnEnd.startsWith('span')
+                        ? Number(style.gridColumnEnd.replace('span', '').trim()) || 1
+                        : 1;
+                    const rowSpan = style.gridRowEnd && style.gridRowEnd.startsWith('span')
+                        ? Number(style.gridRowEnd.replace('span', '').trim()) || 1
+                        : 1;
+                    usedCells += columnSpan * rowSpan;
+                });
+
+                const extraCells = usedCells % columns;
+                if (!extraCells) return;
+                if (usedCells <= minimumCells || usedCells - extraCells < minimumCells) return;
+
+                let removedCells = 0;
+                for (let index = cards.length - 1; index >= 0 && removedCells < extraCells; index -= 1) {
+                    const card = cards[index];
+                    const style = getComputedStyle(card);
+                    const columnSpan = style.gridColumnEnd && style.gridColumnEnd.startsWith('span')
+                        ? Number(style.gridColumnEnd.replace('span', '').trim()) || 1
+                        : 1;
+                    const rowSpan = style.gridRowEnd && style.gridRowEnd.startsWith('span')
+                        ? Number(style.gridRowEnd.replace('span', '').trim()) || 1
+                        : 1;
+                    card.classList.add('is-row-trimmed');
+                    removedCells += columnSpan * rowSpan;
+                }
+            });
+        }
+
+        window.addEventListener('load', balanceHomeGameRows);
+        window.addEventListener('resize', () => {
+            window.clearTimeout(window.__btwBalanceRowsTimer);
+            window.__btwBalanceRowsTimer = window.setTimeout(balanceHomeGameRows, 120);
+        });
+    </script>
+    '''
+
 def render_side_rail(active_category=None, categories=None):
     return f'''
         <aside class="side-rail" aria-label="Explore BTW game">
@@ -1275,7 +1450,7 @@ def render_category_guide_html(category, games):
 def render_home_category_shelf(category, category_games, index):
     if not category_games:
         return ""
-    limit = 18 if index < 3 else 12
+    limit = 36
     cards = "\n".join(
         render_game_card(game, priority=index == 0 and card_index < 8, show_badge=False)
         for card_index, game in enumerate(category_games[:limit])
@@ -1373,12 +1548,34 @@ def generate_index_page(games):
     {render_footer()}
     <script src="/assets/js/api.js"></script>
     {render_nav_script()}
+    {render_home_grid_balance_script()}
 </body>
 </html>'''
 
 def generate_games_page(games):
     categories = get_all_categories(games)
-    game_cards = "\n".join(render_game_card(game, priority=index < 18) for index, game in enumerate(games))
+    initial_games = games[:INITIAL_CATALOG_CARD_COUNT]
+    game_cards = "\n".join(render_game_card(game, priority=index < 8) for index, game in enumerate(initial_games))
+    catalog_links = render_catalog_links(games)
+    catalog_data = []
+    for game in games:
+        title = clean_text(game.get('title') or 'Untitled game')
+        slug = normalize_slug(game.get('slug') or game.get('id') or title)
+        catalog_data.append({
+            "title": title,
+            "slug": slug,
+            "thumbnail_url": clean_text(game.get('thumbnail_url') or game.get('thumbnail') or ''),
+            "category_name": clean_text(game.get('category_name') or game.get('category') or 'Games'),
+            "tags": clean_value(game.get('standardized_tags') or game.get('tags') or []),
+            "description": truncate(game.get('description') or '', 120),
+            "rating": game.get('rating') or 0,
+            "total_plays": game.get('total_plays') or game.get('plays') or 0,
+            "created_at": clean_text(game.get('created_at') or game.get('release_date') or ''),
+            "is_new": bool(game.get('is_new') or game.get('isNew')),
+            "is_featured": bool(game.get('is_featured') or game.get('isFeatured')),
+            "fallback": get_fallback_label(title),
+        })
+    catalog_json = json.dumps(catalog_data, ensure_ascii=False, separators=(',', ':')).replace("</", "<\\/")
     all_guide = {
         "title": "Free online games by category",
         "intro": "Find quick browser games for short breaks, school downtime, and casual play. Pick a category, open a game, and start playing without downloads or accounts.",
@@ -1438,8 +1635,15 @@ def generate_games_page(games):
                 </section>
                 <section class="games-section">
                     <div class="games-grid" id="gamesGrid">{game_cards}</div>
+                    <div class="catalog-actions">
+                        <button class="load-more-btn" id="loadMoreBtn" type="button">Load more games</button>
+                    </div>
                     <div class="no-results" id="noResults" style="display: none;"><h2>No games found</h2><p>Try a broader search or switch back to All games.</p></div>
                 </section>
+                <details class="catalog-link-index">
+                    <summary>All game links</summary>
+                    <ul>{catalog_links}</ul>
+                </details>
                 {guide_html}
             </div>
         </div>
@@ -1447,20 +1651,93 @@ def generate_games_page(games):
     {render_footer()}
     <script src="/assets/js/api.js"></script>
     {render_nav_script()}
+    <script type="application/json" id="catalogData">{catalog_json}</script>
     <script>
-        const staticCards = Array.from(document.querySelectorAll('#gamesGrid .game-card'));
-        document.getElementById('searchInput').addEventListener('input', function() {{
-            const query = this.value.trim().toLowerCase();
-            let visible = 0;
-            staticCards.forEach(card => {{
-                const text = card.textContent.toLowerCase();
-                const match = !query || text.includes(query);
-                card.style.display = match ? '' : 'none';
-                if (match) visible += 1;
+        const catalogData = JSON.parse(document.getElementById('catalogData').textContent);
+        const gamesGrid = document.getElementById('gamesGrid');
+        const searchInput = document.getElementById('searchInput');
+        const sortSelect = document.getElementById('sortSelect');
+        const resultsCount = document.getElementById('resultsCount');
+        const noResults = document.getElementById('noResults');
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        const pageSize = {CATALOG_PAGE_SIZE};
+        let visibleLimit = {INITIAL_CATALOG_CARD_COUNT};
+        let filteredGames = [...catalogData];
+
+        function escapeHtml(value) {{
+            return String(value || '').replace(/[&<>"']/g, char => ({{
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            }}[char]));
+        }}
+
+        function gameCard(game, index) {{
+            const badge = game.is_new ? '<div class="game-badge">NEW</div>' : (game.is_featured ? '<div class="game-badge featured">FEATURED</div>' : '');
+            const image = game.thumbnail_url
+                ? `<img src="${{escapeHtml(game.thumbnail_url)}}" alt="${{escapeHtml(game.title)}}" width="{THUMBNAIL_WIDTH}" height="{THUMBNAIL_HEIGHT}" loading="${{index < 8 ? 'eager' : 'lazy'}}" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">`
+                : '';
+            return `
+                <a class="game-card" href="/games/${{escapeHtml(game.slug)}}">
+                    <div class="game-thumbnail">
+                        ${{badge}}
+                        ${{image}}
+                        <div class="thumbnail-fallback" style="${{game.thumbnail_url ? 'display:none;' : ''}}">${{escapeHtml(game.fallback || 'PLAY')}}</div>
+                        <div class="game-info"><h3 class="game-title">${{escapeHtml(game.title)}}</h3></div>
+                    </div>
+                </a>`;
+        }}
+
+        function sortGames(games) {{
+            const sort = sortSelect.value;
+            return [...games].sort((a, b) => {{
+                if (sort === 'newest') return new Date(b.created_at || 0) - new Date(a.created_at || 0);
+                if (sort === 'rating') return (b.rating || 0) - (a.rating || 0);
+                if (sort === 'name') return (a.title || '').localeCompare(b.title || '');
+                return (b.total_plays || 0) - (a.total_plays || 0);
             }});
-            document.getElementById('resultsCount').textContent = `${{visible}} games found`;
-            document.getElementById('noResults').style.display = visible ? 'none' : 'block';
+        }}
+
+        function applyCatalogFilters(resetLimit = true) {{
+            const query = searchInput.value.trim().toLowerCase();
+            if (resetLimit) visibleLimit = pageSize;
+            filteredGames = catalogData.filter(game => {{
+                if (!query) return true;
+                return [game.title, game.description, game.category_name, ...(game.tags || [])]
+                    .filter(Boolean)
+                    .join(' ')
+                    .toLowerCase()
+                    .includes(query);
+            }});
+            filteredGames = sortGames(filteredGames);
+            renderCatalog();
+        }}
+
+        function renderCatalog() {{
+            const visibleGames = filteredGames.slice(0, visibleLimit);
+            gamesGrid.innerHTML = visibleGames.map(gameCard).join('');
+            resultsCount.textContent = `${{filteredGames.length}} games found`;
+            noResults.style.display = filteredGames.length ? 'none' : 'block';
+            loadMoreBtn.hidden = visibleLimit >= filteredGames.length;
+        }}
+
+        loadMoreBtn.addEventListener('click', function() {{
+            visibleLimit += pageSize;
+            renderCatalog();
         }});
+        searchInput.addEventListener('input', () => applyCatalogFilters(true));
+        sortSelect.addEventListener('change', () => applyCatalogFilters(true));
+
+        const initialSearch = new URLSearchParams(window.location.search).get('search');
+        if (initialSearch) {{
+            searchInput.value = initialSearch;
+            applyCatalogFilters(true);
+        }} else {{
+            filteredGames = sortGames(filteredGames);
+            renderCatalog();
+        }}
     </script>
 </body>
 </html>'''
@@ -1568,7 +1845,7 @@ def generate_game_page(game_data, related_games):
     description_attr = html_escape(truncate(description or expanded_description, 155), quote=True)
     slug_attr = html_escape(slug, quote=True)
     iframe_attr = html_escape(iframe_url, quote=True)
-    thumbnail_attr = html_escape(thumbnail_url or SITE_IMAGE, quote=True)
+    thumbnail_attr = html_escape(site_absolute_url(thumbnail_url), quote=True)
     category_href = category_url(category_name)
     category_href_attr = html_escape(category_href, quote=True)
 
@@ -1998,6 +2275,13 @@ def main():
         normalize_slug(game.get('slug')): game
         for game in apply_primary_category_fallbacks(generated_page_data)
     }
+    all_games_data = cache_game_thumbnails(all_games_data)
+    for cached_game in all_games_data:
+        normalized_slug = normalize_slug(cached_game.get('slug'))
+        if normalized_slug in page_data_by_slug:
+            page_data_by_slug[normalized_slug]['thumbnail_url'] = cached_game.get('thumbnail_url')
+            page_data_by_slug[normalized_slug]['thumbnail'] = cached_game.get('thumbnail')
+            page_data_by_slug[normalized_slug]['original_thumbnail_url'] = cached_game.get('original_thumbnail_url')
 
     for game_data_with_tags in all_games_data:
         normalized_slug = normalize_slug(game_data_with_tags.get('slug'))
