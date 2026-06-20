@@ -194,12 +194,14 @@ def generate_game_page(game_data, related_games):
 
     # Generate related games HTML
     related_games_html = ""
+    play_next_html = ""
     if related_games:
         for related_game in related_games:
             related_thumbnail = related_game.get('thumbnail_url', '')
             related_slug = html_escape(related_game.get('slug', ''))
             related_title = html_escape(related_game.get('title', ''))
             related_description = html_escape(related_game.get('description', ''))
+            related_category = html_escape(related_game.get('category_name') or category_name)
             related_fallback = ''.join(word[0] for word in related_title.split()[:2]).upper() or '▶'
             related_img = ''
             if related_thumbnail:
@@ -213,6 +215,18 @@ def generate_game_page(game_data, related_games):
                         <div class="game-info">
                             <h3 class="game-title">{related_title}</h3>
                         </div>
+                    </div>
+                </a>
+            '''
+            play_next_html += f'''
+                <a class="play-next-item" href="/games/{related_slug}">
+                    <div class="play-next-thumb">
+                        {related_img}
+                        <div class="thumbnail-fallback" style="{'display:none;' if related_thumbnail else ''}">{related_fallback}</div>
+                    </div>
+                    <div class="play-next-copy">
+                        <strong>{related_title}</strong>
+                        <span>{related_category}</span>
                     </div>
                 </a>
             '''
@@ -279,6 +293,14 @@ def generate_game_page(game_data, related_games):
                     </div>
                     <div class="games-grid compact">{related_games_html}</div>
                 </section>''' if related_games_html else ''
+    play_next_section_html = f'''
+                        <aside class="play-next-panel" aria-label="Play next">
+                            <div class="play-next-header">
+                                <h2 class="card-title">Play next</h2>
+                                <a href="/games?category={category_param}" class="view-all-btn">More</a>
+                            </div>
+                            <div class="play-next-list">{play_next_html}</div>
+                        </aside>''' if play_next_html else ''
 
     html_content = f'''<!DOCTYPE html>
 <html lang="en">
@@ -340,7 +362,7 @@ def generate_game_page(game_data, related_games):
     </header>
 
     <main class="container">
-        <div class="app-layout">
+        <div class="app-layout detail-app-layout">
             <aside class="side-rail" aria-label="Game navigation">
                 <section class="rail-panel">
                     <h2 class="rail-title">Explore</h2>
@@ -367,39 +389,47 @@ def generate_game_page(game_data, related_games):
             </aside>
 
             <div>
-                <section class="game-detail-header">
-                    <span class="kicker">{category_html}</span>
-                    <h1 class="game-detail-title">{title_html}</h1>
-                    <p class="game-detail-subtitle">{description_html}</p>
-                    <div class="game-meta-row" aria-label="Game details">
-                        <span class="meta-pill">Rating {rating:.1f}</span>
-                        <span class="meta-pill">{total_plays:,} plays</span>
-                        <span class="meta-pill">{category_html}</span>
+                <section class="game-stage-layout" aria-label="{title_html}">
+                    <div class="game-stage-main">
+                        {game_embed_html}
+
+                        <div class="game-title-bar">
+                            <div>
+                                <div class="game-breadcrumbs">
+                                    <a href="/games">Games</a>
+                                    <span>/</span>
+                                    <a href="/games?category={category_param}">{category_html}</a>
+                                </div>
+                                <h1 class="game-detail-title">{title_html}</h1>
+                            </div>
+                            <div class="game-action-row">
+                                <a class="button-primary" href="#gameContainer">Play now</a>
+                                <a class="button-secondary" href="/games?category={category_param}">More {category_html}</a>
+                            </div>
+                        </div>
+
+                        <div class="game-meta-row" aria-label="Game details">
+                            <span class="meta-pill">Rating {rating:.1f}</span>
+                            <span class="meta-pill">{total_plays:,} plays</span>
+                            <span class="meta-pill">{category_html}</span>
+                            <span class="meta-pill">Updated {html_escape(str(release_date_formatted))}</span>
+                        </div>
                     </div>
-                    <div class="game-action-row">
-                        <a class="button-primary" href="#gameContainer">Play now</a>
-                        <a class="button-secondary" href="/games?category={category_param}">More {category_html} games</a>
-                    </div>
+                    {play_next_section_html}
                 </section>
 
-                <div class="game-shell">
-                    <div>
-                        {game_embed_html}
-                        <section class="play-proof" aria-label="Why play on BTW game">
-                            <div class="proof-item"><span class="proof-icon">⚡</span><span><strong>Instant play</strong><span>Start in your browser</span></span></div>
-                            <div class="proof-item"><span class="proof-icon">✓</span><span><strong>No downloads</strong><span>Nothing to install</span></span></div>
-                            <div class="proof-item"><span class="proof-icon">★</span><span><strong>Always free</strong><span>No hidden costs</span></span></div>
-                            <div class="proof-item"><span class="proof-icon">☻</span><span><strong>Friendly browsing</strong><span>Built for quick breaks</span></span></div>
-                        </section>
+                <section class="play-proof" aria-label="Why play on BTW game">
+                    <div class="proof-item"><span class="proof-icon">⚡</span><span><strong>Instant play</strong><span>Start in your browser</span></span></div>
+                    <div class="proof-item"><span class="proof-icon">✓</span><span><strong>No downloads</strong><span>Nothing to install</span></span></div>
+                    <div class="proof-item"><span class="proof-icon">★</span><span><strong>Always free</strong><span>No hidden costs</span></span></div>
+                    <div class="proof-item"><span class="proof-icon">☻</span><span><strong>Friendly browsing</strong><span>Built for quick breaks</span></span></div>
+                </section>
 
-                        <section class="game-content">
-                            <div class="game-description-panel">
-                                <h2 class="card-title">About {title_html}</h2>
-                                <p>{long_description_html}</p>
-                                <p class="release-note">Release Date: {html_escape(str(release_date_formatted))}</p>
-                                {tags_section_html}
-                            </div>
-                        </section>
+                <section class="game-info-layout" aria-label="About and controls">
+                    <div class="game-description-panel">
+                        <h2 class="card-title">About {title_html}</h2>
+                        <p>{long_description_html}</p>
+                        {tags_section_html}
                     </div>
 
                     <aside class="game-sidebar" aria-label="Game help">
@@ -414,7 +444,7 @@ def generate_game_page(game_data, related_games):
                             </div>
                         </div>
                     </aside>
-                </div>
+                </section>
 
                 {related_section_html}
             </div>

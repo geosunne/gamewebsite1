@@ -76,7 +76,7 @@
 </nav>
 </header>
 <main class="container">
-<div class="app-layout">
+<div class="app-layout detail-app-layout">
 <aside aria-label="Game navigation" class="side-rail">
 <section class="rail-panel">
 <h2 class="rail-title">Explore</h2>
@@ -102,27 +102,103 @@
 </section>
 </aside>
 <div>
-<section class="game-detail-header">
-<span class="kicker">Strategy</span>
-<h1 class="game-detail-title">Bloons Tower Defense 3</h1>
-<p class="game-detail-subtitle">In Bloons Tower Defense 3, a strategy game, place your weapons on the track in a strategic way. Prevent the balloons from reaching the exit point.</p>
-<div aria-label="Game details" class="game-meta-row">
-<span class="meta-pill">Rating 4.5</span>
-<span class="meta-pill">6,444 plays</span>
-<span class="meta-pill">Strategy</span>
-</div>
-<div class="game-action-row">
-<a class="button-primary" href="#gameContainer">Play now</a>
-<a class="button-secondary" href="/games?category=Strategy">More Strategy games</a>
-</div>
-</section>
-<div class="game-shell">
-<div>
+<section aria-label="Bloons Tower Defense 3" class="game-stage-layout">
+<div class="game-stage-main">
 <section class="game-container" id="gameContainer">
 <div class="game-wrapper">
 <div class="loading-indicator">Loading game...</div>
 <iframe allowfullscreen="" class="game-iframe" id="gameIframe" loading="lazy" onload="this.previousElementSibling.style.display='none'" src="https://www.onlinegames.io/games/2024/flash/bloons-tower-defense-3/index.html" title="Bloons Tower Defense 3"></iframe>
 </div>
+</section>
+<div class="game-title-bar">
+<div>
+<div class="game-breadcrumbs">
+<a href="/games">Games</a>
+<span>/</span>
+<a href="/games?category=Strategy">Strategy</a>
+</div>
+<h1 class="game-detail-title">Bloons Tower Defense 3</h1>
+</div>
+<div class="game-action-row">
+<a class="button-primary" href="#gameContainer">Play now</a>
+<a class="button-secondary" href="/games?category=Strategy">More Strategy</a>
+</div>
+</div>
+<div aria-label="Game details" class="game-meta-row">
+<span class="meta-pill">Rating 4.5</span>
+<span class="meta-pill">6,444 plays</span>
+<span class="meta-pill">Strategy</span>
+<span class="meta-pill">Updated October 13, 2025</span>
+</div>
+</div>
+<aside aria-label="Play next" class="play-next-panel">
+<div class="play-next-header">
+<h2 class="card-title">Play next</h2>
+<a class="view-all-btn" href="/games?category=Strategy">More</a>
+</div>
+<div class="play-next-list">
+<a class="play-next-item" href="/games/crazy-karts">
+<div class="play-next-thumb">
+<img alt="Crazy Karts" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/740/Crazy-Karts.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CK</div>
+</div>
+<div class="play-next-copy">
+<strong>Crazy Karts</strong>
+<span>Strategy</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/smash-karts">
+<div class="play-next-thumb">
+<img alt="Smash Karts" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/373/smash-karts-online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">SK</div>
+</div>
+<div class="play-next-copy">
+<strong>Smash Karts</strong>
+<span>Strategy</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/stick-guys-defense">
+<div class="play-next-thumb">
+<img alt="Stick Guys Defense" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/476/Stick-Guys-Defense.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">SG</div>
+</div>
+<div class="play-next-copy">
+<strong>Stick Guys Defense</strong>
+<span>Strategy</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/endless-siege">
+<div class="play-next-thumb">
+<img alt="Endless Siege" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/744/Endless-Siege.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">ES</div>
+</div>
+<div class="play-next-copy">
+<strong>Endless Siege</strong>
+<span>Strategy</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/hero-rush-tower-defense">
+<div class="play-next-thumb">
+<img alt="Hero Rush Tower Defense" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/491/Hero-Rush-Tower-Defense-Play.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">HR</div>
+</div>
+<div class="play-next-copy">
+<strong>Hero Rush Tower Defense</strong>
+<span>Strategy</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/chess">
+<div class="play-next-thumb">
+<img alt="Chess" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/376/Online-Chess-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">C</div>
+</div>
+<div class="play-next-copy">
+<strong>Chess</strong>
+<span>Strategy</span>
+</div>
+</a>
+</div>
+</aside>
 </section>
 <section aria-label="Why play on BTW game" class="play-proof">
 <div class="proof-item"><span class="proof-icon">⚡</span><span><strong>Instant play</strong><span>Start in your browser</span></span></div>
@@ -130,14 +206,11 @@
 <div class="proof-item"><span class="proof-icon">★</span><span><strong>Always free</strong><span>No hidden costs</span></span></div>
 <div class="proof-item"><span class="proof-icon">☻</span><span><strong>Friendly browsing</strong><span>Built for quick breaks</span></span></div>
 </section>
-<section class="game-content">
+<section aria-label="About and controls" class="game-info-layout">
 <div class="game-description-panel">
 <h2 class="card-title">About Bloons Tower Defense 3</h2>
 <p>In Bloons Tower Defense 3, a strategy game, place your weapons on the track in a strategic way. Prevent the balloons from reaching the exit point.</p>
-<p class="release-note">Release Date: October 13, 2025</p>
 <div class="game-tags"><span class="tag">HTML5</span><span class="tag">Strategy</span></div>
-</div>
-</section>
 </div>
 <aside aria-label="Game help" class="game-sidebar">
 <div class="info-card"><h3 class="card-title">Game Features</h3><ul class="features-list">
@@ -181,7 +254,7 @@
 </div>
 </div>
 </aside>
-</div>
+</section>
 <section class="related-games">
 <div class="section-header">
 <div>

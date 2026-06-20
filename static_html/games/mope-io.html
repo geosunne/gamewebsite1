@@ -76,7 +76,7 @@
 </nav>
 </header>
 <main class="container">
-<div class="app-layout">
+<div class="app-layout detail-app-layout">
 <aside aria-label="Game navigation" class="side-rail">
 <section class="rail-panel">
 <h2 class="rail-title">Explore</h2>
@@ -102,27 +102,103 @@
 </section>
 </aside>
 <div>
-<section class="game-detail-header">
-<span class="kicker">io Games</span>
-<h1 class="game-detail-title">Mope io</h1>
-<p class="game-detail-subtitle">Play Mope.io now and see if you have what it takes to rise to the top of the food chain!</p>
-<div aria-label="Game details" class="game-meta-row">
-<span class="meta-pill">Rating 4.9</span>
-<span class="meta-pill">12,818 plays</span>
-<span class="meta-pill">io Games</span>
-</div>
-<div class="game-action-row">
-<a class="button-primary" href="#gameContainer">Play now</a>
-<a class="button-secondary" href="/games?category=io%20Games">More io Games games</a>
-</div>
-</section>
-<div class="game-shell">
-<div>
+<section aria-label="Mope io" class="game-stage-layout">
+<div class="game-stage-main">
 <section class="game-container" id="gameContainer">
 <div class="game-wrapper">
 <div class="loading-indicator">Loading game...</div>
 <iframe allowfullscreen="" class="game-iframe" id="gameIframe" loading="lazy" onload="this.previousElementSibling.style.display='none'" src="https://mope.io/" title="Mope io"></iframe>
 </div>
+</section>
+<div class="game-title-bar">
+<div>
+<div class="game-breadcrumbs">
+<a href="/games">Games</a>
+<span>/</span>
+<a href="/games?category=io%20Games">io Games</a>
+</div>
+<h1 class="game-detail-title">Mope io</h1>
+</div>
+<div class="game-action-row">
+<a class="button-primary" href="#gameContainer">Play now</a>
+<a class="button-secondary" href="/games?category=io%20Games">More io Games</a>
+</div>
+</div>
+<div aria-label="Game details" class="game-meta-row">
+<span class="meta-pill">Rating 4.9</span>
+<span class="meta-pill">12,818 plays</span>
+<span class="meta-pill">io Games</span>
+<span class="meta-pill">Updated October 13, 2025</span>
+</div>
+</div>
+<aside aria-label="Play next" class="play-next-panel">
+<div class="play-next-header">
+<h2 class="card-title">Play next</h2>
+<a class="view-all-btn" href="/games?category=io%20Games">More</a>
+</div>
+<div class="play-next-list">
+<a class="play-next-item" href="/games/dreamlike-room">
+<div class="play-next-thumb">
+<img alt="Dreamlike Room" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/645/Dreamlike-Room.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">DR</div>
+</div>
+<div class="play-next-copy">
+<strong>Dreamlike Room</strong>
+<span>io Games</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/rooftop-duel">
+<div class="play-next-thumb">
+<img alt="Rooftop Duel" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1002/Rooftop-Duel-Online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">RD</div>
+</div>
+<div class="play-next-copy">
+<strong>Rooftop Duel</strong>
+<span>io Games</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/slide-io">
+<div class="play-next-thumb">
+<img alt="Slide io" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/87/Slide-io-2.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">SI</div>
+</div>
+<div class="play-next-copy">
+<strong>Slide io</strong>
+<span>io Games</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/vex-3">
+<div class="play-next-thumb">
+<img alt="Vex 3" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/929/VEX-3.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">V3</div>
+</div>
+<div class="play-next-copy">
+<strong>Vex 3</strong>
+<span>io Games</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/tunnel-road">
+<div class="play-next-thumb">
+<img alt="Tunnel Road" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1008/Tunnel-Road.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">TR</div>
+</div>
+<div class="play-next-copy">
+<strong>Tunnel Road</strong>
+<span>io Games</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/five-nights-at-poppy">
+<div class="play-next-thumb">
+<img alt="Five Nights at Poppy" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/992/Five-Nights-at-Poppy.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">FN</div>
+</div>
+<div class="play-next-copy">
+<strong>Five Nights at Poppy</strong>
+<span>io Games</span>
+</div>
+</a>
+</div>
+</aside>
 </section>
 <section aria-label="Why play on BTW game" class="play-proof">
 <div class="proof-item"><span class="proof-icon">⚡</span><span><strong>Instant play</strong><span>Start in your browser</span></span></div>
@@ -130,14 +206,11 @@
 <div class="proof-item"><span class="proof-icon">★</span><span><strong>Always free</strong><span>No hidden costs</span></span></div>
 <div class="proof-item"><span class="proof-icon">☻</span><span><strong>Friendly browsing</strong><span>Built for quick breaks</span></span></div>
 </section>
-<section class="game-content">
+<section aria-label="About and controls" class="game-info-layout">
 <div class="game-description-panel">
 <h2 class="card-title">About Mope io</h2>
 <p>Play Mope.io now and see if you have what it takes to rise to the top of the food chain!</p>
-<p class="release-note">Release Date: October 13, 2025</p>
 <div class="game-tags"><span class="tag">HTML5</span><span class="tag">IO Game</span><span class="tag">Casual</span></div>
-</div>
-</section>
 </div>
 <aside aria-label="Game help" class="game-sidebar">
 <div class="info-card"><h3 class="card-title">Game Features</h3><ul class="features-list">
@@ -181,7 +254,7 @@
 </div>
 </div>
 </aside>
-</div>
+</section>
 <section class="related-games">
 <div class="section-header">
 <div>

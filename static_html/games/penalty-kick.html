@@ -76,7 +76,7 @@
 </nav>
 </header>
 <main class="container">
-<div class="app-layout">
+<div class="app-layout detail-app-layout">
 <aside aria-label="Game navigation" class="side-rail">
 <section class="rail-panel">
 <h2 class="rail-title">Explore</h2>
@@ -102,27 +102,103 @@
 </section>
 </aside>
 <div>
-<section class="game-detail-header">
-<span class="kicker">Sports</span>
-<h1 class="game-detail-title">Penalty Kick</h1>
-<p class="game-detail-subtitle">The goalkeeper seems terrified when you are the one standing behind the ball. Seek for the optimum angle and shoot…</p>
-<div aria-label="Game details" class="game-meta-row">
-<span class="meta-pill">Rating 4.6</span>
-<span class="meta-pill">4,337 plays</span>
-<span class="meta-pill">Sports</span>
-</div>
-<div class="game-action-row">
-<a class="button-primary" href="#gameContainer">Play now</a>
-<a class="button-secondary" href="/games?category=Sports">More Sports games</a>
-</div>
-</section>
-<div class="game-shell">
-<div>
+<section aria-label="Penalty Kick" class="game-stage-layout">
+<div class="game-stage-main">
 <section class="game-container" id="gameContainer">
 <div class="game-wrapper">
 <div class="loading-indicator">Loading game...</div>
 <iframe allowfullscreen="" class="game-iframe" id="gameIframe" loading="lazy" onload="this.previousElementSibling.style.display='none'" src="https://www.onlinegames.io/games/2023/code/penalty-kick/index.html" title="Penalty Kick"></iframe>
 </div>
+</section>
+<div class="game-title-bar">
+<div>
+<div class="game-breadcrumbs">
+<a href="/games">Games</a>
+<span>/</span>
+<a href="/games?category=Sports">Sports</a>
+</div>
+<h1 class="game-detail-title">Penalty Kick</h1>
+</div>
+<div class="game-action-row">
+<a class="button-primary" href="#gameContainer">Play now</a>
+<a class="button-secondary" href="/games?category=Sports">More Sports</a>
+</div>
+</div>
+<div aria-label="Game details" class="game-meta-row">
+<span class="meta-pill">Rating 4.6</span>
+<span class="meta-pill">4,337 plays</span>
+<span class="meta-pill">Sports</span>
+<span class="meta-pill">Updated October 13, 2025</span>
+</div>
+</div>
+<aside aria-label="Play next" class="play-next-panel">
+<div class="play-next-header">
+<h2 class="card-title">Play next</h2>
+<a class="view-all-btn" href="/games?category=Sports">More</a>
+</div>
+<div class="play-next-list">
+<a class="play-next-item" href="/games/football-soccer-world-cup">
+<div class="play-next-thumb">
+<img alt="Football Soccer World Cup" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/337/Football-Soccer-World-Cup-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">FS</div>
+</div>
+<div class="play-next-copy">
+<strong>Football Soccer World Cup</strong>
+<span>Sports</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/basketball-stars">
+<div class="play-next-thumb">
+<img alt="Basketball Stars" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/380/Basketball-Stars-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">BS</div>
+</div>
+<div class="play-next-copy">
+<strong>Basketball Stars</strong>
+<span>Sports</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/snake-football">
+<div class="play-next-thumb">
+<img alt="Snake Football" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/706/Snake-Football.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">SF</div>
+</div>
+<div class="play-next-copy">
+<strong>Snake Football</strong>
+<span>Sports</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/penalty-challenge">
+<div class="play-next-thumb">
+<img alt="Penalty Challenge" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/570/Penalty-Challenge.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PC</div>
+</div>
+<div class="play-next-copy">
+<strong>Penalty Challenge</strong>
+<span>Sports</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/basket-hoop">
+<div class="play-next-thumb">
+<img alt="Basket Hoop" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/843/Basket-Hoop.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">BH</div>
+</div>
+<div class="play-next-copy">
+<strong>Basket Hoop</strong>
+<span>Sports</span>
+</div>
+</a>
+<a class="play-next-item" href="/games/football-legends">
+<div class="play-next-thumb">
+<img alt="Football Legends" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/478/Football-Legends.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">FL</div>
+</div>
+<div class="play-next-copy">
+<strong>Football Legends</strong>
+<span>Sports</span>
+</div>
+</a>
+</div>
+</aside>
 </section>
 <section aria-label="Why play on BTW game" class="play-proof">
 <div class="proof-item"><span class="proof-icon">⚡</span><span><strong>Instant play</strong><span>Start in your browser</span></span></div>
@@ -130,14 +206,11 @@
 <div class="proof-item"><span class="proof-icon">★</span><span><strong>Always free</strong><span>No hidden costs</span></span></div>
 <div class="proof-item"><span class="proof-icon">☻</span><span><strong>Friendly browsing</strong><span>Built for quick breaks</span></span></div>
 </section>
-<section class="game-content">
+<section aria-label="About and controls" class="game-info-layout">
 <div class="game-description-panel">
 <h2 class="card-title">About Penalty Kick</h2>
 <p>The goalkeeper seems terrified when you are the one standing behind the ball. Seek for the optimum angle and shoot…</p>
-<p class="release-note">Release Date: October 13, 2025</p>
 <div class="game-tags"><span class="tag">HTML5</span><span class="tag">Action</span><span class="tag">Sports</span></div>
-</div>
-</section>
 </div>
 <aside aria-label="Game help" class="game-sidebar">
 <div class="info-card"><h3 class="card-title">Game Features</h3><ul class="features-list">
@@ -177,7 +250,7 @@
 </div>
 </div>
 </aside>
-</div>
+</section>
 <section class="related-games">
 <div class="section-header">
 <div>
