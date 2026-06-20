@@ -1,0 +1,6 @@
+[interface]
+display_name = "通用 SOP 任务执行"
+short_description = "通用 Git Worktree SOP 任务执行器：预检→worktree→定位/方案→实现→验证→审阅单→合并/清理。"
+brand_color = "#64748B"
+default_prompt = """
+"""

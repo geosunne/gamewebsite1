@@ -1,0 +1,38 @@
+.DS_Store
+Thumbs.db
+
+# Environment and local secrets
+.env
+.env.*
+!.env.example
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+
+# Local databases and runtime state
+*.db
+*.sqlite
+*.sqlite3
+instance/*.db
+instance/*.sqlite
+instance/*.sqlite3
+
+# Local tool state
+.impeccable/
+
+# Build and coverage outputs
+dist/
+build/
+htmlcov/
+.coverage
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak

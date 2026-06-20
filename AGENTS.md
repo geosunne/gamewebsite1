@@ -142,7 +142,12 @@ PY
 - 后台管理接口当前 API Key 硬编码在 `routes/admin.py`，涉及生产部署时应改为环境变量。
 - 修改抓取逻辑时保留对旧 `games_data.json` 结构的兼容，避免导入链路断裂。
 
-## 7. 已知风险
+## 7. 项目本地 Skills
+
+- `sop-task-runner` 已安装在 `.codex/skills/sop-task-runner/`，用于按 Git Worktree SOP 执行任务开发、验证、审阅单生成与合并清理。
+- 当前已建立 `spike/fullstack` 作为 SOP 集成基线；后续按该 Skill 执行任务时，应从 `spike/fullstack` 创建任务 worktree，完成后本地合并回 `spike/fullstack`。
+
+## 8. 已知风险
 
 - `.env` 中含真实 Analytics/AdSense 配置，避免在输出中重复暴露或传播。
 - 当前后台认证较弱，不适合公网暴露。
