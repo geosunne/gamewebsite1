@@ -161,6 +161,17 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             target = '/'
         elif path == '/games.html':
             target = '/games'
+        elif path in (
+            '/games/jailbreak-prison-escapeâ',
+            '/games/jailbreak-prison-escape%C3%A2',
+            '/games/jailbreak-prison-escapeâ.html',
+            '/games/jailbreak-prison-escape%C3%A2.html',
+        ):
+            target = '/games/jailbreak-prison-escape'
+        elif path.startswith('/categories/') and path.endswith('.html'):
+            target = path[:-5]
+        elif path.startswith('/categories/') and path.endswith('/'):
+            target = path.rstrip('/')
         elif path.startswith('/games/') and path.endswith('.html'):
             target = path[:-5]
         elif path.startswith('/games/') and path.endswith('/'):

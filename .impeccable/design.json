@@ -1,115 +1,146 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-07T14:36:00+08:00",
-  "title": "Design System: BTW Games",
+  "generatedAt": "2026-06-20T16:32:00+08:00",
+  "title": "Design System: BTW game",
   "extensions": {
     "colorMeta": {
-      "play-blue": {
+      "brand-coral": {
         "role": "primary",
-        "displayName": "Play Blue",
-        "canonical": "#007AFF",
-        "tonalRamp": ["#E8F2FF", "#B8D9FF", "#5AA7FF", "#007AFF", "#0057B8"]
+        "displayName": "Play Coral",
+        "canonical": "#F05A3F",
+        "tonalRamp": ["#4F120B", "#7D1E13", "#B92E1E", "#F05A3F", "#FF9A84", "#FFC5B8", "#FFF0EB", "#FFF8F5"]
       },
-      "trust-ink": {
-        "role": "neutral",
-        "displayName": "Trust Ink",
-        "canonical": "#1C1C1E",
-        "tonalRamp": ["#F2F2F7", "#8E8E93", "#48484A", "#1C1C1E", "#0B0B0C"]
+      "brand-coral-dark": {
+        "role": "primary",
+        "displayName": "Coral Dark",
+        "canonical": "#B92E1E",
+        "tonalRamp": ["#330A06", "#5E140D", "#8F2116", "#B92E1E", "#D94A38", "#F38B78", "#FFD4CB", "#FFF4F1"]
       },
-      "success-green": {
+      "brand-orange": {
         "role": "secondary",
-        "displayName": "Success Green",
-        "canonical": "#34C759",
-        "tonalRamp": ["#E9F9ED", "#AEEBBC", "#66D882", "#34C759", "#1D7F38"]
+        "displayName": "Arcade Orange",
+        "canonical": "#FF9F1C",
+        "tonalRamp": ["#4A2700", "#7A4100", "#B96700", "#FF9F1C", "#FFBD55", "#FFD699", "#FFECD2", "#FFF8ED"]
       },
-      "alert-red": {
-        "role": "state",
-        "displayName": "Alert Red",
-        "canonical": "#FF3B30",
-        "tonalRamp": ["#FFECEB", "#FFB7B2", "#FF756D", "#FF3B30", "#B51D16"]
+      "brand-yellow": {
+        "role": "secondary",
+        "displayName": "Sunny Yellow",
+        "canonical": "#FFD84D",
+        "tonalRamp": ["#3F3300", "#6B5700", "#A58700", "#DDB600", "#FFD84D", "#FFE889", "#FFF3B8", "#FFF8D9"]
       },
-      "future-arcade-yellow": {
-        "role": "future-accent",
-        "displayName": "Arcade Yellow",
-        "canonical": "#FFCC00",
-        "tonalRamp": ["#FFF8D8", "#FFE98A", "#FFD93D", "#FFCC00", "#8A6A00"]
+      "brand-violet": {
+        "role": "secondary",
+        "displayName": "Puzzle Violet",
+        "canonical": "#7B4EF6",
+        "tonalRamp": ["#201056", "#351B89", "#5633C9", "#7B4EF6", "#A083FF", "#C7B7FF", "#E2DAFF", "#F1EDFF"]
       },
-      "future-berry-violet": {
-        "role": "future-accent",
-        "displayName": "Berry Violet",
-        "canonical": "#7C3AED",
-        "tonalRamp": ["#F1E9FF", "#D7C2FF", "#A977FF", "#7C3AED", "#4A1DA8"]
+      "brand-sky": {
+        "role": "secondary",
+        "displayName": "Sky Blue",
+        "canonical": "#1388D8",
+        "tonalRamp": ["#062A42", "#08466F", "#0C67A6", "#1388D8", "#55ACEA", "#A5D6F7", "#D4ECFF", "#EAF6FF"]
       },
-      "future-coral-pop": {
-        "role": "future-accent",
-        "displayName": "Coral Pop",
-        "canonical": "#FF6B4A",
-        "tonalRamp": ["#FFF0EC", "#FFC4B6", "#FF9278", "#FF6B4A", "#A93820"]
+      "brand-green": {
+        "role": "secondary",
+        "displayName": "Safe Green",
+        "canonical": "#1F9D62",
+        "tonalRamp": ["#062D19", "#0D4D2B", "#167A4B", "#1F9D62", "#4EC486", "#91E0B7", "#CEF3DE", "#EAF9F1"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#172033",
+        "tonalRamp": ["#070A10", "#101624", "#172033", "#2B354B", "#4E5C73", "#8490A5", "#C4D2E6", "#EEF6FF"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["#172033", "#4E5C73", "#8490A5", "#C4D2E6", "#DBE5F5", "#EEF6FF", "#F5F9FF", "#FFFFFF"]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Page titles and primary landing statements. Keep fast and readable."
+        "purpose": "Page-scale statements only. Keep out of compact cards and sidebars."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headers and catalog titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Game names, compact panel headers, and card labels."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Short descriptions, game summaries, and support copy with 65 to 75ch line length."
+        "purpose": "Short descriptions and support copy with 65 to 75ch line length."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Filters, badges, counts, and compact state text."
+        "purpose": "Buttons, chips, badges, filters, metadata, and rail navigation."
       }
     },
     "shadows": [
       {
-        "name": "ambient-low",
-        "value": "0 2px 15px rgba(0, 0, 0, 0.1)",
-        "purpose": "Current low elevation for header, panels, and content cards."
+        "name": "low-surface",
+        "value": "0 2px 8px rgba(23, 32, 51, 0.08)",
+        "purpose": "Rails, cards, info panels, and quiet containers."
       },
       {
-        "name": "ambient-high",
-        "value": "0 10px 40px rgba(0, 0, 0, 0.15)",
-        "purpose": "Major game containers and active hover states only."
+        "name": "tight-hover",
+        "value": "0 4px 8px rgba(23, 32, 51, 0.1)",
+        "purpose": "Game card hover and compact lift."
+      },
+      {
+        "name": "mid-popover",
+        "value": "0 10px 20px rgba(23, 32, 51, 0.12)",
+        "purpose": "Mobile nav dropdowns and overlays."
+      },
+      {
+        "name": "stage-lift",
+        "value": "0 14px 28px rgba(23, 32, 51, 0.14)",
+        "purpose": "Game iframe container only."
+      },
+      {
+        "name": "coral-action-glow",
+        "value": "0 6px 12px rgba(240, 90, 63, 0.22)",
+        "purpose": "Primary buttons and the logo mark."
       }
     ],
     "motion": [
       {
-        "name": "ease-fast-play",
-        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
-        "purpose": "Quick hover and filter feedback."
-      },
-      {
         "name": "duration-fast",
         "value": "160ms",
-        "purpose": "Buttons, chips, and link state changes."
+        "purpose": "Buttons, chips, cards, and compact hover states."
       },
       {
-        "name": "duration-card",
-        "value": "260ms",
-        "purpose": "Game card lift and thumbnail treatments."
+        "name": "hover-lift",
+        "value": "translateY(-1px) to translateY(-2px)",
+        "purpose": "Small confidence feedback without moving layout."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media (prefers-reduced-motion: reduce)",
+        "purpose": "Transitions collapse to 0.01ms and hover transforms are disabled."
       }
     ],
     "breakpoints": [
       {
-        "name": "mobile",
-        "value": "640px"
+        "name": "desktop-collapse",
+        "value": "980px",
+        "purpose": "Side rail and multi-column page layouts collapse."
       },
       {
-        "name": "tablet",
-        "value": "768px"
+        "name": "mobile-nav",
+        "value": "720px",
+        "purpose": "Header navigation becomes mobile menu and dense grids adjust."
       },
       {
-        "name": "desktop",
-        "value": "1200px"
+        "name": "small-phone",
+        "value": "420px",
+        "purpose": "Home discovery panel and game grids compress for small devices."
       }
-    ],
-    "northStar": "Play Arcade",
-    "rules": [
-      "Game thumbnails carry visual variety.",
-      "Every new accent color needs a category, state, or action role.",
-      "Avoid casino, preschool, and dark esports cues.",
-      "Playfulness must preserve readability and trust."
     ]
   },
   "components": [
@@ -117,25 +148,107 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Main action button for browsing and opening games.",
-      "html": "<button class=\"ds-btn-primary\">Play game</button>",
-      "css": ".ds-btn-primary { background: #007AFF; color: #FFFFFF; border: 0; border-radius: 12px; padding: 12px 20px; font: 600 16px/1.2 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; transition: transform 160ms cubic-bezier(0.22, 1, 0.36, 1), background 160ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-primary:hover { background: #0057B8; transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 3px solid #B8D9FF; outline-offset: 2px; }"
+      "description": "Main action button for search, browse, and play actions.",
+      "html": "<button class=\"ds-btn-primary\">Search games</button>",
+      "css": ".ds-btn-primary { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 999px; padding: 11px 18px; color: #ffffff; background: linear-gradient(135deg, #F05A3F, #e9442b); font: 800 1rem -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; cursor: pointer; box-shadow: 0 6px 12px rgba(240, 90, 63, 0.22); transition: transform 160ms ease, box-shadow 160ms ease; } .ds-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 16px rgba(240, 90, 63, 0.26); } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(240, 90, 63, 0.22); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary catalog actions such as View all or More category games.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">View all</a>",
+      "css": ".ds-btn-secondary { min-height: 40px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #ffc5b8; border-radius: 999px; padding: 9px 14px; color: #B92E1E; background: #FFF0EB; text-decoration: none; font: 800 0.95rem -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; } .ds-btn-secondary:hover { color: #B92E1E; background: #fff8f5; } .ds-btn-secondary:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(240, 90, 63, 0.22); }"
+    },
+    {
+      "name": "Search Input",
+      "kind": "input",
+      "refersTo": "search-input",
+      "description": "Primary game search field in header and homepage discovery panel.",
+      "html": "<input class=\"ds-search-input\" type=\"search\" placeholder=\"Search Donuteria, Parkour, Racing...\">",
+      "css": ".ds-search-input { width: 100%; min-height: 48px; border: 1px solid #C4D2E6; border-radius: 12px; color: #172033; background: #ffffff; padding: 0 16px; font: 400 1rem -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; } .ds-search-input::placeholder { color: #61708a; } .ds-search-input:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(240, 90, 63, 0.22); }"
+    },
+    {
+      "name": "Intent Chip",
+      "kind": "chip",
+      "refersTo": "intent-chip",
+      "description": "Compact category and intent entry point on the homepage.",
+      "html": "<a class=\"ds-intent-chip\" href=\"#\">Action</a>",
+      "css": ".ds-intent-chip { min-height: 40px; display: inline-flex; align-items: center; flex: 0 0 auto; padding: 8px 13px; border: 1px solid #DBE5F5; border-radius: 999px; color: #172033; background: #FFF0EB; text-decoration: none; font: 850 0.92rem -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; } .ds-intent-chip:hover { border-color: #ffc5b8; color: #B92E1E; } .ds-intent-chip:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(240, 90, 63, 0.22); }"
     },
     {
       "name": "Game Card",
       "kind": "card",
-      "refersTo": "card-game",
-      "description": "Thumbnail-led card for game discovery grids.",
-      "html": "<article class=\"ds-game-card\"><div class=\"ds-thumb\"></div><h3>Game title</h3></article>",
-      "css": ".ds-game-card { background: #FFFFFF; color: #1C1C1E; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-game-card:hover { transform: translateY(-3px); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); } .ds-game-card h3 { margin: 12px 14px 16px; font: 600 20px/1.25 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; } .ds-thumb { aspect-ratio: 16 / 10; background: #F2F2F7; }"
+      "refersTo": "game-card",
+      "description": "Thumbnail-led game card for catalog and recommendation grids.",
+      "html": "<a class=\"ds-game-card\" href=\"#\"><div class=\"ds-game-thumb\"><div class=\"ds-badge\">NEW</div><div class=\"ds-game-info\"><strong>Smash Karts</strong></div></div></a>",
+      "css": ".ds-game-card { position: relative; display: block; overflow: hidden; border: 1px solid rgba(196, 210, 230, 0.92); border-radius: 16px; color: inherit; background: #ffffff; text-decoration: none; transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease; } .ds-game-card:hover { transform: translateY(-2px); border-color: #ffc5b8; box-shadow: 0 4px 8px rgba(23, 32, 51, 0.1); } .ds-game-card:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(240, 90, 63, 0.22); } .ds-game-thumb { position: relative; aspect-ratio: 16 / 10; display: grid; place-items: center; overflow: hidden; background: linear-gradient(135deg, #FFF8D9, #FFF0EB 52%, #EAF6FF); } .ds-game-info { position: absolute; inset: auto 0 0; padding: 28px 8px 8px; background: linear-gradient(180deg, transparent, rgba(13, 21, 36, 0.82)); text-align: center; } .ds-game-info strong { color: #ffffff; font: 850 0.82rem/1.18 -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); } .ds-badge { position: absolute; top: 8px; right: 8px; z-index: 1; padding: 4px 8px; border-radius: 999px; color: #ffffff; background: #1F9D62; font: 850 0.72rem -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }"
     },
     {
-      "name": "Filter Chip",
-      "kind": "chip",
-      "refersTo": "button-primary",
-      "description": "Compact filter control for category browsing.",
-      "html": "<button class=\"ds-chip is-active\">Action</button>",
-      "css": ".ds-chip { border: 2px solid #F2F2F7; background: #FFFFFF; color: #1C1C1E; border-radius: 999px; padding: 8px 16px; font: 600 14px/1.2 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; } .ds-chip.is-active { border-color: #007AFF; background: #E8F2FF; color: #0057B8; } .ds-chip:focus-visible { outline: 3px solid #B8D9FF; outline-offset: 2px; }"
+      "name": "Side Rail Nav",
+      "kind": "nav",
+      "refersTo": "side-rail",
+      "description": "Desktop homepage and catalog navigation rail.",
+      "html": "<nav class=\"ds-rail\"><h2>Explore</h2><a class=\"ds-rail-active\" href=\"#\">Home</a><a href=\"#\">All games</a><a href=\"#\">New games</a></nav>",
+      "css": ".ds-rail { width: 200px; display: grid; gap: 4px; padding: 12px; border: 1px solid #DBE5F5; border-radius: 16px; background: rgba(255, 255, 255, 0.88); box-shadow: 0 2px 8px rgba(23, 32, 51, 0.08); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; } .ds-rail h2 { margin: 0 0 8px; color: #6D7890; font-size: 0.78rem; font-weight: 850; } .ds-rail a { min-height: 38px; display: flex; align-items: center; padding: 8px 10px; border-radius: 12px; color: #4E5C73; text-decoration: none; font-weight: 800; } .ds-rail a:hover, .ds-rail-active { color: #B92E1E !important; background: #FFF0EB; }"
     }
-  ]
+  ],
+  "narrative": {
+    "northStar": "The Quick-Play Shelf",
+    "overview": "BTW game means \"By the way, play a quick game.\" The visual system is a bright, compact game shelf for casual players, children, and students who need to recognize a fun option fast. The site should feel lively through thumbnails, category color, and quick interactions, not through noisy decoration.",
+    "keyCharacteristics": [
+      "Fast scan density: show games early, with minimal marketing copy.",
+      "Playful but controlled: color supports category, state, and action.",
+      "Trust before clicks: predictable navigation, visible titles, clear metadata.",
+      "Light and safe: no black-first theme, no betting cues, no hostile lobby mood.",
+      "Thumbnail-led variety: game art carries most of the visual diversity."
+    ],
+    "rules": [
+      {
+        "name": "The Coral Action Rule",
+        "body": "Coral owns primary action, active state, logo energy, and focus. Do not let blue become the main CTA color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Thumbnail Variety Rule",
+        "body": "When a screen feels flat, increase useful game thumbnails or category tints before adding unrelated decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Casino Palette Rule",
+        "body": "Never use red-and-gold urgency, black neon, jackpot shine, or slot-machine color logic.",
+        "section": "colors"
+      },
+      {
+        "name": "The Compact Surface Rule",
+        "body": "Cards, sidebars, chips, and toolbars use title or label scale, never hero-scale typography.",
+        "section": "typography"
+      },
+      {
+        "name": "The Border-First Rule",
+        "body": "Use a full 1px border plus surface tint for structure. Never use a colored side stripe.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the homepage as a high-density game shelf with visible games above the fold.",
+      "Do preserve the desktop left side rail on home and catalog-like surfaces unless the viewport requires collapse.",
+      "Do use the 1360px container when the page needs both navigation and dense game display.",
+      "Do let thumbnails carry visual variety before adding decorative backgrounds.",
+      "Do use coral for primary actions, focus, and selected states.",
+      "Do keep body text on tinted surfaces dark enough for WCAG AA contrast.",
+      "Do keep mobile layouts two-column for game grids when titles still fit.",
+      "Do support reduced motion. Hover lifts and transitions must have a reduced-motion fallback."
+    ],
+    "donts": [
+      "Don't use casino or betting visual language, including dark neon, jackpot cues, slot-machine energy, aggressive red-and-gold urgency, and misleading reward patterns.",
+      "Don't use overly childish preschool styling, toy-like clutter, or mascot-heavy UI.",
+      "Don't use dark esports aesthetics, heavy black backgrounds, smoky gradients, or hostile shooter-lobby tone.",
+      "Don't make blue the main brand or CTA color. Sky Blue is a support color only.",
+      "Don't replace game thumbnails with unrelated decoration or empty colored panels when real thumbnails exist.",
+      "Don't use gradient text, glass cards as a default, colored side-stripe cards, or repeated tiny uppercase section eyebrows.",
+      "Don't nest cards inside cards. Use spacing, dividers, and full-width panels instead.",
+      "Don't make homepage hero copy push games far below the fold."
+    ]
+  }
 }

@@ -1,30 +1,147 @@
 [
   {
-    "id": 1,
-    "name": "Action"
+    "name": "Action",
+    "slug": "action",
+    "url": "/categories/action"
   },
   {
-    "id": 2,
-    "name": "Puzzle"
+    "name": "Puzzle",
+    "slug": "puzzle",
+    "url": "/categories/puzzle"
   },
   {
-    "id": 3,
-    "name": "Racing"
+    "name": "Match & Merge",
+    "slug": "match-and-merge",
+    "url": "/categories/match-and-merge"
   },
   {
-    "id": 4,
-    "name": "Strategy"
+    "name": "Mahjong & Card",
+    "slug": "mahjong-and-card",
+    "url": "/categories/mahjong-and-card"
   },
   {
-    "id": 5,
-    "name": "Adventure"
+    "name": "Word & Trivia",
+    "slug": "word-and-trivia",
+    "url": "/categories/word-and-trivia"
   },
   {
-    "id": 6,
-    "name": "Sports"
+    "name": "Racing",
+    "slug": "racing",
+    "url": "/categories/racing"
   },
   {
-    "id": 7,
-    "name": "Home"
+    "name": "Driving",
+    "slug": "driving",
+    "url": "/categories/driving"
+  },
+  {
+    "name": "Sports",
+    "slug": "sports",
+    "url": "/categories/sports"
+  },
+  {
+    "name": "Soccer",
+    "slug": "soccer",
+    "url": "/categories/soccer"
+  },
+  {
+    "name": "Basketball",
+    "slug": "basketball",
+    "url": "/categories/basketball"
+  },
+  {
+    "name": "Shooter",
+    "slug": "shooter",
+    "url": "/categories/shooter"
+  },
+  {
+    "name": "Sniper",
+    "slug": "sniper",
+    "url": "/categories/sniper"
+  },
+  {
+    "name": "Horror",
+    "slug": "horror",
+    "url": "/categories/horror"
+  },
+  {
+    "name": "Survival",
+    "slug": "survival",
+    "url": "/categories/survival"
+  },
+  {
+    "name": "Parkour",
+    "slug": "parkour",
+    "url": "/categories/parkour"
+  },
+  {
+    "name": "Obby",
+    "slug": "obby",
+    "url": "/categories/obby"
+  },
+  {
+    "name": "Platformer",
+    "slug": "platformer",
+    "url": "/categories/platformer"
+  },
+  {
+    "name": "Runner",
+    "slug": "runner",
+    "url": "/categories/runner"
+  },
+  {
+    "name": "Simulation",
+    "slug": "simulation",
+    "url": "/categories/simulation"
+  },
+  {
+    "name": "Management",
+    "slug": "management",
+    "url": "/categories/management"
+  },
+  {
+    "name": "Idle & Clicker",
+    "slug": "idle-and-clicker",
+    "url": "/categories/idle-and-clicker"
+  },
+  {
+    "name": "Cooking",
+    "slug": "cooking",
+    "url": "/categories/cooking"
+  },
+  {
+    "name": "Dress Up",
+    "slug": "dress-up",
+    "url": "/categories/dress-up"
+  },
+  {
+    "name": "Beauty",
+    "slug": "beauty",
+    "url": "/categories/beauty"
+  },
+  {
+    "name": "Two Player",
+    "slug": "two-player",
+    "url": "/categories/two-player"
+  },
+  {
+    "name": "io Games",
+    "slug": "io-games",
+    "url": "/categories/io-games"
+  },
+  {
+    "name": "Strategy",
+    "slug": "strategy",
+    "url": "/categories/strategy"
+  },
+  {
+    "name": "Tower Defense",
+    "slug": "tower-defense",
+    "url": "/categories/tower-defense"
+  },
+  {
+    "name": "Casual",
+    "slug": "casual",
+    "url": "/categories/casual"
   }
 ]

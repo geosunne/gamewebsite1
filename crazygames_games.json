@@ -1,0 +1,970 @@
+{
+  "metadata": {
+    "source": "crazygames",
+    "generated_at": "2026-06-20T10:35:01.272850",
+    "total_games": 25,
+    "note": "Only allowEmbed=true CrazyGames titles are included."
+  },
+  "games": [
+    {
+      "source": "crazygames",
+      "source_id": "20883",
+      "title": "Layers Roll",
+      "slug": "layers-roll",
+      "description": "Layers Roll is a fun, casual game where you roll over strips of the same color as your wheel. Add more layers and achieve your highest score while dodging obstacles.",
+      "long_description": "Layers Roll is a fun, casual game where you roll over strips of the same color as your wheel. Add more layers and achieve your highest score while dodging obstacles. Collect coins along the way! Build your color wheel Use your mouse or touch screen to swipe left and right and pick up the colored layers. You can only pick up the layers that match the color of your wheel! Avoid obstacles and make smart choices Along the way, you’ll encounter various obstacles and choices. There are colored gates that change the color of your wheel shortly before you encounter new strips, surfaces that strip away the layers, and walls that stop you dead in your tracks. Along with these obstacles, there are also choices you can make to get the most layers and coins as possible. Get bonus coins and buy characters At the end of the level, you enter the bonus zone, where you continue rolling until your layers have all been stripped away. The further you get in this area, the more coins you can collect! You can then use your coins to buy fun new characters in the shop. More Games Like This If you enjoyed playing Layers Roll, you'll love Drift Boss and the other games in our casual games collection. Check out running games for more! Tips Look ahead! Planning your movements will ensure you don’t miss a color change or obstacle. Avoid the longer grey surfaces that strip away your layers when you have the choice of a shorter surface. Sometimes there is more than one path to take - always choose the path with coins! The bigger your wheel at the end, the bigger your bonus. Release Date July 2020 (iOS) Jan 2021 (Android) August 2022 (WebGL) Developer Layers Roll was developed by Clap Clap Games. Platforms Web browser (desktop and mobile) Android iOS",
+      "thumbnail_url": "https://imgs.crazygames.com/layers-roll_16x9/20260512061906/layers-roll_16x9-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/layers-roll",
+      "iframe_url": "https://games.crazygames.com/en_US/layers-roll/index.html",
+      "category_name": "Casual",
+      "rating": 4.4,
+      "total_plays": 42078,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Grow",
+        "Mobile",
+        "3D",
+        "Running",
+        "Color",
+        "Minigames",
+        "Collect",
+        "Casual"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Drag the left mouse button to the left and right to move your wheel."
+      },
+      "release_date": "2022-08-24",
+      "created_at": "2026-06-20T10:34:33.987772",
+      "updated_at": "2026-06-20T10:34:33.987782"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "16223",
+      "title": "Helix Jump",
+      "slug": "helix-jump",
+      "description": "Helix Jump is a casual game with simple and addictively fun mechanics. In the game, you guide a bouncing ball continuously down a series of circular platforms until you crash.",
+      "long_description": "Helix Jump is a casual game with simple and addictively fun mechanics. In the game, you guide a bouncing ball continuously down a series of circular platforms until you crash. Fall through the cracks and avoid landing in the forbidden zones! How To Play Helix Jump The goal of Helix Jump is to guide a bouncing ball down through a series of rotating platforms without falling off the edge or hitting forbidden sections. The basic mechanics are easy to follow. The key is mastering your reflexes and looking ahead. To guide the bouncing ball, rotate the platforms to align the ball with the cracks. Do this in quick succession for a combo move and higher points. If you go through 3 levels in quick succession, you're invincible for the first bounce after. Note that Helix Jump features an endless number of levels with incremental difficulty, so you may want to pace yourself. The game has missions, visible on the left side of your screen, which give you coins when completed. Use the coins you earn via the missions and the game progression to unlock special skins for your ball: there are 27 skins available, some are common, some are rare, and the least common ones are funky! Power-ups in Helix Jump Helix Jump contains two main power-ups: Fireball mode: makes your ball invincible for the first bounce after passing through 3 or more consecutive platform gaps. When in \"Fireball mode\", your ball can safely touch even the forbidden color and will destroy the platform it lands on. Green Arrows: these are randomly placed on some of the platforms and can transform the ball via the \"fireball mode\" Helix Jump - The Original This is the official Helix Jump game developed by Voodoo. The game was initially released in 2018 on mobile devices and achieved viral success. You can now play this addictive game in your web browser for free at CrazyGames! More Games Like This If you enjoy simple casual games that test your reflexes, browse our avoid and obstacle games for more. Other games that avoid obstacles include House of Hazards and Slice Master . If you're looking for a fun casual game to play mindlessly, check out Snow Rider or Geometry Dash . These are both excellent choices from here! Release Date Helix Jump was initially released as a mobile app in February 2018. Developer Voodoo developed Helix Jump. Platforms Web browser Android iOS",
+      "thumbnail_url": "https://imgs.crazygames.com/games/helix-jump/cover_16x9-1733222901873.png?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/helix-jump",
+      "iframe_url": "https://games.crazygames.com/en_US/helix-jump/index.html",
+      "category_name": "Casual",
+      "rating": 4.3,
+      "total_plays": 5357,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "One Button",
+        "Avoid",
+        "1 Player",
+        "Color",
+        "Platform",
+        "Ball",
+        "Minigames",
+        "Be the best",
+        "Obstacle",
+        "Skill"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Drag left-click / AD / arrow keys = move the ball to the left or right C = shield power-up B = destroy platform power-up"
+      },
+      "release_date": "2022-05-18",
+      "created_at": "2026-06-20T10:34:36.855611",
+      "updated_at": "2026-06-20T10:34:36.855621"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "20971",
+      "title": "Shovel 3D",
+      "slug": "shovel-3d",
+      "description": "Shovel 3D is an arcade game where you shovel up snow into a giant ball and smash it through walls. At the end of each round whatever is left of your snowball is used to smash targets for bonus points.",
+      "long_description": "Shovel 3D is an arcade game where you shovel up snow into a giant ball and smash it through walls. At the end of each round whatever is left of your snowball is used to smash targets for bonus points. Check out more games like Shovel 3D in our casual games and minigames categories. Draw Bridges is a great game from this developer. Release Date April 2020 (iOS) September 2022 (WebGL) Developer Shovel 3D was made by Clap Clap Games. Platforms Web browser (desktop and mobile) iOS",
+      "thumbnail_url": "https://imgs.crazygames.com/shovel-3d_16x9/20260213022623/shovel-3d_16x9-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/shovel-3d",
+      "iframe_url": "https://games.crazygames.com/en_US/shovel-3d/index.html",
+      "category_name": "Casual",
+      "rating": 4.3,
+      "total_plays": 15337,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Grow",
+        "Mobile",
+        "3D",
+        "Destroy",
+        "Minigames",
+        "Obstacle",
+        "Casual"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "A / left arrow key / hold left-click and move left = move left D / right arrow key / hold left-click and move right = move right Hold space / left-click = grow snowball"
+      },
+      "release_date": "2022-09-27",
+      "created_at": "2026-06-20T10:34:37.306852",
+      "updated_at": "2026-06-20T10:34:37.306858"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "18576",
+      "title": "Om Nom: Run",
+      "slug": "om-nom-run",
+      "description": "Om Nom: Run is a running game set on the mean streets of Nomville. Complete the set challenges on each level to succeed.",
+      "long_description": "Om Nom: Run is a running game set on the mean streets of Nomville. Complete the set challenges on each level to succeed. There are various power-ups and bonuses to help. The game features the characters Om Nom and Om Nelle from the Cut The Rope universe. How to Play Dodge obstacles and collect coins Avoid obstacles by moving left and right, as well as jumping over and ducking under obstacles. Each level presents a different challenge, like reaching a certain distance without crashing, performing stunts, or collecting orbs. You’re awarded a star rating for every level you complete successfully. Pick up power-ups While you’re sprinting your way through a variety of hazardous situations, keep your eyes peeled for power-ups. Some of the power-ups include magnets, rocket boosts, and double coins! Unlock new characters Using the riches you’ve bagged on your street running expeditions, you can purchase new characters from the Nomville universe, and stylish outfits too! Features Race through a variety of dangerously exciting locations Collect boosts and power-ups to maximize your points Get your name on the leaderboard for winning competitions Play levels with set objectives or play forever in endless run mode! Release Date February 2021 Developer Om Nom: Run was made by Famobi. Platforms Web browser (desktop and mobile) Android iOS",
+      "thumbnail_url": "https://imgs.crazygames.com/games/om-nom-run/cover_16x9-1707829613214.png?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/om-nom-run",
+      "iframe_url": "https://games.crazygames.com/en_US/om-nom-run/index.html",
+      "category_name": "Casual",
+      "rating": 4.5,
+      "total_plays": 2876,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Mobile",
+        "Avoid",
+        "Running",
+        "Minigames",
+        "Obstacle",
+        "Collect"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Use the arrows to move."
+      },
+      "release_date": "2021-11-26",
+      "created_at": "2026-06-20T10:34:39.259926",
+      "updated_at": "2026-06-20T10:34:39.259932"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "14326",
+      "title": "Bus and Subway Runner",
+      "slug": "bus-and-subway-runner",
+      "description": "Bus and Subway Runner is a cool endless runner game in which you run through… wait for it… a subway while avoiding buses! You are enjoying a beautiful sunny day in the city on your hoverboard, but a police car spots you and starts to chase you!",
+      "long_description": "Bus and Subway Runner is a cool endless runner game in which you run through… wait for it… a subway while avoiding buses! You are enjoying a beautiful sunny day in the city on your hoverboard, but a police car spots you and starts to chase you! You have one option – to flee to the subway to avoid being captured! Your character moves forward automatically, and you must simply control his directional movements. The game features classic endless runner mechanics. Furthermore, you can also use your hoverboard to fly high in the sky and avoid all objects in your path! Also watch out for the balloons – if you grab these, they transport you to a special bonus level. Earn coins as you fly and use these coins to purchase new outfits and cool hoverboards to use. Can you escape the policeman and traverse the subway? Release Date The game was initially released in October 2017 and was updated in February 2019. Features Buses and trains Seven heroes with a unique appearance and music Buyable items and upgrades You can change location by flying using the balloons Platform Web browser",
+      "thumbnail_url": "https://imgs.crazygames.com/busandsubwayrunner.png?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/bus-and-subway-runner",
+      "iframe_url": "https://games.crazygames.com/en_US/bus-and-subway-runner/index.html",
+      "category_name": "Casual",
+      "rating": 4.3,
+      "total_plays": 2730,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Avoid",
+        "Jumping",
+        "Running",
+        "Minigames",
+        "Collect",
+        "Casual"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Press left arrow or A to move left Press right arrow or D to move right Press up arrow or W to jump Press down arrow or S to slide Press left mouse button twice to use a hoverboard"
+      },
+      "release_date": "2019-02-25",
+      "created_at": "2026-06-20T10:34:39.888530",
+      "updated_at": "2026-06-20T10:34:39.888539"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "17708",
+      "title": "2 Player Tag",
+      "slug": "2-player-tag",
+      "description": "2 Player Tag is an online tag game with local multiplayer. Play tag with one other person on various themed levels and make sure you're not \"it\" by the end of the round!",
+      "long_description": "2 Player Tag is an online tag game with local multiplayer. Play tag with one other person on various themed levels and make sure you're not \"it\" by the end of the round! How to Play Play Tag Online Tag, you’re it! 2 Player Tag lets you and a friend play a game of tag together in a range of locations using the same keyboard. Pick blue or red and hop into the game to start tagging! Every new round of tag takes you to a level with unique visuals, music, and obstacles to play around. 2 Player Tag Rules If you get tagged, you're \"it\". The player who is not \"it\" receives a point at the end of each round. Best out of four wins. More 2 Player Games If you’ve teamed up with a friend and want to play more, head over to our two-player games section. Some great choices include Basketball Stars , Fireboy and Watergirl 1 and Getaway Shootout . Features Play tag games with a friend Various unique levels Fun visuals and music Best out of four wins Release Date December 2019 Developer 2 Player Tag was developed by Zack Wheelhouse. Platform Web browser",
+      "thumbnail_url": "https://imgs.crazygames.com/2-player-tag-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/2-player-tag",
+      "iframe_url": "https://games.crazygames.com/en_US/2-player-tag/index.html",
+      "category_name": "Action",
+      "rating": 4.4,
+      "total_plays": 2917,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "2 Player",
+        "Platform",
+        "Minigames",
+        "2D"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Player one uses W/A/D and player two uses the arrow keys. Press M to mute audio, hold Esc to quit."
+      },
+      "release_date": "2019-12-03",
+      "created_at": "2026-06-20T10:34:40.575081",
+      "updated_at": "2026-06-20T10:34:40.575087"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "15446",
+      "title": "Dinosaur Game",
+      "slug": "chrome-dino",
+      "description": "Dinosaur Game is a simple T-Rex casual game in which you avoid obstacles while running for as long as possible. It was originally built into Google Chrome in 2014 and can be played without an internet connection.",
+      "long_description": "Dinosaur Game is a simple T-Rex casual game in which you avoid obstacles while running for as long as possible. It was originally built into Google Chrome in 2014 and can be played without an internet connection. How to Play Dinosaur Game The objective of Dinosaur Game is to avoid obstacles and survive for as long as possible. The game speeds up the more you advance, making it increasingly challenging. Gameplay controls are simple - press the spacebar to start moving and click the spacebar to jump over obstacles. This side-scrolling game is reminiscent of arcade games. Your movements are limited, and success depends on avoiding obstacles, which becomes especially difficult as speed increases. As the speed increases, the further you get, you will need to factor that into your jumps. You’ll also come across cactus, birds, and more - don’t attempt to jump over the highest-flying bird. If the object is high, you can go under it. About the Original Dino Game The original Dino Game was made by Google UX developers Sebastien Gabriel, Alan Bettes, and Edward Jung in 2014. The game is built into Google Chrome and appears as an error page when the web browser is offline. The Chrome Dinosaur game has seen widespread recognition, with the creators revealing in 2018 that it was played around 270 million times monthly. A Dinosaur Game with Many Names The game is also commonly known as T-Rex Runner, Chrome Dino, and Dino Run, among many other titles. More Games Like This Other popular running games include Duck Life . You can also browse our casual category for popular side-scrolling games with similar, simple gameplay, like Happy Wheels , a ragdoll physics game that adds a bit more challenge with intricate obstacles. Developer Dinosaur Game was made by the Google UX team in 2014. Features Endless runner game featuring a T-Rex Popular game made by Google Side-scrolling camera view 2D 8-bit graphics Platforms Web browser (desktop and mobile devices)",
+      "thumbnail_url": "https://imgs.crazygames.com/games/chrome-dino/cover-1669113832091.png?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/chrome-dino",
+      "iframe_url": "https://games.crazygames.com/en_US/chrome-dino/index.html",
+      "category_name": "Casual",
+      "rating": 4.5,
+      "total_plays": 11915,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Pixel",
+        "Avoid",
+        "Dinosaur",
+        "Jumping",
+        "Running",
+        "Minigames",
+        "Obstacle",
+        "Casual"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Space or up arrow key = jump Down arrow key = duck"
+      },
+      "release_date": "2020-03-17",
+      "created_at": "2026-06-20T10:34:41.224365",
+      "updated_at": "2026-06-20T10:34:41.224371"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "44277",
+      "title": "Egg Folks Multiplayer",
+      "slug": "egg-folks-multiplayer",
+      "description": "Egg Folks Multiplayer is a lively party game where up to 20 players battle it out across four thrilling mini-games. Dive into the chaos, customize your character with endless skin combinations, and outlast the competition in this colorful quest for glory.",
+      "long_description": "Egg Folks Multiplayer is a lively party game where up to 20 players battle it out across four thrilling mini-games. Dive into the chaos, customize your character with endless skin combinations, and outlast the competition in this colorful quest for glory. Get ready for fast-paced fun that keeps you on your toes!",
+      "thumbnail_url": "https://imgs.crazygames.com/games/egg-folks-multiplayer/cover_16x9-1739368883725.png?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/egg-folks-multiplayer",
+      "iframe_url": "https://games.crazygames.com/en_US/egg-folks-multiplayer/index.html",
+      "category_name": "io Games",
+      "rating": 4.7,
+      "total_plays": 1441,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Mobile",
+        "Jumping",
+        "With friends",
+        "Platform",
+        "Minigames",
+        "Party",
+        "Can’t stop playing",
+        "Multiplayer"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Use the arrow keys to move Use the spacebar to jump"
+      },
+      "release_date": "2025-02-06",
+      "created_at": "2026-06-20T10:34:41.873777",
+      "updated_at": "2026-06-20T10:34:41.873782"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "20974",
+      "title": "Farmer Challenge Party",
+      "slug": "farmer-challenge-party",
+      "description": "Farmer Challenge Party is a casual game where you will be competing against another player to see who can score the highest. For example, in the chicken pick challenge, you will need to pick up as many chickens as possible within a certain time limit, and whoever picks up the most wins.",
+      "long_description": "Farmer Challenge Party is a casual game where you will be competing against another player to see who can score the highest. For example, in the chicken pick challenge, you will need to pick up as many chickens as possible within a certain time limit, and whoever picks up the most wins. In the plant and harvest chapter, you will need to grow crops and harvest them as quickly as possible, again with the goal of getting a higher score than your opponent. The same goes for the vegetable wars and fishing chapters. The player with the highest score at the end of each chapter wins! Release Date September 2022 Developer Farmer Challenge Party was developed by RHM Interactive. Platform Web browser",
+      "thumbnail_url": "https://imgs.crazygames.com/farmer-challenge-party/20230406071707/farmer-challenge-party-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/farmer-challenge-party",
+      "iframe_url": "https://games.crazygames.com/en_US/farmer-challenge-party/index.html",
+      "category_name": "Casual",
+      "rating": 4.5,
+      "total_plays": 1036,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Pixel",
+        "2 Player",
+        "Battle",
+        "Farming",
+        "Platform",
+        "Minigames",
+        "Casual"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Player 1 WASD = move S = action Player 2 Arrow keys = move Down arrow key = action"
+      },
+      "release_date": "2022-08-08",
+      "created_at": "2026-06-20T10:34:42.500186",
+      "updated_at": "2026-06-20T10:34:42.500202"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "45650",
+      "title": "Obby: Dumb or Genius IQ Test",
+      "slug": "obby-dumb-or-genius-iq-test",
+      "description": "Obby: Dumb or Genius IQ Test is a game where intelligence is everything! Boost your IQ by completing mini-games, taking on challenges, and battling in PvP duels.",
+      "long_description": "Obby: Dumb or Genius IQ Test is a game where intelligence is everything! Boost your IQ by completing mini-games, taking on challenges, and battling in PvP duels. Collect IQ points from the map, win games for extra rewards, and try your luck on the wheel of fortune for bonus IQ! Compete against other players, earn cups, and exchange them for pets. The higher your IQ, the better your status. Climb the leaderboard and prove you’re the smartest player in the game! How to Play Explore the world of geniuses, participate in mini-games, and improve your IQ. Use cups to unlock new pets! Carefully study the game world. There are many surprises and unique rewards hidden throughout.",
+      "thumbnail_url": "https://imgs.crazygames.com/obby-dumb-or-genius-iq-test_16x9/20250303073714/obby-dumb-or-genius-iq-test_16x9-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/obby-dumb-or-genius-iq-test",
+      "iframe_url": "https://games.crazygames.com/en_US/obby-dumb-or-genius-iq-test/index.html",
+      "category_name": "Casual",
+      "rating": 4.2,
+      "total_plays": 3683,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Mobile",
+        "3D",
+        "Battle",
+        "Obby",
+        "Minigames"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "PC Controls WASD = move Space = jump V = pets menu C = tasks menu P = settings Tab = show / hide mouse cursor Left-click = interact with in-game buttons / play the mini-games Mobile Controls Virtual joystick = move Up button = jump"
+      },
+      "release_date": "2025-03-04",
+      "created_at": "2026-06-20T10:34:43.170075",
+      "updated_at": "2026-06-20T10:34:43.170081"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "22465",
+      "title": "Press A to Party",
+      "slug": "press-a-to-party",
+      "description": "Press A to Party is a casual arcade game collection designed for players of all ages. Gather your friends and family, settle onto the couch, and dive into the action with simple one-button controls and fast-paced gameplay.",
+      "long_description": "Press A to Party is a casual arcade game collection designed for players of all ages. Gather your friends and family, settle onto the couch, and dive into the action with simple one-button controls and fast-paced gameplay. Compete against up to 4 players on the same screen, vying for the coveted title of the ultimate arcade champion. Get ready for a blast of fun and excitement at your next gathering! Release Date January 2024 Platform Web browser",
+      "thumbnail_url": "https://imgs.crazygames.com/press-a-to-party_16x9/20250526043024/press-a-to-party_16x9-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/press-a-to-party",
+      "iframe_url": "https://games.crazygames.com/en_US/press-a-to-party/index.html",
+      "category_name": "Casual",
+      "rating": 4.5,
+      "total_plays": 998,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Avoid",
+        "3 Player",
+        "Minigames",
+        "Obstacle",
+        "Collect"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Player 1 = Space Player 2 = Enter Player 3 = Backspace Player 4 = A"
+      },
+      "release_date": "2024-01-31",
+      "created_at": "2026-06-20T10:34:43.939870",
+      "updated_at": "2026-06-20T10:34:43.939876"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "20951",
+      "title": "Fly for Fly",
+      "slug": "fly-for-fly",
+      "description": "Fly for Fly is an action game to fill the nerve bar by annoying the students. Can you complete the objective successfully?",
+      "long_description": "Fly for Fly is an action game to fill the nerve bar by annoying the students. Can you complete the objective successfully? Release Date September 2022 Developer Fly for Fly was developed by Bluespy Studios. Platform Web browser",
+      "thumbnail_url": "https://imgs.crazygames.com/fly-for-fly/20221213071403/fly-for-fly-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/fly-for-fly",
+      "iframe_url": "https://games.crazygames.com/en_US/fly-for-fly/index.html",
+      "category_name": "Action",
+      "rating": 4.7,
+      "total_plays": 1947,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Avoid",
+        "3D",
+        "Minigames",
+        "Lol",
+        "Casual"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "WASD or arrow keys to move the fly."
+      },
+      "release_date": "2022-09-15",
+      "created_at": "2026-06-20T10:34:44.757204",
+      "updated_at": "2026-06-20T10:34:44.757210"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "16698",
+      "title": "Glowit - Two Players",
+      "slug": "glowit-two-players",
+      "description": "Glowit – Two Players is an awesome and challenging game for you and a friend. You can play together and compete against each other in over 10 different fun mini-games.",
+      "long_description": "Glowit – Two Players is an awesome and challenging game for you and a friend. You can play together and compete against each other in over 10 different fun mini-games. Each round you are given a new random game to try out – the challenges are varied, but you will receive instructions on how to play the game. See how you can square up in this game against your friends! Release Date March 2019 Developer Mariano Maffia developed Glowit - Two Players. You can also check 12 MiniBattles , another randomized 2-player game from the same developer and also one of the winners of our 2018 CrazyGames Developer Portal contest. Features 12 different mini-games to play Neon stage Easy-to-follow instruction in each round Turn-based system Playable anywhere you go! Platforms Web browser (desktop and mobile) Android",
+      "thumbnail_url": "https://imgs.crazygames.com/games/glowit-two-players/thumb-1553606662314.png?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/glowit-two-players",
+      "iframe_url": "https://games.crazygames.com/en_US/glowit-two-players/index.html",
+      "category_name": "Casual",
+      "rating": 4.2,
+      "total_plays": 732,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "2 Player",
+        "Battle",
+        "Physics",
+        "Minigames"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Drag left mouse button to play."
+      },
+      "release_date": "2019-03-26",
+      "created_at": "2026-06-20T10:34:45.359662",
+      "updated_at": "2026-06-20T10:34:45.359668"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "20928",
+      "title": "Spy Highway",
+      "slug": "shotgun-highway",
+      "description": "Spy Highway is a shooting game where you have been told that everyone on the highway is a spy and your mission is to eliminate as many \"spies\" as possible. Destroy as many vehicles as you can and see how far you can make it!",
+      "long_description": "Spy Highway is a shooting game where you have been told that everyone on the highway is a spy and your mission is to eliminate as many \"spies\" as possible. Destroy as many vehicles as you can and see how far you can make it! Climb your way up on the leaderboard. Tip: Look and listen for Satellite Phones along the road. They will temporarily upgrade your weapon! Release Date September 2022 Developer Spy Highway was developed by Electronicall Games. Platform Web browser",
+      "thumbnail_url": "https://imgs.crazygames.com/shotgun-highway/20230605172142/shotgun-highway-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/shotgun-highway",
+      "iframe_url": "https://games.crazygames.com/en_US/shotgun-highway/index.html",
+      "category_name": "Action",
+      "rating": 4.8,
+      "total_plays": 706,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Avoid",
+        "3D",
+        "Destroy",
+        "Car",
+        "Traffic",
+        "Minigames",
+        "Gun",
+        "Speed",
+        "FPS"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "A = move left D = move right Space = jump Left-click = shoot Tab = settings"
+      },
+      "release_date": "2022-09-06",
+      "created_at": "2026-06-20T10:34:46.416834",
+      "updated_at": "2026-06-20T10:34:46.416840"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "44909",
+      "title": "Robbie: Game Challenges",
+      "slug": "robbie-game-challenges",
+      "description": "Robbie: Game Challenges is a simulation game where you step Into the ultimate arcade adventure! Dive into a vibrant world of arcade machines, where every moment is packed with fun and surprises.",
+      "long_description": "Robbie: Game Challenges is a simulation game where you step Into the ultimate arcade adventure! Dive into a vibrant world of arcade machines, where every moment is packed with fun and surprises. Play dozens of unique mini-games, tackle thrilling challenges, and collect tickets to unlock rare pets or gain access to even more exciting machines. Features Varied Mini-Games – Each arcade machine offers fresh challenges and endless fun. Ticket Rewards – Complete challenges, earn tickets, and exchange them for pets or exclusive prizes. Wheel of Fortune – Test your luck for a chance to win rare rewards. Hidden Secrets – Explore the map to uncover three secret machines with special mechanics. Pet Collection & Competition – Collect pets, challenge friends, and rise to the top of the arcade world. Can you master every machine and claim the ultimate prize? Jump into Robbie: Game Challenges now and start your arcade adventure!",
+      "thumbnail_url": "https://imgs.crazygames.com/robbie-game-challenges_16x9/20250204065604/robbie-game-challenges_16x9-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/robbie-game-challenges",
+      "iframe_url": "https://games.crazygames.com/en_US/robbie-game-challenges/index.html",
+      "category_name": "Casual",
+      "rating": 4.4,
+      "total_plays": 804,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Mobile",
+        "3D",
+        "Minigames",
+        "Collect"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "WASD / arrow keys = move Space = jump Tab = hide / show cursor Move mouse = move camera view 1 = mute / unmute sound 2 = wheel of fortunes 3 = pets menu"
+      },
+      "release_date": "2025-02-04",
+      "created_at": "2026-06-20T10:34:47.100689",
+      "updated_at": "2026-06-20T10:34:47.100694"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "21385",
+      "title": "NoobWars",
+      "slug": "noobwars",
+      "description": "NoobWars is a casual game that you can play with your friend locally. Pay attention to the wind direction and throw a crate at your opponent.",
+      "long_description": "NoobWars is a casual game that you can play with your friend locally. Pay attention to the wind direction and throw a crate at your opponent. May the best player win the battle! Release Date January 2023 Developer Vivi made NoobWars. Platform Web browser (desktop and mobile)",
+      "thumbnail_url": "https://imgs.crazygames.com/noobwars/20230117154519/noobwars-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/noobwars",
+      "iframe_url": "https://games.crazygames.com/en_US/noobwars/index.html",
+      "category_name": "Action",
+      "rating": 4.3,
+      "total_plays": 703,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Mobile",
+        "2 Player",
+        "3D",
+        "Battle",
+        "Minigames",
+        "Skill",
+        "Casual"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Hold E / O = adjust power and release it to shoot. Left-click = interact with in-game UI"
+      },
+      "release_date": "2023-01-17",
+      "created_at": "2026-06-20T10:34:47.758913",
+      "updated_at": "2026-06-20T10:34:47.758917"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "21105",
+      "title": "Mussoumano Game",
+      "slug": "mussoumano-game",
+      "description": "Mussoumano is an arcade game where you must control the Brazilian rapper Mussoumano in an endless running adventure to save latifas. Choose between different transports and millions of possible visual customization, unlock achievements, and discover different game scenarios and challenges.",
+      "long_description": "Mussoumano is an arcade game where you must control the Brazilian rapper Mussoumano in an endless running adventure to save latifas. Choose between different transports and millions of possible visual customization, unlock achievements, and discover different game scenarios and challenges. Release Date April 2014 (Android) May 2014 (iOS) October 2022 (WebGL) Developer Mussoumano Game is made by Maqna Interactive. Platforms Web browser Android iOS",
+      "thumbnail_url": "https://imgs.crazygames.com/mussoumano-game_16x9/20250627100134/mussoumano-game_16x9-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/mussoumano-game",
+      "iframe_url": "https://games.crazygames.com/en_US/mussoumano-game/index.html",
+      "category_name": "Casual",
+      "rating": 4.5,
+      "total_plays": 387,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Mobile",
+        "Meme",
+        "Avoid",
+        "3D",
+        "Running",
+        "Side Scrolling",
+        "Minigames",
+        "Obstacle",
+        "Mouse",
+        "Collect"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Hold the right mouse button or left Ctrl to jump or dive."
+      },
+      "release_date": "2022-10-31",
+      "created_at": "2026-06-20T10:34:49.166358",
+      "updated_at": "2026-06-20T10:34:49.166365"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "18993",
+      "title": "Bloxd.io",
+      "slug": "bloxdhop-io",
+      "description": "Bloxd.io is an IO adventure game with Minecraft-style visuals where you can navigate obstacle courses, gather resources, craft tools, battle other players, and much more. With game modes ranging from parkour challenges and creative sandbox building to combat-based gameplay, there's something for every playstyle.",
+      "long_description": "Bloxd.io is an IO adventure game with Minecraft-style visuals where you can navigate obstacle courses, gather resources, craft tools, battle other players, and much more. With game modes ranging from parkour challenges and creative sandbox building to combat-based gameplay, there's something for every playstyle. How to Play Bloxd.io The best way to start playing Bloxd.io is to gather wood, your most essential early resource and useful even in caves. Kill sheep early to collect 3 wool and craft a bed, which gives you a 15-minute speed boost to help you explore faster. Follow this progression to get established: gather wood and craft a workbench, then mine stone for a stone pickaxe. From there, find iron ore, smelt it in a furnace, and craft an iron pickaxe. You'll need at least iron to mine diamonds. Game Modes BloxdHop.io : Race to the end of the map before time runs out by hopping parkour-style across blocks of all shapes and sizes. DoodleCube : Similar to Gartic.io, players build objects based on a given theme while others vote on how well they match it. EvilTower : Climb to the top of the Evil Tower using your parkour skills. Inspired by the Tower of Hell, it's a serious test of patience and precision. Peaceful : A creative, pressure-free mode where you roam freely, collect resources, and build whatever you like. CubeWarfare : Compete against other players in a third-person shooter where building blocks are part of the strategy. Bloxd.io is regularly updated with new features and modes. Other available modes include Survival, Creative, Bedwars, Sky Wars, OneBlock, Greenville, Hide and Seek, Murder Mystery, Plots, Pirates, Survival Royale, and Worlds. Look for biomes with spiky black or carved stone formations, which are a strong indicator that diamonds are nearby. Check the tips and tops of the spike towers, not just the base. Skull-shaped structures sometimes contain chests worth looting as well. Hold off on diamond armor until you have 30 or more diamonds, as a full set costs 24. Aim for Protection III enchantments before jumping into PvP, and craft a diamond pickaxe for more efficient mining. Secure your base first before spending diamonds on gear. Tips Pickaxes in Bloxd.io have unlimited durability , so one iron pickaxe goes a long way Use homes strategically — set one at your base and another near enemy bases or resource-rich areas Avoid fighting mobs and players with unenchanted armor — you can take massive damage in a single hit Don't hoard junk items; keep your inventory clean for valuable resources Bloxd.io is regularly updated with fun new features and modes. Here is a selection of current game modes. BloxdHop.io DoodleCube EvilTower Peaceful CubeWarfare Survival Peaceful Creative Bedwars Sky Wars OneBlock Greenville Hide and Seek Murder Mystery Plots Pirates Survival Royale Worlds More Games Like This Although Bloxd.io is a unique game that provides endless entertainment, there are similar titles to check out when you're finished playing. Other IO games like this include Grow A Garden , Shell Shockers , Survev io , and more. Features Explore fun, voxelated worlds for free in your web browser. Play various game modes with different objectives. Earn gold from your achievements and spend it in the store. Join your friends in multiplayer games. Release Date February 2021 Developer Arthur made BloxdHop.io. Platform Web browser (desktop and mobile)",
+      "thumbnail_url": "https://imgs.crazygames.com/bloxdhop-io_16x9/20250829023851/bloxdhop-io_16x9-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/bloxdhop-io",
+      "iframe_url": "https://games.crazygames.com/en_US/bloxdhop-io/index.html",
+      "category_name": "io Games",
+      "rating": 4.3,
+      "total_plays": 1298197,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Meme & bloxy",
+        "Sandbox",
+        "Mobile",
+        "Parkour",
+        "Minecraft",
+        "Jumping",
+        "Third Person Shooter",
+        "Building",
+        "With friends",
+        "Multiplayer"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "WASD to move Shift or double-tap W to run C, Z, \\, or Caps Lock to crouch T or Enter to chat B to open shop / to start the command O to open the menu DoodleCube Controls Place blocks: right mouse button Destroy placed blocks: left mouse but"
+      },
+      "release_date": "2021-03-30",
+      "created_at": "2026-06-20T10:34:50.227607",
+      "updated_at": "2026-06-20T10:34:50.227614"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "14272",
+      "title": "Shell Shockers",
+      "slug": "shellshockersio",
+      "description": "Shell Shockers (Shellshock.io) is a multiplayer .io FPS game featuring eggs armed with guns. You control one of these weapon-wielding eggs in one of four online game modes where the aim is to shatter your opponents with bullets and bombs.",
+      "long_description": "Shell Shockers (Shellshock.io) is a multiplayer .io FPS game featuring eggs armed with guns. You control one of these weapon-wielding eggs in one of four online game modes where the aim is to shatter your opponents with bullets and bombs. It's the ultimate online egg shooting game! Kids love games where they shoot other players. Whatever you think about guns this seems to always be the case. We let our children play Shell Shockers before the older rating games with guns because it's a less violent way to have fun online. In fact, they enjoyed it so much that even though they are older they still go back to play this again and again. Review by FamilyGamingDatabase . How to Play Shell Shockers Jump into the game and select your character name, customize your egg, and choose one of four game modes. In this game, you must work hard to protect yourself and dish out damage to opposing eggs. Try out each game mode and see if you can conquer the Shell Shockers arena. Tips and tricks Play tactically Act quickly Collect egg ammunition Think like an egg Game modes Teams Join a team (either red or blue) and fight against the enemy eggs until your team has the most kills collectively. Free For All Every egg for themselves. If you see an egg, you shoot. Unless you want to be scrambled yourself. There is only one winner in this mode. Captula the Spatula Two teams battle for control of the spatula. The team with the spatula earns points for kills, but these can be lost if the player holding the spatula dies. King of the Coop King of the Coop was added in December 2021 with a host of cosmetic items and a new map. Two teams battle to capture a defined area known as the coop. The players on the winning team get 250 golden eggs each! Weapons There are seven main weapon types in Shell Shockers. Each weapon has its advantages and drawbacks. If you have eggcellent aim, a weapon like the Crackshot would be great. If you’re more of a spray-and-pray type, try out the Whipper. The complete weapon list for Shell Shockers is: EggK-47 - classic medium-range automatic Scrambler - high-damage shotgun Free Ranger - semi-automatic sniper rifle RPEGG - huge damage RPG Whipper - close to medium range rapid-fire rifle Crackshot - bolt-action sniper rifle TriHard - accurate medium-range burst-fire rifle Additionally, each player has an additional gun and can pick up grenades from the map. Currency The game uses Golden Eggs as currency; you can use them to upgrade the way your character appears in the game or the weapons it uses. Mind you, using the Golden Eggs in the shop won’t allow you to buy items that give you an advantage during combat. More Games Like This For more online shooting games, check out our multiplayer io games and browse the selection, which includes the highly popular Agar io . If you are looking for something totally different, consider trying Bubble Shooter or 2048 . Features Fast-paced FPS gameplay A unique theme centered around eggs Various weapons and game modes Egg customization and a shop for more items Developer Shell Shockers is developed by Blue Wizard Digital (formerly known as the Egg and Dairy Ministry of Belarus). They have also developed other games, such as Basket Bros . Release Date September 2017 Platforms Web browser. We also have the Android and iOS versions.",
+      "thumbnail_url": "https://imgs.crazygames.com/shellshockersio_16x9/20260203211252/shellshockersio_16x9-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/shellshockersio",
+      "iframe_url": "https://games.crazygames.com/en_US/shellshockersio/index.html",
+      "category_name": "io Games",
+      "rating": 4.6,
+      "total_plays": 65338,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Sniper",
+        "3D",
+        "Battle",
+        "Arena",
+        "Controller",
+        "With friends",
+        "Cartoon",
+        "Gun",
+        "Party",
+        "Can’t stop playing"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Gamepad is now supported! WASD to move Left-click to shoot E to change weapon F to make a melee attack Q to throw a grenade R to reload Space to jump Shift to zoom and aim"
+      },
+      "release_date": "2017-09-28",
+      "created_at": "2026-06-20T10:34:53.400519",
+      "updated_at": "2026-06-20T10:34:53.400524"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "22698",
+      "title": "Slice Master",
+      "slug": "slice-master",
+      "description": "Slice Master is a casual one-person game whose goal is to slice everything in sight, well, almost everything. This one-button game is driven by precision, timing, and discernment to rack up a high score.",
+      "long_description": "Slice Master is a casual one-person game whose goal is to slice everything in sight, well, almost everything. This one-button game is driven by precision, timing, and discernment to rack up a high score. Flying knives are generally a no-no, but in this game, they are the only way to progress to new blades and skins. Slice Master reviewed We really enjoyed the fun tactile slicing of this game. The sounds are just perfect. I liked how the kids had to work out which mathematical operator was the best to go for at the end of the level - \"is x4 better than +60?\" Also, because you play it with just one button, it was a game that the whole family could have a go at, even from the youngest of us. In fact, our grandparents also got involved and turned out to be pretty competitive. Review by FamilyGamingDatabase How to Play Slice Master Slice Master is a one-button game controlled by the space pad on your keyboard or the left click on your mouse. All the control lies in this one simple movement. The game has an ASMR quality, and the consistent slicing is oddly soothing to the ear. The aim is simple: slice everything in sight: fruit, shapes, walls, furniture, and more. You can slice most things, but don’t add the white wall to your target list—it’s just a holding material for your knife. You will get to shop along the way, using the coins accumulated to unlock sharper blades, swords, maces, and more: anything to help you slice even more! Tips Stay away from the pink spiked metal shapes. They are too strong for your knife and will take you straight back to the beginning of the round. Sometimes these can be found at the bottom of a pile of objects to slice, so be careful to lift your knife in time to avoid them Hit the correct numeric target at the end of each level to multiply your points by the target number and boost your score. Release Date April 2024 Platform Web browser (desktop and mobile) More Games Like This If casual games are your style, you can find a slew of them in our casual game category. Go for a classic like Bubble Shooter Classic or a head-scratching word teaser like Word Search .",
+      "thumbnail_url": "https://imgs.crazygames.com/slice-master_16x9/20240731033229/slice-master_16x9-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/slice-master",
+      "iframe_url": "https://games.crazygames.com/en_US/slice-master/index.html",
+      "category_name": "Casual",
+      "rating": 4.3,
+      "total_plays": 127562,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "One Button",
+        "5-minute fun",
+        "Avoid",
+        "3D",
+        "Physics",
+        "Obstacle",
+        "Casual"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Use the left mouse button or space to flip your knife into action."
+      },
+      "release_date": "2024-04-22",
+      "created_at": "2026-06-20T10:34:54.887525",
+      "updated_at": "2026-06-20T10:34:54.887531"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "17822",
+      "title": "BasketBros",
+      "slug": "basketbros",
+      "description": "BasketBros is a fast-paced basketball game that offers both online and offline gameplay. Choose a player, customize your style, and compete in single-player and multiplayer games.",
+      "long_description": "BasketBros is a fast-paced basketball game that offers both online and offline gameplay. Choose a player, customize your style, and compete in single-player and multiplayer games. Throw down some sick dunks and win the game to earn upgrades and unlockables. How to play Basket Bros Select your player and pick what to wear - then choose some colors to personalize your drip. You can even select the color of the socks you will be wearing, not to mention the several logos you can apply to your sweat shirt. There are 33 characters to unlock; most of them are inspired by popular NBA figures and have funny names, such as Luka Magic or Step Flurry. Unlock equipment like trainers and balls, as well as special moves, which you will get as you progress in BasketBros.io. Game Modes Enter a quick 1vs1 against AI by clicking \"Play Now\" on the main screen. Alternatively you have: 🏀 2 Players same PC - Allows you to challenge a friend on the same device. 🏀 Franchise Mode - Engage your chosen player in up to 17 matches and lead him to the trophy. 🏀 Shooting Practice - Pretty straightforward: it will ensure you don't get completely overwhelmed when you enter online mode. You can also either host or join an online game against a friend of yours; in both cases, you will need to use codes that allow you to play on the same court. Get playing and into the action straight away. Don't hesitate to take down your opponent, as it's often more effective than trying to block their shot while in the air. Similar Games Check out our basketball games for more court-based ball battles. Experience something popular but unrelated by playing Little Alchemy 2 or Idle Breakout . Release Date January 2020 Developer BasketBros is owned by the same developer as ShellShockers.io, Blue Wizard Digital. Platform Web browser",
+      "thumbnail_url": "https://imgs.crazygames.com/basketbros_16x9/20251107022434/basketbros_16x9-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/basketbros",
+      "iframe_url": "https://games.crazygames.com/en_US/basketbros/index.html",
+      "category_name": "Sports",
+      "rating": 4.5,
+      "total_plays": 14189,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Mobile",
+        "Pixel",
+        "2 Player",
+        "1 Player",
+        "Arena",
+        "Ball",
+        "Basketball",
+        "2D",
+        "Multiplayer"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "WASD + G Arrows + L"
+      },
+      "release_date": "2020-01-08",
+      "created_at": "2026-06-20T10:34:55.303654",
+      "updated_at": "2026-06-20T10:34:55.303661"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "18143",
+      "title": "Square Bird",
+      "slug": "square-bird",
+      "description": "Square Bird is a side-scrolling 2D platform game. Your bird will build a tower of square eggs to avoid danger whenever you click.",
+      "long_description": "Square Bird is a side-scrolling 2D platform game. Your bird will build a tower of square eggs to avoid danger whenever you click. It's a simple and fun game! How to Play Square Bird The mechanics are simple: click to build square eggs. The eggs make a tower to keep you from hitting objects. As the game progresses, you'll need greater judgment to make the right number of eggs to avoid obstacles. If you make just the right amount of eggs to avoid the obstacle, you get a \"perfect\" landing. The more levels you complete, the more currency you earn. Use it to buy new skins for your bird and unlock new levels! How to Get Fever Mode Fever mode is activated when you make three perfect landings. What is fever mode? Fever mode makes Square Bird shoot blocks ahead to destroy everything in your path. This shooting makes it much easier to get through the level, but you still have to look out for big drops and other obstacles that aren't affected by the blocks you shoot. Get fever mode as often as possible to score big points. More Games Like This Games that involve skillfully avoiding obstacles have long been popular, from the retro gaming era until now. Here are some other addictive obstacle-avoiding games to have fun with: House of Hazards is a game that takes you on a common journey, walking throughout your player’s home, helping them avoid obstacles along the way. Geometry Dash is a highly popular one-button platform, much like Square Bird. There are many more casual games to have fun with at CrazyGames. Features Simple one-button mechanics Unlockable character and level skins Fun and addictive gameplay Available on all platforms Release Date September 2018 (iOS) October 2018 (Android) April 2020 (HTML5) Developer Square Bird is developed by Moonee, the web version is created by Yello. Platforms Web browser (desktop and mobile) Android iOS",
+      "thumbnail_url": "https://imgs.crazygames.com/games/square-bird/cover_16x9-1732741016945.png?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/square-bird",
+      "iframe_url": "https://games.crazygames.com/en_US/square-bird/index.html",
+      "category_name": "Casual",
+      "rating": 4.5,
+      "total_plays": 819,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "One Button",
+        "Mobile",
+        "Side Scrolling",
+        "Platform",
+        "Cartoon",
+        "Minigames",
+        "Obstacle",
+        "Animal",
+        "Casual"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Press space bar or left mouse button to lay eggs and rise the bird over obstacles."
+      },
+      "release_date": "2020-04-09",
+      "created_at": "2026-06-20T10:34:55.944951",
+      "updated_at": "2026-06-20T10:34:55.944957"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "17007",
+      "title": "Mahjongg Solitaire",
+      "slug": "mahjongg-solitaire",
+      "description": "Mahjongg Solitaire is an online mahjong puzzle board game that features traditional rules and modern visuals. There are no shuffles, and the game is timed, but the game's pace is relaxed.",
+      "long_description": "Mahjongg Solitaire is an online mahjong puzzle board game that features traditional rules and modern visuals. There are no shuffles, and the game is timed, but the game's pace is relaxed. How to Play Mahjongg Solitaire Spot the patterns Mahjong is a tricky puzzle game. There are so many tiles, many of which look the same but feature slight differences. Along with the need to spot these patterns, you can’t move any pieces with both sides blocked. The left or right side needs to be accessible, at least. Finding a couple of “free” tiles is the challenge here, with a tile-free being when there are no tiles on top of it. In addition, either its left or right side needs to be open. In this version of Mahjong Solitaire, you can look at the top of your screen to understand how many pairs of tiles are “free” to be matched, plus you can match the special tiles, those with a colored background, anytime. Use hints when you’re stuck Mahjongg Solitaire features hints if you get stuck, but unlike some other mahjong games, it does not have a shuffle feature. The games are also timed, meaning there is some urgency to how many tiles you can match. When the game ends, you’ll get a score for the tiles you matched and a bonus for how far you got in the game before your time ran out. Tile groups in Mahjongg Solitaire Mahjongg Solitaire features 144 tiles divided primarily into three suits. The primary suits are: Dots - feature circles Bamboo - feature lines Characters - feature Chinese characters In Mahjongg Solitaire, you’ll also notice special tiles that can be matched even without the same image. These are highlighted in blue or green. More Games Like This Mahjong Solitaire is an excellent choice for both beginners and regular Mahjong enthusiasts. However, there are many other titles in our collection of Mahjong games . Other puzzle games you may like include board games such as 2048 and Ludo . Release Date October 2016 Platform Web browser (desktop and mobile). We also have the Android version.",
+      "thumbnail_url": "https://imgs.crazygames.com/games/mahjongg-solitaire/cover_16x9-1707829450935.png?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/mahjongg-solitaire",
+      "iframe_url": "https://games.crazygames.com/en_US/mahjongg-solitaire/index.html",
+      "category_name": "Puzzle",
+      "rating": 4.0,
+      "total_plays": 17741,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Solitaire",
+        "Timeless classics",
+        "Mobile",
+        "3D",
+        "Mahjong",
+        "Logic",
+        "Mouse",
+        "Brain",
+        "Casual"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Use the left mouse button to interact."
+      },
+      "release_date": "2022-08-09",
+      "created_at": "2026-06-20T10:34:56.351499",
+      "updated_at": "2026-06-20T10:34:56.351504"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "23270",
+      "title": "Piles of Mahjong",
+      "slug": "piles-of-mahjong-jhb",
+      "description": "Piles of Mahjong is an engaging and relaxing puzzle game that combines the classic elements of Mahjong with a match-three twist. As you progress through the levels, you’ll need to clear stacks of tiles by matching three identical ones, but be careful—strategic thinking is essential to avoid getting stuck!",
+      "long_description": "Piles of Mahjong is an engaging and relaxing puzzle game that combines the classic elements of Mahjong with a match-three twist. As you progress through the levels, you’ll need to clear stacks of tiles by matching three identical ones, but be careful—strategic thinking is essential to avoid getting stuck! How to Play Piles of Mahjong Piles of Mahjong brings a fresh twist to the classic Mahjong formula with some exciting new dynamics. The game has most of the same foundational rules as a classic game of table mahjong , but instead of simply matching two tiles, your goal is to match three tiles from a pile featuring a mix of familiar patterns like circles and sticks, alongside fun new additions like bird and panda heads. To make a match, you must select tiles by clicking on them, and they’ll move to one of the seven empty spaces at the bottom of the screen. But be careful! If you fill all seven spaces without making any triple matches, it’s game over. Strategic thinking is essential to clear the pile and avoid running out of space. The game offers helpful features to assist you when you’re stuck, but they come with a price. You can reshuffle the tiles with 300 reward points or by watching an ad, flip all the tiles face up for the same cost, or even auto-match tiles in the bottom row with 100 reward points or an ad. To add to the challenge, you start with two chances to remove a tile from the bottom area. Once those chances are used up, you will need to spend 100 reward points or watch an ad to earn another set of removals. These are useful if you are close to filling up your bottom spaces or if you find some tiles to pair with no space to move them to. With its engaging twists and strategic layers, Piles of Mahjong tests your puzzle-solving skills while adding a bit of pressure to every move you make! More Games Like This Who doesn't love a good board game? We do, which is why we have a vast selection in our puzzle collection . Try some popular titles like Uno Online , Yahtzee Online , Ludo , and more. Browse our board games for even more. Release Date August 2024 Platform Web browser (desktop and mobile)",
+      "thumbnail_url": "https://imgs.crazygames.com/piles-of-mahjong-jhb_16x9/20250203080756/piles-of-mahjong-jhb_16x9-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/piles-of-mahjong-jhb",
+      "iframe_url": "https://games.crazygames.com/en_US/piles-of-mahjong-jhb/index.html",
+      "category_name": "Puzzle",
+      "rating": 3.6,
+      "total_plays": 9812,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Mobile",
+        "3D",
+        "Mahjong",
+        "Match 3",
+        "Logic",
+        "Mouse",
+        "Brain",
+        "Casual"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "Use the left mouse button to click on any card on the board."
+      },
+      "release_date": "2024-08-29",
+      "created_at": "2026-06-20T10:34:57.009252",
+      "updated_at": "2026-06-20T10:34:57.009257"
+    },
+    {
+      "source": "crazygames",
+      "source_id": "47706",
+      "title": "Fortzone Battle Royale",
+      "slug": "fortzone-battle-royale-xkd",
+      "description": "Fortzone Battle Royale is a high-stakes survival shooter where you face off against rivals in a massive, scenic battleground. Explore forests, cross rivers, and scavenge for resources as the action ramps up quickly.",
+      "long_description": "Fortzone Battle Royale is a high-stakes survival shooter where you face off against rivals in a massive, scenic battleground. Explore forests, cross rivers, and scavenge for resources as the action ramps up quickly. Outsmart enemies, collect powerful bonuses, and fight to be the last one standing in this fast-paced test of skill and strategy. How to Play Fortzone Battle Royale Begin by choosing a male or female character, then personalize your look with a variety of options for legs, body, and hair. Unlock and equip unique skins to prep for the battlefield. There are several game modes to choose from, which include: Single Battle Royale: Available from the start Team Battle Royale: Unlocks at Level 4 Royale Duel: Unlocks at Level 6 Random Mode: Jump into any unlocked mode Your match begins midair, launched from a flying bus. Choose your landing spot wisely, whether it’s flatland, thick bushes, or water you’ll have to wade through. The storm is closing in fast, so move quickly, gather resources, and head for shelter. Elevated structures on stilts often contain valuable rewards, so scour them. Scavenge the area for weapons, gear, and supplies. You’ll start with a basic pickaxe, but upgrade to ranged and more powerful weapons as soon as possible to protect yourself. Use the destructible environment to your advantage—build fortifications for cover or smash through obstacles to escape danger. Need to move fast? Jump into a vehicle and speed through the terrain, but be prepared: enemy skirmishes can break out at any moment. Complete missions, survive longer, and eliminate opponents to rise through the levels. Play solo or squad up with friends, your approach is your own. Are you ready to earn your spot among the top fighters? Drop in, gear up, and prove you're the last one standing in Fortzone Battle Royale! More Games Like This If you want to continue battling, browse our action category for more thrilling challenges. Forge swords for fearless fighters in Jacksmith . Cuphead is a fast-paced run-and-gun game with 1930s cartoon-style animation. Ducklife , begins with one duckling and a mission to rebuild your storm-hit farm.",
+      "thumbnail_url": "https://imgs.crazygames.com/fortzone-battle-royale-xkd_16x9/20250513044222/fortzone-battle-royale-xkd_16x9-cover?format=auto&quality=80&metadata=none&width=512",
+      "game_url": "https://www.crazygames.com/game/fortzone-battle-royale-xkd",
+      "iframe_url": "https://games.crazygames.com/en_US/fortzone-battle-royale-xkd/index.html",
+      "category_name": "Action",
+      "rating": 4.5,
+      "total_plays": 190873,
+      "is_featured": false,
+      "is_new": true,
+      "is_active": true,
+      "tags": [
+        "Meme & bloxy",
+        "Mobile",
+        "3D",
+        "Battle",
+        "Arena",
+        "Destroy",
+        "Third Person Shooter",
+        "With friends",
+        "Battle Royale",
+        "Multiplayer"
+      ],
+      "features": [
+        "Free to play",
+        "No download required",
+        "Play in browser",
+        "CrazyGames embeddable title"
+      ],
+      "controls": {
+        "Controls": "WASD = movement Space = jump C = crouch M = open map 1–6 = select item Left Mouse Button (LMB) = shoot Right Mouse Button (RMB) = aim R = reload F = use item Drag the mouse = move the vehicle V = exit vehicle Tab = pause menu T = chat"
+      },
+      "release_date": "2025-05-02",
+      "created_at": "2026-06-20T10:35:01.012630",
+      "updated_at": "2026-06-20T10:35:01.012635"
+    }
+  ]
+}

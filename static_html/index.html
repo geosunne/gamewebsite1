@@ -9,12 +9,13 @@
 <meta content="BTW game" name="author"/>
 <meta content="BTW game - Free Online Games for Quick Breaks" property="og:title"/>
 <meta content="Play 500+ free online games instantly at BTW game. No downloads, no accounts, just quick browser play." property="og:description"/>
-<meta content="https://btwgame.com/images/monster-survivors-og.jpg" property="og:image"/>
+<meta content="https://btwgame.com/assets/images/btwlogo.png" property="og:image"/>
 <meta content="https://btwgame.com/" property="og:url"/>
 <meta content="website" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="BTW game - Free Online Games for Quick Breaks" name="twitter:title"/>
 <meta content="Play 500+ free online games instantly at BTW game. No downloads, no accounts, just quick browser play." name="twitter:description"/>
+<meta content="https://btwgame.com/assets/images/btwlogo.png" name="twitter:image"/>
 <link href="https://btwgame.com/" rel="canonical"/>
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SM7PBYVK97"></script>
@@ -25,6 +26,7 @@
         gtag('config', 'G-SM7PBYVK97');
     </script>
 <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8930741225505243"></script>
+
 <title>BTW game - Free Online Games for Quick Breaks</title>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -42,8 +44,13 @@
 <header class="site-header">
 <nav aria-label="Primary navigation" class="site-nav container">
 <a aria-label="BTW game home" class="brand-mark" href="/">
-<span class="brand-icon">▶</span>
-<span class="brand-word">BTW game <span class="brand-tagline">By the way, play</span></span>
+<span aria-hidden="true" class="brand-icon">
+<svg class="brand-gamepad" focusable="false" role="img" viewbox="0 0 32 24">
+<path d="M9.2 6.2h13.6c3.1 0 5.7 2.1 6.5 5.1l1 3.8c.7 2.7-1.3 5.3-4.1 5.3-1.3 0-2.5-.6-3.3-1.6l-1.7-2.2H10.3l-1.7 2.2c-.8 1-2 1.6-3.3 1.6-2.8 0-4.8-2.6-4.1-5.3l1-3.8c.8-3 3.9-5.1 7-5.1Z" fill="currentColor"></path>
+<path d="M8.7 10.2v5.2M6.1 12.8h5.2M22.8 11.1h.1M26 14.4h.1" stroke="white" stroke-linecap="round" stroke-width="2.1"></path>
+</svg>
+</span>
+<span class="brand-word">BTW game <span class="brand-tagline">By the way, play!</span></span>
 </a>
 <div class="nav-search" role="search">
 <form onsubmit="event.preventDefault(); navSearchGames();">
@@ -52,15 +59,13 @@
 </form>
 </div>
 <button aria-controls="navLinks" aria-label="Open navigation" class="mobile-menu" onclick="toggleMenu()" type="button">
-<span></span>
-<span></span>
-<span></span>
+<span></span><span></span><span></span>
 </button>
 <ul class="nav-links" id="navLinks">
+<li><a aria-current="page" href="/">Home</a></li>
 <li><a href="/games">All games</a></li>
 <li><a href="/games?filter=new">New</a></li>
 <li><a href="/games?filter=featured">Featured</a></li>
-<li><a href="#categories">Categories</a></li>
 </ul>
 </nav>
 </header>
@@ -70,7 +75,7 @@
 <section class="rail-panel">
 <h2 class="rail-title">Explore</h2>
 <ul class="rail-links">
-<li><a aria-current="page" href="/"><span class="rail-icon">⌂</span>Home</a></li>
+<li><a href="/"><span class="rail-icon">⌂</span>Home</a></li>
 <li><a href="/games"><span class="rail-icon">▦</span>All games</a></li>
 <li><a href="/games?filter=new"><span class="rail-icon">✦</span>New games</a></li>
 <li><a href="/games?filter=featured"><span class="rail-icon">★</span>Featured</a></li>
@@ -79,87 +84,1971 @@
 <section class="rail-panel">
 <h2 class="rail-title">Categories</h2>
 <ul class="rail-links">
-<li><a href="/games?category=Action"><span class="rail-icon">✹</span>Action</a></li>
-<li><a href="/games?category=Adventure"><span class="rail-icon">♣</span>Adventure</a></li>
-<li><a href="/games?category=Racing"><span class="rail-icon">⚑</span>Racing</a></li>
-<li><a href="/games?category=Puzzle"><span class="rail-icon">✚</span>Puzzle</a></li>
-<li><a href="/games?category=Sports"><span class="rail-icon">●</span>Sports</a></li>
+<li><a href="/categories/action"><span class="rail-icon">✹</span>Action</a></li>
+<li><a href="/categories/puzzle"><span class="rail-icon">✚</span>Puzzle</a></li>
+<li><a href="/categories/match-and-merge"><span class="rail-icon">◈</span>Match &amp; Merge</a></li>
+<li><a href="/categories/mahjong-and-card"><span class="rail-icon">▣</span>Mahjong &amp; Card</a></li>
+<li><a href="/categories/word-and-trivia"><span class="rail-icon">?</span>Word &amp; Trivia</a></li>
+<li><a href="/categories/racing"><span class="rail-icon">⚑</span>Racing</a></li>
+<li><a href="/categories/driving"><span class="rail-icon">◇</span>Driving</a></li>
+<li><a href="/categories/sports"><span class="rail-icon">●</span>Sports</a></li>
+<li><a href="/categories/soccer"><span class="rail-icon">◒</span>Soccer</a></li>
+<li><a href="/categories/basketball"><span class="rail-icon">○</span>Basketball</a></li>
+<li><a href="/categories/shooter"><span class="rail-icon">◎</span>Shooter</a></li>
+<li><a href="/categories/sniper"><span class="rail-icon">⌖</span>Sniper</a></li>
+<li><a href="/categories/horror"><span class="rail-icon">◐</span>Horror</a></li>
+<li><a href="/categories/survival"><span class="rail-icon">▲</span>Survival</a></li>
+<li><a href="/categories/parkour"><span class="rail-icon">↗</span>Parkour</a></li>
+<li><a href="/categories/obby"><span class="rail-icon">▵</span>Obby</a></li>
+<li><a href="/categories/platformer"><span class="rail-icon">▴</span>Platformer</a></li>
+<li><a href="/categories/runner"><span class="rail-icon">▶</span>Runner</a></li>
+<li><a href="/categories/simulation"><span class="rail-icon">▤</span>Simulation</a></li>
+<li><a href="/categories/management"><span class="rail-icon">▦</span>Management</a></li>
+<li><a href="/categories/idle-and-clicker"><span class="rail-icon">✦</span>Idle &amp; Clicker</a></li>
+<li><a href="/categories/cooking"><span class="rail-icon">◍</span>Cooking</a></li>
+<li><a href="/categories/dress-up"><span class="rail-icon">✧</span>Dress Up</a></li>
+<li><a href="/categories/beauty"><span class="rail-icon">✺</span>Beauty</a></li>
+<li><a href="/categories/two-player"><span class="rail-icon">Ⅱ</span>Two Player</a></li>
+<li><a href="/categories/io-games"><span class="rail-icon">io</span>io Games</a></li>
+<li><a href="/categories/strategy"><span class="rail-icon">♟</span>Strategy</a></li>
+<li><a href="/categories/tower-defense"><span class="rail-icon">▰</span>Tower Defense</a></li>
+<li><a href="/categories/casual"><span class="rail-icon">☼</span>Casual</a></li>
 </ul>
 </section>
-<section class="trust-card">
-<strong>Safe &amp; quick</strong>
-<span>No installs, no account flow, just browser games for short breaks.</span>
-</section>
 </aside>
-<div>
-<section aria-labelledby="home-title" class="hero">
-<div class="hero-copy">
-<span class="kicker">By the way, play a quick game</span>
-<h1 id="home-title">Play instantly. Have fun.</h1>
-<p>Fast browser games for quick breaks, shared devices, and easy classroom-safe browsing. Search, pick a category, or jump straight into a popular game.</p>
-<div class="hero-actions">
-<a class="button-primary" href="/games">Browse all games</a>
-<a class="button-secondary" href="/games?filter=new">See new games</a>
-</div>
-</div>
-<div class="hero-panel" id="categories">
-<form class="hero-search" onsubmit="event.preventDefault(); searchGames();">
-<input autocomplete="off" class="search-input" id="searchInput" placeholder="Search games, like Donuteria or Parkour" type="search"/>
-<button class="search-btn" type="submit">Search</button>
-</form>
-<div aria-label="Quick categories" class="quick-lanes">
-<a class="lane-card tone-coral" href="/games?category=Action"><strong>Action</strong><span>Jump, dodge, survive</span></a>
-<a class="lane-card tone-yellow" href="/games?category=Casual"><strong>Casual</strong><span>Simple games for breaks</span></a>
-<a class="lane-card tone-violet" href="/games?category=Puzzle"><strong>Puzzle</strong><span>Think through the level</span></a>
-<a class="lane-card tone-sky" href="/games?category=Racing"><strong>Racing</strong><span>Fast tracks and timing</span></a>
-</div>
-</div>
-</section>
-<section aria-labelledby="popular-games-title" class="content-band">
+<div class="home-main">
+<section aria-labelledby="popular-games-title" class="content-band game-shelf priority-shelf">
 <div class="section-header">
 <div>
-<h2 class="section-title" id="popular-games-title">Top games</h2>
-<p class="section-note">A compact shelf of games players open most often.</p>
+<h1 class="section-title" id="popular-games-title">Hot games</h1>
+<p class="section-note">Games players open most often.</p>
 </div>
 <a class="view-all-btn" href="/games">View all</a>
 </div>
-<div class="games-grid" id="popularGamesGrid">
-<div class="loading-state">Loading games...</div>
+<div class="games-grid home-games-grid" id="popularGamesGrid">
+<a class="game-card spotlight-card" href="/games/bloxdhop-io">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Bloxd.io" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://imgs.crazygames.com/bloxdhop-io_16x9/20250829023851/bloxdhop-io_16x9-cover?format=auto&amp;quality=80&amp;metadata=none&amp;width=512"/>
+<div class="thumbnail-fallback" style="display:none;">B</div>
+<div class="game-info">
+<h3 class="game-title">Bloxd.io</h3>
 </div>
-<div class="play-proof">
-<div class="proof-item"><span class="proof-icon">⚡</span><span><strong>Instant play</strong><span>Open in your browser</span></span></div>
-<div class="proof-item"><span class="proof-icon">✓</span><span><strong>No downloads</strong><span>Nothing to install</span></span></div>
-<div class="proof-item"><span class="proof-icon">★</span><span><strong>Always free</strong><span>No hidden costs</span></span></div>
-<div class="proof-item"><span class="proof-icon">☻</span><span><strong>Made for breaks</strong><span>Kids, teens, casual players</span></span></div>
+</div>
+</a>
+<a class="game-card" href="/games/fortzone-battle-royale-xkd">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Fortzone Battle Royale" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://imgs.crazygames.com/fortzone-battle-royale-xkd_16x9/20250513044222/fortzone-battle-royale-xkd_16x9-cover?format=auto&amp;quality=80&amp;metadata=none&amp;width=512"/>
+<div class="thumbnail-fallback" style="display:none;">FB</div>
+<div class="game-info">
+<h3 class="game-title">Fortzone Battle Royale</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/slice-master">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Slice Master" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://imgs.crazygames.com/slice-master_16x9/20240731033229/slice-master_16x9-cover?format=auto&amp;quality=80&amp;metadata=none&amp;width=512"/>
+<div class="thumbnail-fallback" style="display:none;">SM</div>
+<div class="game-info">
+<h3 class="game-title">Slice Master</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/shellshockersio">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Shell Shockers" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://imgs.crazygames.com/shellshockersio_16x9/20260203211252/shellshockersio_16x9-cover?format=auto&amp;quality=80&amp;metadata=none&amp;width=512"/>
+<div class="thumbnail-fallback" style="display:none;">SS</div>
+<div class="game-info">
+<h3 class="game-title">Shell Shockers</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/race-clicker-drift-max">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Race Clicker: Drift Max" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/962/Race-Clicker-Drift-Max-Play.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">RC</div>
+<div class="game-info">
+<h3 class="game-title">Race Clicker: Drift Max</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/battle-royale-simulator">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Battle Royale Simulator" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/633/Battle-Royale-Simulator.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">BR</div>
+<div class="game-info">
+<h3 class="game-title">Battle Royale Simulator</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/train-simulator">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Train Simulator" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/438/Train-Simulator.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">TS</div>
+<div class="game-info">
+<h3 class="game-title">Train Simulator</h3>
+</div>
+</div>
+</a>
+<a class="game-card spotlight-card" href="/games/worlds-hardest-game">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="World's Hardest Game" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/805/Worlds-Hardest-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">WH</div>
+<div class="game-info">
+<h3 class="game-title">World's Hardest Game</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/italian-brainrot-clicker">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Italian Brainrot Clicker" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1046/italian_brainrot_clicker_game.webp"/>
+<div class="thumbnail-fallback" style="display:none;">IB</div>
+<div class="game-info">
+<h3 class="game-title">Italian Brainrot Clicker</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/cat-doctor">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Cat Doctor" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/431/Cat-Doctor.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CD</div>
+<div class="game-info">
+<h3 class="game-title">Cat Doctor</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/police-stunt-cars">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Police Stunt Cars" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/109/Police-Stunt-Cars-3.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PS</div>
+<div class="game-info">
+<h3 class="game-title">Police Stunt Cars</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/motor-tour">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Motor Tour" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/980/Motor-Tour.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">MT</div>
+<div class="game-info">
+<h3 class="game-title">Motor Tour</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/cs-online">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="CS Online" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/434/CS-Online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CO</div>
+<div class="game-info">
+<h3 class="game-title">CS Online</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/crazy-karts">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Crazy Karts" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/740/Crazy-Karts.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CK</div>
+<div class="game-info">
+<h3 class="game-title">Crazy Karts</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/football-soccer-world-cup">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Football Soccer World Cup" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/337/Football-Soccer-World-Cup-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">FS</div>
+<div class="game-info">
+<h3 class="game-title">Football Soccer World Cup</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/jailbreak-prison-escape">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Jailbreak Prison Escape" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1058/jailbreak-prison-escape.webp"/>
+<div class="thumbnail-fallback" style="display:none;">JP</div>
+<div class="game-info">
+<h3 class="game-title">Jailbreak Prison Escape</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/crazy-car-arena">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Crazy Car Arena" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/317/Crazy-Car-Arena-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CC</div>
+<div class="game-info">
+<h3 class="game-title">Crazy Car Arena</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/alien-sky-invasion">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Alien Sky Invasion" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/594/Alien-Sky-Invasion.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">AS</div>
+<div class="game-info">
+<h3 class="game-title">Alien Sky Invasion</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/car-wash">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Car Wash" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/407/Car-Wash-Online-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CW</div>
+<div class="game-info">
+<h3 class="game-title">Car Wash</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/vehicles-simulator">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Vehicles Simulator" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/654/Vehicles-Simulator.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">VS</div>
+<div class="game-info">
+<h3 class="game-title">Vehicles Simulator</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/dark-ninja-hanjo">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Dark Ninja Hanjo" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/451/Dark-Ninja-Hanjo.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">DN</div>
+<div class="game-info">
+<h3 class="game-title">Dark Ninja Hanjo</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/papas-pizzeria">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Papa's Pizzeria" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/852/pizzeria.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PP</div>
+<div class="game-info">
+<h3 class="game-title">Papa's Pizzeria</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/tribals-io">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Tribals io" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/640/Tribals.io.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">TI</div>
+<div class="game-info">
+<h3 class="game-title">Tribals io</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/2-player-crazy-racer">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="2 Player Crazy Racer" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/617/2-Player-Crazy-Racer.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">2P</div>
+<div class="game-info">
+<h3 class="game-title">2 Player Crazy Racer</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/julio-police-cars">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Julio Police Cars" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/70/Julio-Police-Cars-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">JP</div>
+<div class="game-info">
+<h3 class="game-title">Julio Police Cars</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/paw-clicker">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Paw Clicker" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1077/Paw-Clicker.webp"/>
+<div class="thumbnail-fallback" style="display:none;">PC</div>
+<div class="game-info">
+<h3 class="game-title">Paw Clicker</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/agent-walker-vs-skibidi-toilets">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Agent Walker vs Skibidi Toilets" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/794/Agent-Walker-vs-Skibidi-Toilets.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">AW</div>
+<div class="game-info">
+<h3 class="game-title">Agent Walker vs Skibidi Toilets</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/masked-forces-crazy-mode">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Masked Forces Crazy Mode" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/3/Masked-Forces-Crazy-Mode-Online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">MF</div>
+<div class="game-info">
+<h3 class="game-title">Masked Forces Crazy Mode</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/block-blast">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Block Blast" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/876/block-blast.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">BB</div>
+<div class="game-info">
+<h3 class="game-title">Block Blast</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/basketball-stars">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Basketball Stars" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/380/Basketball-Stars-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">BS</div>
+<div class="game-info">
+<h3 class="game-title">Basketball Stars</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/granny-2">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Granny 2" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/901/Granny-2-online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">G2</div>
+<div class="game-info">
+<h3 class="game-title">Granny 2</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/merge-cakes">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Merge Cakes" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/743/Merge-Cakes.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">MC</div>
+<div class="game-info">
+<h3 class="game-title">Merge Cakes</h3>
+</div>
+</div>
+</a>
 </div>
 </section>
-<section aria-labelledby="new-games-title" class="content-band">
+<section aria-labelledby="new-games-title" class="content-band game-shelf">
 <div class="section-header">
 <div>
-<h2 class="section-title" id="new-games-title">New games every day</h2>
-<p class="section-note">Fresh picks loaded from the current game library.</p>
+<h2 class="section-title" id="new-games-title">New games</h2>
+<p class="section-note">Fresh picks from the current library.</p>
 </div>
 <a class="view-all-btn" href="/games?filter=new">View new games</a>
 </div>
-<div class="games-grid compact" id="newGamesGrid">
-<div class="loading-state">Loading games...</div>
+<div class="games-grid compact home-games-grid" id="newGamesGrid">
+<a class="game-card" href="/games/santa-parkour">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Santa Parkour" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/santa-parkour/santa-parkour_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">SP</div>
+<div class="game-info">
+<h3 class="game-title">Santa Parkour</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/endless-battle-k">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Endless Battles" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/endless-battle-k/endless-battle-k_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">EB</div>
+<div class="game-info">
+<h3 class="game-title">Endless Battles</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/animals-up">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Animals Up" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/animals-up/animals-up_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">AU</div>
+<div class="game-info">
+<h3 class="game-title">Animals Up</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/familyvilladecoration">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="FamilyVillaDecoration" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/familyvilladecoration/familyvilladecoration_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">F</div>
+<div class="game-info">
+<h3 class="game-title">FamilyVillaDecoration</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/hero-survival">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Hero Survival" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/hero-survival/hero-survival_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">HS</div>
+<div class="game-info">
+<h3 class="game-title">Hero Survival</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/dreader-horror-maze">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Dreader Horror Maze" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/dreader-horror-maze/dreader-horror-maze_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">DH</div>
+<div class="game-info">
+<h3 class="game-title">Dreader Horror Maze</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/forg-fap">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Frog Tap" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/forg-fap/forg-fap_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">FT</div>
+<div class="game-info">
+<h3 class="game-title">Frog Tap</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/slices">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Slices" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/slices/slices_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">S</div>
+<div class="game-info">
+<h3 class="game-title">Slices</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/sky-rush">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Sky Rush" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/sky-rush/sky-rush_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">SR</div>
+<div class="game-info">
+<h3 class="game-title">Sky Rush</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/2-player-games">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="2 Player Games" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/2-player-games/2-player-games_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">2P</div>
+<div class="game-info">
+<h3 class="game-title">2 Player Games</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/break-through-gogogo">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Break Through GOGOGO" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/break-through-gogogo/break-through-gogogo_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">BT</div>
+<div class="game-info">
+<h3 class="game-title">Break Through GOGOGO</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/mr-bullet">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Mr Bullet" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/mr-bullet/mr-bullet_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">MB</div>
+<div class="game-info">
+<h3 class="game-title">Mr Bullet</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/amazing-tile">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Amazing Tile" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/amazing-tile/amazing-tile_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">AT</div>
+<div class="game-info">
+<h3 class="game-title">Amazing Tile</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/wool-world">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Wool World" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/wool-world/wool-world_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">WW</div>
+<div class="game-info">
+<h3 class="game-title">Wool World</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/soldier-assault">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Soldier Assault" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/soldier-assault/soldier-assault_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">SA</div>
+<div class="game-info">
+<h3 class="game-title">Soldier Assault</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/traffic-rush">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Traffic Rush" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/traffic-rush/traffic-rush_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">TR</div>
+<div class="game-info">
+<h3 class="game-title">Traffic Rush</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/coin-king">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Coin King" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/coin-king/coin-king_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">CK</div>
+<div class="game-info">
+<h3 class="game-title">Coin King</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/toilet-zombie-war">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Toilet Zombie War" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/toilet-zombie-war/toilet-zombie-war_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">TZ</div>
+<div class="game-info">
+<h3 class="game-title">Toilet Zombie War</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/flower-explosion-z">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Happy Blossom" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/flower-explosion-z/flower-explosion-z_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">HB</div>
+<div class="game-info">
+<h3 class="game-title">Happy Blossom</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/zombie-tower">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Zombie Tower" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/zombie-tower/zombie-tower_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">ZT</div>
+<div class="game-info">
+<h3 class="game-title">Zombie Tower</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/monster-builder">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Monster Builder" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/monster-builder/monster-builder_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">MB</div>
+<div class="game-info">
+<h3 class="game-title">Monster Builder</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/monster-draft">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Monster Draft" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/monster-draft/monster-draft_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">MD</div>
+<div class="game-info">
+<h3 class="game-title">Monster Draft</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/nature-strikes-back">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="Nature Strikes Back" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/nature-strikes-back/nature-strikes-back_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">NS</div>
+<div class="game-info">
+<h3 class="game-title">Nature Strikes Back</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/blackjack">
+<div class="game-thumbnail">
+<div class="game-badge">NEW</div>
+<img alt="BlackJack" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://res.minigame.vip/gc-assets/blackjack/blackjack_banner.webp"/>
+<div class="thumbnail-fallback" style="display:none;">B</div>
+<div class="game-info">
+<h3 class="game-title">BlackJack</h3>
+</div>
+</div>
+</a>
 </div>
 </section>
-<section aria-labelledby="about-title" class="content-band">
-<div class="story-grid">
-<article class="story-item tone-green">
-<h2 class="section-title" id="about-title">About BTW game</h2>
-<p>BTW game collects free browser games so players can quickly choose something fun. Pages use clean links, clear categories, and predictable play buttons.</p>
-</article>
-<article class="faq-panel">
-<h2 class="card-title">FAQ</h2>
-<div class="faq-list">
-<div class="faq-row"><span>Do I need to download anything?</span><span>+</span></div>
-<div class="faq-row"><span>Is BTW game really free?</span><span>+</span></div>
-<div class="faq-row"><span>Can I play on mobile devices?</span><span>+</span></div>
-<div class="faq-row"><span>Is it safe for kids?</span><span>+</span></div>
+<section aria-labelledby="homeCategory0" class="home-category-shelf tone-coral">
+<div class="section-header shelf-header">
+<div>
+<h2 class="section-title" id="homeCategory0">Action</h2>
+<p class="section-note">Action games on BTW game focus on quick decisions, movement, timing, and short bursts of pressure. Open a game, learn the controls, and jump into a fast browser session.</p>
 </div>
-</article>
+<a class="view-all-btn" href="/categories/action">View Action</a>
+</div>
+<div class="games-grid compact home-games-grid category-home-grid">
+<a class="game-card" href="/games/bloxdhop-io">
+<div class="game-thumbnail">
+<img alt="Bloxd.io" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://imgs.crazygames.com/bloxdhop-io_16x9/20250829023851/bloxdhop-io_16x9-cover?format=auto&amp;quality=80&amp;metadata=none&amp;width=512"/>
+<div class="thumbnail-fallback" style="display:none;">B</div>
+<div class="game-info">
+<h3 class="game-title">Bloxd.io</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/fortzone-battle-royale-xkd">
+<div class="game-thumbnail">
+<img alt="Fortzone Battle Royale" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://imgs.crazygames.com/fortzone-battle-royale-xkd_16x9/20250513044222/fortzone-battle-royale-xkd_16x9-cover?format=auto&amp;quality=80&amp;metadata=none&amp;width=512"/>
+<div class="thumbnail-fallback" style="display:none;">FB</div>
+<div class="game-info">
+<h3 class="game-title">Fortzone Battle Royale</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/shellshockersio">
+<div class="game-thumbnail">
+<img alt="Shell Shockers" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://imgs.crazygames.com/shellshockersio_16x9/20260203211252/shellshockersio_16x9-cover?format=auto&amp;quality=80&amp;metadata=none&amp;width=512"/>
+<div class="thumbnail-fallback" style="display:none;">SS</div>
+<div class="game-info">
+<h3 class="game-title">Shell Shockers</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/battle-royale-simulator">
+<div class="game-thumbnail">
+<img alt="Battle Royale Simulator" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/633/Battle-Royale-Simulator.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">BR</div>
+<div class="game-info">
+<h3 class="game-title">Battle Royale Simulator</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/cs-online">
+<div class="game-thumbnail">
+<img alt="CS Online" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/434/CS-Online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CO</div>
+<div class="game-info">
+<h3 class="game-title">CS Online</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/crazy-karts">
+<div class="game-thumbnail">
+<img alt="Crazy Karts" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/740/Crazy-Karts.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CK</div>
+<div class="game-info">
+<h3 class="game-title">Crazy Karts</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/dark-ninja-hanjo">
+<div class="game-thumbnail">
+<img alt="Dark Ninja Hanjo" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/451/Dark-Ninja-Hanjo.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">DN</div>
+<div class="game-info">
+<h3 class="game-title">Dark Ninja Hanjo</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/agent-walker-vs-skibidi-toilets">
+<div class="game-thumbnail">
+<img alt="Agent Walker vs Skibidi Toilets" decoding="async" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/794/Agent-Walker-vs-Skibidi-Toilets.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">AW</div>
+<div class="game-info">
+<h3 class="game-title">Agent Walker vs Skibidi Toilets</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/masked-forces-crazy-mode">
+<div class="game-thumbnail">
+<img alt="Masked Forces Crazy Mode" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/3/Masked-Forces-Crazy-Mode-Online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">MF</div>
+<div class="game-info">
+<h3 class="game-title">Masked Forces Crazy Mode</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/mob-city">
+<div class="game-thumbnail">
+<img alt="Mob City" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/418/Mob-City.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">MC</div>
+<div class="game-info">
+<h3 class="game-title">Mob City</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/voxiom">
+<div class="game-thumbnail">
+<img alt="Voxiom" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/673/Voxiom-io.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">V</div>
+<div class="game-info">
+<h3 class="game-title">Voxiom</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/carnage-battle-arena">
+<div class="game-thumbnail">
+<img alt="Carnage Battle Arena" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/987/carnage-battle-arena.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CB</div>
+<div class="game-info">
+<h3 class="game-title">Carnage Battle Arena</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/epic-mine">
+<div class="game-thumbnail">
+<img alt="Epic Mine" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/927/epic-mine.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">EM</div>
+<div class="game-info">
+<h3 class="game-title">Epic Mine</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/tank-driver-simulator">
+<div class="game-thumbnail">
+<img alt="Tank Driver Simulator" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/534/Tank-Driver-Simulator.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">TD</div>
+<div class="game-info">
+<h3 class="game-title">Tank Driver Simulator</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/craftmine">
+<div class="game-thumbnail">
+<img alt="Craftmine" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/687/Craftmine.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">C</div>
+<div class="game-info">
+<h3 class="game-title">Craftmine</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/fortnite-z">
+<div class="game-thumbnail">
+<img alt="Fortnite Z" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/599/Fortnite-Z.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">FZ</div>
+<div class="game-info">
+<h3 class="game-title">Fortnite Z</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/urban-sniper">
+<div class="game-thumbnail">
+<img alt="Urban Sniper" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/322/Urban-Sniper-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">US</div>
+<div class="game-info">
+<h3 class="game-title">Urban Sniper</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/smash-karts">
+<div class="game-thumbnail">
+<img alt="Smash Karts" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/373/smash-karts-online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">SK</div>
+<div class="game-info">
+<h3 class="game-title">Smash Karts</h3>
+</div>
+</div>
+</a>
+</div>
+</section>
+<section aria-labelledby="homeCategory1" class="home-category-shelf tone-yellow">
+<div class="section-header shelf-header">
+<div>
+<h2 class="section-title" id="homeCategory1">Puzzle</h2>
+<p class="section-note">Puzzle games give you a slower browser break: match pieces, solve patterns, plan moves, and look for the cleanest answer.</p>
+</div>
+<a class="view-all-btn" href="/categories/puzzle">View Puzzle</a>
+</div>
+<div class="games-grid compact home-games-grid category-home-grid">
+<a class="game-card" href="/games/italian-brainrot-clicker">
+<div class="game-thumbnail">
+<img alt="Italian Brainrot Clicker" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1046/italian_brainrot_clicker_game.webp"/>
+<div class="thumbnail-fallback" style="display:none;">IB</div>
+<div class="game-info">
+<h3 class="game-title">Italian Brainrot Clicker</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/jailbreak-prison-escape">
+<div class="game-thumbnail">
+<img alt="Jailbreak Prison Escape" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1058/jailbreak-prison-escape.webp"/>
+<div class="thumbnail-fallback" style="display:none;">JP</div>
+<div class="game-info">
+<h3 class="game-title">Jailbreak Prison Escape</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/block-blast">
+<div class="game-thumbnail">
+<img alt="Block Blast" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/876/block-blast.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">BB</div>
+<div class="game-info">
+<h3 class="game-title">Block Blast</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/granny-2">
+<div class="game-thumbnail">
+<img alt="Granny 2" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/901/Granny-2-online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">G2</div>
+<div class="game-info">
+<h3 class="game-title">Granny 2</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/merge-cakes">
+<div class="game-thumbnail">
+<img alt="Merge Cakes" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/743/Merge-Cakes.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">MC</div>
+<div class="game-info">
+<h3 class="game-title">Merge Cakes</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/nuts-and-bolts-puzzle">
+<div class="game-thumbnail">
+<img alt="Nuts and Bolts Puzzle" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/965/nuts-and-bolts-puzzle.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">NA</div>
+<div class="game-info">
+<h3 class="game-title">Nuts and Bolts Puzzle</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/carnage-battle-arena">
+<div class="game-thumbnail">
+<img alt="Carnage Battle Arena" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/987/carnage-battle-arena.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CB</div>
+<div class="game-info">
+<h3 class="game-title">Carnage Battle Arena</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/dreamlike-room">
+<div class="game-thumbnail">
+<img alt="Dreamlike Room" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/645/Dreamlike-Room.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">DR</div>
+<div class="game-info">
+<h3 class="game-title">Dreamlike Room</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/unpacking">
+<div class="game-thumbnail">
+<img alt="Unpacking" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/481/Unpacking.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">U</div>
+<div class="game-info">
+<h3 class="game-title">Unpacking</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/crazy-motorcycle">
+<div class="game-thumbnail">
+<img alt="Crazy Motorcycle" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1013/Crazy-Motorcycle.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CM</div>
+<div class="game-info">
+<h3 class="game-title">Crazy Motorcycle</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/rummikub">
+<div class="game-thumbnail">
+<img alt="Rummikub" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/387/Rummikub-Online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">R</div>
+<div class="game-info">
+<h3 class="game-title">Rummikub</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/granny">
+<div class="game-thumbnail">
+<img alt="Granny" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/884/granny.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">G</div>
+<div class="game-info">
+<h3 class="game-title">Granny</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/blocky-combat-swat">
+<div class="game-thumbnail">
+<img alt="Blocky Combat Swat" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/561/Blocky-Combat-Swat.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">BC</div>
+<div class="game-info">
+<h3 class="game-title">Blocky Combat Swat</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/mergest-kingdom">
+<div class="game-thumbnail">
+<img alt="Mergest Kingdom" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/412/Mergest-Kingdom-Online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">MK</div>
+<div class="game-info">
+<h3 class="game-title">Mergest Kingdom</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/minecraft-classic">
+<div class="game-thumbnail">
+<img alt="Minecraft Classic" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/382/Minecraft-Classic-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">MC</div>
+<div class="game-info">
+<h3 class="game-title">Minecraft Classic</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/labubu-merge">
+<div class="game-thumbnail">
+<img alt="Labubu Merge" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1062/labubu-merge-game.webp"/>
+<div class="thumbnail-fallback" style="display:none;">LM</div>
+<div class="game-info">
+<h3 class="game-title">Labubu Merge</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/sprunked">
+<div class="game-thumbnail">
+<img alt="Sprunked" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/973/sprunked-online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">S</div>
+<div class="game-info">
+<h3 class="game-title">Sprunked</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/thief-puzzle">
+<div class="game-thumbnail">
+<img alt="Thief Puzzle" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1009/Thief-Puzzle.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">TP</div>
+<div class="game-info">
+<h3 class="game-title">Thief Puzzle</h3>
+</div>
+</div>
+</a>
+</div>
+</section>
+<section aria-labelledby="homeCategory2" class="home-category-shelf tone-violet">
+<div class="section-header shelf-header">
+<div>
+<h2 class="section-title" id="homeCategory2">Match &amp; Merge</h2>
+<p class="section-note">Match and merge games are about spotting patterns, combining pieces, clearing boards, and building satisfying chains.</p>
+</div>
+<a class="view-all-btn" href="/categories/match-and-merge">View Match &amp; Merge</a>
+</div>
+<div class="games-grid compact home-games-grid category-home-grid">
+<a class="game-card" href="/games/block-blast">
+<div class="game-thumbnail">
+<img alt="Block Blast" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/876/block-blast.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">BB</div>
+<div class="game-info">
+<h3 class="game-title">Block Blast</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/merge-cakes">
+<div class="game-thumbnail">
+<img alt="Merge Cakes" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/743/Merge-Cakes.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">MC</div>
+<div class="game-info">
+<h3 class="game-title">Merge Cakes</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/rummikub">
+<div class="game-thumbnail">
+<img alt="Rummikub" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/387/Rummikub-Online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">R</div>
+<div class="game-info">
+<h3 class="game-title">Rummikub</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/mergest-kingdom">
+<div class="game-thumbnail">
+<img alt="Mergest Kingdom" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/412/Mergest-Kingdom-Online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">MK</div>
+<div class="game-info">
+<h3 class="game-title">Mergest Kingdom</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/slope-run">
+<div class="game-thumbnail">
+<img alt="Slope Run" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1069/slope-run-game.webp"/>
+<div class="thumbnail-fallback" style="display:none;">SR</div>
+<div class="game-info">
+<h3 class="game-title">Slope Run</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/labubu-merge">
+<div class="game-thumbnail">
+<img alt="Labubu Merge" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1062/labubu-merge-game.webp"/>
+<div class="thumbnail-fallback" style="display:none;">LM</div>
+<div class="game-info">
+<h3 class="game-title">Labubu Merge</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/beach-club">
+<div class="game-thumbnail">
+<img alt="Beach Club" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1084/Beach-Club.webp"/>
+<div class="thumbnail-fallback" style="display:none;">BC</div>
+<div class="game-info">
+<h3 class="game-title">Beach Club</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/dinosaur-game">
+<div class="game-thumbnail">
+<img alt="Dinosaur Game" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/417/Dinosaur-Game-Online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">DG</div>
+<div class="game-info">
+<h3 class="game-title">Dinosaur Game</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/gummy-blocks">
+<div class="game-thumbnail">
+<img alt="Gummy Blocks" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/568/Gummy-Blocks.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">GB</div>
+<div class="game-info">
+<h3 class="game-title">Gummy Blocks</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/trendy-plaid-outfits">
+<div class="game-thumbnail">
+<img alt="Trendy Plaid Outfits" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/891/trendy-plaid.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">TP</div>
+<div class="game-info">
+<h3 class="game-title">Trendy Plaid Outfits</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/words-of-wonders">
+<div class="game-thumbnail">
+<img alt="Words of Wonders" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/975/words-of-wonders-online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">WO</div>
+<div class="game-info">
+<h3 class="game-title">Words of Wonders</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/merge-brainrot">
+<div class="game-thumbnail">
+<img alt="Merge Brainrot" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1057/merge-brainrot.webp"/>
+<div class="thumbnail-fallback" style="display:none;">MB</div>
+<div class="game-info">
+<h3 class="game-title">Merge Brainrot</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/cake-match-puzzle">
+<div class="game-thumbnail">
+<img alt="Cake Match Puzzle" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/908/55.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CM</div>
+<div class="game-info">
+<h3 class="game-title">Cake Match Puzzle</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/tennis-masters">
+<div class="game-thumbnail">
+<img alt="Tennis Masters" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/565/Tennis-Masters-2.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">TM</div>
+<div class="game-info">
+<h3 class="game-title">Tennis Masters</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/tetris">
+<div class="game-thumbnail">
+<img alt="Tetris" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/758/Tetris-Online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">T</div>
+<div class="game-info">
+<h3 class="game-title">Tetris</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/soccer-masters">
+<div class="game-thumbnail">
+<img alt="Soccer Masters" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/874/Soccer-Masters.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">SM</div>
+<div class="game-info">
+<h3 class="game-title">Soccer Masters</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/five-nights-at-candys">
+<div class="game-thumbnail">
+<img alt="Five Nights At Candy's" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/895/five-nights-at-candys.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">FN</div>
+<div class="game-info">
+<h3 class="game-title">Five Nights At Candy's</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/basketball-king">
+<div class="game-thumbnail">
+<img alt="Basketball King" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/907/basketball-king.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">BK</div>
+<div class="game-info">
+<h3 class="game-title">Basketball King</h3>
+</div>
+</div>
+</a>
+</div>
+</section>
+<section aria-labelledby="homeCategory3" class="home-category-shelf tone-sky">
+<div class="section-header shelf-header">
+<div>
+<h2 class="section-title" id="homeCategory3">Racing</h2>
+<p class="section-note">Racing games are built for speed, clean turns, stunts, traffic runs, and quick restarts. Pick a car, bike, or vehicle game and play instantly.</p>
+</div>
+<a class="view-all-btn" href="/categories/racing">View Racing</a>
+</div>
+<div class="games-grid compact home-games-grid category-home-grid">
+<a class="game-card" href="/games/slice-master">
+<div class="game-thumbnail">
+<img alt="Slice Master" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://imgs.crazygames.com/slice-master_16x9/20240731033229/slice-master_16x9-cover?format=auto&amp;quality=80&amp;metadata=none&amp;width=512"/>
+<div class="thumbnail-fallback" style="display:none;">SM</div>
+<div class="game-info">
+<h3 class="game-title">Slice Master</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/race-clicker-drift-max">
+<div class="game-thumbnail">
+<img alt="Race Clicker: Drift Max" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/962/Race-Clicker-Drift-Max-Play.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">RC</div>
+<div class="game-info">
+<h3 class="game-title">Race Clicker: Drift Max</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/police-stunt-cars">
+<div class="game-thumbnail">
+<img alt="Police Stunt Cars" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/109/Police-Stunt-Cars-3.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PS</div>
+<div class="game-info">
+<h3 class="game-title">Police Stunt Cars</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/motor-tour">
+<div class="game-thumbnail">
+<img alt="Motor Tour" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/980/Motor-Tour.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">MT</div>
+<div class="game-info">
+<h3 class="game-title">Motor Tour</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/crazy-karts">
+<div class="game-thumbnail">
+<img alt="Crazy Karts" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/740/Crazy-Karts.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CK</div>
+<div class="game-info">
+<h3 class="game-title">Crazy Karts</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/crazy-car-arena">
+<div class="game-thumbnail">
+<img alt="Crazy Car Arena" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/317/Crazy-Car-Arena-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CC</div>
+<div class="game-info">
+<h3 class="game-title">Crazy Car Arena</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/car-wash">
+<div class="game-thumbnail">
+<img alt="Car Wash" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/407/Car-Wash-Online-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CW</div>
+<div class="game-info">
+<h3 class="game-title">Car Wash</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/vehicles-simulator">
+<div class="game-thumbnail">
+<img alt="Vehicles Simulator" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/654/Vehicles-Simulator.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">VS</div>
+<div class="game-info">
+<h3 class="game-title">Vehicles Simulator</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/2-player-crazy-racer">
+<div class="game-thumbnail">
+<img alt="2 Player Crazy Racer" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/617/2-Player-Crazy-Racer.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">2P</div>
+<div class="game-info">
+<h3 class="game-title">2 Player Crazy Racer</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/julio-police-cars">
+<div class="game-thumbnail">
+<img alt="Julio Police Cars" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/70/Julio-Police-Cars-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">JP</div>
+<div class="game-info">
+<h3 class="game-title">Julio Police Cars</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/hover-racer-pro">
+<div class="game-thumbnail">
+<img alt="Hover Racer Pro" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/572/Hover-Racer-Pro.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">HR</div>
+<div class="game-info">
+<h3 class="game-title">Hover Racer Pro</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/crazy-parking-fury">
+<div class="game-thumbnail">
+<img alt="Crazy Parking Fury" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/643/Crazy-Parking-Fury.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CP</div>
+<div class="game-info">
+<h3 class="game-title">Crazy Parking Fury</h3>
+</div>
+</div>
+</a>
+</div>
+</section>
+<section aria-labelledby="homeCategory4" class="home-category-shelf tone-green">
+<div class="section-header shelf-header">
+<div>
+<h2 class="section-title" id="homeCategory4">Shooter</h2>
+<p class="section-note">Shooter games focus on aim, awareness, and fast reactions. The best first picks have clear controls and quick rounds.</p>
+</div>
+<a class="view-all-btn" href="/categories/shooter">View Shooter</a>
+</div>
+<div class="games-grid compact home-games-grid category-home-grid">
+<a class="game-card" href="/games/fortzone-battle-royale-xkd">
+<div class="game-thumbnail">
+<img alt="Fortzone Battle Royale" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://imgs.crazygames.com/fortzone-battle-royale-xkd_16x9/20250513044222/fortzone-battle-royale-xkd_16x9-cover?format=auto&amp;quality=80&amp;metadata=none&amp;width=512"/>
+<div class="thumbnail-fallback" style="display:none;">FB</div>
+<div class="game-info">
+<h3 class="game-title">Fortzone Battle Royale</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/shellshockersio">
+<div class="game-thumbnail">
+<img alt="Shell Shockers" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://imgs.crazygames.com/shellshockersio_16x9/20260203211252/shellshockersio_16x9-cover?format=auto&amp;quality=80&amp;metadata=none&amp;width=512"/>
+<div class="thumbnail-fallback" style="display:none;">SS</div>
+<div class="game-info">
+<h3 class="game-title">Shell Shockers</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/battle-royale-simulator">
+<div class="game-thumbnail">
+<img alt="Battle Royale Simulator" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/633/Battle-Royale-Simulator.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">BR</div>
+<div class="game-info">
+<h3 class="game-title">Battle Royale Simulator</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/crazy-karts">
+<div class="game-thumbnail">
+<img alt="Crazy Karts" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/740/Crazy-Karts.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CK</div>
+<div class="game-info">
+<h3 class="game-title">Crazy Karts</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/masked-forces-crazy-mode">
+<div class="game-thumbnail">
+<img alt="Masked Forces Crazy Mode" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/3/Masked-Forces-Crazy-Mode-Online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">MF</div>
+<div class="game-info">
+<h3 class="game-title">Masked Forces Crazy Mode</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/mob-city">
+<div class="game-thumbnail">
+<img alt="Mob City" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/418/Mob-City.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">MC</div>
+<div class="game-info">
+<h3 class="game-title">Mob City</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/voxiom">
+<div class="game-thumbnail">
+<img alt="Voxiom" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/673/Voxiom-io.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">V</div>
+<div class="game-info">
+<h3 class="game-title">Voxiom</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/tank-driver-simulator">
+<div class="game-thumbnail">
+<img alt="Tank Driver Simulator" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/534/Tank-Driver-Simulator.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">TD</div>
+<div class="game-info">
+<h3 class="game-title">Tank Driver Simulator</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/fortnite-z">
+<div class="game-thumbnail">
+<img alt="Fortnite Z" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/599/Fortnite-Z.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">FZ</div>
+<div class="game-info">
+<h3 class="game-title">Fortnite Z</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/urban-sniper">
+<div class="game-thumbnail">
+<img alt="Urban Sniper" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/322/Urban-Sniper-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">US</div>
+<div class="game-info">
+<h3 class="game-title">Urban Sniper</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/suroi">
+<div class="game-thumbnail">
+<img alt="Suroi" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/817/suroi.io.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">S</div>
+<div class="game-info">
+<h3 class="game-title">Suroi</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/tanks-of-the-galaxy">
+<div class="game-thumbnail">
+<img alt="Tanks of the Galaxy" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1034/tanks-of-the-galaxy-2.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">TO</div>
+<div class="game-info">
+<h3 class="game-title">Tanks of the Galaxy</h3>
+</div>
+</div>
+</a>
+</div>
+</section>
+<section aria-labelledby="homeCategory5" class="home-category-shelf tone-coral">
+<div class="section-header shelf-header">
+<div>
+<h2 class="section-title" id="homeCategory5">Parkour</h2>
+<p class="section-note">Parkour games focus on jumps, timing, routes, obstacles, and retries. They are ideal when you want movement skill without a long tutorial.</p>
+</div>
+<a class="view-all-btn" href="/categories/parkour">View Parkour</a>
+</div>
+<div class="games-grid compact home-games-grid category-home-grid">
+<a class="game-card" href="/games/bloxdhop-io">
+<div class="game-thumbnail">
+<img alt="Bloxd.io" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://imgs.crazygames.com/bloxdhop-io_16x9/20250829023851/bloxdhop-io_16x9-cover?format=auto&amp;quality=80&amp;metadata=none&amp;width=512"/>
+<div class="thumbnail-fallback" style="display:none;">B</div>
+<div class="game-info">
+<h3 class="game-title">Bloxd.io</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/ovo-online">
+<div class="game-thumbnail">
+<img alt="OvO Online" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1087/ovo-online.webp"/>
+<div class="thumbnail-fallback" style="display:none;">OO</div>
+<div class="game-info">
+<h3 class="game-title">OvO Online</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/sprunky-incredibox-mods">
+<div class="game-thumbnail">
+<img alt="Sprunky Incredibox Mods" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1090/sprunky-incredibox-mods.webp"/>
+<div class="thumbnail-fallback" style="display:none;">SI</div>
+<div class="game-info">
+<h3 class="game-title">Sprunky Incredibox Mods</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/obby-prison-escape">
+<div class="game-thumbnail">
+<img alt="Obby Prison Escape" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/863/obby-prison-escape.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">OP</div>
+<div class="game-info">
+<h3 class="game-title">Obby Prison Escape</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/italian-brainrot-survive-parkour">
+<div class="game-thumbnail">
+<img alt="Italian Brainrot Survive Parkour" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1066/italian-brainrot-survive-parkour-game.webp"/>
+<div class="thumbnail-fallback" style="display:none;">IB</div>
+<div class="game-info">
+<h3 class="game-title">Italian Brainrot Survive Parkour</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/obby-survive-parkour">
+<div class="game-thumbnail">
+<img alt="Obby Survive Parkour" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1059/obby-survive-parkour.webp"/>
+<div class="thumbnail-fallback" style="display:none;">OS</div>
+<div class="game-info">
+<h3 class="game-title">Obby Survive Parkour</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/stickman-parkour">
+<div class="game-thumbnail">
+<img alt="Stickman Parkour" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/871/stickman-parkour-OG.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">SP</div>
+<div class="game-info">
+<h3 class="game-title">Stickman Parkour</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/blocky-parkour-ninja">
+<div class="game-thumbnail">
+<img alt="Blocky Parkour Ninja" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/440/Blocky-Parkour-Ninja.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">BP</div>
+<div class="game-info">
+<h3 class="game-title">Blocky Parkour Ninja</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/backflip-dive-3d">
+<div class="game-thumbnail">
+<img alt="Backflip Dive 3D" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1083/Backflip-Dive-3D-2.webp"/>
+<div class="thumbnail-fallback" style="display:none;">BD</div>
+<div class="game-info">
+<h3 class="game-title">Backflip Dive 3D</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/obby-parkour-lava">
+<div class="game-thumbnail">
+<img alt="Obby: Parkour Lava" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/904/obby-parkour-lava.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">OP</div>
+<div class="game-info">
+<h3 class="game-title">Obby: Parkour Lava</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/rainbow-obby-parkour">
+<div class="game-thumbnail">
+<img alt="Rainbow Obby Parkour" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/913/Rainbow-Obby.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">RO</div>
+<div class="game-info">
+<h3 class="game-title">Rainbow Obby Parkour</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/obby-tower-parkour-climb">
+<div class="game-thumbnail">
+<img alt="Obby Tower Parkour Climb" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/943/obby-tower-parkour-climb.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">OT</div>
+<div class="game-info">
+<h3 class="game-title">Obby Tower Parkour Climb</h3>
+</div>
+</div>
+</a>
+</div>
+</section>
+<section aria-labelledby="homeCategory6" class="home-category-shelf tone-yellow">
+<div class="section-header shelf-header">
+<div>
+<h2 class="section-title" id="homeCategory6">Runner</h2>
+<p class="section-note">Runner games are built around movement, dodging, collecting, and quick reactions through a forward-moving challenge.</p>
+</div>
+<a class="view-all-btn" href="/categories/runner">View Runner</a>
+</div>
+<div class="games-grid compact home-games-grid category-home-grid">
+<a class="game-card" href="/games/crazy-parking-fury">
+<div class="game-thumbnail">
+<img alt="Crazy Parking Fury" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/643/Crazy-Parking-Fury.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">CP</div>
+<div class="game-info">
+<h3 class="game-title">Crazy Parking Fury</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/supermarket-simulator">
+<div class="game-thumbnail">
+<img alt="Supermarket Simulator" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/959/Supermarket-Simulator-Online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">SS</div>
+<div class="game-info">
+<h3 class="game-title">Supermarket Simulator</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/slope-run">
+<div class="game-thumbnail">
+<img alt="Slope Run" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1069/slope-run-game.webp"/>
+<div class="thumbnail-fallback" style="display:none;">SR</div>
+<div class="game-info">
+<h3 class="game-title">Slope Run</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/sprunked">
+<div class="game-thumbnail">
+<img alt="Sprunked" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/973/sprunked-online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">S</div>
+<div class="game-info">
+<h3 class="game-title">Sprunked</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/geometry-arrow-2">
+<div class="game-thumbnail">
+<img alt="Geometry Arrow 2" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1070/Geometry-Arrow-2.webp"/>
+<div class="thumbnail-fallback" style="display:none;">GA</div>
+<div class="game-info">
+<h3 class="game-title">Geometry Arrow 2</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/bus-subway-runner">
+<div class="game-thumbnail">
+<img alt="Bus Subway Runner" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/235/Bus-Subway-Runner-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">BS</div>
+<div class="game-info">
+<h3 class="game-title">Bus Subway Runner</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/geometry-vibes-3d">
+<div class="game-thumbnail">
+<img alt="Geometry Vibes 3D" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1086/Geometry-Vibes-3D.webp"/>
+<div class="thumbnail-fallback" style="display:none;">GV</div>
+<div class="game-info">
+<h3 class="game-title">Geometry Vibes 3D</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/beach-club">
+<div class="game-thumbnail">
+<img alt="Beach Club" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1084/Beach-Club.webp"/>
+<div class="thumbnail-fallback" style="display:none;">BC</div>
+<div class="game-info">
+<h3 class="game-title">Beach Club</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/atv-highway-traffic">
+<div class="game-thumbnail">
+<img alt="ATV Highway Traffic" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/668/ATV-Highway-Traffic.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">AH</div>
+<div class="game-info">
+<h3 class="game-title">ATV Highway Traffic</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/vex-7">
+<div class="game-thumbnail">
+<img alt="Vex 7" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/947/vex-7-online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">V7</div>
+<div class="game-info">
+<h3 class="game-title">Vex 7</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/fast-food-rush">
+<div class="game-thumbnail">
+<img alt="Fast Food Rush" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/979/fast-food-rush.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">FF</div>
+<div class="game-info">
+<h3 class="game-title">Fast Food Rush</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/sprunki">
+<div class="game-thumbnail">
+<img alt="Sprunki" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/911/Sprunki.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">S</div>
+<div class="game-info">
+<h3 class="game-title">Sprunki</h3>
+</div>
+</div>
+</a>
+</div>
+</section>
+<section aria-labelledby="homeCategory7" class="home-category-shelf tone-violet">
+<div class="section-header shelf-header">
+<div>
+<h2 class="section-title" id="homeCategory7">Idle &amp; Clicker</h2>
+<p class="section-note">Idle and clicker games turn taps, upgrades, and small choices into steady progress you can check in short sessions.</p>
+</div>
+<a class="view-all-btn" href="/categories/idle-and-clicker">View Idle &amp; Clicker</a>
+</div>
+<div class="games-grid compact home-games-grid category-home-grid">
+<a class="game-card" href="/games/race-clicker-drift-max">
+<div class="game-thumbnail">
+<img alt="Race Clicker: Drift Max" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/962/Race-Clicker-Drift-Max-Play.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">RC</div>
+<div class="game-info">
+<h3 class="game-title">Race Clicker: Drift Max</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/italian-brainrot-clicker">
+<div class="game-thumbnail">
+<img alt="Italian Brainrot Clicker" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1046/italian_brainrot_clicker_game.webp"/>
+<div class="thumbnail-fallback" style="display:none;">IB</div>
+<div class="game-info">
+<h3 class="game-title">Italian Brainrot Clicker</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/paw-clicker">
+<div class="game-thumbnail">
+<img alt="Paw Clicker" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1077/Paw-Clicker.webp"/>
+<div class="thumbnail-fallback" style="display:none;">PC</div>
+<div class="game-info">
+<h3 class="game-title">Paw Clicker</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/merge-cakes">
+<div class="game-thumbnail">
+<img alt="Merge Cakes" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/743/Merge-Cakes.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">MC</div>
+<div class="game-info">
+<h3 class="game-title">Merge Cakes</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/nova-clicker">
+<div class="game-thumbnail">
+<img alt="Nova Clicker" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/981/Nova-Clicker.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">NC</div>
+<div class="game-info">
+<h3 class="game-title">Nova Clicker</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/epic-mine">
+<div class="game-thumbnail">
+<img alt="Epic Mine" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/927/epic-mine.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">EM</div>
+<div class="game-info">
+<h3 class="game-title">Epic Mine</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/basket-hoop">
+<div class="game-thumbnail">
+<img alt="Basket Hoop" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/843/Basket-Hoop.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">BH</div>
+<div class="game-info">
+<h3 class="game-title">Basket Hoop</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/poop-clicker">
+<div class="game-thumbnail">
+<img alt="Poop Clicker" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/742/Poop-Clicker.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PC</div>
+<div class="game-info">
+<h3 class="game-title">Poop Clicker</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/simple-loot-idle">
+<div class="game-thumbnail">
+<img alt="Simple Loot Idle" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1035/simple-loot-idle.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">SL</div>
+<div class="game-info">
+<h3 class="game-title">Simple Loot Idle</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/idle-breakout">
+<div class="game-thumbnail">
+<img alt="Idle Breakout" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/692/Play-Idle-Breakout.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">IB</div>
+<div class="game-info">
+<h3 class="game-title">Idle Breakout</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/idle-town-billionaire">
+<div class="game-thumbnail">
+<img alt="Idle Town Billionaire" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/934/idle-town-billionaire.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">IT</div>
+<div class="game-info">
+<h3 class="game-title">Idle Town Billionaire</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/idle-farming-business">
+<div class="game-thumbnail">
+<img alt="Idle Farming Business" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/490/Idle-Farming-Business-Game.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">IF</div>
+<div class="game-info">
+<h3 class="game-title">Idle Farming Business</h3>
+</div>
+</div>
+</a>
+</div>
+</section>
+<section aria-labelledby="homeCategory8" class="home-category-shelf tone-sky">
+<div class="section-header shelf-header">
+<div>
+<h2 class="section-title" id="homeCategory8">Beauty</h2>
+<p class="section-note">Beauty games cover makeup, salons, nails, spa routines, makeovers, and creative styling.</p>
+</div>
+<a class="view-all-btn" href="/categories/beauty">View Beauty</a>
+</div>
+<div class="games-grid compact home-games-grid category-home-grid">
+<a class="game-card" href="/games/alien-sky-invasion">
+<div class="game-thumbnail">
+<img alt="Alien Sky Invasion" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/594/Alien-Sky-Invasion.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">AS</div>
+<div class="game-info">
+<h3 class="game-title">Alien Sky Invasion</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/tanks-of-the-galaxy">
+<div class="game-thumbnail">
+<img alt="Tanks of the Galaxy" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1034/tanks-of-the-galaxy-2.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">TO</div>
+<div class="game-info">
+<h3 class="game-title">Tanks of the Galaxy</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/princess-influencer-salon">
+<div class="game-thumbnail">
+<img alt="Princess Influencer Salon" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/485/Princess-Influencer-Salon.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PI</div>
+<div class="game-info">
+<h3 class="game-title">Princess Influencer Salon</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/slope-run">
+<div class="game-thumbnail">
+<img alt="Slope Run" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1069/slope-run-game.webp"/>
+<div class="thumbnail-fallback" style="display:none;">SR</div>
+<div class="game-info">
+<h3 class="game-title">Slope Run</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/weird-dance-on-wednesday">
+<div class="game-thumbnail">
+<img alt="Weird Dance on Wednesday" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/589/Weird-Dance-on-Wednesday.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">WD</div>
+<div class="game-info">
+<h3 class="game-title">Weird Dance on Wednesday</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/fun-party-makeup">
+<div class="game-thumbnail">
+<img alt="Fun Party Makeup" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/723/Fun-Party-Makeup.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">FP</div>
+<div class="game-info">
+<h3 class="game-title">Fun Party Makeup</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/papas-pastaria">
+<div class="game-thumbnail">
+<img alt="Papa's Pastaria" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/829/Papas-Pastaria.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PP</div>
+<div class="game-info">
+<h3 class="game-title">Papa's Pastaria</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/space-waves">
+<div class="game-thumbnail">
+<img alt="Space Waves" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/855/space-waves.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">SW</div>
+<div class="game-info">
+<h3 class="game-title">Space Waves</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/run-away-3">
+<div class="game-thumbnail">
+<img alt="Run Away 3" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/733/Run-Away-3.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">RA</div>
+<div class="game-info">
+<h3 class="game-title">Run Away 3</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/home-makeover-2-hidden-object">
+<div class="game-thumbnail">
+<img alt="Home Makeover 2: Hidden Object" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/415/Home-Makeover-2-Hidden-Object.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">HM</div>
+<div class="game-info">
+<h3 class="game-title">Home Makeover 2: Hidden Object</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/run-3">
+<div class="game-thumbnail">
+<img alt="Run 3" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1056/run-3-online.webp"/>
+<div class="thumbnail-fallback" style="display:none;">R3</div>
+<div class="game-info">
+<h3 class="game-title">Run 3</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/julie-beauty-salon">
+<div class="game-thumbnail">
+<img alt="Julie Beauty Salon" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1011/Julie-Beauty-Salon.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">JB</div>
+<div class="game-info">
+<h3 class="game-title">Julie Beauty Salon</h3>
+</div>
+</div>
+</a>
+</div>
+</section>
+<section aria-labelledby="homeCategory9" class="home-category-shelf tone-green">
+<div class="section-header shelf-header">
+<div>
+<h2 class="section-title" id="homeCategory9">Cooking</h2>
+<p class="section-note">Cooking games are about timing, orders, recipes, and serving customers. They are playful routine games with clear goals and quick feedback.</p>
+</div>
+<a class="view-all-btn" href="/categories/cooking">View Cooking</a>
+</div>
+<div class="games-grid compact home-games-grid category-home-grid">
+<a class="game-card" href="/games/papas-pizzeria">
+<div class="game-thumbnail">
+<img alt="Papa's Pizzeria" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/852/pizzeria.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PP</div>
+<div class="game-info">
+<h3 class="game-title">Papa's Pizzeria</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/papas-sushiria">
+<div class="game-thumbnail">
+<img alt="Papa's Sushiria" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/985/Papas-Sushiria.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PS</div>
+<div class="game-info">
+<h3 class="game-title">Papa's Sushiria</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/papas-hot-doggeria">
+<div class="game-thumbnail">
+<img alt="Papa's Hot Doggeria" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/926/papas-hot-doggeria-online.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PH</div>
+<div class="game-info">
+<h3 class="game-title">Papa's Hot Doggeria</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/papas-cheeseria">
+<div class="game-thumbnail">
+<img alt="Papa's Cheeseria" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/877/papas-cheeseria.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PC</div>
+<div class="game-info">
+<h3 class="game-title">Papa's Cheeseria</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/papas-bakeria">
+<div class="game-thumbnail">
+<img alt="Papa's Bakeria" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/795/Papas-Bakeria.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PB</div>
+<div class="game-info">
+<h3 class="game-title">Papa's Bakeria</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/fast-food-rush">
+<div class="game-thumbnail">
+<img alt="Fast Food Rush" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/979/fast-food-rush.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">FF</div>
+<div class="game-info">
+<h3 class="game-title">Fast Food Rush</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/papas-pastaria">
+<div class="game-thumbnail">
+<img alt="Papa's Pastaria" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/829/Papas-Pastaria.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PP</div>
+<div class="game-info">
+<h3 class="game-title">Papa's Pastaria</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/restaurant-secret-kiss">
+<div class="game-thumbnail">
+<img alt="Restaurant Secret Kiss" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/538/Restaurant-Secret-Kiss.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">RS</div>
+<div class="game-info">
+<h3 class="game-title">Restaurant Secret Kiss</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/papas-scooperia">
+<div class="game-thumbnail">
+<img alt="Papa's Scooperia" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/818/Papas-Scooperia.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PS</div>
+<div class="game-info">
+<h3 class="game-title">Papa's Scooperia</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/papas-taco-mia">
+<div class="game-thumbnail">
+<img alt="Papa's Taco Mia" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1068/papas-taco-mia.webp"/>
+<div class="thumbnail-fallback" style="display:none;">PT</div>
+<div class="game-info">
+<h3 class="game-title">Papa's Taco Mia</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/papas-wingeria">
+<div class="game-thumbnail">
+<img alt="Papa's Wingeria" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/1043/papas_wingeria_game-2.webp"/>
+<div class="thumbnail-fallback" style="display:none;">PW</div>
+<div class="game-info">
+<h3 class="game-title">Papa's Wingeria</h3>
+</div>
+</div>
+</a>
+<a class="game-card" href="/games/papas-burgeria">
+<div class="game-thumbnail">
+<img alt="Papa's Burgeria" decoding="async" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" src="https://www.onlinegames.io/media/posts/889/Papas-Burgeria.jpg"/>
+<div class="thumbnail-fallback" style="display:none;">PB</div>
+<div class="game-info">
+<h3 class="game-title">Papa's Burgeria</h3>
+</div>
+</div>
+</a>
 </div>
 </section>
 </div>
@@ -169,6 +2058,7 @@
 <div class="footer-content container">
 <p>© 2026 BTW game. All rights reserved.</p>
 <ul class="footer-links">
+<li><a href="/">Home</a></li>
 <li><a href="/games">All games</a></li>
 <li><a href="/games?filter=new">New games</a></li>
 <li><a href="/games?filter=featured">Featured</a></li>
@@ -180,79 +2070,10 @@
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('active');
         }
-
-        function getGameUrl(game) {
-            const slug = game.slug || game.id;
-            return `/games/${slug}`;
-        }
-
-        function getFallbackLabel(title) {
-            return String(title || 'Game').split(/\s+/).filter(Boolean).slice(0, 2).map(word => word[0]).join('').toUpperCase() || '▶';
-        }
-
-        function createGameCard(game, showBadge = true, priority = false) {
-            const card = document.createElement('a');
-            card.className = 'game-card';
-            card.href = getGameUrl(game);
-            const thumbnailUrl = game.thumbnail || game.thumbnail_url || '';
-            const title = game.title || 'Untitled game';
-            const badge = (showBadge && game.isNew) ? '<div class="game-badge">NEW</div>' :
-                (showBadge && game.isFeatured) ? '<div class="game-badge featured">FEATURED</div>' : '';
-
-            card.innerHTML = `
-                <div class="game-thumbnail">
-                    ${badge}
-                    ${thumbnailUrl ? `<img src="${thumbnailUrl}" alt="${title}" loading="${priority ? 'eager' : 'lazy'}" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">` : ''}
-                    <div class="thumbnail-fallback" style="${thumbnailUrl ? 'display:none;' : ''}">${getFallbackLabel(title)}</div>
-                    <div class="game-info">
-                        <h3 class="game-title">${title}</h3>
-                    </div>
-                </div>
-            `;
-            return card;
-        }
-
-        async function loadGamesToContainer(games, containerId, showBadge = true) {
-            const container = document.getElementById(containerId);
-            container.innerHTML = '';
-            if (!games.length) {
-                container.innerHTML = '<div class="no-results">No games found. Try another category or search.</div>';
-                return;
-            }
-            games.forEach((game, index) => container.appendChild(createGameCard(game, showBadge, index < 12)));
-        }
-
-        function searchGames() {
-            const query = document.getElementById('searchInput').value.trim();
-            if (query) {
-                window.location.href = `/games?search=${encodeURIComponent(query)}`;
-            } else {
-                window.location.href = '/games';
-            }
-        }
-
         function navSearchGames() {
             const query = document.getElementById('navSearchInput').value.trim();
             window.location.href = query ? `/games?search=${encodeURIComponent(query)}` : '/games';
         }
-
-        async function loadAllGames() {
-            try {
-                const [newGames, popularGames] = await Promise.all([
-                    GAMES_DATA.getNewGames(12),
-                    GAMES_DATA.getPopularGames(18)
-                ]);
-                await loadGamesToContainer(popularGames, 'popularGamesGrid');
-                await loadGamesToContainer(newGames, 'newGamesGrid', false);
-            } catch (error) {
-                console.error('Failed to load games:', error);
-                ['newGamesGrid', 'popularGamesGrid'].forEach(id => {
-                    document.getElementById(id).innerHTML = '<div class="no-results">Failed to load games. Please refresh the page.</div>';
-                });
-            }
-        }
-
-        window.addEventListener('load', loadAllGames);
     </script>
 </body>
 </html>

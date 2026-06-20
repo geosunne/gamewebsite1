@@ -6,6 +6,89 @@ from datetime import date
 from bs4 import BeautifulSoup
 from xml.sax.saxutils import escape
 
+SITE_URL = "https://btwgame.com"
+SITE_IMAGE = f"{SITE_URL}/assets/images/btwlogo.png"
+
+def ensure_meta(soup, attr_name, attr_value, content):
+    tag = soup.find('meta', attrs={attr_name: attr_value})
+    if not tag:
+        tag = soup.new_tag('meta')
+        tag[attr_name] = attr_value
+        soup.head.append(tag)
+    tag['content'] = content
+    return tag
+
+def load_categories():
+    path = 'static_html/categories.json'
+    if not os.path.exists(path):
+        return []
+    with open(path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    return data if isinstance(data, list) else []
+
+def ensure_game_schema_fields(soup, game):
+    """Keep existing generated JSON-LD, but repair critical Game fields."""
+    found_game_schema = False
+    for script in soup.find_all('script', type='application/ld+json'):
+        try:
+            data = json.loads(script.string or '{}')
+        except json.JSONDecodeError:
+            continue
+        if data.get('@type') != 'Game':
+            continue
+        found_game_schema = True
+        data['image'] = game.get('thumbnail_url') or data.get('image') or SITE_IMAGE
+        data['url'] = f"{SITE_URL}/games/{game['slug']}"
+        data['offers'] = {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        }
+        data['gamePlatform'] = data.get('gamePlatform') or "Web Browser"
+        data['operatingSystem'] = data.get('operatingSystem') or "Any"
+        data['isAccessibleForFree'] = True
+        data['publisher'] = data.get('publisher') or {
+            "@type": "Organization",
+            "name": "BTW game",
+            "url": SITE_URL
+        }
+        rating = data.get('aggregateRating')
+        if isinstance(rating, dict) and not (rating.get('reviewCount') or rating.get('ratingCount')):
+            data.pop('aggregateRating', None)
+        script.string = json.dumps(data, indent=2, ensure_ascii=False)
+
+    if found_game_schema:
+        return
+
+    fallback = {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": game['title'],
+        "description": game.get('description', f"Play {game['title']} online for free."),
+        "url": f"{SITE_URL}/games/{game['slug']}",
+        "image": game.get('thumbnail_url') or SITE_IMAGE,
+        "genre": game.get('category_name') or get_category_name(game.get('category_id', 7)),
+        "gamePlatform": "Web Browser",
+        "operatingSystem": "Any",
+        "applicationCategory": "Game",
+        "isAccessibleForFree": True,
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "BTW game",
+            "url": SITE_URL
+        }
+    }
+    script_tag = soup.new_tag('script', type='application/ld+json')
+    script_tag.string = json.dumps(fallback, indent=2, ensure_ascii=False)
+    soup.head.append(script_tag)
+
 def get_category_name(category_id):
     """Get category name by ID"""
     categories = {
@@ -63,6 +146,8 @@ def optimize_index_html():
     twitter_desc = soup.find('meta', attrs={'name': 'twitter:description'})
     if twitter_desc:
         twitter_desc['content'] = "Play 500+ free online games instantly at BTW game. No downloads, no accounts, just quick browser play."
+    ensure_meta(soup, 'property', 'og:image', SITE_IMAGE)
+    ensure_meta(soup, 'name', 'twitter:image', SITE_IMAGE)
 
     # Add structured data for website
     structured_data = {
@@ -140,6 +225,8 @@ def optimize_games_html():
         soup.head.append(canonical)
     else:
         canonical['href'] = 'https://btwgame.com/games'
+    ensure_meta(soup, 'property', 'og:image', SITE_IMAGE)
+    ensure_meta(soup, 'name', 'twitter:image', SITE_IMAGE)
 
     with open('static_html/games.html', 'w', encoding='utf-8') as f:
         f.write(str(soup))
@@ -206,40 +293,10 @@ def optimize_game_pages():
         if og_url:
             og_url['content'] = f"https://btwgame.com/games/{game['slug']}"
 
-        # Add structured data for game
-        structured_data = {
-            "@context": "https://schema.org",
-            "@type": "Game",
-            "name": game['title'],
-            "description": game.get('description', f"Play {game['title']} online for free."),
-            "url": f"https://btwgame.com/games/{game['slug']}",
-            "genre": get_category_name(game.get('category_id', 7)),
-            "gamePlatform": "Web Browser",
-            "operatingSystem": "Any",
-            "applicationCategory": "Game",
-            "isAccessibleForFree": True,
-            "publisher": {
-                "@type": "Organization",
-                "name": "BTW game"
-            }
-        }
-
-        if game.get('rating'):
-            structured_data["aggregateRating"] = {
-                "@type": "AggregateRating",
-                "ratingValue": game['rating'],
-                "bestRating": 5,
-                "worstRating": 1
-            }
-
-        # Add JSON-LD script
-        existing_script = soup.find('script', type='application/ld+json')
-        if existing_script:
-            existing_script.extract()
-
-        script_tag = soup.new_tag('script', type='application/ld+json')
-        script_tag.string = json.dumps(structured_data, indent=2)
-        soup.head.append(script_tag)
+        thumbnail = game.get('thumbnail_url') or SITE_IMAGE
+        ensure_meta(soup, 'property', 'og:image', thumbnail)
+        ensure_meta(soup, 'name', 'twitter:image', thumbnail)
+        ensure_game_schema_fields(soup, game)
 
         # Update canonical URL
         canonical = soup.find('link', attrs={'rel': 'canonical'})
@@ -263,7 +320,9 @@ def generate_xml_sitemap():
     games = data.get('games', []) if isinstance(data, dict) else data
 
     today = date.today().isoformat()
+    categories = load_categories()
     urls = ['https://btwgame.com/', 'https://btwgame.com/games']
+    urls.extend(f"https://btwgame.com/categories/{category['slug']}" for category in categories)
     urls.extend(f"https://btwgame.com/games/{game['slug']}" for game in games)
 
     with open('static_html/sitemap.xml', 'w', encoding='utf-8') as f:

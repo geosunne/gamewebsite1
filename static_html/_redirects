@@ -1,4 +1,10 @@
 /index.html / 308
 /games.html /games 308
+/categories/:slug.html /categories/:slug 308
+/categories/:slug/ /categories/:slug 308
 /games/:slug.html /games/:slug 308
 /games/:slug/ /games/:slug 308
+/games/jailbreak-prison-escapeâ /games/jailbreak-prison-escape 308
+/games/jailbreak-prison-escapeâ.html /games/jailbreak-prison-escape 308
+/games/jailbreak-prison-escape%C3%A2 /games/jailbreak-prison-escape 308
+/games/jailbreak-prison-escape%C3%A2.html /games/jailbreak-prison-escape 308

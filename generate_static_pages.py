@@ -5,12 +5,710 @@ Generate static HTML pages for all games and update all_games.json
 import requests
 import json
 import os
+import shutil
 import time
+import re
 from html import escape as html_escape
-from urllib.parse import quote, urljoin
+from urllib.parse import quote
 from datetime import datetime
 
 BASE_URL = "http://localhost:8000"
+SITE_URL = "https://btwgame.com"
+SITE_NAME = "BTW game"
+SITE_IMAGE = f"{SITE_URL}/assets/images/btwlogo.png"
+
+MOJIBAKE_REPLACEMENTS = {
+    "Â\xa0": " ",
+    "\xa0": " ",
+    "Â": "",
+    "â": "'",
+    "â€™": "'",
+    "â": "'",
+    "â€˜": "'",
+    "â": '"',
+    "â€œ": '"',
+    "â": '"',
+    "â€": '"',
+    "â": "-",
+    "â€”": "-",
+    "â": "-",
+    "â€“": "-",
+    "â": "-",
+    "â€‘": "-",
+    "â¦": "...",
+    "â€¦": "...",
+    "â¢": "-",
+    "â€¢": "-",
+    "â¼": "",
+    "â\x80\x8b": "",
+    "\u200b": "",
+}
+
+CATEGORY_GUIDES = {
+    "Action": {
+        "title": "Free action games",
+        "intro": "Action games on BTW game focus on quick decisions, movement, timing, and short bursts of pressure. Open a game, learn the controls, and jump into a fast browser session.",
+        "sections": [
+            ("Fast movement games", "Choose action games when you want dodging, jumping, chasing, combat, or quick restarts."),
+            ("Good next categories", "Parkour adds more jumping skill, Shooter adds aiming, and Strategy adds planning to the pressure."),
+        ],
+        "faq": [
+            ("What are action games?", "Action games are browser games built around timing, movement, reactions, and active play."),
+            ("Are action games free on BTW game?", "Yes. Action games in this catalog can be played free in the browser without downloads."),
+        ],
+    },
+    "Adventure": {
+        "title": "Free adventure games",
+        "intro": "Adventure games are about exploring, escaping, solving problems, and discovering what happens next. They fit casual players who want a quick journey with browser-friendly controls.",
+        "sections": [
+            ("Escape and story games", "Many adventure games give you a situation to read, a route to find, or a small story beat to finish."),
+            ("Explore more", "Try Parkour for movement challenges, Puzzle for calmer problem solving, or Simulation for slower exploration."),
+        ],
+        "faq": [
+            ("What makes a game an adventure game?", "Adventure games usually give you a place to explore, a problem to solve, or a journey that moves forward."),
+            ("Can adventure games be played quickly?", "Yes. Many adventure games on BTW game are suited to short browser sessions."),
+        ],
+    },
+    "Racing": {
+        "title": "Free racing games",
+        "intro": "Racing games are built for speed, clean turns, stunts, traffic runs, and quick restarts. Pick a car, bike, or vehicle game and play instantly.",
+        "sections": [
+            ("Drift and stunt games", "Drift games reward control, while stunt games add ramps, loops, and open spaces."),
+            ("Vehicle variety", "The racing shelf can include cars, bikes, traffic driving, boat races, and broader driving simulators."),
+        ],
+        "faq": [
+            ("Are racing games only about cars?", "Mostly, but this category also includes bikes, stunt vehicles, traffic games, and simulators."),
+            ("Do racing games need downloads?", "No. BTW game racing games are browser games and open from the game page."),
+        ],
+    },
+    "Puzzle": {
+        "title": "Free puzzle games",
+        "intro": "Puzzle games give you a slower browser break: match pieces, solve patterns, plan moves, and look for the cleanest answer.",
+        "sections": [
+            ("Logic and pattern games", "Puzzle games reward attention and planning more than fast clicks."),
+            ("Short-session play", "Many puzzle games work well for one board, one level, or one quick attempt."),
+        ],
+        "faq": [
+            ("What are good puzzle games for a short break?", "Try games with clear rules, simple boards, and quick restarts."),
+            ("Are puzzle games free on BTW game?", "Yes. The puzzle games listed here are free browser games."),
+        ],
+    },
+    "Sports": {
+        "title": "Free sports games",
+        "intro": "Sports games turn familiar rules into quick browser matches, shots, races, and arcade-style competitions.",
+        "sections": [
+            ("Quick matches", "Many sports games are built around compact rounds, penalty shots, hoops, or short attempts."),
+            ("Competitive feel", "Try Racing for speed, Action for pressure, or Casual for lower-stress play."),
+        ],
+        "faq": [
+            ("What sports games can I play online?", "BTW game includes soccer, basketball, tennis, golf, and arcade sports games."),
+            ("Are sports games quick to start?", "Yes. Most sports games here are designed for instant browser play."),
+        ],
+    },
+    "Strategy": {
+        "title": "Free strategy games",
+        "intro": "Strategy games ask you to plan, react, defend, build, or choose the next move. They are useful when you want more thinking in a browser game.",
+        "sections": [
+            ("Planning games", "Tower defense, battle, board, and management games all reward better decisions over time."),
+            ("Nearby categories", "Puzzle is calmer, Simulation adds systems, and Action keeps the pace higher."),
+        ],
+        "faq": [
+            ("Are strategy games hard for beginners?", "Some are deeper, but many teach through short rounds and visible feedback."),
+            ("Can I play strategy games without an account?", "Yes. These games are presented as free browser games."),
+        ],
+    },
+    "Simulation": {
+        "title": "Free simulation games",
+        "intro": "Simulation games let you try a role, vehicle, job, or small world. They are good when you want control and discovery instead of constant pressure.",
+        "sections": [
+            ("Role and job games", "Try a task, learn the loop, and improve over time with familiar goals."),
+            ("World and vehicle simulators", "Explore, test controls, and create your own small goals."),
+        ],
+        "faq": [
+            ("Are simulation games relaxing?", "Many are, though some include action or timed challenges."),
+            ("What categories are similar?", "Racing, Adventure, and Strategy are strong next shelves."),
+        ],
+    },
+    "Casual": {
+        "title": "Free casual games",
+        "intro": "Casual games are simple to open, easy to understand, and good for short breaks at home, school, or between tasks.",
+        "sections": [
+            ("Quick break games", "These games get to the point quickly with simple rules and visible goals."),
+            ("Light challenge", "Casual does not always mean easy; it means the game is easy to enter and retry."),
+        ],
+        "faq": [
+            ("What is a casual game?", "A casual game is easy to start, simple to understand, and suited to shorter play sessions."),
+            ("Are casual games good for students?", "Many are short and browser-friendly, but players should choose games that fit their setting and rules."),
+        ],
+    },
+    "Clicker": {
+        "title": "Free clicker games",
+        "intro": "Clicker games turn small actions into visible progress. Click, upgrade, unlock, and watch the numbers or tools grow.",
+        "sections": [
+            ("Upgrade loops", "Most clicker games are about choosing what to improve next."),
+            ("Idle-friendly play", "Some clicker games are easy to check between other activities."),
+        ],
+        "faq": [
+            ("What is a clicker game?", "A clicker game uses repeated taps or clicks to earn progress and unlock upgrades."),
+            ("What is similar to clicker games?", "Casual, Simulation, and Strategy games often have related progress loops."),
+        ],
+    },
+    "Cooking": {
+        "title": "Free cooking games",
+        "intro": "Cooking games are about timing, orders, recipes, and serving customers. They are playful routine games with clear goals and quick feedback.",
+        "sections": [
+            ("Restaurant routines", "Take orders, prepare food, and keep the line moving."),
+            ("Low-pressure progress", "Cooking games are easy to understand and often reward steady improvement."),
+        ],
+        "faq": [
+            ("Are cooking games good for kids?", "Many use clear routines and friendly goals, but families should still choose age-appropriate games."),
+            ("What categories are similar?", "Casual, Simulation, and Puzzle are close fits."),
+        ],
+    },
+    "Parkour": {
+        "title": "Free parkour games",
+        "intro": "Parkour games focus on jumps, timing, routes, obstacles, and retries. They are ideal when you want movement skill without a long tutorial.",
+        "sections": [
+            ("Obby and obstacle games", "Fail, restart, and improve the route through visible platforms and hazards."),
+            ("Speed and rhythm", "Some parkour games feel closer to runner or rhythm games where timing matters most."),
+        ],
+        "faq": [
+            ("Are parkour games hard?", "They can be, but quick restarts make them easy to practice."),
+            ("What categories are close to parkour?", "Action, Adventure, and Casual all overlap with parkour games."),
+        ],
+    },
+    "Shooter": {
+        "title": "Free shooter games",
+        "intro": "Shooter games focus on aim, awareness, and fast reactions. The best first picks have clear controls and quick rounds.",
+        "sections": [
+            ("Arena and battle games", "Arena shooters reward positioning, awareness, and quick decisions."),
+            ("Target games", "Sniper and target games slow the pace and focus on accuracy."),
+        ],
+        "faq": [
+            ("Are shooter games suitable for every player?", "No. Some include combat themes, so younger players should choose with adult guidance."),
+            ("What categories are close to shooter games?", "Action, Strategy, and io Games are nearby categories."),
+        ],
+    },
+    "io Games": {
+        "title": "Free io games",
+        "intro": "Io games are quick competitive browser games with simple rules and fast restarts. They work well for short sessions and easy sharing.",
+        "sections": [
+            ("Fast competitive rounds", "Move, collect, survive, claim space, or compete with simple controls."),
+            ("Quick retries", "The restart loop is short, so these games are easy to sample."),
+        ],
+        "faq": [
+            ("What does io games mean?", "On BTW game it means fast browser games with simple rules, quick rounds, and competitive energy."),
+            ("What categories are close to io games?", "Action, Shooter, and Casual are close fits."),
+        ],
+    },
+}
+
+CATEGORY_ORDER = [
+    "Action", "Adventure", "Arcade", "Puzzle", "Match & Merge", "Mahjong & Card",
+    "Word & Trivia", "Racing", "Driving", "Parking", "Sports", "Soccer",
+    "Basketball", "Shooter", "Sniper", "Horror", "Survival", "Parkour",
+    "Obby", "Platformer", "Runner", "Simulation", "Management",
+    "Idle & Clicker", "Cooking", "Dress Up", "Beauty", "Two Player",
+    "Multiplayer", "io Games", "Strategy", "Tower Defense", "Clicker", "Casual"
+]
+
+RAIL_CATEGORIES = ["Action", "Puzzle", "Racing", "Shooter", "Parkour", "Sports"]
+MIN_PRIMARY_CATEGORY_GAMES = 10
+THIN_CATEGORY_FALLBACKS = {
+    "Arcade": "Casual",
+    "Parking": "Driving",
+    "Multiplayer": "io Games",
+}
+HOME_CATEGORY_LIMIT = 10
+
+CATEGORY_GUIDES.update({
+    "Arcade": {
+        "title": "Free arcade games",
+        "intro": "Arcade games are quick to understand, fast to replay, and built around simple goals that feel good in short browser sessions.",
+        "sections": [
+            ("Instant-play games", "Arcade games work well when you want a clear objective, quick feedback, and a short round."),
+            ("Classic energy", "Try Action for more pressure, Puzzle for more thinking, or Runner for rhythm and timing."),
+        ],
+        "faq": [
+            ("What are arcade games?", "Arcade games are easy-to-start games with compact rules, quick rounds, and score-focused play."),
+            ("Do arcade games need downloads?", "No. The arcade games on BTW game run in the browser."),
+        ],
+    },
+    "Match & Merge": {
+        "title": "Free match and merge games",
+        "intro": "Match and merge games are about spotting patterns, combining pieces, clearing boards, and building satisfying chains.",
+        "sections": [
+            ("Match, sort, and connect", "Look for tiles, bubbles, fruit, jewels, or blocks that can be matched, merged, sorted, or linked."),
+            ("Relaxed puzzle loops", "These games are good for players who want puzzle structure without heavy controls."),
+        ],
+        "faq": [
+            ("What are match and merge games?", "They are puzzle games where you combine, match, sort, or connect items to clear goals."),
+            ("Are match games good for short breaks?", "Yes. Most boards and levels are compact enough for quick browser sessions."),
+        ],
+    },
+    "Mahjong & Card": {
+        "title": "Free mahjong and card games",
+        "intro": "Mahjong, solitaire, chess, and card-style games give you slower decisions, clear boards, and familiar rules in the browser.",
+        "sections": [
+            ("Board and card classics", "This category groups tile matching, solitaire, mahjong, chess, and similar table games."),
+            ("Calmer play", "Try Puzzle for broader logic games or Strategy for deeper planning."),
+        ],
+        "faq": [
+            ("What games are in this category?", "Mahjong, solitaire, chess, card games, and related board-style browser games."),
+            ("Can I play mahjong and card games free?", "Yes. Open a game page and play directly in your browser."),
+        ],
+    },
+    "Word & Trivia": {
+        "title": "Free word and trivia games",
+        "intro": "Word and trivia games focus on letters, clues, questions, memory, and quick knowledge checks.",
+        "sections": [
+            ("Think with words", "Look for spelling, word building, quiz, and guessing games when you want a lighter mental challenge."),
+            ("Nearby shelves", "Puzzle and Casual are good next categories if you want similar short-session play."),
+        ],
+        "faq": [
+            ("What are word and trivia games?", "They are browser games based on words, clues, questions, guessing, or knowledge."),
+            ("Are word games free here?", "Yes. These games can be played free on BTW game."),
+        ],
+    },
+    "Driving": {
+        "title": "Free driving games",
+        "intro": "Driving games cover cars, trucks, buses, bikes, taxis, traffic runs, drifting, and open vehicle challenges.",
+        "sections": [
+            ("Vehicle control", "Choose driving games when you want steering, braking, traffic, stunt routes, or vehicle handling."),
+            ("More speed", "Try Racing for competition or Parking for tighter precision challenges."),
+        ],
+        "faq": [
+            ("Are driving games different from racing games?", "Driving games focus on vehicles and control, while racing games focus more on speed and competition."),
+            ("Can I play driving games without downloads?", "Yes. BTW game driving games open in the browser."),
+        ],
+    },
+    "Parking": {
+        "title": "Free parking games",
+        "intro": "Parking games are precise driving challenges where turns, timing, spacing, and careful movement matter.",
+        "sections": [
+            ("Precision driving", "Park, reverse, avoid obstacles, and learn the route before trying to move faster."),
+            ("Related driving games", "Try Driving for broader vehicle play or Racing when you want speed."),
+        ],
+        "faq": [
+            ("What are parking games?", "Parking games are vehicle games focused on careful movement and positioning."),
+            ("Are parking games hard?", "Some are tricky, but quick restarts make them easy to practice."),
+        ],
+    },
+    "Soccer": {
+        "title": "Free soccer games",
+        "intro": "Soccer games turn shots, passes, penalties, tournaments, and arcade matches into fast browser play.",
+        "sections": [
+            ("Quick football matches", "Try penalty kicks, head soccer, random soccer, and short match formats."),
+            ("More sports", "Basketball and Sports offer nearby competitive games."),
+        ],
+        "faq": [
+            ("Can I play soccer games online free?", "Yes. Soccer games on BTW game are free browser games."),
+            ("Are soccer games quick to start?", "Most soccer games here start fast and fit short sessions."),
+        ],
+    },
+    "Basketball": {
+        "title": "Free basketball games",
+        "intro": "Basketball games focus on shots, hoops, timing, dunks, arcade matches, and quick scoring challenges.",
+        "sections": [
+            ("Hoops and timing", "Use basketball games when you want short skill attempts or compact competitive matches."),
+            ("Nearby games", "Try Sports for more events or Two Player for local matchups."),
+        ],
+        "faq": [
+            ("What basketball games can I play?", "BTW game includes hoop, dunk, and arcade basketball browser games."),
+            ("Do basketball games need installs?", "No. They run directly in the browser."),
+        ],
+    },
+    "Sniper": {
+        "title": "Free sniper games",
+        "intro": "Sniper games slow shooter play down into aim, timing, target selection, and accuracy challenges.",
+        "sections": [
+            ("Aim carefully", "Sniper games reward patience, clean shots, and reading the scene before acting."),
+            ("More shooting", "Try Shooter for broader arena, action, and combat games."),
+        ],
+        "faq": [
+            ("What are sniper games?", "Sniper games are shooting games focused on precision and target accuracy."),
+            ("Are sniper games suitable for all players?", "Some include combat themes, so younger players should choose with adult guidance."),
+        ],
+    },
+    "Horror": {
+        "title": "Free horror games",
+        "intro": "Horror games use suspense, monsters, escape routes, haunted spaces, and tense moments for players who want a scarier challenge.",
+        "sections": [
+            ("Escape and survive", "Many horror games ask you to avoid danger, explore rooms, and react quickly."),
+            ("Choose carefully", "Try Adventure for lighter exploration or Survival for pressure without as much scare focus."),
+        ],
+        "faq": [
+            ("Are horror games for kids?", "Not always. Horror games may include scary themes, so families should choose carefully."),
+            ("Can horror games be played in the browser?", "Yes. The horror games listed here are browser games."),
+        ],
+    },
+    "Survival": {
+        "title": "Free survival games",
+        "intro": "Survival games focus on staying alive, adapting, fighting hazards, collecting resources, or outlasting enemies.",
+        "sections": [
+            ("Stay alive", "Watch your surroundings, learn threats, and use each attempt to last longer."),
+            ("Related pressure", "Try Action, Shooter, or Strategy for similar challenge from different angles."),
+        ],
+        "faq": [
+            ("What are survival games?", "Survival games ask players to stay alive against hazards, enemies, or resource pressure."),
+            ("Are survival games free on BTW game?", "Yes. These games can be played free in the browser."),
+        ],
+    },
+    "Obby": {
+        "title": "Free obby games",
+        "intro": "Obby games are obstacle-course challenges built around jumps, routes, timing, and frequent retries.",
+        "sections": [
+            ("Obstacle courses", "Jump across platforms, avoid hazards, and improve each route through practice."),
+            ("Similar movement games", "Try Parkour, Platformer, and Runner when you want more movement-focused games."),
+        ],
+        "faq": [
+            ("What is an obby game?", "An obby is an obstacle-course game focused on jumps, timing, and platform routes."),
+            ("Are obby games good for quick play?", "Yes. Short attempts and quick restarts make them easy to sample."),
+        ],
+    },
+    "Platformer": {
+        "title": "Free platformer games",
+        "intro": "Platformer games focus on jumping, routes, hazards, timing, and moving through stages with readable controls.",
+        "sections": [
+            ("Jump and move", "Platformer games reward timing, spacing, and learning the level layout."),
+            ("Nearby categories", "Parkour and Runner are good choices when you want faster movement challenges."),
+        ],
+        "faq": [
+            ("What are platformer games?", "Platformer games ask you to move across platforms, avoid hazards, and reach goals."),
+            ("Can platformer games be played free?", "Yes. Platformer games here are free browser games."),
+        ],
+    },
+    "Runner": {
+        "title": "Free runner games",
+        "intro": "Runner games are built around movement, dodging, collecting, and quick reactions through a forward-moving challenge.",
+        "sections": [
+            ("Endless movement", "Runner games often use lanes, jumps, slides, turns, and quick restarts."),
+            ("More timing games", "Try Parkour, Platformer, or Arcade for related timing challenges."),
+        ],
+        "faq": [
+            ("What are runner games?", "Runner games focus on moving forward, avoiding obstacles, and lasting as long as possible."),
+            ("Are runner games easy to start?", "Yes. Most runner games use simple controls and short rounds."),
+        ],
+    },
+    "Management": {
+        "title": "Free management games",
+        "intro": "Management games are about running systems, upgrading businesses, serving customers, organizing resources, and making better choices over time.",
+        "sections": [
+            ("Build and improve", "Manage shops, farms, restaurants, cities, teams, or other small systems."),
+            ("Related progress games", "Try Simulation for role play or Idle & Clicker for upgrade loops."),
+        ],
+        "faq": [
+            ("What are management games?", "Management games ask you to organize resources, upgrades, customers, or systems."),
+            ("Are management games relaxing?", "Many are, though some include timers and busy routines."),
+        ],
+    },
+    "Idle & Clicker": {
+        "title": "Free idle and clicker games",
+        "intro": "Idle and clicker games turn taps, upgrades, and small choices into steady progress you can check in short sessions.",
+        "sections": [
+            ("Upgrade loops", "Click, earn, improve, unlock, and watch the game grow over time."),
+            ("Simple progress", "These games are good when you want low-pressure goals and visible rewards."),
+        ],
+        "faq": [
+            ("What are idle and clicker games?", "They use repeated taps, upgrades, and automatic progress loops."),
+            ("Can I play clicker games quickly?", "Yes. They are built for short checks and easy restarts."),
+        ],
+    },
+    "Dress Up": {
+        "title": "Free dress up games",
+        "intro": "Dress up games focus on outfits, styling, characters, colors, and playful fashion choices.",
+        "sections": [
+            ("Style characters", "Choose clothes, looks, themes, and accessories in simple browser games."),
+            ("More creative play", "Try Beauty for salon and makeup games or Casual for lighter quick games."),
+        ],
+        "faq": [
+            ("What are dress up games?", "Dress up games let players style characters with outfits, colors, and accessories."),
+            ("Are dress up games free?", "Yes. Dress up games here are free browser games."),
+        ],
+    },
+    "Beauty": {
+        "title": "Free beauty games",
+        "intro": "Beauty games cover makeup, salons, nails, spa routines, makeovers, and creative styling.",
+        "sections": [
+            ("Salon routines", "Try makeup, nails, hair, skin care, and makeover challenges."),
+            ("Related creative games", "Dress Up and Cooking are nearby casual categories with clear routines."),
+        ],
+        "faq": [
+            ("What are beauty games?", "Beauty games focus on makeup, salons, nails, makeovers, and styling routines."),
+            ("Can beauty games be played online?", "Yes. They run directly in the browser."),
+        ],
+    },
+    "Two Player": {
+        "title": "Free two player games",
+        "intro": "Two player games are made for shared play, local duels, quick matches, and competitive rounds with simple controls.",
+        "sections": [
+            ("Play together", "Look for duels, random sports, fighting, racing, and party games."),
+            ("More competition", "Multiplayer and io Games offer nearby online-style competition."),
+        ],
+        "faq": [
+            ("What are two player games?", "Two player games are designed for two people to play or compete in the same game."),
+            ("Are two player games free?", "Yes. The two player games here are free browser games."),
+        ],
+    },
+    "Multiplayer": {
+        "title": "Free multiplayer games",
+        "intro": "Multiplayer games focus on shared competition, online arenas, co-op moments, and fast browser rounds.",
+        "sections": [
+            ("Shared competition", "Compete, cooperate, survive, or score against other players."),
+            ("Nearby categories", "io Games, Shooter, and Two Player all overlap with multiplayer play."),
+        ],
+        "faq": [
+            ("What are multiplayer games?", "Multiplayer games are built around playing with or against other players."),
+            ("Do multiplayer games need downloads?", "No. The games listed here open from the browser."),
+        ],
+    },
+    "Tower Defense": {
+        "title": "Free tower defense games",
+        "intro": "Tower defense games ask you to place, upgrade, and plan defenses against waves of enemies or hazards.",
+        "sections": [
+            ("Plan your defense", "Choose where to build, when to upgrade, and how to stop each wave."),
+            ("More planning games", "Try Strategy for broader planning or Action for faster pressure."),
+        ],
+        "faq": [
+            ("What are tower defense games?", "Tower defense games involve building defenses and stopping waves of enemies."),
+            ("Are tower defense games strategy games?", "Yes. They are a focused type of strategy game."),
+        ],
+    },
+})
+
+def clean_text(value):
+    """Clean known mojibake patterns while preserving normal game names."""
+    if value is None:
+        return value
+    text = str(value)
+    for bad, good in MOJIBAKE_REPLACEMENTS.items():
+        text = text.replace(bad, good)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+def clean_value(value):
+    """Recursively clean strings inside common JSON-like values."""
+    if isinstance(value, str):
+        return clean_text(value)
+    if isinstance(value, list):
+        return [clean_value(item) for item in value]
+    if isinstance(value, dict):
+        return {clean_text(key): clean_value(item) for key, item in value.items()}
+    return value
+
+def slugify(value):
+    text = clean_text(value or "")
+    text = text.lower().replace("&", " and ")
+    text = re.sub(r"[^a-z0-9]+", "-", text)
+    text = re.sub(r"-+", "-", text).strip("-")
+    return text or "games"
+
+def normalize_slug(value):
+    return slugify(value)
+
+def category_text(game_data):
+    values = [
+        game_data.get('slug'),
+        game_data.get('title'),
+        game_data.get('description'),
+        game_data.get('source_page_title'),
+    ]
+    values.extend(game_data.get('tags') or [])
+    return clean_text(" ".join(str(value) for value in values if value)).lower()
+
+def has_any(text, keywords):
+    return any(keyword in text for keyword in keywords)
+
+def has_word(text, words):
+    return any(re.search(rf"(^|[^a-z0-9]){re.escape(word)}([^a-z0-9]|$)", text) for word in words)
+
+def classify_game_category(game_data):
+    """Choose one primary category from title, slug, tags, and description."""
+    text = category_text(game_data)
+    slug = normalize_slug(game_data.get('slug') or game_data.get('id') or game_data.get('title'))
+    title = clean_text(game_data.get('title') or '').lower()
+
+    # Strong series and brand rules first.
+    if has_any(text, ["papa's", "papas-", "pizzeria", "burgeria", "freezeria", "donuteria", "cupcakeria", "sushiria", "bakeria", "wingeria", "taco mia"]):
+        return "Cooking"
+    if has_any(text, ["five nights", "fnaf", "freddy", "granny", "backrooms", "poppy", "haunted", "horror", "scary", "nightmare", "dreader"]):
+        return "Horror"
+    if has_any(text, ["fireboy", "watergirl", "vex-", "vex ", "fancy pants", "electric man"]):
+        return "Platformer"
+    if has_any(text, ["flappy bird", "pacman", "pac-man"]):
+        return "Arcade"
+
+    # Precise subcategories before broad genres.
+    if has_any(text, ["tower defense", "tower defence", "bloons", "defense war", "defence war", "backpack block td"]):
+        return "Tower Defense"
+    if has_any(text, ["sniper", "marksman", "sharpshooter", "sharp shooter"]):
+        return "Sniper"
+    if has_any(text, ["parking", "park me", "car out"]) and not has_any(text, ["parkour", "park "]):
+        return "Parking"
+    if has_any(text, ["mahjong", "solitaire", "freecell", "blackjack", "yatzy", "ludo", "chess", "card", "cards", "billiards", "pool elite"]):
+        return "Mahjong & Card"
+    if has_word(text, ["word", "words", "trivia", "quiz", "guess", "scramble", "knowledge", "crossword"]):
+        return "Word & Trivia"
+    if has_any(text, ["idle", "clicker", "tycoon", "incremental", "tap tap", "spacebar clicker"]):
+        return "Idle & Clicker"
+    if has_any(text, ["makeup", "beauty", "salon", "nail", "spa", "makeover", "skincare", "cosmetics", "barber"]):
+        return "Beauty"
+    if has_any(text, ["dress up", "dress-up", "fashion", "outfit", "wardrobe", "princess dress", "dollhouse", "avatar maker"]):
+        return "Dress Up"
+    if has_any(text, ["2 player", "two player", "two-player", "duel", "random", "with friends", "party game", "local multiplayer"]):
+        return "Two Player"
+    if has_any(text, ["obby", "obstacle course"]):
+        return "Obby"
+    if has_any(text, ["parkour", "only up", "platform parkour"]):
+        return "Parkour"
+    if has_any(text, ["runner", "subway", "tomb runner", "run 3", "run-3", "run away", "endless run", "running game", "snow rider", "slope run", "slope-"]):
+        return "Runner"
+    if has_any(text, ["platformer", "platform game", "jumping platform", "geometry dash", "geometry jump", "geometry arrow", "red ball", "jump jump"]):
+        return "Platformer"
+    if has_any(text, ["restaurant", "cooking", "cook ", "kitchen", "pizza", "burger", "food festival", "donut", "ice cream", "bbq"]):
+        return "Cooking"
+    if has_any(text, ["management", "manage", "supermarket", "hotel", "hospital", "shop", "mall", "business", "farm", "organizer", "organize", "storage", "cash tycoon"]):
+        return "Management"
+    if has_any(text, ["survival", "survive", "survivor", "raft", "doomsday", "apocalypse"]):
+        return "Survival"
+
+    # Vehicle categories.
+    if has_any(text, ["drift", "racing", "race ", "race-", "grand prix", "rally", "speed racing"]):
+        return "Racing"
+    if has_word(text, ["car", "cars", "truck", "bus", "taxi", "bike", "motor", "moto", "vehicle", "driving", "drive", "driver", "traffic", "highway", "boat"]) or has_any(slug, ["train-simulator", "airplane", "plane-", "-plane"]):
+        return "Driving"
+
+    # Sports subcategories.
+    if has_any(text, ["soccer", "football", "penalty", "head soccer"]):
+        return "Soccer"
+    if has_any(text, ["basketball", "basket ", "hoop", "dunk"]):
+        return "Basketball"
+    if has_any(text, ["golf", "tennis", "rugby", "ski ", "ski-", "sport", "sports", "bowling", "ping pong", "tabletennis"]):
+        return "Sports"
+
+    # Combat and competitive categories.
+    if has_any(text, ["shoot", "shooter", "gun", "fps", "tank", "bullet", "weapon", "aim", "archery", "archer"]):
+        return "Shooter"
+    if ".io" in title or slug.endswith("-io") or has_any(text, [" io game", "io games", "arena io", "multiplayer arena"]):
+        return "io Games"
+    if has_any(text, ["multiplayer", "online battle", "pvp", "co-op", "co op"]):
+        return "Multiplayer"
+    if has_any(text, ["strategy", "battle simulator", "war ", "wars", "kingdom", "empire", "legion", "chess classic"]):
+        return "Strategy"
+    if has_any(text, ["action", "fight", "fighter", "combat", "battle", "warrior", "ninja", "hero", "monster", "zombie", "attack", "assault"]):
+        return "Action"
+
+    # Puzzle families after more specific cards/word/match cases.
+    if has_any(text, ["match", "merge", "bubble", "tile", "jewel", "candy", "fruit", "sort", "connect", "link", "2048", "water sort", "block puzzle", "tetris", "blast", "pop stone"]):
+        return "Match & Merge"
+    if has_any(text, ["puzzle", "logic", "brain", "solve", "hidden", "find", "draw", "pin ", "screw", "rope", "line", "maze", "sudoku"]):
+        return "Puzzle"
+    if has_any(text, ["simulation", "simulator", "sim ", "life", "doctor", "pet", "animal", "craft", "building", "world"]):
+        return "Simulation"
+    if has_any(text, ["arcade", "classic", "retro", "pixel", "snake", "pac-man", "flappy"]):
+        return "Arcade"
+
+    current = clean_text(game_data.get('category_name') or game_data.get('category') or '')
+    if current in CATEGORY_ORDER:
+        return current
+    return "Casual"
+
+def apply_primary_category_fallbacks(games):
+    counts = {}
+    for game in games:
+        category = game.get('category_name')
+        if category:
+            counts[category] = counts.get(category, 0) + 1
+    for game in games:
+        category = game.get('category_name')
+        fallback = THIN_CATEGORY_FALLBACKS.get(category)
+        if fallback and counts.get(category, 0) < MIN_PRIMARY_CATEGORY_GAMES:
+            game['thin_category_name'] = category
+            game['category_name'] = fallback
+    return games
+
+def normalize_game_data(game_data):
+    cleaned = clean_value(game_data.copy())
+    original_slug = cleaned.get('slug') or cleaned.get('id') or cleaned.get('title')
+    cleaned['original_slug'] = clean_text(original_slug)
+    cleaned['slug'] = normalize_slug(original_slug)
+    if cleaned.get('title'):
+        cleaned['title'] = clean_text(cleaned['title']).replace('JailBreak', 'Jailbreak')
+    if not cleaned.get('category_name') and cleaned.get('category'):
+        cleaned['category_name'] = cleaned.get('category')
+    previous_category = clean_text(cleaned.get('category_name') or 'Casual')
+    cleaned['previous_category_name'] = previous_category
+    cleaned['category_name'] = classify_game_category(cleaned)
+    return cleaned
+
+def truncate(text, length=160):
+    text = clean_text(text or "")
+    if len(text) <= length:
+        return text
+    return text[:length - 3].rstrip() + "..."
+
+def category_slug(category):
+    return slugify(category)
+
+def category_url(category):
+    return f"/categories/{category_slug(category)}"
+
+def category_full_url(category):
+    return f"{SITE_URL}{category_url(category)}"
+
+def game_url(slug):
+    return f"/games/{slug}"
+
+def game_full_url(slug):
+    return f"{SITE_URL}/games/{slug}"
+
+def get_fallback_label(title):
+    words = [word for word in re.split(r"\s+", clean_text(title or "")) if word]
+    return ''.join(word[0] for word in words[:2]).upper() or 'PLAY'
+
+def matches_category(game, category):
+    if category == "all":
+        return True
+    labels = [game.get('category_name'), game.get('category')]
+    labels.extend(game.get('standardized_tags') or [])
+    labels.extend(game.get('tags') or [])
+    normalized = {clean_text(label).lower() for label in labels if label}
+    return clean_text(category).lower() in normalized
+
+def get_all_categories(games):
+    primary_counts = {}
+    for game in games:
+        category = game.get('category_name')
+        if category:
+            primary_counts[category] = primary_counts.get(category, 0) + 1
+    found = []
+    for category in CATEGORY_ORDER:
+        if primary_counts.get(category, 0) < MIN_PRIMARY_CATEGORY_GAMES:
+            continue
+        if any(matches_category(game, category) for game in games):
+            found.append(category)
+    primary = sorted({game.get('category_name') for game in games if game.get('category_name')})
+    for category in primary:
+        if primary_counts.get(category, 0) >= MIN_PRIMARY_CATEGORY_GAMES and category not in found:
+            found.append(category)
+    return found
+
+def category_guide(category):
+    if category in CATEGORY_GUIDES:
+        return CATEGORY_GUIDES[category]
+    title = clean_text(category or "Games")
+    return {
+        "title": f"Free {title.lower()} games",
+        "intro": f"Browse free {title.lower()} games on BTW game. Pick a browser game, open the page, and start playing without downloads.",
+        "sections": [
+            (f"Play {title.lower()} games online", f"This category collects quick {title.lower()} games for casual browser play."),
+            ("Find your next game", "Use the game cards below to compare titles, categories, ratings, and quick-play options."),
+        ],
+        "faq": [
+            (f"Are {title.lower()} games free?", f"Yes. The {title.lower()} games listed here can be played free in the browser."),
+            ("Do I need to download anything?", "No. Open a game page and play directly in your browser."),
+        ],
+    }
 
 def fetch_game_data_from_db(slug):
     """Fetch game data directly from database"""
@@ -98,9 +796,9 @@ def fetch_related_games(category_name, exclude_slug, limit=6):
 
 def standardize_game_tags(game_data):
     """Generate standardized tags based on game data"""
-    title = game_data.get('title', '').lower()
-    description = game_data.get('description', '').lower()
-    category_name = game_data.get('category_name', '').lower()
+    title = clean_text(game_data.get('title', '')).lower()
+    description = clean_text(game_data.get('description', '')).lower()
+    category_name = clean_text(game_data.get('category_name', '')).lower()
     iframe_url = game_data.get('iframe_url', '') or game_data.get('game_url', '')
 
     tags = []
@@ -118,17 +816,36 @@ def standardize_game_tags(game_data):
         'Action': ['action', 'fight', 'combat', 'battle', 'war', 'shoot', 'gun', 'zombie', 'adventure'],
         'Strategy': ['strategy', 'tower defense', 'defense', 'build', 'manage', 'city', 'empire'],
         'Puzzle': ['puzzle', 'brain', 'logic', 'solve', 'match', 'tetris', 'block'],
+        'Match & Merge': ['match', 'merge', 'bubble', 'tile', 'jewel', 'candy', 'fruit', 'sort', 'connect', '2048'],
+        'Mahjong & Card': ['mahjong', 'solitaire', 'card', 'cards', 'chess', 'blackjack', 'yatzy', 'ludo'],
+        'Word & Trivia': ['word', 'trivia', 'quiz', 'guess', 'crossword', 'scramble'],
         'Racing': ['race', 'racing', 'car', 'drive', 'speed', 'drift', 'bike', 'motorcycle'],
+        'Driving': ['car', 'truck', 'bus', 'taxi', 'vehicle', 'traffic', 'highway', 'driving'],
+        'Parking': ['parking', 'park me'],
         'Sports': ['sport', 'football', 'soccer', 'basketball', 'tennis', 'golf', 'baseball'],
+        'Soccer': ['soccer', 'football', 'penalty'],
+        'Basketball': ['basketball', 'basket', 'hoop', 'dunk'],
         'Arcade': ['arcade', 'classic', 'retro', 'pixel', 'old school'],
-        'Platform': ['platform', 'jump', 'run', 'climb', 'parkour'],
+        'Platformer': ['platform', 'platformer', 'jump'],
+        'Parkour': ['parkour', 'only up'],
+        'Obby': ['obby', 'obstacle course'],
+        'Runner': ['runner', 'endless run', 'subway', 'run', 'dodge'],
         'Simulation': ['simulation', 'sim', 'life', 'city', 'farm', 'cooking', 'restaurant'],
+        'Management': ['manage', 'management', 'business', 'shop', 'hotel', 'supermarket', 'organize'],
         'RPG': ['rpg', 'role', 'character', 'level up', 'quest', 'adventure'],
         'Casual': ['casual', 'relaxing', 'simple', 'easy', 'family'],
         'Multiplayer': ['multiplayer', 'online', 'vs', 'versus', 'pvp', 'co-op'],
-        'Clicker': ['clicker', 'click', 'idle', 'incremental', 'tap'],
+        'Two Player': ['2 player', 'two player', 'duel', 'with friends'],
+        'Idle & Clicker': ['clicker', 'click', 'idle', 'incremental', 'tap'],
+        'Cooking': ['cooking', 'cook', 'restaurant', 'pizza', 'burger', 'kitchen'],
+        'Dress Up': ['dress up', 'fashion', 'outfit', 'wardrobe', 'doll'],
+        'Beauty': ['makeup', 'beauty', 'salon', 'nail', 'spa', 'makeover'],
         'Educational': ['educational', 'learn', 'math', 'quiz', 'knowledge'],
         'Horror': ['horror', 'scary', 'fear', 'nightmare', 'ghost', 'monster'],
+        'Survival': ['survival', 'survive', 'survivor', 'raft', 'apocalypse'],
+        'Shooter': ['shooter', 'shoot', 'gun', 'fps', 'tank', 'bullet', 'weapon'],
+        'Sniper': ['sniper', 'marksman'],
+        'Tower Defense': ['tower defense', 'defense', 'defence'],
         'Rhythm': ['rhythm', 'music', 'beat', 'dance', 'sound'],
         'Card': ['card', 'poker', 'blackjack', 'solitaire', 'deck']
     }
@@ -156,53 +873,716 @@ def standardize_game_tags(game_data):
     if not any(tag in ['HTML5', 'Unity'] for tag in tags):
         tags.insert(0, 'HTML5')
 
+    if category_name:
+        canonical_category = next((category for category in CATEGORY_ORDER if category.lower() == category_name), None)
+        if canonical_category:
+            tags.append(canonical_category)
+
+    tags = list(dict.fromkeys(tags))
+
     if not any(tag in genre_keywords.keys() for tag in tags):
         if 'game' in content_text:
             tags.append('Casual')
         else:
             tags.append('Action')
 
-    return tags[:6]  # Limit to 6 tags maximum
+    return tags[:8]  # Limit to 8 tags maximum
+
+def render_game_card(game, priority=False, extra_class="", show_badge=True):
+    title = clean_text(game.get('title') or 'Untitled game')
+    slug = normalize_slug(game.get('slug') or game.get('id') or title)
+    thumbnail = clean_text(game.get('thumbnail_url') or game.get('thumbnail') or '')
+    badge = ''
+    if show_badge and (game.get('is_new') or game.get('isNew')):
+        badge = '<div class="game-badge">NEW</div>'
+    elif show_badge and (game.get('is_featured') or game.get('isFeatured')):
+        badge = '<div class="game-badge featured">FEATURED</div>'
+    image_html = ''
+    if thumbnail:
+        image_html = f'<img src="{html_escape(thumbnail, quote=True)}" alt="{html_escape(title, quote=True)}" loading="{"eager" if priority else "lazy"}" decoding="async" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'grid\';">'
+    return f'''
+        <a class="game-card {html_escape(extra_class)}" href="{game_url(slug)}">
+            <div class="game-thumbnail">
+                {badge}
+                {image_html}
+                <div class="thumbnail-fallback" style="{'display:none;' if thumbnail else ''}">{html_escape(get_fallback_label(title))}</div>
+                <div class="game-info">
+                    <h3 class="game-title">{html_escape(title)}</h3>
+                </div>
+            </div>
+        </a>
+    '''
+
+def category_icon(category):
+    return {
+        "Action": "✹",
+        "Adventure": "♣",
+        "Arcade": "◆",
+        "Puzzle": "✚",
+        "Match & Merge": "◈",
+        "Mahjong & Card": "▣",
+        "Word & Trivia": "?",
+        "Racing": "⚑",
+        "Driving": "◇",
+        "Sports": "●",
+        "Soccer": "◒",
+        "Basketball": "○",
+        "Shooter": "◎",
+        "Sniper": "⌖",
+        "Horror": "◐",
+        "Survival": "▲",
+        "Parkour": "↗",
+        "Obby": "▵",
+        "Platformer": "▴",
+        "Runner": "▶",
+        "Simulation": "▤",
+        "Management": "▦",
+        "Idle & Clicker": "✦",
+        "Cooking": "◍",
+        "Dress Up": "✧",
+        "Beauty": "✺",
+        "Two Player": "Ⅱ",
+        "Multiplayer": "◌",
+        "io Games": "io",
+        "Strategy": "♟",
+        "Tower Defense": "▰",
+        "Casual": "☼",
+    }.get(category, "●")
+
+def render_rail_links(active_category=None, categories=None):
+    categories = categories or RAIL_CATEGORIES
+    links = []
+    for category in categories:
+        active = ' aria-current="page"' if active_category == category else ''
+        icon = category_icon(category)
+        links.append(f'<li><a href="{category_url(category)}"{active}><span class="rail-icon">{icon}</span>{html_escape(category)}</a></li>')
+    return "\n".join(links)
+
+def build_game_faq(title, category_name, controls):
+    control_text = ", ".join(f"{clean_text(k)} for {clean_text(v)}" for k, v in (controls or {}).items())
+    questions = [
+        (
+            f"Can I play {title} for free?",
+            f"Yes. {title} is available as a free browser game on BTW game."
+        ),
+        (
+            f"What kind of game is {title}?",
+            f"{title} is listed in the {category_name} category and is designed for quick online play."
+        ),
+        (
+            f"Do I need to download {title}?",
+            f"No. Open the {title} game page and play in your browser without installing a separate app."
+        ),
+    ]
+    if control_text:
+        questions.insert(1, (f"How do I control {title}?", f"Use {control_text}. Controls can vary by device, so check the in-game prompts too."))
+    return questions
+
+def render_faq_html(faq_items):
+    items = []
+    for question, answer in faq_items:
+        items.append(f'''
+            <details class="faq-item">
+                <summary>{html_escape(question)}</summary>
+                <p>{html_escape(answer)}</p>
+            </details>
+        ''')
+    return "\n".join(items)
+
+def build_game_content(title, description, long_description, category_name, tags, controls):
+    base_description = clean_text(long_description or description)
+    if len(base_description) < 140:
+        tag_text = ", ".join(tags[:3]) if tags else category_name
+        base_description = (
+            f"{base_description} {title} is a free {category_name.lower()} browser game on BTW game. "
+            f"It is a good fit for quick breaks, casual play, and players who want to try {tag_text.lower()} games without downloads."
+        ).strip()
+    how_to = (
+        f"Press Play, wait for the browser game to load, then follow the on-screen prompts. "
+        f"Focus on the main objective, learn each restart, and use the related games list when you want another {category_name.lower()} game."
+    )
+    controls_text = ""
+    if controls:
+        controls_text = " ".join(f"{clean_text(key)}: {clean_text(value)}." for key, value in controls.items())
+    else:
+        controls_text = "Use the keyboard, mouse, touch controls, or the in-game prompts shown after the game loads."
+    tips = [
+        "Start with a short round to learn the pace before chasing a high score.",
+        "Use fullscreen or a wider browser window when the game needs precise movement.",
+        f"Try related {category_name.lower()} games if you want a similar feel with a different challenge.",
+    ]
+    return base_description, how_to, controls_text, tips
+
+def build_game_jsonld(game, tags, faq_items):
+    title = clean_text(game.get('title'))
+    slug = normalize_slug(game.get('slug'))
+    description = truncate(game.get('description') or f"Play {title} online for free at BTW game.", 220)
+    image = clean_text(game.get('thumbnail_url') or '') or SITE_IMAGE
+    category_name = clean_text(game.get('category_name') or 'Games')
+    scripts = [
+        {
+            "@context": "https://schema.org",
+            "@type": "Game",
+            "name": title,
+            "description": description,
+            "url": game_full_url(slug),
+            "image": image,
+            "genre": category_name,
+            "keywords": tags,
+            "gamePlatform": "Web Browser",
+            "operatingSystem": "Any",
+            "applicationCategory": "Game",
+            "isAccessibleForFree": True,
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": SITE_NAME,
+                "url": SITE_URL
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_URL}/"},
+                {"@type": "ListItem", "position": 2, "name": "Games", "item": f"{SITE_URL}/games"},
+                {"@type": "ListItem", "position": 3, "name": category_name, "item": category_full_url(category_name)},
+                {"@type": "ListItem", "position": 4, "name": title, "item": game_full_url(slug)}
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": question,
+                    "acceptedAnswer": {"@type": "Answer", "text": answer}
+                }
+                for question, answer in faq_items
+            ]
+        }
+    ]
+    return "\n".join(
+        f'<script type="application/ld+json">{json.dumps(script, ensure_ascii=False)}</script>'
+        for script in scripts
+    )
+
+def render_brand_mark():
+    return '''
+            <a href="/" class="brand-mark" aria-label="BTW game home">
+                <span class="brand-icon" aria-hidden="true">
+                    <svg class="brand-gamepad" viewBox="0 0 32 24" role="img" focusable="false">
+                        <path d="M9.2 6.2h13.6c3.1 0 5.7 2.1 6.5 5.1l1 3.8c.7 2.7-1.3 5.3-4.1 5.3-1.3 0-2.5-.6-3.3-1.6l-1.7-2.2H10.3l-1.7 2.2c-.8 1-2 1.6-3.3 1.6-2.8 0-4.8-2.6-4.1-5.3l1-3.8c.8-3 3.9-5.1 7-5.1Z" fill="currentColor"/>
+                        <path d="M8.7 10.2v5.2M6.1 12.8h5.2M22.8 11.1h.1M26 14.4h.1" stroke="white" stroke-width="2.1" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <span class="brand-word">BTW game <span class="brand-tagline">By the way, play!</span></span>
+            </a>
+    '''
+
+def render_header(active=""):
+    return f'''
+    <header class="site-header">
+        <nav class="site-nav container" aria-label="Primary navigation">
+            {render_brand_mark()}
+            <div class="nav-search" role="search">
+                <form onsubmit="event.preventDefault(); navSearchGames();">
+                    <input type="search" class="search-bar" placeholder="Search games..." id="navSearchInput" autocomplete="off">
+                    <button class="search-btn compact" type="submit">Search</button>
+                </form>
+            </div>
+            <button class="mobile-menu" type="button" onclick="toggleMenu()" aria-label="Open navigation" aria-controls="navLinks">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/"{' aria-current="page"' if active == 'home' else ''}>Home</a></li>
+                <li><a href="/games"{' aria-current="page"' if active == 'games' else ''}>All games</a></li>
+                <li><a href="/games?filter=new">New</a></li>
+                <li><a href="/games?filter=featured">Featured</a></li>
+            </ul>
+        </nav>
+    </header>
+    '''
+
+def render_footer():
+    return '''
+    <footer class="site-footer">
+        <div class="footer-content container">
+            <p>&copy; 2026 BTW game. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/games">All games</a></li>
+                <li><a href="/games?filter=new">New games</a></li>
+                <li><a href="/games?filter=featured">Featured</a></li>
+            </ul>
+        </div>
+    </footer>
+    '''
+
+def render_nav_script():
+    return '''
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+        function navSearchGames() {
+            const query = document.getElementById('navSearchInput').value.trim();
+            window.location.href = query ? `/games?search=${encodeURIComponent(query)}` : '/games';
+        }
+    </script>
+    '''
+
+def render_head(title, description, canonical_path, og_image=SITE_IMAGE, extra_jsonld=None):
+    canonical = f"{SITE_URL}{canonical_path}"
+    image = og_image or SITE_IMAGE
+    jsonld = extra_jsonld or ""
+    return f'''<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{html_escape(truncate(description, 160), quote=True)}">
+    <meta name="keywords" content="free online games, browser games, BTW game, no download games, instant play games">
+    <meta name="author" content="BTW game">
+    <meta property="og:title" content="{html_escape(title, quote=True)}">
+    <meta property="og:description" content="{html_escape(truncate(description, 180), quote=True)}">
+    <meta property="og:image" content="{html_escape(image, quote=True)}">
+    <meta property="og:url" content="{html_escape(canonical, quote=True)}">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{html_escape(title, quote=True)}">
+    <meta name="twitter:description" content="{html_escape(truncate(description, 180), quote=True)}">
+    <meta name="twitter:image" content="{html_escape(image, quote=True)}">
+    <link rel="canonical" href="{html_escape(canonical, quote=True)}">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM7PBYVK97"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {{ dataLayer.push(arguments); }}
+        gtag('js', new Date());
+        gtag('config', 'G-SM7PBYVK97');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8930741225505243" crossorigin="anonymous"></script>
+    {jsonld}
+    <title>{html_escape(title)}</title>
+</head>'''
+
+def render_side_rail(active_category=None, categories=None):
+    return f'''
+        <aside class="side-rail" aria-label="Explore BTW game">
+            <section class="rail-panel">
+                <h2 class="rail-title">Explore</h2>
+                <ul class="rail-links">
+                    <li><a href="/"><span class="rail-icon">⌂</span>Home</a></li>
+                    <li><a href="/games"><span class="rail-icon">▦</span>All games</a></li>
+                    <li><a href="/games?filter=new"><span class="rail-icon">✦</span>New games</a></li>
+                    <li><a href="/games?filter=featured"><span class="rail-icon">★</span>Featured</a></li>
+                </ul>
+            </section>
+            <section class="rail-panel">
+                <h2 class="rail-title">Categories</h2>
+                <ul class="rail-links">
+                    {render_rail_links(active_category, categories)}
+                </ul>
+            </section>
+        </aside>
+    '''
+
+def collection_jsonld(name, description, url, games, faq_items=None):
+    scripts = [
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": name,
+            "description": description,
+            "url": url,
+            "isPartOf": {"@type": "WebSite", "name": SITE_NAME, "url": SITE_URL}
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": name,
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": index + 1,
+                    "url": game_full_url(normalize_slug(game.get('slug'))),
+                    "name": clean_text(game.get('title'))
+                }
+                for index, game in enumerate(games[:100])
+            ]
+        }
+    ]
+    if faq_items:
+        scripts.append({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": question,
+                    "acceptedAnswer": {"@type": "Answer", "text": answer}
+                }
+                for question, answer in faq_items
+            ]
+        })
+    return "\n".join(
+        f'<script type="application/ld+json">{json.dumps(script, ensure_ascii=False)}</script>'
+        for script in scripts
+    )
+
+def render_category_guide_html(category, games):
+    guide = category_guide(category)
+    sections = "\n".join(
+        f'<article class="guide-section"><h3>{html_escape(title)}</h3><p>{html_escape(body)}</p></article>'
+        for title, body in guide["sections"]
+    )
+    popular_links = "\n".join(
+        f'<a href="{game_url(normalize_slug(game.get("slug")))}">{html_escape(clean_text(game.get("title")))}</a>'
+        for game in games[:8]
+    )
+    related = [item for item in CATEGORY_ORDER if item != category][:6]
+    related_links = "\n".join(
+        f'<a href="{category_url(item)}">{html_escape(item)}</a>'
+        for item in related
+    )
+    return f'''
+        <section class="category-guide" aria-labelledby="categoryGuideTitle">
+            <div class="category-guide-header">
+                <div>
+                    <h2 id="categoryGuideTitle">{html_escape(guide["title"])}</h2>
+                    <p>{html_escape(guide["intro"])}</p>
+                </div>
+                <span class="guide-count">{len(games)} games</span>
+            </div>
+            <div class="guide-link-block">
+                <h3>Popular games</h3>
+                <div class="guide-link-list">{popular_links}</div>
+            </div>
+            <div class="guide-sections">{sections}</div>
+            <div class="guide-related" aria-label="Related categories">{related_links}</div>
+            <div class="guide-faq">
+                <h2>FAQ</h2>
+                <div class="faq-list">{render_faq_html(guide["faq"])}</div>
+            </div>
+        </section>
+    '''
+
+def render_home_category_shelf(category, category_games, index):
+    if not category_games:
+        return ""
+    limit = 18 if index < 3 else 12
+    cards = "\n".join(
+        render_game_card(game, priority=index == 0 and card_index < 8, show_badge=False)
+        for card_index, game in enumerate(category_games[:limit])
+    )
+    guide = category_guide(category)
+    tone = ["tone-coral", "tone-yellow", "tone-violet", "tone-sky", "tone-green"][index % 5]
+    return f'''
+                <section class="home-category-shelf {tone}" aria-labelledby="homeCategory{index}">
+                    <div class="section-header shelf-header">
+                        <div>
+                            <h2 class="section-title" id="homeCategory{index}">{html_escape(category)}</h2>
+                            <p class="section-note">{html_escape(guide["intro"])}</p>
+                        </div>
+                        <a href="{category_url(category)}" class="view-all-btn">View {html_escape(category)}</a>
+                    </div>
+                    <div class="games-grid compact home-games-grid category-home-grid">{cards}</div>
+                </section>
+    '''
+
+def generate_index_page(games):
+    categories = get_all_categories(games)
+    popular = sorted(games, key=lambda game: game.get('total_plays') or 0, reverse=True)
+    new_games = sorted(games, key=lambda game: game.get('created_at') or game.get('release_date') or '', reverse=True)
+    top_games = popular[:32]
+    fresh_games = new_games[:24]
+    popular_cards = "\n".join(
+        render_game_card(game, priority=index < 14, extra_class='spotlight-card' if index in (0, 7) else '')
+        for index, game in enumerate(top_games)
+    )
+    new_cards = "\n".join(render_game_card(game, priority=False, show_badge=True) for game in fresh_games)
+    category_map = {
+        category: sorted(
+            [game for game in games if matches_category(game, category)],
+            key=lambda game: game.get('total_plays') or 0,
+            reverse=True
+        )
+        for category in categories
+    }
+    priority_categories = [category for category in [
+        "Action", "Puzzle", "Match & Merge", "Racing", "Shooter", "Parkour",
+        "Runner", "Idle & Clicker", "Beauty", "Cooking", "Sports", "Horror"
+    ] if category in category_map]
+    remaining_categories = [category for category in categories if category not in priority_categories]
+    home_categories = (priority_categories + remaining_categories)[:HOME_CATEGORY_LIMIT]
+    category_shelves = "\n".join(
+        render_home_category_shelf(category, category_map.get(category, []), index)
+        for index, category in enumerate(home_categories)
+    )
+    website_jsonld = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": SITE_NAME,
+        "url": f"{SITE_URL}/",
+        "description": "Free online games for quick browser play.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": f"{SITE_URL}/games?search={{search_term_string}}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    extra_jsonld = f'<script type="application/ld+json">{json.dumps(website_jsonld, ensure_ascii=False)}</script>'
+    return f'''<!DOCTYPE html>
+<html lang="en">
+{render_head("BTW game - Free Online Games for Quick Breaks", "Play 1300+ free online games at BTW game. Fast browser games for quick breaks, with action, puzzle, racing, sports, and casual games.", "/", SITE_IMAGE, extra_jsonld)}
+<body>
+    {render_header("home")}
+    <main>
+        <div class="home-layout container">
+            {render_side_rail(categories=categories)}
+            <div class="home-main">
+                <section class="content-band game-shelf priority-shelf" aria-labelledby="popular-games-title">
+                    <div class="section-header">
+                        <div>
+                            <h1 class="section-title" id="popular-games-title">Hot games</h1>
+                            <p class="section-note">Games players open most often.</p>
+                        </div>
+                        <a href="/games" class="view-all-btn">View all</a>
+                    </div>
+                    <div class="games-grid home-games-grid" id="popularGamesGrid">{popular_cards}</div>
+                </section>
+                <section class="content-band game-shelf" aria-labelledby="new-games-title">
+                    <div class="section-header">
+                        <div>
+                            <h2 class="section-title" id="new-games-title">New games</h2>
+                            <p class="section-note">Fresh picks from the current library.</p>
+                        </div>
+                        <a href="/games?filter=new" class="view-all-btn">View new games</a>
+                    </div>
+                    <div class="games-grid compact home-games-grid" id="newGamesGrid">{new_cards}</div>
+                </section>
+                {category_shelves}
+            </div>
+        </div>
+    </main>
+    {render_footer()}
+    <script src="/assets/js/api.js"></script>
+    {render_nav_script()}
+</body>
+</html>'''
+
+def generate_games_page(games):
+    categories = get_all_categories(games)
+    game_cards = "\n".join(render_game_card(game, priority=index < 18) for index, game in enumerate(games))
+    all_guide = {
+        "title": "Free online games by category",
+        "intro": "Find quick browser games for short breaks, school downtime, and casual play. Pick a category, open a game, and start playing without downloads or accounts.",
+        "sections": [
+            ("Pick by mood", "Choose action when you want fast reactions, puzzle for slower thinking, racing for speed, and casual games for an easy break."),
+            ("Every game is linked", "This page includes a crawlable link to every game page so players and search engines can discover the full catalog."),
+        ],
+        "faq": [
+            ("Are these games free to play?", "Yes. BTW game is built around free browser games that open without downloads."),
+            ("Which category should I try first?", "Use Action or Parkour for movement, Puzzle for slower thinking, Racing for speed, and Cooking or Casual for lighter play."),
+        ],
+    }
+    extra_jsonld = collection_jsonld("All Games | BTW game", all_guide["intro"], f"{SITE_URL}/games", games, all_guide["faq"])
+    guide_html = render_category_guide_html("all", games[:24]).replace(category_guide("all").get("title", "Free all games"), all_guide["title"])
+    sections = "\n".join(f'<article class="guide-section"><h3>{html_escape(title)}</h3><p>{html_escape(body)}</p></article>' for title, body in all_guide["sections"])
+    guide_html = f'''
+        <section class="category-guide" aria-labelledby="categoryGuideTitle">
+            <div class="category-guide-header">
+                <div>
+                    <h2 id="categoryGuideTitle">{html_escape(all_guide["title"])}</h2>
+                    <p>{html_escape(all_guide["intro"])}</p>
+                </div>
+                <span class="guide-count">{len(games)} games</span>
+            </div>
+            <div class="guide-link-block"><h3>Popular games</h3><div class="guide-link-list">{"".join(f'<a href="{game_url(normalize_slug(game.get("slug")))}">{html_escape(clean_text(game.get("title")))}</a>' for game in games[:12])}</div></div>
+            <div class="guide-sections">{sections}</div>
+            <div class="guide-related" aria-label="Related categories">{"".join(f'<a href="{category_url(category)}">{html_escape(category)}</a>' for category in categories[:10])}</div>
+            <div class="guide-faq"><h2>FAQ</h2><div class="faq-list">{render_faq_html(all_guide["faq"])}</div></div>
+        </section>
+    '''
+    return f'''<!DOCTYPE html>
+<html lang="en">
+{render_head("All Games | BTW game", "Browse all 500+ free online games at BTW game. Find action, puzzle, racing, sports, and casual games that play instantly in your browser.", "/games", SITE_IMAGE, extra_jsonld)}
+<body>
+    {render_header("games")}
+    <main class="container">
+        <div class="app-layout">
+            {render_side_rail(categories=categories)}
+            <div>
+                <section class="filters-section">
+                    <div class="toolbar-row">
+                        <h1 class="filters-title" id="pageTitle">All games</h1>
+                        <span class="results-count" id="resultsCount">{len(games)} games found</span>
+                    </div>
+                    <div class="catalog-toolbar">
+                        <input type="search" class="search-bar" placeholder="Search games..." id="searchInput" autocomplete="off">
+                        <div class="filter-group">
+                            <label class="filter-label" for="sortSelect">Sort by</label>
+                            <select class="filter-select" id="sortSelect">
+                                <option value="popular">Most popular</option>
+                                <option value="newest">Newest first</option>
+                                <option value="rating">Highest rated</option>
+                                <option value="name">Name A-Z</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+                <section class="games-section">
+                    <div class="games-grid" id="gamesGrid">{game_cards}</div>
+                    <div class="no-results" id="noResults" style="display: none;"><h2>No games found</h2><p>Try a broader search or switch back to All games.</p></div>
+                </section>
+                {guide_html}
+            </div>
+        </div>
+    </main>
+    {render_footer()}
+    <script src="/assets/js/api.js"></script>
+    {render_nav_script()}
+    <script>
+        const staticCards = Array.from(document.querySelectorAll('#gamesGrid .game-card'));
+        document.getElementById('searchInput').addEventListener('input', function() {{
+            const query = this.value.trim().toLowerCase();
+            let visible = 0;
+            staticCards.forEach(card => {{
+                const text = card.textContent.toLowerCase();
+                const match = !query || text.includes(query);
+                card.style.display = match ? '' : 'none';
+                if (match) visible += 1;
+            }});
+            document.getElementById('resultsCount').textContent = `${{visible}} games found`;
+            document.getElementById('noResults').style.display = visible ? 'none' : 'block';
+        }});
+    </script>
+</body>
+</html>'''
+
+def generate_category_page(category, games):
+    guide = category_guide(category)
+    category_games = [game for game in games if matches_category(game, category)]
+    if not category_games:
+        return None
+    category_games = sorted(category_games, key=lambda game: game.get('total_plays') or 0, reverse=True)
+    cards = "\n".join(render_game_card(game, priority=index < 18) for index, game in enumerate(category_games))
+    title = f"{guide['title']} | BTW game"
+    description = guide["intro"]
+    extra_jsonld = collection_jsonld(title, description, category_full_url(category), category_games, guide["faq"])
+    categories = get_all_categories(games)
+    return f'''<!DOCTYPE html>
+<html lang="en">
+{render_head(title, description, category_url(category), SITE_IMAGE, extra_jsonld)}
+<body>
+    {render_header("games")}
+    <main class="container">
+        <div class="app-layout">
+            {render_side_rail(category, categories)}
+            <div>
+                <section class="list-page-header">
+                    <h1 class="filters-title">{html_escape(guide["title"])}</h1>
+                    <span class="results-count">{len(category_games)} games found</span>
+                </section>
+                <section class="games-section">
+                    <div class="games-grid">{cards}</div>
+                </section>
+                {render_category_guide_html(category, category_games)}
+            </div>
+        </div>
+    </main>
+    {render_footer()}
+    {render_nav_script()}
+</body>
+</html>'''
+
+def generate_listing_pages(games, sync_static_sources=True):
+    games = [normalize_game_data(game) for game in games]
+    games = sorted(games, key=lambda game: game.get('total_plays') or 0, reverse=True)
+    os.makedirs('static_html/categories', exist_ok=True)
+    if os.path.exists('static/assets'):
+        if os.path.exists('static_html/assets'):
+            shutil.rmtree('static_html/assets')
+        shutil.copytree('static/assets', 'static_html/assets')
+    index_html = generate_index_page(games)
+    games_html = generate_games_page(games)
+    with open('static_html/index.html', 'w', encoding='utf-8') as f:
+        f.write(index_html)
+    with open('static_html/games.html', 'w', encoding='utf-8') as f:
+        f.write(games_html)
+    if sync_static_sources:
+        with open('static/index.html', 'w', encoding='utf-8') as f:
+            f.write(index_html)
+        with open('static/games.html', 'w', encoding='utf-8') as f:
+            f.write(games_html)
+    categories = get_all_categories(games)
+    generated = []
+    for category in categories:
+        html = generate_category_page(category, games)
+        if not html:
+            continue
+        path = f"static_html/categories/{category_slug(category)}.html"
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(html)
+        generated.append(category)
+    with open('static_html/categories.json', 'w', encoding='utf-8') as f:
+        json.dump([{"name": category, "slug": category_slug(category), "url": category_url(category)} for category in generated], f, ensure_ascii=False, indent=2)
+    print(f"📚 Generated index, games, and {len(generated)} category pages")
 
 def generate_game_page(game_data, related_games):
     """Generate static HTML for a game page"""
+    game_data = normalize_game_data(game_data)
+    related_games = [normalize_game_data(game) for game in related_games]
 
     # Basic game information
-    title = game_data.get('title', 'Unknown Game')
-    description = game_data.get('description', '')
-    long_description = game_data.get('long_description', description)
-    thumbnail_url = game_data.get('thumbnail_url', '')
-    iframe_url = game_data.get('iframe_url') or game_data.get('game_url', '')
-    category_name = game_data.get('category_name', 'General')
+    title = clean_text(game_data.get('title', 'Unknown Game'))
+    description = clean_text(game_data.get('description', ''))
+    long_description = clean_text(game_data.get('long_description', description))
+    thumbnail_url = clean_text(game_data.get('thumbnail_url', ''))
+    iframe_url = clean_text(game_data.get('iframe_url') or game_data.get('game_url', ''))
+    category_name = clean_text(game_data.get('category_name', 'General'))
     rating = game_data.get('rating', 0)
     total_plays = game_data.get('total_plays', 0)
     tags = standardize_game_tags(game_data)  # Use standardized tags instead of API tags
-    features = game_data.get('features', [])
-    controls = game_data.get('controls', {})
-    release_date = game_data.get('release_date', '')
-    slug = game_data.get('slug', '')
+    features = clean_value(game_data.get('features', []))
+    controls = clean_value(game_data.get('controls', {}))
+    release_date = clean_text(game_data.get('release_date', ''))
+    slug = normalize_slug(game_data.get('slug', ''))
+    expanded_description, how_to_play, controls_text, tips = build_game_content(title, description, long_description, category_name, tags, controls)
+    faq_items = build_game_faq(title, category_name, controls)
+    jsonld_html = build_game_jsonld(game_data, tags, faq_items)
     title_html = html_escape(title)
     description_html = html_escape(description)
-    long_description_html = html_escape(long_description)
+    expanded_description_html = html_escape(expanded_description)
+    how_to_play_html = html_escape(how_to_play)
+    controls_text_html = html_escape(controls_text)
+    tips_html = ''.join(f'<li>{html_escape(tip)}</li>' for tip in tips)
+    faq_html = render_faq_html(faq_items)
     category_html = html_escape(category_name)
     title_attr = html_escape(title, quote=True)
-    description_attr = html_escape(description, quote=True)
-    category_param = quote(category_name)
+    description_attr = html_escape(truncate(description or expanded_description, 155), quote=True)
     slug_attr = html_escape(slug, quote=True)
     iframe_attr = html_escape(iframe_url, quote=True)
-    thumbnail_attr = html_escape(thumbnail_url, quote=True)
+    thumbnail_attr = html_escape(thumbnail_url or SITE_IMAGE, quote=True)
+    category_href = category_url(category_name)
+    category_href_attr = html_escape(category_href, quote=True)
 
     # Generate related games HTML
     related_games_html = ""
     play_next_html = ""
     if related_games:
         for related_game in related_games:
-            related_thumbnail = related_game.get('thumbnail_url', '')
-            related_slug = html_escape(related_game.get('slug', ''))
-            related_title = html_escape(related_game.get('title', ''))
-            related_description = html_escape(related_game.get('description', ''))
-            related_category = html_escape(related_game.get('category_name') or category_name)
-            related_fallback = ''.join(word[0] for word in related_title.split()[:2]).upper() or '▶'
+            related_thumbnail = clean_text(related_game.get('thumbnail_url', ''))
+            related_slug = html_escape(normalize_slug(related_game.get('slug', '')))
+            related_title_raw = clean_text(related_game.get('title', ''))
+            related_title = html_escape(related_title_raw)
+            related_category = html_escape(clean_text(related_game.get('category_name') or category_name))
+            related_fallback = html_escape(get_fallback_label(related_title_raw))
             related_img = ''
             if related_thumbnail:
                 escaped_thumbnail = html_escape(related_thumbnail, quote=True)
@@ -297,7 +1677,7 @@ def generate_game_page(game_data, related_games):
                         <aside class="play-next-panel" aria-label="Play next">
                             <div class="play-next-header">
                                 <h2 class="card-title">Play next</h2>
-                                <a href="/games?category={category_param}" class="view-all-btn">More</a>
+                                <a href="{category_href_attr}" class="view-all-btn">More</a>
                             </div>
                             <div class="play-next-list">{play_next_html}</div>
                         </aside>''' if play_next_html else ''
@@ -312,14 +1692,16 @@ def generate_game_page(game_data, related_games):
     <meta name="author" content="BTW game">
     <meta property="og:title" content="{title_attr} | BTW game">
     <meta property="og:description" content="{description_attr}">
-    <meta property="og:image" content="{thumbnail_attr or 'https://btwgame.com/images/game-og.jpg'}">
+    <meta property="og:image" content="{thumbnail_attr}">
     <meta property="og:url" content="https://btwgame.com/games/{slug_attr}">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{title_attr} | BTW game">
     <meta name="twitter:description" content="{description_attr}">
+    <meta name="twitter:image" content="{thumbnail_attr}">
     <link rel="canonical" href="https://btwgame.com/games/{slug_attr}">
     <link rel="stylesheet" href="/assets/css/site.css">
+    {jsonld_html}
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM7PBYVK97"></script>
@@ -337,10 +1719,7 @@ def generate_game_page(game_data, related_games):
 <body>
     <header class="site-header">
         <nav class="site-nav container" aria-label="Primary navigation">
-            <a href="/" class="brand-mark" aria-label="BTW game home">
-                <span class="brand-icon">▶</span>
-                <span class="brand-word">BTW game <span class="brand-tagline">By the way, play</span></span>
-            </a>
+            {render_brand_mark()}
             <div class="nav-search" role="search">
                 <form onsubmit="event.preventDefault(); navSearchGames();">
                     <input type="search" class="search-bar" placeholder="Search games..." id="navSearchInput" autocomplete="off">
@@ -376,15 +1755,9 @@ def generate_game_page(game_data, related_games):
                 <section class="rail-panel">
                     <h2 class="rail-title">Category</h2>
                     <ul class="rail-links">
-                        <li><a href="/games?category={category_param}" aria-current="page"><span class="rail-icon">●</span>{category_html}</a></li>
-                        <li><a href="/games?category=Action"><span class="rail-icon">✹</span>Action</a></li>
-                        <li><a href="/games?category=Racing"><span class="rail-icon">⚑</span>Racing</a></li>
-                        <li><a href="/games?category=Puzzle"><span class="rail-icon">✚</span>Puzzle</a></li>
+                        <li><a href="{category_href_attr}" aria-current="page"><span class="rail-icon">●</span>{category_html}</a></li>
+                        {render_rail_links(category_name)}
                     </ul>
-                </section>
-                <section class="trust-card">
-                    <strong>Instant play</strong>
-                    <span>No account setup. Click play and keep the break moving.</span>
                 </section>
             </aside>
 
@@ -398,13 +1771,13 @@ def generate_game_page(game_data, related_games):
                                 <div class="game-breadcrumbs">
                                     <a href="/games">Games</a>
                                     <span>/</span>
-                                    <a href="/games?category={category_param}">{category_html}</a>
+                                    <a href="{category_href_attr}">{category_html}</a>
                                 </div>
                                 <h1 class="game-detail-title">{title_html}</h1>
                             </div>
                             <div class="game-action-row">
                                 <a class="button-primary" href="#gameContainer">Play now</a>
-                                <a class="button-secondary" href="/games?category={category_param}">More {category_html}</a>
+                                <a class="button-secondary" href="{category_href_attr}">More {category_html}</a>
                             </div>
                         </div>
 
@@ -418,18 +1791,19 @@ def generate_game_page(game_data, related_games):
                     {play_next_section_html}
                 </section>
 
-                <section class="play-proof" aria-label="Why play on BTW game">
-                    <div class="proof-item"><span class="proof-icon">⚡</span><span><strong>Instant play</strong><span>Start in your browser</span></span></div>
-                    <div class="proof-item"><span class="proof-icon">✓</span><span><strong>No downloads</strong><span>Nothing to install</span></span></div>
-                    <div class="proof-item"><span class="proof-icon">★</span><span><strong>Always free</strong><span>No hidden costs</span></span></div>
-                    <div class="proof-item"><span class="proof-icon">☻</span><span><strong>Friendly browsing</strong><span>Built for quick breaks</span></span></div>
-                </section>
-
                 <section class="game-info-layout" aria-label="About and controls">
                     <div class="game-description-panel">
                         <h2 class="card-title">About {title_html}</h2>
-                        <p>{long_description_html}</p>
+                        <p>{expanded_description_html}</p>
                         {tags_section_html}
+                        <h2 class="card-title">How to play {title_html}</h2>
+                        <p>{how_to_play_html}</p>
+                        <h2 class="card-title">Controls</h2>
+                        <p>{controls_text_html}</p>
+                        <h2 class="card-title">Tips for {title_html}</h2>
+                        <ul class="features-list">{tips_html}</ul>
+                        <h2 class="card-title">FAQ</h2>
+                        <div class="faq-list">{faq_html}</div>
                     </div>
 
                     <aside class="game-sidebar" aria-label="Game help">
@@ -502,6 +1876,16 @@ def save_all_games_json(all_games_data):
         with open('static_html/all_games.json', 'w', encoding='utf-8') as f:
             json.dump(games_json_data, f, indent=2, ensure_ascii=False)
 
+        new_games = [game for game in all_games_data if game.get('is_new') or game.get('isNew')]
+        if not new_games:
+            new_games = sorted(
+                all_games_data,
+                key=lambda game: game.get('created_at') or game.get('release_date') or '',
+                reverse=True
+            )[:24]
+        with open('static_html/new_games.json', 'w', encoding='utf-8') as f:
+            json.dump({"games": new_games}, f, indent=2, ensure_ascii=False)
+
         print(f"📊 Updated static_html/all_games.json with {len(all_games_data)} games")
         return True
     except Exception as e:
@@ -523,6 +1907,24 @@ def fetch_all_games_from_db():
     except Exception as e:
         print(f"❌ Error fetching from database: {e}")
         return None
+
+def load_external_static_games():
+    """Load extra static game records from optional source files."""
+    external_games = []
+    for path in ['crazygames_games.json', 'minigame_games.json']:
+        if not os.path.exists(path):
+            continue
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            games = data.get('games', []) if isinstance(data, dict) else data
+            for game in games:
+                if game.get('title') and game.get('iframe_url'):
+                    external_games.append(normalize_game_data(game))
+            print(f"📦 Loaded {len(games)} external games from {path}")
+        except Exception as e:
+            print(f"⚠️  Failed to load {path}: {e}")
+    return external_games
 
 def main():
     """Generate all static game pages and update all_games.json"""
@@ -547,11 +1949,16 @@ def main():
 
     # Create games directory
     os.makedirs('static_html/games', exist_ok=True)
+    for existing_file in os.listdir('static_html/games'):
+        if existing_file.endswith('.html'):
+            os.remove(os.path.join('static_html/games', existing_file))
 
     success_count = 0
     error_count = 0
     all_games_data = []
+    seen_slugs = set()
 
+    generated_page_data = []
     for slug in game_slugs:
         print(f"📄 Processing {slug}...")
 
@@ -560,39 +1967,60 @@ def main():
         if not game_data:
             error_count += 1
             continue
+        game_data = normalize_game_data(game_data)
+        normalized_slug = game_data.get('slug')
 
         # Add to all games collection with standardized tags
         game_data_with_tags = game_data.copy()
         game_data_with_tags['standardized_tags'] = standardize_game_tags(game_data)
+        if normalized_slug in seen_slugs:
+            print(f"⚠️  Skipping duplicate slug after normalization: {normalized_slug}")
+            continue
+        seen_slugs.add(normalized_slug)
         all_games_data.append(game_data_with_tags)
 
-        # Fetch related games
-        related_games = fetch_related_games(
-            game_data.get('category_name', ''),
-            slug,
-            limit=6
-        )
+        generated_page_data.append(game_data)
 
-        # Generate HTML
+    external_games = load_external_static_games()
+    for game_data in external_games:
+        normalized_slug = game_data.get('slug')
+        if not normalized_slug or normalized_slug in seen_slugs:
+            continue
+        print(f"📄 Processing external {normalized_slug}...")
+        game_data_with_tags = game_data.copy()
+        game_data_with_tags['standardized_tags'] = standardize_game_tags(game_data)
+        seen_slugs.add(normalized_slug)
+        all_games_data.append(game_data_with_tags)
+        generated_page_data.append(game_data)
+
+    all_games_data = apply_primary_category_fallbacks(all_games_data)
+    page_data_by_slug = {
+        normalize_slug(game.get('slug')): game
+        for game in apply_primary_category_fallbacks(generated_page_data)
+    }
+
+    for game_data_with_tags in all_games_data:
+        normalized_slug = normalize_slug(game_data_with_tags.get('slug'))
+        game_data = page_data_by_slug.get(normalized_slug, game_data_with_tags)
+        related_games = [
+            game for game in all_games_data
+            if matches_category(game, game_data.get('category_name')) and normalize_slug(game.get('slug')) != normalized_slug
+        ][:6]
         try:
             html_content = generate_game_page(game_data, related_games)
-
-            # Keep files flat so Cloudflare Clean URLs serve /games/{slug}
-            # without canonicalizing to /games/{slug}/.
-            filename = f"static_html/games/{slug}.html"
+            filename = f"static_html/games/{normalized_slug}.html"
             with open(filename, 'w', encoding='utf-8') as f:
                 f.write(html_content)
-
             success_count += 1
             print(f"✅ Generated {filename}")
-
         except Exception as e:
-            print(f"❌ Error generating page for {slug}: {e}")
+            print(f"❌ Error generating page for {normalized_slug}: {e}")
             error_count += 1
 
     # Save all games data to JSON
     if all_games_data:
         save_all_games_json(all_games_data)
+        generate_listing_pages(all_games_data)
 
     print(f"\n🎯 Generation complete!")
     print(f"✅ Success: {success_count} pages")
