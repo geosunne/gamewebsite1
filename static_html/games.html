@@ -34,6 +34,12 @@
 <span class="brand-icon">▶</span>
 <span class="brand-word">BTW game <span class="brand-tagline">By the way, play</span></span>
 </a>
+<div class="nav-search" role="search">
+<form onsubmit="event.preventDefault(); navSearchGames();">
+<input autocomplete="off" class="search-bar" id="navSearchInput" placeholder="Search games..." type="search"/>
+<button class="search-btn compact" type="submit">Search</button>
+</form>
+</div>
 <button aria-controls="navLinks" aria-label="Open navigation" class="mobile-menu" onclick="toggleMenu()" type="button">
 <span></span>
 <span></span>
@@ -48,19 +54,38 @@
 </nav>
 </header>
 <main class="container">
+<div class="app-layout">
+<aside aria-label="Game catalog navigation" class="side-rail">
+<section class="rail-panel">
+<h2 class="rail-title">Explore</h2>
+<ul class="rail-links">
+<li><a href="/"><span class="rail-icon">⌂</span>Home</a></li>
+<li><a aria-current="page" href="/games"><span class="rail-icon">▦</span>All games</a></li>
+<li><a href="/games?filter=new"><span class="rail-icon">✦</span>New games</a></li>
+<li><a href="/games?filter=featured"><span class="rail-icon">★</span>Featured</a></li>
+</ul>
+</section>
+<section class="rail-panel">
+<h2 class="rail-title">Jump to</h2>
+<ul class="rail-links">
+<li><a href="/games?category=Action"><span class="rail-icon">✹</span>Action</a></li>
+<li><a href="/games?category=Adventure"><span class="rail-icon">♣</span>Adventure</a></li>
+<li><a href="/games?category=Racing"><span class="rail-icon">⚑</span>Racing</a></li>
+<li><a href="/games?category=Puzzle"><span class="rail-icon">✚</span>Puzzle</a></li>
+<li><a href="/games?category=Sports"><span class="rail-icon">●</span>Sports</a></li>
+</ul>
+</section>
+<section class="trust-card">
+<strong>Safe &amp; free</strong>
+<span>Curated browser games with no download step.</span>
+</section>
+</aside>
+<div>
 <section class="page-header">
 <span class="kicker">Pick something fast</span>
 <h1 class="page-title" id="pageTitle">All games</h1>
 <p class="page-subtitle" id="pageSubtitle">Search, sort, and filter the BTW game library. Every card opens a clean game URL with no .html in the address.</p>
 </section>
-<section aria-label="Game catalog" class="catalog-shell">
-<aside aria-labelledby="categoryTitle" class="category-rail">
-<h2 class="filters-title" id="categoryTitle">Categories</h2>
-<div class="categories-filter" id="categoriesFilter">
-<button class="category-btn active" onclick="filterByCategory('all', this)" type="button">All games</button>
-</div>
-</aside>
-<div>
 <section class="filters-section">
 <div class="toolbar-row">
 <h2 class="filters-title">Find games</h2>
@@ -78,6 +103,9 @@
 </select>
 </div>
 </div>
+<div class="categories-filter" id="categoriesFilter">
+<button class="category-btn active" onclick="filterByCategory('all', this)" type="button">All games</button>
+</div>
 </section>
 <section class="games-section">
 <div class="games-grid" id="gamesGrid">
@@ -88,8 +116,24 @@
 <p>Try a broader search or switch back to All games.</p>
 </div>
 </section>
+<section aria-labelledby="catalog-about-title" class="content-band">
+<div class="story-grid">
+<article class="story-item tone-green">
+<h2 class="section-title" id="catalog-about-title">Play free online games on BTW game</h2>
+<p>BTW game is built for quick browser play: no downloads, no sign-ups, and simple categories that make the library easy to scan.</p>
+</article>
+<article class="faq-panel">
+<h2 class="card-title">FAQ</h2>
+<div class="faq-list">
+<div class="faq-row"><span>Do I need to download anything?</span><span>+</span></div>
+<div class="faq-row"><span>Is BTW game really free?</span><span>+</span></div>
+<div class="faq-row"><span>Can I play on mobile devices?</span><span>+</span></div>
+</div>
+</article>
 </div>
 </section>
+</div>
+</div>
 </main>
 <footer class="site-footer">
 <div class="footer-content container">
@@ -110,6 +154,11 @@
 
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        function navSearchGames() {
+            const query = document.getElementById('navSearchInput').value.trim();
+            window.location.href = query ? `/games?search=${encodeURIComponent(query)}` : '/games';
         }
 
         function getUrlParams() {
@@ -133,7 +182,11 @@
             return 'tone-casual';
         }
 
-        function createGameCard(game) {
+        function getFallbackLabel(title) {
+            return String(title || 'Game').split(/\s+/).filter(Boolean).slice(0, 2).map(word => word[0]).join('').toUpperCase() || '▶';
+        }
+
+        function createGameCard(game, priority = false) {
             const card = document.createElement('a');
             card.className = 'game-card';
             card.href = `/games/${game.slug || game.id}`;
@@ -146,8 +199,8 @@
             card.innerHTML = `
                 <div class="game-thumbnail">
                     ${badge}
-                    ${thumbnail ? `<img src="${thumbnail}" alt="${title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">` : ''}
-                    <div class="thumbnail-fallback" style="${thumbnail ? 'display:none;' : ''}">🎮</div>
+                    ${thumbnail ? `<img src="${thumbnail}" alt="${title}" loading="${priority ? 'eager' : 'lazy'}" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">` : ''}
+                    <div class="thumbnail-fallback" style="${thumbnail ? 'display:none;' : ''}">${getFallbackLabel(title)}</div>
                     <div class="game-info">
                         <h3 class="game-title">${title}</h3>
                     </div>
@@ -208,7 +261,7 @@
             gamesGrid.style.display = 'grid';
             noResults.style.display = 'none';
             gamesGrid.innerHTML = '';
-            games.forEach(game => gamesGrid.appendChild(createGameCard(game)));
+            games.forEach((game, index) => gamesGrid.appendChild(createGameCard(game, index < 18)));
         }
 
         function updateResultsCount(count) {
