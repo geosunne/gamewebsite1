@@ -774,6 +774,98 @@ def site_absolute_url(url):
         return f"{SITE_URL}{url}"
     return f"{SITE_URL}/{url.lstrip('/')}"
 
+def sentence_join(parts):
+    return " ".join(part for part in (clean_text(part) for part in parts) if part)
+
+def build_unique_page_title(title, category_name):
+    category = clean_text(category_name or "Browser")
+    return f"{title} browser guide and quick play notes | BTW game"
+
+def describe_play_style(category_name, tags):
+    tag_text = ", ".join(clean_text(tag).lower() for tag in (tags or [])[:3] if tag)
+    category = clean_text(category_name or "browser").lower()
+    if tag_text:
+        return f"It sits in the {category} shelf with {tag_text} signals, so the page is useful when you want to compare similar games before opening a session."
+    return f"It sits in the {category} shelf, so the page is useful when you want a quick browser session without sorting through the full catalog."
+
+def describe_embed_source(iframe_url):
+    url = clean_text(iframe_url or "").lower()
+    if "crazygames.com" in url:
+        return "This page uses an embedded CrazyGames player when the publisher-provided iframe is available."
+    if "onlinegames.io" in url or "cloud.onlinegames.io" in url:
+        return "This page uses an embedded OnlineGames.io player when that browser build is available."
+    if "gamemonetize.com" in url:
+        return "This page uses an embedded HTML5 game player supplied through a game distribution network."
+    if "playhop.com" in url:
+        return "This page uses an embedded Playhop browser player."
+    if "turbowarp.org" in url:
+        return "This page uses a TurboWarp browser embed for the playable build."
+    if iframe_url:
+        return "This page uses an embedded third-party browser player for the playable build."
+    return "If no embedded player is available, use the related games section to choose another browser game."
+
+def build_original_summary(title, category_name, tags, rating, total_plays):
+    signals = []
+    if rating:
+        signals.append(f"a {float(rating):.1f} visitor rating")
+    if total_plays:
+        signals.append(f"{int(total_plays):,} recorded plays")
+    signal_text = f" The listing currently shows {', '.join(signals)}." if signals else ""
+    return sentence_join([
+        f"{title} is presented on BTW game as a quick {clean_text(category_name).lower()} pick for browser play.",
+        describe_play_style(category_name, tags),
+        signal_text,
+    ])
+
+def build_mode_notes(title, category_name, tags):
+    text = " ".join([title, category_name, " ".join(tags or [])]).lower()
+    if has_any(text, ["multiplayer", "io", "battle", "pvp", "arena", "shooter", "sniper"]):
+        return (
+            "The main loop is competitive: load into a round, read the map quickly, and improve by surviving longer or taking better positions. "
+            "Use the first minute to test movement, aiming, camera speed, and how fast a restart happens."
+        )
+    if has_any(text, ["racing", "drift", "traffic", "driving", "car", "moto", "bike"]):
+        return (
+            "The session is built around clean driving. Start slower than you think, learn how the vehicle turns, then push for better speed once you know where crashes happen."
+        )
+    if has_any(text, ["puzzle", "merge", "match", "word", "trivia", "mahjong", "card"]):
+        return (
+            "The best approach is to read the board before moving. Look for forced moves, blocked pieces, and short combinations instead of clicking the first available option."
+        )
+    if has_any(text, ["cooking", "management", "idle", "clicker", "simulation"]):
+        return (
+            "The page works best as a loop game: learn the order of tasks, repeat the routine, then use upgrades or better timing to make the next round smoother."
+        )
+    if has_any(text, ["platform", "runner", "parkour", "obby"]):
+        return (
+            "The challenge is timing and route memory. Expect a few quick retries while you learn jump distance, obstacle rhythm, and checkpoint placement."
+        )
+    return (
+        "Start with one short attempt, identify the win condition, then decide whether the game rewards speed, careful planning, or repeated practice."
+    )
+
+def build_compatibility_notes(title, iframe_url):
+    source_note = describe_embed_source(iframe_url)
+    return sentence_join([
+        f"{title} is intended for modern desktop and mobile browsers that allow iframe-based games, JavaScript, audio, and WebGL or canvas rendering.",
+        "A keyboard and mouse usually give the most predictable control on action, racing, and platform games; touch controls depend on the embedded game itself.",
+        source_note,
+    ])
+
+def build_loading_help(title):
+    return (
+        f"If {title} stays on the loading screen, refresh once, disable strict script blocking for this page, and try a current Chrome, Edge, Safari, or Firefox build. "
+        "School, office, VPN, or private DNS filters can block third-party game iframes; if that happens, the page shell may load while the playable area remains blank."
+    )
+
+def build_rights_notice(title, iframe_url):
+    source_note = describe_embed_source(iframe_url)
+    return (
+        f"BTW game is an independent catalog and is not the official publisher of {title}. "
+        f"Names, artwork, and playable builds belong to their respective owners. {source_note} "
+        "If a rights holder wants attribution updated or an embed removed, the contact page is the right channel."
+    )
+
 def category_slug(category):
     return slugify(category)
 
@@ -1185,20 +1277,24 @@ def render_rail_links(active_category=None, categories=None):
         links.append(f'<li><a href="{category_url(category)}"{active}><span class="rail-icon">{icon}</span>{html_escape(category)}</a></li>')
     return "\n".join(links)
 
-def build_game_faq(title, category_name, controls):
+def build_game_faq(title, category_name, controls, iframe_url=None):
     control_text = ", ".join(f"{clean_text(k)} for {clean_text(v)}" for k, v in (controls or {}).items())
     questions = [
         (
-            f"Can I play {title} for free?",
-            f"Yes. {title} is available as a free browser game on BTW game."
+            f"What should I know before opening {title}?",
+            f"{title} is a browser game listing in the {category_name} category. Check the controls, loading notes, and related games before starting if you are on a restricted network."
         ),
         (
             f"What kind of game is {title}?",
-            f"{title} is listed in the {category_name} category and is designed for quick online play."
+            f"{title} is listed in the {category_name} category. BTW game adds catalog notes, play tips, compatibility guidance, and related game links around the embedded player."
         ),
         (
-            f"Do I need to download {title}?",
-            f"No. Open the {title} game page and play in your browser without installing a separate app."
+            f"What can I try if {title} does not load?",
+            f"Refresh the page, use a current browser, and check whether a school, office, VPN, or privacy extension is blocking third-party iframe content."
+        ),
+        (
+            f"Is BTW game the official publisher of {title}?",
+            f"No. BTW game is an independent browser game catalog. The playable build, names, and artwork belong to their respective owners."
         ),
     ]
     if control_text:
@@ -1216,17 +1312,15 @@ def render_faq_html(faq_items):
         ''')
     return "\n".join(items)
 
-def build_game_content(title, description, long_description, category_name, tags, controls):
-    base_description = clean_text(long_description or description)
-    if len(base_description) < 140:
-        tag_text = ", ".join(tags[:3]) if tags else category_name
-        base_description = (
-            f"{base_description} {title} is a free {category_name.lower()} browser game on BTW game. "
-            f"It is a good fit for quick breaks, casual play, and players who want to try {tag_text.lower()} games without downloads."
-        ).strip()
+def build_game_content(title, description, long_description, category_name, tags, controls, iframe_url, rating=0, total_plays=0):
+    original_summary = build_original_summary(title, category_name, tags, rating, total_plays)
+    base_description = sentence_join([
+        original_summary,
+        f"These notes are written for BTW game readers and focus on what the page can verify directly: category fit, controls, browser compatibility, loading behavior, and adjacent games to try next.",
+    ])
     how_to = (
-        f"Press Play, wait for the browser game to load, then follow the on-screen prompts. "
-        f"Focus on the main objective, learn each restart, and use the related games list when you want another {category_name.lower()} game."
+        f"Press Play, wait for the embedded game area to finish loading, then use the first attempt to confirm movement, camera, menu, and restart behavior. "
+        f"For {category_name.lower()} games, the fastest way to improve is to learn the failure point, restart quickly, and change one decision at a time."
     )
     controls_text = ""
     if controls:
@@ -1234,16 +1328,20 @@ def build_game_content(title, description, long_description, category_name, tags
     else:
         controls_text = "Use the keyboard, mouse, touch controls, or the in-game prompts shown after the game loads."
     tips = [
-        "Start with a short round to learn the pace before chasing a high score.",
-        "Use fullscreen or a wider browser window when the game needs precise movement.",
+        build_mode_notes(title, category_name, tags),
+        "Use fullscreen or a wider browser window when the game needs precise movement, camera control, or small UI targets.",
         f"Try related {category_name.lower()} games if you want a similar feel with a different challenge.",
     ]
-    return base_description, how_to, controls_text, tips
+    compatibility = build_compatibility_notes(title, iframe_url)
+    loading_help = build_loading_help(title)
+    rights_notice = build_rights_notice(title, iframe_url)
+    seo_description = truncate(original_summary, 155)
+    return base_description, how_to, controls_text, tips, compatibility, loading_help, rights_notice, seo_description
 
-def build_game_jsonld(game, tags, faq_items):
+def build_game_jsonld(game, tags, faq_items, seo_description=None):
     title = clean_text(game.get('title'))
     slug = normalize_slug(game.get('slug'))
-    description = truncate(game.get('description') or f"Play {title} online for free at BTW game.", 220)
+    description = truncate(seo_description or game.get('description') or f"{title} browser game notes on BTW game.", 220)
     image = site_absolute_url(game.get('thumbnail_url') or '')
     category_name = clean_text(game.get('category_name') or 'Games')
     scripts = [
@@ -2254,19 +2352,34 @@ def generate_game_page(game_data, related_games):
     controls = clean_value(game_data.get('controls', {}))
     release_date = clean_text(game_data.get('release_date', ''))
     slug = normalize_slug(game_data.get('slug', ''))
-    expanded_description, how_to_play, controls_text, tips = build_game_content(title, description, long_description, category_name, tags, controls)
-    faq_items = build_game_faq(title, category_name, controls)
-    jsonld_html = build_game_jsonld(game_data, tags, faq_items)
+    expanded_description, how_to_play, controls_text, tips, compatibility_notes, loading_help, rights_notice, seo_description = build_game_content(
+        title,
+        description,
+        long_description,
+        category_name,
+        tags,
+        controls,
+        iframe_url,
+        rating,
+        total_plays,
+    )
+    faq_items = build_game_faq(title, category_name, controls, iframe_url)
+    game_page_title = build_unique_page_title(title, category_name)
+    jsonld_html = build_game_jsonld(game_data, tags, faq_items, seo_description)
     title_html = html_escape(title)
     description_html = html_escape(description)
     expanded_description_html = html_escape(expanded_description)
     how_to_play_html = html_escape(how_to_play)
     controls_text_html = html_escape(controls_text)
+    compatibility_notes_html = html_escape(compatibility_notes)
+    loading_help_html = html_escape(loading_help)
+    rights_notice_html = html_escape(rights_notice)
     tips_html = ''.join(f'<li>{html_escape(tip)}</li>' for tip in tips)
     faq_html = render_faq_html(faq_items)
     category_html = html_escape(category_name)
     title_attr = html_escape(title, quote=True)
-    description_attr = html_escape(truncate(description or expanded_description, 155), quote=True)
+    page_title_attr = html_escape(game_page_title, quote=True)
+    description_attr = html_escape(seo_description, quote=True)
     slug_attr = html_escape(slug, quote=True)
     iframe_attr = html_escape(iframe_url, quote=True)
     thumbnail_attr = html_escape(site_absolute_url(thumbnail_url), quote=True)
@@ -2402,7 +2515,7 @@ def generate_game_page(game_data, related_games):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Play {title_attr} free online at BTW game. {description_attr}">
+    <meta name="description" content="{description_attr}">
     <meta name="keywords" content="free online game, browser game, BTW game, {category_html}, {', '.join(html_escape(str(tag)) for tag in tags)}">
     <meta name="author" content="BTW game">
     <meta property="og:title" content="{title_attr} | BTW game">
@@ -2429,7 +2542,7 @@ def generate_game_page(game_data, related_games):
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8930741225505243"
          crossorigin="anonymous"></script>
 
-    <title>{title_html} | BTW game</title>
+    <title>{page_title_attr}</title>
 </head>
 <body>
     <header class="site-header">
@@ -2518,6 +2631,12 @@ def generate_game_page(game_data, related_games):
                         <p>{controls_text_html}</p>
                         <h2 class="card-title">Tips for {title_html}</h2>
                         <ul class="features-list">{tips_html}</ul>
+                        <h2 class="card-title">Device and browser notes</h2>
+                        <p>{compatibility_notes_html}</p>
+                        <h2 class="card-title">If the game does not load</h2>
+                        <p>{loading_help_html}</p>
+                        <h2 class="card-title">Source and rights note</h2>
+                        <p>{rights_notice_html}</p>
                         <h2 class="card-title">FAQ</h2>
                         <div class="faq-list">{faq_html}</div>
                     </div>
