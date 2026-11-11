@@ -9,10 +9,10 @@ import argparse
 import json
 import re
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 from html import unescape
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit
 
 import requests
 from bs4 import BeautifulSoup
@@ -116,7 +116,7 @@ def parse_controls(game):
     text = re.sub(r"^Controls\s*", "", text, flags=re.I).strip()
     if not text:
         return {}
-    return {"Controls": text[:240]}
+    return {"Controls": text}
 
 
 def build_game_record(game):
@@ -162,6 +162,12 @@ def build_game_record(game):
         "source_rating_scale": 5,
         "source_upvotes": int(game.get("upvotes") or 0),
         "source_metrics_version": 1,
+        "developer": html_to_text(game.get("developer") or ""),
+        "supported_devices": ["Desktop"] + (["Android"] if game.get("androidFriendly") is True else []) + (["iOS"] if game.get("iosFriendly") is True else []),
+        "source_published_at": game.get("addedOn") or "",
+        "source_updated_at": game.get("lastSignificantUpdatedOn") or game.get("lastFileUpdatedOn") or "",
+        "source_checked_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "allow_embed": game.get("allowEmbed") is True,
         "is_featured": False,
         "is_new": True,
         "is_active": True,
@@ -173,9 +179,9 @@ def build_game_record(game):
             "CrazyGames embeddable title",
         ],
         "controls": parse_controls(game),
-        "release_date": game.get("addedOn") or datetime.utcnow().isoformat(),
-        "created_at": datetime.utcnow().isoformat(),
-        "updated_at": datetime.utcnow().isoformat(),
+        "release_date": game.get("addedOn") or "",
+        "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
 
 
@@ -189,11 +195,61 @@ def fetch_game(session, slug):
     game = get_nested(data, ["props", "pageProps", "game"], {})
     if not game:
         return None, "missing_game_data"
-    if not game.get("allowEmbed"):
+    if game.get("allowEmbed") is not True:
         return None, "not_embeddable"
     if not game.get("desktopUrl"):
         return None, "missing_desktop_url"
     return build_game_record(game), "ok"
+
+
+def identity_keys(game):
+    keys = set()
+    if game.get("slug"):
+        keys.add("slug:" + slugify(game["slug"]))
+    if game.get("title"):
+        title_key = slugify(game["title"])
+        if game["title"].lower().endswith(".io"):
+            title_key = title_key.removesuffix("-io")
+        keys.add("title:" + title_key)
+    if game.get("source") == "crazygames" and game.get("source_id"):
+        keys.add("crazygames:" + str(game["source_id"]))
+    if game.get("iframe_url"):
+        url = urlsplit(game["iframe_url"])
+        keys.add("embed:" + url.netloc.lower() + url.path.rstrip("/"))
+    return keys
+
+
+def load_existing_games():
+    games = []
+    for path in (Path("static_html/all_games.json"), OUTPUT_FILE):
+        if path.exists():
+            data = json.loads(path.read_text(encoding="utf-8"))
+            games.extend(data.get("games", []) if isinstance(data, dict) else data)
+    return games
+
+
+def validate_embed(session, record):
+    try:
+        response = session.get(record["iframe_url"], timeout=15, headers={"Referer": "https://btwgame.com/"})
+        response.raise_for_status()
+    except requests.RequestException:
+        return False, "embed_unavailable"
+    if "text/html" not in response.headers.get("Content-Type", "").lower():
+        return False, "embed_not_html"
+    frame_policy = response.headers.get("X-Frame-Options", "").lower()
+    if frame_policy:
+        return False, "embed_frame_restricted"
+    csp = response.headers.get("Content-Security-Policy", "")
+    for policy in csp.split(","):
+        for directive in policy.split(";"):
+            values = directive.strip().split()
+            if values and values[0].lower() == "frame-ancestors":
+                if not any(origin in {"*", "https:", "https://btwgame.com", "https://btwgame.com/"} for origin in values[1:]):
+                    return False, "embed_frame_restricted"
+    if urlsplit(response.url).hostname in {"www.crazygames.com", "crazygames.com"}:
+        return False, "embed_redirected_to_listing"
+    record["embed_checked_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    return True, "ok"
 
 
 def load_existing_slugs():
@@ -225,6 +281,7 @@ def main():
 
     category_urls = args.category_url or [urljoin(CRAZYGAMES_BASE, path) for path in DEFAULT_CATEGORY_PATHS]
     existing_slugs = load_existing_slugs()
+    known_keys = set().union(*(identity_keys(game) for game in load_existing_games()))
     candidates = []
     for url in category_urls:
         print(f"Scanning {url}")
@@ -237,16 +294,25 @@ def main():
 
     imported = []
     skipped = {}
+    checked = 0
     for slug in candidates:
         if len(imported) >= args.limit:
             break
         try:
             record, status = fetch_game(session, slug)
+            if record and identity_keys(record) & known_keys:
+                record, status = None, "duplicate_identity"
+            if record:
+                valid, status = validate_embed(session, record)
+                if not valid:
+                    record = None
         except Exception as error:
             record, status = None, f"error:{error}"
+        checked += 1
         if record:
             imported.append(record)
             existing_slugs.add(record["slug"])
+            known_keys.update(identity_keys(record))
             print(f"  added: {record['title']} ({record['slug']})")
         else:
             skipped[status] = skipped.get(status, 0) + 1
@@ -266,9 +332,17 @@ def main():
     output = {
         "metadata": {
             "source": "crazygames",
-            "generated_at": datetime.utcnow().isoformat(),
+            "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "total_games": len(by_slug),
             "note": "Only allowEmbed=true CrazyGames titles are included.",
+            "latest_import": {
+                "requested_limit": args.limit,
+                "candidates": len(candidates),
+                "checked": checked,
+                "added_count": len(imported),
+                "added_slugs": [game["slug"] for game in imported],
+                "skipped": skipped,
+            },
         },
         "games": list(by_slug.values()),
     }
