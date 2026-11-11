@@ -1,0 +1,44 @@
+{
+  "papas-donuteria": {
+    "category_name": "Cooking",
+    "summary": "Papa's Donuteria puts you in charge of preparing doughnuts for customers. Read each order, prepare the doughnuts, and match the requested toppings.",
+    "how_to": "Check the customer's order before preparing ingredients. Use the mouse to select items and drag ingredients while you work through the order.",
+    "tips": ["Finish the current preparation step before moving to the next station.", "Compare the topping choices with the order before serving."],
+    "source_url": "https://www.onlinegames.io/papas-donuteria/"
+  },
+  "tiny-clash": {
+    "category_name": "Strategy",
+    "summary": "Tiny Clash is an army-building strategy game. Buy units, merge matching troops into stronger units, then send the army into an automatic battle.",
+    "how_to": "Buy units, drag identical troops together on the grid to merge them, then select FIGHT to start the battle.",
+    "tips": ["Check that two units have the same type and level before trying to merge them.", "Use earned coins to strengthen the army before retrying a battle."],
+    "source_url": "https://minigame.com/en/game/tiny-clash"
+  },
+  "classic-sudoku": {
+    "category_name": "Puzzle",
+    "summary": "Classic Sudoku is a number-placement puzzle. Fill the grid so each row, column, and 3-by-3 box contains the digits 1 through 9 without repetition.",
+    "how_to": "Select an empty cell and choose a number that does not already appear in its row, column, or 3-by-3 box.",
+    "tips": ["Look for rows, columns, or boxes with only one missing number.", "Check the crossing row and column before committing to a number."],
+    "source_url": "https://minigame.com/en/game/classic-sudoku"
+  },
+  "chrome-dino": {
+    "category_name": "Runner",
+    "summary": "Dinosaur Game is an endless runner starring a pixel dinosaur. Jump over obstacles and duck when needed to keep the run going.",
+    "how_to": "Press Space or the Up arrow to jump. Use the Down arrow to duck while watching for the next obstacle.",
+    "tips": ["Time jumps around the next obstacle rather than pressing repeatedly.", "Watch the space ahead as the run speeds up."],
+    "source_url": "https://www.crazygames.com/game/chrome-dino"
+  },
+  "dinosaur-game": {
+    "category_name": "Runner",
+    "summary": "Dinosaur Game is a browser runner built around avoiding obstacles. Keep the dinosaur moving by timing jumps as hazards approach.",
+    "how_to": "Check the start screen for the jump control, then time jumps to clear the obstacles in front of the dinosaur.",
+    "tips": ["Leave enough space to land before the next jump.", "Use short attempts to learn the distance needed to clear each obstacle."],
+    "source_url": "https://www.onlinegames.io/dinosaur-game/"
+  },
+  "geometr-jump": {
+    "category_name": "Platformer",
+    "summary": "Geometry Jump is a precision platform game about moving between pillars. Choose short or long jumps while avoiding the saw blade.",
+    "how_to": "Use the short and long jump options shown by the game to move between pillars without touching the saw blade.",
+    "tips": ["Choose the jump distance to fit the gap ahead.", "Wait until the route past the saw blade is clear before jumping."],
+    "source_url": "https://minigame.com/en/game/geometr-jump"
+  }
+}

@@ -5,6 +5,7 @@ import re
 from datetime import date
 from bs4 import BeautifulSoup
 from xml.sax.saxutils import escape
+from generate_static_pages import GAME_GUIDES, build_original_summary
 
 SITE_URL = "https://btwgame.com"
 SITE_IMAGE = f"{SITE_URL}/assets/images/btwlogo.png"
@@ -40,19 +41,10 @@ def game_page_title(game):
     return f"{game['title']} browser guide and quick play notes | BTW game"
 
 def game_page_description(game):
-    title = clean_text(game.get('title'))
-    category = clean_text(category_label(game) or 'browser').lower()
-    tags = [clean_text(tag).lower() for tag in (game.get('standardized_tags') or game.get('tags') or [])[:3] if tag]
-    tag_note = f" with {', '.join(tags)} signals" if tags else ""
-    signals = []
-    if game.get('rating'):
-        signals.append(f"a {float(game['rating']):.1f} visitor rating")
-    if game.get('total_plays'):
-        signals.append(f"{int(game['total_plays']):,} recorded plays")
-    signal_note = f" Current catalog signals include {', '.join(signals)}." if signals else ""
-    return truncate(
-        f"{title} is presented on BTW game as a quick {category} pick{tag_note}, with controls, compatibility notes, loading help, and related games.{signal_note}"
-    )
+    return truncate(build_original_summary(
+        clean_text(game.get('title')), category_label(game),
+        game.get('standardized_tags') or [], 0, 0, GAME_GUIDES.get(game.get('slug'))
+    ))
 
 def ensure_meta(soup, attr_name, attr_value, content):
     tag = soup.find('meta', attrs={attr_name: attr_value})
@@ -312,7 +304,7 @@ def optimize_game_pages():
         # Update meta keywords
         meta_keywords = soup.find('meta', attrs={'name': 'keywords'})
         if meta_keywords:
-            category_name = get_category_name(game.get('category_id', 7))
+            category_name = category_label(game)
             tags = game.get('tags', [])
             keywords = [game['title'], f"play {game['title']}", "free online game", category_name.lower() + " game"]
             keywords.extend([tag.lower() for tag in tags[:3]])  # Add first 3 tags

@@ -2,6 +2,29 @@
 
 完整的网站构建流程，从游戏数据采集到静态网站生成。
 
+## SEO 数据修复与静态重建
+
+Minigame 元数据需要更新时，先运行：
+
+~~~bash
+python3 import_minigame_embed_games.py --refresh-existing --workers 4
+~~~
+
+该命令按当前游戏的结构化数据记录更新说明和操作，不修改已存在的游戏地址或缩略图。源站记录无法确认时移除不可信控制说明，并标记为待复核。
+
+使用现有完整目录重建，无需 Flask 或数据库：
+
+~~~bash
+python3 generate_static_pages.py --data-file static_html/all_games.json --skip-thumbnail-cache
+python3 optimize_seo.py
+python3 update_sitemap.py
+python3 -m unittest test_seo_repairs -v
+~~~
+
+外部评分保存在 source_rating，CrazyGames 赞票保存在 source_upvotes，Minigame 热度保存在 source_popularity；这些字段不计为本站 total_plays。列表热度排序可以使用外部信号，但详情页会明确标注来源。
+
+构建会生成部署根目录的 static_html/404.html，让 Cloudflare Pages 对未知路径返回 404。错误页不进入 sitemap。旧分类兼容跳转由 _redirects 生成；发布后需要检查不存在的根路径和游戏路径确实返回 HTTP 404。
+
 ## 🚀 快速开始
 
 ### 方法1: 完整自动构建 (推荐)
