@@ -8,7 +8,7 @@ labubu-merge
 obby-gym-simulator
 waterpark-slide-io
 obby-survive-parkour
-jailbreak-prison-escapeâ
+jailbreak-prison-escape
 merge-brainrot
 drift-king
 geometry-arrow
@@ -19,7 +19,6 @@ run-3
 highway-traffic
 traffic-jam-3d
 love-tester
-obby-but-youre-on-a-bike
 miniblox-io
 pixel-path
 geometry-dash
@@ -45,14 +44,12 @@ drift-hunters-pro
 hole-digger
 unpacking
 mega-lamba-ramp
-tb-world
 aventador-vice-crime-city
 basketball-stars
 dynamons-12
 street-traffic-racer
 paper-io-2
 crazy-plane-landing
-granny
 minecraft-classic
 motorbike-stunt-simulator
 drift-hunters
@@ -60,11 +57,9 @@ five-nights-at-freddys-2
 sprunki
 smash-karts
 fast-food-rush
-dta-6
 spacebar-clicker
 stick-fighter-3d
 hexanaut-io
-survival-race
 capybara-clicker-pro
 flappy-bird
 escape-car
@@ -111,7 +106,6 @@ ninja-obby-parkour
 monster-escape
 papas-scooperia
 vehicles-simulator
-thief-puzzle
 highway-racer-pro
 a-small-world-cup
 ovo
@@ -136,10 +130,8 @@ papas-wingeria
 slow-roads
 cs-online
 drift-city
-only-up-obby
 slope-rolling
 ultimate-flying-car
-granny-2
 snow-rider-3d
 block-blast
 archer-hero
@@ -166,7 +158,6 @@ shooterzio
 highway-road-racing
 supermarket-simulator
 ragdoll-football-2-players
-obby-prison-escape
 time-shooter-3-swat
 american-truck-car-driving
 pill-soccer
@@ -192,7 +183,6 @@ simple-loot-idle
 football-legends
 uno-online
 car-stunt-king
-idle-vlogger
 f1-drift-racer
 papas-bakeria
 monopoly
@@ -207,7 +197,6 @@ moto-x3m-pool-party
 papas-sushiria
 free-city-drive
 home-design
-immortal-dark-slayer
 idle-farming-business
 gunspin
 warstrike
@@ -248,8 +237,6 @@ parkour-block-3d
 penalty-challenge
 barbiemania
 tunnel-road
-chess
-obby-find-100-cats
 neon-slither-sim
 merge-cakes
 bob-the-robber
@@ -260,7 +247,6 @@ carnage-battle-arena
 race-clicker-drift-max
 papas-cupcakeria
 car-parking
-five-nights-at-candys
 wasteland-shooters
 soccer-masters
 solitaire
@@ -272,7 +258,6 @@ mahjong
 12-minibattles
 tennis-masters
 squid-shooter
-five-nights-at-cat-freddy
 papas-cheeseria
 four-colors
 mope-io
@@ -284,7 +269,6 @@ stickman-ragdoll
 nuts-and-bolts-puzzle
 city-stunts
 papas-pancakeria
-obby-parkour-lava
 police-stunt-cars
 hill-climb-racing-scratch
 craftmine
@@ -301,7 +285,6 @@ basketball-king
 julie-beauty-salon
 tank-war-simulator
 city-car-simulator
-obby-draw-and-jump
 only-up-parkour
 army-combat
 tap-tap-shots
@@ -319,7 +302,6 @@ supercars-drift
 mech-shooter
 highway-racer-2
 crazy-cattle-3d
-space-waves
 burnout-racers
 stunt-simulator-2
 football-soccer-world-cup
@@ -348,7 +330,6 @@ alien-sky-invasion
 sprunki-warm-like-fire
 2-player-crazy-racer
 coach-bus-drive-simulator
-rainbow-obby-parkour
 mergest-kingdom
 penalty-kick
 stunt-simulator
@@ -356,7 +337,6 @@ five-nights-at-poppy
 nova-clicker
 dragon-simulator-multiplayer
 ultimate-moto
-jelly-car-simulator
 jul-moto-racing
 wordle
 papas-pizzeria
@@ -394,7 +374,6 @@ rally-champion
 survival-karts
 tank-arena
 jet-ski-boat-race
-obby-find-sprunki
 sword-play-ninja-slice-runner
 dragon-city
 bffs-retro-time-travel-fashion
@@ -426,7 +405,6 @@ war-of-tanks-paper-note
 monster-truck-mountain-climb
 basket-champs
 masked-forces-zombie-survival
-epic-mine
 escaping-the-prison
 angela-all-season-fashion
 hover-racer-pro
@@ -477,7 +455,6 @@ drag-racing-club
 weird-dance-on-wednesday
 skibidi-toilet-io
 poly-racing-cars
-words-of-wonders
 blob-opera
 speed-drift-racing
 mad-doctor

@@ -16,7 +16,7 @@ from html import escape as html_escape
 from urllib.parse import quote, urlparse
 from datetime import datetime
 from pathlib import Path
-from catalog_quality import clean_source_text, normalize_source_metrics, catalog_popularity, source_rating
+from catalog_quality import clean_source_text, normalize_source_metrics, catalog_popularity, source_rating, has_blocked_embed
 from site_icons import render_site_icons, copy_root_favicon
 
 with Path(__file__).with_name("game_content_overrides.json").open(encoding="utf-8") as guide_file:
@@ -770,15 +770,18 @@ def normalize_game_data(game_data):
     return cleaned
 
 def prepare_catalog(games):
-    prepared = [normalize_game_data(game) for game in games]
+    prepared = [normalize_game_data(game) for game in games if not has_blocked_embed(game)]
     for game in prepared:
         game.setdefault('previous_category_name', game.get('category_name') or 'Casual')
-        guide = GAME_GUIDES.get(game['slug'], {})
+        guide = game_guide(game)
         game['category_name'] = guide.get('category_name') or classify_game_category(game)
     apply_primary_category_fallbacks(prepared)
     for game in prepared:
         game['standardized_tags'] = standardize_game_tags(game)
     return prepared
+
+def game_guide(game):
+    return GAME_GUIDES.get(game.get('slug')) or game.get('content_guide') or {}
 
 def truncate(text, length=160):
     text = clean_text(text or "")
@@ -1388,7 +1391,7 @@ def game_facts(game):
         facts.append(('Developer', clean_text(game['developer'])))
     if source_name(game):
         facts.append(('Listing source', source_name(game)))
-    if GAME_GUIDES.get(game.get('slug'), {}).get('account_required') is True:
+    if game_guide(game).get('account_required') is True:
         facts.append(('Account', 'Required by the game provider'))
     return facts
 
@@ -1452,7 +1455,7 @@ def build_game_jsonld(game, tags, faq_items, seo_description=None):
         scripts[0]['availableOnDevice'] = game['supported_devices']
     if game.get('operating_system'):
         scripts[0]['operatingSystem'] = game['operating_system']
-    source_url = GAME_GUIDES.get(slug, {}).get('source_url') or game.get('game_url')
+    source_url = game_guide(game).get('source_url') or game.get('game_url')
     page_schema = {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -1467,7 +1470,7 @@ def build_game_jsonld(game, tags, faq_items, seo_description=None):
     }
     if source_url and urlparse(source_url).scheme in {'https', 'http'}:
         page_schema['citation'] = {"@type": "WebPage", "url": source_url, "name": f"{title} source listing"}
-    reviewed = GAME_GUIDES.get(slug, {}).get('reviewed_on')
+    reviewed = game_guide(game).get('reviewed_on')
     if reviewed:
         page_schema['dateModified'] = reviewed
     scripts.append(page_schema)
@@ -2466,10 +2469,10 @@ def generate_game_page(game_data, related_games):
         iframe_url,
         rating,
         total_plays,
-        GAME_GUIDES.get(slug),
+        game_guide(game_data),
         game_data.get('supported_devices'),
     )
-    faq_items = build_game_faq(title, category_name, controls, iframe_url, GAME_GUIDES.get(slug), game_data)
+    faq_items = build_game_faq(title, category_name, controls, iframe_url, game_guide(game_data), game_data)
     game_page_title = build_unique_page_title(title, category_name, slug)
     jsonld_html = build_game_jsonld(game_data, tags, faq_items, seo_description)
     title_html = html_escape(title)
@@ -2606,7 +2609,7 @@ def generate_game_page(game_data, related_games):
                             </dl>
                         </section>
     '''
-    guide = GAME_GUIDES.get(slug, {})
+    guide = game_guide(game_data)
     source_url = guide.get('source_url') or game_data.get('game_url') or ''
     source_reference_html = ''
     if urlparse(source_url).scheme in {'http', 'https'}:
@@ -2837,6 +2840,12 @@ def save_all_games_json(all_games_data):
         with open('static_html/all_games.json', 'w', encoding='utf-8') as f:
             json.dump(games_json_data, f, indent=2, ensure_ascii=False)
 
+        slug_file = Path('static_html/game_slugs.txt')
+        if slug_file.exists():
+            active_slugs = {game['slug'] for game in all_games_data}
+            existing_slugs = [normalize_slug(slug) for slug in slug_file.read_text(encoding='utf-8').splitlines()]
+            slug_file.write_text(''.join(f'{slug}\n' for slug in existing_slugs if slug in active_slugs), encoding='utf-8')
+
         new_games = [game for game in all_games_data if game.get('is_new') or game.get('isNew')]
         if not new_games:
             new_games = sorted(
@@ -2889,6 +2898,9 @@ def load_external_static_games():
 
 def build_static_catalog(games, skip_thumbnail_cache=False):
     all_games_data = prepare_catalog(games)
+    excluded_count = len(games) - len(all_games_data)
+    if excluded_count:
+        print(f"Excluded {excluded_count} games with blocked embed providers")
     if not skip_thumbnail_cache:
         all_games_data = cache_game_thumbnails(all_games_data)
     os.makedirs('static_html/games', exist_ok=True)
