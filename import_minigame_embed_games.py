@@ -10,12 +10,15 @@ import argparse
 import json
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from html import unescape
 from pathlib import Path
+from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
+from catalog_quality import clean_source_text, normalize_source_metrics
 
 MINIGAME_BASE = "https://minigame.com"
 SITEMAP_URL = f"{MINIGAME_BASE}/api/sitemap/games/sitemap.xml"
@@ -56,7 +59,7 @@ def slugify(value):
 
 
 def clean_text(value):
-    text = unescape(str(value or ""))
+    text = unescape(clean_source_text(value))
     replacements = {
         "Â": "",
         "â": "'",
@@ -96,39 +99,98 @@ def extract_sitemap_slugs(session):
 
 
 def extract_current_game_chunk(html, slug):
-    marker = f'\\"app_id\\":\\"{slug}\\"'
-    index = html.find(marker)
-    if index < 0:
-        index = html.find(f"app_id\\\\\":\\\\\"{slug}\\\\\"")
-    if index < 0:
-        index = html.find(slug)
-    return html[index:index + 20000] if index >= 0 else ""
+    decoder = json.JSONDecoder()
+    payloads = []
+    soup = BeautifulSoup(html, "html.parser")
+    for script in soup.find_all("script"):
+        text = script.string or ""
+        for marker in re.finditer(r"self\.__next_f\.push\(", text):
+            try:
+                value, _ = decoder.raw_decode(text[marker.end():])
+            except json.JSONDecodeError:
+                continue
+            if isinstance(value, list) and len(value) > 1 and value[0] == 1 and isinstance(value[1], str):
+                payloads.append(value[1])
+
+    # Flight text records use UTF-8 byte lengths and need not end in a newline.
+    payload = "".join(payloads).encode("utf-8")
+    records = {}
+    offset = 0
+    while offset < len(payload):
+        if payload[offset:offset + 1] in {b"\r", b"\n"}:
+            offset += 1
+            continue
+        marker = re.match(rb"([a-f0-9]+):", payload[offset:])
+        if not marker:
+            newline = payload.find(b"\n", offset)
+            offset = newline + 1 if newline >= 0 else len(payload)
+            continue
+        record_id = marker[1].decode("ascii")
+        start = offset + marker.end()
+        text_marker = re.match(rb"T([a-f0-9]+),", payload[start:])
+        if text_marker:
+            text_start = start + text_marker.end()
+            offset = text_start + int(text_marker[1], 16)
+            records[record_id] = payload[text_start:offset].decode("utf-8")
+            continue
+        remaining = payload[start:].decode("utf-8")
+        try:
+            value, end = decoder.raw_decode(remaining)
+        except json.JSONDecodeError:
+            newline = payload.find(b"\n", start)
+            offset = newline + 1 if newline >= 0 else len(payload)
+            continue
+        records[record_id] = value
+        offset = start + len(remaining[:end].encode("utf-8"))
+
+    def resolve(value, seen=()):
+        if isinstance(value, str) and re.fullmatch(r"\$[a-f0-9]+", value):
+            record_id = value[1:]
+            if record_id in records and record_id not in seen:
+                return resolve(records[record_id], (*seen, record_id))
+        if isinstance(value, dict):
+            return {key: resolve(item, seen) for key, item in value.items()}
+        if isinstance(value, list):
+            return [resolve(item, seen) for item in value]
+        return value
+
+    for value in records.values():
+        if isinstance(value, dict) and value.get("app_id") == slug and value.get("base"):
+            current = resolve(value)
+            if isinstance(current.get("base"), dict):
+                return json.dumps(current, ensure_ascii=False)
+    return ""
+
+
+def game_record(chunk):
+    if not chunk:
+        return {}
+    record = json.loads(chunk)
+    return record if isinstance(record, dict) else {}
 
 
 def extract_app_url(play_html, slug):
-    chunk = extract_current_game_chunk(play_html, slug)
-    match = re.search(
-        r'app_url\\?":\\?"(https://[^"\\]+\.library\.minigame\.com/minigame-index\.html)',
-        chunk,
-    )
-    if not match:
-        return ""
-    return match.group(1).replace("\\/", "/")
+    record = game_record(extract_current_game_chunk(play_html, slug))
+    app_url = (record.get("base") or {}).get("app_url") or ""
+    return urljoin(MINIGAME_BASE, app_url) if app_url else ""
 
 
 def extract_json_string(chunk, key):
-    match = re.search(rf'{re.escape(key)}\\?":\\?"([^"\\]*)', chunk)
-    if not match:
-        return ""
-    value = match.group(1).replace("\\/", "/").replace("\\n", " ")
-    return clean_text(value)
+    record = game_record(chunk)
+    base = record.get("base") or {}
+    for fields in (record, base, record.get("game_material") or {}, base.get("description") or {}):
+        value = fields.get(key)
+        if isinstance(value, (str, int, float)):
+            return clean_text(value)
+    return ""
 
 
 def extract_string_array(chunk, key):
-    match = re.search(rf'{re.escape(key)}\\?":\[(.*?)\]', chunk)
-    if not match:
-        return []
-    return [clean_text(item) for item in re.findall(r'\\"([^"\\]+)\\"', match.group(1)) if clean_text(item)]
+    record = game_record(chunk)
+    base = record.get("base") or {}
+    fields = (base.get("keywords") or {}) if key == "contentArray" else base
+    values = fields.get(key) or []
+    return [clean_text(item) for item in values if isinstance(item, str) and clean_text(item)] if isinstance(values, list) else []
 
 
 def normalize_category(types, title, description):
@@ -172,17 +234,15 @@ def parse_info_page(info_html):
 
 
 def extract_content_sections(chunk):
-    sections = []
-    for match in re.finditer(
-        r'\\"key\\":\\"(title|content)\\",\\"value\\":\\"(.*?)\\",\\"type\\":\\"play\\"',
-        chunk,
-        flags=re.S,
-    ):
-        sections.append((match.group(1), clean_text(match.group(2).replace("\\n", " "))))
-
+    record = game_record(chunk)
+    sections = (record.get("base") or {}).get("others_option") or []
     content = {}
     current_title = ""
-    for key, value in sections:
+    for section in sections:
+        if not isinstance(section, dict) or section.get("type") != "play":
+            continue
+        key = section.get("key")
+        value = clean_text(section.get("value"))
         if key == "title":
             current_title = value
         elif key == "content" and current_title:
@@ -210,6 +270,8 @@ def validate_iframe_url(session, iframe_url):
 
 def build_game_record(slug, play_html, info_html, app_url):
     chunk = extract_current_game_chunk(play_html, slug)
+    if not chunk:
+        raise ValueError(f"Missing current game record for {slug}")
     title, meta_description, page_title, image = parse_info_page(info_html)
     display_name = extract_json_string(chunk, "display_name")
     title = title or display_name or slug.replace("-", " ").title()
@@ -269,8 +331,13 @@ def build_game_record(slug, play_html, info_html, app_url):
         "game_url": f"{MINIGAME_BASE}/en/game/{slug}/info",
         "iframe_url": app_url,
         "category_name": category_name,
-        "rating": rating,
-        "total_plays": total_plays,
+        "rating": 0,
+        "total_plays": 0,
+        "source_rating": rating,
+        "source_rating_scale": 5,
+        "source_popularity": total_plays,
+        "source_metrics_version": 1,
+        "content_parse_version": 2,
         "is_featured": False,
         "is_new": True,
         "is_active": True,
@@ -337,12 +404,56 @@ def fetch_game(session, slug, validate=True):
     return build_game_record(slug, play_response.text, info_response.text, app_url), "ok"
 
 
+def refresh_existing_metadata(games, workers=4):
+    def refresh(game):
+        slug = game["slug"]
+        try:
+            response = requests.get(
+                f"{MINIGAME_BASE}/en/game/{slug}",
+                headers={"User-Agent": "Mozilla/5.0 (compatible; BTWGameBot/1.0; +https://btwgame.com)"},
+                timeout=20,
+            )
+            response.raise_for_status()
+            current = build_game_record(slug, response.text, response.text, game["iframe_url"])
+            # Refresh metadata without replacing working embeds, thumbnails or dates.
+            fields = ("description", "long_description", "tags", "controls", "category_name",
+                      "source_page_title", "content_parse_version")
+            updated = normalize_source_metrics(game)
+            updated.update({field: current[field] for field in fields})
+            updated.pop("content_status", None)
+            return updated, ""
+        except (requests.RequestException, ValueError, KeyError) as error:
+            updated = normalize_source_metrics(game)
+            updated["controls"] = {}
+            updated["long_description"] = updated.get("description") or ""
+            updated["tags"] = []
+            updated["content_status"] = "needs_review"
+            return updated, str(error)
+
+    results = {}
+    failed = {}
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        tasks = {executor.submit(refresh, game): game["slug"] for game in games}
+        for index, task in enumerate(as_completed(tasks), 1):
+            slug = tasks[task]
+            record, error = task.result()
+            results[slug] = record
+            if error:
+                failed[slug] = error
+            if index % 25 == 0 or index == len(games):
+                print(f"Refreshed {index}/{len(games)}; pending review: {len(failed)}", flush=True)
+    save_output([results[game["slug"]] for game in games], failed)
+    return failed
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=0, help="Maximum new games to add; 0 means all")
     parser.add_argument("--delay", type=float, default=0.2, help="Delay between game requests")
     parser.add_argument("--save-every", type=int, default=25, help="Persist output every N imported games")
     parser.add_argument("--no-validate", action="store_true", help="Skip iframe response validation")
+    parser.add_argument("--refresh-existing", action="store_true", help="Repair stored metadata without adding games")
+    parser.add_argument("--workers", type=int, default=4, choices=range(1, 9), help="Metadata refresh concurrency")
     args = parser.parse_args()
 
     session = requests.Session()
@@ -352,6 +463,10 @@ def main():
     })
 
     existing_output = load_games_from_file(OUTPUT_FILE)
+    if args.refresh_existing:
+        failed = refresh_existing_metadata(existing_output, args.workers)
+        print(f"Metadata refresh complete: {len(existing_output)} records, {len(failed)} pending review")
+        return
     by_slug = {game["slug"]: game for game in existing_output if game.get("slug")}
     existing_slugs = load_existing_slugs()
 

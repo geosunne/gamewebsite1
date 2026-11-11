@@ -17,8 +17,8 @@
       "game_url": "https://www.crazygames.com/game/layers-roll",
       "iframe_url": "https://games.crazygames.com/en_US/layers-roll/index.html",
       "category_name": "Casual",
-      "rating": 4.4,
-      "total_plays": 42078,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -43,7 +43,11 @@
       },
       "release_date": "2022-08-24",
       "created_at": "2026-06-20T10:34:33.987772",
-      "updated_at": "2026-06-20T10:34:33.987782"
+      "updated_at": "2026-06-20T10:34:33.987782",
+      "source_rating": 4.4,
+      "source_rating_scale": 5,
+      "source_upvotes": 42078,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -56,8 +60,8 @@
       "game_url": "https://www.crazygames.com/game/helix-jump",
       "iframe_url": "https://games.crazygames.com/en_US/helix-jump/index.html",
       "category_name": "Casual",
-      "rating": 4.3,
-      "total_plays": 5357,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -84,7 +88,11 @@
       },
       "release_date": "2022-05-18",
       "created_at": "2026-06-20T10:34:36.855611",
-      "updated_at": "2026-06-20T10:34:36.855621"
+      "updated_at": "2026-06-20T10:34:36.855621",
+      "source_rating": 4.3,
+      "source_rating_scale": 5,
+      "source_upvotes": 5357,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -97,8 +105,8 @@
       "game_url": "https://www.crazygames.com/game/shovel-3d",
       "iframe_url": "https://games.crazygames.com/en_US/shovel-3d/index.html",
       "category_name": "Casual",
-      "rating": 4.3,
-      "total_plays": 15337,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -122,7 +130,11 @@
       },
       "release_date": "2022-09-27",
       "created_at": "2026-06-20T10:34:37.306852",
-      "updated_at": "2026-06-20T10:34:37.306858"
+      "updated_at": "2026-06-20T10:34:37.306858",
+      "source_rating": 4.3,
+      "source_rating_scale": 5,
+      "source_upvotes": 15337,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -135,8 +147,8 @@
       "game_url": "https://www.crazygames.com/game/om-nom-run",
       "iframe_url": "https://games.crazygames.com/en_US/om-nom-run/index.html",
       "category_name": "Casual",
-      "rating": 4.5,
-      "total_plays": 2876,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -159,7 +171,11 @@
       },
       "release_date": "2021-11-26",
       "created_at": "2026-06-20T10:34:39.259926",
-      "updated_at": "2026-06-20T10:34:39.259932"
+      "updated_at": "2026-06-20T10:34:39.259932",
+      "source_rating": 4.5,
+      "source_rating_scale": 5,
+      "source_upvotes": 2876,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -172,8 +188,8 @@
       "game_url": "https://www.crazygames.com/game/bus-and-subway-runner",
       "iframe_url": "https://games.crazygames.com/en_US/bus-and-subway-runner/index.html",
       "category_name": "Casual",
-      "rating": 4.3,
-      "total_plays": 2730,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -196,7 +212,11 @@
       },
       "release_date": "2019-02-25",
       "created_at": "2026-06-20T10:34:39.888530",
-      "updated_at": "2026-06-20T10:34:39.888539"
+      "updated_at": "2026-06-20T10:34:39.888539",
+      "source_rating": 4.3,
+      "source_rating_scale": 5,
+      "source_upvotes": 2730,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -209,8 +229,8 @@
       "game_url": "https://www.crazygames.com/game/2-player-tag",
       "iframe_url": "https://games.crazygames.com/en_US/2-player-tag/index.html",
       "category_name": "Action",
-      "rating": 4.4,
-      "total_plays": 2917,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -231,7 +251,11 @@
       },
       "release_date": "2019-12-03",
       "created_at": "2026-06-20T10:34:40.575081",
-      "updated_at": "2026-06-20T10:34:40.575087"
+      "updated_at": "2026-06-20T10:34:40.575087",
+      "source_rating": 4.4,
+      "source_rating_scale": 5,
+      "source_upvotes": 2917,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -244,8 +268,8 @@
       "game_url": "https://www.crazygames.com/game/chrome-dino",
       "iframe_url": "https://games.crazygames.com/en_US/chrome-dino/index.html",
       "category_name": "Casual",
-      "rating": 4.5,
-      "total_plays": 11915,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -270,7 +294,11 @@
       },
       "release_date": "2020-03-17",
       "created_at": "2026-06-20T10:34:41.224365",
-      "updated_at": "2026-06-20T10:34:41.224371"
+      "updated_at": "2026-06-20T10:34:41.224371",
+      "source_rating": 4.5,
+      "source_rating_scale": 5,
+      "source_upvotes": 11915,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -283,8 +311,8 @@
       "game_url": "https://www.crazygames.com/game/egg-folks-multiplayer",
       "iframe_url": "https://games.crazygames.com/en_US/egg-folks-multiplayer/index.html",
       "category_name": "io Games",
-      "rating": 4.7,
-      "total_plays": 1441,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -309,7 +337,11 @@
       },
       "release_date": "2025-02-06",
       "created_at": "2026-06-20T10:34:41.873777",
-      "updated_at": "2026-06-20T10:34:41.873782"
+      "updated_at": "2026-06-20T10:34:41.873782",
+      "source_rating": 4.7,
+      "source_rating_scale": 5,
+      "source_upvotes": 1441,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -322,8 +354,8 @@
       "game_url": "https://www.crazygames.com/game/farmer-challenge-party",
       "iframe_url": "https://games.crazygames.com/en_US/farmer-challenge-party/index.html",
       "category_name": "Casual",
-      "rating": 4.5,
-      "total_plays": 1036,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -347,7 +379,11 @@
       },
       "release_date": "2022-08-08",
       "created_at": "2026-06-20T10:34:42.500186",
-      "updated_at": "2026-06-20T10:34:42.500202"
+      "updated_at": "2026-06-20T10:34:42.500202",
+      "source_rating": 4.5,
+      "source_rating_scale": 5,
+      "source_upvotes": 1036,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -360,8 +396,8 @@
       "game_url": "https://www.crazygames.com/game/obby-dumb-or-genius-iq-test",
       "iframe_url": "https://games.crazygames.com/en_US/obby-dumb-or-genius-iq-test/index.html",
       "category_name": "Casual",
-      "rating": 4.2,
-      "total_plays": 3683,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -383,7 +419,11 @@
       },
       "release_date": "2025-03-04",
       "created_at": "2026-06-20T10:34:43.170075",
-      "updated_at": "2026-06-20T10:34:43.170081"
+      "updated_at": "2026-06-20T10:34:43.170081",
+      "source_rating": 4.2,
+      "source_rating_scale": 5,
+      "source_upvotes": 3683,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -396,8 +436,8 @@
       "game_url": "https://www.crazygames.com/game/press-a-to-party",
       "iframe_url": "https://games.crazygames.com/en_US/press-a-to-party/index.html",
       "category_name": "Casual",
-      "rating": 4.5,
-      "total_plays": 998,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -419,7 +459,11 @@
       },
       "release_date": "2024-01-31",
       "created_at": "2026-06-20T10:34:43.939870",
-      "updated_at": "2026-06-20T10:34:43.939876"
+      "updated_at": "2026-06-20T10:34:43.939876",
+      "source_rating": 4.5,
+      "source_rating_scale": 5,
+      "source_upvotes": 998,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -432,8 +476,8 @@
       "game_url": "https://www.crazygames.com/game/fly-for-fly",
       "iframe_url": "https://games.crazygames.com/en_US/fly-for-fly/index.html",
       "category_name": "Action",
-      "rating": 4.7,
-      "total_plays": 1947,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -455,7 +499,11 @@
       },
       "release_date": "2022-09-15",
       "created_at": "2026-06-20T10:34:44.757204",
-      "updated_at": "2026-06-20T10:34:44.757210"
+      "updated_at": "2026-06-20T10:34:44.757210",
+      "source_rating": 4.7,
+      "source_rating_scale": 5,
+      "source_upvotes": 1947,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -468,8 +516,8 @@
       "game_url": "https://www.crazygames.com/game/glowit-two-players",
       "iframe_url": "https://games.crazygames.com/en_US/glowit-two-players/index.html",
       "category_name": "Casual",
-      "rating": 4.2,
-      "total_plays": 732,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -490,7 +538,11 @@
       },
       "release_date": "2019-03-26",
       "created_at": "2026-06-20T10:34:45.359662",
-      "updated_at": "2026-06-20T10:34:45.359668"
+      "updated_at": "2026-06-20T10:34:45.359668",
+      "source_rating": 4.2,
+      "source_rating_scale": 5,
+      "source_upvotes": 732,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -503,8 +555,8 @@
       "game_url": "https://www.crazygames.com/game/shotgun-highway",
       "iframe_url": "https://games.crazygames.com/en_US/shotgun-highway/index.html",
       "category_name": "Action",
-      "rating": 4.8,
-      "total_plays": 706,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -530,7 +582,11 @@
       },
       "release_date": "2022-09-06",
       "created_at": "2026-06-20T10:34:46.416834",
-      "updated_at": "2026-06-20T10:34:46.416840"
+      "updated_at": "2026-06-20T10:34:46.416840",
+      "source_rating": 4.8,
+      "source_rating_scale": 5,
+      "source_upvotes": 706,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -543,8 +599,8 @@
       "game_url": "https://www.crazygames.com/game/robbie-game-challenges",
       "iframe_url": "https://games.crazygames.com/en_US/robbie-game-challenges/index.html",
       "category_name": "Casual",
-      "rating": 4.4,
-      "total_plays": 804,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -565,7 +621,11 @@
       },
       "release_date": "2025-02-04",
       "created_at": "2026-06-20T10:34:47.100689",
-      "updated_at": "2026-06-20T10:34:47.100694"
+      "updated_at": "2026-06-20T10:34:47.100694",
+      "source_rating": 4.4,
+      "source_rating_scale": 5,
+      "source_upvotes": 804,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -578,8 +638,8 @@
       "game_url": "https://www.crazygames.com/game/noobwars",
       "iframe_url": "https://games.crazygames.com/en_US/noobwars/index.html",
       "category_name": "Action",
-      "rating": 4.3,
-      "total_plays": 703,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -603,7 +663,11 @@
       },
       "release_date": "2023-01-17",
       "created_at": "2026-06-20T10:34:47.758913",
-      "updated_at": "2026-06-20T10:34:47.758917"
+      "updated_at": "2026-06-20T10:34:47.758917",
+      "source_rating": 4.3,
+      "source_rating_scale": 5,
+      "source_upvotes": 703,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -616,8 +680,8 @@
       "game_url": "https://www.crazygames.com/game/mussoumano-game",
       "iframe_url": "https://games.crazygames.com/en_US/mussoumano-game/index.html",
       "category_name": "Casual",
-      "rating": 4.5,
-      "total_plays": 387,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -644,7 +708,11 @@
       },
       "release_date": "2022-10-31",
       "created_at": "2026-06-20T10:34:49.166358",
-      "updated_at": "2026-06-20T10:34:49.166365"
+      "updated_at": "2026-06-20T10:34:49.166365",
+      "source_rating": 4.5,
+      "source_rating_scale": 5,
+      "source_upvotes": 387,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -657,8 +725,8 @@
       "game_url": "https://www.crazygames.com/game/bloxdhop-io",
       "iframe_url": "https://games.crazygames.com/en_US/bloxdhop-io/index.html",
       "category_name": "io Games",
-      "rating": 4.3,
-      "total_plays": 1298197,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -685,7 +753,11 @@
       },
       "release_date": "2021-03-30",
       "created_at": "2026-06-20T10:34:50.227607",
-      "updated_at": "2026-06-20T10:34:50.227614"
+      "updated_at": "2026-06-20T10:34:50.227614",
+      "source_rating": 4.3,
+      "source_rating_scale": 5,
+      "source_upvotes": 1298197,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -698,8 +770,8 @@
       "game_url": "https://www.crazygames.com/game/shellshockersio",
       "iframe_url": "https://games.crazygames.com/en_US/shellshockersio/index.html",
       "category_name": "io Games",
-      "rating": 4.6,
-      "total_plays": 65338,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -726,7 +798,11 @@
       },
       "release_date": "2017-09-28",
       "created_at": "2026-06-20T10:34:53.400519",
-      "updated_at": "2026-06-20T10:34:53.400524"
+      "updated_at": "2026-06-20T10:34:53.400524",
+      "source_rating": 4.6,
+      "source_rating_scale": 5,
+      "source_upvotes": 65338,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -739,8 +815,8 @@
       "game_url": "https://www.crazygames.com/game/slice-master",
       "iframe_url": "https://games.crazygames.com/en_US/slice-master/index.html",
       "category_name": "Casual",
-      "rating": 4.3,
-      "total_plays": 127562,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -764,7 +840,11 @@
       },
       "release_date": "2024-04-22",
       "created_at": "2026-06-20T10:34:54.887525",
-      "updated_at": "2026-06-20T10:34:54.887531"
+      "updated_at": "2026-06-20T10:34:54.887531",
+      "source_rating": 4.3,
+      "source_rating_scale": 5,
+      "source_upvotes": 127562,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -777,8 +857,8 @@
       "game_url": "https://www.crazygames.com/game/basketbros",
       "iframe_url": "https://games.crazygames.com/en_US/basketbros/index.html",
       "category_name": "Sports",
-      "rating": 4.5,
-      "total_plays": 14189,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -804,7 +884,11 @@
       },
       "release_date": "2020-01-08",
       "created_at": "2026-06-20T10:34:55.303654",
-      "updated_at": "2026-06-20T10:34:55.303661"
+      "updated_at": "2026-06-20T10:34:55.303661",
+      "source_rating": 4.5,
+      "source_rating_scale": 5,
+      "source_upvotes": 14189,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -817,8 +901,8 @@
       "game_url": "https://www.crazygames.com/game/square-bird",
       "iframe_url": "https://games.crazygames.com/en_US/square-bird/index.html",
       "category_name": "Casual",
-      "rating": 4.5,
-      "total_plays": 819,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -844,7 +928,11 @@
       },
       "release_date": "2020-04-09",
       "created_at": "2026-06-20T10:34:55.944951",
-      "updated_at": "2026-06-20T10:34:55.944957"
+      "updated_at": "2026-06-20T10:34:55.944957",
+      "source_rating": 4.5,
+      "source_rating_scale": 5,
+      "source_upvotes": 819,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -857,8 +945,8 @@
       "game_url": "https://www.crazygames.com/game/mahjongg-solitaire",
       "iframe_url": "https://games.crazygames.com/en_US/mahjongg-solitaire/index.html",
       "category_name": "Puzzle",
-      "rating": 4.0,
-      "total_plays": 17741,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -884,7 +972,11 @@
       },
       "release_date": "2022-08-09",
       "created_at": "2026-06-20T10:34:56.351499",
-      "updated_at": "2026-06-20T10:34:56.351504"
+      "updated_at": "2026-06-20T10:34:56.351504",
+      "source_rating": 4.0,
+      "source_rating_scale": 5,
+      "source_upvotes": 17741,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -897,8 +989,8 @@
       "game_url": "https://www.crazygames.com/game/piles-of-mahjong-jhb",
       "iframe_url": "https://games.crazygames.com/en_US/piles-of-mahjong-jhb/index.html",
       "category_name": "Puzzle",
-      "rating": 3.6,
-      "total_plays": 9812,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -923,7 +1015,11 @@
       },
       "release_date": "2024-08-29",
       "created_at": "2026-06-20T10:34:57.009252",
-      "updated_at": "2026-06-20T10:34:57.009257"
+      "updated_at": "2026-06-20T10:34:57.009257",
+      "source_rating": 3.6,
+      "source_rating_scale": 5,
+      "source_upvotes": 9812,
+      "source_metrics_version": 1
     },
     {
       "source": "crazygames",
@@ -936,8 +1032,8 @@
       "game_url": "https://www.crazygames.com/game/fortzone-battle-royale-xkd",
       "iframe_url": "https://games.crazygames.com/en_US/fortzone-battle-royale-xkd/index.html",
       "category_name": "Action",
-      "rating": 4.5,
-      "total_plays": 190873,
+      "rating": 0,
+      "total_plays": 0,
       "is_featured": false,
       "is_new": true,
       "is_active": true,
@@ -964,7 +1060,11 @@
       },
       "release_date": "2025-05-02",
       "created_at": "2026-06-20T10:35:01.012630",
-      "updated_at": "2026-06-20T10:35:01.012635"
+      "updated_at": "2026-06-20T10:35:01.012635",
+      "source_rating": 4.5,
+      "source_rating_scale": 5,
+      "source_upvotes": 190873,
+      "source_metrics_version": 1
     }
   ]
 }

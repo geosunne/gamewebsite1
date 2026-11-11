@@ -3,6 +3,7 @@
 Generate static HTML pages for all games and update all_games.json
 """
 import requests
+import argparse
 import json
 import os
 import shutil
@@ -14,6 +15,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from html import escape as html_escape
 from urllib.parse import quote, urlparse
 from datetime import datetime
+from pathlib import Path
+from catalog_quality import clean_source_text, normalize_source_metrics, catalog_popularity, source_rating
+
+with Path(__file__).with_name("game_content_overrides.json").open(encoding="utf-8") as guide_file:
+    GAME_GUIDES = json.load(guide_file)
 
 BASE_URL = "http://localhost:8000"
 SITE_URL = "https://btwgame.com"
@@ -668,7 +674,7 @@ def classify_game_category(game_data):
         return "Word & Trivia"
     if has_any(text, ["idle", "clicker", "tycoon", "incremental", "tap tap", "spacebar clicker"]):
         return "Idle & Clicker"
-    if has_any(text, ["makeup", "beauty", "salon", "nail", "spa", "makeover", "skincare", "cosmetics", "barber"]):
+    if has_word(text, ["makeup", "beauty", "salon", "nail", "spa", "makeover", "skincare", "cosmetics", "barber"]):
         return "Beauty"
     if has_any(text, ["dress up", "dress-up", "fashion", "outfit", "wardrobe", "princess dress", "dollhouse", "avatar maker"]):
         return "Dress Up"
@@ -745,7 +751,7 @@ def apply_primary_category_fallbacks(games):
     return games
 
 def normalize_game_data(game_data):
-    cleaned = clean_value(game_data.copy())
+    cleaned = clean_value(normalize_source_metrics(game_data))
     original_slug = cleaned.get('slug') or cleaned.get('id') or cleaned.get('title')
     cleaned['original_slug'] = clean_text(original_slug)
     cleaned['slug'] = normalize_slug(original_slug)
@@ -753,16 +759,34 @@ def normalize_game_data(game_data):
         cleaned['title'] = clean_text(cleaned['title']).replace('JailBreak', 'Jailbreak')
     if not cleaned.get('category_name') and cleaned.get('category'):
         cleaned['category_name'] = cleaned.get('category')
-    previous_category = clean_text(cleaned.get('category_name') or 'Casual')
-    cleaned['previous_category_name'] = previous_category
-    cleaned['category_name'] = classify_game_category(cleaned)
+    if cleaned.get('category_name') == 'Clicker':
+        cleaned['category_name'] = 'Idle & Clicker'
+    controls = cleaned.get('controls') or {}
+    generic_controls = {"Mouse": "Click and interact", "Arrow Keys": "Navigate", "Spacebar": "Action"}
+    if controls == generic_controls or (cleaned.get('source') == 'minigame' and cleaned.get('content_parse_version') != 2):
+        controls = {}
+    cleaned['controls'] = {clean_source_text(key): clean_source_text(value) for key, value in controls.items()}
     return cleaned
+
+def prepare_catalog(games):
+    prepared = [normalize_game_data(game) for game in games]
+    for game in prepared:
+        game.setdefault('previous_category_name', game.get('category_name') or 'Casual')
+        guide = GAME_GUIDES.get(game['slug'], {})
+        game['category_name'] = guide.get('category_name') or classify_game_category(game)
+    apply_primary_category_fallbacks(prepared)
+    for game in prepared:
+        game['standardized_tags'] = standardize_game_tags(game)
+    return prepared
 
 def truncate(text, length=160):
     text = clean_text(text or "")
     if len(text) <= length:
         return text
     return text[:length - 3].rstrip() + "..."
+
+def write_html_file(path, content):
+    Path(path).write_text("\n".join(line.rstrip() for line in content.splitlines()) + "\n", encoding="utf-8")
 
 def site_absolute_url(url):
     url = clean_text(url or "")
@@ -804,39 +828,29 @@ def describe_embed_source(iframe_url):
         return "This page uses an embedded third-party browser player for the playable build."
     return "If no embedded player is available, use the related games section to choose another browser game."
 
-def build_original_summary(title, category_name, tags, rating, total_plays):
-    signals = []
-    if rating:
-        signals.append(f"a {float(rating):.1f} visitor rating")
-    if total_plays:
-        signals.append(f"{int(total_plays):,} recorded plays")
-    signal_text = f" The listing currently shows {', '.join(signals)}." if signals else ""
-    return sentence_join([
-        f"{title} is presented on BTW game as a quick {clean_text(category_name).lower()} pick for browser play.",
-        describe_play_style(category_name, tags),
-        signal_text,
-    ])
+def build_original_summary(title, category_name, tags, rating, total_plays, guide=None):
+    guide = guide or {}
+    return guide.get('summary') or f"{title} is a {clean_text(category_name).lower()} browser game on BTW game. Check the controls below and open the embedded player to start."
 
 def build_mode_notes(title, category_name, tags):
-    text = " ".join([title, category_name, " ".join(tags or [])]).lower()
-    if has_any(text, ["multiplayer", "io", "battle", "pvp", "arena", "shooter", "sniper"]):
+    if category_name in {"Multiplayer", "io Games"}:
         return (
             "The main loop is competitive: load into a round, read the map quickly, and improve by surviving longer or taking better positions. "
             "Use the first minute to test movement, aiming, camera speed, and how fast a restart happens."
         )
-    if has_any(text, ["racing", "drift", "traffic", "driving", "car", "moto", "bike"]):
+    if category_name in {"Racing", "Driving", "Parking"}:
         return (
             "The session is built around clean driving. Start slower than you think, learn how the vehicle turns, then push for better speed once you know where crashes happen."
         )
-    if has_any(text, ["puzzle", "merge", "match", "word", "trivia", "mahjong", "card"]):
+    if category_name in {"Puzzle", "Match & Merge", "Word & Trivia", "Mahjong & Card"}:
         return (
             "The best approach is to read the board before moving. Look for forced moves, blocked pieces, and short combinations instead of clicking the first available option."
         )
-    if has_any(text, ["cooking", "management", "idle", "clicker", "simulation"]):
+    if category_name in {"Cooking", "Management", "Idle & Clicker", "Simulation"}:
         return (
             "The page works best as a loop game: learn the order of tasks, repeat the routine, then use upgrades or better timing to make the next round smoother."
         )
-    if has_any(text, ["platform", "runner", "parkour", "obby"]):
+    if category_name in {"Platformer", "Runner", "Parkour", "Obby"}:
         return (
             "The challenge is timing and route memory. Expect a few quick retries while you learn jump distance, obstacle rhythm, and checkpoint placement."
         )
@@ -993,13 +1007,13 @@ def get_all_categories(games):
             primary_counts[category] = primary_counts.get(category, 0) + 1
     found = []
     for category in CATEGORY_ORDER:
-        if primary_counts.get(category, 0) < MIN_PRIMARY_CATEGORY_GAMES:
+        if not primary_counts.get(category, 0):
             continue
         if any(matches_category(game, category) for game in games):
             found.append(category)
     primary = sorted({game.get('category_name') for game in games if game.get('category_name')})
     for category in primary:
-        if primary_counts.get(category, 0) >= MIN_PRIMARY_CATEGORY_GAMES and category not in found:
+        if primary_counts.get(category, 0) and category not in found:
             found.append(category)
     return found
 
@@ -1144,7 +1158,7 @@ def standardize_game_tags(game_data):
         'Management': ['manage', 'management', 'business', 'shop', 'hotel', 'supermarket', 'organize'],
         'RPG': ['rpg', 'role', 'character', 'level up', 'quest', 'adventure'],
         'Casual': ['casual', 'relaxing', 'simple', 'easy', 'family'],
-        'Multiplayer': ['multiplayer', 'online', 'vs', 'versus', 'pvp', 'co-op'],
+        'Multiplayer': ['multiplayer', 'vs', 'versus', 'pvp', 'co-op'],
         'Two Player': ['2 player', 'two player', 'duel', 'with friends'],
         'Idle & Clicker': ['clicker', 'click', 'idle', 'incremental', 'tap'],
         'Cooking': ['cooking', 'cook', 'restaurant', 'pizza', 'burger', 'kitchen'],
@@ -1163,11 +1177,11 @@ def standardize_game_tags(game_data):
     content_text = f"{title} {description} {category_name}"
 
     for genre, keywords in genre_keywords.items():
-        if any(keyword in content_text for keyword in keywords):
+        if has_word(content_text, keywords):
             tags.append(genre)
 
     # Special game type tags
-    if any(word in content_text for word in ['io', '.io']):
+    if ".io" in title or normalize_slug(game_data.get('slug')).endswith('-io') or has_word(content_text, ['io']):
         tags.append('IO Game')
 
     if any(word in content_text for word in ['3d', 'three dimensional']):
@@ -1312,12 +1326,10 @@ def render_faq_html(faq_items):
         ''')
     return "\n".join(items)
 
-def build_game_content(title, description, long_description, category_name, tags, controls, iframe_url, rating=0, total_plays=0):
-    original_summary = build_original_summary(title, category_name, tags, rating, total_plays)
-    base_description = sentence_join([
-        original_summary,
-        f"These notes are written for BTW game readers and focus on what the page can verify directly: category fit, controls, browser compatibility, loading behavior, and adjacent games to try next.",
-    ])
+def build_game_content(title, description, long_description, category_name, tags, controls, iframe_url, rating=0, total_plays=0, guide=None):
+    guide = guide or {}
+    original_summary = build_original_summary(title, category_name, tags, rating, total_plays, guide)
+    base_description = original_summary
     how_to = (
         f"Press Play, wait for the embedded game area to finish loading, then use the first attempt to confirm movement, camera, menu, and restart behavior. "
         f"For {category_name.lower()} games, the fastest way to improve is to learn the failure point, restart quickly, and change one decision at a time."
@@ -1332,6 +1344,9 @@ def build_game_content(title, description, long_description, category_name, tags
         "Use fullscreen or a wider browser window when the game needs precise movement, camera control, or small UI targets.",
         f"Try related {category_name.lower()} games if you want a similar feel with a different challenge.",
     ]
+    if guide:
+        how_to = guide.get('how_to') or how_to
+        tips = guide.get('tips') or tips
     compatibility = build_compatibility_notes(title, iframe_url)
     loading_help = build_loading_help(title)
     rights_notice = build_rights_notice(title, iframe_url)
@@ -1651,7 +1666,7 @@ def collection_jsonld(name, description, url, games, faq_items=None):
         for script in scripts
     )
 
-def render_category_guide_html(category, games):
+def render_category_guide_html(category, games, available_categories=None):
     guide = category_guide(category)
     sections = "\n".join(
         f'<article class="guide-section"><h3>{html_escape(title)}</h3><p>{html_escape(body)}</p></article>'
@@ -1661,7 +1676,7 @@ def render_category_guide_html(category, games):
         f'<a href="{game_url(normalize_slug(game.get("slug")))}">{html_escape(clean_text(game.get("title")))}</a>'
         for game in games[:8]
     )
-    related = [item for item in CATEGORY_ORDER if item != category][:6]
+    related = [item for item in (available_categories or get_all_categories(games)) if item != category][:6]
     related_links = "\n".join(
         f'<a href="{category_url(item)}">{html_escape(item)}</a>'
         for item in related
@@ -1746,7 +1761,7 @@ def render_home_geo_section():
 
 def generate_index_page(games):
     categories = get_all_categories(games)
-    popular = sorted(games, key=lambda game: game.get('total_plays') or 0, reverse=True)
+    popular = sorted(games, key=catalog_popularity, reverse=True)
     new_games = sorted(games, key=lambda game: game.get('created_at') or game.get('release_date') or '', reverse=True)
     top_games = popular[:32]
     fresh_games = new_games[:24]
@@ -1846,8 +1861,9 @@ def generate_games_page(games):
             "category_name": clean_text(game.get('category_name') or game.get('category') or 'Games'),
             "tags": clean_value(game.get('standardized_tags') or game.get('tags') or []),
             "description": truncate(game.get('description') or '', 120),
-            "rating": game.get('rating') or 0,
-            "total_plays": game.get('total_plays') or game.get('plays') or 0,
+            "rating": source_rating(game),
+            "total_plays": game.get('total_plays') or 0,
+            "catalog_popularity": catalog_popularity(game),
             "created_at": clean_text(game.get('created_at') or game.get('release_date') or ''),
             "is_new": bool(game.get('is_new') or game.get('isNew')),
             "is_featured": bool(game.get('is_featured') or game.get('isFeatured')),
@@ -1974,7 +1990,7 @@ def generate_games_page(games):
                 if (sort === 'newest') return new Date(b.created_at || 0) - new Date(a.created_at || 0);
                 if (sort === 'rating') return (b.rating || 0) - (a.rating || 0);
                 if (sort === 'name') return (a.title || '').localeCompare(b.title || '');
-                return (b.total_plays || 0) - (a.total_plays || 0);
+                return (b.catalog_popularity || 0) - (a.catalog_popularity || 0);
             }});
         }}
 
@@ -2025,7 +2041,7 @@ def generate_category_page(category, games):
     category_games = [game for game in games if matches_category(game, category)]
     if not category_games:
         return None
-    category_games = sorted(category_games, key=lambda game: game.get('total_plays') or 0, reverse=True)
+    category_games = sorted(category_games, key=catalog_popularity, reverse=True)
     cards = "\n".join(render_game_card(game, priority=index < 18) for index, game in enumerate(category_games))
     title = f"{guide['title']} | BTW game"
     description = guide["intro"]
@@ -2047,7 +2063,7 @@ def generate_category_page(category, games):
                 <section class="games-section">
                     <div class="games-grid">{cards}</div>
                 </section>
-                {render_category_guide_html(category, category_games)}
+                {render_category_guide_html(category, category_games, categories)}
             </div>
         </div>
     </main>
@@ -2062,10 +2078,10 @@ def select_best_games(games, definition):
         game for game in games
         if any(matches_category(game, category) for category in selector_categories)
     ]
-    selected = sorted(selected, key=lambda game: game.get('total_plays') or 0, reverse=True)
+    selected = sorted(selected, key=catalog_popularity, reverse=True)
     if len(selected) < 24:
         seen = {normalize_slug(game.get('slug')) for game in selected}
-        for game in sorted(games, key=lambda item: item.get('total_plays') or 0, reverse=True):
+        for game in sorted(games, key=catalog_popularity, reverse=True):
             slug = normalize_slug(game.get('slug'))
             if slug not in seen:
                 selected.append(game)
@@ -2250,8 +2266,7 @@ def generate_trust_pages():
         ),
     }
     for slug, html in pages.items():
-        with open(f"static_html/{slug}.html", "w", encoding="utf-8") as f:
-            f.write(html)
+        write_html_file(f"static_html/{slug}.html", html)
     return list(pages.keys())
 
 def generate_best_pages(games):
@@ -2259,8 +2274,7 @@ def generate_best_pages(games):
     generated = []
     for definition in BEST_PAGE_DEFINITIONS:
         html = generate_best_page(definition, games)
-        with open(f"static_html/best/{definition['slug']}.html", "w", encoding="utf-8") as f:
-            f.write(html)
+        write_html_file(f"static_html/best/{definition['slug']}.html", html)
         generated.append(definition["slug"])
     return generated
 
@@ -2299,7 +2313,7 @@ def generate_llms_txt(games):
 
 def generate_listing_pages(games, sync_static_sources=True):
     games = [normalize_game_data(game) for game in games]
-    games = sorted(games, key=lambda game: game.get('total_plays') or 0, reverse=True)
+    games = sorted(games, key=catalog_popularity, reverse=True)
     os.makedirs('static_html/categories', exist_ok=True)
     if os.path.exists('static/assets'):
         if os.path.exists('static_html/assets'):
@@ -2307,24 +2321,23 @@ def generate_listing_pages(games, sync_static_sources=True):
         shutil.copytree('static/assets', 'static_html/assets')
     index_html = generate_index_page(games)
     games_html = generate_games_page(games)
-    with open('static_html/index.html', 'w', encoding='utf-8') as f:
-        f.write(index_html)
-    with open('static_html/games.html', 'w', encoding='utf-8') as f:
-        f.write(games_html)
+    write_html_file('static_html/index.html', index_html)
+    write_html_file('static_html/games.html', games_html)
     if sync_static_sources:
-        with open('static/index.html', 'w', encoding='utf-8') as f:
-            f.write(index_html)
-        with open('static/games.html', 'w', encoding='utf-8') as f:
-            f.write(games_html)
+        write_html_file('static/index.html', index_html)
+        write_html_file('static/games.html', games_html)
     categories = get_all_categories(games)
+    expected_files = {f"{category_slug(category)}.html" for category in categories}
+    for old_page in Path('static_html/categories').glob('*.html'):
+        if old_page.name not in expected_files:
+            old_page.unlink()
     generated = []
     for category in categories:
         html = generate_category_page(category, games)
         if not html:
             continue
         path = f"static_html/categories/{category_slug(category)}.html"
-        with open(path, 'w', encoding='utf-8') as f:
-            f.write(html)
+        write_html_file(path, html)
         generated.append(category)
     with open('static_html/categories.json', 'w', encoding='utf-8') as f:
         json.dump([{"name": category, "slug": category_slug(category), "url": category_url(category)} for category in generated], f, ensure_ascii=False, indent=2)
@@ -2332,6 +2345,37 @@ def generate_listing_pages(games, sync_static_sources=True):
     trust_pages = generate_trust_pages()
     generate_llms_txt(games)
     print(f"📚 Generated index, games, {len(generated)} category pages, {len(best_pages)} best pages, and {len(trust_pages)} trust pages")
+
+def generate_404_page(games):
+    cards = "\n".join(render_game_card(game) for game in sorted(games, key=catalog_popularity, reverse=True)[:6])
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, follow">
+    <title>Page not found | BTW game</title>
+    <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+    {render_header()}
+    <main class="container">
+        <section class="list-page-header">
+            <div>
+                <p>404</p>
+                <h1 class="section-title">Page not found</h1>
+                <p>That link may have changed, or the page is no longer available.</p>
+                <a class="button-primary" href="/games">Browse games</a>
+            </div>
+        </section>
+        <section class="games-section" aria-labelledby="tryGamesTitle">
+            <h2 class="section-title" id="tryGamesTitle">Try another game</h2>
+            <div class="games-grid">{cards}</div>
+        </section>
+    </main>
+    {render_nav_script()}
+</body>
+</html>'''
 
 def generate_game_page(game_data, related_games):
     """Generate static HTML for a game page"""
@@ -2347,7 +2391,7 @@ def generate_game_page(game_data, related_games):
     category_name = clean_text(game_data.get('category_name', 'General'))
     rating = game_data.get('rating', 0)
     total_plays = game_data.get('total_plays', 0)
-    tags = standardize_game_tags(game_data)  # Use standardized tags instead of API tags
+    tags = game_data.get('standardized_tags') or standardize_game_tags(game_data)
     features = clean_value(game_data.get('features', []))
     controls = clean_value(game_data.get('controls', {}))
     release_date = clean_text(game_data.get('release_date', ''))
@@ -2362,6 +2406,7 @@ def generate_game_page(game_data, related_games):
         iframe_url,
         rating,
         total_plays,
+        GAME_GUIDES.get(slug),
     )
     faq_items = build_game_faq(title, category_name, controls, iframe_url)
     game_page_title = build_unique_page_title(title, category_name)
@@ -2385,6 +2430,21 @@ def generate_game_page(game_data, related_games):
     thumbnail_attr = html_escape(site_absolute_url(thumbnail_url), quote=True)
     category_href = category_url(category_name)
     category_href_attr = html_escape(category_href, quote=True)
+    metric_items = []
+    if game_data.get('source_rating'):
+        source_name = {'crazygames': 'CrazyGames', 'minigame': 'Minigame'}.get(game_data.get('source'), 'Source')
+        metric_items.append((f'{source_name} rating', f"{game_data['source_rating']:.1f}/{game_data.get('source_rating_scale', 5)}"))
+    elif rating:
+        metric_items.append(('Catalog rating', f'{rating:.1f}/5'))
+    if total_plays:
+        metric_items.append(('Plays on BTW game', f'{total_plays:,}'))
+    if game_data.get('source_upvotes'):
+        metric_items.append(('CrazyGames votes', f"{game_data['source_upvotes']:,}"))
+    metric_pills = ''.join(f'<span class="meta-pill">{html_escape(label)} {html_escape(value)}</span>' for label, value in metric_items)
+    metric_rows = ''.join(
+        f'<div class="control-item"><span>{html_escape(label)}</span><span class="control-key">{html_escape(value)}</span></div>'
+        for label, value in metric_items
+    )
 
     # Generate related games HTML
     related_games_html = ""
@@ -2610,8 +2670,7 @@ def generate_game_page(game_data, related_games):
                         </div>
 
                         <div class="game-meta-row" aria-label="Game details">
-                            <span class="meta-pill">Rating {rating:.1f}</span>
-                            <span class="meta-pill">{total_plays:,} plays</span>
+                            {metric_pills}
                             <span class="meta-pill">{category_html}</span>
                             <span class="meta-pill">Updated {html_escape(str(release_date_formatted))}</span>
                         </div>
@@ -2648,8 +2707,7 @@ def generate_game_page(game_data, related_games):
                             <h2 class="card-title">Game info</h2>
                             <div class="controls-grid">
                                 <div class="control-item"><span>Category</span><span class="control-key">{category_html}</span></div>
-                                <div class="control-item"><span>Plays</span><span class="control-key">{total_plays:,}</span></div>
-                                <div class="control-item"><span>Rating</span><span class="control-key">{rating:.1f}</span></div>
+                                {metric_rows}
                             </div>
                         </div>
                     </aside>
@@ -2761,8 +2819,59 @@ def load_external_static_games():
             print(f"⚠️  Failed to load {path}: {e}")
     return external_games
 
+def build_static_catalog(games, skip_thumbnail_cache=False):
+    all_games_data = prepare_catalog(games)
+    if not skip_thumbnail_cache:
+        all_games_data = cache_game_thumbnails(all_games_data)
+    os.makedirs('static_html/games', exist_ok=True)
+    expected_pages = {f"{game['slug']}.html" for game in all_games_data}
+    for old_page in Path('static_html/games').glob('*.html'):
+        if old_page.name not in expected_pages:
+            old_page.unlink()
+    errors = []
+    for game in all_games_data:
+        related = [
+            item for item in all_games_data
+            if item['slug'] != game['slug'] and matches_category(item, game['category_name'])
+        ][:6]
+        try:
+            write_html_file(f"static_html/games/{game['slug']}.html", generate_game_page(game, related))
+        except Exception as error:
+            errors.append((game['slug'], str(error)))
+    if errors:
+        raise RuntimeError(f"Game page generation failed: {errors[:5]}")
+    if not save_all_games_json(all_games_data):
+        raise RuntimeError("Could not write catalog data")
+    generate_listing_pages(all_games_data)
+    write_html_file('static_html/404.html', generate_404_page(all_games_data))
+    print(f"Generated {len(all_games_data)} game pages and the deployment 404 page; errors: 0")
+
+
 def main():
     """Generate all static game pages and update all_games.json"""
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--data-file', help='Rebuild from a catalog snapshot without the database or API')
+    parser.add_argument('--skip-thumbnail-cache', action='store_true', help='Reuse existing thumbnail files')
+    args = parser.parse_args()
+    if args.data_file:
+        data = json.loads(Path(args.data_file).read_text(encoding='utf-8'))
+        games = data.get('games', []) if isinstance(data, dict) else data
+        by_slug = {normalize_slug(game.get('slug')): game for game in games}
+        for extra in load_external_static_games():
+            old = by_slug.get(extra['slug'], {})
+            merged = {**old, **extra}
+            if old.get('source_metrics_version') == 1:
+                merged['total_plays'] = old.get('total_plays') or 0
+                merged['rating'] = old.get('rating') or 0
+            if (old.get('thumbnail_url') or '').startswith('/assets/'):
+                for key in ('thumbnail', 'thumbnail_url', 'original_thumbnail_url'):
+                    if key in old:
+                        merged[key] = old[key]
+            by_slug[extra['slug']] = merged
+        if not by_slug:
+            raise ValueError('The catalog snapshot contains no games')
+        build_static_catalog(list(by_slug.values()), args.skip_thumbnail_cache)
+        return
 
     print("🚀 Generating static game pages and updating all_games.json...")
 
@@ -2784,16 +2893,11 @@ def main():
 
     # Create games directory
     os.makedirs('static_html/games', exist_ok=True)
-    for existing_file in os.listdir('static_html/games'):
-        if existing_file.endswith('.html'):
-            os.remove(os.path.join('static_html/games', existing_file))
 
-    success_count = 0
     error_count = 0
     all_games_data = []
     seen_slugs = set()
 
-    generated_page_data = []
     for slug in game_slugs:
         print(f"📄 Processing {slug}...")
 
@@ -2814,7 +2918,6 @@ def main():
         seen_slugs.add(normalized_slug)
         all_games_data.append(game_data_with_tags)
 
-        generated_page_data.append(game_data)
 
     external_games = load_external_static_games()
     for game_data in external_games:
@@ -2826,49 +2929,10 @@ def main():
         game_data_with_tags['standardized_tags'] = standardize_game_tags(game_data)
         seen_slugs.add(normalized_slug)
         all_games_data.append(game_data_with_tags)
-        generated_page_data.append(game_data)
 
-    all_games_data = apply_primary_category_fallbacks(all_games_data)
-    page_data_by_slug = {
-        normalize_slug(game.get('slug')): game
-        for game in apply_primary_category_fallbacks(generated_page_data)
-    }
-    all_games_data = cache_game_thumbnails(all_games_data)
-    for cached_game in all_games_data:
-        normalized_slug = normalize_slug(cached_game.get('slug'))
-        if normalized_slug in page_data_by_slug:
-            page_data_by_slug[normalized_slug]['thumbnail_url'] = cached_game.get('thumbnail_url')
-            page_data_by_slug[normalized_slug]['thumbnail'] = cached_game.get('thumbnail')
-            page_data_by_slug[normalized_slug]['original_thumbnail_url'] = cached_game.get('original_thumbnail_url')
-
-    for game_data_with_tags in all_games_data:
-        normalized_slug = normalize_slug(game_data_with_tags.get('slug'))
-        game_data = page_data_by_slug.get(normalized_slug, game_data_with_tags)
-        related_games = [
-            game for game in all_games_data
-            if matches_category(game, game_data.get('category_name')) and normalize_slug(game.get('slug')) != normalized_slug
-        ][:6]
-        try:
-            html_content = generate_game_page(game_data, related_games)
-            filename = f"static_html/games/{normalized_slug}.html"
-            with open(filename, 'w', encoding='utf-8') as f:
-                f.write(html_content)
-            success_count += 1
-            print(f"✅ Generated {filename}")
-        except Exception as e:
-            print(f"❌ Error generating page for {normalized_slug}: {e}")
-            error_count += 1
-
-    # Save all games data to JSON
-    if all_games_data:
-        save_all_games_json(all_games_data)
-        generate_listing_pages(all_games_data)
-
-    print(f"\n🎯 Generation complete!")
-    print(f"✅ Success: {success_count} pages")
-    print(f"❌ Errors: {error_count} pages")
-    print(f"📁 Pages saved in: static_html/games/")
-    print(f"📊 Games data saved in: static_html/all_games.json")
+    if error_count:
+        raise RuntimeError(f"Could not load {error_count} games; existing pages were not rebuilt")
+    build_static_catalog(all_games_data, args.skip_thumbnail_cache)
 
 if __name__ == "__main__":
     main()

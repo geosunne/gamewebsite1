@@ -30,10 +30,10 @@
     <title>Privacy Policy | BTW game</title>
 </head>
 <body>
-    
+
     <header class="site-header">
         <nav class="site-nav container" aria-label="Primary navigation">
-            
+
             <a href="/" class="brand-mark" aria-label="BTW game home">
                 <span class="brand-icon" aria-hidden="true">
                     <svg class="brand-gamepad" viewBox="0 0 32 24" role="img" focusable="false">
@@ -43,7 +43,7 @@
                 </span>
                 <span class="brand-word">BTW game <span class="brand-tagline">By the way, play!</span></span>
             </a>
-    
+
             <div class="nav-search" role="search">
                 <form onsubmit="event.preventDefault(); navSearchGames();">
                     <input type="search" class="search-bar" placeholder="Search games..." id="navSearchInput" autocomplete="off">
@@ -61,7 +61,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <main class="container">
         <article class="content-page">
             <p class="eyebrow">BTW game</p>
@@ -78,7 +78,7 @@
         </div></section>
         </article>
     </main>
-    
+
     <footer class="site-footer">
         <div class="footer-content container">
             <p>&copy; 2026 BTW game. All rights reserved.</p>
@@ -93,8 +93,8 @@
             </ul>
         </div>
     </footer>
-    
-    
+
+
     <script>
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('active');
@@ -104,6 +104,6 @@
             window.location.href = query ? `/games?search=${encodeURIComponent(query)}` : '/games';
         }
     </script>
-    
+
 </body>
 </html>

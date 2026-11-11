@@ -3,6 +3,7 @@ import json
 import os
 from datetime import date
 from xml.sax.saxutils import escape
+from catalog_quality import legacy_category_redirects
 
 STATIC_PAGES = [
     "/about",
@@ -92,6 +93,9 @@ def update_sitemap():
     print(f"Updated sitemap.xml with {len(urls)} URLs")
 
     with open('static_html/_redirects', 'w', encoding='utf-8') as f:
+        for source, target in legacy_category_redirects({category['slug'] for category in categories}).items():
+            for suffix in ('', '.html', '/'):
+                f.write(f'{source}{suffix} {target} 308\n')
         f.write('/index.html / 308\n')
         f.write('/games.html /games 308\n')
         f.write('/about.html /about 308\n')

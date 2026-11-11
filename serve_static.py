@@ -32,6 +32,8 @@ import time
 import subprocess
 from urllib.parse import urlparse, unquote
 import mimetypes
+from pathlib import Path
+from catalog_quality import legacy_category_redirects
 
 API_PROXY_HOST = os.environ.get('API_PROXY_HOST', 'localhost')
 API_PROXY_PORT = int(os.environ.get('API_PROXY_PORT', '5001'))
@@ -150,12 +152,18 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
                     self.wfile.write(f.read())
         else:
             # Send 404 with custom page
-            self.send_404()
+            self.send_404(include_body)
 
     def get_clean_url_redirect(self, parsed_path):
         """Return clean URL target for legacy .html paths."""
         path = parsed_path.path
         target = None
+        if path.startswith('/categories/'):
+            category_path = path[:-5] if path.endswith('.html') else path.rstrip('/')
+            active = {page.stem for page in Path('static_html/categories').glob('*.html')}
+            target = legacy_category_redirects(active).get(category_path)
+            if target:
+                return f"{target}?{parsed_path.query}" if parsed_path.query else target
 
         if path == '/index.html':
             target = '/'
@@ -236,11 +244,17 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             except Exception:
                 pass
 
-    def send_404(self):
+    def send_404(self, include_body=True):
         """Send custom 404 page"""
         self.send_response(404)
-        self.send_header('Content-type', 'text/html')
+        self.send_header('Content-type', 'text/html; charset=utf-8')
+        self.send_header('X-Robots-Tag', 'noindex, follow')
         self.end_headers()
+        page = Path('static_html/404.html')
+        if page.exists():
+            if include_body:
+                self.wfile.write(page.read_bytes())
+            return
 
         html_content = """
 <!DOCTYPE html>
@@ -317,7 +331,8 @@ class StaticHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 </body>
 </html>
         """
-        self.wfile.write(html_content.encode('utf-8'))
+        if include_body:
+            self.wfile.write(html_content.encode('utf-8'))
 
     def log_message(self, format, *args):
         """Custom log format"""
