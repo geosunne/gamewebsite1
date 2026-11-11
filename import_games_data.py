@@ -9,6 +9,7 @@ import re
 from app import create_app
 from models import Game, Category, db
 from sqlalchemy.exc import IntegrityError
+from catalog_quality import has_blocked_embed
 
 def clean_url(url):
     """Clean URL by removing trailing spaces and validating"""
@@ -106,6 +107,10 @@ def import_games_from_json(json_file_path):
                     iframe_url = clean_url(iframes[0]['src'])
                     if not iframe_url:
                         print(f"Skipping '{title}': Invalid iframe URL")
+                        skipped_count += 1
+                        continue
+                    if has_blocked_embed({"iframe_url": iframe_url}):
+                        print(f"Skipping '{title}': Embed provider does not allow this site")
                         skipped_count += 1
                         continue
 

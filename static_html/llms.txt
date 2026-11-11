@@ -23,6 +23,7 @@ Main categories:
 - https://btwgame.com/categories/word-and-trivia
 - https://btwgame.com/categories/racing
 - https://btwgame.com/categories/driving
+- https://btwgame.com/categories/parking
 - https://btwgame.com/categories/sports
 - https://btwgame.com/categories/soccer
 - https://btwgame.com/categories/basketball

@@ -5,7 +5,7 @@ import re
 from datetime import date
 from bs4 import BeautifulSoup
 from xml.sax.saxutils import escape
-from generate_static_pages import GAME_GUIDES, build_original_summary, build_unique_page_title, site_absolute_url
+from generate_static_pages import game_guide, build_original_summary, build_unique_page_title, site_absolute_url
 from site_icons import ensure_site_icons
 
 SITE_URL = "https://btwgame.com"
@@ -44,7 +44,7 @@ def game_page_title(game):
 def game_page_description(game):
     return truncate(build_original_summary(
         clean_text(game.get('title')), category_label(game),
-        game.get('standardized_tags') or [], 0, 0, GAME_GUIDES.get(game.get('slug'))
+        game.get('standardized_tags') or [], 0, 0, game_guide(game)
     ))
 
 def ensure_meta(soup, attr_name, attr_value, content):

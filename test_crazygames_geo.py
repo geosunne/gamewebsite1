@@ -7,12 +7,38 @@ from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 from PIL import Image
 
-from generate_static_pages import GAME_GUIDES, generate_game_page, jsonld_script, prepare_catalog
-from import_crazygames_embed_games import build_game_record, fetch_game, identity_keys, validate_embed
+from generate_static_pages import game_guide, generate_game_page, jsonld_script, prepare_catalog
+from import_crazygames_embed_games import build_game_record, build_source_guide, discover_category_urls, fetch_game, identity_keys, validate_embed
 from optimize_seo import ensure_game_schema_fields
 
 
 class ImportQualityTests(unittest.TestCase):
+    def test_discovery_accepts_published_absolute_and_relative_category_links(self):
+        session = Mock()
+        session.get.return_value.text = (
+            '<a href="https://www.crazygames.com/c/puzzle">Puzzle</a>'
+            '<a href="/t/mini">Mini</a><a href="/c/puzzle">Puzzle</a>'
+            '<a href="https://other.example/c/sports">Other site</a>'
+        )
+        self.assertEqual(discover_category_urls(session), [
+            "https://www.crazygames.com/c/puzzle", "https://www.crazygames.com/t/mini",
+        ])
+
+    def test_source_guide_preserves_instructions_without_inventing_controls(self):
+        source = {
+            "name": "Example", "slug": "example", "metaDescription": "Fit pieces into the grid.",
+            "descriptionFirst": "<p>Fit pieces into the grid.</p>",
+            "descriptionRest": "<h2>How to Play</h2><p>Drag pieces to fill a row.</p><h2>Tips</h2><p>Leave space for large pieces.</p><h2>More Games</h2><p>Unrelated game.</p>",
+            "controls": "<p>Use the mouse.</p>",
+        }
+        guide = build_source_guide(source)
+        self.assertEqual(guide["summary"], source["metaDescription"])
+        self.assertEqual(guide["how_to"], "Drag pieces to fill a row.")
+        self.assertEqual(guide["tips"], ["Leave space for large pieces."])
+        self.assertNotIn("Unrelated", str(guide))
+        empty = build_source_guide({"name": "Unknown"})
+        self.assertNotIn("WASD", str(empty))
+
     def test_io_name_alias_is_not_a_new_game(self):
         self.assertTrue(identity_keys({"title": "Voxiom.io"}) & identity_keys({"title": "Voxiom"}))
         self.assertFalse(identity_keys({"title": "Radio"}) & identity_keys({"title": "Rad"}))
@@ -110,7 +136,7 @@ class RenderedFactsTests(unittest.TestCase):
             self.assertTrue(game["allow_embed"])
             self.assertTrue(game["embed_checked_at"])
             self.assertTrue(game["source_checked_at"])
-            guide = GAME_GUIDES[slug]
+            guide = game_guide(game)
             self.assertTrue(guide["summary"])
             self.assertTrue(guide["how_to"])
             self.assertTrue(guide["tips"])

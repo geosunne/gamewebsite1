@@ -1,7 +1,7 @@
 {
   "website": "https://www.onlinegames.io",
   "extraction_timestamp": "2025-10-13 10:25:04",
-  "total_games": 508,
+  "total_games": 485,
   "games": [
     {
       "title": "Dynamons 12",
@@ -554,28 +554,6 @@
       "thumbnail_alt": ""
     },
     {
-      "title": "Obby But You're on a Bike",
-      "url": "https://www.onlinegames.io/obby-but-you-re-on-a-bike/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/257923?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Ride through wild 3D platforming levels in Obby but Youâre on a Bike! Capture flags, upgrade your bike, and test your skills. Play now on OnlineGames.io!",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/885/obby-but-your-on-a-bike.jpg",
-      "thumbnail_alt": ""
-    },
-    {
       "title": "Miniblox io",
       "url": "https://www.onlinegames.io/miniblox-io/",
       "iframes": [
@@ -1082,28 +1060,6 @@
       "thumbnail_alt": ""
     },
     {
-      "title": "TB World",
-      "url": "https://www.onlinegames.io/tb-world/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/364663?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Create your dream world in TB World, all items unlocked version of Toca Boca! Design characters, decorate homes, and play for free on OnlineGames.io!",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/948/TB-World-Toca-Boca.jpg",
-      "thumbnail_alt": ""
-    },
-    {
       "title": "Aventador Vice Crime City",
       "url": "https://www.onlinegames.io/aventador-vice-crime-city/",
       "iframes": [
@@ -1189,28 +1145,6 @@
       "play_count": "",
       "game_type": "HTML5",
       "thumbnail": "https://www.onlinegames.io/media/posts/999/crazy-plane-landing.jpg",
-      "thumbnail_alt": ""
-    },
-    {
-      "title": "Granny",
-      "url": "https://www.onlinegames.io/granny/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/307198?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Trapped in Granny's eerie house, you must outsmart her razor-sharp hearing and escape before it's too late. Can you survive the scary puzzle game online?",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/884/granny.jpg",
       "thumbnail_alt": ""
     },
     {
@@ -1368,28 +1302,6 @@
       "thumbnail_alt": ""
     },
     {
-      "title": "DTA 6",
-      "url": "https://www.onlinegames.io/dta-6/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/285639?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Play DTA 6, a free online game where you explore a city, commit crimes, and outrun the cops as Jack, the gang member.",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/906/dta-6-online.jpg",
-      "thumbnail_alt": ""
-    },
-    {
       "title": "Spacebar Clicker",
       "url": "https://www.onlinegames.io/spacebar-clicker/",
       "iframes": [
@@ -1453,28 +1365,6 @@
       "play_count": "",
       "game_type": "Web",
       "thumbnail": "https://www.onlinegames.io/media/posts/394/Hexanaut-io.jpg",
-      "thumbnail_alt": ""
-    },
-    {
-      "title": "Survival Race",
-      "url": "https://www.onlinegames.io/survival-race/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/288720?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Survival Race, is a 3D car racing game that offers a unique racing experience and has a special place in the hearts of web gamers. ",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/768/Survival-Race.jpg",
       "thumbnail_alt": ""
     },
     {
@@ -2568,28 +2458,6 @@
       "thumbnail_alt": ""
     },
     {
-      "title": "Thief Puzzle",
-      "url": "https://www.onlinegames.io/thief-puzzle/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/375449?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Start playing Thief Puzzle today and see if your stretchy hand can get you out of trouble or into it!",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/1009/Thief-Puzzle.jpg",
-      "thumbnail_alt": ""
-    },
-    {
       "title": "Highway Racer Pro",
       "url": "https://www.onlinegames.io/highway-racer-pro/",
       "iframes": [
@@ -3118,28 +2986,6 @@
       "thumbnail_alt": ""
     },
     {
-      "title": "Only Up Obby",
-      "url": "https://www.onlinegames.io/only-up-obby/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/335573?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Play Only Up Obby, a Roblox like parkour game that is free to play online!",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/859/Only-Up-Obby.jpg",
-      "thumbnail_alt": ""
-    },
-    {
       "title": "Slope Rolling",
       "url": "https://www.onlinegames.io/slope-rolling/",
       "iframes": [
@@ -3181,28 +3027,6 @@
       "play_count": "",
       "game_type": "HTML5",
       "thumbnail": "https://www.onlinegames.io/media/posts/667/Ultiate-Flying-Car.jpg",
-      "thumbnail_alt": ""
-    },
-    {
-      "title": "Granny 2",
-      "url": "https://www.onlinegames.io/granny-2/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/307198?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Escape from Granny and Grandpaâs terrifying house in Granny 2. Solve puzzles, avoid traps, and survive the pursuit of the creepy duo for five nights.",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/901/Granny-2-online.jpg",
       "thumbnail_alt": ""
     },
     {
@@ -3804,28 +3628,6 @@
       "thumbnail_alt": ""
     },
     {
-      "title": "Obby Prison Escape",
-      "url": "https://www.onlinegames.io/obby-prison-escape/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/327874?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Play Obby Prison Escape, a Roblox like parkour game that is free to play online!",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/863/obby-prison-escape.jpg",
-      "thumbnail_alt": ""
-    },
-    {
       "title": "Time Shooter 3: SWAT",
       "url": "https://www.onlinegames.io/time-shooter-3-swat/",
       "iframes": [
@@ -4376,28 +4178,6 @@
       "thumbnail_alt": ""
     },
     {
-      "title": "Idle Vlogger",
-      "url": "https://www.onlinegames.io/idle-vlogger/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/242308?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Who wouldn't want to be a famous vlogger with millions of subscribers on YouTube? Play Idle Vlogger now!",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/860/Idle-Vlogger.jpg",
-      "thumbnail_alt": ""
-    },
-    {
       "title": "F1 Drift Racer",
       "url": "https://www.onlinegames.io/f1-drift-racer/",
       "iframes": [
@@ -4703,28 +4483,6 @@
       "play_count": "",
       "game_type": "HTML5",
       "thumbnail": "https://www.onlinegames.io/media/posts/763/home-design.jpg",
-      "thumbnail_alt": ""
-    },
-    {
-      "title": "Immortal: Dark Slayer",
-      "url": "https://www.onlinegames.io/immortal-dark-slayer/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/367650?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Play Immortal: Dark Slayer, a free online action RPG where you fight monsters, unlock powerful upgrades, and choose your weapons!",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/1031/immortal-dark-slayer.jpg",
       "thumbnail_alt": ""
     },
     {
@@ -5608,50 +5366,6 @@
       "thumbnail_alt": ""
     },
     {
-      "title": "Chess",
-      "url": "https://www.onlinegames.io/chess/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/165384?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Chess, which is all times the most played board game, is an amazing pastime and an excellent way to sharpen…",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/376/Online-Chess-Game.jpg",
-      "thumbnail_alt": ""
-    },
-    {
-      "title": "Obby: Find 100 Cats",
-      "url": "https://www.onlinegames.io/obby-find-100-cats/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/374776?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Obby: Find 100 Cats is a purr-fectly crafted 3D adventure game where the Cat Distribution System literally fails. ",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/865/obby-find-100-cats-game.jpg",
-      "thumbnail_alt": ""
-    },
-    {
       "title": "Monster Survivors",
       "url": "https://www.onlinegames.io/monster-survivors/",
       "iframes": [
@@ -5891,28 +5605,6 @@
       "play_count": "",
       "game_type": "Web",
       "thumbnail": "https://www.onlinegames.io/media/website/online-games-io.png",
-      "thumbnail_alt": ""
-    },
-    {
-      "title": "Five Nights At Candy's",
-      "url": "https://www.onlinegames.io/five-nights-at-candys/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/369698?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Can you survive the dark world of Five Nights at Candy's? Keep an eye on the cameras, manage your power, and outsmart the dangers lurking in the shadows.",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/895/five-nights-at-candys.jpg",
       "thumbnail_alt": ""
     },
     {
@@ -6158,28 +5850,6 @@
       "thumbnail_alt": ""
     },
     {
-      "title": "Five Nights At Cat Freddy",
-      "url": "https://www.onlinegames.io/five-nights-at-cat-freddy/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/219368?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Join Freddy the Cat on a spooky adventure! Solve puzzles and craft items, and survive the night in this fun and thrilling game!",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/850/cat-freddy.jpg",
-      "thumbnail_alt": ""
-    },
-    {
       "title": "Papa's Cheeseria",
       "url": "https://www.onlinegames.io/papas-cheeseria/",
       "iframes": [
@@ -6419,28 +6089,6 @@
       "play_count": "",
       "game_type": "Flash",
       "thumbnail": "https://www.onlinegames.io/media/posts/893/Pancakeria.jpg",
-      "thumbnail_alt": ""
-    },
-    {
-      "title": "Obby: Parkour Lava",
-      "url": "https://www.onlinegames.io/obby-parkour-lava/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/392253?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Escape the rising lava in Obby: Parkour Lava! Jump, climb, collect coins, and unlock skins in this thrilling parkour game inspired by Roblox. Play now!",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/904/obby-parkour-lava.jpg",
       "thumbnail_alt": ""
     },
     {
@@ -6793,28 +6441,6 @@
       "play_count": "",
       "game_type": "Web",
       "thumbnail": "https://www.onlinegames.io/media/posts/35/City-Car-Simulator.jpg",
-      "thumbnail_alt": ""
-    },
-    {
-      "title": "Obby: Draw and Jump",
-      "url": "https://www.onlinegames.io/obby-draw-and-jump/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/289722?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Play Obby: Draw and Jump for free now! Draw bridges, erase lines, and race to the finish in this creative Roblox-style challenge.",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/923/Obby-Draw-and-Jump.jpg",
       "thumbnail_alt": ""
     },
     {
@@ -7189,28 +6815,6 @@
       "play_count": "",
       "game_type": "Unity",
       "thumbnail": "https://www.onlinegames.io/media/posts/1004/Crazy-Cattle-3D.jpg",
-      "thumbnail_alt": ""
-    },
-    {
-      "title": "Space Waves",
-      "url": "https://www.onlinegames.io/space-waves/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/359038?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Ride the waves of the galaxy in Space Waves! Play it for free on OnlineGames.io!",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/855/space-waves.jpg",
       "thumbnail_alt": ""
     },
     {
@@ -7856,28 +7460,6 @@
       "thumbnail_alt": ""
     },
     {
-      "title": "Rainbow Obby Parkour",
-      "url": "https://www.onlinegames.io/rainbow-obby-parkour/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/397744?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Jump into Rainbow Obby Parkour on OnlineGames.io! Conquer wild obstacle courses with cars, bikes, balls, and classic parkour fun. Play for free now!",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/913/Rainbow-Obby.jpg",
-      "thumbnail_alt": ""
-    },
-    {
       "title": "Mergest Kingdom",
       "url": "https://www.onlinegames.io/mergest-kingdom/",
       "iframes": [
@@ -8029,28 +7611,6 @@
       "play_count": "",
       "game_type": "Web",
       "thumbnail": "https://www.onlinegames.io/media/posts/1020/ultimate-moto.jpg",
-      "thumbnail_alt": ""
-    },
-    {
-      "title": "Jelly Car Simulator",
-      "url": "https://www.onlinegames.io/jelly-car-simulator/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/383730?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Drive a squishy jelly car through challenging levels! Upgrade your ride, conquer obstacles, and enjoy endless fun in Jelly Car Simulator!",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/917/jelly-car.jpg",
       "thumbnail_alt": ""
     },
     {
@@ -8868,28 +8428,6 @@
       "thumbnail_alt": ""
     },
     {
-      "title": "Obby: Find Sprunki",
-      "url": "https://www.onlinegames.io/obby-find-sprunki/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/382275?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Play Obby: Find Sprunki, a fun adventure to find hidden Sprunks across vibrant and eerie worlds. Collect unique morphs, unlock bonuses, and uncover secrets!",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/912/obby-find-sprunki.jpg",
-      "thumbnail_alt": ""
-    },
-    {
       "title": "Sword Play Ninja Slice Runner",
       "url": "https://www.onlinegames.io/sword-play-ninja-slice-runner/",
       "iframes": [
@@ -9569,28 +9107,6 @@
       "play_count": "",
       "game_type": "Unity",
       "thumbnail": "https://www.onlinegames.io/media/posts/225/Masked-Forces-Zombie-Survival-Online.jpg",
-      "thumbnail_alt": ""
-    },
-    {
-      "title": "Epic Mine",
-      "url": "https://www.onlinegames.io/epic-mine/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/385148?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Dive into Epic Mine, a free clicker game where you mine, craft, and battle your way to the Earth's core to stop a global catastrophe. Start digging now!",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/927/epic-mine.jpg",
       "thumbnail_alt": ""
     },
     {
@@ -10691,28 +10207,6 @@
       "play_count": "",
       "game_type": "Unity",
       "thumbnail": "https://www.onlinegames.io/media/posts/835/Poly-racing-cars-image.jpg",
-      "thumbnail_alt": ""
-    },
-    {
-      "title": "Words of Wonders",
-      "url": "https://www.onlinegames.io/words-of-wonders/",
-      "iframes": [
-        {
-          "src": "https://playhop.com/app/218560?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
-          "width": "1060",
-          "height": "650",
-          "frameborder": "0",
-          "allowfullscreen": "allowfullscreen",
-          "sandbox": ""
-        }
-      ],
-      "description": "Play Words of Wonders online for free on OnlineGames.io! Connect letters, solve puzzles, and explore famous landmarks in this fun word game.  ",
-      "tags": [],
-      "category": "Home",
-      "rating": "",
-      "play_count": "",
-      "game_type": "Web",
-      "thumbnail": "https://www.onlinegames.io/media/posts/975/words-of-wonders-online.jpg",
       "thumbnail_alt": ""
     },
     {

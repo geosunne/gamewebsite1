@@ -10,7 +10,7 @@ from urllib.parse import urljoin, urlsplit
 
 from bs4 import BeautifulSoup
 
-from catalog_quality import legacy_category_redirects, normalize_source_metrics
+from catalog_quality import has_blocked_embed, legacy_category_redirects, normalize_source_metrics
 from generate_static_pages import (
     build_mode_notes, get_all_categories, normalize_game_data, prepare_catalog,
     standardize_game_tags,
@@ -21,6 +21,19 @@ from serve_static import StaticHTTPRequestHandler
 
 
 class SourceDataTests(unittest.TestCase):
+    def test_blocked_providers_cannot_return_through_catalog_rebuilds(self):
+        blocked = [
+            {"iframe_url": "https://playhop.com/app/385148"},
+            {"iframe_url": "https://www.playhop.com/app/385148"},
+            {"game_url": "https://PLAYHOP.com/app/385148"},
+        ]
+        for game in blocked:
+            self.assertTrue(has_blocked_embed(game))
+        valid = {"slug": "example", "title": "Example", "iframe_url": "https://games.crazygames.com/example/index.html"}
+        self.assertFalse(has_blocked_embed(valid))
+        self.assertFalse(has_blocked_embed({"iframe_url": "https://playhop.com.example.org/game"}))
+        self.assertEqual([game["slug"] for game in prepare_catalog(blocked + [valid])], ["example"])
+
     def test_current_game_controls_do_not_leak_from_recommendations(self):
         controls = 'Tap "FIGHT!" to start; drag troops to merge. \u00e9'
         record = {
@@ -89,6 +102,15 @@ class GeneratedCatalogTests(unittest.TestCase):
         cls.root = Path("static_html")
         cls.games = json.loads((cls.root / "all_games.json").read_text(encoding="utf-8"))["games"]
         cls.categories = json.loads((cls.root / "categories.json").read_text(encoding="utf-8"))
+
+    def test_blocked_embeds_and_orphan_game_pages_are_not_published(self):
+        self.assertFalse([game["slug"] for game in self.games if has_blocked_embed(game)])
+        active_slugs = {game["slug"] for game in self.games}
+        self.assertLessEqual(set((self.root / "game_slugs.txt").read_text().splitlines()), active_slugs)
+        self.assertEqual(
+            {page.stem for page in (self.root / "games").glob("*.html")},
+            active_slugs,
+        )
 
     def test_pages_match_catalog_categories_and_sitemap(self):
         tree = ET.parse(self.root / "sitemap.xml")

@@ -97,6 +97,59 @@ def collect_slugs_from_category(session, url):
     return list(dict.fromkeys(slugs))
 
 
+def discover_category_urls(session):
+    response = session.get(CRAZYGAMES_BASE, timeout=20)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+    urls = []
+    for link in soup.find_all("a", href=True):
+        url = urljoin(CRAZYGAMES_BASE, link["href"])
+        parsed = urlsplit(url)
+        if parsed.hostname == "www.crazygames.com" and re.fullmatch(r"/(?:c|t)/[a-z0-9-]+/?", parsed.path):
+            urls.append(url)
+    return list(dict.fromkeys(urls))
+
+
+def build_source_guide(game):
+    soup = BeautifulSoup(" ".join([
+        game.get("descriptionFirst") or "", game.get("descriptionRest") or "",
+    ]), "html.parser")
+
+    def section_text(pattern):
+        for heading in soup.find_all(re.compile(r"^h[1-6]$")):
+            if not re.search(pattern, heading.get_text(" ", strip=True), re.I):
+                continue
+            parts = []
+            for sibling in heading.find_next_siblings():
+                if re.fullmatch(r"h[1-6]", sibling.name or ""):
+                    break
+                if sibling.name in {"p", "ul", "ol"}:
+                    parts.append(sibling.get_text(" ", strip=True))
+            if parts:
+                return html_to_text(" ".join(parts))
+        return ""
+
+    first_paragraph = soup.find("p")
+    summary = html_to_text(game.get("metaDescription") or (str(first_paragraph) if first_paragraph else game.get("descriptionFirst")) or "")
+    controls = html_to_text(game.get("controls") or "")
+    how_to = section_text(r"^how to play\b") or controls
+    if not how_to:
+        how_to = "Open the player and follow the game's tutorial or on-screen instructions."
+    source_tips = section_text(r"\b(?:tips|strategy|strategies)\b")
+    tips = [source_tips] if source_tips else [
+        "Read the controls above before starting; keyboard, mouse, and touch inputs can differ.",
+        "Check the in-game objective and tutorial before choosing a mode or spending resources.",
+    ]
+    return {
+        "summary": summary,
+        "how_to": how_to,
+        "tips": tips,
+        "source_url": f"{CRAZYGAMES_BASE}/game/{slugify(game.get('slug') or game.get('name'))}",
+        "reviewed_on": datetime.now(timezone.utc).date().isoformat(),
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+    }
+
+
 def category_name(game):
     category = game.get("category") or {}
     raw = category.get("name") or "Casual"
@@ -179,6 +232,7 @@ def build_game_record(game):
             "CrazyGames embeddable title",
         ],
         "controls": parse_controls(game),
+        "content_guide": build_source_guide(game),
         "release_date": game.get("addedOn") or "",
         "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -271,6 +325,8 @@ def main():
     parser.add_argument("--limit", type=int, default=40, help="Maximum new games to add")
     parser.add_argument("--delay", type=float, default=0.5, help="Delay between game detail requests")
     parser.add_argument("--category-url", action="append", default=[], help="CrazyGames category/tag URL to scan")
+    parser.add_argument("--discover-categories", action="store_true", help="Also scan category and tag links published on the CrazyGames homepage")
+    parser.add_argument("--resume", action="store_true", help="Continue the latest import batch toward --limit, retaining its added games")
     args = parser.parse_args()
 
     session = requests.Session()
@@ -280,6 +336,8 @@ def main():
     })
 
     category_urls = args.category_url or [urljoin(CRAZYGAMES_BASE, path) for path in DEFAULT_CATEGORY_PATHS]
+    if args.discover_categories:
+        category_urls = list(dict.fromkeys(category_urls + discover_category_urls(session)))
     existing_slugs = load_existing_slugs()
     known_keys = set().union(*(identity_keys(game) for game in load_existing_games()))
     candidates = []
@@ -292,9 +350,18 @@ def main():
     candidates = [slug for slug in dict.fromkeys(candidates) if slug not in existing_slugs]
     print(f"Candidate new slugs: {len(candidates)}")
 
-    imported = []
-    skipped = {}
-    checked = 0
+    previous_batch = {}
+    previous_games = []
+    if args.resume and OUTPUT_FILE.exists():
+        previous_data = json.loads(OUTPUT_FILE.read_text(encoding="utf-8"))
+        previous_batch = previous_data.get("metadata", {}).get("latest_import", {})
+        previous_slugs = set(previous_batch.get("added_slugs", []))
+        previous_games = [game for game in previous_data.get("games", []) if game["slug"] in previous_slugs]
+        if len(previous_games) > args.limit:
+            parser.error("--limit cannot be smaller than the resumed batch")
+    imported = previous_games.copy()
+    skipped = previous_batch.get("skipped", {}).copy()
+    checked = previous_batch.get("checked", 0)
     for slug in candidates:
         if len(imported) >= args.limit:
             break
@@ -338,6 +405,7 @@ def main():
             "latest_import": {
                 "requested_limit": args.limit,
                 "candidates": len(candidates),
+                "resumed_from_count": len(previous_games),
                 "checked": checked,
                 "added_count": len(imported),
                 "added_slugs": [game["slug"] for game in imported],
@@ -349,7 +417,8 @@ def main():
     OUTPUT_FILE.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
 
     print("\nImport complete")
-    print(f"Added this run: {len(imported)}")
+    print(f"Added this run: {len(imported) - len(previous_games)}")
+    print(f"Added to batch: {len(imported)}")
     print(f"Stored CrazyGames games: {len(by_slug)}")
     print(f"Skipped: {skipped}")
 

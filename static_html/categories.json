@@ -35,6 +35,11 @@
     "url": "/categories/driving"
   },
   {
+    "name": "Parking",
+    "slug": "parking",
+    "url": "/categories/parking"
+  },
+  {
     "name": "Sports",
     "slug": "sports",
     "url": "/categories/sports"
