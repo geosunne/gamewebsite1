@@ -3,6 +3,12 @@ import re
 from urllib.parse import urlparse
 
 
+def has_blocked_embed(game):
+    # Playhop app pages reject third-party framing, including BTW game.
+    host = urlparse(game.get("iframe_url") or game.get("game_url") or "").hostname or ""
+    return host == "playhop.com" or host.endswith(".playhop.com")
+
+
 def clean_source_text(value):
     text = str(value or "")
     text = re.sub(r"\\u([0-9a-fA-F]{4})", lambda match: chr(int(match[1], 16)), text)
