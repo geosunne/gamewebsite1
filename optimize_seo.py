@@ -5,7 +5,7 @@ import re
 from datetime import date
 from bs4 import BeautifulSoup
 from xml.sax.saxutils import escape
-from generate_static_pages import GAME_GUIDES, build_original_summary
+from generate_static_pages import GAME_GUIDES, build_original_summary, build_unique_page_title, site_absolute_url
 
 SITE_URL = "https://btwgame.com"
 SITE_IMAGE = f"{SITE_URL}/assets/images/btwlogo.png"
@@ -38,7 +38,7 @@ def category_label(game):
     return game.get('category_name') or get_category_name(game.get('category_id', 7))
 
 def game_page_title(game):
-    return f"{game['title']} browser guide and quick play notes | BTW game"
+    return build_unique_page_title(game['title'], category_label(game), game.get('slug'))
 
 def game_page_description(game):
     return truncate(build_original_summary(
@@ -71,10 +71,15 @@ def ensure_game_schema_fields(soup, game):
             data = json.loads(script.string or '{}')
         except json.JSONDecodeError:
             continue
-        if data.get('@type') != 'Game':
+        if data.get('@type') not in ('Game', 'VideoGame'):
             continue
         found_game_schema = True
-        data['image'] = game.get('thumbnail_url') or data.get('image') or SITE_IMAGE
+        data['@type'] = 'VideoGame'
+        data['applicationCategory'] = 'GameApplication'
+        data.pop('additionalProperty', None)
+        if isinstance(data.get('about'), str):
+            data.pop('about', None)
+        data['image'] = site_absolute_url(game.get('thumbnail_url') or data.get('image') or SITE_IMAGE)
         data['url'] = f"{SITE_URL}/games/{game['slug']}"
         data['offers'] = {
             "@type": "Offer",
@@ -83,32 +88,32 @@ def ensure_game_schema_fields(soup, game):
             "availability": "https://schema.org/InStock"
         }
         data['gamePlatform'] = data.get('gamePlatform') or "Web Browser"
-        data['operatingSystem'] = data.get('operatingSystem') or "Any"
+        if game.get('operating_system'):
+            data['operatingSystem'] = game['operating_system']
+        else:
+            data.pop('operatingSystem', None)
         data['isAccessibleForFree'] = True
-        data['publisher'] = data.get('publisher') or {
-            "@type": "Organization",
-            "name": "BTW game",
-            "url": SITE_URL
-        }
+        publisher = data.get('publisher') or {}
+        if publisher.get('@id') == f'{SITE_URL}/#organization' or publisher.get('name') == 'BTW game':
+            data.pop('publisher', None)
         rating = data.get('aggregateRating')
         if isinstance(rating, dict) and not (rating.get('reviewCount') or rating.get('ratingCount')):
             data.pop('aggregateRating', None)
-        script.string = json.dumps(data, indent=2, ensure_ascii=False)
+        script.string = json.dumps(data, indent=2, ensure_ascii=False).replace("<", "\\u003c")
 
     if found_game_schema:
         return
 
     fallback = {
         "@context": "https://schema.org",
-        "@type": "Game",
+        "@type": "VideoGame",
         "name": game['title'],
         "description": game.get('description', f"Play {game['title']} online for free."),
         "url": f"{SITE_URL}/games/{game['slug']}",
-        "image": game.get('thumbnail_url') or SITE_IMAGE,
+        "image": site_absolute_url(game.get('thumbnail_url') or SITE_IMAGE),
         "genre": game.get('category_name') or get_category_name(game.get('category_id', 7)),
         "gamePlatform": "Web Browser",
-        "operatingSystem": "Any",
-        "applicationCategory": "Game",
+        "applicationCategory": "GameApplication",
         "isAccessibleForFree": True,
         "offers": {
             "@type": "Offer",
@@ -116,11 +121,6 @@ def ensure_game_schema_fields(soup, game):
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock"
         },
-        "publisher": {
-            "@type": "Organization",
-            "name": "BTW game",
-            "url": SITE_URL
-        }
     }
     script_tag = soup.new_tag('script', type='application/ld+json')
     script_tag.string = json.dumps(fallback, indent=2, ensure_ascii=False)
@@ -147,6 +147,9 @@ def optimize_index_html():
         content = f.read()
 
     soup = BeautifulSoup(content, 'html.parser')
+    with open('static_html/all_games.json', encoding='utf-8') as catalog_file:
+        game_count = len(json.load(catalog_file)['games'])
+    home_description = f"Explore {game_count:,} free browser games at BTW game. Find game controls, play guides, and action, puzzle, racing, sports, and casual games."
 
     # Update title
     title_tag = soup.find('title')
@@ -156,7 +159,7 @@ def optimize_index_html():
     # Update meta description
     meta_desc = soup.find('meta', attrs={'name': 'description'})
     if meta_desc:
-        meta_desc['content'] = "Play 500+ free online games at BTW game. Fast browser games for quick breaks, with action, puzzle, racing, sports, and casual games."
+        meta_desc['content'] = home_description
 
     # Update meta keywords
     meta_keywords = soup.find('meta', attrs={'name': 'keywords'})
@@ -170,7 +173,7 @@ def optimize_index_html():
 
     og_desc = soup.find('meta', attrs={'property': 'og:description'})
     if og_desc:
-        og_desc['content'] = "Play 500+ free online games instantly at BTW game. No downloads, no accounts, just quick browser play."
+        og_desc['content'] = home_description
 
     og_url = soup.find('meta', attrs={'property': 'og:url'})
     if og_url:
@@ -182,7 +185,7 @@ def optimize_index_html():
 
     twitter_desc = soup.find('meta', attrs={'name': 'twitter:description'})
     if twitter_desc:
-        twitter_desc['content'] = "Play 500+ free online games instantly at BTW game. No downloads, no accounts, just quick browser play."
+        twitter_desc['content'] = home_description
     ensure_meta(soup, 'property', 'og:image', SITE_IMAGE)
     ensure_meta(soup, 'name', 'twitter:image', SITE_IMAGE)
 
@@ -192,7 +195,7 @@ def optimize_index_html():
         "@type": "WebSite",
         "name": "BTW game",
         "url": "https://btwgame.com/",
-        "description": "Free online games platform with 500+ quick browser games",
+        "description": f"Browser game catalog with {game_count:,} games, controls, and play notes.",
         "potentialAction": {
             "@type": "SearchAction",
             "target": "https://btwgame.com/games?search={search_term_string}",
@@ -246,7 +249,9 @@ def optimize_games_html():
     if not meta_desc:
         meta_desc = soup.new_tag('meta', name='description')
         soup.head.append(meta_desc)
-    meta_desc['content'] = "Browse all 500+ free online games at BTW game. Find action, puzzle, racing, sports, and casual games that play instantly in your browser."
+    with open('static_html/all_games.json', encoding='utf-8') as catalog_file:
+        game_count = len(json.load(catalog_file)['games'])
+    meta_desc['content'] = f"Browse {game_count:,} free browser games at BTW game. Compare game categories, controls, and play guides before choosing a game."
 
     # Add meta keywords if not exists
     meta_keywords = soup.find('meta', attrs={'name': 'keywords'})
@@ -323,7 +328,7 @@ def optimize_game_pages():
         if og_url:
             og_url['content'] = f"https://btwgame.com/games/{game['slug']}"
 
-        thumbnail = game.get('thumbnail_url') or SITE_IMAGE
+        thumbnail = site_absolute_url(game.get('thumbnail_url') or SITE_IMAGE)
         ensure_meta(soup, 'property', 'og:image', thumbnail)
         ensure_meta(soup, 'name', 'twitter:image', thumbnail)
         ensure_game_schema_fields(soup, game)

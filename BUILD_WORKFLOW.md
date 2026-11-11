@@ -4,6 +4,27 @@
 
 ## SEO 数据修复与静态重建
 
+新增 CrazyGames 游戏时使用：
+
+~~~bash
+python3 import_crazygames_embed_games.py --limit 40 --delay 0.3
+~~~
+
+仅导入来源明确允许嵌入、播放器地址可访问且未命中既有身份的条目。脚本按 slug、名称（含 .io 名称变体）、来源 ID 和嵌入地址去重；实际新增数量及列表记录在 crazygames_games.json 的 metadata.latest_import 中。
+
+导入后，在 game_content_overrides.json 为新条目补充有来源依据的 summary、how_to 和 tips，按实际核对日期设置 reviewed_on。开发者、设备支持和来源日期取自记录；未知信息不补写，第三方账号要求应明确标注。
+
+新游戏需要首次生成本地缩略图时，不要跳过图片缓存：
+
+~~~bash
+python3 generate_static_pages.py --data-file static_html/all_games.json
+python3 optimize_seo.py
+python3 update_sitemap.py
+python3 -m unittest test_seo_repairs test_crazygames_geo -v
+~~~
+
+Google 的 AI Overviews / AI Mode 使用基础 SEO 要求。本项目以可索引的游戏说明、来源、事实摘要及与正文一致的结构化数据支持发现和理解，不以新增 AI 文件或特殊标记作为收录保证。
+
 Minigame 元数据需要更新时，先运行：
 
 ~~~bash

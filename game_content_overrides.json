@@ -40,5 +40,368 @@
     "how_to": "Use the short and long jump options shown by the game to move between pillars without touching the saw blade.",
     "tips": ["Choose the jump distance to fit the gap ahead.", "Wait until the route past the saw blade is clear before jumping."],
     "source_url": "https://minigame.com/en/game/geometr-jump"
+  },
+  "block-puzzle-master": {
+    "category_name": "Puzzle",
+    "page_title": "Block Blaster - 8x8 Puzzle and Controls",
+    "summary": "Block Blaster is a grid puzzle about fitting fixed block shapes into an 8-by-8 board. Complete horizontal or vertical lines to clear space for the next pieces.",
+    "how_to": "Drag a block onto the board and fill rows or columns to remove them. The pieces cannot be rotated, so compare their shapes with the open spaces before placing them.",
+    "tips": ["Keep an area open for larger pieces instead of filling every small gap.", "Look for a placement that helps complete both a row and a column."],
+    "source_url": "https://www.crazygames.com/game/block-puzzle-master",
+    "reviewed_on": "2026-11-11"
+  },
+  "build-and-crush": {
+    "category_name": "Simulation",
+    "page_title": "Build and Crush - Building and Destruction Guide",
+    "summary": "Build and Crush combines a block-building sandbox with a destruction mode. Create structures, then choose weapons and tools to demolish creations.",
+    "how_to": "In Build mode, move with WASD, place blocks with the right mouse button, and remove them with the left. In Crush mode, select a weapon from the screen and follow its control prompts.",
+    "tips": ["Use free flight to inspect a creation before choosing where to attack.", "Check the control prompts again when switching weapons; their inputs differ."],
+    "source_url": "https://www.crazygames.com/game/build-and-crush",
+    "reviewed_on": "2026-11-11"
+  },
+  "getaway-shootout": {
+    "category_name": "Two Player",
+    "page_title": "Getaway Shootout - Two-Player Controls and Guide",
+    "summary": "Getaway Shootout is a jumping race with local two-player controls. Reach the getaway while collecting power-ups and coping with movement limited to left and right jumps.",
+    "how_to": "Player one uses W and E to jump left and right, and R for a power-up. Player two uses I and O to jump, and P for a power-up.",
+    "tips": ["Practise alternating left and right jumps before racing for a power-up.", "Check your landing position before committing to the next jump."],
+    "source_url": "https://www.crazygames.com/game/getaway-shootout",
+    "reviewed_on": "2026-11-11"
+  },
+  "mr-dude-online-multiverse-challenge": {
+    "category_name": "Action",
+    "page_title": "Mr. Dude - Multiplayer Challenges and Controls",
+    "summary": "Mr. Dude: Online Multiverse Challenge is a multiplayer challenge game with movement, jumping, boosters, and different activities. The selected mode determines which objectives and interactions matter.",
+    "how_to": "On desktop, move with WASD and jump with Space. Keys 1 through 4 activate boosters; E interacts with items in panic room mode. Mobile builds provide on-screen buttons.",
+    "tips": ["Read the selected mode's objective before using a booster.", "Try the movement and interaction controls before joining the busiest part of a challenge."],
+    "source_url": "https://www.crazygames.com/game/mr-dude-online-multiverse-challenge",
+    "reviewed_on": "2026-11-11"
+  },
+  "far-orion-new-worlds": {
+    "category_name": "Strategy",
+    "page_title": "Far Orion: New Worlds - Heroes and Battle Guide",
+    "summary": "Far Orion: New Worlds is a squad strategy game built around heroes and battle cards. Assemble a team, choose skill targets, and use resources to strengthen it between missions.",
+    "how_to": "Use the mouse to select heroes, targets, and battle cards. Skills consume energy that refills over time, so choose when to spend it rather than activating everything at once.",
+    "tips": ["Compare support and attack skills when building the squad.", "Save enough energy for the next important skill instead of spending it as soon as it appears."],
+    "source_url": "https://www.crazygames.com/game/far-orion-new-worlds",
+    "reviewed_on": "2026-11-11"
+  },
+  "battleship": {
+    "category_name": "Strategy",
+    "page_title": "Battleship - Naval Strategy and How to Play",
+    "summary": "Battleship is a naval strategy game about locating an opponent's hidden fleet. Arrange your ships and use the results of each shot to narrow down the remaining positions.",
+    "how_to": "Use the mouse to place the fleet and select squares to attack. After a hit, investigate the nearby squares to work out the ship's direction.",
+    "tips": ["Use misses to rule out areas instead of firing repeatedly in the same place.", "After finding a ship, follow its line before returning to the wider search."],
+    "source_url": "https://www.crazygames.com/game/battleship",
+    "reviewed_on": "2026-11-11"
+  },
+  "ducklife": {
+    "category_name": "Simulation",
+    "page_title": "Duck Life - Training, Racing and Controls",
+    "summary": "Duck Life combines duck training with races. Improve running, flying, and swimming through minigames, feed the duck for energy, and enter races to earn money for the damaged farm.",
+    "how_to": "Choose a training activity and follow its arrow-key controls. Build the duck's skills, replenish its energy with food, then enter a race when it is ready.",
+    "tips": ["Train all three movement skills rather than relying on one strong activity.", "Check energy before a race; training and feeding have different roles."],
+    "source_url": "https://www.crazygames.com/game/ducklife",
+    "reviewed_on": "2026-11-11"
+  },
+  "cuphead": {
+    "category_name": "Shooter",
+    "page_title": "Cuphead - Browser Airplane Battle and Controls",
+    "summary": "This Cuphead browser listing features a side-scrolling airplane boss encounter. Move around incoming attacks while shooting, shrinking, parrying, and using a superpower.",
+    "how_to": "In one-player mode, use the arrow keys to move, X to shoot, C to shrink, Z to parry, and V for the superpower. Two-player mode uses different action keys, listed below.",
+    "tips": ["Learn the one-player key layout before switching to the two-player setup.", "Keep room to dodge instead of staying against the edge of the play area."],
+    "source_url": "https://www.crazygames.com/game/cuphead",
+    "reviewed_on": "2026-11-11"
+  },
+  "house-of-hazards": {
+    "category_name": "Two Player",
+    "page_title": "House of Hazards - Local Multiplayer Guide",
+    "summary": "House of Hazards is a local multiplayer game about completing household tasks while other players trigger hazards. Take turns navigating the house and interrupting the other players.",
+    "how_to": "Player one uses A and D to move, W to jump, and S for crouching, grabbing, or activating a hazard. Player two uses J, L, I, and K for the equivalent actions.",
+    "tips": ["Watch the timing of a hazard before moving through its path.", "Agree on the keyboard layout before starting a shared-screen round."],
+    "faq": [{"question": "Can more than two people play House of Hazards?", "answer": "The source provides keyboard controls for players one and two, and gamepad controls for players three and four. Extra players need gamepads."}],
+    "source_url": "https://www.crazygames.com/game/house-of-hazards",
+    "reviewed_on": "2026-11-11"
+  },
+  "dead-land-survival": {
+    "category_name": "Survival",
+    "page_title": "Dead Land: Survival - Shelter and Resource Guide",
+    "summary": "Dead Land: Survival is a survival game set in a zombie-filled world. Scavenge for resources, develop your skills, and improve a shelter while dealing with hostile encounters.",
+    "how_to": "Use the mouse to choose activities and manage the game interface. Gather supplies and review shelter and character upgrades as the available resources change.",
+    "tips": ["Check the resources needed for an upgrade before spending supplies elsewhere.", "Review shelter needs between scavenging activities."],
+    "source_url": "https://www.crazygames.com/game/dead-land-survival",
+    "reviewed_on": "2026-11-11"
+  },
+  "pirates-of-the-caribbean-tow": {
+    "category_name": "Strategy",
+    "page_title": "Pirates of the Caribbean: ToW - Fleet Guide",
+    "summary": "Pirates of the Caribbean: Tides of War is a fleet and fortress strategy game. Build a pirate hideout, improve ships, and take part in quests and alliance activities.",
+    "how_to": "Click objects and interface buttons to manage the fortress and fleet. Use the mouse wheel to change the map zoom while choosing where to explore or attack.",
+    "tips": ["Check ship and fortress upgrades together when deciding how to spend resources.", "Use the map zoom to inspect a destination before sending a fleet."],
+    "source_url": "https://www.crazygames.com/game/pirates-of-the-caribbean-tow",
+    "reviewed_on": "2026-11-11"
+  },
+  "warlord-fantasy-rpg": {
+    "category_name": "Strategy",
+    "page_title": "Warlord: Fantasy RPG - Equipment and Battle Guide",
+    "summary": "Warlord: Fantasy RPG is an online fantasy adventure centred on character equipment and battles. Collect weapons and armour, explore dungeons, and take part in player and clan activities.",
+    "how_to": "Use the mouse to navigate the game menus and choose activities. Review equipment and available improvements before entering the next battle or dungeon.",
+    "tips": ["Compare new equipment with the items already equipped.", "Check the requirements of an activity before committing resources to it."],
+    "source_url": "https://www.crazygames.com/game/warlord-fantasy-rpg",
+    "reviewed_on": "2026-11-11"
+  },
+  "magic-world": {
+    "category_name": "Match & Merge",
+    "page_title": "Magic World - Gem Matching Battle Guide",
+    "summary": "Magic World combines gem-matching puzzles with fantasy battles. Plan matches on the board while facing different creatures and opponents.",
+    "how_to": "Use the mouse to interact with the gem board and battle interface. Compare the available matches before choosing the next move.",
+    "tips": ["Look across the whole board before taking the first available match.", "Read the current battle information when deciding which match to make."],
+    "source_url": "https://www.crazygames.com/game/magic-world",
+    "reviewed_on": "2026-11-11"
+  },
+  "heroes-assemble": {
+    "category_name": "Strategy",
+    "page_title": "Heroes Assemble - Hero and Pet Team Guide",
+    "summary": "Heroes Assemble is a team-building adventure with heroes, pets, dungeons, and battles. Combine characters and companions, manage resources, and improve the team through different activities.",
+    "how_to": "Use the mouse to collect and organise heroes and pets, select activities, and manage upgrades. Check the team before moving into a new dungeon or battle.",
+    "tips": ["Consider how a pet supports the chosen heroes rather than selecting each separately.", "Compare upgrade needs with the resources available before spending them."],
+    "source_url": "https://www.crazygames.com/game/heroes-assemble",
+    "reviewed_on": "2026-11-11"
+  },
+  "castle-craft": {
+    "category_name": "Match & Merge",
+    "page_title": "Castle Craft - Resource Merging and Exploration",
+    "summary": "Castle Craft is a merging puzzle adventure about exploring a fog-covered land. Combine resources and use discovered items and keys while following Fiona's search for Michael.",
+    "how_to": "Drag items with the left mouse button to merge them. Follow the current task and use the resources you create to continue exploring.",
+    "tips": ["Check the task requirements before merging away an item you may need.", "Keep enough board space to organise the next group of resources."],
+    "source_url": "https://www.crazygames.com/game/castle-craft",
+    "reviewed_on": "2026-11-11"
+  },
+  "daily-room-escape": {
+    "category_name": "Puzzle",
+    "page_title": "Daily Room Escape - Clue and Puzzle Guide",
+    "summary": "Daily Room Escape is an escape-room puzzle built around hidden clues and linked riddles. Inspect the room, connect the information you find, and work toward the way out.",
+    "how_to": "Click objects and puzzle elements to inspect them. Keep track of clues and revisit a puzzle after finding information elsewhere in the room.",
+    "tips": ["Compare symbols and patterns before trying combinations at random.", "Recheck previously inspected objects when a new clue changes their meaning."],
+    "source_url": "https://www.crazygames.com/game/daily-room-escape",
+    "reviewed_on": "2026-11-11"
+  },
+  "battle-arena": {
+    "category_name": "Strategy",
+    "page_title": "Battle Arena - Hero Team and Battle Guide",
+    "summary": "Battle Arena is an RPG strategy game about assembling a team of heroes. Choose characters, develop the squad, and take it into battles through the game interface.",
+    "how_to": "Use the mouse to select heroes, manage the team, and interact with battle and progression menus. Review the squad before starting the next encounter.",
+    "tips": ["Compare the roles of the selected heroes when adjusting the team.", "Review available improvements after a difficult encounter."],
+    "source_url": "https://www.crazygames.com/game/battle-arena",
+    "reviewed_on": "2026-11-11"
+  },
+  "hex-empire": {
+    "category_name": "Strategy",
+    "page_title": "Hex Empire - Turn-Based Territory Guide",
+    "summary": "Hex Empire is a turn-based strategy game about expanding a nation across a map. Move armies, attack cities, and plan how to hold the territory you capture.",
+    "how_to": "Use the mouse to select armies and choose moves on the map. Consider the position of neighbouring armies before committing to an attack.",
+    "tips": ["Plan how to defend a captured city before pushing farther into the map.", "Look at the surrounding territory as well as the immediate target."],
+    "source_url": "https://www.crazygames.com/game/hex-empire",
+    "reviewed_on": "2026-11-11"
+  },
+  "dark-stones-card-battle-rpg": {
+    "category_name": "Strategy",
+    "page_title": "Dark Stones - Card Battle and Team Guide",
+    "summary": "Dark Stones: Card Battle RPG is a fantasy card-battle game about building a team of creatures and characters. Defeat opponents, collect new powers, and adjust the team for later encounters.",
+    "how_to": "Use the mouse to manage the card team and interact with battle menus. Read the available card and character information before choosing the next action.",
+    "tips": ["Compare the abilities of a new card with the needs of the current team.", "Check the opponent and battle information before changing the line-up."],
+    "source_url": "https://www.crazygames.com/game/dark-stones-card-battle-rpg",
+    "reviewed_on": "2026-11-11"
+  },
+  "mirrorland": {
+    "category_name": "Strategy",
+    "page_title": "Mirrorland - Turn-Based Adventure and Controls",
+    "summary": "Mirrorland is a turn-based fantasy adventure with heroes, quests, and battles. Create a character, explore the world, and form alliances while following the story.",
+    "how_to": "Follow the provider's account and character setup, then use the mouse to interact with the world and game interface. Read the current quest before choosing the next activity.",
+    "tips": ["Review the current quest when deciding where to explore next.", "Inspect rewards and character improvements between encounters."],
+    "account_required": true,
+    "faq": [{"question": "Does Mirrorland require an account?", "answer": "The source listing says an online account and character setup are required to start Mirrorland. BTW game's catalog itself can be browsed without an account."}],
+    "source_url": "https://www.crazygames.com/game/mirrorland",
+    "reviewed_on": "2026-11-11"
+  },
+  "ragdoll-archers": {
+    "category_name": "Shooter",
+    "page_title": "Ragdoll Archers - Bow Controls and Game Modes",
+    "summary": "Ragdoll Archers is an archery game with physics-driven stick figures. Aim at opponents, earn points, and improve the archer's abilities and ammunition.",
+    "how_to": "In single-player mode, control the archer with the left mouse button and jump with Space. Shared-keyboard modes use WASD and left Shift for player one, and arrow keys and right Shift for player two.",
+    "tips": ["Adjust the next shot using the result of the previous arrow.", "Check the control layout for the selected mode before starting a two-player game."],
+    "source_url": "https://www.crazygames.com/game/ragdoll-archers",
+    "reviewed_on": "2026-11-11"
+  },
+  "stone-grass-mowing-simulator": {
+    "category_name": "Simulation",
+    "page_title": "Stone Grass - Mowing Simulator and Controls",
+    "summary": "Stone Grass: Mowing Simulator is a grass-clearing game controlled by moving a mower through overgrown fields. Clear the landscape by guiding the vehicle across the remaining patches.",
+    "how_to": "Move with WASD, the arrow keys, or by dragging the left mouse button. Steer through the grass and adjust the route to cover areas left behind.",
+    "tips": ["Use overlapping passes to avoid leaving narrow strips of grass.", "Check the edges of a cleared area before moving on."],
+    "source_url": "https://www.crazygames.com/game/stone-grass-mowing-simulator",
+    "reviewed_on": "2026-11-11"
+  },
+  "arkadium-s-bubble-shooter": {
+    "category_name": "Match & Merge",
+    "page_title": "Arkadium's Bubble Shooter - Matching and Controls",
+    "summary": "Arkadium's Bubble Shooter is a colour-matching puzzle. Shoot bubbles into groups of three or more matching colours to remove them and build a score.",
+    "how_to": "Aim with the mouse and left-click to shoot. Right-click to switch the loaded bubble when the other colour gives you a better match.",
+    "tips": ["Compare the loaded and spare bubble before taking a difficult shot.", "Look for a match that opens access to bubbles behind it."],
+    "source_url": "https://www.crazygames.com/game/arkadium-s-bubble-shooter",
+    "reviewed_on": "2026-11-11"
+  },
+  "bubble-blast-pwd": {
+    "category_name": "Match & Merge",
+    "page_title": "Bubble Blast - Bubble Aiming and Quest Guide",
+    "summary": "Bubble Blast is a bubble-shooting puzzle with quests to complete. Aim matching colours into the board and check the current objective as the bubbles are cleared.",
+    "how_to": "Drag with the left mouse button to aim and shoot bubbles. Read the quest objective before deciding which part of the board to target.",
+    "tips": ["Prioritise bubbles that help the current quest.", "Check the route to a target before releasing the shot."],
+    "source_url": "https://www.crazygames.com/game/bubble-blast-pwd",
+    "reviewed_on": "2026-11-11"
+  },
+  "lumber-harvest-tree-cutting-game": {
+    "category_name": "Simulation",
+    "page_title": "Lumber Harvest - Tractor and Upgrade Guide",
+    "summary": "Lumber Harvest: Tree Cutting Game is a logging progression game. Drive a tractor through trees, collect timber, and use upgrades to expand the harvesting operation.",
+    "how_to": "Steer with WASD, the arrow keys, or by dragging the mouse. Harvest trees and compare saw and capacity improvements as resources become available.",
+    "tips": ["Consider carrying capacity as well as cutting power when choosing an upgrade.", "Plan a route through the trees before repeatedly changing direction."],
+    "source_url": "https://www.crazygames.com/game/lumber-harvest-tree-cutting-game",
+    "reviewed_on": "2026-11-11"
+  },
+  "count-masters-stickman-games": {
+    "category_name": "Runner",
+    "page_title": "Count Masters - Crowd Running and Controls",
+    "summary": "Count Masters: Stickman Games is a runner about growing a crowd of stickmen. Choose routes that increase the group while steering around obstacles and rival crowds.",
+    "how_to": "Move left and right with the mouse or arrow keys. Compare the upcoming paths, then steer toward the option that helps the crowd survive and grow.",
+    "tips": ["Look ahead before changing lanes so a useful path does not lead straight into an obstacle.", "Preserve the crowd when a risky route offers only a small advantage."],
+    "source_url": "https://www.crazygames.com/game/count-masters-stickman-games",
+    "reviewed_on": "2026-11-11"
+  },
+  "bubble-fall": {
+    "category_name": "Match & Merge",
+    "page_title": "Bubble Fall - Colour Matching and Controls",
+    "summary": "Bubble Fall is a bubble shooter in which matched balls fall away from the board. Aim at groups of the loaded colour and use the result to open new shots.",
+    "how_to": "Move the mouse to aim and left-click to shoot. Check which colour is loaded before choosing a target group.",
+    "tips": ["Look for a match that clears a useful route through the board.", "Reassess the layout after the falling bubbles change the available targets."],
+    "source_url": "https://www.crazygames.com/game/bubble-fall",
+    "reviewed_on": "2026-11-11"
+  },
+  "bubble-tower-3d": {
+    "category_name": "Match & Merge",
+    "page_title": "Bubble Tower 3D - Rotating Tower Puzzle Guide",
+    "summary": "Bubble Tower 3D wraps a bubble-shooting puzzle around a cylinder. Rotate the tower to inspect its sides, then shoot at matching colours.",
+    "how_to": "Drag with the left mouse button to turn the cylinder and left-click to shoot. Rotate again when the visible side does not offer a useful match.",
+    "tips": ["Inspect more than one side before spending a difficult colour.", "Recheck the tower after clearing a group because new targets may become visible."],
+    "source_url": "https://www.crazygames.com/game/bubble-tower-3d",
+    "reviewed_on": "2026-11-11"
+  },
+  "geometry-dash-online": {
+    "category_name": "Platformer",
+    "page_title": "Geometry Game - Rhythm Platformer and Controls",
+    "summary": "Geometry Game is a side-scrolling platformer built around timed jumps and musical rhythm. Avoid spikes and adapt to sections that change how the character or vehicle moves.",
+    "how_to": "Press Space or the Up arrow to jump, and hold to repeat jumps where appropriate. Vehicle sections use the arrow keys to steer up or down.",
+    "tips": ["Learn the position of the next obstacle rather than relying on rhythm alone.", "Check for a change in movement controls when a new section begins."],
+    "source_url": "https://www.crazygames.com/game/geometry-dash-online",
+    "reviewed_on": "2026-11-11"
+  },
+  "getting-over-it": {
+    "category_name": "Platformer",
+    "page_title": "Getting Over It - Browser Climbing Guide",
+    "summary": "Getting Over It is a physics climbing challenge controlled with a hammer. Use mouse movements to push, hook, and swing upward through obstacles; this listing credits the browser build to Griffpatch.",
+    "how_to": "Move the mouse to position the hammer against the terrain. Use controlled pushes and swings to lift the character toward the next stable position.",
+    "tips": ["Practise small hammer movements before attempting a long swing.", "Look for a stable resting point before making the next climb."],
+    "source_url": "https://www.crazygames.com/game/getting-over-it",
+    "reviewed_on": "2026-11-11"
+  },
+  "squirrel-with-a-gun": {
+    "category_name": "Shooter",
+    "page_title": "Squirrel with a Gun! - Mouse and Recoil Guide",
+    "summary": "Squirrel with a Gun! is an arcade shooter with ragdoll movement and strong weapon recoil. Use shooting and movement together to deal with enemies and obstacles.",
+    "how_to": "Use the mouse to play; the source describes left-clicking to move and shoot together. Account for the movement caused by recoil when lining up another shot.",
+    "tips": ["Watch where recoil will move the character before firing.", "Change shot timing when an obstacle or enemy makes the previous approach unsafe."],
+    "source_url": "https://www.crazygames.com/game/squirrel-with-a-gun",
+    "reviewed_on": "2026-11-11"
+  },
+  "jet-rush": {
+    "category_name": "Runner",
+    "page_title": "Jet Rush - Obstacle Flying and Controls",
+    "summary": "Jet Rush is an arcade flying game about guiding a jet through obstacle-filled courses. Read the route ahead and make timely left and right steering corrections.",
+    "how_to": "Use A and D or the left and right arrow keys to steer. Space confirms a menu selection.",
+    "tips": ["Look toward the next opening instead of focusing only on the jet.", "Use small steering corrections when a narrow gap is approaching."],
+    "source_url": "https://www.crazygames.com/game/jet-rush",
+    "reviewed_on": "2026-11-11"
+  },
+  "color-tunnel": {
+    "category_name": "Runner",
+    "page_title": "Color Tunnel - Obstacle Runner and Controls",
+    "summary": "Color Tunnel is an endless runner through a fast-moving tunnel. Shift left and right to pass openings and avoid the obstacles ahead.",
+    "how_to": "Use the left and right arrow keys to move around the tunnel. Watch the upcoming pattern before changing direction.",
+    "tips": ["Aim for an opening early instead of making a large correction at the last moment.", "Read the next obstacle as soon as the current one is passed."],
+    "source_url": "https://www.crazygames.com/game/color-tunnel",
+    "reviewed_on": "2026-11-11"
+  },
+  "stacky-bird": {
+    "category_name": "Runner",
+    "page_title": "Stacky Bird - Egg Stacking and Controls",
+    "summary": "Stacky Bird is an arcade runner in which egg stacks lift a bird over obstacles. Time the stack height to clear the route without crashing.",
+    "how_to": "Tap or hold Space, or click and hold the left mouse button, to lay eggs. Build the stack in response to the height of the next obstacle.",
+    "tips": ["Watch the next obstacle while building the current stack.", "Practise short holds to learn how quickly the stack grows."],
+    "source_url": "https://www.crazygames.com/game/stacky-bird",
+    "reviewed_on": "2026-11-11"
+  },
+  "piece-of-cake-merge-and-bake": {
+    "category_name": "Match & Merge",
+    "page_title": "Piece of Cake - Merge and Cafe Guide",
+    "summary": "Piece of Cake: Merge and Bake is a merging puzzle with a cafe story. Help Emily restore the family business by combining items and completing tasks that move the story forward.",
+    "how_to": "Use the mouse to select interface buttons and drag an item onto a matching object to merge it. Check the current task before making the next combination.",
+    "tips": ["Keep space on the board for items needed by the current task.", "Compare task requirements before merging a useful object into something else."],
+    "source_url": "https://www.crazygames.com/game/piece-of-cake-merge-and-bake",
+    "reviewed_on": "2026-11-11"
+  },
+  "hidden-objects": {
+    "category_name": "Puzzle",
+    "page_title": "Hidden Objects - Search and Zoom Controls",
+    "summary": "Hidden Objects is a visual search puzzle set in detailed interiors. Inspect each scene and locate the objects required by the current search.",
+    "how_to": "Left-click an object when you find it. Use the mouse wheel, the plus and minus controls, or a touchpad pinch to change the zoom.",
+    "tips": ["Search one part of the scene at a time instead of repeatedly scanning the whole image.", "Use zoom to inspect a small object, then zoom out to regain the wider context."],
+    "source_url": "https://www.crazygames.com/game/hidden-objects",
+    "reviewed_on": "2026-11-11"
+  },
+  "color-tap-coloring-by-numbers": {
+    "category_name": "Casual",
+    "page_title": "Color Tap - Colour by Numbers and Controls",
+    "summary": "Color Tap: Coloring by Numbers is a picture-colouring game organised by numbered regions. Select a colour and fill the corresponding parts of the image.",
+    "how_to": "Use the left mouse button to choose and apply colours. Use the mouse wheel to zoom when a small region is difficult to see.",
+    "tips": ["Zoom in to finish small regions before changing the view.", "Work through one colour at a time when the picture contains many similar areas."],
+    "source_url": "https://www.crazygames.com/game/color-tap-coloring-by-numbers",
+    "reviewed_on": "2026-11-11"
+  },
+  "screw-out-bolts-and-nuts": {
+    "category_name": "Puzzle",
+    "page_title": "Screw Out - Bolt Sorting and Puzzle Guide",
+    "summary": "Screw Out: Bolts and Nuts is a logic puzzle about removing bolts from shapes and sorting them into colour-matched containers. Plan the removal order as the available positions change.",
+    "how_to": "Left-click a bolt to unscrew it. Compare its colour with the containers and check what the removal will uncover before choosing another bolt.",
+    "tips": ["Look at the next accessible bolts before removing the current one.", "Use the available container space deliberately instead of choosing colours at random."],
+    "source_url": "https://www.crazygames.com/game/screw-out-bolts-and-nuts",
+    "reviewed_on": "2026-11-11"
+  },
+  "farm-merge-valley": {
+    "category_name": "Management",
+    "page_title": "Farm Merge Valley - Farming and Merging Guide",
+    "summary": "Farm Merge Valley combines farm development with item merging. Combine animals and objects, grow crops, and expand the farm into new areas.",
+    "how_to": "Hold the left mouse button to pick up and move objects on the grid. Group matching items and follow the current farm tasks while managing the available space.",
+    "tips": ["Check farm objectives before combining objects needed for a task.", "Keep some room available for new crops, animals, and merge results."],
+    "source_url": "https://www.crazygames.com/game/farm-merge-valley",
+    "reviewed_on": "2026-11-11"
+  },
+  "designville-merge-design": {
+    "category_name": "Match & Merge",
+    "page_title": "Designville - Merge and Renovation Guide",
+    "summary": "Designville: Merge & Design combines a merging board with home renovation. Help Louise and Robin create items, complete tasks, and turn an abandoned house into a design studio.",
+    "how_to": "Use the mouse to open item containers and merge matching objects on the board. Complete the renovation tasks with the items and resources you create.",
+    "tips": ["Check the renovation task list before filling the board with new objects.", "Leave enough space to combine items and collect the next useful result."],
+    "source_url": "https://www.crazygames.com/game/designville-merge-design",
+    "reviewed_on": "2026-11-11"
   }
 }

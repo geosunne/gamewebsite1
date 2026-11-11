@@ -101,7 +101,7 @@ class GeneratedCatalogTests(unittest.TestCase):
             path = self.root / "games" / f"{game['slug']}.html"
             self.assertTrue(path.is_file(), game["slug"])
             soup = BeautifulSoup(path.read_text(encoding="utf-8"), "html.parser")
-            schema = next(json.loads(s.string) for s in soup.select('script[type="application/ld+json"]') if json.loads(s.string).get("@type") == "Game")
+            schema = next(json.loads(s.string) for s in soup.select('script[type="application/ld+json"]') if json.loads(s.string).get("@type") in {"Game", "VideoGame"})
             self.assertEqual(schema["genre"], game["category_name"], game["slug"])
             self.assertIn(schema["url"], urls)
             if game.get("source") in {"crazygames", "minigame"}:

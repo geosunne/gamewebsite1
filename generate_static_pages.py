@@ -132,7 +132,7 @@ CATEGORY_GUIDES = {
         ],
         "faq": [
             ("Are strategy games hard for beginners?", "Some are deeper, but many teach through short rounds and visible feedback."),
-            ("Can I play strategy games without an account?", "Yes. These games are presented as free browser games."),
+            ("Can I play strategy games without an account?", "Browsing BTW game does not require an account. Individual games may require their own account, so check each listing."),
         ],
     },
     "Simulation": {
@@ -255,7 +255,7 @@ BEST_PAGE_DEFINITIONS = [
     {
         "slug": "free-online-games",
         "title": "Best free online games",
-        "description": "Find free online games on BTW game that open in the browser without installs, accounts, or extra setup.",
+        "description": "Find free browser games on BTW game, with controls, source details, and game-specific play notes.",
         "h1": "Best free online games",
         "intro": "This list highlights free browser games that are easy to open, quick to understand, and useful when you want a short play session.",
         "selectors": {
@@ -267,7 +267,7 @@ BEST_PAGE_DEFINITIONS = [
         ],
         "faq": [
             ("Are these online games free?", "Yes. BTW game focuses on free browser games that can be opened without a download."),
-            ("Do I need an account?", "No. The listed games are intended for instant browser play without account setup on BTW game."),
+            ("Do I need an account?", "You can browse BTW game without an account. Individual game providers may require an account to play."),
         ],
     },
     {
@@ -801,7 +801,10 @@ def site_absolute_url(url):
 def sentence_join(parts):
     return " ".join(part for part in (clean_text(part) for part in parts) if part)
 
-def build_unique_page_title(title, category_name):
+def build_unique_page_title(title, category_name, slug=None):
+    guide = GAME_GUIDES.get(slug, {})
+    if guide.get("page_title"):
+        return f"{guide['page_title']} | BTW game"
     category = clean_text(category_name or "Browser")
     return f"{title} browser guide and quick play notes | BTW game"
 
@@ -858,11 +861,11 @@ def build_mode_notes(title, category_name, tags):
         "Start with one short attempt, identify the win condition, then decide whether the game rewards speed, careful planning, or repeated practice."
     )
 
-def build_compatibility_notes(title, iframe_url):
+def build_compatibility_notes(title, iframe_url, supported_devices=None):
     source_note = describe_embed_source(iframe_url)
     return sentence_join([
-        f"{title} is intended for modern desktop and mobile browsers that allow iframe-based games, JavaScript, audio, and WebGL or canvas rendering.",
-        "A keyboard and mouse usually give the most predictable control on action, racing, and platform games; touch controls depend on the embedded game itself.",
+        f"The source lists {title} for {', '.join(supported_devices)} browser play." if supported_devices else f"Open {title} in a modern browser. Device support depends on the embedded build.",
+        "Use the controls listed for this game; keyboard, mouse, and touch support can differ between devices.",
         source_note,
     ])
 
@@ -1291,7 +1294,9 @@ def render_rail_links(active_category=None, categories=None):
         links.append(f'<li><a href="{category_url(category)}"{active}><span class="rail-icon">{icon}</span>{html_escape(category)}</a></li>')
     return "\n".join(links)
 
-def build_game_faq(title, category_name, controls, iframe_url=None):
+def build_game_faq(title, category_name, controls, iframe_url=None, guide=None, game_data=None):
+    guide = guide or {}
+    game_data = game_data or {}
     control_text = ", ".join(f"{clean_text(k)} for {clean_text(v)}" for k, v in (controls or {}).items())
     questions = [
         (
@@ -1313,6 +1318,13 @@ def build_game_faq(title, category_name, controls, iframe_url=None):
     ]
     if control_text:
         questions.insert(1, (f"How do I control {title}?", f"Use {control_text}. Controls can vary by device, so check the in-game prompts too."))
+    if guide.get('summary'):
+        questions[0] = (f"What is {title}?", guide['summary'])
+    if guide.get('how_to'):
+        questions.insert(1, (f"How do I play {title}?", guide['how_to']))
+    if game_data.get('supported_devices'):
+        questions.append((f"Which devices does {title} support?", f"The source lists {', '.join(game_data['supported_devices'])} browser support for this build. Check the controls above before starting."))
+    questions.extend((item['question'], item['answer']) for item in guide.get('faq', []))
     return questions
 
 def render_faq_html(faq_items):
@@ -1326,7 +1338,7 @@ def render_faq_html(faq_items):
         ''')
     return "\n".join(items)
 
-def build_game_content(title, description, long_description, category_name, tags, controls, iframe_url, rating=0, total_plays=0, guide=None):
+def build_game_content(title, description, long_description, category_name, tags, controls, iframe_url, rating=0, total_plays=0, guide=None, supported_devices=None):
     guide = guide or {}
     original_summary = build_original_summary(title, category_name, tags, rating, total_plays, guide)
     base_description = original_summary
@@ -1347,11 +1359,37 @@ def build_game_content(title, description, long_description, category_name, tags
     if guide:
         how_to = guide.get('how_to') or how_to
         tips = guide.get('tips') or tips
-    compatibility = build_compatibility_notes(title, iframe_url)
+    compatibility = build_compatibility_notes(title, iframe_url, supported_devices)
     loading_help = build_loading_help(title)
     rights_notice = build_rights_notice(title, iframe_url)
     seo_description = truncate(original_summary, 155)
     return base_description, how_to, controls_text, tips, compatibility, loading_help, rights_notice, seo_description
+
+def source_name(game):
+    source = game.get('source')
+    if source == 'crazygames':
+        return 'CrazyGames'
+    if source == 'minigame':
+        return 'Minigame'
+    host = urlparse(game.get('game_url') or '').hostname or ''
+    return 'OnlineGames.io' if host.endswith('onlinegames.io') else host.removeprefix('www.')
+
+def game_facts(game):
+    facts = [
+        ('Game name', clean_text(game.get('title'))),
+        ('Category', clean_text(game.get('category_name'))),
+        ('Play style', 'Browser game'),
+        ('Devices', ', '.join(game['supported_devices']) if game.get('supported_devices') else 'Browser; device requirements vary'),
+        ('Download required', 'No separate app required'),
+        ('Price', 'Free browser access'),
+    ]
+    if game.get('developer'):
+        facts.append(('Developer', clean_text(game['developer'])))
+    if source_name(game):
+        facts.append(('Listing source', source_name(game)))
+    if GAME_GUIDES.get(game.get('slug'), {}).get('account_required') is True:
+        facts.append(('Account', 'Required by the game provider'))
+    return facts
 
 def build_game_jsonld(game, tags, faq_items, seo_description=None):
     title = clean_text(game.get('title'))
@@ -1362,17 +1400,16 @@ def build_game_jsonld(game, tags, faq_items, seo_description=None):
     scripts = [
         {
             "@context": "https://schema.org",
-            "@type": "Game",
+            "@type": "VideoGame",
+            "@id": f"{game_full_url(slug)}#game",
             "name": title,
             "description": description,
             "url": game_full_url(slug),
             "image": image,
-            "about": f"{title} is a free browser game in the {category_name} category on BTW game.",
             "genre": category_name,
             "keywords": tags,
             "gamePlatform": "Web Browser",
-            "operatingSystem": "Any",
-            "applicationCategory": "Game",
+            "applicationCategory": "GameApplication",
             "isAccessibleForFree": True,
             "inLanguage": "en",
             "audience": {
@@ -1385,9 +1422,7 @@ def build_game_jsonld(game, tags, faq_items, seo_description=None):
                 "priceCurrency": "USD",
                 "availability": "https://schema.org/InStock"
             },
-            "publisher": {
-                "@id": f"{SITE_URL}/#organization"
-            }
+            "mainEntityOfPage": {"@id": f"{game_full_url(slug)}#webpage"},
         },
         {
             "@context": "https://schema.org",
@@ -1412,10 +1447,30 @@ def build_game_jsonld(game, tags, faq_items, seo_description=None):
             ]
         }
     ]
-    return "\n".join(
-        f'<script type="application/ld+json">{json.dumps(script, ensure_ascii=False)}</script>'
-        for script in scripts
-    )
+    if game.get('supported_devices'):
+        scripts[0]['availableOnDevice'] = game['supported_devices']
+    if game.get('operating_system'):
+        scripts[0]['operatingSystem'] = game['operating_system']
+    source_url = GAME_GUIDES.get(slug, {}).get('source_url') or game.get('game_url')
+    page_schema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": f"{game_full_url(slug)}#webpage",
+        "url": game_full_url(slug),
+        "name": build_unique_page_title(title, category_name, slug),
+        "description": description,
+        "inLanguage": "en",
+        "mainEntity": {"@id": f"{game_full_url(slug)}#game"},
+        "publisher": {"@id": f"{SITE_URL}/#organization"},
+        "primaryImageOfPage": {"@type": "ImageObject", "url": image},
+    }
+    if source_url and urlparse(source_url).scheme in {'https', 'http'}:
+        page_schema['citation'] = {"@type": "WebPage", "url": source_url, "name": f"{title} source listing"}
+    reviewed = GAME_GUIDES.get(slug, {}).get('reviewed_on')
+    if reviewed:
+        page_schema['dateModified'] = reviewed
+    scripts.append(page_schema)
+    return "\n".join(jsonld_script(script) for script in scripts)
 
 def render_brand_mark():
     return '''
@@ -1519,7 +1574,8 @@ def render_head(title, description, canonical_path, og_image=SITE_IMAGE, extra_j
 </head>'''
 
 def jsonld_script(data):
-    return f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>'
+    encoded = json.dumps(data, ensure_ascii=False).replace("<", "\\u003c")
+    return f'<script type="application/ld+json">{encoded}</script>'
 
 def site_entity_jsonld():
     website_jsonld = {
@@ -1806,7 +1862,7 @@ def generate_index_page(games):
     extra_jsonld = site_entity_jsonld() + "\n" + jsonld_script(faq_jsonld)
     return f'''<!DOCTYPE html>
 <html lang="en">
-{render_head("BTW game - Free Online Games for Quick Breaks", "Play 1300+ free online games at BTW game. Fast browser games for quick breaks, with action, puzzle, racing, sports, and casual games.", "/", SITE_IMAGE, extra_jsonld)}
+{render_head("BTW game - Free Online Games for Quick Breaks", f"Explore {len(games):,} free browser games at BTW game. Find game controls, play guides, and action, puzzle, racing, sports, and casual games.", "/", SITE_IMAGE, extra_jsonld)}
 <body>
     {render_header("home")}
     <main>
@@ -1872,7 +1928,7 @@ def generate_games_page(games):
     catalog_json = json.dumps(catalog_data, ensure_ascii=False, separators=(',', ':')).replace("</", "<\\/")
     all_guide = {
         "title": "Free online games by category",
-        "intro": "Find quick browser games for short breaks, school downtime, and casual play. Pick a category, open a game, and start playing without downloads or accounts.",
+        "intro": "Find browser games for short breaks and casual play. Pick a category and check each game's controls, device support, and play notes.",
         "sections": [
             ("Pick by mood", "Choose action when you want fast reactions, puzzle for slower thinking, racing for speed, and casual games for an easy break."),
             ("Every game is linked", "This page includes a crawlable link to every game page so players and search engines can discover the full catalog."),
@@ -1902,7 +1958,7 @@ def generate_games_page(games):
     '''
     return f'''<!DOCTYPE html>
 <html lang="en">
-{render_head("All Games | BTW game", "Browse all 500+ free online games at BTW game. Find action, puzzle, racing, sports, and casual games that play instantly in your browser.", "/games", SITE_IMAGE, extra_jsonld)}
+{render_head("All Games | BTW game", f"Browse {len(games):,} free browser games at BTW game. Compare game categories, controls, and play guides before choosing a game.", "/games", SITE_IMAGE, extra_jsonld)}
 <body>
     {render_header("games")}
     <main class="container">
@@ -2407,9 +2463,10 @@ def generate_game_page(game_data, related_games):
         rating,
         total_plays,
         GAME_GUIDES.get(slug),
+        game_data.get('supported_devices'),
     )
-    faq_items = build_game_faq(title, category_name, controls, iframe_url)
-    game_page_title = build_unique_page_title(title, category_name)
+    faq_items = build_game_faq(title, category_name, controls, iframe_url, GAME_GUIDES.get(slug), game_data)
+    game_page_title = build_unique_page_title(title, category_name, slug)
     jsonld_html = build_game_jsonld(game_data, tags, faq_items, seo_description)
     title_html = html_escape(title)
     description_html = html_escape(description)
@@ -2432,8 +2489,8 @@ def generate_game_page(game_data, related_games):
     category_href_attr = html_escape(category_href, quote=True)
     metric_items = []
     if game_data.get('source_rating'):
-        source_name = {'crazygames': 'CrazyGames', 'minigame': 'Minigame'}.get(game_data.get('source'), 'Source')
-        metric_items.append((f'{source_name} rating', f"{game_data['source_rating']:.1f}/{game_data.get('source_rating_scale', 5)}"))
+        metric_source_name = {'crazygames': 'CrazyGames', 'minigame': 'Minigame'}.get(game_data.get('source'), 'Source')
+        metric_items.append((f'{metric_source_name} rating', f"{game_data['source_rating']:.1f}/{game_data.get('source_rating_scale', 5)}"))
     elif rating:
         metric_items.append(('Catalog rating', f'{rating:.1f}/5'))
     if total_plays:
@@ -2514,7 +2571,7 @@ def generate_game_page(game_data, related_games):
             tags_html += f'<span class="tag">{html_escape(str(tag))}</span>'
 
     # Format release date
-    release_date_formatted = "Coming Soon"
+    release_date_formatted = "Not provided"
     if release_date:
         try:
             from datetime import datetime
@@ -2536,20 +2593,25 @@ def generate_game_page(game_data, related_games):
     tags_section_html = f'<div class="game-tags">{tags_html}</div>' if tags_html else ''
     features_card_html = f'<div class="info-card"><h3 class="card-title">Game Features</h3><ul class="features-list">{features_html}</ul></div>' if features_html else ''
     controls_card_html = f'<div class="info-card"><h3 class="card-title">Controls</h3><div class="controls-grid">{controls_html}</div></div>' if controls_html else ''
+    fact_rows = ''.join(f'<div><dt>{html_escape(name)}</dt><dd>{html_escape(value)}</dd></div>' for name, value in game_facts(game_data))
     fact_summary_html = f'''
                         <section class="fact-summary-card" aria-labelledby="factSummaryTitle">
                             <h2 class="card-title" id="factSummaryTitle">{title_html} facts</h2>
                             <dl class="fact-summary-grid">
-                                <div><dt>Game name</dt><dd>{title_html}</dd></div>
-                                <div><dt>Category</dt><dd>{category_html}</dd></div>
-                                <div><dt>Play style</dt><dd>Free browser game</dd></div>
-                                <div><dt>Best for</dt><dd>Quick breaks and casual play</dd></div>
-                                <div><dt>Device</dt><dd>Modern browser</dd></div>
-                                <div><dt>Download required</dt><dd>No</dd></div>
-                                <div><dt>Price</dt><dd>Free</dd></div>
+                                {fact_rows}
                             </dl>
                         </section>
     '''
+    guide = GAME_GUIDES.get(slug, {})
+    source_url = guide.get('source_url') or game_data.get('game_url') or ''
+    source_reference_html = ''
+    if urlparse(source_url).scheme in {'http', 'https'}:
+        label = source_name(game_data) or 'Original'
+        source_reference_html = f'<p>Source: <a href="{html_escape(source_url, quote=True)}" rel="external">{html_escape(label)} game listing</a>.</p>'
+    if game_data.get('source_checked_at'):
+        source_reference_html += f'<p>Source information checked: {html_escape(game_data["source_checked_at"][:10])}.</p>'
+    if guide.get('reviewed_on'):
+        source_reference_html += f'<p>Listing notes reviewed: <time datetime="{html_escape(guide["reviewed_on"], quote=True)}">{html_escape(guide["reviewed_on"])}</time>. <a href="/editorial-policy">Editorial policy</a></p>'
     related_section_html = f'''
                 <section class="related-games">
                     <div class="section-header">
@@ -2672,7 +2734,7 @@ def generate_game_page(game_data, related_games):
                         <div class="game-meta-row" aria-label="Game details">
                             {metric_pills}
                             <span class="meta-pill">{category_html}</span>
-                            <span class="meta-pill">Updated {html_escape(str(release_date_formatted))}</span>
+                            <span class="meta-pill">Catalog date {html_escape(str(release_date_formatted))}</span>
                         </div>
                     </div>
                     {play_next_section_html}
@@ -2695,6 +2757,7 @@ def generate_game_page(game_data, related_games):
                         <h2 class="card-title">If the game does not load</h2>
                         <p>{loading_help_html}</p>
                         <h2 class="card-title">Source and rights note</h2>
+                        {source_reference_html}
                         <p>{rights_notice_html}</p>
                         <h2 class="card-title">FAQ</h2>
                         <div class="faq-list">{faq_html}</div>
