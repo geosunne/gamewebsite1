@@ -17,6 +17,7 @@ from urllib.parse import quote, urlparse
 from datetime import datetime
 from pathlib import Path
 from catalog_quality import clean_source_text, normalize_source_metrics, catalog_popularity, source_rating
+from site_icons import render_site_icons, copy_root_favicon
 
 with Path(__file__).with_name("game_content_overrides.json").open(encoding="utf-8") as guide_file:
     GAME_GUIDES = json.load(guide_file)
@@ -24,7 +25,7 @@ with Path(__file__).with_name("game_content_overrides.json").open(encoding="utf-
 BASE_URL = "http://localhost:8000"
 SITE_URL = "https://btwgame.com"
 SITE_NAME = "BTW game"
-SITE_IMAGE = f"{SITE_URL}/assets/images/btwlogo.png"
+SITE_IMAGE = f"{SITE_URL}/assets/icons/favicon-512x512.png"
 INITIAL_CATALOG_CARD_COUNT = 120
 CATALOG_PAGE_SIZE = 120
 THUMBNAIL_CACHE_DIR = "static/assets/thumbnails"
@@ -1547,6 +1548,7 @@ def render_head(title, description, canonical_path, og_image=SITE_IMAGE, extra_j
     return f'''<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {render_site_icons()}
     <meta name="description" content="{html_escape(truncate(description, 160), quote=True)}">
     <meta name="keywords" content="free online games, browser games, BTW game, no download games, instant play games">
     <meta name="author" content="BTW game">
@@ -2371,6 +2373,7 @@ def generate_listing_pages(games, sync_static_sources=True):
     games = [normalize_game_data(game) for game in games]
     games = sorted(games, key=catalog_popularity, reverse=True)
     os.makedirs('static_html/categories', exist_ok=True)
+    copy_root_favicon()
     if os.path.exists('static/assets'):
         if os.path.exists('static_html/assets'):
             shutil.rmtree('static_html/assets')
@@ -2409,6 +2412,7 @@ def generate_404_page(games):
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {render_site_icons()}
     <meta name="robots" content="noindex, follow">
     <title>Page not found | BTW game</title>
     <link rel="stylesheet" href="/assets/css/site.css">
@@ -2637,6 +2641,7 @@ def generate_game_page(game_data, related_games):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {render_site_icons()}
     <meta name="description" content="{description_attr}">
     <meta name="keywords" content="free online game, browser game, BTW game, {category_html}, {', '.join(html_escape(str(tag)) for tag in tags)}">
     <meta name="author" content="BTW game">

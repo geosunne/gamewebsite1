@@ -1,8 +1,13 @@
 from flask import Blueprint, render_template, send_from_directory, abort
 from models import Game, Category
+from site_icons import render_site_icons
 import os
 
 main_bp = Blueprint('main', __name__)
+
+@main_bp.app_context_processor
+def site_icon_context():
+    return {'site_icon_links': render_site_icons()}
 
 @main_bp.route('/')
 def index():

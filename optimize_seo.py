@@ -6,9 +6,10 @@ from datetime import date
 from bs4 import BeautifulSoup
 from xml.sax.saxutils import escape
 from generate_static_pages import GAME_GUIDES, build_original_summary, build_unique_page_title, site_absolute_url
+from site_icons import ensure_site_icons
 
 SITE_URL = "https://btwgame.com"
-SITE_IMAGE = f"{SITE_URL}/assets/images/btwlogo.png"
+SITE_IMAGE = f"{SITE_URL}/assets/icons/favicon-512x512.png"
 STATIC_PAGES = [
     "/about",
     "/contact",
@@ -147,6 +148,7 @@ def optimize_index_html():
         content = f.read()
 
     soup = BeautifulSoup(content, 'html.parser')
+    ensure_site_icons(soup)
     with open('static_html/all_games.json', encoding='utf-8') as catalog_file:
         game_count = len(json.load(catalog_file)['games'])
     home_description = f"Explore {game_count:,} free browser games at BTW game. Find game controls, play guides, and action, puzzle, racing, sports, and casual games."
@@ -238,6 +240,7 @@ def optimize_games_html():
         content = f.read()
 
     soup = BeautifulSoup(content, 'html.parser')
+    ensure_site_icons(soup)
 
     # Update title
     title_tag = soup.find('title')
@@ -295,6 +298,7 @@ def optimize_game_pages():
             content = f.read()
 
         soup = BeautifulSoup(content, 'html.parser')
+        ensure_site_icons(soup)
 
         # Update title
         title_tag = soup.find('title')

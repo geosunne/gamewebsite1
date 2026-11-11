@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ site_icon_links | safe }}
     <meta name="description" content="Play {{ game.title }} free online at BTW Games. {{ game.description }}">
     <meta name="keywords" content="free online game, browser game, BTW Games, {{ game.category_name }}, {{ ', '.join(game.tags or []) }}">
     <meta name="author" content="BTW Games">
