@@ -1,0 +1,28 @@
+{
+  "reason": "Unavailable Playhop embeds removed from the catalog",
+  "retired_game_slugs": [
+    "chess",
+    "dta-6",
+    "epic-mine",
+    "five-nights-at-candys",
+    "five-nights-at-cat-freddy",
+    "granny",
+    "granny-2",
+    "idle-vlogger",
+    "immortal-dark-slayer",
+    "jelly-car-simulator",
+    "obby-but-youre-on-a-bike",
+    "obby-draw-and-jump",
+    "obby-find-100-cats",
+    "obby-find-sprunki",
+    "obby-parkour-lava",
+    "obby-prison-escape",
+    "only-up-obby",
+    "rainbow-obby-parkour",
+    "space-waves",
+    "survival-race",
+    "tb-world",
+    "thief-puzzle",
+    "words-of-wonders"
+  ]
+}
