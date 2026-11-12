@@ -18,6 +18,7 @@ from datetime import datetime
 from pathlib import Path
 from catalog_quality import clean_source_text, normalize_source_metrics, catalog_popularity, source_rating, has_blocked_embed
 from site_icons import render_site_icons, copy_root_favicon
+from site_retirements import write_retired_game_routes
 
 with Path(__file__).with_name("game_content_overrides.json").open(encoding="utf-8") as guide_file:
     GAME_GUIDES = json.load(guide_file)
@@ -2924,6 +2925,8 @@ def build_static_catalog(games, skip_thumbnail_cache=False):
         raise RuntimeError("Could not write catalog data")
     generate_listing_pages(all_games_data)
     write_html_file('static_html/404.html', generate_404_page(all_games_data))
+    retired_count = write_retired_game_routes(all_games_data)
+    print(f"Generated edge 404 routes for {retired_count} retired games")
     print(f"Generated {len(all_games_data)} game pages and the deployment 404 page; errors: 0")
 
 
