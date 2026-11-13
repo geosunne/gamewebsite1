@@ -17,6 +17,7 @@ Important pages:
 
 Main categories:
 - https://btwgame.com/categories/action
+- https://btwgame.com/categories/arcade
 - https://btwgame.com/categories/puzzle
 - https://btwgame.com/categories/match-and-merge
 - https://btwgame.com/categories/mahjong-and-card
@@ -45,7 +46,6 @@ Main categories:
 - https://btwgame.com/categories/io-games
 - https://btwgame.com/categories/strategy
 - https://btwgame.com/categories/tower-defense
-- https://btwgame.com/categories/casual
 
 Content notes:
 - Games are intended for free browser play.

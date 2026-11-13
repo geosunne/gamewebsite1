@@ -25,9 +25,6 @@
     "/games/idle-vlogger",
     "/games/idle-vlogger.html",
     "/games/idle-vlogger/",
-    "/games/immortal-dark-slayer",
-    "/games/immortal-dark-slayer.html",
-    "/games/immortal-dark-slayer/",
     "/games/jelly-car-simulator",
     "/games/jelly-car-simulator.html",
     "/games/jelly-car-simulator/",
@@ -55,21 +52,12 @@
     "/games/rainbow-obby-parkour",
     "/games/rainbow-obby-parkour.html",
     "/games/rainbow-obby-parkour/",
-    "/games/space-waves",
-    "/games/space-waves.html",
-    "/games/space-waves/",
     "/games/survival-race",
     "/games/survival-race.html",
     "/games/survival-race/",
     "/games/tb-world",
     "/games/tb-world.html",
-    "/games/tb-world/",
-    "/games/thief-puzzle",
-    "/games/thief-puzzle.html",
-    "/games/thief-puzzle/",
-    "/games/words-of-wonders",
-    "/games/words-of-wonders.html",
-    "/games/words-of-wonders/"
+    "/games/tb-world/"
   ],
   "exclude": []
 }

@@ -9,6 +9,7 @@ import argparse
 import json
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from html import unescape
 from pathlib import Path
@@ -16,6 +17,7 @@ from urllib.parse import urljoin, urlsplit
 
 import requests
 from bs4 import BeautifulSoup
+from catalog_quality import has_blocked_embed
 
 CRAZYGAMES_BASE = "https://www.crazygames.com"
 IMAGE_BASE = "https://imgs.crazygames.com"
@@ -68,10 +70,12 @@ def get_nested(data, path, default=None):
     return current if current is not None else default
 
 
-def collect_slugs_from_category(session, url):
+def collect_slugs_from_category(session, url, discovered_urls=None):
     response = session.get(url, timeout=20)
     response.raise_for_status()
     data = extract_next_data(response.text)
+    if discovered_urls is not None:
+        discovered_urls.extend(category_urls_from_html(response.text))
     slugs = []
     if data:
         page_props = get_nested(data, ["props", "pageProps"], {})
@@ -97,17 +101,29 @@ def collect_slugs_from_category(session, url):
     return list(dict.fromkeys(slugs))
 
 
-def discover_category_urls(session):
-    response = session.get(CRAZYGAMES_BASE, timeout=20)
-    response.raise_for_status()
-    soup = BeautifulSoup(response.text, "html.parser")
+def category_urls_from_html(html):
+    """Follow published links/related tags, without inventing provider endpoints."""
+    soup = BeautifulSoup(html, "html.parser")
     urls = []
     for link in soup.find_all("a", href=True):
         url = urljoin(CRAZYGAMES_BASE, link["href"])
         parsed = urlsplit(url)
         if parsed.hostname == "www.crazygames.com" and re.fullmatch(r"/(?:c|t)/[a-z0-9-]+/?", parsed.path):
             urls.append(url)
+    data = extract_next_data(html)
+    related = get_nested(data, ["props", "pageProps", "tag", "relatedTags"], []) if data else []
+    for tag in related:
+        slug = tag.get("slug")
+        if isinstance(slug, str) and re.fullmatch(r"[a-z0-9-]+", slug):
+            kind = "c" if tag.get("isCategory") is True else "t"
+            urls.append(f"{CRAZYGAMES_BASE}/{kind}/{slug}")
     return list(dict.fromkeys(urls))
+
+
+def discover_category_urls(session):
+    response = session.get(CRAZYGAMES_BASE, timeout=20)
+    response.raise_for_status()
+    return category_urls_from_html(response.text)
 
 
 def build_source_guide(game):
@@ -283,26 +299,48 @@ def load_existing_games():
 
 
 def validate_embed(session, record):
+    if has_blocked_embed(record):
+        return False, "blocked_provider"
     try:
         response = session.get(record["iframe_url"], timeout=15, headers={"Referer": "https://btwgame.com/"})
         response.raise_for_status()
     except requests.RequestException:
         return False, "embed_unavailable"
-    if "text/html" not in response.headers.get("Content-Type", "").lower():
+    if response.status_code != 200:
+        return False, "embed_unavailable"
+    if response.headers.get("Content-Type", "").split(";", 1)[0].strip().lower() != "text/html":
         return False, "embed_not_html"
-    frame_policy = response.headers.get("X-Frame-Options", "").lower()
-    if frame_policy:
-        return False, "embed_frame_restricted"
-    csp = response.headers.get("Content-Security-Policy", "")
-    for policy in csp.split(","):
-        for directive in policy.split(";"):
-            values = directive.strip().split()
-            if values and values[0].lower() == "frame-ancestors":
-                if not any(origin in {"*", "https:", "https://btwgame.com", "https://btwgame.com/"} for origin in values[1:]):
-                    return False, "embed_frame_restricted"
-    if urlsplit(response.url).hostname in {"www.crazygames.com", "crazygames.com"}:
-        return False, "embed_redirected_to_listing"
+    history = response.history if isinstance(response.history, list) else []
+    chain = [*history, response]
+    for hop in chain:
+        if urlsplit(hop.url).scheme != "https":
+            return False, "embed_insecure_redirect"
+        host = urlsplit(hop.url).hostname or ""
+        if host in {"www.crazygames.com", "crazygames.com"}:
+            return False, "embed_redirected_to_listing"
+        if has_blocked_embed({"iframe_url": hop.url}):
+            return False, "blocked_provider"
+        if hop.headers.get("X-Frame-Options", ""):
+            return False, "embed_frame_restricted"
+        csp = hop.headers.get("Content-Security-Policy", "")
+        for policy in csp.split(","):
+            for directive in policy.split(";"):
+                values = directive.strip().split()
+                if values and values[0].lower() == "frame-ancestors":
+                    if "'none'" in values[1:] or not any(origin in {"*", "https:", "https://btwgame.com", "https://btwgame.com/"} for origin in values[1:]):
+                        return False, "embed_frame_restricted"
     record["embed_checked_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    record["embed_validation"] = {
+        "checked_at": record["embed_checked_at"],
+        "request_origin": "https://btwgame.com",
+        "responses": [{
+            "url": hop.url, "status": hop.status_code,
+            "content_type": hop.headers.get("Content-Type", ""),
+            "location": hop.headers.get("Location", ""),
+            "x_frame_options": hop.headers.get("X-Frame-Options", ""),
+            "content_security_policy": hop.headers.get("Content-Security-Policy", ""),
+        } for hop in chain],
+    }
     return True, "ok"
 
 
@@ -320,14 +358,35 @@ def load_existing_slugs():
     return slugs
 
 
+def check_candidate(slug, headers, known_keys):
+    """Use an independent session for each bounded concurrent request."""
+    try:
+        with requests.Session() as session:
+            session.headers.update(headers)
+            record, status = fetch_game(session, slug)
+            if record and identity_keys(record) & known_keys:
+                return None, "duplicate_identity"
+            if record:
+                if not record.get("controls"):
+                    return None, "missing_source_controls"
+                valid, status = validate_embed(session, record)
+                if not valid:
+                    record = None
+            return record, status
+    except Exception as error:
+        return None, f"error:{error}"
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=40, help="Maximum new games to add")
-    parser.add_argument("--delay", type=float, default=0.5, help="Delay between game detail requests")
+    parser.add_argument("--delay", type=float, default=0.5, help="Delay between candidate check batches")
+    parser.add_argument("--workers", type=int, default=4, choices=range(1, 5), help="Bounded concurrent candidate checks (1-4)")
     parser.add_argument("--category-url", action="append", default=[], help="CrazyGames category/tag URL to scan")
     parser.add_argument("--discover-categories", action="store_true", help="Also scan category and tag links published on the CrazyGames homepage")
     parser.add_argument("--resume", action="store_true", help="Continue the latest import batch toward --limit, retaining its added games")
     args = parser.parse_args()
+    started_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     session = requests.Session()
     session.headers.update({
@@ -341,11 +400,16 @@ def main():
     existing_slugs = load_existing_slugs()
     known_keys = set().union(*(identity_keys(game) for game in load_existing_games()))
     candidates = []
+    discovered_urls = []
+    scanned_urls = set()
+    scan_errors = []
     for url in category_urls:
         print(f"Scanning {url}")
         try:
-            candidates.extend(collect_slugs_from_category(session, url))
+            candidates.extend(collect_slugs_from_category(session, url, discovered_urls))
+            scanned_urls.add(url)
         except Exception as error:
+            scan_errors.append({"url": url, "error": str(error)})
             print(f"  failed: {error}")
     candidates = [slug for slug in dict.fromkeys(candidates) if slug not in existing_slugs]
     print(f"Candidate new slugs: {len(candidates)}")
@@ -357,33 +421,57 @@ def main():
         previous_batch = previous_data.get("metadata", {}).get("latest_import", {})
         previous_slugs = set(previous_batch.get("added_slugs", []))
         previous_games = [game for game in previous_data.get("games", []) if game["slug"] in previous_slugs]
-        if len(previous_games) > args.limit:
-            parser.error("--limit cannot be smaller than the resumed batch")
+        if len(previous_games) >= args.limit:
+            parser.error("The previous batch is already complete; start a fresh batch without --resume")
     imported = previous_games.copy()
     skipped = previous_batch.get("skipped", {}).copy()
     checked = previous_batch.get("checked", 0)
-    for slug in candidates:
-        if len(imported) >= args.limit:
-            break
-        try:
-            record, status = fetch_game(session, slug)
-            if record and identity_keys(record) & known_keys:
-                record, status = None, "duplicate_identity"
-            if record:
-                valid, status = validate_embed(session, record)
-                if not valid:
-                    record = None
-        except Exception as error:
-            record, status = None, f"error:{error}"
-        checked += 1
-        if record:
-            imported.append(record)
-            existing_slugs.add(record["slug"])
-            known_keys.update(identity_keys(record))
-            print(f"  added: {record['title']} ({record['slug']})")
-        else:
-            skipped[status] = skipped.get(status, 0) + 1
-            print(f"  skipped {slug}: {status}")
+    checked_slugs = set(previous_batch.get("checked_slugs", []))
+    # Older batches did not retain rejected slugs; imported slugs are already excluded.
+    candidate_set = set(candidates)
+    index = 0
+    while len(imported) < args.limit:
+        if index >= len(candidates):
+            if not args.discover_categories:
+                break
+            next_urls = [url for url in dict.fromkeys(discovered_urls) if url not in scanned_urls]
+            if not next_urls:
+                break
+            # Expand one published category at a time, stopping once the target is met.
+            url = next_urls[0]
+            scanned_urls.add(url)
+            print(f"Expanding {url}")
+            try:
+                for slug in collect_slugs_from_category(session, url, discovered_urls):
+                    if slug not in existing_slugs and slug not in candidate_set:
+                        candidates.append(slug)
+                        candidate_set.add(slug)
+            except Exception as error:
+                scan_errors.append({"url": url, "error": str(error)})
+                print(f"  failed: {error}")
+            continue
+        batch = []
+        while index < len(candidates) and len(batch) < min(args.workers, args.limit - len(imported)):
+            slug = candidates[index]
+            index += 1
+            if slug not in checked_slugs:
+                batch.append(slug)
+        with ThreadPoolExecutor(max_workers=args.workers) as pool:
+            futures = [pool.submit(check_candidate, slug, dict(session.headers), known_keys.copy()) for slug in batch]
+            for slug, future in zip(batch, futures):
+                record, status = future.result()
+                if record and identity_keys(record) & known_keys:
+                    record, status = None, "duplicate_identity"
+                checked += 1
+                checked_slugs.add(slug)
+                if record:
+                    imported.append(record)
+                    existing_slugs.add(record["slug"])
+                    known_keys.update(identity_keys(record))
+                    print(f"  added: {record['title']} ({record['slug']})")
+                else:
+                    skipped[status] = skipped.get(status, 0) + 1
+                    print(f"  skipped {slug}: {status}")
         time.sleep(args.delay)
 
     if OUTPUT_FILE.exists():
@@ -403,10 +491,14 @@ def main():
             "total_games": len(by_slug),
             "note": "Only allowEmbed=true CrazyGames titles are included.",
             "latest_import": {
+                "started_at": previous_batch.get("started_at") or started_at,
                 "requested_limit": args.limit,
-                "candidates": len(candidates),
+                "candidates": len(set(candidates) | checked_slugs),
                 "resumed_from_count": len(previous_games),
                 "checked": checked,
+                "checked_slugs": sorted(checked_slugs),
+                "scanned_urls": sorted(scanned_urls),
+                "scan_errors": scan_errors,
                 "added_count": len(imported),
                 "added_slugs": [game["slug"] for game in imported],
                 "skipped": skipped,

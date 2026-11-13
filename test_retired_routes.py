@@ -11,10 +11,17 @@ from site_retirements import write_retired_game_routes
 class RetirementRouteTests(unittest.TestCase):
     def test_generated_routes_are_limited_to_retired_games_and_allow_replacements(self):
         catalog = json.loads(Path("static_html/all_games.json").read_text())["games"]
+        manifest = json.loads(Path("retired_games.json").read_text())
+        active = {game["slug"] for game in catalog}
+        retired = set(manifest["retired_game_slugs"]) - active
         with tempfile.TemporaryDirectory(dir=Path.cwd()) as directory:
-            self.assertEqual(write_retired_game_routes(catalog, directory), 23)
+            self.assertEqual(write_retired_game_routes(catalog, directory), len(retired))
             routes = json.loads(Path(directory, "_routes.json").read_text())["include"]
-            self.assertEqual(len(routes), 69)
+            self.assertEqual(len(routes), len(retired) * 3)
+            for slug in active & set(manifest["retired_game_slugs"]):
+                self.assertNotIn(f"/games/{slug}", routes)
+                self.assertNotIn(f"/games/{slug}.html", routes)
+                self.assertNotIn(f"/games/{slug}/", routes)
             self.assertIn("/games/epic-mine", routes)
             self.assertIn("/games/epic-mine.html", routes)
             self.assertIn("/games/epic-mine/", routes)
