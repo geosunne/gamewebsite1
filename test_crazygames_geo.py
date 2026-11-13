@@ -8,11 +8,41 @@ from bs4 import BeautifulSoup
 from PIL import Image
 
 from generate_static_pages import game_guide, generate_game_page, jsonld_script, prepare_catalog
-from import_crazygames_embed_games import build_game_record, build_source_guide, discover_category_urls, fetch_game, identity_keys, validate_embed
+from import_crazygames_embed_games import build_game_record, build_source_guide, category_urls_from_html, discover_category_urls, fetch_game, identity_keys, validate_embed
 from optimize_seo import ensure_game_schema_fields
 
 
 class ImportQualityTests(unittest.TestCase):
+    def test_related_category_discovery_uses_published_source_tags_only(self):
+        html = '<script id="__NEXT_DATA__">' + json.dumps({
+            "props": {"pageProps": {"tag": {"relatedTags": [
+                {"slug": "logic", "isCategory": False},
+                {"slug": "board", "isCategory": True},
+                {"slug": "../../private", "isCategory": False},
+            ]}}}
+        }) + '</script>'
+        self.assertEqual(category_urls_from_html(html), [
+            "https://www.crazygames.com/t/logic", "https://www.crazygames.com/c/board",
+        ])
+
+    def test_redirect_chain_cannot_bypass_provider_or_frame_restrictions(self):
+        url = "https://games.crazygames.com/en_US/example/index.html"
+        final = Mock(url=url, status_code=200, headers={"Content-Type": "text/html"}, history=[])
+        session = Mock()
+        session.get.return_value = final
+        for redirect_url, headers, reason in [
+            (url, {"X-Frame-Options": "DENY"}, "embed_frame_restricted"),
+            (url, {"Content-Security-Policy": "frame-ancestors 'none' https://btwgame.com"}, "embed_frame_restricted"),
+            ("https://playhop.com/app/example", {}, "blocked_provider"),
+            ("http://games.crazygames.com/example", {}, "embed_insecure_redirect"),
+        ]:
+            final.history = [Mock(url=redirect_url, headers=headers, status_code=302)]
+            self.assertEqual(validate_embed(session, {"iframe_url": url}), (False, reason))
+        final.history = []
+        record = {"iframe_url": url}
+        self.assertTrue(validate_embed(session, record)[0])
+        self.assertEqual(record["embed_validation"]["responses"][0]["status"], 200)
+
     def test_discovery_accepts_published_absolute_and_relative_category_links(self):
         session = Mock()
         session.get.return_value.text = (
@@ -80,7 +110,7 @@ class ImportQualityTests(unittest.TestCase):
             ({"Content-Type": "text/html"}, "https://www.crazygames.com/game/example", False),
             ({"Content-Type": "application/json"}, record["iframe_url"], False),
         ]:
-            response = Mock(headers=headers, url=final_url)
+            response = Mock(headers=headers, url=final_url, status_code=200)
             session = Mock()
             session.get.return_value = response
             self.assertEqual(validate_embed(session, record.copy())[0], expected)
