@@ -1,0 +1,15 @@
+{
+  "baseline_count": 1583,
+  "added_count": 200,
+  "total_games": 1783,
+  "sitemap_urls": 1827,
+  "html_pages_checked": 1827,
+  "internal_links_checked": 112231,
+  "skipped": {
+    "not_embeddable": 331,
+    "duplicate_identity": 17,
+    "missing_game_data": 10,
+    "missing_source_controls": 1
+  },
+  "checked_at": "2026-11-13T01:07:47+00:00"
+}
