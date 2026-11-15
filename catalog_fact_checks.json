@@ -1,0 +1,930 @@
+{
+  "schema_version": 1,
+  "games": {
+    "space-waves": {
+      "source_check_attempted_at": "2026-11-15T02:56:34+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "PC Controls Hold the left mouse button / W / Spacebar to go up and release to go down. P to pause the game Mobile Controls Hold the screen to go up and release to go down."
+      },
+      "developer": "do.games",
+      "supported_devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "source_published_at": "2024-04-16",
+      "source_updated_at": "2026-07-16",
+      "source_checked_at": "2026-11-15T02:56:34+00:00",
+      "source_category_name": "Arcade",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "Space Waves is an arcade game where you control an arrow through dozens of levels across multiple worlds and modes, dodging obstacles at every turn. Pick any level, any time, and let the difficulty faces guide how brave you're feeling.",
+      "long_description": "Space Waves is an arcade game where you control an arrow through dozens of levels across multiple worlds and modes, dodging obstacles at every turn. Pick any level, any time, and let the difficulty faces guide how brave you're feeling. How to Play Space Waves Start with the Tutorial to get familiar with the basics. Keep in mind that gliding only takes you down, not up, so make sure to move upward before any incline ahead. For circular spikes, it's safer to stay low rather than try to go over them. If you're caught between obstacles above and below, tap continuously to zigzag through with steady forward momentum. Timing is key, and it takes a moment to rise, so start your move early to line up with whatever you're trying to dodge. All levels of Space Waves more or less have the same scope: get to the end of the level without crashing your arrow into a wall, a rotating cog, or thorns. Each level has its own degree of difficulty. If you choose a \"green\" level, you'll be met with wider space and angles, making it possible to gain some straight momentum with your arrow. As you choose more difficult levels, you can expect more obstacles, tighter angles, and more of them. Space Waves Game Modes Classic: Reach the finish to complete levels. You get to select your level and choose from three worlds. World 1: a simple world with simple levels. World 2: easy levels; World 3: the floor is lava! You get to choose which level you want to start on, so depending on your risk level, go for gold and come home easy, or start slow and build up your tolerance. Endless: Go as far as possible and set a high score. Race: Reach the finish before others. Choose your difficulty level: easy or hard, across over 19 levels. You will see all other characters racing with you; you can't interact with them, but you can see if they disappear because of a crash, and all of their movements. If you crash, it's game over. There is a tracker at the top so you can see who is in the lead and how much path is left. Don't get distracted by that, because as soon as you take your eyes off the game, it's game over. Customization You can change your skin, choose a fiery arrow, a rounded arrow, and some arrows can even get skins with color. Tips and Tricks Most moves will be you zigzagging your way through the round, but the key is how fast or slow you will be going. When the floor is lava, zigzag your way through; consistent peaks and valleys require timing and precision. If you are having difficulty on a round, you can go to practice mode. It will give you a few chances to not start over completely, but to start from where you last crashed. Each time you crash, you will get the percentage of how far you got into the round. Sometimes, when you crash, you will be given an option to start from where you last crashed to complete the round. You usually need to watch an ad to do so, and you only get that one chance, so be prepared before you press resume! More Games Like This For more casual games, check out our casual category and browse the selection. Some casual games worth exploring include Geometry Dash , Slice Master , Electron Dash , or Snow Rider 3D . Release Date April 2024 Platform Web browser (desktop and mobile)",
+      "content_guide": {
+        "summary": "Space Waves is an arcade game where you control an arrow through dozens of levels across multiple worlds and modes, dodging obstacles at every turn. Pick any level, any time, and let the difficulty faces guide how brave you're feeling.",
+        "how_to": "Start with the Tutorial to get familiar with the basics. Keep in mind that gliding only takes you down, not up, so make sure to move upward before any incline ahead. For circular spikes, it's safer to stay low rather than try to go over them. If you're caught between obstacles above and below, tap continuously to zigzag through with steady forward momentum. Timing is key, and it takes a moment to rise, so start your move early to line up with whatever you're trying to dodge. All levels of Space Waves more or less have the same scope: get to the end of the level without crashing your arrow into a wall, a rotating cog, or thorns. Each level has its own degree of difficulty. If you choose a \"green\" level, you'll be met with wider space and angles, making it possible to gain some straight momentum with your arrow. As you choose more difficult levels, you can expect more obstacles, tighter angles, and more of them.",
+        "tips": [
+          "Most moves will be you zigzagging your way through the round, but the key is how fast or slow you will be going. When the floor is lava, zigzag your way through; consistent peaks and valleys require timing and precision. If you are having difficulty on a round, you can go to practice mode. It will give you a few chances to not start over completely, but to start from where you last crashed. Each time you crash, you will get the percentage of how far you got into the round. Sometimes, when you crash, you will be given an option to start from where you last crashed to complete the round. You usually need to watch an ad to do so, and you only get that one chance, so be prepared before you press resume!"
+        ],
+        "source_url": "https://www.crazygames.com/game/space-waves",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.3,
+      "source_upvotes": 5155838,
+      "player_checked_at": "2026-11-15T03:20:06+00:00",
+      "player_check_scope": "Desktop tutorial screen observed",
+      "player_check_result": "startup_observed"
+    },
+    "racing-limits": {
+      "source_check_attempted_at": "2026-11-15T02:56:34+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "Up arrow key to accelerate Down arrow key to decelerate Left and right arrow keys to steer C to change the camera view F to use nitro E to horn W to gear up in manual gear mode D to gear down in manual gear mode ESC to quit current progress"
+      },
+      "developer": "Valvolex",
+      "supported_devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "source_published_at": "2023-11-06",
+      "source_updated_at": "2026-07-20",
+      "source_checked_at": "2026-11-15T02:56:34+00:00",
+      "source_category_name": "Driving",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "Racing Limits is a racing game that lets you push your skills to the max. Race and overtake vehicles in city and highway traffic with four thrilling game modes: carrier, infinite, against-time, and free mode.",
+      "long_description": "Racing Limits is a racing game that lets you push your skills to the max. Race and overtake vehicles in city and highway traffic with four thrilling game modes: carrier, infinite, against-time, and free mode. Choose between one-way and two-way traffic, and experience three times of day - 'Morning,' 'Sunset,' and 'Night.' With multiple camera angles, sensitive controls, and realistic physics, it's a high-speed adventure you won't want to miss. Customize, upgrade, and take on numerous race events in this graphically stunning racing world! Release Date March 2018 (iOS) April 2018 (Android) November 2023 (WebGL) Platforms Web browser Android iOS",
+      "content_guide": {
+        "summary": "Racing Limits is a racing game that lets you push your skills to the max. Race and overtake vehicles in city and highway traffic with four thrilling game modes: carrier, infinite, against-time, and free mode.",
+        "how_to": "Controls Up arrow key to accelerate Down arrow key to decelerate Left and right arrow keys to steer C to change the camera view F to use nitro E to horn W to gear up in manual gear mode D to gear down in manual gear mode ESC to quit current progress",
+        "tips": [
+          "Read the controls above before starting; keyboard, mouse, and touch inputs can differ.",
+          "Check the in-game objective and tutorial before choosing a mode or spending resources."
+        ],
+        "source_url": "https://www.crazygames.com/game/racing-limits",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.5,
+      "source_upvotes": 2963827
+    },
+    "ragdoll-archers": {
+      "source_check_attempted_at": "2026-11-15T02:56:34+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "1 Player Mode Use the left mouse button to control the archer. Use the spacebar to jump. PvP Mode Player 1 = uses WASD to control the archer and left-shift to jump. Player 2 = uses arrow keys to control the archer and right-shift to jump. 2 Player Mode Player 1 = uses WASD to control the archer and left-shift to jump. Player 2 = uses arrow keys to control the archer and right-shift to jump."
+      },
+      "developer": "Ericetto",
+      "supported_devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "source_published_at": "",
+      "source_updated_at": "2024-07-09",
+      "source_checked_at": "2026-11-15T02:56:34+00:00",
+      "source_category_name": "Arcade",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "Ragdoll Archers is an archery game featuring bow and arrow-equipped stickmen with ragdoll physics. Fire arrows at a range of opponents while earning points to upgrade your abilities and ammunition.",
+      "long_description": "Ragdoll Archers is an archery game featuring bow and arrow-equipped stickmen with ragdoll physics. Fire arrows at a range of opponents while earning points to upgrade your abilities and ammunition. Play two-player PvP against your friend or team up with them to defeat a range of foes! How to Play Line up your shots carefully, and fire! Starting with the basic arrows and baseline stats, you will be faced with various enemies. Some of these enemies are trickier than others to beat due to armor, position, and other factors. Occasionally, you will encounter a giant enemy. This is like a mini-boss level, and you will earn lots of skulls for defeating them. Survive for as long as possible Your goal is to survive for as long as possible and earn as many skulls as you can. The best way to survive for a long time is to keep hitting the apples. Throughout the game you will notice flying apples. Shoot your arrow through the apples to replenish your health, stamina, or both. Here’s how the apples work: Red apple = health Green apple = stamina Golden apple = health and stamina Customize your ammunition There is an ever-increasing range of arrows to unlock the more you play the game. It’s best to keep playing and switching the arrow types to learn which ones are more powerful and suit your playing style. There is everything from electric and poison to balloon and axe and you can increase your arrow slots to hold more of them at once. Use your skulls to upgrade your abilities You earn skulls by killing enemies, which rewards a specific amount based on the power of the foe you defeated. You can upgrade your health, stamina, damage, and more using this currency. More Games Like This Ragdoll Archers is one of many games featuring ragdoll physics . These games are often fun to play due to the absurd nature of their physics. Some other popular choices include Basket Random and Free GeoGuessr . Features Take your enemy down creatively with a range of arrows Fight battles with various bosses and tricky opponents Earn skulls to upgrade your abilities Play two-player co-operatively or PvP Release Date May 2023 (WebGL) September 2023 (Android) Platforms Web browser (desktop and mobile) Android",
+      "content_guide": {
+        "summary": "Ragdoll Archers is an archery game featuring bow and arrow-equipped stickmen with ragdoll physics. Fire arrows at a range of opponents while earning points to upgrade your abilities and ammunition.",
+        "how_to": "Controls 1 Player Mode Use the left mouse button to control the archer. Use the spacebar to jump. PvP Mode Player 1 = uses WASD to control the archer and left-shift to jump. Player 2 = uses arrow keys to control the archer and right-shift to jump. 2 Player Mode Player 1 = uses WASD to control the archer and left-shift to jump. Player 2 = uses arrow keys to control the archer and right-shift to jump.",
+        "tips": [
+          "Read the controls above before starting; keyboard, mouse, and touch inputs can differ.",
+          "Check the in-game objective and tutorial before choosing a mode or spending resources."
+        ],
+        "source_url": "https://www.crazygames.com/game/ragdoll-archers",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.5,
+      "source_upvotes": 2535222
+    },
+    "buildnow-gg": {
+      "source_check_attempted_at": "2026-11-15T02:56:34+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "Movement WASD or arrow keys = move Space = jump Building Q = wall C = floor V = ramp Left shift = roof F = edit F = apply edit Right-click = reset edit Scroll wheel down = fast edit reset Weapon Left-click = fire Right-click = aim Z = pickaxe 1 = slot 1 2 = slot 2 3 = slot 3 4 = slot 4 5 = slot 5 Others B = emotes P = open chat M = scoreboard"
+      },
+      "developer": "battlelab",
+      "supported_devices": [
+        "Desktop"
+      ],
+      "source_published_at": "2021-08-23",
+      "source_updated_at": "2026-08-24",
+      "source_checked_at": "2026-11-15T02:56:34+00:00",
+      "source_category_name": "Shooting",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "The official web location for BuildNow GG, an online build-and-shoot game featuring various game modes, weapons, and maps.",
+      "long_description": "BuildNow GG is an online build-and-shoot game featuring various game modes, weapons, and maps. Build and battle your way to the top of the leaderboard and hone your skills in offline training mode. How to Play BuildNow GG is part of an emerging genre of online games that combine tactical building with third-person shooter gameplay. Build, shoot, and party In the game, you build ramps, roofs, and walls as quickly as possible while taking on another opponent. For new players, aim training is an excellent way to learn the basic controls. The game is online, but you can also start a private match with your friends in party mode. You can host up to six players in a private game. Master your weapons The weapons cover the standard loadout you’d expect in a shooting title, and you can switch between them while you battle. The loadout features a pistol, a machine gun, a sniper rifle, a shotgun, and a pickaxe. All guns have unlimited ammo and feature realistic ballistics. Customize your profile BuildNow GG features extensive customization options. You can customize the visual quality, FPS limit, HDR, and more in the graphics settings. The options also include full customization of the key mapping: this way, you can create the ideal profile for shooting and building. Game Modes BuildNow GG features five game modes located on several different maps. These are: Freebuild - a sandbox-style map where you can play PvP and practice without limits V-Arena - 1v1 battle or 6 players FFA, last man standing wins BoxFight - 1v1 Boxfight or 4 player FFA, last man standing wins Aim Training - improve your aim on static and moving targets offline Zone Wars - 6 player FFA in a random zone More Games Like This Browse the building games section for similar titles. Closely related games include the classic 1v1.LOL .There is also a vast collection of shooters in the FPS and third-person shooter categories. Browse shooting games for the full collection. Features Build and battle your way to the top 5 action-packed game modes to play Play privately with a party of up to 6 players Fully customizable performance and key profile Practice your building and shooting skills offline Release Date August 2021 Developer Battlelab made this game. Platforms Web browser Android iOS",
+      "content_guide": {
+        "summary": "The official web location for BuildNow GG, an online build-and-shoot game featuring various game modes, weapons, and maps.",
+        "how_to": "BuildNow GG is part of an emerging genre of online games that combine tactical building with third-person shooter gameplay.",
+        "tips": [
+          "Read the controls above before starting; keyboard, mouse, and touch inputs can differ.",
+          "Check the in-game objective and tutorial before choosing a mode or spending resources."
+        ],
+        "source_url": "https://www.crazygames.com/game/buildnow-gg",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.6,
+      "source_upvotes": 2167269
+    },
+    "cubes-2048-io": {
+      "source_check_attempted_at": "2026-11-15T02:56:36+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "PC Move mouse = change direction Hold left-click or space bar = speed up Mobile Drag = move Click the on-screen button = speed up"
+      },
+      "developer": "",
+      "supported_devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "source_published_at": "2022-12-19",
+      "source_updated_at": "2023-06-27",
+      "source_checked_at": "2026-11-15T02:56:36+00:00",
+      "source_category_name": ".io",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "Cubes 2048.io is an addictive online game that fuses Snake and 2048. Get a bigger number by collecting free cubes and eating other players with a smaller number than you.",
+      "long_description": "Cubes 2048.io is an addictive online game that fuses Snake and 2048 . Get a bigger number by collecting free cubes and eating other players with a smaller number than you. Your cubes with the same value that bump into one another will merge . How to Play Merge blocks to grow Cubes 2048 turns 2048 into a 3D .io game ! Slide around the arena picking up blocks to get bigger. Picking up two of the same number will merge them into a single block as the total sum of both. Consume the competition In Cubes 2048.io, you can eat any number smaller than you - including your opponents. At the same time, you should be wary of bigger opponents coming to gobble you up or take a big chunk out of your block supply! Tips and Tricks You can cut into opponents and take their blocks as long as those blocks are smaller Use the speed power-up to catch up quickly with your opponents Use your general boost to escape and catch up to other players Avoid the division sign because this will halve your numbers PC Move fast by holding left-click or space bar. After 2 seconds of going fast, you need to wait 6 seconds to cool down. Mobile Move fast with an on-screen speed-up button. After 2 seconds of going fast, you need to wait 6 seconds to cool down. Features Play online in a large multiplayer arena Compete with others on the real-time leaderboard Use various power-ups to boost your performance Play Cubes 2048 on desktop and mobile devices Release Date December 2022 Developer Playmost Games made Cubes 2048.io. Platform Web browser (desktop and mobile)",
+      "content_guide": {
+        "summary": "Cubes 2048.io is an addictive online game that fuses Snake and 2048. Get a bigger number by collecting free cubes and eating other players with a smaller number than you.",
+        "how_to": "Controls PC Move mouse = change direction Hold left-click or space bar = speed up Mobile Drag = move Click the on-screen button = speed up",
+        "tips": [
+          "You can cut into opponents and take their blocks as long as those blocks are smaller Use the speed power-up to catch up quickly with your opponents Use your general boost to escape and catch up to other players Avoid the division sign because this will halve your numbers"
+        ],
+        "source_url": "https://www.crazygames.com/game/cubes-2048-io",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.0,
+      "source_upvotes": 1530847
+    },
+    "traffic-rider-vvq": {
+      "source_check_attempted_at": "2026-11-15T02:56:36+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "Up arrow = throttle Down arrow = brake Left arrow = left Right arrow = right Horn = H Wheelie = Y Look left = T Look right = U Gear up = R Gear down = F Pause = P or F1 You can always change controls in settings menu."
+      },
+      "developer": "skgames",
+      "supported_devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "source_published_at": "2025-03-20",
+      "source_updated_at": "2025-03-27",
+      "source_checked_at": "2026-11-15T02:56:36+00:00",
+      "source_category_name": "Driving",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "Traffic Rider is a first-person driving bike endless game that puts you on a motorbike for an exhilarating ride. With a full career mode, lifelike bike sounds, and detailed graphics, it redefines arcade racing.",
+      "long_description": "Traffic Rider is a first-person driving bike endless game that puts you on a motorbike for an exhilarating ride. With a full career mode, lifelike bike sounds, and detailed graphics, it redefines arcade racing. Speed through highways, overtake traffic, and upgrade your rides to conquer challenging missions. Embrace the thrill and master the art of smooth racing. How to Play Traffic Rider Hit the road and weave through traffic in Traffic Rider, a high-speed motorcycle racing game where you're on the road for an endless road race. The faster you go, the bigger the rewards, so muster up some courage and overtake cars at speeds above 100 km/h to earn bonus points and extra time. Complete daily rounds to earn in-game currency, which can be used for bike upgrades and new rides. Choose from multiple game modes, including Career, Endless, Time Trial, and Free Ride, each offering unique challenges. Brace yourself for dynamic weather conditions, as for example riding in the rain adds an extra layer of difficulty, so stay focused and don’t let the thunder throw you off! Play it safe or push the limits, speeding past traffic earns more rewards, but be careful of oncoming cars! How far can you ride without crashing? Features First-person camera view 34 motorbikes to choose from Real motor sounds recorded from real bikes Detailed environments with day and night variations Career mode with 90+ missions Online leaderboards and 30+ achievements Support for 19 languages More Games Like This Get ready to hit the road and test your driving skills! Start with Moto X3M , a dirt bike game filled with difficult challenges and thrilling tracks. Then, master the art of drifting in Drift Hunters , a 3D adventure featuring a wide selection of unique cars and dynamic racing tracks. Finally, take to the streets with Mr Racer , where you’ll race through bustling areas at breakneck speeds.",
+      "content_guide": {
+        "summary": "Traffic Rider is a first-person driving bike endless game that puts you on a motorbike for an exhilarating ride. With a full career mode, lifelike bike sounds, and detailed graphics, it redefines arcade racing.",
+        "how_to": "Hit the road and weave through traffic in Traffic Rider, a high-speed motorcycle racing game where you're on the road for an endless road race. The faster you go, the bigger the rewards, so muster up some courage and overtake cars at speeds above 100 km/h to earn bonus points and extra time. Complete daily rounds to earn in-game currency, which can be used for bike upgrades and new rides. Choose from multiple game modes, including Career, Endless, Time Trial, and Free Ride, each offering unique challenges. Brace yourself for dynamic weather conditions, as for example riding in the rain adds an extra layer of difficulty, so stay focused and don’t let the thunder throw you off! Play it safe or push the limits, speeding past traffic earns more rewards, but be careful of oncoming cars! How far can you ride without crashing?",
+        "tips": [
+          "Read the controls above before starting; keyboard, mouse, and touch inputs can differ.",
+          "Check the in-game objective and tutorial before choosing a mode or spending resources."
+        ],
+        "source_url": "https://www.crazygames.com/game/traffic-rider-vvq",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.5,
+      "source_upvotes": 1461792
+    },
+    "bloxdhop-io": {
+      "source_check_attempted_at": "2026-11-15T02:56:36+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "WASD to move Shift or double-tap W to run C, Z, \\, or Caps Lock to crouch T or Enter to chat B to open shop / to start the command O to open the menu DoodleCube Controls Place blocks: right mouse button Destroy placed blocks: left mouse button Switch blocks: number keys or the mouse middle button Commands /rtv - not a fan of this map? Vote to skip it! /players - see the current players in your lobby /xp - See your level and XP /played - See how much time you've spent having tons of fun /nobuffs - Play through the maps without any buffs to place on a separate leaderboard!"
+      },
+      "developer": "Arthur",
+      "supported_devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "source_published_at": "2021-03-30",
+      "source_updated_at": "2026-09-23",
+      "source_checked_at": "2026-11-15T02:56:36+00:00",
+      "source_category_name": ".io",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "Bloxd.io is an IO adventure game with Minecraft-style visuals where you can navigate obstacle courses, gather resources, craft tools, battle other players, and much more. With game modes ranging from parkour challenges and creative sandbox building to combat-based gameplay, there's something for every playstyle.",
+      "long_description": "Bloxd.io is an IO adventure game with Minecraft-style visuals where you can navigate obstacle courses, gather resources, craft tools, battle other players, and much more. With game modes ranging from parkour challenges and creative sandbox building to combat-based gameplay, there's something for every playstyle. How to Play Bloxd.io The best way to start playing Bloxd.io is to gather wood, your most essential early resource and useful even in caves. Kill sheep early to collect 3 wool and craft a bed, which gives you a 15-minute speed boost to help you explore faster. Follow this progression to get established: gather wood and craft a workbench, then mine stone for a stone pickaxe. From there, find iron ore, smelt it in a furnace, and craft an iron pickaxe. You'll need at least iron to mine diamonds. Game Modes BloxdHop.io : Race to the end of the map before time runs out by hopping parkour-style across blocks of all shapes and sizes. DoodleCube : Similar to Gartic.io, players build objects based on a given theme while others vote on how well they match it. EvilTower : Climb to the top of the Evil Tower using your parkour skills. Inspired by the Tower of Hell, it's a serious test of patience and precision. Peaceful : A creative, pressure-free mode where you roam freely, collect resources, and build whatever you like. CubeWarfare : Compete against other players in a third-person shooter where building blocks are part of the strategy. Bloxd.io is regularly updated with new features and modes. Other available modes include Survival, Creative, Bedwars, Sky Wars, OneBlock, Greenville, Hide and Seek, Murder Mystery, Plots, Pirates, Survival Royale, and Worlds. Look for biomes with spiky black or carved stone formations, which are a strong indicator that diamonds are nearby. Check the tips and tops of the spike towers, not just the base. Skull-shaped structures sometimes contain chests worth looting as well. Hold off on diamond armor until you have 30 or more diamonds, as a full set costs 24. Aim for Protection III enchantments before jumping into PvP, and craft a diamond pickaxe for more efficient mining. Secure your base first before spending diamonds on gear. Tips Pickaxes in Bloxd.io have unlimited durability , so one iron pickaxe goes a long way Use homes strategically — set one at your base and another near enemy bases or resource-rich areas Avoid fighting mobs and players with unenchanted armor — you can take massive damage in a single hit Don't hoard junk items; keep your inventory clean for valuable resources Bloxd.io is regularly updated with fun new features and modes. Here is a selection of current game modes. BloxdHop.io DoodleCube EvilTower Peaceful CubeWarfare Survival Peaceful Creative Bedwars Sky Wars OneBlock Greenville Hide and Seek Murder Mystery Plots Pirates Survival Royale Worlds More Games Like This Although Bloxd.io is a unique game that provides endless entertainment, there are similar titles to check out when you're finished playing. Other IO games like this include Grow A Garden , Shell Shockers , Survev io , and more. Features Explore fun, voxelated worlds for free in your web browser. Play various game modes with different objectives. Earn gold from your achievements and spend it in the store. Join your friends in multiplayer games. Release Date February 2021 Developer Arthur made BloxdHop.io. Platform Web browser (desktop and mobile)",
+      "content_guide": {
+        "summary": "Bloxd.io is an IO adventure game with Minecraft-style visuals where you can navigate obstacle courses, gather resources, craft tools, battle other players, and much more. With game modes ranging from parkour challenges and creative sandbox building to combat-based gameplay, there's something for every playstyle.",
+        "how_to": "The best way to start playing Bloxd.io is to gather wood, your most essential early resource and useful even in caves. Kill sheep early to collect 3 wool and craft a bed, which gives you a 15-minute speed boost to help you explore faster. Follow this progression to get established: gather wood and craft a workbench, then mine stone for a stone pickaxe. From there, find iron ore, smelt it in a furnace, and craft an iron pickaxe. You'll need at least iron to mine diamonds. Game Modes BloxdHop.io : Race to the end of the map before time runs out by hopping parkour-style across blocks of all shapes and sizes. DoodleCube : Similar to Gartic.io, players build objects based on a given theme while others vote on how well they match it. EvilTower : Climb to the top of the Evil Tower using your parkour skills. Inspired by the Tower of Hell, it's a serious test of patience and precision. Peaceful : A creative, pressure-free mode where you roam freely, collect resources, and build whatever you like. CubeWarfare : Compete against other players in a third-person shooter where building blocks are part of the strategy. Bloxd.io is regularly updated with new features and modes. Other available modes include Survival, Creative, Bedwars, Sky Wars, OneBlock, Greenville, Hide and Seek, Murder Mystery, Plots, Pirates, Survival Royale, and Worlds. Look for biomes with spiky black or carved stone formations, which are a strong indicator that diamonds are nearby. Check the tips and tops of the spike towers, not just the base. Skull-shaped structures sometimes contain chests worth looting as well. Hold off on diamond armor until you have 30 or more diamonds, as a full set costs 24. Aim for Protection III enchantments before jumping into PvP, and craft a diamond pickaxe for more efficient mining. Secure your base first before spending diamonds on gear. Tips Pickaxes in Bloxd.io have unlimited durability , so one iron pickaxe goes a long way Use homes strategically — set one at your base and another near enemy bases or resource-rich areas Avoid fighting mobs and players with unenchanted armor — you can take massive damage in a single hit Don't hoard junk items; keep your inventory clean for valuable resources",
+        "tips": [
+          "Read the controls above before starting; keyboard, mouse, and touch inputs can differ.",
+          "Check the in-game objective and tutorial before choosing a mode or spending resources."
+        ],
+        "source_url": "https://www.crazygames.com/game/bloxdhop-io",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.2,
+      "source_upvotes": 6835473
+    },
+    "sky-riders-buk": {
+      "source_check_attempted_at": "2026-11-15T02:56:36+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "W or up arrow key = forward S or down arrow key = back A or left arrow key = move left D or right arrow key = move right Space = handbrake Left mouse button = interact ingame UI"
+      },
+      "developer": "",
+      "supported_devices": [
+        "Desktop",
+        "Android"
+      ],
+      "source_published_at": "2023-06-20",
+      "source_updated_at": "2026-07-07",
+      "source_checked_at": "2026-11-15T02:56:36+00:00",
+      "source_category_name": "Driving",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "Sky Riders is a high-speed casual vehicle driving game. Put your driving skills to the test as you complete several challenging tracks.",
+      "long_description": "Sky Riders is a high-speed casual vehicle driving game. Put your driving skills to the test as you complete several challenging tracks. Stay focused and avoid falling off! Whether you're behind the wheel of a car or riding a motorcycle, prepare for an adrenaline-fueled adventure and unforgettable racing moments. Get ready to conquer difficult tests and feel the excitement of Sky Riders! This game is similar to other casual car games , but has a more realistic twist. For something more arcade-style, check out Super Hero Driving School and Ramp Car Jumping ! Features Drive bikes and cars through the sky 30 challenging tracks to complete Realistic physics make the game tricky See what awesome stunts you can do! Release Date June 2023 Developer Sky Riders was developed by Stand By Games. Platform Web browser (desktop and mobile) Android",
+      "content_guide": {
+        "summary": "Sky Riders is a high-speed casual vehicle driving game. Put your driving skills to the test as you complete several challenging tracks.",
+        "how_to": "Controls W or up arrow key = forward S or down arrow key = back A or left arrow key = move left D or right arrow key = move right Space = handbrake Left mouse button = interact ingame UI",
+        "tips": [
+          "Read the controls above before starting; keyboard, mouse, and touch inputs can differ.",
+          "Check the in-game objective and tutorial before choosing a mode or spending resources."
+        ],
+        "source_url": "https://www.crazygames.com/game/sky-riders-buk",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.5,
+      "source_upvotes": 1215468
+    },
+    "rally-racer-dirt": {
+      "source_check_attempted_at": "2026-11-15T02:56:37+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "WASD or arrow keys = vehicle control Space or Q = handbrake C = change camera"
+      },
+      "developer": "Valvolex",
+      "supported_devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "source_published_at": "2023-11-17",
+      "source_updated_at": "2026-11-10",
+      "source_checked_at": "2026-11-15T02:56:37+00:00",
+      "source_category_name": "Driving",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "Rally Racer Dirt is a rally drift-based game, allows you to drift on both asphalt and dirt terrains while navigating through hills. This category is redefined with the introduction of Rally Racer Dirt, offering the best realistic and stunning controls for a rally game.",
+      "long_description": "Rally Racer Dirt is a rally drift-based game, allows you to drift on both asphalt and dirt terrains while navigating through hills. This category is redefined with the introduction of Rally Racer Dirt, offering the best realistic and stunning controls for a rally game. Enjoy the experience of drifty and realistic tuned physics, coupled with detailed graphics, various vehicles, and racing tracks. Be a rally racer, driving like Ken Blocks and Collin McRae on the tracks. The game features a Realtime Multiplayer Mode, 13 different rally cars, tunable cars with adjustable features, upgradable cars and drive properties, 5 different tuned tracks, and more. Choose between two main game modes: Challenge mode, with 60 different challenges to pass, and Survival mode, where you drift and drive as long as you can, passing checkpoints. Release Date January 2015 (Android) March 2015 (iOS) November 2023 (WebGL) Platforms Web browser (desktop and mobile) Android",
+      "content_guide": {
+        "summary": "Rally Racer Dirt is a rally drift-based game, allows you to drift on both asphalt and dirt terrains while navigating through hills. This category is redefined with the introduction of Rally Racer Dirt, offering the best realistic and stunning controls for a rally game.",
+        "how_to": "Controls WASD or arrow keys = vehicle control Space or Q = handbrake C = change camera",
+        "tips": [
+          "Read the controls above before starting; keyboard, mouse, and touch inputs can differ.",
+          "Check the in-game objective and tutorial before choosing a mode or spending resources."
+        ],
+        "source_url": "https://www.crazygames.com/game/rally-racer-dirt",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.5,
+      "source_upvotes": 1170843
+    },
+    "count-masters-stickman-games": {
+      "source_check_attempted_at": "2026-11-15T02:56:37+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "Mouse = Move the character by moving the mouse left or right. Left-click to select buttons. Keyboard = Use the left and right arrow keys to move. Press space to select actions."
+      },
+      "developer": "FreePlay LLC",
+      "supported_devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "source_published_at": "2025-02-21",
+      "source_updated_at": "2025-07-22",
+      "source_checked_at": "2026-11-15T02:56:37+00:00",
+      "source_category_name": "Arcade",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "Count Masters: Stickman Games is a fast-paced running game where you gather a growing army of stickmen to clash against rival crowds. Navigate through obstacles, choose the best paths to multiply your numbers, and lead your team to victory.",
+      "long_description": "Count Masters: Stickman Games is a fast-paced running game where you gather a growing army of stickmen to clash against rival crowds. Navigate through obstacles, choose the best paths to multiply your numbers, and lead your team to victory. Battle fierce opponents, defeat the King-stickman, and claim the castle in an action-packed race filled with strategy and excitement! Tips and Tricks Don’t just rush forward—choose gates that give you the best numbers, even if they’re not directly in your path. Avoid red gates and dangerous traps that shrink your army. Upgrade your starting crowd and gate bonuses early to grow faster in each run. Watch enemy movements and time your attacks—charging in blindly can cost your entire team. Save coins between runs to boost your strength and make harder levels easier. Features Fast-paced 3D runner with epic crowd battles Fun strategy and math choices with every gate Boss fights and challenging traps Colorful, satisfying visuals and smooth controls Developer Count Masters is developed by FreePlay.",
+      "content_guide": {
+        "summary": "Count Masters: Stickman Games is a fast-paced running game where you gather a growing army of stickmen to clash against rival crowds. Navigate through obstacles, choose the best paths to multiply your numbers, and lead your team to victory.",
+        "how_to": "Controls Mouse = Move the character by moving the mouse left or right. Left-click to select buttons. Keyboard = Use the left and right arrow keys to move. Press space to select actions.",
+        "tips": [
+          "Don’t just rush forward—choose gates that give you the best numbers, even if they’re not directly in your path. Avoid red gates and dangerous traps that shrink your army. Upgrade your starting crowd and gate bonuses early to grow faster in each run. Watch enemy movements and time your attacks—charging in blindly can cost your entire team. Save coins between runs to boost your strength and make harder levels easier."
+        ],
+        "source_url": "https://www.crazygames.com/game/count-masters-stickman-games",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.5,
+      "source_upvotes": 1148079
+    },
+    "geometry-dash-online": {
+      "source_check_attempted_at": "2026-11-15T02:56:37+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "SPACE/UP Arrow = Jump HOLD DOWN SPACE/UP Arrow = Multi-jump UP Arrow = Steer vehicle up DOWN Arrow = Steer vehicle down Don't touch the spikes, or you will have to restart!"
+      },
+      "developer": "",
+      "supported_devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "source_published_at": "2016-05-09",
+      "source_updated_at": "",
+      "source_checked_at": "2026-11-15T02:56:37+00:00",
+      "source_category_name": "Arcade",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "Geometry Game is a free side-scrolling platformer played in sync with musical rhythms. Groove your way over and under obstacles to keep the musical momentum alive.",
+      "long_description": "Geometry Game is a free side-scrolling platformer played in sync with musical rhythms . Groove your way over and under obstacles to keep the musical momentum alive. If you slip up, it’s back to the beginning! Inspired by the original Geometry Dash, this is a Scratch version, bringing the classic rhythm-based gameplay to your browser. \"This game became our family obsession during lockdown, but we have recently returned to play it. Combining simple controls and a high level of challenge makes for a fun experience we can all enjoy. Because the play is in time with the music, it’s also a good way to develop children’s sense of timing and musicality. Sometimes we’ve even played it once the kids are in bed, to see if we can improve our skills for the next family session.\" Review by FamilyGamingDatabase . How to Play Geometry Game Geometry Dash is a 2D platformer game where you are in charge of moving a shape through a bunch of obstacles, all to the beat of the music. The square actually moves by itself, and all you have to do is click to jump when necessary and use the up/down arrows to steer vehicles. The way you dodge obstacles is often in sync with the beat, so make sure your sound is on and enjoy the experience! The key to the game is timing. The levels themselves scroll automatically, and hitting spikes, walls, or other hazards results in an instant crash and restart. If you fail, it's back to the beginning. The constant die-and-retry loop will have you quickly memorizing the patterns of each level and, more importantly, the precise timing of crucial jumps. This dynamic is what makes the game addictive. Listen to the beat Geometry Game is a music game, and many jumps and movements are synced to the beat of the background music, so paying attention to the rhythm is not really an option. Practice Mode lets you place checkpoints to learn tricky sections without starting over, so it's a good place to start or go back to if you're having trouble completing levels. Watch the obstacles Levels also feature unique objects like portals, pads, and orbs. Portals can flip gravity, change speed, or switch vehicle modes. Jump pads automatically launch you, and orbs trigger special actions mid-air. These elements replace traditional power-ups, creating dynamic challenges that keep each level pretty much unpredictable. Tips & Tricks Practice Mode. Use Practice Mode to break a level into smaller sections. Place checkpoints at tricky spots and repeat until you can clear each segment consistently. This builds muscle memory and makes full runs much easier. Follow the Rhythm. The game’s music often cues obstacle timing. Pay attention to beats and sync your jumps to the song. You can try humming the beat to get the rhythm down. Geometry Game Reviews The game has received positive reviews from critics. Softpedia praised the game's style, saying, \"While it can get a bit frustrating sometimes, you can always complete the stages using the practice mode and then jump into the many different user-generated levels.\" Geometry Game History Geometry Dash started without a clear vision, according to the developer RobTop. It could have moved in any direction. It started as a template with a cube that could crash and jump, and evolved into the smash-hit game it is today. When the game was first launched, it was called Geometry Jump and only had seven levels. Later on, it was renamed \"Geometry Dash.\" Currently, there are four free versions of the game, one being \"Geometry Dash Lite,\" which now includes the first 13 levels from the full version. Features Challenging levels that vary in difficulty from hard to almost impossible Simple controls make the game intuitive to learn from the start Excellent music that compels you to reach the next part of the track Fun gameplay synced to the beat! More Geometry Games If you like playing Geometry Dash for free in your web browser, check out Geometry Dash Subzero. More Games Like This For more games played in time with musical rhythms, check out FNF , a popular freestyle music game. If you want to have a bit of silly fun, Blob Opera will provide plenty of entertainment! Other music-centric games to try include Friday Night Funkin', where you rap battle it out with other musically inclined players. And for more musical rhythm games, Sprunki will hit the spot, as you'll get to create your own vibrant sounds and melodies. Platforms Geometry Dash is available across all platforms: web, Android, iOS, and Windows phones. Developer The game was created by RobTop Games for mobile, before being ported to PC as Geometry Game. This Scratch version is made by Griffpatch.",
+      "content_guide": {
+        "summary": "Geometry Game is a free side-scrolling platformer played in sync with musical rhythms. Groove your way over and under obstacles to keep the musical momentum alive.",
+        "how_to": "Geometry Dash is a 2D platformer game where you are in charge of moving a shape through a bunch of obstacles, all to the beat of the music. The square actually moves by itself, and all you have to do is click to jump when necessary and use the up/down arrows to steer vehicles. The way you dodge obstacles is often in sync with the beat, so make sure your sound is on and enjoy the experience! The key to the game is timing. The levels themselves scroll automatically, and hitting spikes, walls, or other hazards results in an instant crash and restart. If you fail, it's back to the beginning. The constant die-and-retry loop will have you quickly memorizing the patterns of each level and, more importantly, the precise timing of crucial jumps. This dynamic is what makes the game addictive.",
+        "tips": [
+          "Practice Mode. Use Practice Mode to break a level into smaller sections. Place checkpoints at tricky spots and repeat until you can clear each segment consistently. This builds muscle memory and makes full runs much easier. Follow the Rhythm. The game’s music often cues obstacle timing. Pay attention to beats and sync your jumps to the song. You can try humming the beat to get the rhythm down."
+        ],
+        "source_url": "https://www.crazygames.com/game/geometry-dash-online",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.2,
+      "source_upvotes": 1040395
+    },
+    "miniblox": {
+      "source_check_attempted_at": "2026-11-15T02:56:37+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "WASD = move around Space bar = jump Shift = sprint Alt= crouch Left click = mine and attack Right click = place blocks E = open your inventory Double tap space = fly in creative mode Enter = chat P = pause the game"
+      },
+      "developer": "Miniblox",
+      "supported_devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "source_published_at": "2024-03-01",
+      "source_updated_at": "2026-07-14",
+      "source_checked_at": "2026-11-15T02:56:37+00:00",
+      "source_category_name": ".io",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "Miniblox is an online game featuring voxelated graphics and a diverse selection of minigames. Explore endless possibilities as you delve into a vibrant world of creativity and competition.",
+      "long_description": "Miniblox is an online game featuring voxelated graphics and a diverse selection of minigames. Explore endless possibilities as you delve into a vibrant world of creativity and competition. Join in, and let the voxel adventures begin! How to Play Core game modes The two core game modes in Miniblox are survival and creative. Much like Minecraft, survival involves starting out with nothing with a survivalist aim, whereas creative mode gives you free rein to do what you want. If you want to be sure you join a game filled with other players, click browse to view the list of active games with players in! World creation Like other creative voxelated games, you can harvest resources, mine the Earth, build structures, and craft various items to advance. You can also create and load worlds with unique characteristics, terrains, and use custom seeds to generate worlds with a custom set of preferences. Minigames Miniblox has a range of minigames with various objectives. Take to PvP in modes like Eggwars and Skywars, or show off your jumping skills in parkour. Here’s the full list to explore! KitPvP Skywars Eggwars doubles Eggwars quads Spleef Bridge duels One in the quiver Classic PvP Online gameplay There’s an awesome range of social features in Miniblox. You can add friends, create custom rooms with your own criteria, and invite other players to join you. Collect coins from your games and daily login bonus to purchase new skins! More Games Like This There are loads more free and fun games like Miniblox to play at CrazyGames. If you're looking to move to the next game, we recommend Bloxd , a similar title with various game modes. For something more combat-oriented, check out Voxiom.io . Release Date January 2019 Platform Web browser (desktop and mobile)",
+      "content_guide": {
+        "summary": "Miniblox is an online game featuring voxelated graphics and a diverse selection of minigames. Explore endless possibilities as you delve into a vibrant world of creativity and competition.",
+        "how_to": "Controls WASD = move around Space bar = jump Shift = sprint Alt= crouch Left click = mine and attack Right click = place blocks E = open your inventory Double tap space = fly in creative mode Enter = chat P = pause the game",
+        "tips": [
+          "Read the controls above before starting; keyboard, mouse, and touch inputs can differ.",
+          "Check the in-game objective and tutorial before choosing a mode or spending resources."
+        ],
+        "source_url": "https://www.crazygames.com/game/miniblox",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.3,
+      "source_upvotes": 933821
+    },
+    "night-city-racing": {
+      "source_check_attempted_at": "2026-11-15T02:56:38+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "If playing one-player WASD / arrow keys = move R-Shift / L-Shift = NOS R = restart car position T = look back C = change camera view If playing two-player Player 1 Arrow keys = move M = NOS O = restart car position L = look back K = change camera view Player 2 WASD = move L-Shift = NOS R = restart car position T = look back C = change camera view"
+      },
+      "developer": "RHM Interactive",
+      "supported_devices": [
+        "Desktop"
+      ],
+      "source_published_at": "2023-01-31",
+      "source_updated_at": "2024-11-13",
+      "source_checked_at": "2026-11-15T02:56:38+00:00",
+      "source_category_name": "Driving",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "Night City Racing is a car-driving game with fantastic races, epic stunts, and incredible supercars. Gear up for heart-pounding races and wild challenges that will test your skills!",
+      "long_description": "Night City Racing is a car-driving game with fantastic races, epic stunts, and incredible supercars. Gear up for heart-pounding races and wild challenges that will test your skills! Rack up cash as you speed through the tracks and use it to upgrade to flashy, jaw-dropping cars. Whether you’re showing off your racing skills in epic two-player mode or going for solo glory, the trophy is yours for the taking. So buckle up, race hard, and let everyone know you’re the ultimate speed demon! How to Play Night City Racing Race against the competition Get in the driver’s seat and tackle some of the world’s best sports cars head-on. As you progress, there are 16 racing challenges to complete that increase in difficulty. Take on anything from the tricky corners of city streets to the open landscapes of an airfield in these thrilling races. In each race, you'll face four AI-controlled opponents, and you can also challenge a friend by playing on a split screen on the same computer. Complete various challenges Earn some extra cash by completing five fun challenges. For example, you’ll race against an airplane or the clock to the finish line on a range of obstacle-laced tracks. If you’re successful, the money flows into your account. Challenges can be repeated indefinitely, allowing you to accumulate currency for the next car upgrade. Go for a spin in the free drive Go stunt crazy in the open-world free-drive game mode. Rack up some cash by pulling off epic stunts and speeding around without limits in an open arena filled with ramps and other stunt-worthy objects. Buy and upgrade your supercar Use all that gold coinage you’ve earned as a reckless steering-wheel protagonist to expand your supercar collection. Tune up the engine and brakes, wear flashy new wheels, and treat yourself to a two-toned paint job. Night City Racing puts you in the driver’s seat. The car's features you'll be able to upgrade are: Engine Brake Agility Turbo Booster Rims Paint More Games Like This CrazyGames has a vast selection of racing games and driving games, so once you’ve finished Night City Racing, check them out! A popular game right now is Moto X3M , a challenging motorcycle game featuring timed obstacle courses and stunts. An additional fan-favorite among casual games is Eggy Car , where you are challenged as a driver by an egg, which needs to remain intact until the end of the course. Release Date January 2023 (Android and WebGL) Developer RHM Interactive developed Night City Racing. Platforms Web browser Android",
+      "content_guide": {
+        "summary": "Night City Racing is a car-driving game with fantastic races, epic stunts, and incredible supercars. Gear up for heart-pounding races and wild challenges that will test your skills!",
+        "how_to": "Race against the competition Get in the driver’s seat and tackle some of the world’s best sports cars head-on. As you progress, there are 16 racing challenges to complete that increase in difficulty. Take on anything from the tricky corners of city streets to the open landscapes of an airfield in these thrilling races. In each race, you'll face four AI-controlled opponents, and you can also challenge a friend by playing on a split screen on the same computer. Complete various challenges Earn some extra cash by completing five fun challenges. For example, you’ll race against an airplane or the clock to the finish line on a range of obstacle-laced tracks. If you’re successful, the money flows into your account. Challenges can be repeated indefinitely, allowing you to accumulate currency for the next car upgrade. Go for a spin in the free drive Go stunt crazy in the open-world free-drive game mode. Rack up some cash by pulling off epic stunts and speeding around without limits in an open arena filled with ramps and other stunt-worthy objects. Buy and upgrade your supercar Use all that gold coinage you’ve earned as a reckless steering-wheel protagonist to expand your supercar collection. Tune up the engine and brakes, wear flashy new wheels, and treat yourself to a two-toned paint job. Night City Racing puts you in the driver’s seat. The car's features you'll be able to upgrade are: Engine Brake Agility Turbo Booster Rims Paint",
+        "tips": [
+          "Read the controls above before starting; keyboard, mouse, and touch inputs can differ.",
+          "Check the in-game objective and tutorial before choosing a mode or spending resources."
+        ],
+        "source_url": "https://www.crazygames.com/game/night-city-racing",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.4,
+      "source_upvotes": 932669
+    },
+    "thief-puzzle": {
+      "source_check_attempted_at": "2026-11-15T02:56:39+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "Click and hold the left mouse button to guide the thieves hand towards the target"
+      },
+      "developer": "Famobi",
+      "supported_devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "source_published_at": "2024-09-19",
+      "source_updated_at": "2026-05-25",
+      "source_checked_at": "2026-11-15T02:56:39+00:00",
+      "source_category_name": "Puzzle",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "Thief Puzzle is a clever 2D puzzle logic game that puts your problem-solving and strategy to the test. You control a sneaky thief’s hand as it reaches for valuable treasures, but the path is filled with complex traps, laser security systems, and tricky obstacles.",
+      "long_description": "Thief Puzzle is a clever 2D puzzle logic game that puts your problem-solving and strategy to the test. You control a sneaky thief’s hand as it reaches for valuable treasures, but the path is filled with complex traps, laser security systems, and tricky obstacles. Do you have what it takes to outsmart each trap that comes your way? How to Play Thief Puzzle In Thief Puzzle, you're tasked with a series of sneaky heists in various comical settings. You'll start by testing your skills in simple situations: snatching a purse from an old woman seated on a bench or grabbing groceries from two unsuspecting women from a ledge. As you progress, the challenges escalate. You’ll even swipe a tourist’s suitcase while they admire the Eiffel Tower and outwit a rival thief to steal a money bag in a museum. There’s never a dull moment as you navigate your way through each clever scenario. From beachside schemes where you steal a pearl from a shell to slipping into restricted areas by pickpocketing a key, every level brings new surprises. As the difficulty increases, you’ll find yourself pulling off trickier moves like swiping a diamond ring from a newly engaged couple while they’re lost in a kiss or lifting answers from a classmate’s test without getting caught by whirling fans. You’ll also have to outsmart guard dogs to steal car keys, drive away with precision, avoid TNT explosions, and—just for fun—snatch a toupee from the head of a party guest. As the levels progress, you will need increasing sharp thinking and precise timing as you carefully plot your moves to avoid detection and snatch the prize. With every stage growing more challenging, you'll need to outwit elaborate defenses using clever strategies and creative solutions. Sharp thinking alone won't cut it. You will need to calculate the perfect angles and find the shortest path to avoid detection. The puzzles are designed to challenge your wit and timing, requiring you to navigate obstacles and interact with dynamic environments. The slightest misstep could alert your target or trigger traps, so precision is key as you outmaneuver everything from dogs, furniture, and, of course, unsuspecting victims. More Games Like This Want a few more brain-teasing games to get you scratching your head? Try more of our puzzle games and logic games like Nonogram , where you fill in spaces on a numerical grid to reveal an image or Bolts and Nuts , where you test your logic and strategic thinking with a ticking timer breathing down your neck.",
+      "content_guide": {
+        "summary": "Thief Puzzle is a clever 2D puzzle logic game that puts your problem-solving and strategy to the test. You control a sneaky thief’s hand as it reaches for valuable treasures, but the path is filled with complex traps, laser security systems, and tricky obstacles.",
+        "how_to": "In Thief Puzzle, you're tasked with a series of sneaky heists in various comical settings. You'll start by testing your skills in simple situations: snatching a purse from an old woman seated on a bench or grabbing groceries from two unsuspecting women from a ledge. As you progress, the challenges escalate. You’ll even swipe a tourist’s suitcase while they admire the Eiffel Tower and outwit a rival thief to steal a money bag in a museum. There’s never a dull moment as you navigate your way through each clever scenario. From beachside schemes where you steal a pearl from a shell to slipping into restricted areas by pickpocketing a key, every level brings new surprises. As the difficulty increases, you’ll find yourself pulling off trickier moves like swiping a diamond ring from a newly engaged couple while they’re lost in a kiss or lifting answers from a classmate’s test without getting caught by whirling fans. You’ll also have to outsmart guard dogs to steal car keys, drive away with precision, avoid TNT explosions, and—just for fun—snatch a toupee from the head of a party guest. As the levels progress, you will need increasing sharp thinking and precise timing as you carefully plot your moves to avoid detection and snatch the prize. With every stage growing more challenging, you'll need to outwit elaborate defenses using clever strategies and creative solutions. Sharp thinking alone won't cut it. You will need to calculate the perfect angles and find the shortest path to avoid detection. The puzzles are designed to challenge your wit and timing, requiring you to navigate obstacles and interact with dynamic environments. The slightest misstep could alert your target or trigger traps, so precision is key as you outmaneuver everything from dogs, furniture, and, of course, unsuspecting victims.",
+        "tips": [
+          "Read the controls above before starting; keyboard, mouse, and touch inputs can differ.",
+          "Check the in-game objective and tutorial before choosing a mode or spending resources."
+        ],
+        "source_url": "https://www.crazygames.com/game/thief-puzzle",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.3,
+      "source_upvotes": 903097
+    },
+    "man-runner-2048": {
+      "source_check_attempted_at": "2026-11-15T02:56:39+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "Use the left mouse button or the AD or left-right arrow keys to move to the left and right. Use the left mouse button to aim the monster."
+      },
+      "developer": "GMR Bros.",
+      "supported_devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "source_published_at": "2023-08-18",
+      "source_updated_at": "2026-04-10",
+      "source_checked_at": "2026-11-15T02:56:39+00:00",
+      "source_category_name": "Arcade",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "description": "Man Runner 2048 is a casual arcade game where your objective is to run and merge men till you reach 2048. Your goal is to get the highest score on each round, because at the end of the level, you will get a chance to shoot a giant monster.",
+      "long_description": "Man Runner 2048 is a casual arcade game where your objective is to run and merge men till you reach 2048. Your goal is to get the highest score on each round, because at the end of the level, you will get a chance to shoot a giant monster. The higher your score, the more power you gain. How to Play Man Runner 2048 Your ultimate goal is to merge men to reach the 2048 level, achieve the highest score possible, and then fire powerful cannonballs to damage giant monsters and take control of the islands. Each course starts pretty simply. You will need to run through a course head-on, filled with obstacles, while collecting as many points as possible. The gamescape is set up like a runway, and obstacles are everywhere. They could be right in front of you, coming from below, dropping from above. Stay vigilant and keep your eye on the prize. You want to make it to the end of the course. Along the way, collect green rewards and pink diamonds for significant score boosts, but steer clear of anything red or items that split your points. At the end of the course, you will face a giant skeleton. Aim carefully to hit your target. Experiment to find its Achilles’ heel, sometimes right between the eyes, works for maximum damage to earn extra points. You may not be able to defeat it right away, but each attempt helps you rack up a higher score. Each round introduces new obstacles, including sliding floors that can help you gather more points if you move skillfully. Be careful of spikes that rise from the ground and bombs that drop from the sky, both of which can cost you the run. Between runs, you can buy accessories to customize your character. Tip Aim for the monster's center when you fire your cannonballs at the end of the round. This is one of its weakest spots. More Games Like This If you like Man Runner 20248, you will want to browse our casual category for similar fun. Some fan favorites from this category include Little Alchemy and its sequel, Little Alchemy 2 , the classic Bubble Shooter game, Geometry Dash Online , and plenty more. If you like the puzzle part of the game, 2048 is another obvious title worth a try. Release Date November 2022 (Android) August 2023 (WebGL) Developer GMR Bros. made this game. Platforms Web browser Android",
+      "content_guide": {
+        "summary": "Man Runner 2048 is a casual arcade game where your objective is to run and merge men till you reach 2048. Your goal is to get the highest score on each round, because at the end of the level, you will get a chance to shoot a giant monster.",
+        "how_to": "Your ultimate goal is to merge men to reach the 2048 level, achieve the highest score possible, and then fire powerful cannonballs to damage giant monsters and take control of the islands. Each course starts pretty simply. You will need to run through a course head-on, filled with obstacles, while collecting as many points as possible. The gamescape is set up like a runway, and obstacles are everywhere. They could be right in front of you, coming from below, dropping from above. Stay vigilant and keep your eye on the prize. You want to make it to the end of the course. Along the way, collect green rewards and pink diamonds for significant score boosts, but steer clear of anything red or items that split your points. At the end of the course, you will face a giant skeleton. Aim carefully to hit your target. Experiment to find its Achilles’ heel, sometimes right between the eyes, works for maximum damage to earn extra points. You may not be able to defeat it right away, but each attempt helps you rack up a higher score. Each round introduces new obstacles, including sliding floors that can help you gather more points if you move skillfully. Be careful of spikes that rise from the ground and bombs that drop from the sky, both of which can cost you the run. Between runs, you can buy accessories to customize your character.",
+        "tips": [
+          "Read the controls above before starting; keyboard, mouse, and touch inputs can differ.",
+          "Check the in-game objective and tutorial before choosing a mode or spending resources."
+        ],
+        "source_url": "https://www.crazygames.com/game/man-runner-2048",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.3,
+      "source_upvotes": 869372
+    },
+    "papas-donuteria": {
+      "source_check_attempted_at": "2026-11-15T02:56:39+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "This game is all about clicking, really! Pay attention to the in-game instructions! Completing the basic training is essential to learn how the donuts are perfectly doughned, fried, and built."
+      },
+      "source_checked_at": "2026-11-15T02:56:39+00:00",
+      "source_checked_fields": [
+        "controls"
+      ]
+    },
+    "classic-sudoku": {
+      "source_check_attempted_at": "2026-11-15T02:56:40+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "Tap: Select a grid cell, choose a number to input, or toggle tools like Notes and Hints."
+      },
+      "source_page_title": "Classic Sudoku - Logic Puzzle Game for Brain Training",
+      "content_parse_version": 2,
+      "source_checked_at": "2026-11-15T02:56:40+00:00",
+      "source_checked_fields": [
+        "controls",
+        "source_page_title",
+        "content_parse_version",
+        "description",
+        "long_description",
+        "source_rating",
+        "source_popularity"
+      ],
+      "description": "Train your brain with the best Classic Sudoku puzzle game! Play Easy to Master levels, complete Daily Challenges, and use smart hints. Perfect for beginners and advanced players.",
+      "long_description": "\"Classic Sudoku\" is the ultimate puzzle game for anyone looking to challenge their mind and relax at the same time. Featuring a clean, minimalist interface that mimics a real newspaper puzzle, this game offers a pure and distraction-free Sudoku experience. Whether you are a complete beginner learning the rules or a seasoned master looking for a tough challenge, the game caters to all with four distinct difficulty levels: Easy, Medium, Hard, and Master. It also features a \"Daily Challenge\" mode to keep your brain sharp every single day. What sets this app apart are its powerful built-in tools, such as the \"AI Note\" feature which automatically fills in possible numbers, and a comprehensive \"How to Play\" tutorial that teaches advanced solving techniques like \"Hidden Single\" and \"Naked Single.\" Dive into the world of numbers and enhance your logical thinking! Four Difficulty Levels: Choose from Easy, Medium, Hard, and Master to suit your skill. Daily Challenges: New puzzles every day to collect trophies and keep your mind active. Smart Hints & Notes: Use \"AI Note\" for auto-filling and \"Hint\" when you are stuck. Comprehensive Tutorial: Learn the rules and advanced solving strategies in the app. Game Records: Track your progress, win rate, best time, and current win streak. Clean Interface: Enjoy a 2D minimalist design that is easy on the eyes. The goal of Sudoku is to fill a 9x9 grid with numbers so that each row, column, and 3x3 block contains all of the digits between 1 and 9. The Grid: The board consists of 9 rows, 9 columns, and 9 smaller 3x3 blocks separated by thick lines. The Rules: You can only use the numbers 1 through 9. A number can only appear once in each row. A number can only appear once in each column. A number can only appear once in each 3x3 block. Playing: Tap a blank cell to select it, then tap a number from 1 to 9 at the bottom of the screen to fill it in. Tools: Notes (Pencil Icon): Turn on Notes mode to write down possible numbers in a cell. This is crucial for hard puzzles. The \"AI Note\" button can do this for you automatically. Erase: Removes the number from the selected cell. Hint: If you select a blank cell and tap Hint, the game will reveal the correct number. Mistakes: Be careful! You usually have a limit on mistakes (e.g., 3 errors shown as hearts). If you lose all hearts, the game is over. Tap: Select a grid cell, choose a number to input, or toggle tools like Notes and Hints. Q: What is an \"AI Note\"? A: It's an intelligent feature that automatically calculates and fills in all the possible correct numbers (pencil marks) for every empty grid, saving you time. Q: Can I play without the internet? A: Yes, \"Classic Sudoku\" is fully playable offline, making it a great travel companion. Q: What happens if I make a mistake? A: The game tracks errors (shown as hearts at the top). If you make too many incorrect guesses (usually 3), you will fail the puzzle and have to restart.",
+      "source_rating": 5.0,
+      "source_popularity": 807109
+    },
+    "geometr-jump": {
+      "source_check_attempted_at": "2026-11-15T02:56:40+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "Short Jump : Left Arrow Button Long Jump : Right Arrow Button"
+      },
+      "source_page_title": "Geometry Jump: Precision Platformer - Play Free Arcade Game",
+      "content_parse_version": 2,
+      "source_checked_at": "2026-11-15T02:56:40+00:00",
+      "source_checked_fields": [
+        "controls",
+        "source_page_title",
+        "content_parse_version",
+        "description",
+        "long_description",
+        "source_rating",
+        "source_popularity"
+      ],
+      "description": "Master the short and long jump to climb the pillars! Avoid the saw blade and set a new high score in this addictive minimalist arcade game.",
+      "long_description": "Test your reflexes in Cube Jump, a challenging minimalist platformer! Control a small white cube as you leap from pillar to pillar, aiming for the sky. The gameplay is simple but demanding: use the \"Short Jump\" and \"Long Jump\" buttons to navigate gaps of varying widths. But watch out! A massive, deadly saw blade oscillates on the left side of the screen. One slip means game over. Collect diamonds to unlock continues and beat your high score. With its clean aesthetic and \"easy to learn, hard to master\" mechanics, Cube Jump offers endless replayability. Can you reach the top without getting sliced? Precision Jumping: Master the timing of short and long jumps to land perfectly on narrow white pillars. Deadly Saw Blade: Avoid the giant oscillating saw on the left side that will instantly end your run if you touch it. Minimalist Aesthetic: Enjoy a clean, distraction-free visual style with white platforms against solid green or orange backgrounds. Start Game: Tap to begin and watch your cube appear on a pillar. Jump: Tap the Left Arrow for a \"Short Jump\" or the Right Arrow for a \"Long Jump\". Land: Time your jumps to land on the next platform. Avoid Danger: Do not hit the saw blade on the left wall. Collect: Gather diamonds to increase your score and currency. Restart: If you fall or hit the saw, tap \"Restart\" to try again. Short Jump : Left Arrow Button Long Jump : Right Arrow Button Q: How do I jump further? A: Tap the Right Arrow button for a \"Long Jump\". Q: What happens if I hit the saw? A: You die immediately and have to restart or use a co Q: How do I get more diamonds? A: Jump onto pillars that have diamonds on top of them.",
+      "source_rating": 5.0,
+      "source_popularity": 761466
+    },
+    "dinosaur-game": {
+      "source_check_attempted_at": "2026-11-15T02:56:40+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "The game controls are straightforward, as are the graphics of the game. There is nothing that makes your job difficult. Use the W, Upper Arrow, or Spacebar keys to jump. Additionally, you can use your mouse click. Whichever you want to use. Tap to jump in your tablet and smartphone."
+      },
+      "source_checked_at": "2026-11-15T02:56:40+00:00",
+      "source_checked_fields": [
+        "controls"
+      ],
+      "player_checked_at": "2026-11-15T03:20:07+00:00",
+      "player_check_scope": "Desktop player canvas loaded; playable screen not confirmed",
+      "player_check_result": "not_confirmed"
+    },
+    "mirrorland": {
+      "source_check_attempted_at": "2026-11-15T02:56:40+00:00",
+      "source_check_status": "confirmed",
+      "controls": {
+        "Controls": "Use the left mouse button to play and interact with the in-game UI."
+      },
+      "developer": "Hitmakers",
+      "supported_devices": [
+        "Desktop",
+        "Android"
+      ],
+      "source_published_at": "2024-04-30",
+      "source_updated_at": "2025-03-25",
+      "source_checked_at": "2026-11-15T02:56:40+00:00",
+      "source_category_name": "Adventure",
+      "source_checked_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "account_required",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "account_required": true,
+      "description": "Mirrorland is a turn-based strategy set in a fantastical realm teeming with heroes and monsters. Embark on an epic journey through this magical world, brimming with perilous encounters and thrilling adventures at every turn.",
+      "long_description": "Mirrorland is a turn-based strategy set in a fantastical realm teeming with heroes and monsters. Embark on an epic journey through this magical world, brimming with perilous encounters and thrilling adventures at every turn. Traverse through the looking glass into a realm of enigmatic puzzles and terrifying foes. Unravel the mysteries, aid mythical beings, vanquish villains, and safeguard the universe of Mirrorland. With stunning visuals, an immersive storyline, diverse hero selection, and engaging multiplayer features, prepare for an unforgettable quest where bravery and cunning are your greatest weapons. How to Play Mirrorland First things first. To play Mirrorland, you will need to create an online account and select your character (and sidekick). The adventure begins as you ride on horseback along a mysterious, winding path. Your first challenge awaits when the Cheshire Cat, a mischievous yet endearing creature, falls into a hole. Demonstrate your courage and compassion by rescuing him, and in return, he will pledge his unwavering loyalty, becoming your trusted companion and guide throughout the game (sidekick!). As you ride further into Mirrorland, the landscape comes alive with the promise of riches. Treasure chests brimming with rewards, glittering gold, and radiant crystals are scattered across your path, waiting to be claimed. Cheshire often spots these hidden troves, so listen to him so you won't miss an opportunity to increase your bounty. The road is far from quiet, and cries for help are common. You will need to respond to these pleas to form allies. Battle goblins to protect defenseless victims, shield the White Rabbit as he flees from ominous pursuers, and deliver urgent messages to reunite estranged brothers. Each act of bravery and kindness enriches your story, offering rewards that strengthen your resolve and resources. The gameplay is a captivating mix of strategy and direction. Carefully follow the prompts to guide your decisions and immerse yourself in the unfolding narrative. When combat arises, engage in intuitive battles by dragging and dropping attacks to strike down foes. Victory requires precision and skill as you navigate these skirmishes. Beyond the thrill of battle, gather gold, hoard crystals, and complete quests to uncover the deeper layers of Mirrorland’s magic. With every step, your character evolves, and the enchanting world around you reveals its secrets. More Games Like This The adventure doesn’t have to stop here. Continue playing adventure games . Try some of our more popular titles, like Battle Arena, where you build your team and rise through the ranks; use strategy and gem-matching to battle mythical creatures in Magic World . Release Date April 2024 Platform Web browser (desktop and mobile)",
+      "content_guide": {
+        "summary": "Mirrorland is a turn-based strategy set in a fantastical realm teeming with heroes and monsters. Embark on an epic journey through this magical world, brimming with perilous encounters and thrilling adventures at every turn.",
+        "how_to": "First things first. To play Mirrorland, you will need to create an online account and select your character (and sidekick). The adventure begins as you ride on horseback along a mysterious, winding path. Your first challenge awaits when the Cheshire Cat, a mischievous yet endearing creature, falls into a hole. Demonstrate your courage and compassion by rescuing him, and in return, he will pledge his unwavering loyalty, becoming your trusted companion and guide throughout the game (sidekick!). As you ride further into Mirrorland, the landscape comes alive with the promise of riches. Treasure chests brimming with rewards, glittering gold, and radiant crystals are scattered across your path, waiting to be claimed. Cheshire often spots these hidden troves, so listen to him so you won't miss an opportunity to increase your bounty. The road is far from quiet, and cries for help are common. You will need to respond to these pleas to form allies. Battle goblins to protect defenseless victims, shield the White Rabbit as he flees from ominous pursuers, and deliver urgent messages to reunite estranged brothers. Each act of bravery and kindness enriches your story, offering rewards that strengthen your resolve and resources. The gameplay is a captivating mix of strategy and direction. Carefully follow the prompts to guide your decisions and immerse yourself in the unfolding narrative. When combat arises, engage in intuitive battles by dragging and dropping attacks to strike down foes. Victory requires precision and skill as you navigate these skirmishes. Beyond the thrill of battle, gather gold, hoard crystals, and complete quests to uncover the deeper layers of Mirrorland’s magic. With every step, your character evolves, and the enchanting world around you reveals its secrets.",
+        "tips": [
+          "Read the controls above before starting; keyboard, mouse, and touch inputs can differ.",
+          "Check the in-game objective and tutorial before choosing a mode or spending resources."
+        ],
+        "source_url": "https://www.crazygames.com/game/mirrorland",
+        "provenance": "Source description and controls; fallback tips are general browser guidance.",
+        "source_checked_on": "2026-11-15"
+      },
+      "source_rating": 4.0,
+      "source_upvotes": 2827,
+      "player_checked_at": "2026-11-15T03:22:30+00:00",
+      "player_check_scope": "Desktop account-required screen observed; gameplay not entered",
+      "player_check_result": "account_gate_observed"
+    },
+    "merge-rush-z": {
+      "source_check_attempted_at": "2026-11-15T02:56:41+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "minis-ball": {
+      "source_check_attempted_at": "2026-11-15T02:56:41+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "plants-vs-zombies": {
+      "source_check_attempted_at": "2026-11-15T02:56:42+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "horror-spranky-beats": {
+      "source_check_attempted_at": "2026-11-15T02:56:42+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "crowd-city": {
+      "source_check_attempted_at": "2026-11-15T02:56:42+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "bus-jam": {
+      "source_check_attempted_at": "2026-11-15T02:56:42+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "hopball-3d": {
+      "source_check_attempted_at": "2026-11-15T02:56:43+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "goods-master": {
+      "source_check_attempted_at": "2026-11-15T02:56:43+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "decompression-game": {
+      "source_check_attempted_at": "2026-11-15T02:56:43+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "toy-adventure": {
+      "source_check_attempted_at": "2026-11-15T02:56:44+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "fish-go-io": {
+      "source_check_attempted_at": "2026-11-15T02:56:44+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "music-party": {
+      "source_check_attempted_at": "2026-11-15T02:56:44+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "triple-match": {
+      "source_check_attempted_at": "2026-11-15T02:56:44+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "fingertip-piano": {
+      "source_check_attempted_at": "2026-11-15T02:56:45+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "screw-pin-puzzle": {
+      "source_check_attempted_at": "2026-11-15T02:56:45+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "bike-rush": {
+      "source_check_attempted_at": "2026-11-15T02:56:45+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "lovely-doll-creator": {
+      "source_check_attempted_at": "2026-11-15T02:56:45+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "jigsort-puzzles": {
+      "source_check_attempted_at": "2026-11-15T02:56:46+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    },
+    "dreader-horror-maze": {
+      "source_check_attempted_at": "2026-11-15T02:56:46+00:00",
+      "source_check_status": "unconfirmed",
+      "content_status": "needs_review",
+      "controls": {},
+      "source_check_reason": "The provider did not return a verifiable current game record.",
+      "source_checked_fields": []
+    }
+  }
+}

@@ -14,14 +14,17 @@ from io import BytesIO
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from html import escape as html_escape
 from urllib.parse import quote, urlparse
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from catalog_quality import clean_source_text, normalize_source_metrics, catalog_popularity, source_rating, has_blocked_embed
+from catalog_quality import clean_source_text, normalize_source_metrics, catalog_popularity, source_rating, has_blocked_embed, apply_catalog_provenance, catalog_datetime
+from site_content_dates import seed_content_dates
 from site_icons import render_site_icons, copy_root_favicon
 from site_retirements import write_retired_game_routes
 
 with Path(__file__).with_name("game_content_overrides.json").open(encoding="utf-8") as guide_file:
     GAME_GUIDES = json.load(guide_file)
+FACT_CHECKS_PATH = Path(__file__).with_name("catalog_fact_checks.json")
+FACT_CHECKS = json.loads(FACT_CHECKS_PATH.read_text()).get("games", {}) if FACT_CHECKS_PATH.exists() else {}
 
 BASE_URL = "http://localhost:8000"
 SITE_URL = "https://btwgame.com"
@@ -728,9 +731,12 @@ def classify_game_category(game_data):
         return "Match & Merge"
     if has_any(text, ["puzzle", "logic", "brain", "solve", "hidden", "find", "draw", "pin ", "screw", "rope", "line", "maze", "sudoku"]):
         return "Puzzle"
-    if has_any(text, ["simulation", "simulator", "sim ", "life", "doctor", "pet", "animal", "craft", "building", "world"]):
+    declared_genre = re.search(r"\b(arcade|simulation) game\b", clean_text(game_data.get('description') or '').lower())
+    if declared_genre:
+        return "Arcade" if declared_genre.group(1) == "arcade" else "Simulation"
+    if has_word(text, ["simulation", "simulator", "sim", "life", "doctor", "pet", "animal", "craft", "building"]):
         return "Simulation"
-    if has_any(text, ["arcade", "classic", "retro", "pixel", "snake", "pac-man", "flappy"]):
+    if has_word(text, ["arcade", "classic", "retro", "pixel", "snake", "pac-man", "flappy"]):
         return "Arcade"
 
     current = clean_text(game_data.get('category_name') or game_data.get('category') or '')
@@ -757,6 +763,25 @@ def normalize_game_data(game_data):
     original_slug = cleaned.get('slug') or cleaned.get('id') or cleaned.get('title')
     cleaned['original_slug'] = clean_text(original_slug)
     cleaned['slug'] = normalize_slug(original_slug)
+    observations = {key: value for key, value in cleaned.items() if key.startswith(('player_', 'editorial_'))}
+    facts = FACT_CHECKS.get(cleaned['slug'], {})
+    current_check = catalog_datetime(cleaned.get('source_checked_at'))
+    saved_check = catalog_datetime(facts.get('source_checked_at') or facts.get('source_check_attempted_at'))
+    if current_check and saved_check and current_check > saved_check:
+        # Preserve independent observation records, but never replace newer provider facts.
+        cleaned.update({key: value for key, value in facts.items() if key.startswith(('player_', 'editorial_'))})
+    else:
+        cleaned.update(facts)
+    for prefix, date_key in (('player_', 'player_checked_at'), ('editorial_', 'editorial_reviewed_at')):
+        existing_date = catalog_datetime(observations.get(date_key))
+        saved_date = catalog_datetime(facts.get(date_key))
+        if existing_date and (not saved_date or existing_date > saved_date):
+            for key in list(cleaned):
+                if key.startswith(prefix):
+                    cleaned.pop(key)
+            cleaned.update({key: value for key, value in observations.items() if key.startswith(prefix)})
+    if cleaned.get('source') == 'minigame' and cleaned.get('source_category_evidence') != 'provider_metadata':
+        cleaned.pop('source_category_name', None)
     if cleaned.get('title'):
         cleaned['title'] = clean_text(cleaned['title']).replace('JailBreak', 'Jailbreak')
     if not cleaned.get('category_name') and cleaned.get('category'):
@@ -768,7 +793,12 @@ def normalize_game_data(game_data):
     if controls == generic_controls or (cleaned.get('source') == 'minigame' and cleaned.get('content_parse_version') != 2):
         controls = {}
     cleaned['controls'] = {clean_source_text(key): clean_source_text(value) for key, value in controls.items()}
-    return cleaned
+    guide = cleaned.get('content_guide') or {}
+    if 'Source description' in guide.get('provenance', '') and 'reviewed_on' in guide:
+        guide = guide.copy()
+        guide['source_checked_on'] = guide.pop('reviewed_on')
+        cleaned['content_guide'] = guide
+    return apply_catalog_provenance(cleaned)
 
 def prepare_catalog(games):
     prepared = [normalize_game_data(game) for game in games if not has_blocked_embed(game)]
@@ -782,7 +812,12 @@ def prepare_catalog(games):
     return prepared
 
 def game_guide(game):
-    return GAME_GUIDES.get(game.get('slug')) or game.get('content_guide') or {}
+    guide = (GAME_GUIDES.get(game.get('slug')) or game.get('content_guide') or {}).copy()
+    # The legacy importer stamped reviewed_on automatically. It is source evidence,
+    # not a record of a person reviewing or playing the game.
+    if game.get('source') == 'crazygames' and 'Source description' in guide.get('provenance', ''):
+        guide.setdefault('source_checked_on', guide.pop('reviewed_on', None))
+    return guide
 
 def truncate(text, length=160):
     text = clean_text(text or "")
@@ -1225,8 +1260,10 @@ def render_game_card(game, priority=False, extra_class="", show_badge=True):
     slug = normalize_slug(game.get('slug') or game.get('id') or title)
     thumbnail = clean_text(game.get('thumbnail_url') or game.get('thumbnail') or '')
     badge = ''
-    if show_badge and (game.get('is_new') or game.get('isNew')):
-        badge = '<div class="game-badge">NEW</div>'
+    if show_badge and game.get('is_new'):
+        expiry = catalog_datetime(game.get('catalog_added_at'))
+        until = (expiry + timedelta(days=14)).isoformat() if expiry else ''
+        badge = f'<div class="game-badge" data-new-until="{html_escape(until, quote=True)}">NEW</div>'
     elif show_badge and (game.get('is_featured') or game.get('isFeatured')):
         badge = '<div class="game-badge featured">FEATURED</div>'
     image_html = ''
@@ -1302,7 +1339,7 @@ def render_rail_links(active_category=None, categories=None):
 def build_game_faq(title, category_name, controls, iframe_url=None, guide=None, game_data=None):
     guide = guide or {}
     game_data = game_data or {}
-    control_text = ", ".join(f"{clean_text(k)} for {clean_text(v)}" for k, v in (controls or {}).items())
+    control_text = " ".join(clean_text(v) if clean_text(k).lower() == 'controls' else f"{clean_text(k)}: {clean_text(v)}" for k, v in (controls or {}).items())
     questions = [
         (
             f"What should I know before opening {title}?",
@@ -1322,13 +1359,19 @@ def build_game_faq(title, category_name, controls, iframe_url=None, guide=None, 
         ),
     ]
     if control_text:
-        questions.insert(1, (f"How do I control {title}?", f"Use {control_text}. Controls can vary by device, so check the in-game prompts too."))
+        questions.insert(1, (f"How do I control {title}?", f"{control_text.rstrip('.')}. Controls can vary by device, so check the in-game prompts too."))
     if guide.get('summary'):
         questions[0] = (f"What is {title}?", guide['summary'])
     if guide.get('how_to'):
         questions.insert(1, (f"How do I play {title}?", guide['how_to']))
     if game_data.get('supported_devices'):
         questions.append((f"Which devices does {title} support?", f"The source lists {', '.join(game_data['supported_devices'])} browser support for this build. Check the controls above before starting."))
+    else:
+        questions.append((f"Which devices does {title} support?", "Device support has not been confirmed from the source listing. Check the provider's current requirements before playing."))
+    if not controls:
+        questions.append((f"Are the controls for {title} confirmed?", "The source controls are awaiting confirmation. Follow the provider's current instructions; a keyboard, mouse, or touch control has not been independently confirmed for this listing."))
+    if game_data.get('content_status') == 'needs_review':
+        questions = [(q, a) for q, a in questions if q != f"How do I play {title}?"]
     questions.extend((item['question'], item['answer']) for item in guide.get('faq', []))
     return questions
 
@@ -1353,9 +1396,9 @@ def build_game_content(title, description, long_description, category_name, tags
     )
     controls_text = ""
     if controls:
-        controls_text = " ".join(f"{clean_text(key)}: {clean_text(value)}." for key, value in controls.items())
+        controls_text = " ".join((clean_text(value) if clean_text(key).lower() == 'controls' else f"{clean_text(key)}: {clean_text(value)}").rstrip('.') + '.' for key, value in controls.items())
     else:
-        controls_text = "Use the keyboard, mouse, touch controls, or the in-game prompts shown after the game loads."
+        controls_text = "Controls have not been confirmed from the source listing. Check the provider's current instructions before playing."
     tips = [
         build_mode_notes(title, category_name, tags),
         "Use fullscreen or a wider browser window when the game needs precise movement, camera control, or small UI targets.",
@@ -1384,16 +1427,27 @@ def game_facts(game):
         ('Game name', clean_text(game.get('title'))),
         ('Category', clean_text(game.get('category_name'))),
         ('Play style', 'Browser game'),
-        ('Devices', ', '.join(game['supported_devices']) if game.get('supported_devices') else 'Browser; device requirements vary'),
+        ('Devices', ', '.join(game['supported_devices']) if game.get('supported_devices') else 'Not confirmed from the source listing'),
         ('Download required', 'No separate app required'),
         ('Price', 'Free browser access'),
     ]
     if game.get('developer'):
         facts.append(('Developer', clean_text(game['developer'])))
+    if game.get('source_published_at'):
+        facts.append(('Source listing date', clean_text(game['source_published_at'])[:10]))
     if source_name(game):
         facts.append(('Listing source', source_name(game)))
-    if game_guide(game).get('account_required') is True:
+    account = game.get('account_required', game_guide(game).get('account_required'))
+    if account is True:
         facts.append(('Account', 'Required by the game provider'))
+    elif account is False:
+        facts.append(('Account', 'The source states no account is required'))
+    else:
+        facts.append(('Account', 'Not confirmed; requirements depend on the provider'))
+    if not game.get('controls'):
+        facts.append(('Controls', 'Awaiting source confirmation'))
+    if game.get('content_status') == 'needs_review':
+        facts.append(('Listing notes', 'Source instructions awaiting confirmation'))
     return facts
 
 def build_game_jsonld(game, tags, faq_items, seo_description=None):
@@ -1471,9 +1525,8 @@ def build_game_jsonld(game, tags, faq_items, seo_description=None):
     }
     if source_url and urlparse(source_url).scheme in {'https', 'http'}:
         page_schema['citation'] = {"@type": "WebPage", "url": source_url, "name": f"{title} source listing"}
-    reviewed = game_guide(game).get('reviewed_on')
-    if reviewed:
-        page_schema['dateModified'] = reviewed
+    if game.get('content_modified_at'):
+        page_schema['dateModified'] = game['content_modified_at']
     scripts.append(page_schema)
     return "\n".join(jsonld_script(script) for script in scripts)
 
@@ -1567,6 +1620,7 @@ def render_head(title, description, canonical_path, og_image=SITE_IMAGE, extra_j
     <meta name="twitter:image" content="{html_escape(image, quote=True)}">
     <link rel="canonical" href="{html_escape(canonical, quote=True)}">
     <link rel="stylesheet" href="/assets/css/site.css">
+    <script src="/assets/js/catalog-status.js" defer></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM7PBYVK97"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -1824,14 +1878,14 @@ def render_home_geo_section():
 def generate_index_page(games):
     categories = get_all_categories(games)
     popular = sorted(games, key=catalog_popularity, reverse=True)
-    new_games = sorted(games, key=lambda game: game.get('created_at') or game.get('release_date') or '', reverse=True)
+    new_games = sorted([game for game in games if game.get('is_new')], key=lambda game: (catalog_datetime(game.get('catalog_added_at')) or datetime(1970, 1, 1, tzinfo=timezone.utc)).timestamp(), reverse=True)
     top_games = popular[:32]
     fresh_games = new_games[:24]
     popular_cards = "\n".join(
         render_game_card(game, priority=index < 14, extra_class='spotlight-card' if index in (0, 7) else '')
         for index, game in enumerate(top_games)
     )
-    new_cards = "\n".join(render_game_card(game, priority=False, show_badge=True) for game in fresh_games)
+    new_cards = "\n".join(render_game_card(game, priority=False, show_badge=True) for game in fresh_games) or '<p class="section-note">No games added in the last 14 days. <a href="/games">Browse all games</a>.</p>'
     category_map = {
         category: sorted(
             [game for game in games if matches_category(game, category)],
@@ -1879,7 +1933,7 @@ def generate_index_page(games):
                     <div class="section-header">
                         <div>
                             <h1 class="section-title" id="popular-games-title">Hot games</h1>
-                            <p class="section-note">Games players open most often.</p>
+                            <p class="section-note">Popular picks using available source votes, source popularity, and catalog play counts. See our <a href="/editorial-policy">selection notes</a>.</p>
                         </div>
                         <a href="/games" class="view-all-btn">View all</a>
                     </div>
@@ -1889,11 +1943,11 @@ def generate_index_page(games):
                     <div class="section-header">
                         <div>
                             <h2 class="section-title" id="new-games-title">New games</h2>
-                            <p class="section-note">Fresh picks from the current library.</p>
+                            <p class="section-note">Added to BTW game in the last 14 days.</p>
                         </div>
                         <a href="/games?filter=new" class="view-all-btn">View new games</a>
                     </div>
-                    <div class="games-grid compact home-games-grid" id="newGamesGrid">{new_cards}</div>
+                    <div class="games-grid compact home-games-grid" id="newGamesGrid" data-recent-games>{new_cards}</div>
                 </section>
                 {category_shelves}
                 {render_home_geo_section()}
@@ -1926,7 +1980,7 @@ def generate_games_page(games):
             "rating": source_rating(game),
             "total_plays": game.get('total_plays') or 0,
             "catalog_popularity": catalog_popularity(game),
-            "created_at": clean_text(game.get('created_at') or game.get('release_date') or ''),
+            "catalog_added_at": clean_text(game.get('catalog_added_at') or ''),
             "is_new": bool(game.get('is_new') or game.get('isNew')),
             "is_featured": bool(game.get('is_featured') or game.get('isFeatured')),
             "fallback": get_fallback_label(title),
@@ -2031,7 +2085,10 @@ def generate_games_page(games):
         }}
 
         function gameCard(game, index) {{
-            const badge = game.is_new ? '<div class="game-badge">NEW</div>' : (game.is_featured ? '<div class="game-badge featured">FEATURED</div>' : '');
+            const added = Date.parse(game.catalog_added_at || '');
+            const recent = Number.isFinite(added) && added <= Date.now() && Date.now() - added < 14 * 86400000;
+            const until = recent ? new Date(added + 14 * 86400000).toISOString() : '';
+            const badge = recent ? `<div class="game-badge" data-new-until="${{until}}">NEW</div>` : (game.is_featured ? '<div class="game-badge featured">FEATURED</div>' : '');
             const image = game.thumbnail_url
                 ? `<img src="${{escapeHtml(game.thumbnail_url)}}" alt="${{escapeHtml(game.title)}}" width="{THUMBNAIL_WIDTH}" height="{THUMBNAIL_HEIGHT}" loading="${{index < 8 ? 'eager' : 'lazy'}}" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">`
                 : '';
@@ -2049,7 +2106,7 @@ def generate_games_page(games):
         function sortGames(games) {{
             const sort = sortSelect.value;
             return [...games].sort((a, b) => {{
-                if (sort === 'newest') return new Date(b.created_at || 0) - new Date(a.created_at || 0);
+                if (sort === 'newest') return new Date(b.catalog_added_at || 0) - new Date(a.catalog_added_at || 0);
                 if (sort === 'rating') return (b.rating || 0) - (a.rating || 0);
                 if (sort === 'name') return (a.title || '').localeCompare(b.title || '');
                 return (b.catalog_popularity || 0) - (a.catalog_popularity || 0);
@@ -2058,8 +2115,14 @@ def generate_games_page(games):
 
         function applyCatalogFilters(resetLimit = true) {{
             const query = searchInput.value.trim().toLowerCase();
+            const mode = new URLSearchParams(window.location.search).get('filter');
             if (resetLimit) visibleLimit = pageSize;
             filteredGames = catalogData.filter(game => {{
+                if (mode === 'new') {{
+                    const added = Date.parse(game.catalog_added_at || '');
+                    if (!Number.isFinite(added) || added > Date.now() || Date.now() - added >= 14 * 86400000) return false;
+                }}
+                if (mode === 'featured' && !game.is_featured) return false;
                 if (!query) return true;
                 return [game.title, game.description, game.category_name, ...(game.tags || [])]
                     .filter(Boolean)
@@ -2085,15 +2148,19 @@ def generate_games_page(games):
         }});
         searchInput.addEventListener('input', () => applyCatalogFilters(true));
         sortSelect.addEventListener('change', () => applyCatalogFilters(true));
+        document.addEventListener('catalog-status-changed', () => applyCatalogFilters(false));
 
         const initialSearch = new URLSearchParams(window.location.search).get('search');
+        const initialMode = new URLSearchParams(window.location.search).get('filter');
+        if (initialMode === 'new') {{
+            document.getElementById('pageTitle').textContent = 'New games · last 14 days';
+            sortSelect.value = 'newest';
+        }}
+        if (initialMode === 'featured') document.getElementById('pageTitle').textContent = 'Featured games';
         if (initialSearch) {{
             searchInput.value = initialSearch;
-            applyCatalogFilters(true);
-        }} else {{
-            filteredGames = sortGames(filteredGames);
-            renderCatalog();
         }}
+        applyCatalogFilters(true);
     </script>
 </body>
 </html>'''
@@ -2318,7 +2385,9 @@ def generate_trust_pages():
             "BTW game organizes browser games with an emphasis on fast access, clear categories, and useful recommendations.",
             [
                 ("How games are organized", "Games are grouped by category, tags, title, description, controls, and observed catalog patterns."),
-                ("How recommendations are made", "Best-game guides prioritize quick starts, clear controls, browser access, category fit, and casual-player usefulness."),
+                ("How recommendations are made", "Catalog ordering uses available source votes, provider popularity, and legacy catalog play counts. These measures vary by provider and are not a directly comparable count of people playing on BTW game. Selection does not mean that every game has been fully play-tested."),
+                ("What NEW means", "NEW identifies games first added to the BTW game catalog within the last 14 days. A source release date, a metadata refresh, or a build does not reset that window."),
+                ("What our checks mean", "Source checks compare listing facts and instructions with the provider. Editorial review and player checks are separate records. A successful iframe response does not prove that the entire game, login, saving, or advertising works."),
                 ("Accuracy standards", "Game pages avoid invented ratings and avoid claiming specific mechanics unless they are present in the source data or game description."),
             ],
             [
@@ -2474,6 +2543,9 @@ def generate_game_page(game_data, related_games):
         game_data.get('supported_devices'),
     )
     faq_items = build_game_faq(title, category_name, controls, iframe_url, game_guide(game_data), game_data)
+    if game_data.get('content_status') == 'needs_review':
+        how_to_play = "The source instructions for this listing are awaiting confirmation. Check the provider's current instructions before playing."
+        tips = ["Read the provider's current instructions before starting.", "Browser and device requirements may change; the source controls have not been confirmed."]
     game_page_title = build_unique_page_title(title, category_name, slug)
     jsonld_html = build_game_jsonld(game_data, tags, faq_items, seo_description)
     title_html = html_escape(title)
@@ -2502,7 +2574,7 @@ def generate_game_page(game_data, related_games):
     elif rating:
         metric_items.append(('Catalog rating', f'{rating:.1f}/5'))
     if total_plays:
-        metric_items.append(('Plays on BTW game', f'{total_plays:,}'))
+        metric_items.append(('Catalog play count', f'{total_plays:,}'))
     if game_data.get('source_upvotes'):
         metric_items.append(('CrazyGames votes', f"{game_data['source_upvotes']:,}"))
     metric_pills = ''.join(f'<span class="meta-pill">{html_escape(label)} {html_escape(value)}</span>' for label, value in metric_items)
@@ -2617,9 +2689,19 @@ def generate_game_page(game_data, related_games):
         label = source_name(game_data) or 'Original'
         source_reference_html = f'<p>Source: <a href="{html_escape(source_url, quote=True)}" rel="external">{html_escape(label)} game listing</a>.</p>'
     if game_data.get('source_checked_at'):
-        source_reference_html += f'<p>Source information checked: {html_escape(game_data["source_checked_at"][:10])}.</p>'
-    if guide.get('reviewed_on'):
-        source_reference_html += f'<p>Listing notes reviewed: <time datetime="{html_escape(guide["reviewed_on"], quote=True)}">{html_escape(guide["reviewed_on"])}</time>. <a href="/editorial-policy">Editorial policy</a></p>'
+        source_reference_html += f'<p>Source information checked: <time data-check-timestamp datetime="{html_escape(game_data["source_checked_at"], quote=True)}">{html_escape(game_data["source_checked_at"][:10])}</time>. This is a source metadata check.</p>'
+    if game_data.get('source_check_status') == 'unconfirmed':
+        attempted = game_data.get('source_check_attempted_at', '')
+        source_reference_html += f'<p role="note">Source instructions awaiting confirmation. Last attempt: <time data-check-timestamp datetime="{html_escape(attempted, quote=True)}">{html_escape(attempted[:10])}</time>.</p>'
+    if game_data.get('editorial_reviewed_at') and game_data.get('editorial_reviewer'):
+        source_reference_html += f'<p>Editorial review recorded: <time data-check-timestamp>{html_escape(game_data["editorial_reviewed_at"][:10])}</time>.</p>'
+    else:
+        source_reference_html += '<p>Editorial review: No separate review record.</p>'
+    if game_data.get('player_checked_at'):
+        source_reference_html += f'<p>Player check: {html_escape(game_data.get("player_check_scope", "scope not recorded"))} on <time data-check-timestamp>{html_escape(game_data["player_checked_at"][:10])}</time>. This does not cover a full playthrough.</p>'
+    else:
+        source_reference_html += '<p>Player check: No recorded gameplay check. Source availability is not a full play-test.</p>'
+    source_reference_html += '<p>Page content updated: <time data-page-updated></time>. <a href="/editorial-policy">Editorial policy</a></p>'
     related_section_html = f'''
                 <section class="related-games">
                     <div class="section-header">
@@ -2674,6 +2756,7 @@ def generate_game_page(game_data, related_games):
          crossorigin="anonymous"></script>
 
     <title>{page_title_attr}</title>
+    <script src="/assets/js/catalog-status.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -2743,7 +2826,7 @@ def generate_game_page(game_data, related_games):
                         <div class="game-meta-row" aria-label="Game details">
                             {metric_pills}
                             <span class="meta-pill">{category_html}</span>
-                            <span class="meta-pill">Catalog date {html_escape(str(release_date_formatted))}</span>
+                            <span class="meta-pill">Added to BTW game {html_escape(str(game_data.get('catalog_added_at', '')[:10]) or 'Date not confirmed')}</span>
                         </div>
                     </div>
                     {play_next_section_html}
@@ -2848,12 +2931,6 @@ def save_all_games_json(all_games_data):
             slug_file.write_text(''.join(f'{slug}\n' for slug in existing_slugs if slug in active_slugs), encoding='utf-8')
 
         new_games = [game for game in all_games_data if game.get('is_new') or game.get('isNew')]
-        if not new_games:
-            new_games = sorted(
-                all_games_data,
-                key=lambda game: game.get('created_at') or game.get('release_date') or '',
-                reverse=True
-            )[:24]
         with open('static_html/new_games.json', 'w', encoding='utf-8') as f:
             json.dump({"games": new_games}, f, indent=2, ensure_ascii=False)
 
@@ -2898,6 +2975,7 @@ def load_external_static_games():
     return external_games
 
 def build_static_catalog(games, skip_thumbnail_cache=False):
+    seed_content_dates()
     all_games_data = prepare_catalog(games)
     excluded_count = len(games) - len(all_games_data)
     if excluded_count:
@@ -2943,6 +3021,9 @@ def main():
         for extra in load_external_static_games():
             old = by_slug.get(extra['slug'], {})
             merged = {**old, **extra}
+            for key in ('catalog_added_at', 'catalog_added_commit', 'catalog_added_evidence', 'content_modified_at'):
+                if old.get(key):
+                    merged[key] = old[key]
             if old.get('source_metrics_version') == 1:
                 merged['total_plays'] = old.get('total_plays') or 0
                 merged['rating'] = old.get('rating') or 0

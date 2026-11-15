@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "duck-life-4",
+    "before": "Simulation",
+    "after": "Arcade"
+  },
+  {
+    "slug": "minis-ball",
+    "before": "Simulation",
+    "after": "Casual"
+  },
+  {
+    "slug": "space-waves",
+    "before": "Simulation",
+    "after": "Arcade"
+  },
+  {
+    "slug": "pool-club",
+    "before": "Arcade",
+    "after": "Sports"
+  }
+]

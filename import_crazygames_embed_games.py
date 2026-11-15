@@ -161,7 +161,7 @@ def build_source_guide(game):
         "how_to": how_to,
         "tips": tips,
         "source_url": f"{CRAZYGAMES_BASE}/game/{slugify(game.get('slug') or game.get('name'))}",
-        "reviewed_on": datetime.now(timezone.utc).date().isoformat(),
+        "source_checked_on": datetime.now(timezone.utc).date().isoformat(),
         "provenance": "Source description and controls; fallback tips are general browser guidance.",
     }
 
@@ -217,6 +217,7 @@ def build_game_record(game):
     return {
         "source": "crazygames",
         "source_id": game.get("id"),
+        "source_category_name": (game.get("category") or {}).get("name") or "",
         "title": title,
         "slug": slug,
         "description": description or f"Play {title} online for free at BTW game.",
@@ -236,6 +237,9 @@ def build_game_record(game):
         "source_published_at": game.get("addedOn") or "",
         "source_updated_at": game.get("lastSignificantUpdatedOn") or game.get("lastFileUpdatedOn") or "",
         "source_checked_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "source_check_status": "confirmed",
+        "catalog_added_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "catalog_added_evidence": "new_source_import",
         "allow_embed": game.get("allowEmbed") is True,
         "is_featured": False,
         "is_new": True,

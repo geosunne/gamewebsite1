@@ -1,4 +1,10 @@
 // API client for BTW Games Flask backend
+function isNewCatalogEntry(game) {
+    const added = Date.parse(game.catalog_added_at || '');
+    const now = Date.now();
+    return Number.isFinite(added) && added <= now && now - added < 14 * 86400000;
+}
+
 class GameAPI {
     constructor(baseURL = '/api') {
         this.baseURL = baseURL;
@@ -159,7 +165,7 @@ class GameDataAdapter {
     sortGames(games, sort = 'popular') {
         const sorted = [...games];
         if (sort === 'newest') {
-            sorted.sort((a, b) => new Date(b.created_at || b.release_date || 0) - new Date(a.created_at || a.release_date || 0));
+            sorted.sort((a, b) => new Date(b.catalog_added_at || 0) - new Date(a.catalog_added_at || 0));
         } else if (sort === 'rating') {
             sorted.sort((a, b) => (b.rating || 0) - (a.rating || 0));
         } else if (sort === 'title') {
@@ -176,7 +182,7 @@ class GameDataAdapter {
             games = games.filter(game => game.is_featured || game.isFeatured);
         }
         if (params.new) {
-            games = games.filter(game => game.is_new || game.isNew);
+            games = games.filter(isNewCatalogEntry);
         }
         if (params.category && params.category !== 'all') {
             games = games.filter(game => (game.category_name || game.category) === params.category);
@@ -208,7 +214,7 @@ class GameDataAdapter {
             rating: apiGame.rating,
             plays: apiGame.total_plays,
             isFeatured: apiGame.is_featured,
-            isNew: apiGame.is_new,
+            isNew: isNewCatalogEntry(apiGame),
             sourceUrl: apiGame.game_url,
             gameUrl: apiGame.iframe_url || apiGame.game_url,
             iframeUrl: apiGame.iframe_url || apiGame.game_url,
