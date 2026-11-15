@@ -2,27 +2,12 @@
 import json
 import os
 import re
-from datetime import date
 from bs4 import BeautifulSoup
-from xml.sax.saxutils import escape
 from generate_static_pages import game_guide, build_original_summary, build_unique_page_title, site_absolute_url
 from site_icons import ensure_site_icons
 
 SITE_URL = "https://btwgame.com"
 SITE_IMAGE = f"{SITE_URL}/assets/icons/favicon-512x512.png"
-STATIC_PAGES = [
-    "/about",
-    "/contact",
-    "/privacy",
-    "/terms",
-    "/editorial-policy",
-    "/best/free-online-games",
-    "/best/browser-games-for-school",
-    "/best/quick-games",
-    "/best/mobile-browser-games",
-    "/best/no-download-games",
-    "/llms.txt",
-]
 
 def clean_text(value):
     text = str(value or '')
@@ -348,38 +333,10 @@ def optimize_game_pages():
     print(f"✅ Optimized {len(games)} individual game pages")
 
 def generate_xml_sitemap():
-    """Generate XML sitemap for better SEO"""
-    print("🔧 Generating XML sitemap...")
+    """Use the same content dates and URL inventory as the final build step."""
+    from update_sitemap import update_sitemap
+    update_sitemap()
 
-    # Load games data
-    with open('static_html/all_games.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-    # Extract games array from the data structure
-    games = data.get('games', []) if isinstance(data, dict) else data
-
-    today = date.today().isoformat()
-    categories = load_categories()
-    urls = ['https://btwgame.com/', 'https://btwgame.com/games']
-    urls.extend(f"{SITE_URL}{path}" for path in STATIC_PAGES)
-    urls.extend(f"https://btwgame.com/categories/{category['slug']}" for category in categories)
-    urls.extend(f"https://btwgame.com/games/{game['slug']}" for game in games)
-
-    with open('static_html/sitemap.xml', 'w', encoding='utf-8') as f:
-        f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-        f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
-        for index, url in enumerate(urls):
-            priority = '1.0' if index == 0 else '0.9' if index == 1 else '0.8'
-            changefreq = 'daily' if index < 2 else 'weekly'
-            f.write('    <url>\n')
-            f.write(f'        <loc>{escape(url)}</loc>\n')
-            f.write(f'        <lastmod>{today}</lastmod>\n')
-            f.write(f'        <changefreq>{changefreq}</changefreq>\n')
-            f.write(f'        <priority>{priority}</priority>\n')
-            f.write('    </url>\n')
-        f.write('</urlset>\n')
-
-    print("✅ XML sitemap generated")
 
 def optimize_robots_txt():
     """Optimize robots.txt for better crawling"""
