@@ -23,7 +23,7 @@ site_content_dates.py维护公开页面内容指纹及lastmod；static_html/cont
 
 ## 验证结果
 
-- 41项unittest通过，包含Node.js退役边缘行为、Python/浏览器14天边界、来源日期与编辑审核分离、缺失说明展示、来源与独立观察的新旧记录合并、真实内容变更与重复构建测试。
+- 43项unittest通过，包含Node.js退役边缘行为、Python/浏览器14天边界、来源日期与编辑审核分离、缺失说明展示、来源与独立观察的新旧记录合并、真实内容变更与重复构建测试。
 - Python语法、两个浏览器JS语法、git diff --check通过；本轮设计检测无新增发现。
 - 全目录审计：1,783个游戏页、可见FAQ/Schema、canonical、页面日期、NEW目录、31分类、sitemap一致；115,399个内部链接/资源引用无缺失。
 - 浏览器：首页排序说明、NEW筛选423项、Space Waves事实与日期、Mirrorland账号要求、待确认页面和390px窄屏说明已检查。窄屏说明面板宽366px，文案可见。
@@ -46,3 +46,5 @@ Cloudflare仍需登录；现有Chrome的Google账户已登录Search Console，�
 - catalog_fact_checks.json：生成器应用的事实核对记录。
 
 本报告记录提交前验证；对应main SHA、Cloudflare部署及真实域名核验以本轮自动化运行记录和最终聊天结果为准。保留既有Cloudflare Pages Git集成，按授权合并并推送后核查对应提交。
+
+合并保护补充：构建合并旧来源文件时，也按证据时间保留较新的来源事实、播放器和编辑记录；新的已确认操作说明可以解除旧待复核状态。该保护对当前已发布games数组和静态产物没有改变，已补充两项回归测试。

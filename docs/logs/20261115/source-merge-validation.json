@@ -1,0 +1,10 @@
+{
+  "source_file_merge_preserves_current_games": true,
+  "game_count": 1783,
+  "published_static_assets_changed": false,
+  "checks": [
+    "older source input cannot revert newer facts",
+    "independent observation timestamps are preserved",
+    "new confirmed instructions clear older pending status"
+  ]
+}
