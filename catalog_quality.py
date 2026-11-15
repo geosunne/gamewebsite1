@@ -72,6 +72,46 @@ def apply_catalog_provenance(game, now=None):
     return game
 
 
+def merge_catalog_record(old, extra):
+    """Merge source inputs without rolling back newer, independent evidence."""
+    def source_stamp(record):
+        stamps = [catalog_datetime(record.get(key)) for key in ('source_checked_at', 'source_check_attempted_at')]
+        return max((stamp for stamp in stamps if stamp), default=None)
+
+    merged = {**old, **extra}
+    old_stamp, extra_stamp = source_stamp(old), source_stamp(extra)
+    prefer_old = bool(old_stamp and (not extra_stamp or old_stamp > extra_stamp))
+    if prefer_old:
+        fields = {'title', 'description', 'long_description', 'tags', 'controls', 'supported_devices',
+                  'developer', 'content_guide', 'content_status', 'content_parse_version', 'account_required',
+                  'game_url', 'iframe_url'}
+        fields.update(key for key in old if key.startswith('source_'))
+        merged.update({key: old[key] for key in fields if key in old})
+    selected_source = old if prefer_old else extra
+    selected_stamp = old_stamp if prefer_old else extra_stamp
+    if selected_stamp and selected_source.get('source_check_status') == 'confirmed' and selected_source.get('controls'):
+        if merged.get('content_status') == 'needs_review' and selected_source.get('content_status') != 'needs_review':
+            merged.pop('content_status')
+        merged.pop('source_check_reason', None)
+    for prefix, key in (('player_', 'player_checked_at'), ('editorial_', 'editorial_reviewed_at'), ('embed_', 'embed_checked_at')):
+        left, right = catalog_datetime(old.get(key)), catalog_datetime(extra.get(key))
+        selected = old if left and (not right or left > right) else extra if right else None
+        if selected:
+            for name in list(merged):
+                if name.startswith(prefix):
+                    merged.pop(name)
+            merged.update({name: value for name, value in selected.items() if name.startswith(prefix)})
+    for key in ('catalog_added_at', 'catalog_added_commit', 'catalog_added_evidence', 'content_modified_at'):
+        if old.get(key):
+            merged[key] = old[key]
+    if old.get('source_metrics_version') == 1:
+        merged['total_plays'] = old.get('total_plays') or 0
+        merged['rating'] = old.get('rating') or 0
+    if (old.get('thumbnail_url') or '').startswith('/assets/'):
+        merged.update({key: old[key] for key in ('thumbnail', 'thumbnail_url', 'original_thumbnail_url') if key in old})
+    return merged
+
+
 def has_blocked_embed(game):
     # Playhop app pages reject third-party framing, including BTW game.
     host = urlparse(game.get("iframe_url") or game.get("game_url") or "").hostname or ""

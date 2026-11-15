@@ -16,7 +16,7 @@ from html import escape as html_escape
 from urllib.parse import quote, urlparse
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from catalog_quality import clean_source_text, normalize_source_metrics, catalog_popularity, source_rating, has_blocked_embed, apply_catalog_provenance, catalog_datetime
+from catalog_quality import clean_source_text, normalize_source_metrics, catalog_popularity, source_rating, has_blocked_embed, apply_catalog_provenance, catalog_datetime, merge_catalog_record
 from site_content_dates import seed_content_dates
 from site_icons import render_site_icons, copy_root_favicon
 from site_retirements import write_retired_game_routes
@@ -3020,17 +3020,7 @@ def main():
         by_slug = {normalize_slug(game.get('slug')): game for game in games}
         for extra in load_external_static_games():
             old = by_slug.get(extra['slug'], {})
-            merged = {**old, **extra}
-            for key in ('catalog_added_at', 'catalog_added_commit', 'catalog_added_evidence', 'content_modified_at'):
-                if old.get(key):
-                    merged[key] = old[key]
-            if old.get('source_metrics_version') == 1:
-                merged['total_plays'] = old.get('total_plays') or 0
-                merged['rating'] = old.get('rating') or 0
-            if (old.get('thumbnail_url') or '').startswith('/assets/'):
-                for key in ('thumbnail', 'thumbnail_url', 'original_thumbnail_url'):
-                    if key in old:
-                        merged[key] = old[key]
+            merged = merge_catalog_record(old, extra)
             by_slug[extra['slug']] = merged
         if not by_slug:
             raise ValueError('The catalog snapshot contains no games')
