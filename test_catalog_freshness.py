@@ -10,7 +10,7 @@ from unittest.mock import patch
 
 from bs4 import BeautifulSoup
 
-from catalog_quality import apply_catalog_provenance, is_recent_game
+from catalog_quality import apply_catalog_provenance, is_recent_game, merge_catalog_record
 from generate_static_pages import classify_game_category, game_guide, generate_game_page, normalize_game_data, prepare_catalog, save_all_games_json
 from site_content_dates import content_hash, seed_content_dates, update_content_dates
 
@@ -55,6 +55,31 @@ class CatalogStatusTests(unittest.TestCase):
         self.assertEqual(game['controls']['Controls'],'Current source instructions')
         self.assertEqual(game['source_checked_at'],'2026-11-15T00:00:00Z')
         self.assertEqual(game['player_check_scope'],'Newer startup observation')
+
+    def test_older_source_file_cannot_revert_snapshot_facts_or_observations(self):
+        old={'source_checked_at':'2026-11-20T00:00:00Z','source_check_status':'confirmed','controls':{'Controls':'Current'},
+             'player_checked_at':'2026-11-22T00:00:00Z','player_check_scope':'Latest startup',
+             'catalog_added_at':'2025-01-01T00:00:00Z','thumbnail_url':'/assets/thumbnails/current.webp'}
+        extra={'source_checked_at':'2026-11-15T00:00:00Z','source_check_status':'unconfirmed','content_status':'needs_review','source_check_reason':'Old failure','controls':{'Controls':'Stale'},
+               'player_checked_at':'2026-11-16T00:00:00Z','player_check_scope':'Older startup',
+               'catalog_added_at':'2026-11-15T00:00:00Z','thumbnail_url':'https://example.com/remote.webp'}
+        merged=merge_catalog_record(old,extra)
+        self.assertEqual(merged['controls'],old['controls'])
+        self.assertEqual(merged['source_checked_at'],old['source_checked_at'])
+        self.assertEqual(merged['player_check_scope'],'Latest startup')
+        self.assertEqual(merged['catalog_added_at'],old['catalog_added_at'])
+        self.assertEqual(merged['thumbnail_url'],old['thumbnail_url'])
+        self.assertNotIn('content_status',merged)
+        self.assertNotIn('source_check_reason',merged)
+
+    def test_new_confirmed_instructions_clear_an_older_pending_record(self):
+        old={'content_status':'needs_review','source_check_status':'unconfirmed',
+             'source_check_attempted_at':'2026-11-15T00:00:00Z','source_check_reason':'Missing record','controls':{}}
+        extra={'source_check_status':'confirmed','source_checked_at':'2026-11-20T00:00:00Z','controls':{'Controls':'New source instructions'}}
+        merged=merge_catalog_record(old,extra)
+        self.assertNotIn('content_status',merged)
+        self.assertNotIn('source_check_reason',merged)
+        self.assertEqual(merged['controls'],extra['controls'])
 
     def test_arcade_description_is_not_overridden_by_worlds(self):
         game = {"slug": "space-waves-test", "title": "Space Waves", "description": "An arcade game across multiple worlds.", "category_name": "Casual"}
