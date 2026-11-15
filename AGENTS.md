@@ -39,6 +39,7 @@ BTW Games 是 Flask 游戏聚合站，包含两种运行模式：
 - `quick_build.sh`：快速构建脚本。
 - `serve_static.py`：本地静态站点服务。
 - `retired_games.json`、`site_retirements.py`：退役游戏清单及 Cloudflare Pages 404 边缘路由生成器，产物为 `static_html/_worker.js` 和 `_routes.json`。
+- `build_brand_assets.py`：以 `static/assets/icons/favicon.svg` 为母版导出 favicon、Apple 图标、兼容横版 Logo 和 1200×630 分享封面；修改品牌资产时先运行此脚本，再生成静态站。导出需要 CairoSVG、Pillow 和系统 Cairo 库。
 
 ## 3. 当前环境注意事项
 
@@ -117,6 +118,7 @@ python3 serve_static.py --port 8000 --no-browser
 - 游戏页数量：确认 `static_html/all_games.json` 中游戏数量与 `static_html/games/*.html` 匹配。
 - 前端改动：启动 `serve_static.py` 后用浏览器检查首页、游戏列表、至少一个详情页。
 - 退役地址或发布路由改动：运行 `python3 -m unittest test_seo_repairs test_crazygames_geo test_retired_routes`；边缘处理行为测试需要 Node.js。发布时保留生成的 `_worker.js` 与 `_routes.json`，并在线检查退役地址的真实 404 状态。
+- 品牌与分享图片改动：运行 `python3 -m unittest test_brand_assets`，核对页头 SVG、图标尺寸、首页分享封面与 Organization.logo 的角色，以及游戏页分享图片不被站点封面覆盖。
 
 可用快速检查：
 
