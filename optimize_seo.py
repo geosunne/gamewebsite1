@@ -4,7 +4,7 @@ import os
 import re
 from bs4 import BeautifulSoup
 from generate_static_pages import game_guide, build_original_summary, build_unique_page_title, site_absolute_url
-from site_icons import ensure_site_icons
+from site_icons import SOCIAL_IMAGE, SOCIAL_IMAGE_ALT, ensure_site_icons, ensure_social_meta
 
 SITE_URL = "https://btwgame.com"
 SITE_IMAGE = f"{SITE_URL}/assets/icons/favicon-512x512.png"
@@ -173,8 +173,7 @@ def optimize_index_html():
     twitter_desc = soup.find('meta', attrs={'name': 'twitter:description'})
     if twitter_desc:
         twitter_desc['content'] = home_description
-    ensure_meta(soup, 'property', 'og:image', SITE_IMAGE)
-    ensure_meta(soup, 'name', 'twitter:image', SITE_IMAGE)
+    ensure_social_meta(soup)
 
     # Add structured data for website
     structured_data = {
@@ -255,8 +254,7 @@ def optimize_games_html():
         soup.head.append(canonical)
     else:
         canonical['href'] = 'https://btwgame.com/games'
-    ensure_meta(soup, 'property', 'og:image', SITE_IMAGE)
-    ensure_meta(soup, 'name', 'twitter:image', SITE_IMAGE)
+    ensure_social_meta(soup)
 
     with open('static_html/games.html', 'w', encoding='utf-8') as f:
         f.write(str(soup))
@@ -317,9 +315,8 @@ def optimize_game_pages():
         if og_url:
             og_url['content'] = f"https://btwgame.com/games/{game['slug']}"
 
-        thumbnail = site_absolute_url(game.get('thumbnail_url') or SITE_IMAGE)
-        ensure_meta(soup, 'property', 'og:image', thumbnail)
-        ensure_meta(soup, 'name', 'twitter:image', thumbnail)
+        thumbnail = site_absolute_url(game['thumbnail_url']) if game.get('thumbnail_url') else SOCIAL_IMAGE
+        ensure_social_meta(soup, thumbnail, f"{game['title']} game artwork" if game.get('thumbnail_url') else SOCIAL_IMAGE_ALT)
         ensure_game_schema_fields(soup, game)
 
         # Update canonical URL
