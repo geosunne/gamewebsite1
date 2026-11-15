@@ -666,17 +666,21 @@ select:focus-visible,
 }
 
 .home-games-grid {
-    grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+    grid-template-columns: var(--home-grid-template, repeat(auto-fill, minmax(118px, 1fr)));
     gap: var(--space-2);
     grid-auto-flow: dense;
 }
 
 .home-games-grid.games-grid.compact {
-    grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+    grid-template-columns: var(--home-grid-template, repeat(auto-fill, minmax(112px, 1fr)));
 }
 
 .category-home-grid {
-    grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
+    grid-template-columns: var(--home-grid-template, repeat(auto-fill, minmax(108px, 1fr)));
+}
+
+.home-games-grid > .section-note {
+    grid-column: 1 / -1;
 }
 
 .home-games-grid .spotlight-card {
@@ -1572,12 +1576,12 @@ select:focus-visible,
 
     .home-games-grid,
     .home-games-grid.games-grid.compact {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: var(--home-grid-template, repeat(3, minmax(0, 1fr)));
         gap: var(--space-2);
     }
 
     .category-home-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: var(--home-grid-template, repeat(3, minmax(0, 1fr)));
     }
 
     .home-games-grid .spotlight-card {
@@ -1646,7 +1650,7 @@ select:focus-visible,
     .home-games-grid,
     .home-games-grid.games-grid.compact,
     .category-home-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: var(--home-grid-template, repeat(2, minmax(0, 1fr)));
     }
 
     .game-title,

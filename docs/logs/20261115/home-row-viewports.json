@@ -1,0 +1,1082 @@
+[
+  {
+    "width": 1728,
+    "actualWidth": 1728,
+    "grids": [
+      {
+        "name": "Hot games",
+        "columns": 8,
+        "rows": 4,
+        "visible": 26,
+        "gaps": []
+      },
+      {
+        "name": "New games",
+        "columns": 9,
+        "rows": 2,
+        "visible": 18,
+        "gaps": []
+      },
+      {
+        "name": "Action",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Puzzle",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Match & Merge",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Racing",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Shooter",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Parkour",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Runner",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Idle & Clicker",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Beauty",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Cooking",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "actualWidth": 1440,
+    "grids": [
+      {
+        "name": "Hot games",
+        "columns": 8,
+        "rows": 4,
+        "visible": 26,
+        "gaps": []
+      },
+      {
+        "name": "New games",
+        "columns": 9,
+        "rows": 2,
+        "visible": 18,
+        "gaps": []
+      },
+      {
+        "name": "Action",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Puzzle",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Match & Merge",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Racing",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Shooter",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Parkour",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Runner",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Idle & Clicker",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Beauty",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "Cooking",
+        "columns": 8,
+        "rows": 4,
+        "visible": 32,
+        "gaps": []
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "actualWidth": 1280,
+    "grids": [
+      {
+        "name": "Hot games",
+        "columns": 8,
+        "rows": 4,
+        "visible": 26,
+        "gaps": []
+      },
+      {
+        "name": "New games",
+        "columns": 8,
+        "rows": 3,
+        "visible": 24,
+        "gaps": []
+      },
+      {
+        "name": "Action",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Puzzle",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Match & Merge",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Racing",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Shooter",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Parkour",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Runner",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Idle & Clicker",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Beauty",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Cooking",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "actualWidth": 1024,
+    "grids": [
+      {
+        "name": "Hot games",
+        "columns": 6,
+        "rows": 6,
+        "visible": 30,
+        "gaps": []
+      },
+      {
+        "name": "New games",
+        "columns": 6,
+        "rows": 4,
+        "visible": 24,
+        "gaps": []
+      },
+      {
+        "name": "Action",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Puzzle",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Match & Merge",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Racing",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Shooter",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Parkour",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Runner",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Idle & Clicker",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Beauty",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Cooking",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      }
+    ]
+  },
+  {
+    "width": 980,
+    "actualWidth": 980,
+    "grids": [
+      {
+        "name": "Hot games",
+        "columns": 7,
+        "rows": 5,
+        "visible": 29,
+        "gaps": []
+      },
+      {
+        "name": "New games",
+        "columns": 7,
+        "rows": 3,
+        "visible": 21,
+        "gaps": []
+      },
+      {
+        "name": "Action",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Puzzle",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Match & Merge",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Racing",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Shooter",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Parkour",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Runner",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Idle & Clicker",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Beauty",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Cooking",
+        "columns": 7,
+        "rows": 5,
+        "visible": 35,
+        "gaps": []
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "actualWidth": 768,
+    "grids": [
+      {
+        "name": "Hot games",
+        "columns": 5,
+        "rows": 7,
+        "visible": 29,
+        "gaps": []
+      },
+      {
+        "name": "New games",
+        "columns": 6,
+        "rows": 4,
+        "visible": 24,
+        "gaps": []
+      },
+      {
+        "name": "Action",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Puzzle",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Match & Merge",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Racing",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Shooter",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Parkour",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Runner",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Idle & Clicker",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Beauty",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      },
+      {
+        "name": "Cooking",
+        "columns": 5,
+        "rows": 7,
+        "visible": 35,
+        "gaps": []
+      }
+    ]
+  },
+  {
+    "width": 720,
+    "actualWidth": 720,
+    "grids": [
+      {
+        "name": "Hot games",
+        "columns": 3,
+        "rows": 12,
+        "visible": 30,
+        "gaps": []
+      },
+      {
+        "name": "New games",
+        "columns": 3,
+        "rows": 8,
+        "visible": 24,
+        "gaps": []
+      },
+      {
+        "name": "Action",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Puzzle",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Match & Merge",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Racing",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Shooter",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Parkour",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Runner",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Idle & Clicker",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Beauty",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Cooking",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      }
+    ]
+  },
+  {
+    "width": 600,
+    "actualWidth": 600,
+    "grids": [
+      {
+        "name": "Hot games",
+        "columns": 3,
+        "rows": 12,
+        "visible": 30,
+        "gaps": []
+      },
+      {
+        "name": "New games",
+        "columns": 3,
+        "rows": 8,
+        "visible": 24,
+        "gaps": []
+      },
+      {
+        "name": "Action",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Puzzle",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Match & Merge",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Racing",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Shooter",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Parkour",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Runner",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Idle & Clicker",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Beauty",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Cooking",
+        "columns": 3,
+        "rows": 12,
+        "visible": 36,
+        "gaps": []
+      }
+    ]
+  },
+  {
+    "width": 420,
+    "actualWidth": 420,
+    "grids": [
+      {
+        "name": "Hot games",
+        "columns": 2,
+        "rows": 19,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "New games",
+        "columns": 2,
+        "rows": 12,
+        "visible": 24,
+        "gaps": []
+      },
+      {
+        "name": "Action",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Puzzle",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Match & Merge",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Racing",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Shooter",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Parkour",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Runner",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Idle & Clicker",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Beauty",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Cooking",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "actualWidth": 390,
+    "grids": [
+      {
+        "name": "Hot games",
+        "columns": 2,
+        "rows": 19,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "New games",
+        "columns": 2,
+        "rows": 12,
+        "visible": 24,
+        "gaps": []
+      },
+      {
+        "name": "Action",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Puzzle",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Match & Merge",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Racing",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Shooter",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Parkour",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Runner",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Idle & Clicker",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Beauty",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Cooking",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      }
+    ]
+  },
+  {
+    "width": 360,
+    "actualWidth": 360,
+    "grids": [
+      {
+        "name": "Hot games",
+        "columns": 2,
+        "rows": 19,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "New games",
+        "columns": 2,
+        "rows": 12,
+        "visible": 24,
+        "gaps": []
+      },
+      {
+        "name": "Action",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Puzzle",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Match & Merge",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Racing",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Shooter",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Parkour",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Runner",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Idle & Clicker",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Beauty",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Cooking",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "actualWidth": 320,
+    "grids": [
+      {
+        "name": "Hot games",
+        "columns": 2,
+        "rows": 19,
+        "visible": 32,
+        "gaps": []
+      },
+      {
+        "name": "New games",
+        "columns": 2,
+        "rows": 12,
+        "visible": 24,
+        "gaps": []
+      },
+      {
+        "name": "Action",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Puzzle",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Match & Merge",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Racing",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Shooter",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Parkour",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Runner",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Idle & Clicker",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Beauty",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      },
+      {
+        "name": "Cooking",
+        "columns": 2,
+        "rows": 18,
+        "visible": 36,
+        "gaps": []
+      }
+    ]
+  }
+]

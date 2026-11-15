@@ -1,0 +1,175 @@
+{
+  "viewport": 1728,
+  "narrow": [
+    {
+      "name": "Hot games",
+      "columns": 4,
+      "rows": 9,
+      "visible": 30,
+      "gaps": []
+    },
+    {
+      "name": "New games",
+      "columns": 4,
+      "rows": 6,
+      "visible": 24,
+      "gaps": []
+    },
+    {
+      "name": "Action",
+      "columns": 4,
+      "rows": 9,
+      "visible": 36,
+      "gaps": []
+    },
+    {
+      "name": "Puzzle",
+      "columns": 4,
+      "rows": 9,
+      "visible": 36,
+      "gaps": []
+    },
+    {
+      "name": "Match & Merge",
+      "columns": 4,
+      "rows": 9,
+      "visible": 36,
+      "gaps": []
+    },
+    {
+      "name": "Racing",
+      "columns": 4,
+      "rows": 9,
+      "visible": 36,
+      "gaps": []
+    },
+    {
+      "name": "Shooter",
+      "columns": 4,
+      "rows": 9,
+      "visible": 36,
+      "gaps": []
+    },
+    {
+      "name": "Parkour",
+      "columns": 4,
+      "rows": 9,
+      "visible": 36,
+      "gaps": []
+    },
+    {
+      "name": "Runner",
+      "columns": 4,
+      "rows": 9,
+      "visible": 36,
+      "gaps": []
+    },
+    {
+      "name": "Idle & Clicker",
+      "columns": 4,
+      "rows": 9,
+      "visible": 36,
+      "gaps": []
+    },
+    {
+      "name": "Beauty",
+      "columns": 4,
+      "rows": 9,
+      "visible": 36,
+      "gaps": []
+    },
+    {
+      "name": "Cooking",
+      "columns": 4,
+      "rows": 9,
+      "visible": 36,
+      "gaps": []
+    }
+  ],
+  "restored": [
+    {
+      "name": "Hot games",
+      "columns": 8,
+      "rows": 4,
+      "visible": 26,
+      "gaps": []
+    },
+    {
+      "name": "New games",
+      "columns": 9,
+      "rows": 2,
+      "visible": 18,
+      "gaps": []
+    },
+    {
+      "name": "Action",
+      "columns": 8,
+      "rows": 4,
+      "visible": 32,
+      "gaps": []
+    },
+    {
+      "name": "Puzzle",
+      "columns": 8,
+      "rows": 4,
+      "visible": 32,
+      "gaps": []
+    },
+    {
+      "name": "Match & Merge",
+      "columns": 8,
+      "rows": 4,
+      "visible": 32,
+      "gaps": []
+    },
+    {
+      "name": "Racing",
+      "columns": 8,
+      "rows": 4,
+      "visible": 32,
+      "gaps": []
+    },
+    {
+      "name": "Shooter",
+      "columns": 8,
+      "rows": 4,
+      "visible": 32,
+      "gaps": []
+    },
+    {
+      "name": "Parkour",
+      "columns": 8,
+      "rows": 4,
+      "visible": 32,
+      "gaps": []
+    },
+    {
+      "name": "Runner",
+      "columns": 8,
+      "rows": 4,
+      "visible": 32,
+      "gaps": []
+    },
+    {
+      "name": "Idle & Clicker",
+      "columns": 8,
+      "rows": 4,
+      "visible": 32,
+      "gaps": []
+    },
+    {
+      "name": "Beauty",
+      "columns": 8,
+      "rows": 4,
+      "visible": 32,
+      "gaps": []
+    },
+    {
+      "name": "Cooking",
+      "columns": 8,
+      "rows": 4,
+      "visible": 32,
+      "gaps": []
+    }
+  ]
+}

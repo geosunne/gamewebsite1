@@ -4114,54 +4114,6 @@
             window.location.href = query ? `/games?search=${encodeURIComponent(query)}` : '/games';
         }
     </script>
-<script>
-        function balanceHomeGameRows() {
-            document.querySelectorAll('.home-main .home-games-grid').forEach(grid => {
-                const cards = Array.from(grid.querySelectorAll('.game-card'));
-                cards.forEach(card => card.classList.remove('is-row-trimmed'));
-
-                const columns = getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length;
-                if (!columns || columns < 2 || cards.length <= columns) return;
-                const minimumRows = grid.classList.contains('category-home-grid') ? 2 : 1;
-                const minimumCells = columns * minimumRows;
-
-                let usedCells = 0;
-                cards.forEach(card => {
-                    const style = getComputedStyle(card);
-                    const columnSpan = style.gridColumnEnd && style.gridColumnEnd.startsWith('span')
-                        ? Number(style.gridColumnEnd.replace('span', '').trim()) || 1
-                        : 1;
-                    const rowSpan = style.gridRowEnd && style.gridRowEnd.startsWith('span')
-                        ? Number(style.gridRowEnd.replace('span', '').trim()) || 1
-                        : 1;
-                    usedCells += columnSpan * rowSpan;
-                });
-
-                const extraCells = usedCells % columns;
-                if (!extraCells) return;
-                if (usedCells <= minimumCells || usedCells - extraCells < minimumCells) return;
-
-                let removedCells = 0;
-                for (let index = cards.length - 1; index >= 0 && removedCells < extraCells; index -= 1) {
-                    const card = cards[index];
-                    const style = getComputedStyle(card);
-                    const columnSpan = style.gridColumnEnd && style.gridColumnEnd.startsWith('span')
-                        ? Number(style.gridColumnEnd.replace('span', '').trim()) || 1
-                        : 1;
-                    const rowSpan = style.gridRowEnd && style.gridRowEnd.startsWith('span')
-                        ? Number(style.gridRowEnd.replace('span', '').trim()) || 1
-                        : 1;
-                    card.classList.add('is-row-trimmed');
-                    removedCells += columnSpan * rowSpan;
-                }
-            });
-        }
-
-        window.addEventListener('load', balanceHomeGameRows);
-        window.addEventListener('resize', () => {
-            window.clearTimeout(window.__btwBalanceRowsTimer);
-            window.__btwBalanceRowsTimer = window.setTimeout(balanceHomeGameRows, 120);
-        });
-    </script>
+<script defer="" src="/assets/js/home-grid.js"></script>
 </body>
 </html>
