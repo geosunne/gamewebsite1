@@ -1,0 +1,26 @@
+{
+  "focus": {
+    "visible": true,
+    "href": "/games/8-ball-billiards-classic"
+  },
+  "afterRemoval": {
+    "name": "New games",
+    "columns": 9,
+    "rows": 2,
+    "visible": 18,
+    "gaps": []
+  },
+  "fewCards": {
+    "name": "New games",
+    "columns": 5,
+    "rows": 1,
+    "visible": 5,
+    "gaps": []
+  },
+  "expiredEmpty": {
+    "cards": 0,
+    "text": "No games added in the last 14 days. Browse all games.",
+    "gridWidth": 1124,
+    "textWidth": 1124
+  }
+}
