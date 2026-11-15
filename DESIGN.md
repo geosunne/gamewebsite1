@@ -105,6 +105,12 @@ components:
 
 # Design System: BTW game
 
+## Brand Assets
+
+- The canonical mark is `static/assets/icons/favicon.svg`: a coral-orange controller with contrasting controls and a small W-shaped bridge. The header uses this SVG directly; raster favicons, the Apple icon and the legacy horizontal wordmark are exported from the same source with `python3 build_brand_assets.py`.
+- The desktop lockup reads `BTW game` with `By the way, play!` at 12px below it. At 720px and below, use the compact icon-and-name lockup. Keep the icon square, the name on one line and all letter spacing at zero.
+- Site pages share `assets/images/btw-game-share.png`, a 1200x630 cover with actual catalog artwork. Game pages retain their own artwork. The Organization logo remains the square 512px icon.
+
 ## 1. Overview
 
 **Creative North Star: "The Quick-Play Shelf"**

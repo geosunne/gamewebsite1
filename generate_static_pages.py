@@ -18,7 +18,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from catalog_quality import clean_source_text, normalize_source_metrics, catalog_popularity, source_rating, has_blocked_embed, apply_catalog_provenance, catalog_datetime, merge_catalog_record
 from site_content_dates import seed_content_dates
-from site_icons import render_site_icons, copy_root_favicon
+from site_icons import BRAND_MARK, SOCIAL_IMAGE, SOCIAL_IMAGE_ALT, render_site_icons, render_social_meta, copy_root_favicon
 from site_retirements import write_retired_game_routes
 
 with Path(__file__).with_name("game_content_overrides.json").open(encoding="utf-8") as guide_file:
@@ -1531,15 +1531,10 @@ def build_game_jsonld(game, tags, faq_items, seo_description=None):
     return "\n".join(jsonld_script(script) for script in scripts)
 
 def render_brand_mark():
-    return '''
+    return f'''
             <a href="/" class="brand-mark" aria-label="BTW game home">
-                <span class="brand-icon" aria-hidden="true">
-                    <svg class="brand-gamepad" viewBox="0 0 32 24" role="img" focusable="false">
-                        <path d="M9.2 6.2h13.6c3.1 0 5.7 2.1 6.5 5.1l1 3.8c.7 2.7-1.3 5.3-4.1 5.3-1.3 0-2.5-.6-3.3-1.6l-1.7-2.2H10.3l-1.7 2.2c-.8 1-2 1.6-3.3 1.6-2.8 0-4.8-2.6-4.1-5.3l1-3.8c.8-3 3.9-5.1 7-5.1Z" fill="currentColor"/>
-                        <path d="M8.7 10.2v5.2M6.1 12.8h5.2M22.8 11.1h.1M26 14.4h.1" stroke="white" stroke-width="2.1" stroke-linecap="round"/>
-                    </svg>
-                </span>
-                <span class="brand-word">BTW game <span class="brand-tagline">By the way, play!</span></span>
+                <img class="brand-icon" src="{BRAND_MARK}" width="38" height="38" alt="" aria-hidden="true" decoding="async">
+                <span class="brand-word"><span class="brand-name">BTW game</span><span class="brand-tagline">By the way, play!</span></span>
             </a>
     '''
 
@@ -1598,9 +1593,9 @@ def render_nav_script():
     </script>
     '''
 
-def render_head(title, description, canonical_path, og_image=SITE_IMAGE, extra_jsonld=None):
+def render_head(title, description, canonical_path, og_image=SOCIAL_IMAGE, extra_jsonld=None):
     canonical = f"{SITE_URL}{canonical_path}"
-    image = og_image or SITE_IMAGE
+    image = og_image or SOCIAL_IMAGE
     jsonld = extra_jsonld or ""
     return f'''<head>
     <meta charset="UTF-8">
@@ -1611,13 +1606,12 @@ def render_head(title, description, canonical_path, og_image=SITE_IMAGE, extra_j
     <meta name="author" content="BTW game">
     <meta property="og:title" content="{html_escape(title, quote=True)}">
     <meta property="og:description" content="{html_escape(truncate(description, 180), quote=True)}">
-    <meta property="og:image" content="{html_escape(image, quote=True)}">
+    {render_social_meta(image, SOCIAL_IMAGE_ALT)}
     <meta property="og:url" content="{html_escape(canonical, quote=True)}">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{html_escape(title, quote=True)}">
     <meta name="twitter:description" content="{html_escape(truncate(description, 180), quote=True)}">
-    <meta name="twitter:image" content="{html_escape(image, quote=True)}">
     <link rel="canonical" href="{html_escape(canonical, quote=True)}">
     <link rel="stylesheet" href="/assets/css/site.css">
     <script src="/assets/js/catalog-status.js" defer></script>
@@ -1873,7 +1867,7 @@ def generate_index_page(games):
     extra_jsonld = site_entity_jsonld() + "\n" + jsonld_script(faq_jsonld)
     return f'''<!DOCTYPE html>
 <html lang="en">
-{render_head("BTW game - Free Online Games for Quick Breaks", f"Explore {len(games):,} free browser games at BTW game. Find game controls, play guides, and action, puzzle, racing, sports, and casual games.", "/", SITE_IMAGE, extra_jsonld)}
+{render_head("BTW game - Free Online Games for Quick Breaks", f"Explore {len(games):,} free browser games at BTW game. Find game controls, play guides, and action, puzzle, racing, sports, and casual games.", "/", SOCIAL_IMAGE, extra_jsonld)}
 <body>
     {render_header("home")}
     <main>
@@ -1969,7 +1963,7 @@ def generate_games_page(games):
     '''
     return f'''<!DOCTYPE html>
 <html lang="en">
-{render_head("All Games | BTW game", f"Browse {len(games):,} free browser games at BTW game. Compare game categories, controls, and play guides before choosing a game.", "/games", SITE_IMAGE, extra_jsonld)}
+{render_head("All Games | BTW game", f"Browse {len(games):,} free browser games at BTW game. Compare game categories, controls, and play guides before choosing a game.", "/games", SOCIAL_IMAGE, extra_jsonld)}
 <body>
     {render_header("games")}
     <main class="container">
@@ -2129,7 +2123,7 @@ def generate_category_page(category, games):
     categories = get_all_categories(games)
     return f'''<!DOCTYPE html>
 <html lang="en">
-{render_head(title, description, category_url(category), SITE_IMAGE, extra_jsonld)}
+{render_head(title, description, category_url(category), SOCIAL_IMAGE, extra_jsonld)}
 <body>
     {render_header("games")}
     <main class="container">
@@ -2193,7 +2187,7 @@ def generate_best_page(definition, games):
     )
     return f'''<!DOCTYPE html>
 <html lang="en">
-{render_head(f'{definition["title"]} | BTW game', definition["description"], canonical_path, SITE_IMAGE, extra_jsonld)}
+{render_head(f'{definition["title"]} | BTW game', definition["description"], canonical_path, SOCIAL_IMAGE, extra_jsonld)}
 <body>
     {render_header("games")}
     <main class="container">
@@ -2258,7 +2252,7 @@ def render_plain_content_page(slug, title, description, sections, faq_items=None
     faq_html = f'<section class="content-page-section"><h2>FAQ</h2><div class="faq-list">{render_faq_html(faq_items)}</div></section>' if faq_items else ''
     return f'''<!DOCTYPE html>
 <html lang="en">
-{render_head(f'{title} | BTW game', description, canonical_path, SITE_IMAGE, jsonld)}
+{render_head(f'{title} | BTW game', description, canonical_path, SOCIAL_IMAGE, jsonld)}
 <body>
     {render_header("")}
     <main class="container">
@@ -2684,13 +2678,12 @@ def generate_game_page(game_data, related_games):
     <meta name="author" content="BTW game">
     <meta property="og:title" content="{title_attr} | BTW game">
     <meta property="og:description" content="{description_attr}">
-    <meta property="og:image" content="{thumbnail_attr}">
+    {render_social_meta(site_absolute_url(thumbnail_url) if thumbnail_url else SOCIAL_IMAGE, f'{title} game artwork' if thumbnail_url else SOCIAL_IMAGE_ALT)}
     <meta property="og:url" content="https://btwgame.com/games/{slug_attr}">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{title_attr} | BTW game">
     <meta name="twitter:description" content="{description_attr}">
-    <meta name="twitter:image" content="{thumbnail_attr}">
     <link rel="canonical" href="https://btwgame.com/games/{slug_attr}">
     <link rel="stylesheet" href="/assets/css/site.css">
     {jsonld_html}
