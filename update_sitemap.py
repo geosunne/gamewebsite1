@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import json
 import os
-from datetime import date
 from xml.sax.saxutils import escape
 from catalog_quality import legacy_category_redirects
+from site_content_dates import update_content_dates
 
 STATIC_PAGES = [
     "/about",
@@ -75,7 +75,7 @@ def update_sitemap():
     print(f"  - {len(categories)} category pages")
     print(f"  - {len(games)} game pages")
 
-    today = date.today().isoformat()
+    modified_dates = update_content_dates()
     with open('static_html/sitemap.xml', 'w', encoding='utf-8') as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
@@ -84,7 +84,9 @@ def update_sitemap():
             changefreq = 'daily' if index < 2 else 'weekly'
             f.write('    <url>\n')
             f.write(f'        <loc>{escape(url)}</loc>\n')
-            f.write(f'        <lastmod>{today}</lastmod>\n')
+            modified = modified_dates.get(url.removeprefix(base_url))
+            if modified:
+                f.write(f'        <lastmod>{modified}</lastmod>\n')
             f.write(f'        <changefreq>{changefreq}</changefreq>\n')
             f.write(f'        <priority>{priority}</priority>\n')
             f.write('    </url>\n')

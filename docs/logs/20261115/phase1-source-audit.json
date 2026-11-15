@@ -1,0 +1,1172 @@
+{
+  "selection": {
+    "priority": [
+      "space-waves",
+      "racing-limits",
+      "ragdoll-archers",
+      "buildnow-gg",
+      "cubes-2048-io",
+      "traffic-rider-vvq",
+      "bloxdhop-io",
+      "sky-riders-buk",
+      "rally-racer-dirt",
+      "count-masters-stickman-games",
+      "geometry-dash-online",
+      "miniblox",
+      "night-city-racing",
+      "thief-puzzle",
+      "man-runner-2048",
+      "papas-donuteria",
+      "classic-sudoku",
+      "geometr-jump",
+      "dinosaur-game",
+      "mirrorland"
+    ],
+    "pending": [
+      "merge-rush-z",
+      "minis-ball",
+      "plants-vs-zombies",
+      "horror-spranky-beats",
+      "crowd-city",
+      "bus-jam",
+      "hopball-3d",
+      "goods-master",
+      "decompression-game",
+      "toy-adventure",
+      "fish-go-io",
+      "music-party",
+      "triple-match",
+      "fingertip-piano",
+      "screw-pin-puzzle",
+      "bike-rush",
+      "lovely-doll-creator",
+      "jigsort-puzzles",
+      "dreader-horror-maze"
+    ]
+  },
+  "baseline_count": 1783,
+  "results": [
+    {
+      "slug": "space-waves",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/space-waves",
+      "checked_at": "2026-11-15T02:56:34+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": "Arcade",
+      "controls_present": true,
+      "devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:04+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/space-waves/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      },
+      "browser_observation": {
+        "checked_at": "2026-11-15T03:20:06+00:00",
+        "scope": "Desktop tutorial screen observed",
+        "result": "startup_observed",
+        "artifact": "player-space-20261115.png",
+        "full_playthrough": false
+      }
+    },
+    {
+      "slug": "racing-limits",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/racing-limits",
+      "checked_at": "2026-11-15T02:56:34+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": "Driving",
+      "controls_present": true,
+      "devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:04+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/racing-limits/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ragdoll-archers",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/ragdoll-archers",
+      "checked_at": "2026-11-15T02:56:34+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": "Arcade",
+      "controls_present": true,
+      "devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:04+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/ragdoll-archers/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "buildnow-gg",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/buildnow-gg",
+      "checked_at": "2026-11-15T02:56:34+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": "Shooting",
+      "controls_present": true,
+      "devices": [
+        "Desktop"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:04+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/buildnow-gg/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "cubes-2048-io",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/cubes-2048-io",
+      "checked_at": "2026-11-15T02:56:36+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": ".io",
+      "controls_present": true,
+      "devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:04+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/cubes-2048-io/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "traffic-rider-vvq",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/traffic-rider-vvq",
+      "checked_at": "2026-11-15T02:56:36+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": "Driving",
+      "controls_present": true,
+      "devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:04+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/traffic-rider-vvq/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "bloxdhop-io",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/bloxdhop-io",
+      "checked_at": "2026-11-15T02:56:36+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": ".io",
+      "controls_present": true,
+      "devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:04+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/bloxdhop-io/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "sky-riders-buk",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/sky-riders-buk",
+      "checked_at": "2026-11-15T02:56:36+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": "Driving",
+      "controls_present": true,
+      "devices": [
+        "Desktop",
+        "Android"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:04+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/sky-riders-buk/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "rally-racer-dirt",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/rally-racer-dirt",
+      "checked_at": "2026-11-15T02:56:37+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": "Driving",
+      "controls_present": true,
+      "devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:05+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/rally-racer-dirt/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "count-masters-stickman-games",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/count-masters-stickman-games",
+      "checked_at": "2026-11-15T02:56:37+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": "Arcade",
+      "controls_present": true,
+      "devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:05+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/count-masters-stickman-games/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "geometry-dash-online",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/geometry-dash-online",
+      "checked_at": "2026-11-15T02:56:37+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": "Arcade",
+      "controls_present": true,
+      "devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:05+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/geometry-dash-online/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "miniblox",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/miniblox",
+      "checked_at": "2026-11-15T02:56:37+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": ".io",
+      "controls_present": true,
+      "devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:05+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/miniblox/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "night-city-racing",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/night-city-racing",
+      "checked_at": "2026-11-15T02:56:38+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": "Driving",
+      "controls_present": true,
+      "devices": [
+        "Desktop"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:05+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/night-city-racing/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "thief-puzzle",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/thief-puzzle",
+      "checked_at": "2026-11-15T02:56:39+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": "Puzzle",
+      "controls_present": true,
+      "devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:05+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/thief-puzzle/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "man-runner-2048",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/man-runner-2048",
+      "checked_at": "2026-11-15T02:56:39+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": "Arcade",
+      "controls_present": true,
+      "devices": [
+        "Desktop",
+        "Android",
+        "iOS"
+      ],
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:05+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/man-runner-2048/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "papas-donuteria",
+      "group": "priority20",
+      "source_url": "https://www.onlinegames.io/papas-donuteria/",
+      "checked_at": "2026-11-15T02:56:39+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls"
+      ],
+      "source_category": null,
+      "controls_present": true,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:05+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://cloud.onlinegames.io/games/2024/flash/papas-donuteria/index-og.html",
+            "status": 200,
+            "content_type": "text/html",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "classic-sudoku",
+      "group": "priority20",
+      "source_url": "https://minigame.com/en/game/classic-sudoku/info",
+      "checked_at": "2026-11-15T02:56:40+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "source_page_title",
+        "content_parse_version",
+        "description",
+        "long_description",
+        "source_rating",
+        "source_popularity"
+      ],
+      "source_category": null,
+      "controls_present": true,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:06+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://classic-sudoku.library.minigame.com/minigame-index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "geometr-jump",
+      "group": "priority20",
+      "source_url": "https://minigame.com/en/game/geometr-jump/info",
+      "checked_at": "2026-11-15T02:56:40+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "source_page_title",
+        "content_parse_version",
+        "description",
+        "long_description",
+        "source_rating",
+        "source_popularity"
+      ],
+      "source_category": null,
+      "controls_present": true,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:06+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://geometr-jump.library.minigame.com/minigame-index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      }
+    },
+    {
+      "slug": "dinosaur-game",
+      "group": "priority20",
+      "source_url": "https://www.onlinegames.io/dinosaur-game/",
+      "checked_at": "2026-11-15T02:56:40+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls"
+      ],
+      "source_category": null,
+      "controls_present": true,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:05+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://www.onlinegames.io/games/2023/q2/dinosaur-game/index.html",
+            "status": 200,
+            "content_type": "text/html",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      },
+      "browser_observation": {
+        "checked_at": "2026-11-15T03:20:07+00:00",
+        "scope": "Desktop player canvas loaded; playable screen not confirmed",
+        "result": "not_confirmed",
+        "artifact": "player-dino-20261115.png",
+        "full_playthrough": false
+      }
+    },
+    {
+      "slug": "mirrorland",
+      "group": "priority20",
+      "source_url": "https://www.crazygames.com/game/mirrorland",
+      "checked_at": "2026-11-15T02:56:40+00:00",
+      "status": "confirmed",
+      "verified_fields": [
+        "controls",
+        "developer",
+        "supported_devices",
+        "source_published_at",
+        "source_updated_at",
+        "account_required",
+        "description",
+        "long_description",
+        "content_guide",
+        "source_rating",
+        "source_upvotes"
+      ],
+      "source_category": "Adventure",
+      "controls_present": true,
+      "devices": [
+        "Desktop",
+        "Android"
+      ],
+      "account_check": "Source description explicitly requires an online account and character selection.",
+      "reason": "",
+      "scope": "Provider listing and instructions comparison; no full gameplay test",
+      "iframe_status": "available_http_html_and_frame_policy",
+      "embed_validation": {
+        "checked_at": "2026-11-15T03:11:06+00:00",
+        "request_origin": "https://btwgame.com",
+        "responses": [
+          {
+            "url": "https://games.crazygames.com/en_US/mirrorland/index.html",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "location": "",
+            "x_frame_options": "",
+            "content_security_policy": ""
+          }
+        ]
+      },
+      "browser_observation": {
+        "checked_at": "2026-11-15T03:22:30+00:00",
+        "scope": "Desktop account-required screen observed; gameplay not entered",
+        "result": "account_gate_observed",
+        "artifact": "player-mirrorland-20261115.png",
+        "full_playthrough": false
+      }
+    },
+    {
+      "slug": "merge-rush-z",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/merge-rush-z/info",
+      "checked_at": "2026-11-15T02:56:41+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for merge-rush-z",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "minis-ball",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/minis-ball/info",
+      "checked_at": "2026-11-15T02:56:41+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for minis-ball",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "plants-vs-zombies",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/plants-vs-zombies/info",
+      "checked_at": "2026-11-15T02:56:42+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for plants-vs-zombies",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "horror-spranky-beats",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/horror-spranky-beats/info",
+      "checked_at": "2026-11-15T02:56:42+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for horror-spranky-beats",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "crowd-city",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/crowd-city/info",
+      "checked_at": "2026-11-15T02:56:42+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for crowd-city",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "bus-jam",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/bus-jam/info",
+      "checked_at": "2026-11-15T02:56:42+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for bus-jam",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "hopball-3d",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/hopball_3d/info",
+      "checked_at": "2026-11-15T02:56:43+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for hopball-3d",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "goods-master",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/goods-master/info",
+      "checked_at": "2026-11-15T02:56:43+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for goods-master",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "decompression-game",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/decompression-game/info",
+      "checked_at": "2026-11-15T02:56:43+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for decompression-game",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "toy-adventure",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/toy-adventure/info",
+      "checked_at": "2026-11-15T02:56:44+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for toy-adventure",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "fish-go-io",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/fish-go-io/info",
+      "checked_at": "2026-11-15T02:56:44+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for fish-go-io",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "music-party",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/music_party/info",
+      "checked_at": "2026-11-15T02:56:44+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for music-party",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "triple-match",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/triple-match/info",
+      "checked_at": "2026-11-15T02:56:44+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for triple-match",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "fingertip-piano",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/fingertip-piano/info",
+      "checked_at": "2026-11-15T02:56:45+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for fingertip-piano",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "screw-pin-puzzle",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/screw-pin-puzzle/info",
+      "checked_at": "2026-11-15T02:56:45+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for screw-pin-puzzle",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "bike-rush",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/bike_rush/info",
+      "checked_at": "2026-11-15T02:56:45+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for bike-rush",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "lovely-doll-creator",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/lovely_doll_creator/info",
+      "checked_at": "2026-11-15T02:56:45+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for lovely-doll-creator",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "jigsort-puzzles",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/jigsort-puzzles/info",
+      "checked_at": "2026-11-15T02:56:46+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for jigsort-puzzles",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    },
+    {
+      "slug": "dreader-horror-maze",
+      "group": "pending19",
+      "source_url": "https://minigame.com/en/game/dreader-horror-maze/info",
+      "checked_at": "2026-11-15T02:56:46+00:00",
+      "status": "unconfirmed",
+      "verified_fields": [],
+      "source_category": null,
+      "controls_present": false,
+      "devices": "Not confirmed",
+      "account_check": "No new account requirement claim; existing explicitly sourced notes retained",
+      "reason": "Missing current game record for dreader-horror-maze",
+      "scope": "Provider listing and instructions comparison; no full gameplay test"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "checked_at": "2026-11-15T03:08:13+00:00",
+  "method": "Requests and actual urllib public probes. User-Agent strings do not establish verified search-bot identity.",
+  "cloudflare_logs": "Unavailable: both Ego and existing Chrome sessions show the Cloudflare sign-in page; no API credentials found.",
+  "search_console": "Unavailable: existing Chrome Google session is signed in, but Search Console explicitly denies access to sc-domain:btwgame.com; accessible property selector has no corresponding resource.",
+  "results": [
+    {
+      "agent_probe": "urllib_user_agent_via_requests",
+      "path": "/robots.txt",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "text/plain; charset=utf-8",
+      "cf_ray": "a5ab0cd64847fde3-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "agent_probe": "urllib_user_agent_via_requests",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "application/xml",
+      "cf_ray": "a5ab0cd64e3cfd28-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "agent_probe": "urllib_user_agent_via_requests",
+      "path": "/games/space-waves",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "text/html; charset=utf-8",
+      "cf_ray": "a5ab0cd64a39fd35-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "agent_probe": "btw_bot",
+      "path": "/robots.txt",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "text/plain; charset=utf-8",
+      "cf_ray": "a5ab0cd98defc8c2-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "agent_probe": "btw_bot",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "application/xml",
+      "cf_ray": "a5ab0cd98e47294b-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "agent_probe": "btw_bot",
+      "path": "/games/space-waves",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "text/html; charset=utf-8",
+      "cf_ray": "a5ab0cd988a611d2-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "agent_probe": "googlebot_user_agent_only",
+      "path": "/robots.txt",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "text/plain; charset=utf-8",
+      "cf_ray": "a5ab0cdcd9a6fe8e-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "agent_probe": "googlebot_user_agent_only",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "application/xml",
+      "cf_ray": "a5ab0cdcdb796097-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "agent_probe": "googlebot_user_agent_only",
+      "path": "/games/space-waves",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "text/html; charset=utf-8",
+      "cf_ray": "a5ab0cdcddf8cdd9-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "agent_probe": "bingbot_user_agent_only",
+      "path": "/robots.txt",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "text/plain; charset=utf-8",
+      "cf_ray": "a5ab0ce02ec849c8-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "agent_probe": "bingbot_user_agent_only",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "application/xml",
+      "cf_ray": "a5ab0ce029d196ed-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "agent_probe": "bingbot_user_agent_only",
+      "path": "/games/space-waves",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "text/html; charset=utf-8",
+      "cf_ray": "a5ab0ce02c399ce7-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "agent_probe": "oai_search_user_agent_only",
+      "path": "/robots.txt",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "text/plain; charset=utf-8",
+      "cf_ray": "a5ab0ce37fad2a72-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "agent_probe": "oai_search_user_agent_only",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "application/xml",
+      "cf_ray": "a5ab0ce38a043e19-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "agent_probe": "oai_search_user_agent_only",
+      "path": "/games/space-waves",
+      "status": 200,
+      "server": "cloudflare",
+      "cloudflare_error_1010": false,
+      "content_type": "text/html; charset=utf-8",
+      "cf_ray": "a5ab0ce4883140f0-SIN",
+      "verified_search_bot": false
+    },
+    {
+      "status": 403,
+      "content_type": "text/plain; charset=UTF-8",
+      "cloudflare_error_1010": true,
+      "agent_probe": "actual_python_urllib_client",
+      "path": "/robots.txt",
+      "verified_search_bot": false
+    },
+    {
+      "status": 403,
+      "content_type": "text/plain; charset=UTF-8",
+      "cloudflare_error_1010": true,
+      "agent_probe": "actual_python_urllib_client",
+      "path": "/sitemap.xml",
+      "verified_search_bot": false
+    },
+    {
+      "status": 403,
+      "content_type": "text/plain; charset=UTF-8",
+      "cloudflare_error_1010": true,
+      "agent_probe": "actual_python_urllib_client",
+      "path": "/games/space-waves",
+      "verified_search_bot": false
+    }
+  ],
+  "robots_snapshot": "User-agent: *\nAllow: /\n\n# Sitemap\nSitemap: https://btwgame.com/sitemap.xml\nSitemap: https://btwgame.com/sitemap.txt\n\n# Allow indexing of all game pages\nAllow: /games/\nAllow: /games\n\n# Allow render assets for search engines\nAllow: /assets/js/\nAllow: /assets/css/\nDisallow: /*.json$\n\n# Allow common search engine bots\nUser-agent: Googlebot\nAllow: /\n\nUser-agent: Bingbot\nAllow: /\n\nUser-agent: Slurp\nAllow: /\n"
+}

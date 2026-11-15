@@ -11,7 +11,7 @@ import json
 import re
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime
+from datetime import datetime, timezone
 from html import unescape
 from pathlib import Path
 from urllib.parse import urljoin
@@ -323,6 +323,10 @@ def build_game_record(slug, play_html, info_html, app_url):
     return {
         "source": "minigame",
         "source_id": extract_json_string(chunk, "id") or slug,
+        "source_checked_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "source_check_status": "confirmed",
+        "catalog_added_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "catalog_added_evidence": "new_source_import",
         "title": title,
         "slug": slugify(slug),
         "description": description,
@@ -417,7 +421,7 @@ def refresh_existing_metadata(games, workers=4):
             current = build_game_record(slug, response.text, response.text, game["iframe_url"])
             # Refresh metadata without replacing working embeds, thumbnails or dates.
             fields = ("description", "long_description", "tags", "controls", "category_name",
-                      "source_page_title", "content_parse_version")
+                      "source_page_title", "content_parse_version", "source_checked_at", "source_check_status")
             updated = normalize_source_metrics(game)
             updated.update({field: current[field] for field in fields})
             updated.pop("content_status", None)
@@ -428,6 +432,8 @@ def refresh_existing_metadata(games, workers=4):
             updated["long_description"] = updated.get("description") or ""
             updated["tags"] = []
             updated["content_status"] = "needs_review"
+            updated["source_check_status"] = "unconfirmed"
+            updated["source_check_attempted_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
             return updated, str(error)
 
     results = {}

@@ -1,0 +1,14 @@
+{
+  "base_sha": "e790cd5218e00bad28594b4ddd760bc5b795ed4f",
+  "game_count": 1783,
+  "identity_fields": [
+    "slug",
+    "title",
+    "source",
+    "source_id",
+    "game_url",
+    "iframe_url",
+    "thumbnail_url"
+  ],
+  "identities_sha256": "574ba37c6da747389223653d48188a90aef6533d3520eeadcb2fa7ffc2d96c9c"
+}
