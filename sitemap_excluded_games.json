@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-11-16",
+  "excluded_games": [
+    {
+      "slug": "draw-master",
+      "reason": "The embedded player loads only a blank black canvas in a browser."
+    },
+    {
+      "slug": "hopball-3d",
+      "reason": "The player host certificate hostname does not match the requested hostname."
+    },
+    {
+      "slug": "music-party",
+      "reason": "The player host certificate hostname does not match the requested hostname."
+    },
+    {
+      "slug": "bike-rush",
+      "reason": "The player host certificate hostname does not match the requested hostname."
+    },
+    {
+      "slug": "lovely-doll-creator",
+      "reason": "The player host certificate hostname does not match the requested hostname."
+    },
+    {
+      "slug": "1v1lol",
+      "reason": "The embedded player hostname returns NXDOMAIN from Google and Cloudflare DNS."
+    }
+  ]
+}

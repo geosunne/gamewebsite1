@@ -19,6 +19,7 @@ STATIC_PAGES = [
     "/llms.txt",
 ]
 INDEXNOW_KEY_FILE = "indexnow_key.txt"
+SITEMAP_EXCLUSIONS_FILE = "sitemap_excluded_games.json"
 
 def update_indexnow_key_file():
     if not os.path.exists(INDEXNOW_KEY_FILE):
@@ -46,6 +47,12 @@ def update_sitemap():
             categories_data = json.load(f)
             categories = categories_data if isinstance(categories_data, list) else []
 
+    exclusions = []
+    if os.path.exists(SITEMAP_EXCLUSIONS_FILE):
+        with open(SITEMAP_EXCLUSIONS_FILE, 'r', encoding='utf-8') as f:
+            exclusions = json.load(f).get('excluded_games', [])
+    excluded_slugs = {entry.get('slug') for entry in exclusions if entry.get('slug')}
+
     # Generate sitemap URLs
     base_url = "https://btwgame.com"
     urls = [
@@ -62,7 +69,8 @@ def update_sitemap():
 
     # Add game URLs
     for game in games:
-        urls.append(f"{base_url}/games/{game['slug']}")
+        if game.get('slug') not in excluded_slugs:
+            urls.append(f"{base_url}/games/{game['slug']}")
 
     # Write sitemap
     with open('static_html/sitemap.txt', 'w', encoding='utf-8') as f:
@@ -73,7 +81,8 @@ def update_sitemap():
     print(f"  - 2 main pages")
     print(f"  - {len(STATIC_PAGES)} static GEO pages")
     print(f"  - {len(categories)} category pages")
-    print(f"  - {len(games)} game pages")
+    included_games = sum(1 for game in games if game.get('slug') not in excluded_slugs)
+    print(f"  - {included_games} game pages ({len(games) - included_games} excluded after availability checks)")
 
     modified_dates = update_content_dates()
     with open('static_html/sitemap.xml', 'w', encoding='utf-8') as f:
