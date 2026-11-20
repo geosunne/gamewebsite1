@@ -117,6 +117,10 @@ class GeneratedCatalogTests(unittest.TestCase):
         urls = [node.text for node in tree.iter() if node.tag.endswith("}loc")]
         self.assertEqual(len(urls), len(set(urls)))
         self.assertNotIn("https://btwgame.com/404", urls)
+        exclusions = json.loads(Path("sitemap_excluded_games.json").read_text())["excluded_games"]
+        excluded = {entry["slug"] for entry in exclusions}
+        expected_game_urls = {f"https://btwgame.com/games/{g['slug']}" for g in self.games if g['slug'] not in excluded}
+        self.assertEqual({url for url in urls if urlsplit(url).path.startswith("/games/")}, expected_game_urls)
         expected_categories = {category["slug"] for category in self.categories}
         self.assertEqual({p.stem for p in (self.root / "categories").glob("*.html")}, expected_categories)
         for game in self.games:
@@ -125,7 +129,10 @@ class GeneratedCatalogTests(unittest.TestCase):
             soup = BeautifulSoup(path.read_text(encoding="utf-8"), "html.parser")
             schema = next(json.loads(s.string) for s in soup.select('script[type="application/ld+json"]') if json.loads(s.string).get("@type") in {"Game", "VideoGame"})
             self.assertEqual(schema["genre"], game["category_name"], game["slug"])
-            self.assertIn(schema["url"], urls)
+            if game["slug"] in excluded:
+                self.assertNotIn(schema["url"], urls)
+            else:
+                self.assertIn(schema["url"], urls)
             if game.get("source") in {"crazygames", "minigame"}:
                 self.assertEqual(game["total_plays"], 0)
                 self.assertNotIn("visitor rating", soup.get_text())

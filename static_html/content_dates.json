@@ -1,156 +1,160 @@
 {
   "pages": {
     "/": {
-      "lastmod": "2026-11-15",
-      "sha256": "6a0936675fd7e0cca1093f8c50419c4b8d42f39b935681533d71387536ecf731"
+      "lastmod": "2026-11-20",
+      "sha256": "e7ab434a53b16305a85d2788b1910899eaf877ab0aa5fcbc31297b817172a01a"
     },
     "/about": {
       "lastmod": "2026-11-15",
       "sha256": "34e251f4e427aa4d4c190e8e078c96df6aab989536aac2396cffcdcc4a174773"
     },
     "/best/browser-games-for-school": {
-      "lastmod": "2026-11-15",
-      "sha256": "4aec5bdaeae67bb308c5adadf5fcd1e80f318166555b4b019e3047c4116a1c88"
+      "lastmod": "2026-11-20",
+      "sha256": "62399083874fcf9fc4b711af33f9330a75df94898a309202738ff2a4c4f64e92"
     },
     "/best/free-online-games": {
-      "lastmod": "2026-11-15",
-      "sha256": "4848fbb78139594a067e0a7df2faf6c7d35035cb344844bd411f9c75d988e1c7"
+      "lastmod": "2026-11-20",
+      "sha256": "eedc9991abed9d02c1dd13cea77eb85ca1d2d3c6044c1f5c12e652c82821589e"
     },
     "/best/mobile-browser-games": {
-      "lastmod": "2026-11-15",
-      "sha256": "763cd0ce23aa495c39a6675ef4b2c0efd90e815f9af377fd6e61d567968ecffd"
+      "lastmod": "2026-11-20",
+      "sha256": "c1766d34df0d86c5bf1d7d1701ef8695baf39f392506e6a0353aac1a358020eb"
     },
     "/best/no-download-games": {
-      "lastmod": "2026-11-15",
-      "sha256": "3ad2ab2a02be1b9c9d33bad3d3d996050d649f5032eb33a10354233bb505b7ab"
+      "lastmod": "2026-11-20",
+      "sha256": "c92ca9bde5aca8c9400197479178c79df6f849ee6cf8abd28319ee11be44ad4a"
     },
     "/best/quick-games": {
-      "lastmod": "2026-11-15",
-      "sha256": "8317b308f27f4692a8dc74ecccfda5ab456949d4b03b3cfe4ad3af80661d0090"
+      "lastmod": "2026-11-20",
+      "sha256": "fc673accab4d379d53477493a6cd41a5aa71abd8843f6f1974ea854b08eb6596"
     },
     "/categories/action": {
-      "lastmod": "2026-11-15",
-      "sha256": "07aa41c03bb5e45fbd011793473334066c1b4d814a2f4f4dc1a3f3dbc90e8ed9"
+      "lastmod": "2026-11-20",
+      "sha256": "d4e60895e7113b51da49f864ec3b326e7acb9d87878cfa4b9324dc4c1463137e"
+    },
+    "/categories/adventure": {
+      "lastmod": "2026-11-20",
+      "sha256": "e61222ab3b238701952602551214a62d7951f6a8c9e4979d8a6d43b37df06d73"
     },
     "/categories/arcade": {
-      "lastmod": "2026-11-15",
-      "sha256": "c6c08136b5de9bb91385e73ca5c1b6b6defa5f9b9dfc17ca79010fed3420db7b"
+      "lastmod": "2026-11-20",
+      "sha256": "398960a436888119e88849227d33bec80a3402e70148d059027c855d6db92b29"
     },
     "/categories/basketball": {
-      "lastmod": "2026-11-15",
-      "sha256": "9b30e6f7f7f0e1ec4fe1aec393c83920f11e07e64bab78342b0224c43b355fa0"
+      "lastmod": "2026-11-20",
+      "sha256": "a3f10991c2a19d1fb8b6623edc4dfb826615d99673d53f7be06c0fba3b194744"
     },
     "/categories/beauty": {
-      "lastmod": "2026-11-15",
-      "sha256": "9e25b90084174e2658b92a95b9b2791a7ccc35b34f482338755e55f122e0ebf4"
+      "lastmod": "2026-11-20",
+      "sha256": "a8b8a67fcc4f43b9cc0e5f5535c013f06aa6f1df7ad0f67037188cf4f405a36c"
     },
     "/categories/casual": {
-      "lastmod": "2026-11-15",
-      "sha256": "f5227117d93e76e5af3e71742146f624b92faf8cad8a038b0f32770c64cd0d38"
+      "lastmod": "2026-11-20",
+      "sha256": "5b3c7725c0fc8ad4a292a83f5b0af6dcb31a747f0209e8087772518d2db454f1"
     },
     "/categories/cooking": {
-      "lastmod": "2026-11-15",
-      "sha256": "3666161879e2dd028cdec50909ed15e2c6341a85089e23ea328cafded22f7e58"
+      "lastmod": "2026-11-20",
+      "sha256": "6517f202e82ed21852111636c1b4fd8f28131381a31eb7d844e31d7a3557011f"
     },
     "/categories/dress-up": {
-      "lastmod": "2026-11-15",
-      "sha256": "83c98c7479fe0a4c4847d7270e51867edf4c6eabe9140a17375d6fe1ff07db08"
+      "lastmod": "2026-11-20",
+      "sha256": "54e317476ecf9e44644eb89a862dec24dca6a630d7a868276c0a69e0d162be78"
     },
     "/categories/driving": {
-      "lastmod": "2026-11-15",
-      "sha256": "e67c43fb8af8703d2778a9907a2fb12c4b191175e792ca2b138af314376e7c84"
+      "lastmod": "2026-11-20",
+      "sha256": "be48fd0b09371cd6d9985bb558e138642910f935fc4c036a97c351c48f39c080"
     },
     "/categories/horror": {
-      "lastmod": "2026-11-15",
-      "sha256": "c1d1d421e1f07be98d9d914b7fa44a0e4bddc0abca709d0414a7cf29d7cdf7ea"
+      "lastmod": "2026-11-20",
+      "sha256": "2d4da24e6e86d080c0d38c7dcdfac8b44ff575ffff86f587ecd3dbc1e6ecf613"
     },
     "/categories/idle-and-clicker": {
-      "lastmod": "2026-11-15",
-      "sha256": "87395892616bcaeff6c8fc82c592c9a34f6354c476547eb3992cc5b495b71e06"
+      "lastmod": "2026-11-20",
+      "sha256": "40d8a358cfbf0de0167ef07600a4c5c5449cacdbcb0817910e59ce55e3e96e9f"
     },
     "/categories/io-games": {
-      "lastmod": "2026-11-15",
-      "sha256": "49517a7b39ac0761b787fc5b2f7d614d285c0f17b26ca7adcc2f3f868c0c218d"
+      "lastmod": "2026-11-20",
+      "sha256": "bc5ab415a75522e5132cf1e5a1680616fde8f6d2258ac5b00995ab3278f1c893"
     },
     "/categories/mahjong-and-card": {
-      "lastmod": "2026-11-15",
-      "sha256": "638fe088c4a33d0106d51fd8403689fcb0240f4385637c91b8d095c134e56d1c"
+      "lastmod": "2026-11-20",
+      "sha256": "9c5eb0f19e868f7792f819a35bcfed36bfc1720420dfef719a0902ab77758a28"
     },
     "/categories/management": {
-      "lastmod": "2026-11-15",
-      "sha256": "89f56ecd7a34c67a4908d9b764161c66149e45ebd0a599d7347395aff8d8d9f5"
+      "lastmod": "2026-11-20",
+      "sha256": "20c965dbfe93dfcdf87a752453d462339c24006a196ac07c58a81ae302949fbf"
     },
     "/categories/match-and-merge": {
-      "lastmod": "2026-11-15",
-      "sha256": "004c1b237beefca65fa31c47689544829074f962488047f72570c4ab587caf0f"
+      "lastmod": "2026-11-20",
+      "sha256": "f42055d11a26290577354b8d0f3f80661692a68932c35586d2bacb38eaed140c"
     },
     "/categories/obby": {
-      "lastmod": "2026-11-15",
-      "sha256": "8d100cf5f077e5adff0dd72c1ebbeee3c2eaa029bbe8f1e9262c9ba53c2b6bf0"
+      "lastmod": "2026-11-20",
+      "sha256": "38f529c637f62fadc3ce7caa6737ea6490df795a2b3bec22f61d2d3e48354f02"
     },
     "/categories/parking": {
-      "lastmod": "2026-11-15",
-      "sha256": "bc5eb96734dc7eece9cc8df22fbced4e7a552c21eb21a73a373ee29cfec88223"
+      "lastmod": "2026-11-20",
+      "sha256": "6ac501508ee75de7b5ebf88997ef48a9b7335b24d65aacc5d2917718fcc50288"
     },
     "/categories/parkour": {
-      "lastmod": "2026-11-15",
-      "sha256": "222988fcb9c2c720790f16d8832932c1c93a93f48bd1694aa78be172670a74ef"
+      "lastmod": "2026-11-20",
+      "sha256": "7bcc579c55d35cade01b03a3b9361a4bf41e954a4ee3eb5379c81c26472d2af1"
     },
     "/categories/platformer": {
-      "lastmod": "2026-11-15",
-      "sha256": "754849296e4f9a784cd1e08bb5cc096ab08d50fb26b7467fa50f13928e784f42"
+      "lastmod": "2026-11-20",
+      "sha256": "5d7d03b55b144c3f97fdf9a971af984b1dd76ba42f4e7bc444576289814e9624"
     },
     "/categories/puzzle": {
-      "lastmod": "2026-11-15",
-      "sha256": "d8fc6cfc2e97bdde63fee169686aea900b0fcac51fa179a19bca206bd5b3dd37"
+      "lastmod": "2026-11-20",
+      "sha256": "da29ad84195680165b672dd2290ae11ebf4976dae35090fdcca0eb81057b7947"
     },
     "/categories/racing": {
-      "lastmod": "2026-11-15",
-      "sha256": "578ef3a18f71aabc9aac80507659bac10b67e747a5eec606a2a7def4f471de14"
+      "lastmod": "2026-11-20",
+      "sha256": "aaf5dfa9a8a2c7b9b54826784ced1e46ed5c19f4edf4ab0970afe175ec0d51a2"
     },
     "/categories/runner": {
-      "lastmod": "2026-11-15",
-      "sha256": "84edf86cbe4c6482bf8bcb0673dec073232c872ed6a345da5ca9fc516b1bbb6d"
+      "lastmod": "2026-11-20",
+      "sha256": "5b13f6a5e05e43c1614779b7190e834eea0b15a1ed16055f155a90e50f213fd7"
     },
     "/categories/shooter": {
-      "lastmod": "2026-11-15",
-      "sha256": "11ca727551a749ee26b8d06082bc9ea6ff5c0595c23849648a273c4721c40503"
+      "lastmod": "2026-11-20",
+      "sha256": "1ee5e5fcbbbc9c02c2399f5174a9909579593268993dca91dcd075f250320464"
     },
     "/categories/simulation": {
-      "lastmod": "2026-11-15",
-      "sha256": "7f411bcf6bdd78e9b4a7c2a0d1fb81d2290e651c4246e693ebdf321eb02a6078"
+      "lastmod": "2026-11-20",
+      "sha256": "352bbca357c384e0523126dc935ef476040e712cbc5c695fb2ea050ba880213a"
     },
     "/categories/sniper": {
-      "lastmod": "2026-11-15",
-      "sha256": "e82ca9d06be94eca045d15179c13886f67d9bb136a0fdfa3b1265f7abc922db4"
+      "lastmod": "2026-11-20",
+      "sha256": "8f98b52e39e04e999719ce89e1a559bed6379330b308a22d1012a46f675c3f6e"
     },
     "/categories/soccer": {
-      "lastmod": "2026-11-15",
-      "sha256": "ed87d3f20e9d55c53cb78631dbf5f91ac7201d2b9ba49c7bcccdd99eccbe2889"
+      "lastmod": "2026-11-20",
+      "sha256": "3e13855e8c54c66b8c8878abcb92b3ba0f9a37aae0ef617eafb3085d432189e4"
     },
     "/categories/sports": {
-      "lastmod": "2026-11-15",
-      "sha256": "ba38dc853a5c526c9a542214ec4b6ccde9fe63a7682527e9a93403cd995d5557"
+      "lastmod": "2026-11-20",
+      "sha256": "abd483a23c3beab464cf925c50375ca10fa8e9868d3fdda62a8cd381c78c995c"
     },
     "/categories/strategy": {
-      "lastmod": "2026-11-15",
-      "sha256": "3bb39f302de6f545f97a408f675e6069f3e6d87f642b278973466195ad63df43"
+      "lastmod": "2026-11-20",
+      "sha256": "8c7593238d324820a3f98d8f4ac5b9ec830b5b5fc569f4fdc0d5078196879bf0"
     },
     "/categories/survival": {
-      "lastmod": "2026-11-15",
-      "sha256": "55446ccc2a0d1603d102e8a2b9f377e141cd33e1b06c84e81dfae73005c2c357"
+      "lastmod": "2026-11-20",
+      "sha256": "63a4681cda16bf6c80e2fd0d2e118045445b17fd629057c7538650dd45a40748"
     },
     "/categories/tower-defense": {
-      "lastmod": "2026-11-15",
-      "sha256": "6605a3fd8693894f6c01958397899b67992182160dfd9824c259a5c24534a9e3"
+      "lastmod": "2026-11-20",
+      "sha256": "1475c2337291f266e69a3e4755d0822c76dec461b19e0719f50b1dcc44793aaa"
     },
     "/categories/two-player": {
-      "lastmod": "2026-11-15",
-      "sha256": "38ce918ab57c5276fe0759d9f20d60b7b56e45fb53958ea15a472b34ea31a427"
+      "lastmod": "2026-11-20",
+      "sha256": "b8e721e205aa2bde5946644595d755dcb5ae672f74fb6c12bf8fc7fd628e85df"
     },
     "/categories/word-and-trivia": {
-      "lastmod": "2026-11-15",
-      "sha256": "e0fbb7ce7b46f28733ab9959ff68abff43209948648b552d7605844b1115deae"
+      "lastmod": "2026-11-20",
+      "sha256": "a5bf93dc944a3182944dc4b0c8eeb46a65085d208816f62e25345b026c5c2442"
     },
     "/contact": {
       "lastmod": "2026-11-15",
@@ -161,12 +165,16 @@
       "sha256": "536b53f5f5e415b87b7a14f2b771c1d08ea83fca7c6013896836ae04eb31024f"
     },
     "/games": {
-      "lastmod": "2026-11-15",
-      "sha256": "a2658db35bc4e7aea6ddb8221f976e0c195ee68e09aa0ccf2ea036c41c5de279"
+      "lastmod": "2026-11-20",
+      "sha256": "56ecb83f14d4a27977abb5cf1bcc5ac634cccd400c59ce7d9a31c520ba6ed5f7"
     },
     "/games/10x10": {
       "lastmod": "2026-11-15",
       "sha256": "a176c40394d00a311c44b3413c2e3ab23ef44e744d3eb040fa164f8d5bc57a79"
+    },
+    "/games/10x10-classic": {
+      "lastmod": "2026-11-20",
+      "sha256": "a99c2ebcb50873a20eee9764f971875053ac361412bd029fc895d0ccb3eea222"
     },
     "/games/12-minibattles": {
       "lastmod": "2026-11-15",
@@ -192,6 +200,10 @@
       "lastmod": "2026-11-15",
       "sha256": "821e6fee468a2a490db876278ba4f22ee29e906af5126e3bf81019446521316c"
     },
+    "/games/2048-in-flasks": {
+      "lastmod": "2026-11-20",
+      "sha256": "57b7f6404fe08c9af886848be2de0a3fc43deaaa7f0746b5c82a70208c1d53ff"
+    },
     "/games/2048fall": {
       "lastmod": "2026-11-15",
       "sha256": "70ccd3f626e2b0a4cafc31e2ce93f8edd79f5105775377693a82964a7b103b7e"
@@ -212,6 +224,10 @@
       "lastmod": "2026-11-15",
       "sha256": "22f2b1c4a508a0141e5ad7553b5fdc5778251b8d316cb587c290b87fd82063b0"
     },
+    "/games/3d-moto-simulator-2": {
+      "lastmod": "2026-11-20",
+      "sha256": "b10bac1ed37f346eecf9b69ffd5667dd37fecbff1cf4bac3691f8ef9327767c2"
+    },
     "/games/4-in-a-row-connected-multiplayer-online": {
       "lastmod": "2026-11-15",
       "sha256": "2ea8d39c51a1819f5c963f6dca8e148638babe35008658f4a349eab8263cb3a8"
@@ -219,6 +235,10 @@
     "/games/4th-and-goal-2019": {
       "lastmod": "2026-11-15",
       "sha256": "15cc6bc2d64775f19758e578eff2d4ec0ef8c53c5af9a268ac88abe11eb0c7a1"
+    },
+    "/games/4x4-chess": {
+      "lastmod": "2026-11-20",
+      "sha256": "752c50791f90227ad6f689fd026995a6eb6e71d7482d8f83d1a1aa15ae63d3ae"
     },
     "/games/8-ball-billiards-classic": {
       "lastmod": "2026-11-15",
@@ -240,6 +260,10 @@
       "lastmod": "2026-11-15",
       "sha256": "7b6c1754dc326e7fa15ca830052c99124626febc335e77d98e4f665a1ca2fa65"
     },
+    "/games/99-balls": {
+      "lastmod": "2026-11-20",
+      "sha256": "7cf8f12d43862c009b77df2b315e1e20be2933bae3d2b3d137013ac9e82e7945"
+    },
     "/games/a-small-world-cup": {
       "lastmod": "2026-11-15",
       "sha256": "eab5f6fb08254fa1086eb52fdbea1b88ba9c79d0d9dc8e49c7cb91c9453cee24"
@@ -247,6 +271,10 @@
     "/games/abnormal-brain-hole": {
       "lastmod": "2026-11-15",
       "sha256": "fe6e33d14464ca9f09d565024887ad941ad95594e55b36045a1f4bc2a7b45e57"
+    },
+    "/games/aces-of-the-sky-epic-dogfights": {
+      "lastmod": "2026-11-20",
+      "sha256": "0a59b2a8cc6eef693fb0e3edec7bb6c303a617f8d8c582fcfa2054705f1af455"
     },
     "/games/advance-brick-man": {
       "lastmod": "2026-11-15",
@@ -288,9 +316,25 @@
       "lastmod": "2026-11-15",
       "sha256": "f9921cbcb29d2b98229bbfcd15db8559f616aa61df8d05f3c5379bcfbebc02f8"
     },
+    "/games/air-wars-3": {
+      "lastmod": "2026-11-20",
+      "sha256": "94a681c33f33a57e287e217b176191a70deece2108c128115558bda3dff12d47"
+    },
+    "/games/airborne-motocross": {
+      "lastmod": "2026-11-20",
+      "sha256": "cb04e218cba3769d8a6469d511d549d677f804f3c5b091f25470006c5a964dc2"
+    },
+    "/games/airline-tycoon-idle": {
+      "lastmod": "2026-11-20",
+      "sha256": "62894c6944f9800b71851df76a44f940e744fd1387ce638ab60ee5867469c4c8"
+    },
     "/games/airplane-racer": {
       "lastmod": "2026-11-15",
       "sha256": "8c07e3b45dbddd420a22d324ff7160499dd37b61f55f38e8d6bc7c8e93cb7f52"
+    },
+    "/games/alchemy": {
+      "lastmod": "2026-11-20",
+      "sha256": "8c4a36468d52d011b5d472fff144b82eaadd618bfe3fdd497425a05d243c2c20"
     },
     "/games/alien-sky-invasion": {
       "lastmod": "2026-11-15",
@@ -307,6 +351,10 @@
     "/games/amazing-crime-strange-stickman": {
       "lastmod": "2026-11-15",
       "sha256": "4ea238919a6221c88b5946841f4061e5433f8cfd663cb6cf91a3f231d8fef49d"
+    },
+    "/games/amazing-strange-rope-police-vice-spider": {
+      "lastmod": "2026-11-20",
+      "sha256": "36515fd657eec6706ca9d0d4e11b09bc59b849b90221201e5ab54efd65d7c27b"
     },
     "/games/amazing-tile": {
       "lastmod": "2026-11-15",
@@ -327,6 +375,10 @@
     "/games/angela-all-season-fashion": {
       "lastmod": "2026-11-15",
       "sha256": "51603c417f55c3d010e6afcc5071433a1f3b84811891751d2b57fa3fecca12c3"
+    },
+    "/games/animal-dna-run": {
+      "lastmod": "2026-11-20",
+      "sha256": "461a36c914505e8a0be0510d45148988c31a88c39775969ca1872a318cbfffc0"
     },
     "/games/animal-rush": {
       "lastmod": "2026-11-15",
@@ -436,6 +488,10 @@
       "lastmod": "2026-11-15",
       "sha256": "f51e86ddaf114d46cf933a10c90b8834b459feb6890447dbeba262282140d762"
     },
+    "/games/arsenal-online": {
+      "lastmod": "2026-11-20",
+      "sha256": "aefe8b84224305d97ad82f0edac665a1d292aaa47cf688c522d564637d109cf3"
+    },
     "/games/asian-cup-soccer": {
       "lastmod": "2026-11-15",
       "sha256": "e8cf56bd44bbf1e4c86beb285fcd770eb0a6abda482106756b4151d56ca328cd"
@@ -463,6 +519,14 @@
     "/games/autogun-heroes-izk": {
       "lastmod": "2026-11-15",
       "sha256": "7f21d56daedfa0c4a58b5cb6e7eb761b6dface68d047eb7e073b79e731415bf4"
+    },
+    "/games/autumn-glam-gala": {
+      "lastmod": "2026-11-20",
+      "sha256": "714f50edf5f8a8b5786714b3f11faa9fc85f43f2bd6af2ae04ff97d60a3c2e5c"
+    },
+    "/games/avatar-make-up": {
+      "lastmod": "2026-11-20",
+      "sha256": "fa713347579a238c90548d1e215f6e8ac24f2c50e03f4a1d30f3d532ed05f84a"
     },
     "/games/aventador-vice-crime-city": {
       "lastmod": "2026-11-15",
@@ -503,6 +567,10 @@
     "/games/backrooms-shooter": {
       "lastmod": "2026-11-15",
       "sha256": "9f3fd3ccbf50c9ad219e5a614a8504b41e29f7a708853846aa898e2b1eda22a2"
+    },
+    "/games/bad-dolls": {
+      "lastmod": "2026-11-20",
+      "sha256": "fc9914fb742ad262041639470924b29f81fe4be68e5ff1024671097e4d29d99d"
     },
     "/games/ball-fall": {
       "lastmod": "2026-11-15",
@@ -632,6 +700,10 @@
       "lastmod": "2026-11-15",
       "sha256": "a9628815cfc4cbbd90202bf6cd095e5c23d0764300cc90be8eab669ddc47a1ee"
     },
+    "/games/battledudes-io": {
+      "lastmod": "2026-11-20",
+      "sha256": "465c40ba258fca3a93ae4c3371b46c4f4d4b35579e65d37a2fea18c0da49a74d"
+    },
     "/games/battleship": {
       "lastmod": "2026-11-15",
       "sha256": "b060ee215dafcfba7eb77ada14fc1d1edaf607cbf33526cf868449e8673b0b54"
@@ -683,6 +755,10 @@
     "/games/bike-rush": {
       "lastmod": "2026-11-15",
       "sha256": "76431ed78ca40d98753b99ed5b30869101059a8367392f9a309dc461d119e572"
+    },
+    "/games/bike-stunts-race-bike-games-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "c79218c9d15f4442bc1fcde7ef5270ce5278ff93cd9d66f17adbbb605566ddf0"
     },
     "/games/bikerush": {
       "lastmod": "2026-11-15",
@@ -756,6 +832,10 @@
       "lastmod": "2026-11-15",
       "sha256": "1b079cf82fa7d52f04d8c9afd4a3a9892449f57bcf0e533ee3020c5323501332"
     },
+    "/games/block-tour-kfz": {
+      "lastmod": "2026-11-20",
+      "sha256": "1047bb4689d28d61a6c4b60d309725ff5915b560bf74fd75e6e2588e18f2880b"
+    },
     "/games/block-wall-destroyer": {
       "lastmod": "2026-11-15",
       "sha256": "461b782752011c72a03bb9d313305e61d06dab739a664d83b30f903e2d588f3b"
@@ -819,6 +899,10 @@
     "/games/bloxorz": {
       "lastmod": "2026-11-15",
       "sha256": "4b033227a2e0981584f220ebc29e5b39a62cec4d4e1d47fc958ecd6911b252a1"
+    },
+    "/games/blue": {
+      "lastmod": "2026-11-20",
+      "sha256": "f6f1322c2f0deb191cb31f9db9b68f59f0b4b308704989b901e1d7289e3d97f1"
     },
     "/games/blumgi-dragon": {
       "lastmod": "2026-11-15",
@@ -976,6 +1060,10 @@
       "lastmod": "2026-11-15",
       "sha256": "165626df849661917c4cfda9ec7196817e0a323f2bdcb430b6c3cfc3b2002246"
     },
+    "/games/bubble-pop-classic": {
+      "lastmod": "2026-11-20",
+      "sha256": "a278d7dcaedc49dc5423fd915e32db30838373fc05938e109137a5cbaf9774c2"
+    },
     "/games/bubble-sage": {
       "lastmod": "2026-11-15",
       "sha256": "5c11f3ef3befd123f03ab8d64a0345e595cf4c453a88952cc073e6101322ff43"
@@ -1023,6 +1111,10 @@
     "/games/bubble-tower-3d": {
       "lastmod": "2026-11-15",
       "sha256": "c1f6640a385a965ac2395ee5ee080cec798e14f4406798bb2e938b838202ce0a"
+    },
+    "/games/bubble-woods": {
+      "lastmod": "2026-11-20",
+      "sha256": "38d1665b182c9de5bba13b0d9318511ec6ec2dff91a35eb669895f653ac0ea2b"
     },
     "/games/build-and-crush": {
       "lastmod": "2026-11-15",
@@ -1091,6 +1183,10 @@
     "/games/cake-match-puzzle": {
       "lastmod": "2026-11-15",
       "sha256": "ba4ada60c9966fd546d20cec1dc8202d0064cbdbb707f1e7eaa450950fe70590"
+    },
+    "/games/cake-sort-puzzle-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "f4a0c718de230a883094a164fc9f9264702857285fd1ec8f04e669b33110fca2"
     },
     "/games/camera-clash": {
       "lastmod": "2026-11-15",
@@ -1168,6 +1264,10 @@
       "lastmod": "2026-11-15",
       "sha256": "1e4d76708054f01e67a68524f80012c83624aab4adf6d204a136550adafff32d"
     },
+    "/games/car-race-3d-racing-cars-games": {
+      "lastmod": "2026-11-20",
+      "sha256": "75036aabc4487e7b4ce3758cf199679c11c8e18397a622d0c36e452d7535877b"
+    },
     "/games/car-runner": {
       "lastmod": "2026-11-15",
       "sha256": "4b685a177c73b4b43108adbe728d7331ff2779a2de65d338eaa894d77140daef"
@@ -1183,6 +1283,10 @@
     "/games/cargo-skates": {
       "lastmod": "2026-11-15",
       "sha256": "574f91a3e19998e2d26a3bd99dac3d243bdc1be3ce383edb7232e2e4a33a170d"
+    },
+    "/games/cargo-truck-driver-simulator": {
+      "lastmod": "2026-11-20",
+      "sha256": "f48710c089abb9f9ad03ff54eb09c3dd4d0e69ae5487f4ae8f2738dccdca5580"
     },
     "/games/carnage-battle-arena": {
       "lastmod": "2026-11-15",
@@ -1204,6 +1308,10 @@
       "lastmod": "2026-11-15",
       "sha256": "aa2258c0e729b90801c683122a2fa492481fcdbc33633b20bf8b4ea170f1e7bf"
     },
+    "/games/cars-vs-skibidi-toilet": {
+      "lastmod": "2026-11-20",
+      "sha256": "4983afb09af0cc696884817175c35b8e265381254979bf6108297cf9861ce3c1"
+    },
     "/games/cash-tycoon": {
       "lastmod": "2026-11-15",
       "sha256": "40146e14aebc2097a3132c96624250eb2bc4123daf95f66fe448bb934f302b9d"
@@ -1211,6 +1319,10 @@
     "/games/castle-craft": {
       "lastmod": "2026-11-15",
       "sha256": "4b77b897c93a8faca729f0f5f93c5461ecfe140b76dc814f668ba6b7a3f2a551"
+    },
+    "/games/cat-and-granny-original": {
+      "lastmod": "2026-11-20",
+      "sha256": "beeef624dc5ae124ec8c4df6640aadf8cec6c38e35d721e64733a0d31ca72007"
     },
     "/games/cat-defenders-shelling-snake": {
       "lastmod": "2026-11-15",
@@ -1231,6 +1343,10 @@
     "/games/cat-hero": {
       "lastmod": "2026-11-15",
       "sha256": "8a55900aee60eccb40124d7b6163cc10ef04ddb9ec8a13223479792c4e188973"
+    },
+    "/games/cat-life-simulator": {
+      "lastmod": "2026-11-20",
+      "sha256": "8856a9ed5469d1ed24ddd1dcae058a4346e58b46d753ab1846943b54229d98c3"
     },
     "/games/cat-pinball": {
       "lastmod": "2026-11-15",
@@ -1260,6 +1376,14 @@
       "lastmod": "2026-11-15",
       "sha256": "ea91d2dfa5604b6acf47f3211f3c27b02c88847d4d6d4e1d991a043bfc600ecc"
     },
+    "/games/catch-tiles-piano-game": {
+      "lastmod": "2026-11-20",
+      "sha256": "e126b969d85d1e15d94eed74058bc98d91e15efe43d2f30ae9159249da3ad4d2"
+    },
+    "/games/categories": {
+      "lastmod": "2026-11-20",
+      "sha256": "f1e0455b49e1f8bda13ab2cafab0421356ccef0b130d152f01a3a52d7f3d497e"
+    },
     "/games/cavalry-sortie": {
       "lastmod": "2026-11-15",
       "sha256": "3b47b6e2095177379f7e16e3e558b1122023aec64e353944c1f626d08ea2fdd3"
@@ -1283,6 +1407,10 @@
     "/games/chain-saw": {
       "lastmod": "2026-11-15",
       "sha256": "9bcac597ed93f1a23dfbce3d1c37786cec00a907f33d50766e4d29462c7ba299"
+    },
+    "/games/chainsaw-dance": {
+      "lastmod": "2026-11-20",
+      "sha256": "03ee142a10aef84887900e72838aa8c8be9ab53708454aa03271b6703875656b"
     },
     "/games/champion-golf": {
       "lastmod": "2026-11-15",
@@ -1308,9 +1436,33 @@
       "lastmod": "2026-11-15",
       "sha256": "3e8a3c57b87e77252425a218ed22d92aafafd6f7e947b7f472b879cf7afa53ff"
     },
+    "/games/chess-clicker-lhi": {
+      "lastmod": "2026-11-20",
+      "sha256": "a223804f310a9117fdbf882159a53a14ddc5fb562b9db439686ffac7916d5909"
+    },
+    "/games/chess-master": {
+      "lastmod": "2026-11-20",
+      "sha256": "37fca2c4d45bdf312f0207cfb731efbc572cb4d1d35872eb4174628f4f838f47"
+    },
+    "/games/chess-nations": {
+      "lastmod": "2026-11-20",
+      "sha256": "c1f3f5da3ca2941ec5185a6d986ae0c6fe106ee6f6163673059ef8f99d94163c"
+    },
     "/games/chess-online-multiplayer-game": {
       "lastmod": "2026-11-15",
       "sha256": "69a807c83c531727c2e9cb8faf8b40aa05eb5d5ad7f0692ea164e864e2c3bee7"
+    },
+    "/games/chess-wars": {
+      "lastmod": "2026-11-20",
+      "sha256": "4b4f671a647742a1df87a42e3ec9f5d6c2e915337426d4341ef6b1f84118048f"
+    },
+    "/games/chessformer": {
+      "lastmod": "2026-11-20",
+      "sha256": "8d9ce9b948076cc3015c55af390a0e493ee97d84a8b21c09c3b60192c8dfd07e"
+    },
+    "/games/chicken-scream": {
+      "lastmod": "2026-11-20",
+      "sha256": "90cae003bbb970ecf2634c21af84de710affe8b1a4fea449b3883f9f70ea797c"
     },
     "/games/chop-io": {
       "lastmod": "2026-11-15",
@@ -1380,6 +1532,10 @@
       "lastmod": "2026-11-15",
       "sha256": "68e77feaf29b8215273c02bf1243938a7eaa3ec07857a3ecaa84d31e3937c211"
     },
+    "/games/clash-of-armor": {
+      "lastmod": "2026-11-20",
+      "sha256": "d17b57286681a6729d4511be8779773835cbb7660ae3959baa532396593acc3d"
+    },
     "/games/clash-of-warriors": {
       "lastmod": "2026-11-15",
       "sha256": "9ee1a4f71fe5fa381bf1a682ff38f7da7f98fbe46b76c19b50fa7a9afa2286e1"
@@ -1424,6 +1580,10 @@
       "lastmod": "2026-11-15",
       "sha256": "343164615092109d0bccffa3e8a39ba270f980a0aa8fdd04751763c81755c88c"
     },
+    "/games/college-girl-boy-makeover": {
+      "lastmod": "2026-11-20",
+      "sha256": "9757b2b86e8644227b0a9c90234c6bcbbaf9411e59b2c407c6838adf77364dfa"
+    },
     "/games/college-girls-team-makeover": {
       "lastmod": "2026-11-15",
       "sha256": "8355fa899afdb36857c6f1cf289e719fae69f5dfe416dfb4be45ebca0e25b2df"
@@ -1443,6 +1603,10 @@
     "/games/color-game": {
       "lastmod": "2026-11-15",
       "sha256": "6a5658d9ee57b1d48b817251d1f5387746093d88956994992d325bd3d70ecc9a"
+    },
+    "/games/color-music-hop-ball-games": {
+      "lastmod": "2026-11-20",
+      "sha256": "34bcf02181525c0a65842f1841dd869a677e03f49b058fdd3eebfacecc6e4a62"
     },
     "/games/color-nuances": {
       "lastmod": "2026-11-15",
@@ -1644,6 +1808,10 @@
       "lastmod": "2026-11-15",
       "sha256": "7b670656d71905b74d400f47855af1be4ab6eb8cb3409b1732b6392e61c618c6"
     },
+    "/games/crazy-roll-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "ccfa253d041f8aba7f39ab95df347625e5423aa7922280049cb1fb64f0f72512"
+    },
     "/games/crazy-rugby": {
       "lastmod": "2026-11-15",
       "sha256": "7520d78e1c97656f5a7d4d30bd087afaec4fe1da4535cee1620c12fbfcadf33d"
@@ -1671,6 +1839,14 @@
     "/games/creepy-granny-scream-scary-freddy": {
       "lastmod": "2026-11-15",
       "sha256": "f75fe69e0f3f211ef535f9a82a564e6245269f05069ba80d01fb788ee24563e3"
+    },
+    "/games/cricket-superstar-league": {
+      "lastmod": "2026-11-20",
+      "sha256": "b15cae990f52bba1247d4c95ecadb72ac3341015a795a17977ee7dfa6ed825f9"
+    },
+    "/games/cricket-world-cup": {
+      "lastmod": "2026-11-20",
+      "sha256": "f90a9e226743ae89eb6918d53c50224f6af6174d7884c7efccc9d6461c4e5fd3"
     },
     "/games/critical-shot": {
       "lastmod": "2026-11-15",
@@ -1848,6 +2024,10 @@
       "lastmod": "2026-11-15",
       "sha256": "ee1b3bf2b143f8e55eb28b1a3e66f9710097977c256a94aeba9804d83f8aee24"
     },
+    "/games/derby-crash-5": {
+      "lastmod": "2026-11-20",
+      "sha256": "fa8e71c9cb1b1edab18f93fd6cc4626705e5b710df14aa4f2c350a15fa541bd6"
+    },
     "/games/designville-merge-design": {
       "lastmod": "2026-11-15",
       "sha256": "d5f08d1db5697623f26a007c0e93e21a274b6352d6872c801b2e2fa68a57e896"
@@ -1867,6 +2047,10 @@
     "/games/devils-land": {
       "lastmod": "2026-11-15",
       "sha256": "29876e7ff405795bb7515b556dfeb0858e550ea029229acbe495604e07b6105a"
+    },
+    "/games/diamant-match-3-sky-story": {
+      "lastmod": "2026-11-20",
+      "sha256": "baeaae21d47ad94a008717017f8241680c3fe64191b7825a4484ae87b046f911"
     },
     "/games/dice-war": {
       "lastmod": "2026-11-15",
@@ -1892,13 +2076,29 @@
       "lastmod": "2026-11-15",
       "sha256": "c9693ac944e5bdaef05e4d58817fb2d26be6f39b0bb8606682efbff8333ea59a"
     },
+    "/games/dirt-bike-mad-skills": {
+      "lastmod": "2026-11-20",
+      "sha256": "0792bde3adcc90152c6dda8c0d1236f759c48bafa8369399d352b4fd133ae819"
+    },
     "/games/dirt-motor-parkour": {
       "lastmod": "2026-11-15",
       "sha256": "74ed61e2b0ee653c42d26e460d42f90cc3090a6f3c779e6ab8a07b7eb82dd44a"
     },
+    "/games/diver-hero": {
+      "lastmod": "2026-11-20",
+      "sha256": "95d71fe8bef519d034a31a543da059c4a016bfb6a5682ccf55f7bff01fa3f10f"
+    },
+    "/games/diy-makeup-salon-spa-makeover": {
+      "lastmod": "2026-11-20",
+      "sha256": "f5905a8602db646c27ad7b89ebe180e31aa0f77c077187189bf76501016c4491"
+    },
     "/games/dodo-mart": {
       "lastmod": "2026-11-15",
       "sha256": "877421dfdfe4b99129876130d09344bda226c5cae4d3d3e1147f11d6a6d8a88e"
+    },
+    "/games/dog-simulator-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "b00fbc7ff01f1ecd490883bd1388f9759611b1bb54182afa5b4abb578d648239"
     },
     "/games/doge-miner": {
       "lastmod": "2026-11-15",
@@ -1907,6 +2107,10 @@
     "/games/doggo-clicker": {
       "lastmod": "2026-11-15",
       "sha256": "e9b61622304d978aa1d67067987997916731c447a1ca1403ddf36412cb2e8290"
+    },
+    "/games/dogs-vs-aliens": {
+      "lastmod": "2026-11-20",
+      "sha256": "a68b42d26a714e4fbfd12b947bb8ee2a3a057c21f0f7e0977ac90befb9a3d77b"
     },
     "/games/donkey-kong-returns": {
       "lastmod": "2026-11-15",
@@ -2104,6 +2308,10 @@
       "lastmod": "2026-11-15",
       "sha256": "23fa7478c8fe00daabec47ac0716e9ebe8e40561b19930cf996d48295bfbd0f7"
     },
+    "/games/drop-merge-the-numbers": {
+      "lastmod": "2026-11-20",
+      "sha256": "c811a9e98b99f2a8d700076cad910e00b85d39a42ec45051ea9c904dc68558b2"
+    },
     "/games/drunken-boxers": {
       "lastmod": "2026-11-15",
       "sha256": "d87c577940fbfd2e1f241fc702ac746b6d172a299336099199781b0ec903cc3c"
@@ -2115,6 +2323,10 @@
     "/games/dtjj-mobile": {
       "lastmod": "2026-11-15",
       "sha256": "4719b976d5f6a8d9f99437de863d2bb270829afc624893ea16e5515d0c603ef8"
+    },
+    "/games/duck-hunt": {
+      "lastmod": "2026-11-20",
+      "sha256": "e038eb979703853316d372c87297a79cdbd72191106628f8f9eeb255ababdedf"
     },
     "/games/duck-life-4": {
       "lastmod": "2026-11-15",
@@ -2147,6 +2359,14 @@
     "/games/dunk-shoot": {
       "lastmod": "2026-11-15",
       "sha256": "051ed99278cdd4e450e619f14ca9a51eb3555bea4c590e3fa8732e4f2f912edf"
+    },
+    "/games/duo-kjn": {
+      "lastmod": "2026-11-20",
+      "sha256": "7669dcf46a5e1c94b0ff28bc78dc6a0c5b19a671d3602ba38c929c37abcf1fd5"
+    },
+    "/games/duo-with-friends": {
+      "lastmod": "2026-11-20",
+      "sha256": "451a4e6d6879f56ce6942f4bce93843d1b422a1d792f2a59f86dcd37eae6ab6b"
     },
     "/games/dye-fashion-game": {
       "lastmod": "2026-11-15",
@@ -2220,6 +2440,14 @@
       "lastmod": "2026-11-15",
       "sha256": "48ee828a7bd29256bd83a06ac17a7af164cc76b2fd0a4b5134ee4d2fc204d170"
     },
+    "/games/elite-sniper": {
+      "lastmod": "2026-11-20",
+      "sha256": "1d50a02682aef043b40ac12d3580d1456bea6b5fb704916ff1c94716b8068604"
+    },
+    "/games/embercry": {
+      "lastmod": "2026-11-20",
+      "sha256": "9f6bdc3e27147937ab5a695926e5d3e7280c76bf453c0ce9db21794b22cd98ee"
+    },
     "/games/emerland-solitaire": {
       "lastmod": "2026-11-15",
       "sha256": "733ac57d868857eb371743c9194a0ca79d2a90700ba939fd088f94071073143a"
@@ -2231,6 +2459,14 @@
     "/games/emilys-hotel-solitaire": {
       "lastmod": "2026-11-15",
       "sha256": "c8a1501d8ed17e61ae12bd95c61704ec7ecb4f032c43c2bac87c3d90b85cdb53"
+    },
+    "/games/emoji-clickers": {
+      "lastmod": "2026-11-20",
+      "sha256": "5a35e8cf39646a696fca39c214f2767c4a8bcc8cf493fa19ad4367f7c3cc8d36"
+    },
+    "/games/emoji-guess-master": {
+      "lastmod": "2026-11-20",
+      "sha256": "c1ee1fe1aabf40a5113d37d10d8d385becad37f79f824ff33ae28264a6ad2a6c"
     },
     "/games/empire-city": {
       "lastmod": "2026-11-15",
@@ -2304,6 +2540,10 @@
       "lastmod": "2026-11-15",
       "sha256": "430dffcdf1bf9a697f36fe1981a6627370b9e31ff12eabaab3b59e338f0cedd5"
     },
+    "/games/evowarsio": {
+      "lastmod": "2026-11-20",
+      "sha256": "1ea4f186ea54eaf0cd4279128ec20e4214fe90f0a4ec85408d0cfc6c50360b68"
+    },
     "/games/exhibit-of-sorrows": {
       "lastmod": "2026-11-15",
       "sha256": "0c6e275e987c6cc21f0b0fd5df8bed0c3f23961c4b675e5e7815236d659b7569"
@@ -2323,6 +2563,10 @@
     "/games/fabby-golf": {
       "lastmod": "2026-11-15",
       "sha256": "8cd855bffec33d3ee269f675b9bdb3b41ada7a22092a88fe0f2304dc83d42a2c"
+    },
+    "/games/fairy-puzzle": {
+      "lastmod": "2026-11-20",
+      "sha256": "b4a4375364e63b08a69f389492e0175c50d8ddf0a6bab1803ccb0765b9927005"
     },
     "/games/fairyland-merge-and-magic": {
       "lastmod": "2026-11-15",
@@ -2404,6 +2648,10 @@
       "lastmod": "2026-11-15",
       "sha256": "256f299e6006c563786765f228a18a4cbe689527e990cbbdec8ee49f42e94ff6"
     },
+    "/games/fashion-store-shop-tycoon": {
+      "lastmod": "2026-11-20",
+      "sha256": "a5c3cf7f0c2c2781af5eb293320f3b9c2eddf911d583deaf4cea360fe292b623"
+    },
     "/games/fashion-studio": {
       "lastmod": "2026-11-15",
       "sha256": "cd94a3b9dfc63c28c95a7a9645bcb4a0d25044f963887ee7063402b2b0dcc24c"
@@ -2416,6 +2664,10 @@
       "lastmod": "2026-11-15",
       "sha256": "4c69d13c00fde9f09941574401583e02e22789077c736e4be565e9b89f3e2cf4"
     },
+    "/games/favorite-puzzles": {
+      "lastmod": "2026-11-20",
+      "sha256": "515636ec0375b25e0e1e1d6d3929a62feec347a32b3b37870d65f990baeaee7d"
+    },
     "/games/feeling-arrow": {
       "lastmod": "2026-11-15",
       "sha256": "31be796587d9a2d32af53db887c31c72c06fee7d36f84290ae9cf1cfc5d9f0d9"
@@ -2427,6 +2679,10 @@
     "/games/fight-meow-army": {
       "lastmod": "2026-11-15",
       "sha256": "dfa8d15fcf8fbecbb801506af3ca2b17f8096be5768a8904a8cd91c7090e40d7"
+    },
+    "/games/fighter-aircraft-pilot": {
+      "lastmod": "2026-11-20",
+      "sha256": "0f72adc47b127e5e77a537270fc64ec2a88e7db11eda7bef47755e8379f1ef55"
     },
     "/games/fighting-aliens": {
       "lastmod": "2026-11-15",
@@ -2467,6 +2723,14 @@
     "/games/find-the-diff": {
       "lastmod": "2026-11-15",
       "sha256": "dfdfa624bd56268d84be2352ee81c684c01249a242f3c66b38bac428c3aefbe3"
+    },
+    "/games/find-the-difference": {
+      "lastmod": "2026-11-20",
+      "sha256": "ef4adfbfd103d2aa1e9551d80a4e24820221f942ee5d8112750f4a59d3ee01d2"
+    },
+    "/games/find-the-pets-cph": {
+      "lastmod": "2026-11-20",
+      "sha256": "d227ceba2d564e3a213a2f9ff621ced6ddadee558941adce485bc295eb549cfb"
     },
     "/games/find-them-all": {
       "lastmod": "2026-11-15",
@@ -2520,6 +2784,14 @@
       "lastmod": "2026-11-15",
       "sha256": "c1c802cd64c39289caab62a09f89ed33e4395fe31eaef2903d81062d9e330e12"
     },
+    "/games/fish-eat-getting-big": {
+      "lastmod": "2026-11-20",
+      "sha256": "151283d0636d22f9170f4bdb46d51249fc76edf23b7fe064c89fe4f5a724b39c"
+    },
+    "/games/fish-frenzy": {
+      "lastmod": "2026-11-20",
+      "sha256": "dcaaa35bfeebe5cc2dd7a92082eb74c9e3bdff9628465144c5e09faf9ffdecab"
+    },
     "/games/fish-go-io": {
       "lastmod": "2026-11-15",
       "sha256": "86df653dce02becf122558a8aa8e538dc8e105c01cc554306a0d33c068644508"
@@ -2547,6 +2819,10 @@
     "/games/five-nights-at-poppy": {
       "lastmod": "2026-11-15",
       "sha256": "e5f063af9f7475e2d41abee6f7d9e45bbf6fe209a3f4ba1e4bee2ebec5550a4c"
+    },
+    "/games/five-o": {
+      "lastmod": "2026-11-20",
+      "sha256": "54af49a7012b069a083c3539340a1fa4687b1ea536ddce4d83ef898a6b4b0ba8"
     },
     "/games/flappy-bird": {
       "lastmod": "2026-11-15",
@@ -2608,6 +2884,10 @@
       "lastmod": "2026-11-15",
       "sha256": "170e87c70546dc4f7cec96f2f9b087d938a4371a2a717521ac4985b256391446"
     },
+    "/games/food-truck-chef": {
+      "lastmod": "2026-11-20",
+      "sha256": "ec03b70fcf406c6ba89c641bb6d0f86dc29d913ffe3c29b8bdea85f6fdd276d4"
+    },
     "/games/foot-doctor": {
       "lastmod": "2026-11-15",
       "sha256": "884119ae2b789d73be8378aa6fbcafabad4a6fe1bb59394a51122471e0698313"
@@ -2668,6 +2948,10 @@
       "lastmod": "2026-11-15",
       "sha256": "0238c1aeb221264c2e72d125dd43d9d2d5f05db6821190ef239924e7ebb857c7"
     },
+    "/games/fox-simulator-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "e3eda906d309247f2d65982deb0ef3016bc47e0e404d43f403e1540907258827"
+    },
     "/games/fps-simulator": {
       "lastmod": "2026-11-15",
       "sha256": "6e5de148ac75fc122ea68243374c34c2774a4ff780b0dba0b8fe037a98c4edd8"
@@ -2699,6 +2983,10 @@
     "/games/frog-hero": {
       "lastmod": "2026-11-15",
       "sha256": "cd08540d8f80906a295e924335e5ca9508284ce33d1e9c7ecc4aa720a09452ed"
+    },
+    "/games/frogger": {
+      "lastmod": "2026-11-20",
+      "sha256": "d85d4cabbf1dc81b594fd49b4eeab7282973917847be1f3b424a47aa8ed7f8c6"
     },
     "/games/frozen-sisters-dream-wedding": {
       "lastmod": "2026-11-15",
@@ -2763,6 +3051,10 @@
     "/games/funny-battle-simulator-2": {
       "lastmod": "2026-11-15",
       "sha256": "64ab58532b5c8b53165b6f9a3a51ad803871f67a791780f01f845c2f0b0ed8f2"
+    },
+    "/games/funny-food-duel": {
+      "lastmod": "2026-11-20",
+      "sha256": "f17709591238f53f5d9baa0fe49e728baa6d347261bd53500e8c244282c567fd"
     },
     "/games/funny-ragdoll-wrestlers": {
       "lastmod": "2026-11-15",
@@ -2884,6 +3176,10 @@
       "lastmod": "2026-11-15",
       "sha256": "a7d5178c112ccc913c47a428a4ffc40d5c640aa9d481f7410045c9c61f2726fc"
     },
+    "/games/get-to-zero-card-game": {
+      "lastmod": "2026-11-20",
+      "sha256": "76bf30e0f3e86ade282a294a5f9bf7e9ada0656a7fce3b0e5d5c02514e98aae2"
+    },
     "/games/getaway-shootout": {
       "lastmod": "2026-11-15",
       "sha256": "8bc11c1b230c5387d34d94fc25d6b8abb5f36a8275a2e32530cf28d51f746b6b"
@@ -2896,9 +3192,17 @@
       "lastmod": "2026-11-15",
       "sha256": "5faf94c243b33a84e67438ed030aec03ad8f1b11d7cb8f8616953e02ef2d8d36"
     },
+    "/games/ghost-sniper": {
+      "lastmod": "2026-11-20",
+      "sha256": "119b012d3130b487f90ffbd9ee3e1b045a8d7fea423345399cdfa01d177500ff"
+    },
     "/games/gladiator-fights": {
       "lastmod": "2026-11-15",
       "sha256": "2d48a896416ec938f5e387380079adb044fe6002441dee6459828f74974e7c63"
+    },
+    "/games/glamour-beachlife": {
+      "lastmod": "2026-11-20",
+      "sha256": "e505b5d1db238d9a1403d72c2f4a4d3e5bbd191cce94688d69fe16ea5f472df6"
     },
     "/games/global-guesser": {
       "lastmod": "2026-11-15",
@@ -2911,6 +3215,10 @@
     "/games/glowit-two-players": {
       "lastmod": "2026-11-15",
       "sha256": "be66f32a52a9bf3d8f87b3c843884ba6756a7ea3948244e4db1d934146a1776f"
+    },
+    "/games/go-escape-nim": {
+      "lastmod": "2026-11-20",
+      "sha256": "54b5fd4a34e0aaa23db505fea286db87ec56f5cc999aa04d1465d4e20a879d04"
     },
     "/games/gobattleio": {
       "lastmod": "2026-11-15",
@@ -2931,6 +3239,10 @@
     "/games/gold-miner": {
       "lastmod": "2026-11-15",
       "sha256": "86312702654e92f51919f9111664c8cc09df21834dacf99083577556a8af66a7"
+    },
+    "/games/gold-rush": {
+      "lastmod": "2026-11-20",
+      "sha256": "2834d387046bbea91feee13e3e48f583119be808044e5045caf4056802eceb2d"
     },
     "/games/golf-challenge": {
       "lastmod": "2026-11-15",
@@ -2992,6 +3304,10 @@
       "lastmod": "2026-11-15",
       "sha256": "9e5d6d9f8989ea443648b2493f542f7072c27fd4297f86a7db266507f514b4a2"
     },
+    "/games/grwm-date-night": {
+      "lastmod": "2026-11-20",
+      "sha256": "d9433966bd63e894cee546c5abbd35a4c37e525186122d603221dcb56381f87a"
+    },
     "/games/gt-cars-city-racing": {
       "lastmod": "2026-11-15",
       "sha256": "4a41a2b6fe2555175be00661329dbcc94c4628cacba2ee026f3a096105487007"
@@ -3027,6 +3343,14 @@
     "/games/gummy-blocks": {
       "lastmod": "2026-11-15",
       "sha256": "83ee420bdb4edd0c26d16449a40c8b655a625f184d342bbafd710ad4789c4276"
+    },
+    "/games/gun-mayhem": {
+      "lastmod": "2026-11-20",
+      "sha256": "b92fe1e3400978bf6bdf5290f840c126a2f3a667d0cf355a22ab325676128904"
+    },
+    "/games/gun-mayhem-2": {
+      "lastmod": "2026-11-20",
+      "sha256": "8a055f3ecf630cc6b8629dc2b103dad2c8a7a8759b471cf8738bf977c15a035b"
     },
     "/games/gun-run": {
       "lastmod": "2026-11-15",
@@ -3091,6 +3415,10 @@
     "/games/happy-caty-glass": {
       "lastmod": "2026-11-15",
       "sha256": "e28702166cddfbaee1bd868692bf53a9cbdbdbb528c0ff03bc85b0cb5abac69f"
+    },
+    "/games/happy-dog": {
+      "lastmod": "2026-11-20",
+      "sha256": "bd4e0264815bc107b358b0d81d3ffe0d3d57bf9a0d405d06bd8f668cb1718649"
     },
     "/games/happy-domino": {
       "lastmod": "2026-11-15",
@@ -3179,6 +3507,10 @@
     "/games/hero-battle": {
       "lastmod": "2026-11-15",
       "sha256": "f43ba273d5d9f6a6e87c83646a9baab291673b47792f82fdac852e6b78e13972"
+    },
+    "/games/hero-castle-war-tower-attack": {
+      "lastmod": "2026-11-20",
+      "sha256": "9380e21b87e0ba091beae1bafd2287723bdcc793d69bd0ebeb4593833217457f"
     },
     "/games/hero-rush-tower-defense": {
       "lastmod": "2026-11-15",
@@ -3292,6 +3624,10 @@
       "lastmod": "2026-11-15",
       "sha256": "da7f11979239e4eb73319437dd1a3e6d6f4cfb18b80be28fbcaf23abcbe44946"
     },
+    "/games/home-flip": {
+      "lastmod": "2026-11-20",
+      "sha256": "6a6c438869601cf18f54529e3f15276fc51986f77624e9f51086e8a01f7095cd"
+    },
     "/games/home-makeover-2-hidden-object": {
       "lastmod": "2026-11-15",
       "sha256": "ae304843cc702b4bcb75f16a09f1ea705f1af0734b41a0834064e647e55f596c"
@@ -3348,6 +3684,10 @@
       "lastmod": "2026-11-15",
       "sha256": "574b96a77edde6b2f246ba7486ba279ff4e9718b992d18a7cff5f4cd90aba79d"
     },
+    "/games/hospital-hustle": {
+      "lastmod": "2026-11-20",
+      "sha256": "61781ea59ee254cc68f682ac73203df604aee3e689008631795d6b0886e44c45"
+    },
     "/games/hot-spring-house": {
       "lastmod": "2026-11-15",
       "sha256": "2f0262b6c81b5f6cc541a2b8fa0f686d08280465d71becb3bd8ace4e911e8664"
@@ -3403,6 +3743,10 @@
     "/games/idle-bbq-journey": {
       "lastmod": "2026-11-15",
       "sha256": "9e2dcea2b8aed3d16f7193182fb0c6abcf431237273f406b376d2818e1fde15e"
+    },
+    "/games/idle-blogger-simulator": {
+      "lastmod": "2026-11-20",
+      "sha256": "0c6511dea9ec534af7527d31bcfefd979dc1db479ff3f9674edaf6b9b7e367ff"
     },
     "/games/idle-breakout": {
       "lastmod": "2026-11-15",
@@ -3472,9 +3816,17 @@
       "lastmod": "2026-11-15",
       "sha256": "3e9d65433a4639f434f10476b15e232457510a0d4cc9d5e2f8c6aeb11f57d7c1"
     },
+    "/games/idle-world": {
+      "lastmod": "2026-11-20",
+      "sha256": "25fc80fd0ec5d0efe3dc25d97c478649b702204c5c824e76c7ed69d764d6e35c"
+    },
     "/games/idle-zombie-wave": {
       "lastmod": "2026-11-15",
       "sha256": "9b2be42719a6a130364aa5915e6be659e9a0816ca23501de3eff9dc1def485e2"
+    },
+    "/games/image-crossword-far": {
+      "lastmod": "2026-11-20",
+      "sha256": "b3f0a09f3d62d7c98225efc204fe3a0d41a01a72b783994a18f7f8835c7d98ae"
     },
     "/games/immortal-dark-slayer": {
       "lastmod": "2026-11-15",
@@ -3484,6 +3836,10 @@
       "lastmod": "2026-11-15",
       "sha256": "b244025bb9d188a3b898dc45ab1520e7fbf8b21e8e12eaf8dca862170b5a50ae"
     },
+    "/games/impossibe-date": {
+      "lastmod": "2026-11-20",
+      "sha256": "2010ef180de2bea4071787acc45326ce819fbd014ea6c01ab220d4f8d4d43d3a"
+    },
     "/games/imposter-battle-royale": {
       "lastmod": "2026-11-15",
       "sha256": "e9d817ead068e6e7a6178246f6b55029fd67c5001ac1c55b1e55d8a5961dfd80"
@@ -3491,6 +3847,10 @@
     "/games/in-treatment": {
       "lastmod": "2026-11-15",
       "sha256": "0a7b7402320e26621ce91cc4a5ee32bc26927353ca3081c9d49017840723bffa"
+    },
+    "/games/incremental-epic-hero-2": {
+      "lastmod": "2026-11-20",
+      "sha256": "7cb4a91251bc944c9357a9a3e84a3aecb089ebeb2bb26c1774d869b2977efd00"
     },
     "/games/infiltrating-the-airship": {
       "lastmod": "2026-11-15",
@@ -3524,9 +3884,17 @@
       "lastmod": "2026-11-15",
       "sha256": "bf04cb9b6b73af8d952fb82634746a2a1eb985c4e3bb5904cd7dcbee5b613743"
     },
+    "/games/italian-brainrot-clicker-usp": {
+      "lastmod": "2026-11-20",
+      "sha256": "52b3fcbd2477cb9413d6774ef96b4d6ee4c769fa56b78eced4737d675923d5d4"
+    },
     "/games/italian-brainrot-survive-parkour": {
       "lastmod": "2026-11-15",
       "sha256": "de41c0e76e8d4cbea10268b6eea7b3f6ccb35d3b556395c4e37e196f92c72070"
+    },
+    "/games/iza-s-supermarket": {
+      "lastmod": "2026-11-20",
+      "sha256": "e5e2308864cb82c9e77db2c57f7097fa3ed694e1b7f7296e551445d6a9ffc016"
     },
     "/games/jacksmith": {
       "lastmod": "2026-11-15",
@@ -3572,6 +3940,10 @@
       "lastmod": "2026-11-15",
       "sha256": "4e4736dfb0d565c11bee6c88b8f65e9d494cdb23bb0b71e6efdc443aad6a4650"
     },
+    "/games/jewel-academy": {
+      "lastmod": "2026-11-20",
+      "sha256": "1dffb132547ab990dcced5f967056dcc4ca1dd339162f7288f9ea1d9452cb914"
+    },
     "/games/jigsort-puzzles": {
       "lastmod": "2026-11-15",
       "sha256": "65b3a62392a6281c61e5777fdde4df198c76d260581c44840e3b00bc910cd932"
@@ -3600,6 +3972,10 @@
       "lastmod": "2026-11-15",
       "sha256": "8f4fd8279f261999e6fa2e743333c509afa6053829aa3e693dc90f1b0b049c85"
     },
+    "/games/jungle-deer-hunting": {
+      "lastmod": "2026-11-20",
+      "sha256": "cfabee23085eefcfa962d3384351190015178298fa96bf0286f99d36fb661e06"
+    },
     "/games/jungle-king": {
       "lastmod": "2026-11-15",
       "sha256": "71647ce19b2918e6499fdede71be6d52381c47f5ad8f145540c4e55791aded40"
@@ -3607,6 +3983,14 @@
     "/games/jungle-marble-pop-blast": {
       "lastmod": "2026-11-15",
       "sha256": "b0c73d77abe2399abb3e152e194a755b0f8eba9bc97f7a3314a665b17d065201"
+    },
+    "/games/k-sniper-challenge-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "046f9d5cae3b0238732341eaa7f1d93631a55035badb5f84dbadc29584725f8a"
+    },
+    "/games/kaleidoscope": {
+      "lastmod": "2026-11-20",
+      "sha256": "e095c603a7de62e51103676b5b3541e4e55f6397ece1dd6b9c6df1fc10fe9f93"
     },
     "/games/kamaz-truck-driver": {
       "lastmod": "2026-11-15",
@@ -3635,6 +4019,10 @@
     "/games/kill-io": {
       "lastmod": "2026-11-15",
       "sha256": "1d53f0fb833f3d2fc79d69449eaef7177ef6a519fda3cd4ca957aab555c11caa"
+    },
+    "/games/kill-the-ice-age-baby-adventure": {
+      "lastmod": "2026-11-20",
+      "sha256": "953273a50a7713950c3519cc9f2bb4c243499240054ce785121112b7af1e49c8"
     },
     "/games/kill-the-undercover": {
       "lastmod": "2026-11-15",
@@ -3692,6 +4080,10 @@
       "lastmod": "2026-11-15",
       "sha256": "4c47068628e6be974d85f820a0bce2292fe051d30fa46da4a46ea0d95aaf318b"
     },
+    "/games/knight-of-chess": {
+      "lastmod": "2026-11-20",
+      "sha256": "508269f9d6a35fdbb039a5930c0beaecb3bf744fa0395945d2f8a294a11bd09f"
+    },
     "/games/knockouts": {
       "lastmod": "2026-11-15",
       "sha256": "c447e3f7e9fbb3a2c11341b149c90327b10bae62d76865fdd48debde32cea250"
@@ -3699,6 +4091,10 @@
     "/games/kour-io": {
       "lastmod": "2026-11-15",
       "sha256": "e96543542b5d3e7a0767f6c349f5f00e24657b057159e7417772cbe60d211abd"
+    },
+    "/games/krewio": {
+      "lastmod": "2026-11-20",
+      "sha256": "277e4956846d56e2d8a4454dc32fddb01569ce37c97f23012511eb93623efdf3"
     },
     "/games/labubu-merge": {
       "lastmod": "2026-11-15",
@@ -3764,6 +4160,14 @@
       "lastmod": "2026-11-15",
       "sha256": "99dbee39f19d9bfd0031180339a16e53f00d82c94a996a2cda8d7498678bd263"
     },
+    "/games/little-fox-bubble-spinner-pop": {
+      "lastmod": "2026-11-20",
+      "sha256": "d4d8afb16012f9b5fc5cd730b1398713edb10cc1b48feff3aaef37c85935cc57"
+    },
+    "/games/live-avatar-maker-girls": {
+      "lastmod": "2026-11-20",
+      "sha256": "8e4c7649c7e5463fb1817e4223436727869d7176ff771996afb0a1bec610a648"
+    },
     "/games/lkebana-challenge": {
       "lastmod": "2026-11-15",
       "sha256": "c152a5e674532d4fcad82cd408015d52f483057f004b11cf1f1a25c00037cb5a"
@@ -3827,6 +4231,10 @@
     "/games/ludo-star": {
       "lastmod": "2026-11-15",
       "sha256": "312321cbdf078d48a9351c463a4a3aec86becb4e1a2cca5dc7b4c65f347f3f26"
+    },
+    "/games/lulu-s-fashion-world": {
+      "lastmod": "2026-11-20",
+      "sha256": "b0f8dba182310464ab0146254661c18041830f5782b86a76226023eefa0fceb0"
     },
     "/games/lumber-harvest-tree-cutting-game": {
       "lastmod": "2026-11-15",
@@ -4136,13 +4544,29 @@
       "lastmod": "2026-11-15",
       "sha256": "8ee23b41c46a94068b717f3a7a1aa7d4824bb83e5eaaf399c1588d7df7e53697"
     },
+    "/games/merge-master-tanks-tank-wars": {
+      "lastmod": "2026-11-20",
+      "sha256": "1c8f795cd79bd4824d9bdbb7930165672b18a94beca2674d6f4c2b077ec1eaae"
+    },
     "/games/merge-number-puzzle": {
       "lastmod": "2026-11-15",
       "sha256": "20a7a5a646acc2e22c138157625aa4b2d0f9711f8db68bb625d43ba16fa8f22d"
     },
+    "/games/merge-restaurant": {
+      "lastmod": "2026-11-20",
+      "sha256": "dd1240ea01d59b00e2b7aefaa6d67a17fd260fdd57f70723cc0e61bee722385b"
+    },
     "/games/merge-rush-z": {
       "lastmod": "2026-11-15",
       "sha256": "c17d2c8b69052fd73e187151ef4ca498bb5100ace973830398eec6f37028c15a"
+    },
+    "/games/merge-the-numbers": {
+      "lastmod": "2026-11-20",
+      "sha256": "80ec9a63df0667c9b5b67acc18fda5f059e932cdf5e3472a99c5964dc4fbaff5"
+    },
+    "/games/merge-to-million": {
+      "lastmod": "2026-11-20",
+      "sha256": "5c7e5b94ddd19d892fdccef2065bd9325cf54a9f069814af98cc8e484f75c593"
     },
     "/games/merge-weapons": {
       "lastmod": "2026-11-15",
@@ -4216,6 +4640,10 @@
       "lastmod": "2026-11-15",
       "sha256": "89de9803f5a9ac489c354792fea1ccee580290f1cdc5747742179e986bc38c14"
     },
+    "/games/minibattles-2-3-4-5-6-player-games": {
+      "lastmod": "2026-11-20",
+      "sha256": "a3953fbf96f1d0b6718e047b794dd519bc2c1f8b8e558a85e5b6e78001bb2729"
+    },
     "/games/miniblox": {
       "lastmod": "2026-11-15",
       "sha256": "059a7c46dfd055f541002e7d4f0c8d9ad8c81300507a10dc171fa5441d095d1a"
@@ -4264,6 +4692,14 @@
       "lastmod": "2026-11-15",
       "sha256": "df36f2e23822df5035175ec5191f8b2b2a443fb65154265ec6eabd394e829991"
     },
+    "/games/modern-cannon-strike": {
+      "lastmod": "2026-11-20",
+      "sha256": "153a668c35f4110b2f887441040f1939cffe20bd6e4e4904a2596b0c8a9050c8"
+    },
+    "/games/mom-s-diary-2": {
+      "lastmod": "2026-11-20",
+      "sha256": "e6cbc5751168d97d1a122107fc7a33e3963098191fd41a9058f3d68f313d4d07"
+    },
     "/games/mommy-birth-care": {
       "lastmod": "2026-11-15",
       "sha256": "423725d9f8cc59a14cec47cb9847866c160bc2fde6ba31471d01433f8d361bf9"
@@ -4271,6 +4707,10 @@
     "/games/money-factory-aqs": {
       "lastmod": "2026-11-15",
       "sha256": "15473386d797599c7d47064af5b246035e296984b48cecffe472195cd8845188"
+    },
+    "/games/money-maker-idle": {
+      "lastmod": "2026-11-20",
+      "sha256": "e9dffb4f2d62e7bbe83fd9aee71534c4fbd73226a99ecb66416bc86ea5f8f3d2"
     },
     "/games/monkey-tycoon": {
       "lastmod": "2026-11-15",
@@ -4308,6 +4748,10 @@
       "lastmod": "2026-11-15",
       "sha256": "eed40ca36e0d712a39a18125a01fe470443a51f3eb8c94a6b26e38cbb5219414"
     },
+    "/games/monster-makeup-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "b3602d435c50576212a0e98a4f1d2820bf4bd2e6902e729b420b8ffa22be3b42"
+    },
     "/games/monster-puzzle": {
       "lastmod": "2026-11-15",
       "sha256": "6aa907f5663afbe8f57d0ff17873f9d02e03679f050f0b4f5239a3c68f3e527d"
@@ -4344,9 +4788,17 @@
       "lastmod": "2026-11-15",
       "sha256": "8873a1ca5627b615b2dca9f0c86b801e033acd00b9fa79febf9b9901c19f14b1"
     },
+    "/games/mopeio": {
+      "lastmod": "2026-11-20",
+      "sha256": "c0a4f0be1bafe5359dc03263191cf5b6a05d38a2f72121f0130a7fbf5bbbec37"
+    },
     "/games/motherload": {
       "lastmod": "2026-11-15",
       "sha256": "a35289bf9c761a725d9b96999fcf233a0266b2e176c1daeba1e0752505d304ea"
+    },
+    "/games/moto-maniac": {
+      "lastmod": "2026-11-20",
+      "sha256": "374ffbf9d3df5f2cf96e13034f968b235fd0186b61dbad2dfb8e8ee71530cac3"
     },
     "/games/moto-road-rash-3d": {
       "lastmod": "2026-11-15",
@@ -4375,6 +4827,10 @@
     "/games/moto-x3m-winter": {
       "lastmod": "2026-11-15",
       "sha256": "cd3eaa698fea992d20321d8f29ff98cec00e472f84f3ab3e5689a305b4606ac2"
+    },
+    "/games/motocross-riders": {
+      "lastmod": "2026-11-20",
+      "sha256": "eb622796f7c81c01efe6c248a9ec49722399ce922147a5f9629b7accf8be4a26"
     },
     "/games/motor-tour": {
       "lastmod": "2026-11-15",
@@ -4420,6 +4876,14 @@
       "lastmod": "2026-11-15",
       "sha256": "503bac2bb13f2789269fa7b7e2be750c065fd4f706ae13c06c1fe785726d1c2d"
     },
+    "/games/multiplayer-quick-tag": {
+      "lastmod": "2026-11-20",
+      "sha256": "b76bf7a522dc14458b5617e2fea150eab57800b97e147a226b1ce7ffc0b11353"
+    },
+    "/games/murder-mafia": {
+      "lastmod": "2026-11-20",
+      "sha256": "588c672f922108b02d1abcfb85463f2b6367ec20ae517210280a8e44a0c39406"
+    },
     "/games/murderer": {
       "lastmod": "2026-11-15",
       "sha256": "a238afdf48537449d8d3cffcb7b5ffe52ee5d71ba5e253741b4b18250d623cd2"
@@ -4456,6 +4920,10 @@
       "lastmod": "2026-11-15",
       "sha256": "d436ed2fa2aba85dbbe7716d556aa08f929500c51b267907e7d420408c42097b"
     },
+    "/games/mydream-universe": {
+      "lastmod": "2026-11-20",
+      "sha256": "d38848e5ee45257eda2425441004cdc65d6a3cddd514daa880839820d212fb95"
+    },
     "/games/myfairies-dressup": {
       "lastmod": "2026-11-15",
       "sha256": "5f2106017c6ca6532d2953a38b528e9fddca7fd6edd9c42475a7697ef7fa09b4"
@@ -4476,6 +4944,10 @@
       "lastmod": "2026-11-15",
       "sha256": "a00c3eac8c9ceb25d27d795532bb7bc150e4cc5939ca82630848e55de646ee24"
     },
+    "/games/neko-sliding-cat-puzzle": {
+      "lastmod": "2026-11-20",
+      "sha256": "2fdac0d3ce442ce90cf53942d79a55c72e49917ee1f226af4d29dc89788500b1"
+    },
     "/games/neo-adventure": {
       "lastmod": "2026-11-15",
       "sha256": "08fab1cd9ea0ffa088491dc250fc0aca692e279fb74bcf12054b7322ddc10604"
@@ -4483,6 +4955,10 @@
     "/games/neon-slither-sim": {
       "lastmod": "2026-11-15",
       "sha256": "994793b6ea40d521aaea431bfe9af7684b3bd02fd7384ed2b4c77744fbad079e"
+    },
+    "/games/new-year-makeup-trends": {
+      "lastmod": "2026-11-20",
+      "sha256": "ecf0070672413f9e65efd7b1cda04397842ea520c165c9320137d3fcc9a9536a"
     },
     "/games/new-year-puzzles": {
       "lastmod": "2026-11-15",
@@ -4528,6 +5004,10 @@
       "lastmod": "2026-11-15",
       "sha256": "c94add9cd61cce2afea854dc4d9d8d588f3a5274a9048992731fed7f1fe4028d"
     },
+    "/games/noob-miner-2-escape-form-prison": {
+      "lastmod": "2026-11-20",
+      "sha256": "f8c7c733843c2bcc1bd89b0bcbccd67d3b9cbabd3c042244df5ed641406f072f"
+    },
     "/games/noobwars": {
       "lastmod": "2026-11-15",
       "sha256": "8cea8d14ba47de7009886cd09634feb8ce15c576796f62c6a9812b97b4279a57"
@@ -4552,6 +5032,10 @@
       "lastmod": "2026-11-15",
       "sha256": "c3d3ec1ea9ea8c4f0dce43461f2e4a644fc53428a9cf71cc72c743d3c3cbfa55"
     },
+    "/games/number-line-match": {
+      "lastmod": "2026-11-20",
+      "sha256": "e42c5608b25b52e6f63d6d73ef3724f1d9d9ac72c536f63c181d8898e1655a49"
+    },
     "/games/number-merge": {
       "lastmod": "2026-11-15",
       "sha256": "aee9008b2c694c63c50c90ead151773fe192d98491e8def5ebe94d0e39358fd1"
@@ -4560,9 +5044,17 @@
       "lastmod": "2026-11-15",
       "sha256": "c388ceb63ecea307183ecd72b0c35136883b9e971c84bfce9cb26ca599ea3893"
     },
+    "/games/numbers-arena": {
+      "lastmod": "2026-11-20",
+      "sha256": "baf4e597e303db7748e63e15cb1404a051b428f532b6c766a4469805d80d80a4"
+    },
     "/games/nuts-and-bolts-puzzle": {
       "lastmod": "2026-11-15",
       "sha256": "e0e3167b318e66fdf457b604f91164304538de031d139cbee6b81b5cb37e7287"
+    },
+    "/games/nuts-puzzle-sort-by-color": {
+      "lastmod": "2026-11-20",
+      "sha256": "d1c7ec920c10afe6aded32bd73fa51b87d93cbe281fd6eebd571ab013cf04a9a"
     },
     "/games/obby-bike-trials": {
       "lastmod": "2026-11-15",
@@ -4607,6 +5099,14 @@
     "/games/offroad-island": {
       "lastmod": "2026-11-15",
       "sha256": "3fba328a9dd9d6a4b473336b402b00f9810c45fadff85f7148640ea1baa153b7"
+    },
+    "/games/offroad-life-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "16ffc529eecdb8eeb56917dd30e5a7c3a78320d699f1f5bc4c374192eabae505"
+    },
+    "/games/offroad-masters-challenge": {
+      "lastmod": "2026-11-20",
+      "sha256": "c54ed5db727be35be48ae05552370eb07c287ce75cbdf6be950020aefcfc09e1"
     },
     "/games/offroad-muddy-trucks": {
       "lastmod": "2026-11-15",
@@ -4660,6 +5160,10 @@
       "lastmod": "2026-11-15",
       "sha256": "6d58328d164f7df9d2dc4e12c6c81d2c0db19601a5b7e465a8773d272bca46c1"
     },
+    "/games/outlets-rush": {
+      "lastmod": "2026-11-20",
+      "sha256": "47de9a847d96099331613fe220dc9c8eec3978f070c8a383d360ce9ecfbc401e"
+    },
     "/games/ovo": {
       "lastmod": "2026-11-15",
       "sha256": "a3bc4bd3a9f5117b26f03cba3aaf100a7902c13fceaa6c92e0e7a4b1ae430763"
@@ -4688,9 +5192,17 @@
       "lastmod": "2026-11-15",
       "sha256": "cc3698c7ddbb920f19975cf4918cccd8a2fc065ebe3630eebac5419f8217ccea"
     },
+    "/games/panda-simulator-3d-animal-game": {
+      "lastmod": "2026-11-20",
+      "sha256": "95c2e501e3c352d6b467d9d322dc64f99ae91d265817fdb3d2844ecf4b571c21"
+    },
     "/games/panda-warrior": {
       "lastmod": "2026-11-15",
       "sha256": "cdb49f3d224bbe88894e34a5f3b2c8a84b9bfbba4020a8c15115b4dba48f5a1a"
+    },
+    "/games/panther-family-simulator-in-jungle": {
+      "lastmod": "2026-11-20",
+      "sha256": "4bfccd2bc7c83dc24c9bfdfbe514c04c00c277ff9e63734e5b265391254f6006"
     },
     "/games/papas-bakeria": {
       "lastmod": "2026-11-15",
@@ -4920,6 +5432,10 @@
       "lastmod": "2026-11-15",
       "sha256": "7f164808d172c840a75ec7d075c4560849f19f88aba991d8f155b87b36722446"
     },
+    "/games/pixel-sphere-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "612f82eb630c8daae0dc39aeecdc913114ce6fe60bf8aab96b7bb31914abf843"
+    },
     "/games/pixel-survival": {
       "lastmod": "2026-11-15",
       "sha256": "e2150b337eb8f1b30a08d75812862d7e38d21dd63c566ca6010b6a77c7e55817"
@@ -4931,6 +5447,10 @@
     "/games/pizza-kitchen-adventures": {
       "lastmod": "2026-11-15",
       "sha256": "d096b8d60a8d8bce9965d3c1c082cf8d289c68afe3094e40e005c913a7944e9e"
+    },
+    "/games/pizza-maker-woi": {
+      "lastmod": "2026-11-20",
+      "sha256": "77f7325596e14fbf8018687ef64b936a678116d7498cd2c91abc1bf36ccc26c4"
     },
     "/games/plane": {
       "lastmod": "2026-11-15",
@@ -4948,6 +5468,10 @@
       "lastmod": "2026-11-15",
       "sha256": "23d46daa2c3253005172e40c0c69d380d567bf4cbc8c9b220c2b1c5da155b784"
     },
+    "/games/planetarium-2": {
+      "lastmod": "2026-11-20",
+      "sha256": "7e6551112122eaa43ad216b1983a3ed7ae42a8ac21f2e2ce6d48349fcb28b4dc"
+    },
     "/games/plants-beatzombies": {
       "lastmod": "2026-11-15",
       "sha256": "1f3aa3e89fd06954c5675affa45a509fb258ea7f697512792387c622cd2e4b48"
@@ -4955,6 +5479,10 @@
     "/games/plants-vs-zombies": {
       "lastmod": "2026-11-15",
       "sha256": "dbfd6421876ba1538f1ce4561bc4a8fd4c6a73f986c4300ddd625bc9ba796be8"
+    },
+    "/games/playground": {
+      "lastmod": "2026-11-20",
+      "sha256": "2277dbfc207f249d01e065d3a580049533de49830cdae5890e8b785ae56c8b2e"
     },
     "/games/pocket-drift": {
       "lastmod": "2026-11-15",
@@ -4995,6 +5523,10 @@
     "/games/poly-racing-cars": {
       "lastmod": "2026-11-15",
       "sha256": "a540ce851c1bd44ae83847a061ecd9253310e3a41a274102e7d28feca0cf2eb1"
+    },
+    "/games/polybusiness": {
+      "lastmod": "2026-11-20",
+      "sha256": "173ed5729596d4eedcaa9f9a8a7a2e1349c47659e66a8a1c4ba4b9ba0dfeda2d"
     },
     "/games/pool-bubbles": {
       "lastmod": "2026-11-15",
@@ -5052,6 +5584,10 @@
       "lastmod": "2026-11-15",
       "sha256": "9cac739a489c544a90eb7e1e08dcd645094f45748a34402d68677a2cbb553ac3"
     },
+    "/games/prankster-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "9ede7321229afccb7c4f30149e2f86fe92301f3d5b9b0b25ec77007811931f13"
+    },
     "/games/pregnant-twins-newborn-care": {
       "lastmod": "2026-11-15",
       "sha256": "da49d0057e8c55cfeba334d704ce672b17e874ab88adb52e06eca34e2777018d"
@@ -5076,6 +5612,14 @@
       "lastmod": "2026-11-15",
       "sha256": "7c7aa700cb5e19cf329f9f2b5aaaaa8b2604f94d741f318c8e6b7ccfcf3902e1"
     },
+    "/games/prison-life-aur": {
+      "lastmod": "2026-11-20",
+      "sha256": "253a4540b6da881979b23ba85cd654cd7d79d4c100ca1d90f126ac76780c101f"
+    },
+    "/games/project-restoration-axt": {
+      "lastmod": "2026-11-20",
+      "sha256": "05cdd73b78895c3c75541da3d20e5884c27c051f57c4309c378ce4a0e02bfa4f"
+    },
     "/games/psg-soccer-freestyle-hgj": {
       "lastmod": "2026-11-15",
       "sha256": "130daf534a140c9774ed45e40f6033199e996b3e6458240c401b1f73c54c24ba"
@@ -5096,9 +5640,21 @@
       "lastmod": "2026-11-15",
       "sha256": "bd087f8a7a1873d189f7463bb22c92d923de1837aaab7da6f921d6e7a8ce209f"
     },
+    "/games/puzzle-bobble": {
+      "lastmod": "2026-11-20",
+      "sha256": "42de58a59dbf9f652c3ecf2b14592da3a7531e660dddcf16eb8a459d3a1f87a1"
+    },
     "/games/puzzle-draw": {
       "lastmod": "2026-11-15",
       "sha256": "4441a67a8aefc35869f0da53a5287a84087d2a4323243319fe9809c56300ab7c"
+    },
+    "/games/puzzle-play": {
+      "lastmod": "2026-11-20",
+      "sha256": "01af76f3d39e673df0b04148c78f6bf8448ec60877042243a24d14f3a9a9f618"
+    },
+    "/games/puzzle-what-a-twist": {
+      "lastmod": "2026-11-20",
+      "sha256": "27394564b2829e06d012dfa1c373626994bd5c868f25c7882adadd5945aba3e6"
     },
     "/games/puzzle-wood-block": {
       "lastmod": "2026-11-15",
@@ -5111,6 +5667,10 @@
     "/games/qb-legend": {
       "lastmod": "2026-11-15",
       "sha256": "47a1237d326b71299da26224ecde5ec36d388c69c044a2959a278c38661df053"
+    },
+    "/games/quantum-god": {
+      "lastmod": "2026-11-20",
+      "sha256": "e5bf22006ce137e6c995575571f6916eb237f4656f1ada0ff00e0348fcad4ecb"
     },
     "/games/queen-hulahoop": {
       "lastmod": "2026-11-15",
@@ -5147,6 +5707,10 @@
     "/games/ragdoll-archers": {
       "lastmod": "2026-11-15",
       "sha256": "5dd0644202012f0b4ac735ee5bd574ce7f5c842ea6e0bed889b06998fee5d52e"
+    },
+    "/games/ragdoll-break": {
+      "lastmod": "2026-11-20",
+      "sha256": "89b78464bbb29330c6acb75362d1e2fb168df7b9da4701ce4c4a5613a016c0fb"
     },
     "/games/ragdoll-fight": {
       "lastmod": "2026-11-15",
@@ -5195,6 +5759,10 @@
     "/games/rally-racer-dirt": {
       "lastmod": "2026-11-15",
       "sha256": "38dfe0532113fb385f7e3b1350fa93fc03b2cc1b1c62263e1f0f6bc1c7d525b5"
+    },
+    "/games/ranch-adventures": {
+      "lastmod": "2026-11-20",
+      "sha256": "a4425b906dc06fa95b15430d2755d917f03f644fa7c1d4790b961435c2ac715d"
     },
     "/games/rats-cooking": {
       "lastmod": "2026-11-15",
@@ -5268,6 +5836,10 @@
       "lastmod": "2026-11-15",
       "sha256": "46dfe03d3fff27e9046af92ddd856085e3cb90a901a3b6c51b91281b7b3bdd4b"
     },
+    "/games/rhythm-capture": {
+      "lastmod": "2026-11-20",
+      "sha256": "01a490e3151896004b6a6ef11e23049172fd4fcf6a83f1e9cefb9312b2feaea3"
+    },
     "/games/riddle-school": {
       "lastmod": "2026-11-15",
       "sha256": "e7636100a61ef12329affa66bc5cb7860dcd376f8675512659f962ced9f39fe4"
@@ -5304,6 +5876,10 @@
       "lastmod": "2026-11-15",
       "sha256": "ebabf8afd111a1fc5521fec57a8b9b4825a5ea8b3f81fe171f49bf034a085351"
     },
+    "/games/robot-dog-city-simulator": {
+      "lastmod": "2026-11-20",
+      "sha256": "3ca411dddd700b20e36915948029518c727b4b2b373bb5ae43ee322f754ff1b2"
+    },
     "/games/rock-buster": {
       "lastmod": "2026-11-15",
       "sha256": "36a4b050dc458fdc79d1851fa4dfd79de3cd76a8024b80f0e9abd51fc8f74c9e"
@@ -5311,6 +5887,14 @@
     "/games/rocket-bot-royale": {
       "lastmod": "2026-11-15",
       "sha256": "16a9b57a550a1139d27e19da42f6310700721fbd03805c9a4c59264c28d768a7"
+    },
+    "/games/rocking-sky-trip": {
+      "lastmod": "2026-11-20",
+      "sha256": "fd70020b644bb8c9e39b391438f4450a2eb63b6d94e7442d13d4ba0252f50475"
+    },
+    "/games/rodha": {
+      "lastmod": "2026-11-20",
+      "sha256": "4804160b7ebbfdef2f40f86fef3ff9e8b80a7af7ba47d556d3e808ef5365765b"
     },
     "/games/roling-balls-sea-race": {
       "lastmod": "2026-11-15",
@@ -5436,6 +6020,14 @@
       "lastmod": "2026-11-15",
       "sha256": "b9cd8504d47f5a6ee7e866adada59b720a916b1e95a8bc6223bf7637dce1335d"
     },
+    "/games/russian-car-driver-zil-130": {
+      "lastmod": "2026-11-20",
+      "sha256": "d3e1af1c520356000be244351ce2c603e08d7a8498ab45279c7e4bd3478397c4"
+    },
+    "/games/russian-checkers-free": {
+      "lastmod": "2026-11-20",
+      "sha256": "4cb5dd503092520015999bcc0b110a4fcc29ba94680395f6cce9a2225e96cad7"
+    },
     "/games/russian-kamaz-truck-driver": {
       "lastmod": "2026-11-15",
       "sha256": "dd8c5da44ed1568122c839998e31cc9ef573daa847a19ced94f958c61f012145"
@@ -5540,6 +6132,10 @@
       "lastmod": "2026-11-15",
       "sha256": "acfbfd4f1c9ae0c17be3c546c9505f8e7254128a0393c88300e1eace65e5909a"
     },
+    "/games/scary-horror-escape-room-games": {
+      "lastmod": "2026-11-20",
+      "sha256": "ef685490424055d15651989bea0978702f11e8f6bbf5282a009af871f38f72fb"
+    },
     "/games/scavenger-hunt-multiplayer": {
       "lastmod": "2026-11-15",
       "sha256": "f47bcda976a1abf5c0e4c082f2fde1c2ee272f5302348c5e881872e9d1fa0683"
@@ -5555,6 +6151,10 @@
     "/games/scream": {
       "lastmod": "2026-11-15",
       "sha256": "9d18e7ba93ae8d54aea5143477e48560237c42504eaaa630c06a65ac6acb087d"
+    },
+    "/games/screamals": {
+      "lastmod": "2026-11-20",
+      "sha256": "8c92c45317dc4e5e7d75e7a3bc38f415f13b3b72e0cb9f9a662d2a5052091ae2"
     },
     "/games/screw-brain": {
       "lastmod": "2026-11-15",
@@ -5624,6 +6224,10 @@
       "lastmod": "2026-11-15",
       "sha256": "612ce048c0e01d777f562725453f41aed192afca4af3a7a22ba69102cd4c555b"
     },
+    "/games/shepherd-farm": {
+      "lastmod": "2026-11-20",
+      "sha256": "5b25806496a8189fb566c45f1a2f9ac7c80e7c237b7e54677c12f03456345d83"
+    },
     "/games/shift-and-run": {
       "lastmod": "2026-11-15",
       "sha256": "3a6d3ee6626e6197c730dd6ab75e30a388d4e7754d37f3f8c38667409acc130c"
@@ -5643,6 +6247,14 @@
     "/games/shooting-hoops": {
       "lastmod": "2026-11-15",
       "sha256": "18a07532496430429db9ea1896cb1e116b0624ce400927a5bb6e467c7f3cdd8a"
+    },
+    "/games/shop-cashier-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "8a8e9e555071d9ca6fa3d26cfb9b1b345cf4d004da526ad3fc9e3f7906008a89"
+    },
+    "/games/shop-master-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "3659adc80a300f2dd3b85649eebb277210efab7f852a47abb0dd879c8df74346"
     },
     "/games/shopping-mania": {
       "lastmod": "2026-11-15",
@@ -5680,6 +6292,10 @@
       "lastmod": "2026-11-15",
       "sha256": "7bc3b47d7f6c188e8ef16932c197f25fd61d0c9814355ff5acfacc8e0cdca76d"
     },
+    "/games/skeleton-simulator": {
+      "lastmod": "2026-11-20",
+      "sha256": "e73f60c96cacad281c15d27ab08dbb2ee87005d74050feda1e6be7314cda02b8"
+    },
     "/games/ski-master": {
       "lastmod": "2026-11-15",
       "sha256": "02cf4e142c84b7a76d72ee454cce2a139aa867b6fa7cf4711fe893ce1708e46d"
@@ -5692,9 +6308,17 @@
       "lastmod": "2026-11-15",
       "sha256": "873dcdffd1d9000db3f8f4a960a73e2573030bdfca1f41421ae542d9ffdb69fb"
     },
+    "/games/skibidi-toilets-infection": {
+      "lastmod": "2026-11-20",
+      "sha256": "fae9501caf52a6f9dd60cddcbc41d5cc134d47eb58d15d5ccb18cc6e72635f9b"
+    },
     "/games/skibydi-toilet": {
       "lastmod": "2026-11-15",
       "sha256": "651b6e8be0845061a2cb12ab7c3e64b0e1f3b0a33d0f0bdadf600cfaff40bbfb"
+    },
+    "/games/skillfite-io": {
+      "lastmod": "2026-11-20",
+      "sha256": "8b6ec463be663461fef50808520400583e6c22df3ce694ff2da0c33c514d963f"
     },
     "/games/skillwarz": {
       "lastmod": "2026-11-15",
@@ -5727,6 +6351,10 @@
     "/games/slam-master": {
       "lastmod": "2026-11-15",
       "sha256": "44f444f86d3c1d6276ef420666f0efef28dbf999d28820c22336ce9f18a4bb11"
+    },
+    "/games/slap-castle": {
+      "lastmod": "2026-11-20",
+      "sha256": "da5e36fd969138e2ee1adea75410ddf7edd40cd1ea3a4911c2035d9808f4a84b"
     },
     "/games/slap-kings": {
       "lastmod": "2026-11-15",
@@ -5772,6 +6400,10 @@
       "lastmod": "2026-11-15",
       "sha256": "3ea3b2d82bbf27308ca76570aa7e7dd33918355419cb97ee34e67c72d805d095"
     },
+    "/games/slitherio": {
+      "lastmod": "2026-11-20",
+      "sha256": "4025a4a261a646de80d83c8978f9479d5e510ac85d775252435647f9811a889d"
+    },
     "/games/slope-rolling": {
       "lastmod": "2026-11-15",
       "sha256": "97c195a2665d1c16e627d5e5099b17fa6b67abc4eda4e5be61c1f82a41c6ccf6"
@@ -5792,6 +6424,10 @@
       "lastmod": "2026-11-15",
       "sha256": "cf6ff22d39f2bc072790cc0c6a6ca0bd3cbc0bc48f29976235a052cf699311ce"
     },
+    "/games/smarty-bubbles": {
+      "lastmod": "2026-11-20",
+      "sha256": "1df67ce91238f5e7e1bde88a94644301eac1a2cc777c5a93314d5ec9bbcf6224"
+    },
     "/games/smash-block-arena": {
       "lastmod": "2026-11-15",
       "sha256": "b7719da31e4aeb124f7c95eb84ff0f4b1a578db3b54c59b68b9e67dc8104e634"
@@ -5803,6 +6439,10 @@
     "/games/smash-theman": {
       "lastmod": "2026-11-15",
       "sha256": "c30dc01f44f653b35192995d790494cb35a6fa4e9f6d7d4ff06f8719d5537b08"
+    },
+    "/games/smileys-family-tree-emoji": {
+      "lastmod": "2026-11-20",
+      "sha256": "3a292ffd7f552334d07192fa77fc1f034fd154024d4597b3c815ef188752b17c"
     },
     "/games/snake": {
       "lastmod": "2026-11-15",
@@ -5816,17 +6456,37 @@
       "lastmod": "2026-11-15",
       "sha256": "6f715b0166cfe590def62dcda10e0eac1e15cdfc11606a766d922fc0daf562f9"
     },
+    "/games/snakes-and-ladders": {
+      "lastmod": "2026-11-20",
+      "sha256": "ea3e45156c1a8384a152c5b2be1a05e1d50d47d2a2c29ea6625b9a68edee40b5"
+    },
     "/games/sneakyhero": {
       "lastmod": "2026-11-15",
       "sha256": "c79e2dcfdefb8e895c0ede9b9358b143d1fdd9b7dc4497fefde8bfaa935317ac"
+    },
+    "/games/sniper": {
+      "lastmod": "2026-11-20",
+      "sha256": "26a9110c102c4e877f974fdae2d917c3364edd9963684cc79a8bdae6ad95bf59"
+    },
+    "/games/sniper-assassin-government-agent": {
+      "lastmod": "2026-11-20",
+      "sha256": "3e3611c7d5ec9a0e9831655b38bc80511ffda9454f1abb8f753baab77d268dd6"
     },
     "/games/sniper-attack": {
       "lastmod": "2026-11-15",
       "sha256": "17454e356a17b152c61044b3325fa93158ffe1b12723e952d48da2c7d72828f0"
     },
+    "/games/sniper-clash-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "b09f57ccd4f9e6593370e672f1e1289cdd0a2ca1efd4b7f0825f4903c55a61c4"
+    },
     "/games/sniper-elite": {
       "lastmod": "2026-11-15",
       "sha256": "3dc6c0bf264cdb0fba27f8e2fb40e1efafc5c36155a7f84705df9e50845e7604"
+    },
+    "/games/sniper-mission-blj": {
+      "lastmod": "2026-11-20",
+      "sha256": "dbf98ac6d770f35b0eff774f53c11256204bea837afbb9626c533aa802c1f504"
     },
     "/games/sniper-reloaded": {
       "lastmod": "2026-11-15",
@@ -5883,6 +6543,10 @@
     "/games/solar-smash": {
       "lastmod": "2026-11-15",
       "sha256": "f7cf9f3391fc254d7ab4da59dd2f6de2e9e8cc5aa3d09986c79cfb5538b97779"
+    },
+    "/games/solar-system-scope": {
+      "lastmod": "2026-11-20",
+      "sha256": "098f9720f51aa5c0ce2bca4bda18430e517f3f292af1407a491689bfe6219417"
     },
     "/games/soldier-assault": {
       "lastmod": "2026-11-15",
@@ -5964,6 +6628,10 @@
       "lastmod": "2026-11-15",
       "sha256": "2728da45442418f05019175310044ff73a8c4d8a69376560366adf7fb24afbd9"
     },
+    "/games/spearfishing": {
+      "lastmod": "2026-11-20",
+      "sha256": "55275985a48505f410b7066b43079b169627df6b4627c7054ff77b0024b6b08b"
+    },
     "/games/speed-drift-racing": {
       "lastmod": "2026-11-15",
       "sha256": "163249b8820e6b50b9f3b69f6132057c702a48ac9dd6ee60d8b5e30600455d5d"
@@ -5987,6 +6655,10 @@
     "/games/spiral-rush": {
       "lastmod": "2026-11-15",
       "sha256": "5a494d27222e8a4416a54e7aa56ab0bbb0ebee88bb1ca952a29df9f87cf56a4f"
+    },
+    "/games/splatmans": {
+      "lastmod": "2026-11-20",
+      "sha256": "bb38cca74e41af6d84edb4b9a273feb4e3f3c42e49bb1df0cafbc42e85826245"
     },
     "/games/spring-back-ball": {
       "lastmod": "2026-11-15",
@@ -6052,6 +6724,14 @@
       "lastmod": "2026-11-15",
       "sha256": "bc75d7c8599b28bef634e5198cb3d8af1a1675fcd4133caa70d32d62fd5eb894"
     },
+    "/games/squish-uwy": {
+      "lastmod": "2026-11-20",
+      "sha256": "84b10f75622095a4352b0e18212402f86a7b554a83b1e48bf7a03b5e115c50f4"
+    },
+    "/games/stabfish-io": {
+      "lastmod": "2026-11-20",
+      "sha256": "23456bb06aa50daa652da42d83c8beba0997dd5ef834a116363f71f0900c7217"
+    },
     "/games/stabfish-io-2": {
       "lastmod": "2026-11-15",
       "sha256": "c60e05190c13c4e9ddcd2798285cb2cfe6c64ac2d99d416c9e756cb971bdc608"
@@ -6075,6 +6755,10 @@
     "/games/stack-fire-ball": {
       "lastmod": "2026-11-15",
       "sha256": "4249a161eca7b4ae01192076f8f654d6d5230243d29e1b0fed0b5549de3d7809"
+    },
+    "/games/stack-it": {
+      "lastmod": "2026-11-20",
+      "sha256": "eb7b9ae113464b441668366da1b56b2bd761f8ad7bf90507b36ecb05bf1535a0"
     },
     "/games/stacktris": {
       "lastmod": "2026-11-15",
@@ -6104,6 +6788,10 @@
       "lastmod": "2026-11-15",
       "sha256": "29256541c5ffaaac55d8637d01df9142a9997f307bed91361cfa3ef8f19bcb34"
     },
+    "/games/starblastio": {
+      "lastmod": "2026-11-20",
+      "sha256": "977e0e73f6a322ba95b3c1a4e8649e8522291b2ea72ca97986285667a131f785"
+    },
     "/games/state-io-wars": {
       "lastmod": "2026-11-15",
       "sha256": "e44d92ee7307bd2926cb755f1adeade2a8dc4db9bc0582a2e192afa470239460"
@@ -6123,6 +6811,10 @@
     "/games/steve-s-world": {
       "lastmod": "2026-11-15",
       "sha256": "15508fde77cea750b6e5ee2c1ab0181199eedab693d57f896bdc6272b0216708"
+    },
+    "/games/stick-animator": {
+      "lastmod": "2026-11-20",
+      "sha256": "6f02d111dd86d4725afe0990d6dc79a3dd528df44587d852305e4e8374d41e31"
     },
     "/games/stick-epic-fighter": {
       "lastmod": "2026-11-15",
@@ -6148,6 +6840,14 @@
       "lastmod": "2026-11-15",
       "sha256": "e751a3404d844a6ec9465a6b4ee38b2d77fcced84cafed4bc92771135f073ee8"
     },
+    "/games/stickman-archer-the-wizard-hero": {
+      "lastmod": "2026-11-20",
+      "sha256": "f2822f9505ae3bafc7c4af94fa0bea47da1edba7ee135c58e4671e21764bcda9"
+    },
+    "/games/stickman-battle-1-4-players": {
+      "lastmod": "2026-11-20",
+      "sha256": "941ecb7f649573303b6c8e495ec18dacaff6ab90007ff6f2ee773308c27c85ef"
+    },
     "/games/stickman-destruction": {
       "lastmod": "2026-11-15",
       "sha256": "0dcd53b474341b4aa838d57c08153aaac3c212e029012b81ddb0bd85f2b3471d"
@@ -6155,6 +6855,10 @@
     "/games/stickman-epic": {
       "lastmod": "2026-11-15",
       "sha256": "89d6bd6ad6412b96057831e0fcdeb3d6d8a0cab77eed77c2e1766b99f52fbef3"
+    },
+    "/games/stickman-escape-school": {
+      "lastmod": "2026-11-20",
+      "sha256": "fd24cce3824a945a01355c678aecbbe100194a0866cd38b1c5bbf42c06bb1afd"
     },
     "/games/stickman-fighter": {
       "lastmod": "2026-11-15",
@@ -6171,6 +6875,10 @@
     "/games/stickman-gta-city": {
       "lastmod": "2026-11-15",
       "sha256": "be93887f3e39f503515d20ef344cb5a7faf222c7513ca933e6a372ecef26b0aa"
+    },
+    "/games/stickman-history-battle": {
+      "lastmod": "2026-11-20",
+      "sha256": "8f3183982b49cee096ccb9fb49db80290c55eed28ad56897b7adce4fd0d3374d"
     },
     "/games/stickman-parkour": {
       "lastmod": "2026-11-15",
@@ -6191,6 +6899,10 @@
     "/games/stickman-run-around": {
       "lastmod": "2026-11-15",
       "sha256": "199db428bed370e216bb2519e282a30aef0c9921ace12072f17d28e727ad943e"
+    },
+    "/games/stickman-world-war": {
+      "lastmod": "2026-11-20",
+      "sha256": "c085f7f12216e042a86cf91a01d80e877fc5fe2329e8c527a6ab59db0c6342cb"
     },
     "/games/stone-grass-mowing-simulator": {
       "lastmod": "2026-11-15",
@@ -6268,6 +6980,10 @@
       "lastmod": "2026-11-15",
       "sha256": "159f4826862b83edeaab8affeaf9fe23c6e016503f1b61724295c406ff2be663"
     },
+    "/games/stupidity-test": {
+      "lastmod": "2026-11-20",
+      "sha256": "768fe6b25f59bf7dd14919c419004360077190c18329bf30d0051f74f7e262e3"
+    },
     "/games/su-battle-royale": {
       "lastmod": "2026-11-15",
       "sha256": "2084b2b05cb1f243649286eee608ce2dc24ce6ddb405acbfed2feca162d30462"
@@ -6275,6 +6991,10 @@
     "/games/subway-clash-2": {
       "lastmod": "2026-11-15",
       "sha256": "fa3ab32ba4dbb2bd159bf793e61c5a7a848f3e42d04ce32dfb485b9a0d1212f2"
+    },
+    "/games/subway-clash-remastered": {
+      "lastmod": "2026-11-20",
+      "sha256": "3636ae6f86d54a300f3f12146e40c54e4d23ed4abfc8980a6bb8ce48c9a96269"
     },
     "/games/subway-idle-3d": {
       "lastmod": "2026-11-15",
@@ -6288,9 +7008,17 @@
       "lastmod": "2026-11-15",
       "sha256": "29c6776266fb85e26216f3b06eaa849e5e5426585e3b0a63b43e1c019636e596"
     },
+    "/games/suez-canal-training-simulator": {
+      "lastmod": "2026-11-20",
+      "sha256": "620babd7966caa422069e5de3080301764e6696cc5581d01beb1db446a3f058b"
+    },
     "/games/summer-aesthetics": {
       "lastmod": "2026-11-15",
       "sha256": "35c9c69caa09e8db7fa330db56d1f682df6a56dddbc6f5c79a597a3abee8b94c"
+    },
+    "/games/sunset-bike-racing": {
+      "lastmod": "2026-11-20",
+      "sha256": "f97b699e7eaf2ea9eed007a9a2ff7737b543b5fffa0b747fc40e945ee26f6218"
     },
     "/games/super-assembly-car": {
       "lastmod": "2026-11-15",
@@ -6384,6 +7112,10 @@
       "lastmod": "2026-11-15",
       "sha256": "37e9a3d3756838296f8e54d9a9bb508ccb439742e5e6709d8257c8edcc7a1fcb"
     },
+    "/games/supermarket-empire": {
+      "lastmod": "2026-11-20",
+      "sha256": "e7e059e96555f4d1774bb2a3dcaf610e90844cce6ef0c9dfd875c647b8ba32fe"
+    },
     "/games/supermarket-simulator": {
       "lastmod": "2026-11-15",
       "sha256": "fdc332b626fbcb6f57e231be92fe81aea62d20e5119ab70f59df327a439246b2"
@@ -6395,6 +7127,10 @@
     "/games/supermarketgoshopping": {
       "lastmod": "2026-11-15",
       "sha256": "23d62d0c4ab5c4ecd739869e84a30ef27bb17270f85363548dde98d89992e6ff"
+    },
+    "/games/superstar-family-dress-up-game": {
+      "lastmod": "2026-11-20",
+      "sha256": "0366b91a24b8d0ebb8cb9f0c12bccfbd348739d0a266fb4d13ceab5941caf809"
     },
     "/games/suroi": {
       "lastmod": "2026-11-15",
@@ -6431,6 +7167,10 @@
     "/games/sweety-ludo": {
       "lastmod": "2026-11-15",
       "sha256": "369b959b6c4726534295b9e887cca9da4ce0dd9512c97a149c4a92d89615a0c5"
+    },
+    "/games/swimming-pool-romance": {
+      "lastmod": "2026-11-20",
+      "sha256": "2bb58881615dad69b25ed6364682728b664e05445efdcac4ebbb147df447c021"
     },
     "/games/swing-man-hook": {
       "lastmod": "2026-11-15",
@@ -6512,9 +7252,17 @@
       "lastmod": "2026-11-15",
       "sha256": "6b568d2ad602d8d51a71d487d2c20aec78b138d2cbfc876e228277645ac6062a"
     },
+    "/games/tank-wars-iaw": {
+      "lastmod": "2026-11-20",
+      "sha256": "f0844da29a486e2bc62b17b923ea694f558ae9f7b98cb676818a9ac813974a3c"
+    },
     "/games/tanks-3d": {
       "lastmod": "2026-11-15",
       "sha256": "51383306f60d9dc493b55f95717ba454dea1031783d0a56a66de9ede9b1f72dd"
+    },
+    "/games/tanks-arena-io-craft-combat": {
+      "lastmod": "2026-11-20",
+      "sha256": "2ba2a025b6fe4ca2bbea28a34de7d69c26b21a312a9ea2844e32a2f9399712a0"
     },
     "/games/tanks-of-the-galaxy": {
       "lastmod": "2026-11-15",
@@ -6560,6 +7308,10 @@
       "lastmod": "2026-11-15",
       "sha256": "50ed17f68c55e503cd545e8d4ec0a9302157fbb04e87745388cf5916e831f06d"
     },
+    "/games/tentrix": {
+      "lastmod": "2026-11-20",
+      "sha256": "2158e351a2d0070d645465b0505c60432d8492d80afc8a2d5e548df45faa3e40"
+    },
     "/games/tetris": {
       "lastmod": "2026-11-15",
       "sha256": "c68268149d9a14594e9c37e0427dfff2388262b8ad5bda2901caa31a148f5e96"
@@ -6579,6 +7331,10 @@
     "/games/the-chick-chase": {
       "lastmod": "2026-11-15",
       "sha256": "9e7428577e2a5ff73d68bcf7d168a54e9a94539a0e8ed9b62324026b6015a896"
+    },
+    "/games/the-dumb-test": {
+      "lastmod": "2026-11-20",
+      "sha256": "726b9b055f00b6ac74df79737be72381c60ad301dcbdc8c4f41a549ee5d3540e"
     },
     "/games/the-epic-party": {
       "lastmod": "2026-11-15",
@@ -6611,6 +7367,10 @@
     "/games/the-white-room": {
       "lastmod": "2026-11-15",
       "sha256": "5a5480156de52348a545e9445344aa12df7696e677ebe672c4a42ead78a54456"
+    },
+    "/games/the-world-s-easyest-game": {
+      "lastmod": "2026-11-20",
+      "sha256": "e61c9758b5425accb55d07467fb810934f2ed983a2d0c75daa1d35645bfc241d"
     },
     "/games/thief-puzzle": {
       "lastmod": "2026-11-15",
@@ -6659,6 +7419,10 @@
     "/games/tile-guru": {
       "lastmod": "2026-11-15",
       "sha256": "871e2f9e7696a2f3b9e9c21900a37535ab1a4edc87b3bdfa517ae6e3a4d2d526"
+    },
+    "/games/tile-jumper-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "dd9b3a66f0fdc6b478736198975d280ce178b38c197c2ae3e5b3df280a3d24c7"
     },
     "/games/tile-match": {
       "lastmod": "2026-11-15",
@@ -6736,6 +7500,10 @@
       "lastmod": "2026-11-15",
       "sha256": "02c049124cc47668c9b03bef5334afb6efc0696d2d993944a219819a01cbf387"
     },
+    "/games/trading-card-store-simulator": {
+      "lastmod": "2026-11-20",
+      "sha256": "1dda7b35395f62c1fc6907d2057f09d8b257c881a9b1437e0e74f77d71cb4cff"
+    },
     "/games/traffic-jam-3d": {
       "lastmod": "2026-11-15",
       "sha256": "c613d90a62d1ac23ca6f66fbfb14995d35c9b1479923fdc240b193230eb346fa"
@@ -6788,6 +7556,10 @@
       "lastmod": "2026-11-15",
       "sha256": "e83bf1943c4bf51964998025e6fb0c96e3a554af971924a2b9e4cd92598f1f35"
     },
+    "/games/truck-driving-simulator-game": {
+      "lastmod": "2026-11-20",
+      "sha256": "15d92a6625f6a7742043de20e0604bb63cb6035730a8a4981cdc8ad16373dd20"
+    },
     "/games/truck-simulator": {
       "lastmod": "2026-11-15",
       "sha256": "ac8aabdc33e0ebb7424c268d93fda2947fb7f8f20fb728a90f700714b1cebe85"
@@ -6803,6 +7575,10 @@
     "/games/turbo-race-3d": {
       "lastmod": "2026-11-15",
       "sha256": "8e073bfa8e3b6eb521aec192166e406bff2897985f0d5fe36f97846327942b2f"
+    },
+    "/games/turnfight-com-uap": {
+      "lastmod": "2026-11-20",
+      "sha256": "22fbaa1e5e7b6f33afd299a1689684456cfff337133023593bb41b69b15243a5"
     },
     "/games/two-people-travel": {
       "lastmod": "2026-11-15",
@@ -6827,6 +7603,14 @@
     "/games/ultimate-robo-duel-3d": {
       "lastmod": "2026-11-15",
       "sha256": "52cb17b24720911fede6d13dad2684e118052c328677d284a62231c6abedea99"
+    },
+    "/games/ultimate-truck-driving-simulator-2020": {
+      "lastmod": "2026-11-20",
+      "sha256": "089be0d15ca3fb7eb88a0b0fd9a08a2f6bd910d4693c7586ff1a18c1b91e1ae5"
+    },
+    "/games/underwater-hunting": {
+      "lastmod": "2026-11-20",
+      "sha256": "00fda11756e8e4fe88734ebc2f7c82f4d38dd052510bb31f95899a9b82be0837"
     },
     "/games/uno-online": {
       "lastmod": "2026-11-15",
@@ -6883,6 +7667,10 @@
     "/games/vex-x3m-2": {
       "lastmod": "2026-11-15",
       "sha256": "714ffd5b9a735056b0167ea112f7a0f18841e38689d733367e4ffdc128f90e92"
+    },
+    "/games/virtual-piano": {
+      "lastmod": "2026-11-20",
+      "sha256": "9ca3555746115b83d46bb97708d8fb893d830077615d7d1fbab8d94c27b4fafc"
     },
     "/games/void-city-io": {
       "lastmod": "2026-11-15",
@@ -7020,6 +7808,10 @@
       "lastmod": "2026-11-15",
       "sha256": "9bb1cc6655d69f0e9a2c8ff208b4f34539ce212ea0371bceec81f9bb80ff1cb7"
     },
+    "/games/winter-clash-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "8076b7a2d37dbec028fe29ca0a5f615bdf16e0fcb3723e2f389b7cacc6e30259"
+    },
     "/games/winterella": {
       "lastmod": "2026-11-15",
       "sha256": "fd688eeb3efa61ed977fec5aaca54c17335a6978a98a7543991156e4a0737d41"
@@ -7032,6 +7824,10 @@
       "lastmod": "2026-11-15",
       "sha256": "4674ff32f5194037566b3e6c1f83d31b8f5d7a40023f49f728242a64db35889c"
     },
+    "/games/wolf-simulator-wild-animals-3d": {
+      "lastmod": "2026-11-20",
+      "sha256": "0ec46d28c9c0fb47d2c3a165737d4d194b83d99fd4531d4c6922d7915d53fec5"
+    },
     "/games/wood-block-jam": {
       "lastmod": "2026-11-15",
       "sha256": "6a2aef82614da889a71118bbd6fef4dfd637f0222445c55809fddac5e2a23f9e"
@@ -7039,6 +7835,10 @@
     "/games/wood-block-journey": {
       "lastmod": "2026-11-15",
       "sha256": "acef36a17efc29e62a17844b248bdc67afa6af7b8ffc6d5cc1d45d875469fadf"
+    },
+    "/games/wood-blocks": {
+      "lastmod": "2026-11-20",
+      "sha256": "b7cc93bd30e1a64c692313f7272f8100b755778994c68e392d2d855c31bfb8ca"
     },
     "/games/wood-screw-bolts-puzzle": {
       "lastmod": "2026-11-15",
@@ -7135,6 +7935,10 @@
     "/games/worm-hunt": {
       "lastmod": "2026-11-15",
       "sha256": "a33e5d259dd00e30b14e0e58f856a9508154efed8e3ed44f167a30ac8cb995cd"
+    },
+    "/games/worms-zone": {
+      "lastmod": "2026-11-20",
+      "sha256": "eab86bd799ee22994e7b9ac4bf8d2b17ad2b7c3d260f47bbed1961f0c0b6f859"
     },
     "/games/wormszoneio": {
       "lastmod": "2026-11-15",
@@ -7297,8 +8101,8 @@
       "sha256": "d44d3e5b322ebf047e76add12186367e369343e6571029abb43db43f15ab4800"
     },
     "/llms.txt": {
-      "lastmod": "2026-11-13",
-      "sha256": "c1c7117df9523a8e63ed8ad75d66d4ea0847607b51faa416ffd5fcbc1c4e25db"
+      "lastmod": "2026-11-20",
+      "sha256": "af05e47c1a9ddba0e124c184283cf7670b2888506dfc604c51993b7a63761043"
     },
     "/privacy": {
       "lastmod": "2026-11-15",

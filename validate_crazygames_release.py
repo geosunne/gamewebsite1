@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup
 from PIL import Image
 
 from catalog_quality import has_blocked_embed
+from update_sitemap import SITEMAP_EXCLUSIONS_FILE
 from import_crazygames_embed_games import identity_keys
 
 
@@ -76,7 +77,12 @@ def local_audit(baseline, expected):
     xml_urls = sitemap_urls((root / "sitemap.xml").read_bytes())
     txt_urls = (root / "sitemap.txt").read_text().splitlines()
     require(xml_urls == txt_urls and len(set(xml_urls)) == len(xml_urls), "sitemap XML/TXT 不一致或重复")
-    require({f"https://btwgame.com/games/{g['slug']}" for g in games} <= set(xml_urls), "sitemap 缺游戏")
+    exclusion_path = Path(SITEMAP_EXCLUSIONS_FILE)
+    exclusions = json.loads(exclusion_path.read_text()).get("excluded_games", []) if exclusion_path.exists() else []
+    excluded = {entry["slug"] for entry in exclusions if entry.get("slug")}
+    expected_urls = {f"https://btwgame.com/games/{g['slug']}" for g in games if g['slug'] not in excluded}
+    actual_urls = {url for url in xml_urls if urlsplit(url).path.startswith("/games/")}
+    require(actual_urls == expected_urls, "sitemap 游戏集合与有效目录/排除清单不一致")
     links = 0
     pages = list(root.rglob("*.html"))
     for path in pages:
