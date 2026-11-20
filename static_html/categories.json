@@ -5,6 +5,11 @@
     "url": "/categories/action"
   },
   {
+    "name": "Adventure",
+    "slug": "adventure",
+    "url": "/categories/adventure"
+  },
+  {
     "name": "Arcade",
     "slug": "arcade",
     "url": "/categories/arcade"
